@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portau — Edição do Dia · 25/06/2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0TD0G4J8CR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag("js", new Date());
+  gtag("config", "G-0TD0G4J8CR");
+</script>
+<style>
+  :root{--verde:#2D6A4F;--verde-vivo:#40916C;--amarelo:#FFB703;--creme:#F8F3E8;--cinza-q:#1A1A1A;--cinza-m:#4A4A4A;--cinza-l:#E8E2D6;--branco:#FFFFFF;--vermelho:#D62828;--roxo:#5C3893;--azul:#1565C0;--marrom:#5D4037;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Inter',sans-serif;background:var(--creme);color:var(--cinza-q);font-size:15px;line-height:1.6;}
+  .topbar{background:var(--verde);color:rgba(255,255,255,0.7);font-size:12px;padding:6px 24px;display:flex;justify-content:space-between;}
+  .topbar strong{color:var(--amarelo);}
+  header{background:var(--branco);border-bottom:3px solid var(--amarelo);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+  .header-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:'Syne',sans-serif;font-weight:800;font-size:28px;color:var(--verde);letter-spacing:-1px;text-decoration:none;}
+  .logo span{color:var(--amarelo);}
+  .logo-sub{font-size:10px;font-weight:500;color:var(--cinza-m);letter-spacing:0.1em;text-transform:uppercase;display:block;margin-top:-4px;}
+  nav{display:flex;gap:4px;}
+  nav a{font-size:13px;font-weight:600;color:var(--cinza-m);text-decoration:none;padding:6px 12px;border-radius:6px;}
+  nav a:hover,nav a.ativo{background:var(--creme);color:var(--verde);}
+  .hero{background:var(--verde);padding:40px 24px;color:var(--branco);}
+  .hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;}
+  .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--amarelo);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+  .hero-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--amarelo);}
+  .hero h1{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:8px;}
+  .hero p{color:rgba(255,255,255,0.65);font-size:14px;}
+  .hero-stats{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-stat{text-align:center;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 20px;display:flex;flex-direction:column;align-items:center;gap:8px;}
+  
+  .hero-stat-label{font-size:11px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.08em;}
+  .ancora-bar{background:var(--branco);border-bottom:1px solid var(--cinza-l);padding:0 24px;position:sticky;top:64px;z-index:90;}
+  .ancora-inner{max-width:1160px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;}
+  .ancora-inner::-webkit-scrollbar{display:none;}
+  .ancora-btn{font-size:13px;font-weight:600;color:var(--cinza-m);text-decoration:none;padding:12px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.15s;}
+  .ancora-btn:hover{color:var(--verde);border-bottom-color:var(--verde);}
+  .page{max-width:1160px;margin:0 auto;padding:36px 24px;display:grid;grid-template-columns:1fr 280px;gap:32px;align-items:start;}
+  .secao{margin-bottom:44px;}
+  .secao-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--cinza-l);}
+  .secao-titulo{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;display:flex;align-items:center;gap:10px;}
+  .secao-titulo .barra{width:4px;height:20px;border-radius:2px;}
+  .barra-not{background:var(--amarelo);}.barra-age{background:var(--roxo);}.barra-vag{background:var(--azul);}.barra-pol{background:var(--marrom);}.barra-dad{background:var(--verde-vivo);}.barra-cla{background:var(--cinza-m);}
+  .secao-count{font-size:12px;font-weight:700;background:var(--creme);color:var(--cinza-m);padding:4px 10px;border-radius:20px;}
+  .card-noticia{background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;padding:20px;margin-bottom:12px;display:grid;grid-template-columns:48px 1fr;gap:16px;text-decoration:none;color:inherit;transition:box-shadow 0.15s,transform 0.15s;}
+  .card-noticia:hover{box-shadow:0 8px 24px rgba(0,0,0,0.09);transform:translateY(-2px);}
+  .card-noticia.destaque{grid-template-columns:1fr;background:var(--verde);border-color:var(--verde);color:var(--branco);padding:24px;}
+  .card-noticia.destaque .card-titulo{font-size:20px;color:var(--branco);}
+  .card-noticia.destaque .card-resumo{color:rgba(255,255,255,0.72);}
+  .card-noticia.destaque .card-meta{color:rgba(255,255,255,0.45);}
+  .card-noticia.destaque .tag-bairro{background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.75);}
+  .card-noticia.destaque .card-link{color:var(--amarelo);}
+  .destaque-pill{display:inline-flex;align-items:center;gap:5px;background:var(--amarelo);color:var(--cinza-q);font-size:10px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:20px;margin-bottom:12px;}
+  .card-icone{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;}
+  .ic-mob{background:#FFF8E1;}.ic-seg{background:#FFEBEE;}.ic-edu{background:#E8F5E9;}.ic-eco{background:#E3F2FD;}
+  .card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px;}
+  .tag{font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px;}
+  .tag-not{background:#FFF8E1;color:#E65100;}.tag-seg{background:#FFEBEE;color:var(--vermelho);}.tag-edu{background:#E8F5E9;color:var(--verde);}.tag-mob{background:#E3F2FD;color:var(--azul);}
+  .tag-bairro{background:var(--creme);color:var(--cinza-m);}
+  .card-titulo{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;line-height:1.3;margin-bottom:7px;}
+  .card-resumo{font-size:13px;color:var(--cinza-m);line-height:1.6;margin-bottom:10px;}
+  .card-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+  .card-meta{font-size:11px;color:rgba(74,74,74,0.55);display:flex;align-items:center;gap:5px;}
+  .dot3{width:3px;height:3px;border-radius:50%;background:currentColor;}
+  .card-link{font-size:12px;font-weight:600;color:var(--verde);text-decoration:none;}
+  .card-evento{background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;padding:18px;margin-bottom:10px;display:grid;grid-template-columns:56px 1fr;gap:14px;text-decoration:none;color:inherit;transition:box-shadow 0.15s,transform 0.15s;}
+  .card-evento:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-2px);}
+  .evento-data{border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;text-align:center;color:var(--branco);}
+  .evento-dia{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;line-height:1;}
+  .evento-mes{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;opacity:0.8;}
+  .evento-titulo{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:5px;line-height:1.25;}
+  .evento-info{font-size:12px;color:var(--cinza-m);display:flex;flex-wrap:wrap;gap:8px;}
+  .evento-valor{margin-top:6px;display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;}
+  .valor-gratis{background:#E8F5E9;color:var(--verde);}.valor-pago{background:#EDE7F6;color:var(--roxo);}
+  .card-vaga{background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;padding:18px;margin-bottom:10px;display:flex;align-items:flex-start;gap:14px;cursor:pointer;transition:box-shadow 0.15s,transform 0.15s;}
+  .card-vaga:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-2px);}
+  .vaga-icone{width:44px;height:44px;border-radius:10px;background:#E3F2FD;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+  .vaga-titulo{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px;}
+  .vaga-info{font-size:12px;color:var(--cinza-m);display:flex;flex-wrap:wrap;gap:8px;}
+  .vaga-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;background:#E3F2FD;color:var(--azul);}
+  .card-pol{background:var(--branco);border:1px solid var(--cinza-l);border-left:4px solid var(--marrom);border-radius:14px;padding:18px 20px;margin-bottom:10px;transition:box-shadow 0.15s;}
+  .card-pol:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);}
+  .pol-orgao{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--marrom);margin-bottom:5px;}
+  .pol-titulo{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:8px;}
+  .pol-impacto{font-size:13px;color:var(--cinza-m);line-height:1.55;margin-bottom:10px;}
+  .pol-status{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:#FFF8E1;color:#E65100;}
+  .alerta{border-radius:12px;padding:16px 18px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;}
+  .alerta.ok{background:#E8F5E9;border:1px solid #C8E6C9;}
+  .alerta.info{background:#E3F2FD;border:1px solid #BBDEFB;}
+  .alerta.neutro{background:#F3E5F5;border:1px solid #E1BEE7;}
+  .alerta-titulo{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:3px;}
+  .alerta.ok .alerta-titulo{color:var(--verde);}
+  .alerta.info .alerta-titulo{color:var(--azul);}
+  .alerta.neutro .alerta-titulo{color:var(--roxo);}
+  .alerta-desc{font-size:13px;color:var(--cinza-m);line-height:1.5;}
+  .alerta-meta{font-size:11px;color:rgba(74,74,74,0.5);margin-top:4px;}
+  .cla-grupo{margin-bottom:20px;}
+  .cla-grupo-titulo{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--cinza-m);margin-bottom:10px;}
+  .cla-card{background:var(--branco);border:1px solid var(--cinza-l);border-radius:12px;padding:14px 16px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px;cursor:pointer;transition:box-shadow 0.12s;}
+  .cla-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+  .cla-nome{font-size:13px;font-weight:600;margin-bottom:3px;}
+  .cla-detalhe{font-size:12px;color:var(--cinza-m);}
+  .cla-preco{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:var(--verde);white-space:nowrap;}
+  
+  /* SIDEBAR */
+  .sb-card{background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;overflow:hidden;margin-bottom:18px;}
+  .sb-header{padding:14px 18px;border-bottom:1px solid var(--cinza-l);font-family:'Syne',sans-serif;font-size:13px;font-weight:800;}
+  .sb-item{padding:12px 18px;border-bottom:1px solid var(--cinza-l);display:flex;gap:10px;align-items:flex-start;}
+  .sb-item:last-child{border-bottom:none;}
+  .sb-item:hover{background:var(--creme);}
+  .sb-num{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--cinza-l);min-width:24px;line-height:1.1;}
+  .sb-titulo{font-size:13px;font-weight:600;line-height:1.3;margin-bottom:2px;}
+  .sb-sub{font-size:11px;color:var(--cinza-m);}
+  .resumo-box{background:var(--amarelo);border-radius:14px;padding:18px;margin-bottom:18px;}
+  .resumo-titulo{font-family:'Syne',sans-serif;font-size:13px;font-weight:800;margin-bottom:12px;}
+  .resumo-linha{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(26,26,26,0.1);font-size:13px;}
+  .resumo-linha:last-child{border-bottom:none;}
+  .resumo-n{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;}
+  footer{background:var(--cinza-q);color:rgba(255,255,255,0.5);padding:28px 24px;text-align:center;font-size:12px;}
+  footer strong{color:var(--amarelo);}
+  @media(max-width:900px){.page{grid-template-columns:1fr;}.sidebar{order:-1;}.hero-inner{grid-template-columns:1fr;}nav{display:none;}.analytics-grid{grid-template-columns:1fr 1fr;}}
+
+  .globo-wrap { position:relative; width:68px; height:68px; flex-shrink:0; cursor:grab; user-select:none; }
+  .globo-wrap:active { cursor:grabbing; }
+  #globo-canvas { display:block; border-radius:50%; }
+  .globo-tooltip {
+    position:absolute; background:#2D6A4F; color:#fff;
+    font-size:11px; font-weight:700; padding:4px 10px; border-radius:20px;
+    white-space:nowrap; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%);
+    pointer-events:none; opacity:0; transition:opacity 0.2s; font-family:'Inter',sans-serif;
+  }
+  .globo-tooltip.visivel { opacity:1; }
+  .globo-tooltip::after { content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color:#2D6A4F; }
+
+  /* PAINEL ANALYTICS */
+  .ga-overlay {
+    display:none;
+    position:fixed;inset:0;
+    background:rgba(0,0,0,0.55);
+    z-index:999;
+    align-items:center;justify-content:center;
+    backdrop-filter:blur(4px);
+  }
+  .ga-overlay.aberto { display:flex; }
+  .ga-painel {
+    background:#1A1A1A;
+    border:1px solid rgba(255,255,255,0.1);
+    border-top:3px solid #FFB703;
+    border-radius:20px;
+    padding:28px;
+    width:480px;
+    max-width:95vw;
+    box-shadow:0 24px 64px rgba(0,0,0,0.5);
+    color:#fff;
+    position:relative;
+    animation:gaEntrar 0.25s ease;
+  }
+  @keyframes gaEntrar {
+    from { transform:scale(0.92) translateY(12px); opacity:0; }
+    to   { transform:scale(1) translateY(0); opacity:1; }
+  }
+  .ga-fechar {
+    position:absolute;top:16px;right:16px;
+    width:30px;height:30px;border-radius:50%;
+    background:rgba(255,255,255,0.08);border:none;
+    color:rgba(255,255,255,0.6);font-size:16px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    transition:background 0.15s;
+  }
+  .ga-fechar:hover { background:rgba(255,255,255,0.18); }
+  .ga-titulo {
+    font-family:'Syne',sans-serif;font-size:16px;font-weight:800;
+    color:#FFB703;margin-bottom:4px;display:flex;align-items:center;gap:8px;
+  }
+  .ga-sub { font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px; }
+  .ga-grid { display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px; }
+  .ga-card {
+    background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
+    border-radius:12px;padding:14px;
+  }
+  .ga-card-label { font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.45);margin-bottom:6px; }
+  .ga-card-num { font-family:'Syne',sans-serif;font-size:32px;font-weight:800;letter-spacing:-1px;line-height:1; }
+  .ga-card-sub { font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px; }
+  .ga-live { display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:#FFEBEE;color:#D62828;margin-top:6px; }
+  .ga-paises { margin-bottom:16px; }
+  .ga-paises-titulo { font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:rgba(255,255,255,0.45);margin-bottom:10px; }
+  .ga-pais-row { display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.06); }
+  .ga-pais-row:last-child { border-bottom:none; }
+  .ga-pais-nome { font-size:13px;font-weight:500;flex:1; }
+  .ga-pais-bar-wrap { width:80px;height:5px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden; }
+  .ga-pais-bar { height:100%;background:#2D6A4F;border-radius:3px;transition:width 0.8s ease; }
+  .ga-pais-num { font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:#FFB703;min-width:24px;text-align:right; }
+  .ga-update { font-size:11px;color:rgba(255,255,255,0.3);text-align:right;display:flex;align-items:center;justify-content:space-between; }
+  .ga-atualizar { background:#2D6A4F;color:#fff;border:none;font-size:11px;font-weight:700;padding:5px 12px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif; }
+  .ga-loading { text-align:center;padding:20px;color:rgba(255,255,255,0.4);font-size:13px; }
+  .ga-spinner { display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,0.15);border-top-color:#FFB703;border-radius:50%;animation:spin 0.8s linear infinite;margin-right:8px;vertical-align:middle; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>📍 Zona Norte de São Paulo</span>
+  <strong>Quinta-feira, 25 de junho de 2026 · Edição completa do dia</strong>
+</div>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">Por<span>tau</span>
+      <span class="logo-sub">Zona Norte · São Paulo</span>
+    </a>
+
+    <!-- GLOBO INTERATIVO -->
+    <div class="globo-wrap" id="globo-wrap">
+      <canvas id="globo-canvas" width="68" height="68"></canvas>
+      <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
+    </div>
+
+    <nav>
+      <a href="#">Início</a>
+      <a href="#" class="ativo">Edição do Dia</a>
+      <a href="#">Bairros</a>
+      <a href="#">Agenda</a>
+      <a href="#">Dados</a>
+      <a href="#">Comunidade</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <h1>Zona Norte, 25 de junho</h1>
+    </div>
+    <div class="hero-stats">
+
+      <!-- Notícias -->
+      <div class="hero-stat">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect x="3" y="5" width="22" height="26" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <rect x="7" y="10" width="14" height="2.5" rx="1.2" fill="#FFB703"/>
+          <rect x="7" y="15" width="10" height="1.8" rx="0.9" fill="rgba(255,255,255,0.5)"/>
+          <rect x="7" y="19" width="12" height="1.8" rx="0.9" fill="rgba(255,255,255,0.5)"/>
+          <rect x="7" y="23" width="8" height="1.8" rx="0.9" fill="rgba(255,255,255,0.5)"/>
+          <circle cx="28" cy="28" r="7" fill="#FFB703"/>
+          <rect x="27" y="24" width="2" height="5" rx="1" fill="#1A1A1A"/>
+          <rect x="27" y="30.5" width="2" height="2" rx="1" fill="#1A1A1A"/>
+        </svg>
+        <span class="hero-stat-label">Notícias</span>
+      </div>
+
+      <!-- Eventos -->
+      <div class="hero-stat">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect x="4" y="8" width="28" height="23" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <rect x="4" y="13" width="28" height="2" fill="rgba(255,255,255,0.25)"/>
+          <circle cx="12" cy="6" r="2.5" fill="#FFB703"/>
+          <circle cx="24" cy="6" r="2.5" fill="#FFB703"/>
+          <rect x="9" y="17" width="5" height="4" rx="1" fill="#FFB703"/>
+          <rect x="16" y="17" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="23" y="17" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="9" y="23" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+          <rect x="16" y="23" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
+        </svg>
+        <span class="hero-stat-label">Eventos</span>
+      </div>
+
+      <!-- Vagas -->
+      <div class="hero-stat">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect x="4" y="14" width="28" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+          <path d="M13 14V11C13 9.3 14.3 8 16 8H20C21.7 8 23 9.3 23 11V14" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/>
+          <circle cx="18" cy="21" r="4" fill="rgba(255,255,255,0.2)" stroke="#FFB703" stroke-width="1.5"/>
+          <path d="M15.5 21L17 22.5L20.5 19" stroke="#FFB703" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="hero-stat-label">Vagas</span>
+      </div>
+
+      <!-- Alertas -->
+      <div class="hero-stat">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path d="M18 5L5 28H31L18 5Z" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linejoin="round"/>
+          <rect x="16.5" y="14" width="3" height="7" rx="1.5" fill="#FFB703"/>
+          <circle cx="18" cy="24" r="1.8" fill="#FFB703"/>
+        </svg>
+        <span class="hero-stat-label">Alertas</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="ancora-bar">
+  <div class="ancora-inner">
+    <a href="#noticias" class="ancora-btn">📰 Notícias</a>
+    <a href="#agenda" class="ancora-btn">🗓️ Agenda</a>
+    <a href="#vagas" class="ancora-btn">💼 Vagas</a>
+    <a href="#politica" class="ancora-btn">🏛️ Política</a>
+    <a href="#alertas" class="ancora-btn">📊 Alertas</a>
+    <a href="#classificados" class="ancora-btn">🛒 Classificados</a>
+  </div>
+</div>
+
+<div class="page">
+<div class="feed">
+
+  <!-- NOTÍCIAS -->
+  <div class="secao" id="noticias">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-not"></span>Notícias</div>
+      <span class="secao-count">4 hoje</span>
+    </div>
+
+    <div class="card-noticia destaque">
+      <div class="destaque-pill">🌟 Destaque do dia</div>
+      <div class="card-tags">
+        <span class="tag tag-edu">Educação</span>
+        <span class="tag-bairro">📍 Jaçanã</span>
+      </div>
+      <div class="card-titulo">CEU Jaçanã abre inscrições para cursos profissionalizantes gratuitos pelo Teia Sampa</div>
+      <div class="card-resumo">O programa Teia Sampa está com vagas abertas no CEU Jaçanã para cursos de capacitação profissional. A iniciativa visa fomentar o empreendedorismo e a geração de renda na região norte da cidade.</div>
+      <div class="card-footer">
+        <div class="card-meta"><span>Jornal SP Norte</span><span class="dot3"></span><span>Hoje, 10h30</span></div>
+        <span class="card-link">Leia mais →</span>
+      </div>
+    </div>
+
+    <a class="card-noticia" href="#" target="_blank">
+      <div class="card-icone ic-edu">🍽️</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-edu">Social</span><span class="tag-bairro">📍 Tucuruvi</span></div>
+        <div class="card-titulo">Bom Prato Tucuruvi em obras de revitalização — marmitas garantem atendimento</div>
+        <div class="card-resumo">A unidade do Bom Prato no Tucuruvi está em reforma e modernização. O atendimento segue com distribuição de marmitas para garantir a segurança alimentar dos usuários durante as obras.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>Diário Zona Norte</span><span class="dot3"></span><span>Hoje, 09h15</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="#" target="_blank">
+      <div class="card-icone ic-mob">🏗️</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Parada Inglesa</span></div>
+        <div class="card-titulo">Subprefeitura inicia requalificação de calçadas e pavimentação na Rua Inglesa</div>
+        <div class="card-resumo">Após obras de drenagem, a Subprefeitura Santana/Tucuruvi deu início à pavimentação e requalificação das calçadas na Rua Inglesa, melhorando acessibilidade e escoamento de águas pluviais.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>Subprefeitura Santana/Tucuruvi</span><span class="dot3"></span><span>Hoje, 11h45</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://g1.globo.com" target="_blank">
+      <div class="card-icone ic-seg">🚨</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-mob">Mobilidade</span><span class="tag-bairro">📍 Tucuruvi / Tremembé</span></div>
+        <div class="card-titulo">Motorista sofre mal súbito e bate em poste na Av. Coronel Sezefredo Fagundes</div>
+        <div class="card-resumo">Mulher de 49 anos perdeu o controle do veículo após passar mal ao volante, colidindo contra um poste. O SAMU socorreu a vítima e o incidente causou lentidão momentânea no trânsito.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>G1 Globo</span><span class="dot3"></span><span>22/06 — atualizado hoje</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- AGENDA -->
+  <div class="secao" id="agenda">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-age"></span>Agenda da Semana</div>
+      <span class="secao-count">4 eventos</span>
+    </div>
+
+    <a class="card-evento" href="https://www.sescsp.org.br/unidades/santana/" target="_blank">
+      <div class="evento-data" style="background:var(--roxo);"><span class="evento-dia">26</span><span class="evento-mes">Jun</span></div>
+      <div>
+        <div class="evento-titulo">Silvero Pereira interpreta Belchior — Sesc Santana</div>
+        <div class="evento-info"><span>⏰ 20h00</span><span>📍 Sesc Santana</span><span>🎵 Show</span></div>
+        <span class="evento-valor valor-pago">R$ 15 – R$ 50</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://www.sescsp.org.br/unidades/santana/" target="_blank">
+      <div class="evento-data" style="background:#795548;"><span class="evento-dia">27</span><span class="evento-mes">Jun</span></div>
+      <div>
+        <div class="evento-titulo">Catimba — 2 Mililitros Cia. Teatral — Sesc Santana</div>
+        <div class="evento-info"><span>⏰ 16h00</span><span>📍 Sesc Santana</span><span>🎭 Teatro</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://www.sescsp.org.br/unidades/santana/" target="_blank">
+      <div class="evento-data" style="background:#1565C0;"><span class="evento-dia">27</span><span class="evento-mes">Jun</span></div>
+      <div>
+        <div class="evento-titulo">Comum a Toda Pessoa: O Envelhecimento é Democrático!</div>
+        <div class="evento-info"><span>⏰ 15h00</span><span>📍 Sesc Santana</span><span>🎤 Palestra</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://www.sescsp.org.br/unidades/santana/" target="_blank">
+      <div class="evento-data" style="background:#2D6A4F;"><span class="evento-dia">28</span><span class="evento-mes">Jun</span></div>
+      <div>
+        <div class="evento-titulo">Futebol das Ancestrais com Xondarias Guarani</div>
+        <div class="evento-info"><span>⏰ 14h00</span><span>📍 Sesc Santana</span><span>⚽ Esporte / Cultura</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- VAGAS -->
+  <div class="secao" id="vagas">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-vag"></span>Vagas de Emprego</div>
+      <span class="secao-count">4 vagas</span>
+    </div>
+
+    <div class="card-vaga">
+      <div class="vaga-icone">📋</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Assistente Administrativo</div>
+        <div class="vaga-info"><span>🏢 Banco de Talentos / Estadão</span><span>📍 Santana</span><span>Pacote Office · Rotinas admin</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">LinkedIn · 3 dias</div>
+    </div>
+
+    <div class="card-vaga">
+      <div class="vaga-icone">🗂️</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Auxiliar de Apoio Administrativo</div>
+        <div class="vaga-info"><span>🏢 Confidencial</span><span>📍 Santana / Tucuruvi</span><span>Ens. Médio · Atendimento</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">LinkedIn · 2 dias</div>
+    </div>
+
+    <div class="card-vaga">
+      <div class="vaga-icone">🔧</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Vagas Operacionais — Logística e Montagem</div>
+        <div class="vaga-info"><span>🏢 Adecco / Faurecia</span><span>📍 Vila Maria / Vila Guilherme</span><span>Início imediato</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">LinkedIn · 24/06</div>
+    </div>
+
+    <div class="card-vaga">
+      <div class="vaga-icone">🎓</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Vagas de Estágio e Aprendiz</div>
+        <div class="vaga-info"><span>🏢 CIEE / Diversas</span><span>📍 Santana e arredores</span><span>Nível médio ou superior</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">Estágio</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Indeed · 4 dias</div>
+    </div>
+  </div>
+
+  <!-- POLÍTICA -->
+  <div class="secao" id="politica">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-pol"></span>Política Regional</div>
+      <span class="secao-count">2 itens</span>
+    </div>
+
+    <div class="card-pol">
+      <div class="pol-orgao">💰 Secretaria de Planejamento / Prefeitura SP</div>
+      <div class="pol-titulo">Orçamento Cidadão 2026: melhorias confirmadas no Parque do Trote e Parque Vila Guilherme</div>
+      <div class="pol-impacto">Resultados do Orçamento Cidadão confirmam implantação de melhorias nos dois parques ao longo de 2026, beneficiando moradores da região.</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">Publicado · 24/06</span>
+        <span style="font-size:12px;color:var(--cinza-m);">Prefeitura de SP</span>
+      </div>
+    </div>
+
+    <div class="card-pol">
+      <div class="pol-orgao">🏛️ Câmara Municipal de SP</div>
+      <div class="pol-titulo">Audiência Pública debate requalificação urbana na Freguesia do Ó e impacto da Linha 6-Laranja</div>
+      <div class="pol-impacto">Discussão sobre adensamento populacional no entorno da futura Linha 6-Laranja do Metrô na Freguesia do Ó. Propostas em análise.</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">Concluída · 23/06</span>
+        <span style="font-size:12px;color:var(--cinza-m);">Câmara SP</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALERTAS -->
+  <div class="secao" id="alertas">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-dad"></span>Dados & Alertas</div>
+      <span class="secao-count">3 itens</span>
+    </div>
+
+    <div class="alerta ok">
+      <div style="font-size:24px;flex-shrink:0;">✅</div>
+      <div>
+        <div class="alerta-titulo">Sem Alagamentos Ativos</div>
+        <div class="alerta-desc">Sistema CGE indica normalidade em toda a Zona Norte, apesar das chuvas atípicas registradas ontem. Atmosfera limpa após as precipitações.</div>
+        <div class="alerta-meta">CGE · 24/06 às 21h04 · 📍 Zona Norte</div>
+      </div>
+    </div>
+
+    <div class="alerta ok">
+      <div style="font-size:24px;flex-shrink:0;">💨</div>
+      <div>
+        <div class="alerta-titulo">Qualidade do Ar: Boa</div>
+        <div class="alerta-desc">Condições ideais para atividades ao ar livre após a limpeza da atmosfera pelas chuvas recentes. Ótimo dia para aproveitar os parques da região!</div>
+        <div class="alerta-meta">CETESB · Hoje, 10h00 · 📍 Santana / Casa Verde</div>
+      </div>
+    </div>
+
+    <div class="alerta info">
+      <div style="font-size:24px;flex-shrink:0;">♻️</div>
+      <div>
+        <div class="alerta-titulo">Coleta Seletiva — Operação Loga</div>
+        <div class="alerta-desc">Caminhão de coleta seletiva passa uma vez por semana. Agendamento disponível pelo telefone 156 para Vila Guilherme, Santana e Vila Maria.</div>
+        <div class="alerta-meta">Loga / Prefeitura · Hoje · 📍 Vila Guilherme · Santana · Vila Maria</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLASSIFICADOS -->
+  <div class="secao" id="classificados">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-cla"></span>Classificados & Serviços</div>
+      <span class="secao-count">6 anúncios</span>
+    </div>
+
+    <div class="cla-grupo">
+      <div class="cla-grupo-titulo">🏠 Imóveis para Alugar</div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Casa no Tucuruvi — 2 quartos, garagem e quintal</div><div class="cla-detalhe">Direto com proprietário · FB Groups</div></div>
+        <div class="cla-preco">R$ 1.700</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Apartamento na Parada Inglesa — próx. ao metrô</div><div class="cla-detalhe">Pacote completo · Marketplace</div></div>
+        <div class="cla-preco">R$ 2.100</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Salas Comerciais em Santana — próx. Voluntários da Pátria</div><div class="cla-detalhe">Edifício comercial · OLX</div></div>
+        <div class="cla-preco">R$ 1.500</div>
+      </div>
+    </div>
+
+    <div class="cla-grupo">
+      <div class="cla-grupo-titulo">🛠️ Serviços & Aulas</div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Reforço Escolar de Matemática — do básico ao avançado</div><div class="cla-detalhe">Professora particular · Instagram</div></div>
+        <div class="cla-preco">A consultar</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Diarista e Limpeza Pesada</div><div class="cla-detalhe">📍 Santana / Vila Guilherme · Facebook</div></div>
+        <div class="cla-preco">R$ 200/dia</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Aulas de Reforço Lúdico para Crianças</div><div class="cla-detalhe">Metodologia personalizada · FB Groups</div></div>
+        <div class="cla-preco">A consultar</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="resumo-box">
+    <div class="resumo-titulo">📋 Edição de hoje · 25/06</div>
+    <div class="resumo-linha"><span>📰 Notícias</span><span class="resumo-n">4</span></div>
+    <div class="resumo-linha"><span>🗓️ Eventos</span><span class="resumo-n">4</span></div>
+    <div class="resumo-linha"><span>💼 Vagas</span><span class="resumo-n">4</span></div>
+    <div class="resumo-linha"><span>🏛️ Política</span><span class="resumo-n">2</span></div>
+    <div class="resumo-linha"><span>⚠️ Alertas</span><span class="resumo-n">3</span></div>
+    <div class="resumo-linha"><span>🛒 Classificados</span><span class="resumo-n">6</span></div>
+  </div>
+
+  <div class="sb-card">
+    <div class="sb-header">✅ Situação agora</div>
+    <div class="sb-item"><div style="font-size:20px;">☀️</div><div><div class="sb-titulo">Sem alagamentos</div><div class="sb-sub">CGE em normalidade</div></div></div>
+    <div class="sb-item"><div style="font-size:20px;">💨</div><div><div class="sb-titulo">Ar: Boa qualidade</div><div class="sb-sub">Ideal para atividades ao ar livre</div></div></div>
+    <div class="sb-item"><div style="font-size:20px;">♻️</div><div><div class="sb-titulo">Coleta seletiva ativa</div><div class="sb-sub">Ligue 156 para agendar</div></div></div>
+  </div>
+
+  <div class="sb-card">
+    <div class="sb-header">📍 Bairros em destaque</div>
+    <div class="sb-item"><div class="sb-num">5</div><div><div class="sb-titulo">Santana</div><div class="sb-sub">Vagas · Eventos · Imóveis</div></div></div>
+    <div class="sb-item"><div class="sb-num">3</div><div><div class="sb-titulo">Tucuruvi</div><div class="sb-sub">Bom Prato · Vagas · Acidente</div></div></div>
+    <div class="sb-item"><div class="sb-num">2</div><div><div class="sb-titulo">Jaçanã</div><div class="sb-sub">Cursos CEU · Teia Sampa</div></div></div>
+    <div class="sb-item"><div class="sb-num">2</div><div><div class="sb-titulo">Vila Guilherme</div><div class="sb-sub">Parque · Vagas · Coleta</div></div></div>
+    <div class="sb-item"><div class="sb-num">1</div><div><div class="sb-titulo">Parada Inglesa</div><div class="sb-sub">Obras Rua Inglesa</div></div></div>
+  </div>
+
+  <div class="sb-card">
+    <div class="sb-header">🎉 Este fim de semana</div>
+    <div class="sb-item"><div style="font-size:20px;">🎵</div><div><div class="sb-titulo">Silvero Pereira / Belchior</div><div class="sb-sub">26–28/06 · 20h · Sesc Santana</div></div></div>
+    <div class="sb-item"><div style="font-size:20px;">🎭</div><div><div class="sb-titulo">Catimba — Cia. Teatral</div><div class="sb-sub">27/06 · 16h · Gratuito</div></div></div>
+    <div class="sb-item"><div style="font-size:20px;">⚽</div><div><div class="sb-titulo">Futebol das Ancestrais</div><div class="sb-sub">28/06 · 14h · Gratuito</div></div></div>
+  </div>
+
+  <div style="background:var(--verde);border-radius:14px;padding:18px;color:var(--branco);text-align:center;">
+    <div style="font-size:22px;margin-bottom:8px;">📬</div>
+    <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:800;margin-bottom:6px;">Receba o Portau todo dia</div>
+    <div style="font-size:12px;color:rgba(255,255,255,0.65);margin-bottom:14px;">A edição completa da Zona Norte no seu e-mail às 8h.</div>
+    <div style="background:var(--amarelo);color:var(--cinza-q);font-weight:700;font-size:13px;padding:10px 16px;border-radius:8px;cursor:pointer;">Assinar newsletter gratuita</div>
+  </div>
+</aside>
+</div>
+</div>
+
+
+
+<footer>
+  Coletado por <strong>Manus</strong> · Formatado pelo <strong>Portau</strong> · Zona Norte de São Paulo · 25/06/2026<br>
+  Fontes: Jornal SP Norte · Diário Zona Norte · G1 · Subprefeitura Santana/Tucuruvi · Sesc Santana · CGE · CETESB · LinkedIn · Indeed
+</footer>
+
+<script>
+const canvas = document.getElementById('globo-canvas');
+const ctx = canvas.getContext('2d');
+const W = canvas.width, H = canvas.height;
+const R = W / 2 - 2;
+const cx = W / 2, cy = H / 2;
+const SP = { lat: -23.55, lng: -46.63 };
+
+let rotY = 60 * Math.PI / 180;
+let rotX = 0.15;
+let velY = 0.003;
+let velX = 0;
+let dragging = false;
+let lastX, lastY;
+
+// Polígonos geográficos reais simplificados (lat, lng)
+const terras = [
+  // América do Sul — contorno real
+  { cor:'#52B788', pts:[
+    [-5,-81],[-3,-80],[3,-77],[8,-77],[12,-72],[12,-63],[9,-60],[5,-53],[4,-50],
+    [2,-50],[2,-48],[0,-50],[-4,-50],[-4,-37],[-5,-35],[-10,-37],[-15,-39],
+    [-20,-40],[-23,-43],[-28,-49],[-33,-52],[-38,-57],[-40,-62],[-42,-63],
+    [-46,-65],[-50,-68],[-52,-68],[-55,-65],[-55,-67],[-53,-70],[-52,-74],
+    [-45,-76],[-40,-73],[-35,-73],[-30,-72],[-25,-70],[-20,-70],[-18,-70],
+    [-15,-75],[-10,-78],[-5,-81]
+  ]},
+  // América Central + México
+  { cor:'#74C69D', pts:[
+    [30,-115],[32,-117],[32,-115],[30,-111],[25,-110],[22,-106],[20,-105],
+    [16,-94],[15,-92],[15,-88],[14,-87],[12,-84],[10,-84],[8,-83],[8,-77],
+    [10,-75],[12,-72],[12,-63],[20,-87],[22,-90],[22,-98],[25,-98],
+    [28,-100],[30,-105],[32,-115],[30,-115]
+  ]},
+  // América do Norte
+  { cor:'#74C69D', pts:[
+    [70,-140],[72,-120],[72,-90],[70,-80],[65,-65],[60,-65],[55,-60],
+    [50,-55],[47,-53],[45,-60],[42,-65],[40,-70],[38,-75],[35,-76],
+    [30,-81],[28,-82],[25,-80],[25,-90],[20,-87],[25,-98],[28,-100],
+    [30,-105],[32,-115],[35,-120],[37,-122],[40,-124],[45,-125],
+    [50,-127],[55,-130],[60,-137],[65,-140],[70,-140]
+  ]},
+  // Groelândia
+  { cor:'#95D5B2', pts:[
+    [76,-70],[80,-55],[83,-40],[83,-20],[78,-18],[72,-22],[68,-28],
+    [65,-40],[63,-50],[63,-60],[65,-65],[70,-68],[76,-70]
+  ]},
+  // Europa
+  { cor:'#74C69D', pts:[
+    [70,-10],[70,0],[68,15],[65,25],[60,28],[55,28],[50,30],[45,30],
+    [38,28],[36,30],[36,15],[38,12],[42,12],[44,10],[45,5],[44,0],
+    [43,-5],[37,-8],[36,-10],[38,-10],[40,-8],[42,-8],[44,-3],
+    [46,0],[48,-5],[48,-3],[50,0],[53,0],[55,-5],[57,-5],[58,0],
+    [60,5],[60,15],[62,15],[63,10],[63,0],[65,0],[65,-15],[70,-10]
+  ]},
+  // África
+  { cor:'#52B788', pts:[
+    [37,-5],[37,10],[35,12],[32,24],[30,33],[22,37],[12,44],[5,42],
+    [0,42],[-5,40],[-10,40],[-15,36],[-18,36],[-22,35],[-25,33],
+    [-30,30],[-35,26],[-35,18],[-35,20],[-30,17],[-25,15],[-18,12],
+    [-15,12],[-10,14],[-5,10],[0,8],[0,0],[-5,-5],[-5,-12],
+    [0,-15],[5,-5],[10,0],[15,-5],[20,-17],[25,-15],[30,-12],
+    [37,-5]
+  ]},
+  // Europa Oriental + parte Ásia
+  { cor:'#74C69D', pts:[
+    [70,0],[70,40],[68,50],[65,60],[60,60],[55,55],[50,50],[45,50],
+    [40,45],[38,40],[36,36],[38,30],[42,30],[45,30],[50,30],[55,28],
+    [60,28],[65,25],[68,15],[70,0]
+  ]},
+  // Ásia
+  { cor:'#52B788', pts:[
+    [70,40],[70,80],[68,90],[70,100],[68,120],[65,130],[60,140],
+    [55,140],[50,140],[45,135],[40,130],[35,128],[30,122],[25,120],
+    [22,114],[20,110],[15,108],[10,105],[5,103],[1,104],
+    [-5,105],[-8,115],[-8,125],[-5,130],[0,130],[-5,140],
+    [-10,142],[-5,145],[0,140],[5,130],[10,124],[15,120],
+    [20,115],[25,120],[30,122],[35,128],[40,130],[45,135],
+    [50,140],[55,140],[60,140],[65,130],[68,120],[70,100],
+    [68,90],[70,80],[70,60],[68,50],[65,60],[60,60],[55,55],
+    [50,50],[45,50],[40,45],[38,40],[38,28],[40,28],[45,30],
+    [50,30],[55,28],[60,28],[65,25],[68,15],[70,0],[70,40]
+  ]},
+  // Índia
+  { cor:'#40916C', pts:[
+    [28,70],[28,80],[25,88],[22,90],[18,83],[15,80],[10,78],[8,78],
+    [8,77],[10,75],[12,80],[15,75],[20,73],[22,70],[25,70],[28,70]
+  ]},
+  // Japão (simplificado)
+  { cor:'#74C69D', pts:[
+    [40,130],[42,140],[38,142],[34,135],[32,131],[34,130],[38,130],[40,130]
+  ]},
+  // Indonésia/Sumatra
+  { cor:'#52B788', pts:[
+    [5,95],[5,105],[-2,106],[-5,105],[-5,103],[-2,102],[2,100],[5,96],[5,95]
+  ]},
+  // Austrália
+  { cor:'#52B788', pts:[
+    [-15,130],[-12,136],[-12,140],[-15,145],[-20,148],[-25,153],
+    [-30,153],[-35,150],[-38,147],[-38,140],[-35,137],[-32,133],
+    [-32,124],[-25,114],[-22,114],[-20,118],[-18,122],[-15,130]
+  ]},
+  // Nova Zelândia (simplificado)
+  { cor:'#74C69D', pts:[
+    [-35,174],[-35,176],[-38,176],[-42,172],[-45,168],[-42,168],[-38,174],[-35,174]
+  ]},
+  // Grã-Bretanha
+  { cor:'#95D5B2', pts:[
+    [58,-5],[60,-2],[58,0],[55,0],[52,0],[50,-5],[52,-5],[55,-5],[58,-5]
+  ]},
+  // Islândia
+  { cor:'#95D5B2', pts:[
+    [64,-24],[66,-18],[65,-14],[63,-18],[62,-22],[64,-24]
+  ]},
+  // Madagáscar
+  { cor:'#74C69D', pts:[
+    [-12,49],[-15,50],[-20,48],[-24,44],[-25,45],[-22,48],[-18,48],[-12,49]
+  ]},
+  // Sri Lanka
+  { cor:'#74C69D', pts:[[8,80],[8,82],[6,81],[7,80],[8,80]]},
+  // Cuba
+  { cor:'#95D5B2', pts:[[22,-85],[23,-82],[22,-80],[20,-75],[20,-78],[22,-85]]},
+];
+
+function project(lat, lng) {
+  const phi = lat * Math.PI / 180;
+  const lam = lng * Math.PI / 180;
+  const x0 = Math.cos(phi) * Math.sin(lam);
+  const y0 = Math.sin(phi);
+  const z0 = Math.cos(phi) * Math.cos(lam);
+  const x1 = x0 * Math.cos(rotY) - z0 * Math.sin(rotY);
+  const z1 = x0 * Math.sin(rotY) + z0 * Math.cos(rotY);
+  const y2 = y0 * Math.cos(rotX) - z1 * Math.sin(rotX);
+  const z2 = y0 * Math.sin(rotX) + z1 * Math.cos(rotX);
+  return { x: cx + x1 * R, y: cy - y2 * R, z: z2 };
+}
+
+function visibilidade(pts) {
+  return pts.reduce((s, [lat,lng]) => s + project(lat,lng).z, 0) / pts.length;
+}
+
+function drawGlobe() {
+  ctx.clearRect(0, 0, W, H);
+
+  // Oceano
+  ctx.shadowColor = 'rgba(0,0,0,0.2)';
+  ctx.shadowBlur = 10;
+  const grad = ctx.createRadialGradient(cx - R*0.3, cy - R*0.3, R*0.05, cx, cy, R);
+  grad.addColorStop(0, '#74C69D');
+  grad.addColorStop(0.5, '#1B4332');
+  grad.addColorStop(1, '#081C15');
+  ctx.beginPath();
+  ctx.arc(cx, cy, R, 0, Math.PI*2);
+  ctx.fillStyle = grad;
+  ctx.fill();
+  ctx.shadowBlur = 0;
+
+  // Grade suave
+  ctx.strokeStyle = 'rgba(255,255,255,0.06)';
+  ctx.lineWidth = 0.4;
+  for (let lat = -60; lat <= 60; lat += 30) {
+    ctx.beginPath(); let mv = true;
+    for (let lng = -180; lng <= 185; lng += 4) {
+      const p = project(lat, lng);
+      if (p.z <= 0) { mv = true; continue; }
+      mv ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+      mv = false;
+    }
+    ctx.stroke();
+  }
+  for (let lng = -180; lng <= 180; lng += 30) {
+    ctx.beginPath(); let mv = true;
+    for (let lat = -85; lat <= 85; lat += 4) {
+      const p = project(lat, lng);
+      if (p.z <= 0) { mv = true; continue; }
+      mv ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y);
+      mv = false;
+    }
+    ctx.stroke();
+  }
+
+  // Terras — ordenadas por profundidade (mais longe primeiro)
+  const sorted = terras.map(t => ({ ...t, vis: visibilidade(t.pts) }))
+                       .sort((a,b) => a.vis - b.vis);
+
+  ctx.save();
+  ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2); ctx.clip();
+
+  for (const terra of sorted) {
+    if (terra.vis < -0.4) continue;
+
+    // Projeta pontos; quebra polígono quando cruza o horizonte
+    const segments = [];
+    let seg = [];
+    for (const [lat, lng] of terra.pts) {
+      const p = project(lat, lng);
+      if (p.z > -0.05) {
+        seg.push(p);
+      } else {
+        if (seg.length > 1) segments.push(seg);
+        seg = [];
+      }
+    }
+    if (seg.length > 1) segments.push(seg);
+
+    for (const s of segments) {
+      if (s.length < 2) continue;
+      ctx.beginPath();
+      ctx.moveTo(s[0].x, s[0].y);
+      for (let i = 1; i < s.length; i++) ctx.lineTo(s[i].x, s[i].y);
+      ctx.closePath();
+      const alpha = Math.min(1, Math.max(0.3, terra.vis + 0.5));
+      ctx.fillStyle = terra.cor;
+      ctx.globalAlpha = alpha;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+      ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+      ctx.lineWidth = 0.3;
+      ctx.stroke();
+    }
+  }
+  ctx.restore();
+
+  // Marcador SP pulsante
+  const sp = project(SP.lat, SP.lng);
+  if (sp.z > 0.15) {
+    const pulse = (Math.sin(Date.now() / 350) + 1) / 2;
+    ctx.beginPath();
+    ctx.arc(sp.x, sp.y, 3 + pulse * 5, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(255,183,3,${0.1 + pulse*0.25})`;
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(sp.x, sp.y, 3, 0, Math.PI*2);
+    ctx.fillStyle = '#FFB703';
+    ctx.fill();
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+
+  // Borda
+  ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2);
+  ctx.strokeStyle = 'rgba(45,106,79,0.5)'; ctx.lineWidth = 1.5; ctx.stroke();
+
+  // Brilho
+  const shine = ctx.createRadialGradient(cx-R*0.38, cy-R*0.38, 0, cx-R*0.1, cy-R*0.1, R*0.85);
+  shine.addColorStop(0, 'rgba(255,255,255,0.22)');
+  shine.addColorStop(0.5, 'rgba(255,255,255,0.04)');
+  shine.addColorStop(1, 'rgba(255,255,255,0)');
+  ctx.beginPath(); ctx.arc(cx, cy, R, 0, Math.PI*2);
+  ctx.fillStyle = shine; ctx.fill();
+}
+
+function animate() {
+  if (!dragging) {
+    rotY += velY;
+    velX *= 0.92;
+    rotX = Math.max(-0.45, Math.min(0.45, rotX + velX));
+  }
+  drawGlobe();
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Mouse
+canvas.addEventListener('mousedown', e => { dragging=true; lastX=e.clientX; lastY=e.clientY; velY=0; velX=0; });
+window.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const dx=e.clientX-lastX, dy=e.clientY-lastY;
+  rotY+=dx*0.012; rotX+=dy*0.006;
+  rotX=Math.max(-0.45,Math.min(0.45,rotX));
+  velY=dx*0.008; velX=dy*0.004;
+  lastX=e.clientX; lastY=e.clientY;
+});
+window.addEventListener('mouseup', () => dragging=false);
+
+// Touch
+canvas.addEventListener('touchstart', e=>{e.preventDefault();dragging=true;lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;velY=0;velX=0;},{passive:false});
+canvas.addEventListener('touchmove', e=>{e.preventDefault();if(!dragging)return;const dx=e.touches[0].clientX-lastX,dy=e.touches[0].clientY-lastY;rotY+=dx*0.012;rotX+=dy*0.006;velY=dx*0.008;velX=dy*0.004;lastX=e.touches[0].clientX;lastY=e.touches[0].clientY;},{passive:false});
+canvas.addEventListener('touchend',()=>dragging=false);
+
+// Tooltip
+const wrap=document.getElementById('globo-wrap');
+const tip=document.getElementById('globo-tooltip');
+wrap.addEventListener('mouseenter',()=>tip.classList.add('visivel'));
+wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
+</script>
+
+<!-- PAINEL ANALYTICS (duplo clique no globo) -->
+<div class="ga-overlay" id="ga-overlay" onclick="if(event.target===this)fecharGA()">
+  <div class="ga-painel">
+    <button class="ga-fechar" onclick="fecharGA()">✕</button>
+    <div class="ga-titulo">🌍 Portau ao Vivo</div>
+    <div class="ga-sub">Google Analytics · portauzn.com.br</div>
+
+    <div id="ga-conteudo">
+      <div class="ga-loading"><span class="ga-spinner"></span>Carregando dados...</div>
+    </div>
+
+    <div class="ga-update">
+      <span id="ga-update-txt"></span>
+      <button class="ga-atualizar" onclick="carregarGA()">↻ Atualizar</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+// ── PAINEL ANALYTICS ─────────────────────────────────────────
+const GA_PROPERTY_ID = '399155331';
+const SA_EMAIL = 'portau-analytics@portau-analytics.iam.gserviceaccount.com';
+const SA_KEY = `-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDOWfXkyXeJdYTX
+bWcSgVb7rYdSF736qlDSV6HodlpZdYSiKRqqFDSdi+1Xg2QhUpW3AhLV6CKPxeyG
+YhrJVDCDJBi09jsD8LOefxA0zkZQB5wbeKrj2v1618d0V6DJ1duQBzKoq6oOYlnH
+TyfS41ySRU8VQ96BffC012GCkQ8NLb/sEKc68TtAcK9xHY0BzTW0KCvvKySuPfZI
+P6e/mi8B0S+Eue1Owar0uNRjbqnozmm3EfkkH3tdGlFGtcPa9nX+qPg420XP0vFC
+R3GLfChhkuiKuMKJB/IqBgPZQCHQwVCVmbzJnhKrnMEz2vpCKdd8HpJ0u83WX9w2
+HzhTtLINAgMBAAECggEACIITY5UI+DfKZpAst/RxmoaboJS5BmeqVcSQ45hUU6xG
+7+Fjp4/rYXQ+W3rf5d3VWB/eQ0ft0OFsxgJahLg+GHzPBfsXENZbrup3R8NviRI0
+lg9iIGtMQ0SNWpctr9TBAk3BrCGz18xR/lKdsOd4pCahGEky7ezm6qtCFSjs/B02
+nmxjD8a5tUf81lD/APuPuXiNmt9tH93bakWUCHNXQ2zQNNw2PtPzP/Rovp07o6Wc
+Dh0ubfxmp1aX6zmGuKyXjtFOcvR++OOv4Eo0Tj6hR7oZtKyIhJMmKpezK1EMhw9e
+4wWfXNjMcqhAlJgEJ90wM4sBslnGcHsK9O7bFGwmowKBgQD3QERxodcWHTGhWnL6
+/i5/lr+UG7YPCM0P8YrRSxKs3U9hquMzoMWCnoWdBCDXqjisBotFonoxwnHUFXJ3
+574TfUUdE9QFTFyuqBmWE1vlWfX/CzFgfKJ5nD2Eu7EHU/3z/scm/h6ojk/IdKXl
+Hiaqf7Mb6ksiTLkeqCjKkBuHXwKBgQDVpzPKt5zGilXMAtGKc+025LZyBDaaxhyi
+biuwsvVWdWgeD/1eZSDMXsJEzqPV+3RnxZlUOxDFb8f/NQKgdDF2cNLZTdWZmDnr
+AK3LAVx7VXvWvtbNpUn5S/fbX6p/a9SP0kk9mJN8q/FKFDXhSFPzPJHfahLd8jKA
+e108JFYaEwKBgQDhzaO0UyVnYMoOndgcOT6l7zqPPK+ME3GTefhZI8KudH8mpzZP
+1CgNHlDQEREdZKvVDzTqJ3SJNRdXpS6hKteAXQtdftpG7HJIX+TeFlf6oanzfnld
+sPWBMptMOU13b9Ghn7Cpf7LoJO/gFgfbsymE1JLyj4qGjKMTyGdYdzts6QKBgBzy
+JTsuuyfO8CbOrvLyF85bGDjER12av6BmCrdK16BaEbwY8HvMebAWmn1V/a5s/e1d
+QRO/WNtW9KKn3O4+L8FbMcXNHMZNcHNdSS56xbvT7g4/Fr0PysDiwPbQtDnFMyw1
+EkUtGbZHWU5vBIm8EdufdiftqBa3zI3JqO0QAzZPAoGBANJnfOiHOlxDpdN7cI98
+c0De/9Tqoh4Llvco9rp8b0TPPR0H+ui5VCd17cH8+GckH73/LubArPfrbq97qeFW
+Qmmq6oU85kHL4W5CKbUDqXM2WgvvGt3mbvfuC/PVxYUSz4XWmTPB+QbSPR3Ks1nE
+vngpkxHuhoUYqDh9XnvBmQU8
+-----END PRIVATE KEY-----`;
+
+const flagMap = {
+  'Brazil':'🇧🇷','United States':'🇺🇸','Portugal':'🇵🇹','Argentina':'🇦🇷',
+  'Belgium':'🇧🇪','Germany':'🇩🇪','France':'🇫🇷','United Kingdom':'🇬🇧',
+  'Italy':'🇮🇹','Spain':'🇪🇸','Japan':'🇯🇵','Canada':'🇨🇦','Australia':'🇦🇺',
+  'Mexico':'🇲🇽','Chile':'🇨🇱','Colombia':'🇨🇴','Netherlands':'🇳🇱',
+};
+const pNome = c => c === 'Brazil' ? 'Brasil' : c;
+const flag  = c => flagMap[c] || '🌍';
+
+async function getToken() {
+  const hdr = btoa(JSON.stringify({alg:'RS256',typ:'JWT'})).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+  const now = Math.floor(Date.now()/1000);
+  const clm = btoa(JSON.stringify({
+    iss:SA_EMAIL, scope:'https://www.googleapis.com/auth/analytics.readonly',
+    aud:'https://oauth2.googleapis.com/token', exp:now+3600, iat:now
+  })).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+  const unsigned = hdr+'.'+clm;
+  const pem = SA_KEY.replace(/-----BEGIN PRIVATE KEY-----|-----END PRIVATE KEY-----|\n/g,'');
+  const keyData = Uint8Array.from(atob(pem), c=>c.charCodeAt(0));
+  const key = await crypto.subtle.importKey('pkcs8',keyData.buffer,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['sign']);
+  const sig = await crypto.subtle.sign('RSASSA-PKCS1-v1_5',key,new TextEncoder().encode(unsigned));
+  const sigB64 = btoa(String.fromCharCode(...new Uint8Array(sig))).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
+  const jwt = unsigned+'.'+sigB64;
+  const r = await fetch('https://oauth2.googleapis.com/token',{
+    method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:`grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`
+  });
+  return (await r.json()).access_token;
+}
+
+async function gaReport(token, body, realtime=false) {
+  const ep = realtime
+    ? `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runRealtimeReport`
+    : `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runReport`;
+  const r = await fetch(ep,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body)});
+  return r.json();
+}
+
+async function carregarGA() {
+  document.getElementById('ga-conteudo').innerHTML = '<div class="ga-loading"><span class="ga-spinner"></span>Carregando...</div>';
+  document.getElementById('ga-update-txt').textContent = '';
+  try {
+    const token = await getToken();
+    const hoje  = new Date().toISOString().split('T')[0];
+
+    const [rt, hojeR, paisesR, devR] = await Promise.all([
+      gaReport(token,{metrics:[{name:'activeUsers'}]},true),
+      gaReport(token,{dateRanges:[{startDate:hoje,endDate:hoje}],metrics:[{name:'activeUsers'},{name:'sessions'},{name:'averageSessionDuration'}]}),
+      gaReport(token,{dateRanges:[{startDate:'7daysAgo',endDate:'today'}],dimensions:[{name:'country'}],metrics:[{name:'activeUsers'}],orderBys:[{metric:{metricName:'activeUsers'},desc:true}],limit:5}),
+      gaReport(token,{dateRanges:[{startDate:'7daysAgo',endDate:'today'}],dimensions:[{name:'deviceCategory'}],metrics:[{name:'activeUsers'}]}),
+    ]);
+
+    const ativos   = (rt.rows||[]).reduce((s,r)=>s+parseInt(r.metricValues[0].value),0);
+    const totalHoj = parseInt(hojeR.rows?.[0]?.metricValues?.[0]?.value||'0');
+    const sessoes  = parseInt(hojeR.rows?.[0]?.metricValues?.[1]?.value||'0');
+    const durSec   = parseFloat(hojeR.rows?.[0]?.metricValues?.[2]?.value||'0');
+    const min      = Math.floor(durSec/60);
+    const seg      = Math.round(durSec%60);
+    const paises   = (paisesR.rows||[]).map(r=>({nome:r.dimensionValues[0].value,num:parseInt(r.metricValues[0].value)}));
+    const maxP     = paises[0]?.num||1;
+
+    const devMap = {};
+    (devR.rows||[]).forEach(r=>{ devMap[r.dimensionValues[0].value]=parseInt(r.metricValues[0].value); });
+    const devTotal = Object.values(devMap).reduce((a,b)=>a+b,0)||1;
+    const devIcons = {mobile:'📱',desktop:'💻',tablet:'📋'};
+    const devNomes = {mobile:'Celular',desktop:'Computador',tablet:'Tablet'};
+
+    document.getElementById('ga-conteudo').innerHTML = `
+      <div class="ga-grid">
+        <div class="ga-card" style="border-left:3px solid #D62828;">
+          <div class="ga-card-label">Agora no site</div>
+          <div class="ga-card-num">${ativos}</div>
+          <div class="ga-card-sub">leitores ativos</div>
+          <span class="ga-live">🔴 ao vivo</span>
+        </div>
+        <div class="ga-card" style="border-left:3px solid #FFB703;">
+          <div class="ga-card-label">Leitores hoje</div>
+          <div class="ga-card-num">${totalHoj.toLocaleString('pt-BR')}</div>
+          <div class="ga-card-sub">usuários únicos</div>
+        </div>
+        <div class="ga-card" style="border-left:3px solid #2D6A4F;">
+          <div class="ga-card-label">Sessões hoje</div>
+          <div class="ga-card-num">${sessoes.toLocaleString('pt-BR')}</div>
+          <div class="ga-card-sub">visitas no total</div>
+        </div>
+        <div class="ga-card" style="border-left:3px solid #5C3893;">
+          <div class="ga-card-label">Tempo médio</div>
+          <div class="ga-card-num">${min}:${String(seg).padStart(2,'0')}</div>
+          <div class="ga-card-sub">min por visita</div>
+        </div>
+      </div>
+
+      <div class="ga-paises">
+        <div class="ga-paises-titulo">🌍 Países (últimos 7 dias)</div>
+        ${paises.length ? paises.map(p=>`
+          <div class="ga-pais-row">
+            <span style="font-size:16px;">${flag(p.nome)}</span>
+            <span class="ga-pais-nome">${pNome(p.nome)}</span>
+            <div class="ga-pais-bar-wrap"><div class="ga-pais-bar" style="width:${Math.round(p.num/maxP*100)}%"></div></div>
+            <span class="ga-pais-num">${p.num}</span>
+          </div>`).join('') : '<div style="color:rgba(255,255,255,0.3);font-size:13px;">Aguardando dados...</div>'}
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
+        ${Object.entries(devMap).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`
+          <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:8px 14px;font-size:12px;display:flex;align-items:center;gap:6px;">
+            <span>${devIcons[k]||'🖥️'}</span>
+            <span style="color:rgba(255,255,255,0.7);">${devNomes[k]||k}</span>
+            <span style="font-family:Syne,sans-serif;font-weight:800;color:#FFB703;">${Math.round(v/devTotal*100)}%</span>
+          </div>`).join('')}
+      </div>`;
+
+    const agora = new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+    document.getElementById('ga-update-txt').textContent = '⏱️ ' + agora + ' · GA4';
+
+  } catch(e) {
+    document.getElementById('ga-conteudo').innerHTML = `<div class="ga-loading" style="color:#ff6b6b;">⚠️ Erro ao carregar dados.<br><small>${e.message}</small></div>`;
+  }
+}
+
+function abrirGA()  { document.getElementById('ga-overlay').classList.add('aberto'); carregarGA(); }
+function fecharGA() { document.getElementById('ga-overlay').classList.remove('aberto'); }
+
+// Duplo clique no globo → abre painel
+document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
+
+// Esc fecha
+window.addEventListener('keydown', e => { if(e.key==='Escape') fecharGA(); });
+</script>
+
+</body>
+</html>

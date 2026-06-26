@@ -1,0 +1,9 @@
+{
+  "name": "portauzn",
+  "version": "1.0.0",
+  "description": "Portal hiperlocal da Zona Norte de São Paulo",
+  "dependencies": {
+    "@google-analytics/data": "^4.6.0",
+    "google-auth-library": "^9.0.0"
+  }
+}
