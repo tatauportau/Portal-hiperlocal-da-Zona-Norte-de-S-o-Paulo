@@ -77,7 +77,7 @@ exports.handler = async function(event, context) {
     const gaH = { 'Authorization': `Bearer ${access_token}`, 'Content-Type': 'application/json' };
     const base = `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}`;
 
-    const [rtRes, hojeRes, paisesRes, devRes] = await Promise.all([
+    const [rtRes, hojeRes, semanaRes, paisesRes, devRes] = await Promise.all([
       fetch(`${base}:runRealtimeReport`, {
         method: 'POST', headers: gaH,
         body: JSON.stringify({ metrics: [{ name: 'activeUsers' }] })
@@ -87,6 +87,13 @@ exports.handler = async function(event, context) {
         body: JSON.stringify({
           dateRanges: [{ startDate: hoje, endDate: hoje }],
           metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'averageSessionDuration' }]
+        })
+      }),
+      fetch(`${base}:runReport`, {
+        method: 'POST', headers: gaH,
+        body: JSON.stringify({
+          dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+          metrics: [{ name: 'activeUsers' }, { name: 'sessions' }]
         })
       }),
       fetch(`${base}:runReport`, {
@@ -109,11 +116,13 @@ exports.handler = async function(event, context) {
       })
     ]);
 
-    const [rt, hoje_r, paises_r, dev_r] = await Promise.all([
+    const [rt, hoje_r, semana_r, paises_r, dev_r] = await Promise.all([
       rtRes.json(), hojeRes.json(), paisesRes.json(), devRes.json()
     ]);
 
-    const ativos    = (rt.rows || []).reduce((s, r) => s + parseInt(r.metricValues[0].value), 0);
+    const ativos       = (rt.rows || []).reduce((s, r) => s + parseInt(r.metricValues[0].value), 0);
+    const totalSemana  = semana_r.rows?.[0]?.metricValues?.[0]?.value || '0';
+    const sessoesSemana = semana_r.rows?.[0]?.metricValues?.[1]?.value || '0';
     const totalHoje = hoje_r.rows?.[0]?.metricValues?.[0]?.value || '0';
     const sessoes   = hoje_r.rows?.[0]?.metricValues?.[1]?.value || '0';
     const duracao   = hoje_r.rows?.[0]?.metricValues?.[2]?.value || '0';
@@ -129,7 +138,7 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ ativos, totalHoje, sessoes, duracao, paises, devices })
+      body: JSON.stringify({ ativos, totalHoje, sessoes, duracao, totalSemana, sessoesSemana, paises, devices })
     };
 
   } catch (e) {
