@@ -2,8 +2,6 @@ const { createSign } = require('crypto');
 
 const GA_PROPERTY_ID = '399155331';
 const SA_EMAIL = 'portau-analytics@portau-analytics.iam.gserviceaccount.com';
-
-// Chave privada completa
 const SA_KEY = `-----BEGIN PRIVATE KEY-----
 MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDOWfXkyXeJdYTX
 bWcSgVb7rYdSF736qlDSV6HodlpZdYSiKRqqFDSdi+1Xg2QhUpW3AhLV6CKPxeyG
@@ -45,7 +43,7 @@ exports.handler = async function(event, context) {
   }
 
   try {
-    // JWT manual com crypto nativo
+    // Gera JWT
     const now = Math.floor(Date.now() / 1000);
     const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
     const claim  = Buffer.from(JSON.stringify({
@@ -77,7 +75,8 @@ exports.handler = async function(event, context) {
     const gaH = { 'Authorization': `Bearer ${access_token}`, 'Content-Type': 'application/json' };
     const base = `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}`;
 
-    const [rtRes, hojeRes, semanaRes, paisesRes, devRes] = await Promise.all([
+    // Executa 4 chamadas em paralelo
+    const [rtRes, hojeRes, paisesRes, devRes] = await Promise.all([
       fetch(`${base}:runRealtimeReport`, {
         method: 'POST', headers: gaH,
         body: JSON.stringify({ metrics: [{ name: 'activeUsers' }] })
@@ -85,15 +84,8 @@ exports.handler = async function(event, context) {
       fetch(`${base}:runReport`, {
         method: 'POST', headers: gaH,
         body: JSON.stringify({
-          dateRanges: [{ startDate: hoje, endDate: hoje }],
-          metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'averageSessionDuration' }]
-        })
-      }),
-      fetch(`${base}:runReport`, {
-        method: 'POST', headers: gaH,
-        body: JSON.stringify({
           dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
-          metrics: [{ name: 'activeUsers' }, { name: 'sessions' }]
+          metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'averageSessionDuration' }]
         })
       }),
       fetch(`${base}:runReport`, {
@@ -116,20 +108,22 @@ exports.handler = async function(event, context) {
       })
     ]);
 
-    const [rt, hoje_r, semana_r, paises_r, dev_r] = await Promise.all([
+    // Parse das respostas
+    const [rt, semanal, paises_r, dev_r] = await Promise.all([
       rtRes.json(), hojeRes.json(), paisesRes.json(), devRes.json()
     ]);
 
-    const ativos       = (rt.rows || []).reduce((s, r) => s + parseInt(r.metricValues[0].value), 0);
-    const totalSemana  = semana_r.rows?.[0]?.metricValues?.[0]?.value || '0';
-    const sessoesSemana = semana_r.rows?.[0]?.metricValues?.[1]?.value || '0';
-    const totalHoje = hoje_r.rows?.[0]?.metricValues?.[0]?.value || '0';
-    const sessoes   = hoje_r.rows?.[0]?.metricValues?.[1]?.value || '0';
-    const duracao   = hoje_r.rows?.[0]?.metricValues?.[2]?.value || '0';
-    const paises    = (paises_r.rows || []).map(r => ({
+    // Extrai dados
+    const ativos    = (rt.rows || []).reduce((s, r) => s + parseInt(r.metricValues[0].value), 0);
+    const total7d   = semanal.rows?.[0]?.metricValues?.[0]?.value || '0';
+    const sessoes7d = semanal.rows?.[0]?.metricValues?.[1]?.value || '0';
+    const duracao   = semanal.rows?.[0]?.metricValues?.[2]?.value || '0';
+
+    const paises = (paises_r.rows || []).map(r => ({
       nome: r.dimensionValues[0].value,
       num: parseInt(r.metricValues[0].value)
     }));
+
     const devices = {};
     (dev_r.rows || []).forEach(r => {
       devices[r.dimensionValues[0].value] = parseInt(r.metricValues[0].value);
@@ -138,7 +132,7 @@ exports.handler = async function(event, context) {
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ ativos, totalHoje, sessoes, duracao, totalSemana, sessoesSemana, paises, devices })
+      body: JSON.stringify({ ativos, total7d, sessoes7d, duracao, paises, devices })
     };
 
   } catch (e) {
