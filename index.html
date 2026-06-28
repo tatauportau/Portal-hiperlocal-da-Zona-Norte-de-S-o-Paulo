@@ -203,6 +203,72 @@
   .ga-spinner { display:inline-block;width:18px;height:18px;border:2px solid rgba(255,255,255,0.15);border-top-color:#FFB703;border-radius:50%;animation:spin 0.8s linear infinite;margin-right:8px;vertical-align:middle; }
   @keyframes spin { to { transform:rotate(360deg); } }
 
+
+  /* CLIMA */
+  .clima-bar {
+    background: var(--verde);
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+    padding: 0 24px;
+  }
+  .clima-inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 42px;
+    gap: 16px;
+  }
+  .clima-local {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--amarelo);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .clima-dados {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: center;
+  }
+  .clima-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+  }
+  .clima-temp {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--branco);
+  }
+  .clima-alerta {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(255,183,3,0.2);
+    color: var(--amarelo);
+    border: 1px solid rgba(255,183,3,0.3);
+  }
+  .clima-alerta.ok {
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.6);
+    border-color: rgba(255,255,255,0.1);
+  }
+  .clima-update {
+    font-size: 10px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.06em;
+  }
 </style>
 </head>
 <body>
@@ -211,6 +277,84 @@
   <span>📍 Zona Norte de São Paulo</span>
   <strong>Domingo, 28 de junho de 2026 · Edição completa do dia</strong>
 </div>
+
+
+<!-- CLIMA ZONA NORTE -->
+<div class="clima-bar" id="clima-bar">
+  <div class="clima-inner">
+    <div class="clima-local">📍 Zona Norte · SP</div>
+    <div class="clima-dados">
+      <div class="clima-item">
+        <span id="clima-icone">⏳</span>
+        <span class="clima-temp" id="clima-temp">--°C</span>
+      </div>
+      <div class="clima-item" id="clima-cond">Carregando...</div>
+      <div class="clima-item">💧 <span id="clima-chuva">--%</span></div>
+      <div class="clima-item">💨 <span id="clima-vento">-- km/h</span></div>
+      <span class="clima-alerta ok" id="clima-alerta">✅ Sem alertas</span>
+    </div>
+    <div class="clima-update" id="clima-update"></div>
+  </div>
+</div>
+
+<script>
+// Coordenadas de Santana — centro da Zona Norte
+const LAT = -23.5025;
+const LNG = -46.6283;
+
+const WMO = {
+  0:'☀️ Céu limpo', 1:'🌤️ Poucas nuvens', 2:'⛅ Parcialmente nublado',
+  3:'☁️ Nublado', 45:'🌫️ Neblina', 48:'🌫️ Geada',
+  51:'🌦️ Garoa leve', 53:'🌦️ Garoa', 55:'🌧️ Garoa intensa',
+  61:'🌧️ Chuva leve', 63:'🌧️ Chuva', 65:'🌧️ Chuva forte',
+  71:'❄️ Neve leve', 80:'🌦️ Pancadas leves', 81:'⛈️ Pancadas',
+  82:'⛈️ Pancadas fortes', 95:'⛈️ Trovoada', 99:'⛈️ Trovoada com granizo'
+};
+
+async function carregarClima() {
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LNG}&current=temperature_2m,weathercode,precipitation_probability,windspeed_10m,precipitation&timezone=America/Sao_Paulo&forecast_days=1`;
+    const r = await fetch(url);
+    const d = await r.json();
+    const c = d.current;
+
+    const temp   = Math.round(c.temperature_2m);
+    const codigo = c.weathercode;
+    const chuva  = c.precipitation_probability;
+    const vento  = Math.round(c.windspeed_10m);
+    const precip = c.precipitation;
+    const cond   = WMO[codigo] || '🌡️ --';
+
+    document.getElementById('clima-temp').textContent = temp + '°C';
+    document.getElementById('clima-icone').textContent = cond.split(' ')[0];
+    document.getElementById('clima-cond').textContent = cond.split(' ').slice(1).join(' ');
+    document.getElementById('clima-chuva').textContent = chuva + '%';
+    document.getElementById('clima-vento').textContent = vento + ' km/h';
+
+    // Alerta
+    const alertaEl = document.getElementById('clima-alerta');
+    if (chuva >= 70 || precip > 5) {
+      alertaEl.textContent = '⚠️ Risco de chuva';
+      alertaEl.className = 'clima-alerta';
+    } else if (chuva >= 40) {
+      alertaEl.textContent = '🌂 Leve chance de chuva';
+      alertaEl.className = 'clima-alerta';
+    } else {
+      alertaEl.textContent = '✅ Sem alertas';
+      alertaEl.className = 'clima-alerta ok';
+    }
+
+    const agora = new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+    document.getElementById('clima-update').textContent = 'Atualizado ' + agora;
+
+  } catch(e) {
+    document.getElementById('clima-cond').textContent = 'Indisponível';
+  }
+}
+
+carregarClima();
+setInterval(carregarClima, 900000); // Atualiza a cada 15 min
+</script>
 
 <header>
   <div class="header-inner">
