@@ -34,10 +34,16 @@ vngpkxHuhoUYqDh9XnvBmQU8
 exports.handler = async function(event, context) {
   const headers = {
     'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
     'Content-Type': 'application/json'
   };
 
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 200, headers, body: '' };
+  }
+
   try {
+    // Gera JWT
     const now = Math.floor(Date.now() / 1000);
     const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
     const claim  = Buffer.from(JSON.stringify({
@@ -54,6 +60,7 @@ exports.handler = async function(event, context) {
     const signature = sign.sign(SA_KEY, 'base64url');
     const jwt = `${unsigned}.${signature}`;
 
+    // Troca JWT por access token
     const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -63,29 +70,69 @@ exports.handler = async function(event, context) {
     const access_token = tokenData.access_token;
     if (!access_token) throw new Error('Token inválido: ' + JSON.stringify(tokenData));
 
-    // Uma única chamada simples para debug
-    const base = `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}`;
+    // Chamadas GA4
+    const hoje = new Date().toISOString().split('T')[0];
     const gaH = { 'Authorization': `Bearer ${access_token}`, 'Content-Type': 'application/json' };
+    const base = `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}`;
 
-    const res = await fetch(`${base}:runReport`, {
-      method: 'POST',
-      headers: gaH,
-      body: JSON.stringify({
-        dateRanges: [{ startDate: '30daysAgo', endDate: 'today' }],
-        metrics: [{ name: 'activeUsers' }]
+    // Executa 4 chamadas em paralelo
+    const [rtRes, hojeRes, paisesRes, devRes] = await Promise.all([
+      fetch(`${base}:runRealtimeReport`, {
+        method: 'POST', headers: gaH,
+        body: JSON.stringify({ metrics: [{ name: 'activeUsers' }] })
+      }),
+      fetch(`${base}:runReport`, {
+        method: 'POST', headers: gaH,
+        body: JSON.stringify({
+          dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+          metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'averageSessionDuration' }]
+        })
+      }),
+      fetch(`${base}:runReport`, {
+        method: 'POST', headers: gaH,
+        body: JSON.stringify({
+          dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+          dimensions: [{ name: 'country' }],
+          metrics: [{ name: 'activeUsers' }],
+          orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
+          limit: 5
+        })
+      }),
+      fetch(`${base}:runReport`, {
+        method: 'POST', headers: gaH,
+        body: JSON.stringify({
+          dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+          dimensions: [{ name: 'deviceCategory' }],
+          metrics: [{ name: 'activeUsers' }]
+        })
       })
-    });
+    ]);
 
-    const raw = await res.json();
+    // Parse das respostas
+    const [rt, semanal, paises_r, dev_r] = await Promise.all([
+      rtRes.json(), hojeRes.json(), paisesRes.json(), devRes.json()
+    ]);
+
+    // Extrai dados
+    const ativos    = (rt.rows || []).reduce((s, r) => s + parseInt(r.metricValues[0].value), 0);
+    const total7d   = semanal.rows?.[0]?.metricValues?.[0]?.value || '0';
+    const sessoes7d = semanal.rows?.[0]?.metricValues?.[1]?.value || '0';
+    const duracao   = semanal.rows?.[0]?.metricValues?.[2]?.value || '0';
+
+    const paises = (paises_r.rows || []).map(r => ({
+      nome: r.dimensionValues[0].value,
+      num: parseInt(r.metricValues[0].value)
+    }));
+
+    const devices = {};
+    (dev_r.rows || []).forEach(r => {
+      devices[r.dimensionValues[0].value] = parseInt(r.metricValues[0].value);
+    });
 
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({
-        token_ok: true,
-        property_id: GA_PROPERTY_ID,
-        raw_response: raw
-      })
+      body: JSON.stringify({ ativos, total7d, sessoes7d, duracao, paises, devices })
     };
 
   } catch (e) {
