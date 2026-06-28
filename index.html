@@ -155,7 +155,7 @@
     border-top:3px solid #FFB703;
     border-radius:20px;
     padding:28px;
-    width:480px;
+    width:620px;
     max-width:95vw;
     box-shadow:0 24px 64px rgba(0,0,0,0.5);
     color:#fff;
@@ -180,7 +180,7 @@
     color:#FFB703;margin-bottom:4px;display:flex;align-items:center;gap:8px;
   }
   .ga-sub { font-size:11px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:20px; }
-  .ga-grid { display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px; }
+  .ga-grid { display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px; }
   .ga-card {
     background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);
     border-radius:12px;padding:14px;
@@ -1011,28 +1011,28 @@ async function carregarGA() {
       'Brazil':'🇧🇷','United States':'🇺🇸','Portugal':'🇵🇹','Argentina':'🇦🇷',
       'Belgium':'🇧🇪','Germany':'🇩🇪','France':'🇫🇷','United Kingdom':'🇬🇧',
       'Italy':'🇮🇹','Spain':'🇪🇸','Japan':'🇯🇵','Canada':'🇨🇦','Australia':'🇦🇺',
-      'Mexico':'🇲🇽','Chile':'🇨🇱','Colombia':'🇨🇴','Netherlands':'🇳🇱',
     };
     const flag  = c => flagMap[c] || '🌍';
-    const pNome = c => c === 'Brazil' ? 'Brasil' : c;
+    const pNome = c => c === 'Brazil' ? 'Brasil' : c === 'United States' ? 'EUA' : c;
 
     const durSec = parseFloat(d.duracao || 0);
     const min = Math.floor(durSec/60);
     const seg = Math.round(durSec%60);
-    const maxP = d.paises?.[0]?.num || 1;
+
+    // Filtra países reais (remove not set e bots)
+    const paises = (d.paises || []).filter(p => p.nome !== '(not set)');
+    const maxP = paises[0]?.num || 1;
+
+    // Cidades brasileiras
+    const cidades = (d.cidades || []);
+    const maxC = cidades[0]?.num || 1;
 
     const devMap = d.devices || {};
     const devTotal = Object.values(devMap).reduce((a,b)=>a+b,0)||1;
     const devIcons = {mobile:'📱',desktop:'💻',tablet:'📋'};
     const devNomes = {mobile:'Celular',desktop:'Computador',tablet:'Tablet'};
 
-    // Mostra hoje ou semana dependendo do que tiver dados
-    const leitoresHoje = parseInt(d.totalHoje||0);
-    const leitoresSemana = parseInt(d.totalSemana||0);
-    const usarSemana = leitoresHoje === 0 && leitoresSemana > 0;
-
     document.getElementById('ga-conteudo').innerHTML = `
-      ${usarSemana ? '<div style="font-size:11px;color:rgba(255,183,3,0.7);margin-bottom:12px;text-align:center;">📅 Exibindo dados dos últimos 7 dias</div>' : ''}
       <div class="ga-grid">
         <div class="ga-card" style="border-left:3px solid #D62828;">
           <div class="ga-card-label">Agora no site</div>
@@ -1041,13 +1041,13 @@ async function carregarGA() {
           <span class="ga-live">🔴 ao vivo</span>
         </div>
         <div class="ga-card" style="border-left:3px solid #FFB703;">
-          <div class="ga-card-label">${usarSemana ? 'Leitores 7 dias' : 'Leitores hoje'}</div>
-          <div class="ga-card-num">${(usarSemana ? leitoresSemana : leitoresHoje).toLocaleString('pt-BR')}</div>
+          <div class="ga-card-label">Leitores 7 dias</div>
+          <div class="ga-card-num">${parseInt(d.total7d||0).toLocaleString('pt-BR')}</div>
           <div class="ga-card-sub">usuários únicos</div>
         </div>
         <div class="ga-card" style="border-left:3px solid #2D6A4F;">
-          <div class="ga-card-label">${usarSemana ? 'Sessões 7 dias' : 'Sessões hoje'}</div>
-          <div class="ga-card-num">${parseInt(usarSemana ? d.sessoesSemana||0 : d.sessoes||0).toLocaleString('pt-BR')}</div>
+          <div class="ga-card-label">Sessões 7 dias</div>
+          <div class="ga-card-num">${parseInt(d.sessoes7d||0).toLocaleString('pt-BR')}</div>
           <div class="ga-card-sub">visitas no total</div>
         </div>
         <div class="ga-card" style="border-left:3px solid #5C3893;">
@@ -1056,17 +1056,34 @@ async function carregarGA() {
           <div class="ga-card-sub">min por visita</div>
         </div>
       </div>
-      <div class="ga-paises">
-        <div class="ga-paises-titulo">🌍 Países (últimos 7 dias)</div>
-        ${d.paises?.length ? d.paises.map(p=>`
-          <div class="ga-pais-row">
-            <span style="font-size:16px;">${flag(p.nome)}</span>
-            <span class="ga-pais-nome">${pNome(p.nome)}</span>
-            <div class="ga-pais-bar-wrap"><div class="ga-pais-bar" style="width:${Math.round(p.num/maxP*100)}%"></div></div>
-            <span class="ga-pais-num">${p.num}</span>
-          </div>`).join('') : '<div style="color:rgba(255,255,255,0.3);font-size:13px;">Aguardando dados...</div>'}
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+
+        <div class="ga-paises">
+          <div class="ga-paises-titulo">🌍 Países (7 dias)</div>
+          ${paises.length ? paises.slice(0,5).map(p=>`
+            <div class="ga-pais-row">
+              <span style="font-size:15px;">${flag(p.nome)}</span>
+              <span class="ga-pais-nome">${pNome(p.nome)}</span>
+              <div class="ga-pais-bar-wrap"><div class="ga-pais-bar" style="width:${Math.round(p.num/maxP*100)}%"></div></div>
+              <span class="ga-pais-num">${p.num}</span>
+            </div>`).join('') : '<div style="color:rgba(255,255,255,0.3);font-size:13px;">Aguardando...</div>'}
+        </div>
+
+        <div class="ga-paises">
+          <div class="ga-paises-titulo">📍 Cidades BR (7 dias)</div>
+          ${cidades.length ? cidades.slice(0,5).map(c=>`
+            <div class="ga-pais-row">
+              <span style="font-size:15px;">🇧🇷</span>
+              <span class="ga-pais-nome">${c.nome === '(not set)' ? 'Não identificada' : c.nome}</span>
+              <div class="ga-pais-bar-wrap"><div class="ga-pais-bar" style="width:${Math.round(c.num/maxC*100)}%;background:#FFB703;"></div></div>
+              <span class="ga-pais-num">${c.num}</span>
+            </div>`).join('') : '<div style="color:rgba(255,255,255,0.3);font-size:13px;">Aguardando...</div>'}
+        </div>
+
       </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;">
         ${Object.entries(devMap).sort((a,b)=>b[1]-a[1]).map(([k,v])=>`
           <div style="background:rgba(255,255,255,0.05);border-radius:10px;padding:8px 14px;font-size:12px;display:flex;align-items:center;gap:6px;">
             <span>${devIcons[k]||'🖥️'}</span>
@@ -1086,7 +1103,7 @@ async function carregarGA() {
 function abrirGA()  { document.getElementById('ga-overlay').classList.add('aberto'); carregarGA(); }
 function fecharGA() { document.getElementById('ga-overlay').classList.remove('aberto'); }
 document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
-window.addEventListener('keydown', e => { if(e.key==='Escape') fecharGA(); });
+window.addEventListener('keydown',, e => { if(e.key==='Escape') fecharGA(); });
 </script>
 
 </body>
