@@ -1103,7 +1103,7 @@ async function carregarGA() {
 function abrirGA()  { document.getElementById('ga-overlay').classList.add('aberto'); carregarGA(); }
 function fecharGA() { document.getElementById('ga-overlay').classList.remove('aberto'); }
 document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
-window.addEventListener('keydown',, e => { if(e.key==='Escape') fecharGA(); });
+window.addEventListener('keydown', e => { if(e.key==='Escape') fecharGA(); });
 </script>
 
 </body>
