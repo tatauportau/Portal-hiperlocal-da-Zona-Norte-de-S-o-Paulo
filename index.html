@@ -270,9 +270,124 @@
     color: rgba(255,255,255,0.35);
     letter-spacing: 0.06em;
   }
+
+  /* TICKER */
+  .ticker-wrap {
+    position:fixed; top:0; left:0; right:0; z-index:200;
+    background:var(--cinza-q); height:32px;
+    display:flex; align-items:center; overflow:hidden;
+    border-bottom:2px solid var(--amarelo);
+  }
+  .ticker-label {
+    background:var(--amarelo); color:var(--cinza-q);
+    font-family:'Syne',sans-serif; font-size:11px; font-weight:800;
+    padding:0 14px; height:100%; display:flex; align-items:center;
+    white-space:nowrap; letter-spacing:0.08em; flex-shrink:0;
+    text-transform:uppercase;
+  }
+  .ticker-track {
+    display:flex; align-items:center;
+    animation:ticker-scroll 40s linear infinite;
+    white-space:nowrap; will-change:transform;
+  }
+  .ticker-track:hover { animation-play-state:paused; }
+  @keyframes ticker-scroll {
+    0%   { transform:translateX(0); }
+    100% { transform:translateX(-50%); }
+  }
+  .ticker-item {
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12px; color:rgba(255,255,255,0.85);
+    padding:0 32px; cursor:pointer; transition:color 0.15s;
+  }
+  .ticker-item:hover { color:var(--amarelo); }
+  .ticker-item::before {
+    content:'●'; color:var(--amarelo); font-size:8px; flex-shrink:0;
+  }
+  .ticker-loading {
+    font-size:12px; color:rgba(255,255,255,0.5);
+    padding:0 20px;
+  }
+  /* Empurra o conteúdo para baixo por causa do ticker fixo */
+  body { padding-top:32px; }
 </style>
 </head>
 <body>
+
+<!-- TICKER NOTÍCIAS AO VIVO -->
+<div class="ticker-wrap" id="ticker-wrap">
+  <div class="ticker-label">🔴 Zona Norte</div>
+  <div style="overflow:hidden;flex:1;position:relative;">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-loading" id="ticker-loading">Carregando notícias...</span>
+    </div>
+  </div>
+</div>
+
+<script>
+// Feeds RSS da Zona Norte via proxy CORS
+const RSS_FEEDS = [
+  'https://api.rss2json.com/v1/api.json?rss_url=https://g1.globo.com/sp/sao-paulo/rss2.xml&count=8',
+  'https://api.rss2json.com/v1/api.json?rss_url=https://www.band.uol.com.br/noticias/rss/sao-paulo&count=5',
+];
+
+// Palavras-chave da Zona Norte
+const KEYWORDS = [
+  'zona norte','santana','tucuruvi','jaçanã','tremembé','vila guilherme',
+  'casa verde','mandaqui','brasilândia','freguesia do ó','limão','parada inglesa',
+  'vila medeiros','campo de marte','cantareira','carandiru','cachoeirinha',
+  'jardim são paulo','vila nova cachoeirinha','vila aurora'
+];
+
+async function carregarTicker() {
+  try {
+    let noticias = [];
+
+    for (const url of RSS_FEEDS) {
+      try {
+        const r = await fetch(url);
+        const d = await r.json();
+        if (d.items) {
+          const filtradas = d.items.filter(item => {
+            const texto = (item.title + ' ' + (item.description||'')).toLowerCase();
+            return KEYWORDS.some(k => texto.includes(k));
+          });
+          noticias = noticias.concat(filtradas.map(i => i.title));
+        }
+      } catch(e) {}
+    }
+
+    // Se não encontrou nada filtrado, usa manchetes gerais de SP
+    if (noticias.length === 0) {
+      noticias = [
+        'Zona Norte · Acompanhe as principais notícias da região',
+        'Portau · Portal hiperlocal da Zona Norte de São Paulo',
+        'Santana · Tucuruvi · Jaçanã · Casa Verde · Mandaqui · Tremembé',
+      ];
+    }
+
+    // Duplica para loop contínuo
+    const itens = [...noticias, ...noticias];
+    const track = document.getElementById('ticker-track');
+    track.innerHTML = itens.map(n =>
+      `<span class="ticker-item">${n}</span>`
+    ).join('');
+
+    // Ajusta velocidade baseada no tamanho
+    const totalWidth = track.scrollWidth;
+    const velocidade = Math.max(30, totalWidth / 80);
+    track.style.animationDuration = velocidade + 's';
+
+  } catch(e) {
+    document.getElementById('ticker-track').innerHTML =
+      '<span class="ticker-item">Portau · Zona Norte de São Paulo · portauzn.com.br</span>'.repeat(6);
+  }
+}
+
+carregarTicker();
+// Recarrega a cada 15 minutos
+setInterval(carregarTicker, 900000);
+</script>
 
 <div class="topbar">
   <span>📍 Zona Norte de São Paulo</span>
