@@ -133,11 +133,12 @@
   .globo-tooltip {
     position:absolute; background:#2D6A4F; color:#fff;
     font-size:11px; font-weight:700; padding:4px 10px; border-radius:20px;
-    white-space:nowrap; bottom:calc(100% + 8px); left:50%; transform:translateX(-50%);
+    white-space:nowrap; top:calc(100% + 8px); left:50%; transform:translateX(-50%);
     pointer-events:none; opacity:0; transition:opacity 0.2s; font-family:'Inter',sans-serif;
+    z-index:200;
   }
   .globo-tooltip.visivel { opacity:1; }
-  .globo-tooltip::after { content:''; position:absolute; top:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-top-color:#2D6A4F; }
+  .globo-tooltip::after { content:''; position:absolute; bottom:100%; left:50%; transform:translateX(-50%); border:5px solid transparent; border-bottom-color:#2D6A4F; }
 
   /* PAINEL ANALYTICS */
   .ga-overlay {
