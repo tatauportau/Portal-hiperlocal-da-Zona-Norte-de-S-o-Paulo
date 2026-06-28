@@ -310,6 +310,207 @@
   }
   /* Empurra o conteúdo para baixo por causa do ticker fixo */
   body { padding-top:32px; }
+
+  
+
+  /* BARRINHA DO CARRINHO */
+  .carro-bar {
+    background: #1A1A1A;
+    height: 28px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .carro-bar:hover { background: #222; }
+
+  /* Estrada */
+  .carro-estrada {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+  }
+
+  /* Linha tracejada central */
+  .carro-linha {
+    position: absolute;
+    bottom: 13px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(255,183,3,0.3) 0px,
+      rgba(255,183,3,0.3) 20px,
+      transparent 20px,
+      transparent 40px
+    );
+    animation: linha-move 1s linear infinite;
+  }
+  @keyframes linha-move {
+    from { background-position: 0 0; }
+    to   { background-position: 40px 0; }
+  }
+
+  /* Label fixo */
+  .carro-label {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+    pointer-events: none;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Carrinho animado */
+  .carro-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+    animation: carro-drive 8s linear infinite;
+    filter: drop-shadow(0 0 6px rgba(255,183,3,0.5));
+    line-height: 1;
+    transition: transform 0.2s, filter 0.2s;
+  }
+  .carro-icon:hover {
+    filter: drop-shadow(0 0 12px rgba(255,183,3,0.9));
+    transform: translateY(-50%) scale(1.2);
+  }
+  @keyframes carro-drive {
+    0%   { left: -40px; }
+    100% { left: calc(100% + 40px); }
+  }
+
+  /* Modal Waze */
+  .waze-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+  .waze-overlay.aberto { display: flex; }
+  .waze-modal {
+    background: var(--branco);
+    border-radius: 20px;
+    overflow: hidden;
+    width: 820px;
+    max-width: 95vw;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.4);
+    animation: modal-in 0.25s ease;
+    position: relative;
+  }
+  @keyframes modal-in {
+    from { transform: scale(0.92) translateY(16px); opacity: 0; }
+    to   { transform: scale(1) translateY(0); opacity: 1; }
+  }
+  .waze-modal-header {
+    background: var(--verde);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .waze-modal-titulo {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .waze-modal-live {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .waze-modal-live::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ff4444;
+    animation: blink2 1.5s infinite;
+  }
+  @keyframes blink2 { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  .waze-fechar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: none;
+    color: var(--branco);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .waze-fechar:hover { background: rgba(255,255,255,0.22); }
+  .waze-bairros {
+    display: flex;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--creme);
+    border-bottom: 1px solid var(--cinza-l);
+    flex-wrap: wrap;
+  }
+  .wbairro-btn {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--cinza-l);
+    background: var(--branco);
+    cursor: pointer;
+    transition: all 0.15s;
+    color: var(--cinza-m);
+    font-family: 'Inter', sans-serif;
+  }
+  .wbairro-btn:hover, .wbairro-btn.ativo {
+    background: var(--verde);
+    color: var(--branco);
+    border-color: var(--verde);
+  }
+  .waze-map-frame {
+    width: 100%;
+    height: 440px;
+    border: none;
+    display: block;
+  }
+  .waze-modal-footer {
+    padding: 10px 18px;
+    border-top: 1px solid var(--cinza-l);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--cinza-m);
+  }
+  .waze-modal-footer a {
+    color: var(--verde);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 12px;
+  }
 </style>
 </head>
 <body>
@@ -470,6 +671,68 @@ async function carregarClima() {
 
 carregarClima();
 setInterval(carregarClima, 900000); // Atualiza a cada 15 min
+</script>
+
+
+<!-- BARRINHA DO CARRINHO -->
+<div class="carro-bar" title="Clique no carrinho para ver o trânsito ao vivo!">
+  <div class="carro-estrada"></div>
+  <div class="carro-linha"></div>
+  <div class="carro-label">🚗 Trânsito ao vivo · Zona Norte · Clique no carrinho</div>
+  <div class="carro-icon" onclick="abrirWaze()" title="Ver trânsito ao vivo">🚗</div>
+</div>
+
+<!-- MODAL WAZE -->
+<div class="waze-overlay" id="waze-overlay" onclick="if(event.target===this)fecharWaze()">
+  <div class="waze-modal">
+    <div class="waze-modal-header">
+      <div class="waze-modal-titulo">🗺️ Trânsito ao Vivo — Zona Norte</div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="waze-modal-live">Ao vivo</div>
+        <button class="waze-fechar" onclick="fecharWaze()">✕</button>
+      </div>
+    </div>
+    <div class="waze-bairros">
+      <button class="wbairro-btn ativo" onclick="irWaze(-23.5025,-46.6283,this)">📍 Santana</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4776,-46.6014,this)">Tucuruvi</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4636,-46.5808,this)">Jaçanã</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.5197,-46.5897,this)">Vila Guilherme</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4520,-46.6350,this)">Tremembé</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4850,-46.6200,this)">Casa Verde</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.5100,-46.6500,this)">Mandaqui</button>
+    </div>
+    <iframe id="waze-map-frame" class="waze-map-frame" src="" allowfullscreen></iframe>
+    <div class="waze-modal-footer">
+      <span>Dados em tempo real via Waze · Acidentes · Radares · Lentidão</span>
+      <a href="https://www.waze.com/pt-BR/live-map" target="_blank">Abrir Waze completo →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+let wazeAberto = false;
+
+function abrirWaze() {
+  document.getElementById('waze-overlay').classList.add('aberto');
+  if (!wazeAberto) {
+    document.getElementById('waze-map-frame').src =
+      'https://embed.waze.com/iframe?zoom=14&lat=-23.5025&lon=-46.6283&ct=livemap';
+    wazeAberto = true;
+  }
+}
+
+function fecharWaze() {
+  document.getElementById('waze-overlay').classList.remove('aberto');
+}
+
+function irWaze(lat, lon, btn) {
+  document.getElementById('waze-map-frame').src =
+    `https://embed.waze.com/iframe?zoom=14&lat=${lat}&lon=${lon}&ct=livemap`;
+  document.querySelectorAll('.wbairro-btn').forEach(b => b.classList.remove('ativo'));
+  btn.classList.add('ativo');
+}
+
+window.addEventListener('keydown', e => { if(e.key==='Escape') fecharWaze(); });
 </script>
 
 <header>
@@ -874,6 +1137,8 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 </aside>
 </div>
 </div>
+
+
 
 
 
