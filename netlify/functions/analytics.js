@@ -1,6 +1,6 @@
 const { createSign } = require('crypto');
 
-const GA_PROPERTY_ID = '399155331';
+const GA_PROPERTY_ID = '543077788';
 const SA_EMAIL = 'portau-analytics@portau-analytics.iam.gserviceaccount.com';
 const SA_KEY = `-----BEGIN PRIVATE KEY-----
 MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDOWfXkyXeJdYTX
