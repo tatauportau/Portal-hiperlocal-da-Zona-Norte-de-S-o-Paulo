@@ -43,7 +43,6 @@ exports.handler = async function(event, context) {
   }
 
   try {
-    // Gera JWT
     const now = Math.floor(Date.now() / 1000);
     const header = Buffer.from(JSON.stringify({ alg: 'RS256', typ: 'JWT' })).toString('base64url');
     const claim  = Buffer.from(JSON.stringify({
@@ -60,7 +59,6 @@ exports.handler = async function(event, context) {
     const signature = sign.sign(SA_KEY, 'base64url');
     const jwt = `${unsigned}.${signature}`;
 
-    // Troca JWT por access token
     const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -70,17 +68,16 @@ exports.handler = async function(event, context) {
     const access_token = tokenData.access_token;
     if (!access_token) throw new Error('Token inválido: ' + JSON.stringify(tokenData));
 
-    // Chamadas GA4
-    const hoje = new Date().toISOString().split('T')[0];
     const gaH = { 'Authorization': `Bearer ${access_token}`, 'Content-Type': 'application/json' };
     const base = `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}`;
 
-    // Executa 4 chamadas em paralelo
-    const [rtRes, hojeRes, paisesRes, devRes] = await Promise.all([
+    const [rtRes, semanalRes, paisesRes, devRes, cidadesRes] = await Promise.all([
+      // Realtime
       fetch(`${base}:runRealtimeReport`, {
         method: 'POST', headers: gaH,
         body: JSON.stringify({ metrics: [{ name: 'activeUsers' }] })
       }),
+      // Totais 7 dias
       fetch(`${base}:runReport`, {
         method: 'POST', headers: gaH,
         body: JSON.stringify({
@@ -88,6 +85,7 @@ exports.handler = async function(event, context) {
           metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'averageSessionDuration' }]
         })
       }),
+      // Países 7 dias
       fetch(`${base}:runReport`, {
         method: 'POST', headers: gaH,
         body: JSON.stringify({
@@ -95,9 +93,10 @@ exports.handler = async function(event, context) {
           dimensions: [{ name: 'country' }],
           metrics: [{ name: 'activeUsers' }],
           orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
-          limit: 5
+          limit: 6
         })
       }),
+      // Dispositivos 7 dias
       fetch(`${base}:runReport`, {
         method: 'POST', headers: gaH,
         body: JSON.stringify({
@@ -105,34 +104,52 @@ exports.handler = async function(event, context) {
           dimensions: [{ name: 'deviceCategory' }],
           metrics: [{ name: 'activeUsers' }]
         })
+      }),
+      // Cidades do Brasil 7 dias
+      fetch(`${base}:runReport`, {
+        method: 'POST', headers: gaH,
+        body: JSON.stringify({
+          dateRanges: [{ startDate: '7daysAgo', endDate: 'today' }],
+          dimensions: [{ name: 'city' }],
+          metrics: [{ name: 'activeUsers' }],
+          dimensionFilter: {
+            filter: {
+              fieldName: 'country',
+              stringFilter: { value: 'Brazil', matchType: 'EXACT' }
+            }
+          },
+          orderBys: [{ metric: { metricName: 'activeUsers' }, desc: true }],
+          limit: 8
+        })
       })
     ]);
 
-    // Parse das respostas
-    const [rt, semanal, paises_r, dev_r] = await Promise.all([
-      rtRes.json(), hojeRes.json(), paisesRes.json(), devRes.json()
+    const [rt, semanal, paises_r, dev_r, cidades_r] = await Promise.all([
+      rtRes.json(), semanalRes.json(), paisesRes.json(), devRes.json(), cidadesRes.json()
     ]);
 
-    // Extrai dados
     const ativos    = (rt.rows || []).reduce((s, r) => s + parseInt(r.metricValues[0].value), 0);
     const total7d   = semanal.rows?.[0]?.metricValues?.[0]?.value || '0';
     const sessoes7d = semanal.rows?.[0]?.metricValues?.[1]?.value || '0';
     const duracao   = semanal.rows?.[0]?.metricValues?.[2]?.value || '0';
 
-    const paises = (paises_r.rows || []).map(r => ({
-      nome: r.dimensionValues[0].value,
-      num: parseInt(r.metricValues[0].value)
-    }));
+    const paises = (paises_r.rows || [])
+      .filter(r => r.dimensionValues[0].value !== '(not set)')
+      .map(r => ({ nome: r.dimensionValues[0].value, num: parseInt(r.metricValues[0].value) }));
 
     const devices = {};
     (dev_r.rows || []).forEach(r => {
       devices[r.dimensionValues[0].value] = parseInt(r.metricValues[0].value);
     });
 
+    const cidades = (cidades_r.rows || [])
+      .filter(r => r.dimensionValues[0].value !== '(not set)')
+      .map(r => ({ nome: r.dimensionValues[0].value, num: parseInt(r.metricValues[0].value) }));
+
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ ativos, total7d, sessoes7d, duracao, paises, devices })
+      body: JSON.stringify({ ativos, total7d, sessoes7d, duracao, paises, devices, cidades })
     };
 
   } catch (e) {
