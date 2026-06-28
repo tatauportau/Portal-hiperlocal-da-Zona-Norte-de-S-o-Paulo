@@ -308,8 +308,7 @@
     font-size:12px; color:rgba(255,255,255,0.5);
     padding:0 20px;
   }
-  /* Empurra o conteúdo para baixo por causa do ticker fixo */
-  body { padding-top:32px; }
+
 
   
 
@@ -365,7 +364,7 @@
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.55);
     pointer-events: none;
     white-space: nowrap;
     font-family: 'Inter', sans-serif;
@@ -378,14 +377,15 @@
     transform: translateY(-50%);
     font-size: 18px;
     cursor: pointer;
-    animation: carro-drive 8s linear infinite;
+    animation: carro-drive 14s linear infinite;
     filter: drop-shadow(0 0 6px rgba(255,183,3,0.5));
     line-height: 1;
-    transition: transform 0.2s, filter 0.2s;
+    transition: filter 0.2s;
+    transform: translateY(-50%) scaleX(-1);
+    pointer-events: none;
   }
   .carro-icon:hover {
     filter: drop-shadow(0 0 12px rgba(255,183,3,0.9));
-    transform: translateY(-50%) scale(1.2);
   }
   @keyframes carro-drive {
     0%   { left: -40px; }
@@ -674,66 +674,15 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 </script>
 
 
+
+
 <!-- BARRINHA DO CARRINHO -->
-<div class="carro-bar" title="Clique no carrinho para ver o trânsito ao vivo!">
+<div class="carro-bar" onclick="abrirWaze()" title="Clique para ver o trânsito ao vivo!">
   <div class="carro-estrada"></div>
   <div class="carro-linha"></div>
-  <div class="carro-label">🚗 Trânsito ao vivo · Zona Norte · Clique no carrinho</div>
-  <div class="carro-icon" onclick="abrirWaze()" title="Ver trânsito ao vivo">🚗</div>
+  <div class="carro-label">🚗 Trânsito ao vivo · Zona Norte · Clique para abrir</div>
+  <div class="carro-icon">🚗</div>
 </div>
-
-<!-- MODAL WAZE -->
-<div class="waze-overlay" id="waze-overlay" onclick="if(event.target===this)fecharWaze()">
-  <div class="waze-modal">
-    <div class="waze-modal-header">
-      <div class="waze-modal-titulo">🗺️ Trânsito ao Vivo — Zona Norte</div>
-      <div style="display:flex;align-items:center;gap:12px;">
-        <div class="waze-modal-live">Ao vivo</div>
-        <button class="waze-fechar" onclick="fecharWaze()">✕</button>
-      </div>
-    </div>
-    <div class="waze-bairros">
-      <button class="wbairro-btn ativo" onclick="irWaze(-23.5025,-46.6283,this)">📍 Santana</button>
-      <button class="wbairro-btn" onclick="irWaze(-23.4776,-46.6014,this)">Tucuruvi</button>
-      <button class="wbairro-btn" onclick="irWaze(-23.4636,-46.5808,this)">Jaçanã</button>
-      <button class="wbairro-btn" onclick="irWaze(-23.5197,-46.5897,this)">Vila Guilherme</button>
-      <button class="wbairro-btn" onclick="irWaze(-23.4520,-46.6350,this)">Tremembé</button>
-      <button class="wbairro-btn" onclick="irWaze(-23.4850,-46.6200,this)">Casa Verde</button>
-      <button class="wbairro-btn" onclick="irWaze(-23.5100,-46.6500,this)">Mandaqui</button>
-    </div>
-    <iframe id="waze-map-frame" class="waze-map-frame" src="" allowfullscreen></iframe>
-    <div class="waze-modal-footer">
-      <span>Dados em tempo real via Waze · Acidentes · Radares · Lentidão</span>
-      <a href="https://www.waze.com/pt-BR/live-map" target="_blank">Abrir Waze completo →</a>
-    </div>
-  </div>
-</div>
-
-<script>
-let wazeAberto = false;
-
-function abrirWaze() {
-  document.getElementById('waze-overlay').classList.add('aberto');
-  if (!wazeAberto) {
-    document.getElementById('waze-map-frame').src =
-      'https://embed.waze.com/iframe?zoom=14&lat=-23.5025&lon=-46.6283&ct=livemap';
-    wazeAberto = true;
-  }
-}
-
-function fecharWaze() {
-  document.getElementById('waze-overlay').classList.remove('aberto');
-}
-
-function irWaze(lat, lon, btn) {
-  document.getElementById('waze-map-frame').src =
-    `https://embed.waze.com/iframe?zoom=14&lat=${lat}&lon=${lon}&ct=livemap`;
-  document.querySelectorAll('.wbairro-btn').forEach(b => b.classList.remove('ativo'));
-  btn.classList.add('ativo');
-}
-
-window.addEventListener('keydown', e => { if(e.key==='Escape') fecharWaze(); });
-</script>
 
 <header>
   <div class="header-inner">
@@ -1628,7 +1577,70 @@ async function carregarGA() {
 function abrirGA()  { document.getElementById('ga-overlay').classList.add('aberto'); carregarGA(); }
 function fecharGA() { document.getElementById('ga-overlay').classList.remove('aberto'); }
 document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
-window.addEventListener('keydown', e => { if(e.key==='Escape') fecharGA(); });
+
+</script>
+
+
+
+
+<!-- MODAL WAZE -->
+<div class="waze-overlay" id="waze-overlay" onclick="if(event.target===this)fecharWaze()">
+  <div class="waze-modal">
+    <div class="waze-modal-header">
+      <div class="waze-modal-titulo">🗺️ Trânsito ao Vivo — Zona Norte</div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <div class="waze-modal-live">Ao vivo</div>
+        <button class="waze-fechar" onclick="fecharWaze()">✕</button>
+      </div>
+    </div>
+    <div class="waze-bairros">
+      <button class="wbairro-btn ativo" onclick="irWaze(-23.5025,-46.6283,this)">📍 Santana</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4776,-46.6014,this)">Tucuruvi</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4636,-46.5808,this)">Jaçanã</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.5197,-46.5897,this)">Vila Guilherme</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4520,-46.6350,this)">Tremembé</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.4850,-46.6200,this)">Casa Verde</button>
+      <button class="wbairro-btn" onclick="irWaze(-23.5100,-46.6500,this)">Mandaqui</button>
+    </div>
+    <iframe id="waze-map-frame" class="waze-map-frame" src="" allowfullscreen></iframe>
+    <div class="waze-modal-footer">
+      <span>Dados em tempo real via Waze · Acidentes · Radares · Lentidão</span>
+      <a href="https://www.waze.com/pt-BR/live-map" target="_blank">Abrir Waze completo →</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── WAZE ─────────────────────────────────────────────
+let wazeAberto = false;
+
+function abrirWaze() {
+  document.getElementById('waze-overlay').classList.add('aberto');
+  if (!wazeAberto) {
+    document.getElementById('waze-map-frame').src =
+      'https://embed.waze.com/iframe?zoom=14&lat=-23.5025&lon=-46.6283&ct=livemap';
+    wazeAberto = true;
+  }
+}
+
+function fecharWaze() {
+  document.getElementById('waze-overlay').classList.remove('aberto');
+}
+
+function irWaze(lat, lon, btn) {
+  document.getElementById('waze-map-frame').src =
+    `https://embed.waze.com/iframe?zoom=14&lat=${lat}&lon=${lon}&ct=livemap`;
+  document.querySelectorAll('.wbairro-btn').forEach(b => b.classList.remove('ativo'));
+  btn.classList.add('ativo');
+}
+
+// ── KEYDOWN UNIFICADO ────────────────────────────────
+window.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    if (document.getElementById('ga-overlay').classList.contains('aberto')) fecharGA();
+    if (document.getElementById('waze-overlay').classList.contains('aberto')) fecharWaze();
+  }
+});
 </script>
 
 </body>
