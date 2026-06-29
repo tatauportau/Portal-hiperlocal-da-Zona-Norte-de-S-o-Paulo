@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,17 +25,6 @@ jobs:
       - run: |
           git config user.name "Portau Bot"
           git config user.email "carlostatau@gmail.com"
-          git fetch origin principal
-          git checkout -B test-cowork origin/principal
           git add index.html
-          git commit -m "Portau - atualizacao automatica"
-          git push origin test-cowork --force
-      - run: |
-          PR_EXISTS=$(gh pr list --head test-cowork --base principal --json number --jq length)
-          if [ "$PR_EXISTS" -eq "0" ]; then
-            gh pr create --title "Portau $(date '+%d/%m/%Y') - Revisar e publicar" --body "Edicao diaria automatica pelo Claude. Revise e clique Merge para publicar." --head test-cowork --base principal
-          else
-            echo "PR ja existe, pulando"
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Portau - atualizacao automatica $(date '+%d/%m/%Y')"
+          git push origin principal
