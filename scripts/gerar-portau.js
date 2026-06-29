@@ -18,17 +18,26 @@ if (!CLAUDE_API_KEY) {
 const INDEX_PATH = path.resolve(__dirname, '..', 'index.html');
 let html = fs.readFileSync(INDEX_PATH, 'utf8');
 
-const today = new Date();
-const dd = String(today.getUTCDate()).padStart(2, '0');
-const mm = String(today.getUTCMonth() + 1).padStart(2, '0');
-const yyyy = today.getUTCFullYear();
-const dateLabel = `${dd}/${mm}/${yyyy}`;
-const diasSemana = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado'];
+// Data no fuso horário de Brasília (America/Sao_Paulo)
+const tzDate = new Intl.DateTimeFormat('pt-BR', {
+  timeZone: 'America/Sao_Paulo',
+  year: 'numeric', month: '2-digit', day: '2-digit',
+  weekday: 'long',
+}).formatToParts(new Date());
+const getPart = (type) => tzDate.find(p => p.type === type)?.value ?? '';
+const dd = getPart('day');
+const mm = getPart('month');
+const yyyy = getPart('year');
+const diaN = parseInt(dd, 10);
+const diaSemana = getPart('weekday');
+// Capitaliza primeira letra do dia da semana
+const diaSemanaCapit = diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1);
 const mesesExt = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
-const diaSemana = diasSemana[today.getUTCDay()];
-const diaN = today.getUTCDate();
-const mesExt = mesesExt[today.getUTCMonth()];
-const dataPorExtenso = `${diaSemana}, ${diaN} de ${mesExt} de ${yyyy}`;
+const mesExt = mesesExt[parseInt(mm, 10) - 1];
+const dateLabel = `${dd}/${mm}/${yyyy}`;
+const dataPorExtenso = `${diaSemanaCapit}, ${diaN} de ${mesExt} de ${yyyy}`;
+// Formato curto para o hero: "29 de junho"
+const dataHero = `${diaN} de ${mesExt}`;
 
 // ─── Prompt do sistema ───────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `Você é o editor-chefe do Portau, jornal digital hiperlocal da Zona Norte de São Paulo.
@@ -409,6 +418,12 @@ async function main() {
   html = html.replace(
     /(<strong>)[^<]*(·\s*Edição completa do dia<\/strong>)/,
     `$1${dataDisplay} · Edição completa do dia</strong>`
+  );
+
+  // Atualiza hero <h1>Zona Norte, 28 de junho</h1>
+  html = html.replace(
+    /<h1>Zona Norte,\s*[^<]+<\/h1>/,
+    `<h1>Zona Norte, ${dataHero}</h1>`
   );
 
   // Substitui seções editoriais
