@@ -1,0 +1,74 @@
+name: Portau — Edição Diária
+
+on:
+  schedule:
+    # 09:00 UTC = 06:00 Brasília (BRT = UTC-3)
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  gerar-portau:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout branch principal
+        uses: actions/checkout@v4
+        with:
+          ref: principal
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar node-fetch
+        run: npm install node-fetch
+
+      - name: Gerar nova edição do Portau
+        env:
+          CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+        run: node scripts/gerar-portau.js
+
+      - name: Configurar git
+        run: |
+          git config user.name "Portau Bot"
+          git config user.email "portau-bot@users.noreply.github.com"
+
+      - name: Criar/atualizar branch test-cowork e fazer push
+        run: |
+          DATE_LABEL=$(date -u '+%d/%m/%Y')
+          git checkout -B test-cowork
+          git add index.html
+          git commit -m "Portau edição automática ${DATE_LABEL}" || echo "Sem alterações para commitar"
+          git push --force origin test-cowork
+
+      - name: Abrir Pull Request de test-cowork para principal
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE_LABEL=$(date -u '+%d/%m/%Y')
+          # Fecha PR anterior aberto pelo bot se existir
+          gh pr close --comment "Substituído pela edição de ${DATE_LABEL}" \
+            $(gh pr list --head test-cowork --base principal --json number --jq '.[0].number') \
+            2>/dev/null || true
+
+          gh pr create \
+            --base principal \
+            --head test-cowork \
+            --title "Portau — Edição ${DATE_LABEL}" \
+            --body "## Edição automática do Portau
+
+**Data:** ${DATE_LABEL}
+
+Gerado automaticamente pelo script \`gerar-portau.js\` via Claude API (claude-sonnet-4-6) com web_search buscando notícias da Zona Norte de SP.
+
+### Checklist antes de mergear
+- [ ] Verificar manchete principal
+- [ ] Confirmar que Analytics / Waze / Globo 3D estão íntegros
+- [ ] Revisar resumos das notícias
+- [ ] Checar data e edição no título"
