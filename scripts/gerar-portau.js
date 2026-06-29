@@ -99,13 +99,15 @@ async function main() {
   // Remove cerca de markdown caso a API envolva em ```html
   newHtml = newHtml.replace(/^```html\s*/i, '').replace(/\s*```$/, '').trim();
 
-  if (!newHtml.startsWith('<!DOCTYPE') && !newHtml.startsWith('<html')) {
-    console.error('[Portau] Resposta inesperada — não parece HTML válido.');
+  const inicio = newHtml.indexOf('<!DOCTYPE');
+  if (inicio === -1) {
+    console.error('[Portau] HTML não encontrado na resposta.');
     console.error(newHtml.slice(0, 500));
     process.exit(1);
   }
+  const htmlLimpo = newHtml.slice(inicio);
 
-  fs.writeFileSync(INDEX_PATH, newHtml, 'utf8');
+  fs.writeFileSync(INDEX_PATH, htmlLimpo, 'utf8');
   console.log(`[Portau] index.html atualizado com sucesso (${newHtml.length} bytes).`);
 }
 
