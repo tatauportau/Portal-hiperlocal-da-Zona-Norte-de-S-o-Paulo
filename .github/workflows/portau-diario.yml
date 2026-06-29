@@ -61,14 +61,15 @@ jobs:
             --base principal \
             --head test-cowork \
             --title "Portau — Edição ${DATE_LABEL}" \
-            --body "## Edição automática do Portau
+            --body "$(cat <<'PREOF'
+## Edição automática do Portau
 
-**Data:** ${DATE_LABEL}
-
-Gerado automaticamente pelo script \`gerar-portau.js\` via Claude API (claude-sonnet-4-6) com web_search buscando notícias da Zona Norte de SP.
+Gerado automaticamente pelo script `gerar-portau.js` via Claude API (claude-sonnet-4-6) com web_search buscando notícias da Zona Norte de SP.
 
 ### Checklist antes de mergear
 - [ ] Verificar manchete principal
 - [ ] Confirmar que Analytics / Waze / Globo 3D estão íntegros
 - [ ] Revisar resumos das notícias
-- [ ] Checar data e edição no título"
+- [ ] Checar data e edição no título
+PREOF
+)"
