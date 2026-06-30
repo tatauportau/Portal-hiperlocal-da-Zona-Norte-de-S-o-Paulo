@@ -33,7 +33,7 @@
   .hero-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--amarelo);}
   .hero h1{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:8px;}
   .hero p{color:rgba(255,255,255,0.65);font-size:14px;}
-  .hero-stats{display:flex;gap:16px;flex-wrap:wrap;}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,minmax(90px,1fr));gap:10px;min-width:420px;}
   .hero-stat{text-align:center;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 20px;display:flex;flex-direction:column;align-items:center;gap:8px;}
   
   .hero-stat-label{font-size:11px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.08em;}
@@ -725,16 +725,14 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <h1>Zona Norte, 29 de junho</h1>
     </div>
     <div class="hero-stats">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(95px,1fr));gap:10px;">
-        <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
-        <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
-        <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
-        <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
-        <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
-        <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
-        <button class="sub-btn" data-sub="pirituba"><i class="ti ti-bridge"></i><span>Pirituba</span></button>
-        <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
-      </div>
+      <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
+      <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
+      <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
+      <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
+      <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
+      <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
+      <button class="sub-btn" data-sub="pirituba"><i class="ti ti-bridge"></i><span>Pirituba</span></button>
+      <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
     </div>
   </div>
 </div>
