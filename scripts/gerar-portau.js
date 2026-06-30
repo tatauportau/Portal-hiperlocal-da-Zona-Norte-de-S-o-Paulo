@@ -42,7 +42,7 @@ const dataHero = `${diaN} de ${mesExt}`;
 // ─── Prompt do sistema ───────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `Você é o editor-chefe do Portau, jornal digital hiperlocal da Zona Norte de São Paulo.
 
-Use a ferramenta web_search para buscar notícias reais e atuais da Zona Norte de SP (bairros: Santana, Tucuruvi, Jaçanã, Vila Guilherme, Tremembé, Mandaqui, Casa Verde, Freguesia do Ó, Brasilândia, Vila Maria, Vila Medeiros, Cachoeirinha, Limão, Pirituba).
+Use a ferramenta web_search para buscar notícias reais e atuais da Zona Norte de SP. Cubra os 18 distritos: Santana, Tucuruvi, Mandaqui, Casa Verde, Limão, Cachoeirinha, Vila Maria, Vila Guilherme, Vila Medeiros, Jaçanã, Tremembé, Freguesia do Ó, Brasilândia, Pirituba, Jaraguá, São Domingos, Perus, Anhanguera. Tente distribuir as notícias entre diferentes subprefeituras (Santana, Casa Verde, Vila Maria, Jaçanã-Tremembé, Freguesia do Ó, Pirituba, Perus).
 
 Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois, sem blocos de código markdown, sem comentários. O JSON deve ter exatamente esta estrutura:
 
@@ -56,6 +56,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
       "tag_bairro": "📍 Santana",
+      "bairro": "string — nome exato do distrito, ex: Santana",
       "titulo": "string",
       "resumo": "string",
       "fonte": "string",
@@ -70,6 +71,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
       "dia": "string — ex: 29",
       "mes": "string — ex: Jun",
       "cor_fundo": "string — ex: #E65100",
+      "bairro": "string — nome exato do distrito, ex: Santana",
       "titulo": "string",
       "hora": "string",
       "local": "string",
@@ -94,6 +96,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
   "politica": [
     {
       "orgao": "string — ex: 🚇 Governo do Estado de SP",
+      "bairro": "string — nome exato do distrito, ex: Santana",
       "titulo": "string",
       "impacto": "string",
       "status": "string",
@@ -122,6 +125,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
 Para "tag_categoria" use: "tag-seg" (segurança/saúde), "tag-edu" (educação/zeladoria), "tag-mob" (mobilidade), "tag-not" (geral).
 Para "icone_classe" use: "ic-seg", "ic-edu", "ic-mob", "ic-eco".
 Para "tipo" de alerta use: "ok" (positivo), "info" (informativo), "neutro" (neutro/obras).
+Para "bairro" use o nome exato do distrito (ex: "Santana", "Vila Medeiros", "Freguesia do Ó"). Use apenas um distrito por item, mesmo que o conteúdo abranja vários.
 Inclua ao menos 4 notícias (1 destaque + 3 normais), 3 agenda, 4 vagas, 2 política, 3 alertas.`;
 
 const USER_PROMPT = `Hoje é ${dataPorExtenso} (${dateLabel}). Busque as notícias mais relevantes da Zona Norte de São Paulo e retorne o JSON da edição de hoje.`;
@@ -139,7 +143,7 @@ function buildNoticias(noticias) {
   for (const n of noticias) {
     if (n.destaque) {
       html += `
-    <div class="card-noticia destaque">
+    <div class="card-noticia destaque" data-bairro="${n.bairro || ''}">
       <div class="destaque-pill">${n.pill || '⭐ Destaque'}</div>
       <div class="card-tags">
         <span class="tag ${n.tag_categoria}">${n.tag_label}</span>
@@ -154,7 +158,7 @@ function buildNoticias(noticias) {
     </div>\n`;
     } else {
       html += `
-    <a class="card-noticia" href="${n.url || '#'}" target="_blank">
+    <a class="card-noticia" href="${n.url || '#'}" target="_blank" data-bairro="${n.bairro || ''}">
       <div class="card-icone ${n.icone_classe}">${n.icone}</div>
       <div>
         <div class="card-tags"><span class="tag ${n.tag_categoria}">${n.tag_label}</span><span class="tag-bairro">${n.tag_bairro}</span></div>
@@ -188,7 +192,7 @@ function buildAgenda(agenda, dataCurta) {
       ? `<span class="evento-valor valor-gratis">Gratuito</span>`
       : `<span class="evento-valor valor-pago">${e.preco}</span>`;
     html += `
-    <a class="card-evento" href="${e.url || '#'}" target="_blank">
+    <a class="card-evento" href="${e.url || '#'}" target="_blank" data-bairro="${e.bairro || ''}">
       <div class="evento-data" style="background:${e.cor_fundo};"><span class="evento-dia">${e.dia || diaAtual}</span><span class="evento-mes">${e.mes}</span></div>
       <div>
         <div class="evento-titulo">${e.titulo}</div>
@@ -212,7 +216,7 @@ function buildVagas(vagas) {
 
   for (const v of vagas) {
     html += `
-    <div class="card-vaga">
+    <div class="card-vaga" data-bairro="${v.bairro || ''}">
       <div class="vaga-icone">${v.icone}</div>
       <div style="flex:1">
         <div class="vaga-titulo">${v.titulo}</div>
@@ -237,7 +241,7 @@ function buildPolitica(politica) {
 
   for (const p of politica) {
     html += `
-    <div class="card-pol">
+    <div class="card-pol" data-bairro="${p.bairro || ''}">
       <div class="pol-orgao">${p.orgao}</div>
       <div class="pol-titulo">${p.titulo}</div>
       <div class="pol-impacto">${p.impacto}</div>

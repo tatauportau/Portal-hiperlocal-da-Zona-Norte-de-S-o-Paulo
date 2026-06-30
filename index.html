@@ -511,7 +511,19 @@
     text-decoration: none;
     font-size: 12px;
   }
+  /* SUBPREFEITURA FILTER */
+  .sub-btn {
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    padding: 10px 8px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85);
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  }
+  .sub-btn i { font-size: 20px; }
+  .sub-btn:hover { background: rgba(255,255,255,0.22); }
+  .sub-btn.ativo { background: #f5c800; color: #1A1A1A; border-color: #f5c800; }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
 <body>
 
@@ -713,59 +725,16 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <h1>Zona Norte, 29 de junho</h1>
     </div>
     <div class="hero-stats">
-
-      <!-- Notícias -->
-      <div class="hero-stat">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-          <rect x="3" y="5" width="22" height="26" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-          <rect x="7" y="10" width="14" height="2.5" rx="1.2" fill="#FFB703"/>
-          <rect x="7" y="15" width="10" height="1.8" rx="0.9" fill="rgba(255,255,255,0.5)"/>
-          <rect x="7" y="19" width="12" height="1.8" rx="0.9" fill="rgba(255,255,255,0.5)"/>
-          <rect x="7" y="23" width="8" height="1.8" rx="0.9" fill="rgba(255,255,255,0.5)"/>
-          <circle cx="28" cy="28" r="7" fill="#FFB703"/>
-          <rect x="27" y="24" width="2" height="5" rx="1" fill="#1A1A1A"/>
-          <rect x="27" y="30.5" width="2" height="2" rx="1" fill="#1A1A1A"/>
-        </svg>
-        <span class="hero-stat-label">Notícias</span>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(95px,1fr));gap:10px;">
+        <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
+        <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
+        <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
+        <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
+        <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
+        <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
+        <button class="sub-btn" data-sub="pirituba"><i class="ti ti-bridge"></i><span>Pirituba</span></button>
+        <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
       </div>
-
-      <!-- Eventos -->
-      <div class="hero-stat">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-          <rect x="4" y="8" width="28" height="23" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-          <rect x="4" y="13" width="28" height="2" fill="rgba(255,255,255,0.25)"/>
-          <circle cx="12" cy="6" r="2.5" fill="#FFB703"/>
-          <circle cx="24" cy="6" r="2.5" fill="#FFB703"/>
-          <rect x="9" y="17" width="5" height="4" rx="1" fill="#FFB703"/>
-          <rect x="16" y="17" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
-          <rect x="23" y="17" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
-          <rect x="9" y="23" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
-          <rect x="16" y="23" width="5" height="4" rx="1" fill="rgba(255,255,255,0.4)"/>
-        </svg>
-        <span class="hero-stat-label">Eventos</span>
-      </div>
-
-      <!-- Vagas -->
-      <div class="hero-stat">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-          <rect x="4" y="14" width="28" height="18" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-          <path d="M13 14V11C13 9.3 14.3 8 16 8H20C21.7 8 23 9.3 23 11V14" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" fill="none"/>
-          <circle cx="18" cy="21" r="4" fill="rgba(255,255,255,0.2)" stroke="#FFB703" stroke-width="1.5"/>
-          <path d="M15.5 21L17 22.5L20.5 19" stroke="#FFB703" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span class="hero-stat-label">Vagas</span>
-      </div>
-
-      <!-- Alertas -->
-      <div class="hero-stat">
-        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-          <path d="M18 5L5 28H31L18 5Z" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linejoin="round"/>
-          <rect x="16.5" y="14" width="3" height="7" rx="1.5" fill="#FFB703"/>
-          <circle cx="18" cy="24" r="1.8" fill="#FFB703"/>
-        </svg>
-        <span class="hero-stat-label">Alertas</span>
-      </div>
-
     </div>
   </div>
 </div>
@@ -791,7 +760,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <span class="secao-count">5 hoje</span>
     </div>
 
-    <div class="card-noticia destaque">
+    <div class="card-noticia destaque" data-bairro="Vila Medeiros">
       <div class="destaque-pill">🚨 Alerta de Saúde</div>
       <div class="card-tags">
         <span class="tag tag-seg">Saúde</span>
@@ -805,7 +774,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </div>
 
-    <a class="card-noticia" href="https://www.diariozonanorte.com.br/apos-mais-de-10-anos-de-obras-linha-6-laranja-inaugura-primeiras-seis-estacoes-ate-o-final-de-junho/" target="_blank">
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/apos-mais-de-10-anos-de-obras-linha-6-laranja-inaugura-primeiras-seis-estacoes-ate-o-final-de-junho/" target="_blank" data-bairro="Freguesia do Ó">
       <div class="card-icone ic-mob">🚇</div>
       <div>
         <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Freguesia do Ó / Brasilândia</span></div>
@@ -818,7 +787,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </a>
 
-    <a class="card-noticia" href="https://www.diariozonanorte.com.br/roubo-de-celulares-dispara-em-sao-paulo-so-nas-principais-ruas-da-zona-norte-foram-mais-de-mil-celulares-roubados-em-2025/" target="_blank">
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/roubo-de-celulares-dispara-em-sao-paulo-so-nas-principais-ruas-da-zona-norte-foram-mais-de-mil-celulares-roubados-em-2025/" target="_blank" data-bairro="Santana">
       <div class="card-icone ic-seg">🔒</div>
       <div>
         <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Santana / Zona Norte</span></div>
@@ -831,7 +800,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </a>
 
-    <a class="card-noticia" href="https://www.diariozonanorte.com.br/" target="_blank">
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/" target="_blank" data-bairro="Casa Verde">
       <div class="card-icone ic-edu">🌳</div>
       <div>
         <div class="card-tags"><span class="tag tag-edu">Zeladoria</span><span class="tag-bairro">📍 Casa Verde</span></div>
@@ -844,7 +813,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </a>
 
-    <a class="card-noticia" href="https://prefeitura.sp.gov.br/w/prefeitura-entrega-no-tucuruvi-segundo-centro-de-cuidados-odontologicos-da-cidade" target="_blank">
+    <a class="card-noticia" href="https://prefeitura.sp.gov.br/w/prefeitura-entrega-no-tucuruvi-segundo-centro-de-cuidados-odontologicos-da-cidade" target="_blank" data-bairro="Tucuruvi">
       <div class="card-icone ic-seg">🦷</div>
       <div>
         <div class="card-tags"><span class="tag tag-seg">Saúde</span><span class="tag-bairro">📍 Tucuruvi</span></div>
@@ -867,7 +836,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <span class="secao-count">4 eventos</span>
     </div>
 
-    <a class="card-evento" href="https://universozn.com.br/linha-6-laranja-metro-zona-norte-inauguracao" target="_blank">
+    <a class="card-evento" href="https://universozn.com.br/linha-6-laranja-metro-zona-norte-inauguracao" target="_blank" data-bairro="Freguesia do Ó">
       <div class="evento-data" style="background:#E65100;"><span class="evento-dia">30</span><span class="evento-mes">Jun</span></div>
       <div>
         <div class="evento-titulo">Inauguração Linha 6-Laranja — Operação Gratuita</div>
@@ -876,7 +845,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </a>
 
-    <a class="card-evento" href="https://www.diariozonanorte.com.br/" target="_blank">
+    <a class="card-evento" href="https://www.diariozonanorte.com.br/" target="_blank" data-bairro="Santana">
       <div class="evento-data" style="background:#C62828;"><span class="evento-dia">10</span><span class="evento-mes">Jul</span></div>
       <div>
         <div class="evento-titulo">Festival do Japão 2026 — Gastronomia, Cultura Pop e Shows</div>
@@ -885,7 +854,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </a>
 
-    <a class="card-evento" href="https://www.diariozonanorte.com.br/" target="_blank">
+    <a class="card-evento" href="https://www.diariozonanorte.com.br/" target="_blank" data-bairro="Tucuruvi">
       <div class="evento-data" style="background:#1565C0;"><span class="evento-dia">05</span><span class="evento-mes">Jul</span></div>
       <div>
         <div class="evento-titulo">Corredor da Av. Imirim — Entrega das Obras Prevista</div>
@@ -894,7 +863,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </a>
 
-    <a class="card-evento" href="https://prefeitura.sp.gov.br/web/saude/w/prefeitura-de-s%C3%A3o-paulo-disponibiliza-dose-zero-da-vacina-contra-o-sarampo-para-beb%C3%AAs-de-6-meses-a-menores-de-1-ano-a-partir-deste-s%C3%A1bado-27-" target="_blank">
+    <a class="card-evento" href="https://prefeitura.sp.gov.br/web/saude/w/prefeitura-de-s%C3%A3o-paulo-disponibiliza-dose-zero-da-vacina-contra-o-sarampo-para-beb%C3%AAs-de-6-meses-a-menores-de-1-ano-a-partir-deste-s%C3%A1bado-27-" target="_blank" data-bairro="Vila Medeiros">
       <div class="evento-data" style="background:#2E7D32;"><span class="evento-dia">29</span><span class="evento-mes">Jun</span></div>
       <div>
         <div class="evento-titulo">Vacinação Contra Sarampo — Dose Zero para Bebês</div>
@@ -913,7 +882,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <span class="secao-count">4 vagas</span>
     </div>
 
-    <div class="card-vaga">
+    <div class="card-vaga" data-bairro="Santana">
       <div class="vaga-icone">💼</div>
       <div style="flex:1">
         <div class="vaga-titulo">Assistente Administrativo Jr.</div>
@@ -923,7 +892,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Jooble / Vagas.com · Há 3 dias</div>
     </div>
 
-    <div class="card-vaga">
+    <div class="card-vaga" data-bairro="Santana">
       <div class="vaga-icone">🏪</div>
       <div style="flex:1">
         <div class="vaga-titulo">Vendedor(a) de Colchões</div>
@@ -933,7 +902,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">GuiaZN · Há 24 dias</div>
     </div>
 
-    <div class="card-vaga">
+    <div class="card-vaga" data-bairro="Santana">
       <div class="vaga-icone">🏢</div>
       <div style="flex:1">
         <div class="vaga-titulo">Consultor(a) de Vendas — Mercado Imobiliário</div>
@@ -943,7 +912,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Jooble · Há 5 dias</div>
     </div>
 
-    <div class="card-vaga">
+    <div class="card-vaga" data-bairro="Santana">
       <div class="vaga-icone">🧹</div>
       <div style="flex:1">
         <div class="vaga-titulo">Auxiliar de Limpeza — Cobertura de Férias</div>
@@ -963,7 +932,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <span class="secao-count">2 itens</span>
     </div>
 
-    <div class="card-pol">
+    <div class="card-pol" data-bairro="Freguesia do Ó">
       <div class="pol-orgao">🚇 Governo do Estado de SP</div>
       <div class="pol-titulo">Linha 6-Laranja inaugura este mês com estações na Zona Norte — Brasilândia prevista para o fim de 2026</div>
       <div class="pol-impacto">Moradores de Freguesia do Ó, Brasilândia e adjacências terão acesso ao metrô pela primeira vez. Trajeto Brasilândia–Centro cairá de 1h30 para 23 minutos. Estação João Paulo I terá integração com terminal de ônibus.</div>
@@ -973,7 +942,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </div>
 
-    <div class="card-pol">
+    <div class="card-pol" data-bairro="Vila Medeiros">
       <div class="pol-orgao">🏥 Prefeitura de São Paulo — Secretaria de Saúde</div>
       <div class="pol-titulo">Após casos de sarampo na Vila Medeiros, Prefeitura amplia vacinação e realiza varredura vacinal no bairro</div>
       <div class="pol-impacto">Mais de 127 mil pessoas acima de 59 anos na área de abrangência (Santana, Jaçanã, Tremembé, Casa Verde, Cachoeirinha, Tucuruvi e Pirituba) podem ser afetadas. Cerca de 100 mil doses enviadas para SP e Guarulhos. Busca ativa em andamento na Vila Medeiros.</div>
@@ -1654,6 +1623,31 @@ function irWaze(lat, lon, btn) {
   document.querySelectorAll('.wbairro-btn').forEach(b => b.classList.remove('ativo'));
   btn.classList.add('ativo');
 }
+
+// ── FILTRO POR SUBPREFEITURA ─────────────────────────
+const SUB_MAP = {
+  santana:   ['santana','tucuruvi','mandaqui'],
+  casaverde: ['casa verde','limão','cachoeirinha'],
+  vilamaria: ['vila maria','vila guilherme','vila medeiros'],
+  jacana:    ['jaçanã','tremembé'],
+  freguesia: ['freguesia do ó','brasilândia'],
+  pirituba:  ['pirituba','jaraguá','são domingos'],
+  perus:     ['perus','anhanguera'],
+};
+document.querySelectorAll('.sub-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('ativo'));
+    btn.classList.add('ativo');
+    const sub = btn.dataset.sub;
+    const filtrar = sub !== 'todas';
+    const distritos = filtrar ? SUB_MAP[sub] : [];
+    document.querySelectorAll('[data-bairro]').forEach(card => {
+      if (!filtrar) { card.style.display = ''; return; }
+      const bairro = (card.dataset.bairro || '').toLowerCase();
+      card.style.display = distritos.some(d => bairro.includes(d)) ? '' : 'none';
+    });
+  });
+});
 
 // ── KEYDOWN UNIFICADO ────────────────────────────────
 window.addEventListener('keydown', function(e) {
