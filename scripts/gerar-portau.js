@@ -39,6 +39,13 @@ const dataPorExtenso = `${diaSemanaCapit}, ${diaN} de ${mesExt} de ${yyyy}`;
 // Formato curto para o hero: "29 de junho"
 const dataHero = `${diaN} de ${mesExt}`;
 
+// Hora de geração no fuso de Brasília
+const horaGeracao = new Intl.DateTimeFormat('pt-BR', {
+  timeZone: 'America/Sao_Paulo',
+  hour: '2-digit',
+  minute: '2-digit',
+}).format(new Date());
+
 // ─── Prompt do sistema ───────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `Você é o editor-chefe do Portau, jornal digital hiperlocal da Zona Norte de São Paulo.
 
