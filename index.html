@@ -1740,7 +1740,10 @@ window.addEventListener('keydown', function(e) {
 <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
 (function() {
-  const GEOJSON_URL = 'https://cdn.jsdelivr.net/gh/codigourbano/distritos-sp@master/distritos-sp.geojson';
+  const GEOJSON_URLS = [
+    'https://cdn.jsdelivr.net/gh/codigourbano/distritos-sp/distritos-sp.geojson',
+    'https://cdn.jsdelivr.net/gh/codigourbano/distritos-sp@master/distritos-sp.geojson',
+  ];
 
   const SUBPREFEITURAS = {
     'SANTANA':         { label: 'Santana/Tucuruvi', cor: '#1D9E75' },
@@ -1819,15 +1822,45 @@ window.addEventListener('keydown', function(e) {
     const wrap = document.getElementById('bairros-svg-wrap');
     wrap.innerHTML = '<div style="text-align:center;padding:2rem;color:#999;font-size:13px;">Carregando mapa…</div>';
 
-    d3.json(GEOJSON_URL).then(function(geojson) {
+    // Tenta cada URL em sequência até uma funcionar
+    function tentarURL(idx) {
+      if (idx >= GEOJSON_URLS.length) {
+        wrap.innerHTML = `<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Não foi possível carregar o GeoJSON após ${GEOJSON_URLS.length} tentativas.</div>`;
+        return;
+      }
+      const url = GEOJSON_URLS[idx];
+      fetch(url)
+        .then(function(r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status + ' — ' + url);
+          return r.json();
+        })
+        .then(function(geojson) { processarGeoJSON(geojson); })
+        .catch(function(err) {
+          console.warn('[Portau] GeoJSON falhou (' + url + '):', err.message);
+          tentarURL(idx + 1);
+        });
+    }
+
+    function processarGeoJSON(geojson) {
+      // Diagnóstico: mostra as propriedades do primeiro feature no console
+      if (geojson.features && geojson.features.length) {
+        console.log('[Portau] GeoJSON carregado — propriedades do 1º feature:', geojson.features[0].properties);
+      }
+
+      // Detecta automaticamente qual campo contém o nome do distrito
+      const CAMPOS_NOME = ['ds_nome','NM_DIST','NOME','Nome','nome','Name','name','DS_NOME'];
+      const primeiroProps = geojson.features[0]?.properties || {};
+      const campoNome = CAMPOS_NOME.find(c => primeiroProps[c] !== undefined) || CAMPOS_NOME[0];
+      console.log('[Portau] Campo de nome detectado:', campoNome, '— valor exemplo:', primeiroProps[campoNome]);
+
+      function getNome(props) { return props[campoNome] || ''; }
+
       const znKeys = new Set(Object.keys(SUBPREFEITURAS).map(normalizar));
-      const features = geojson.features.filter(f => {
-        const nome = f.properties.Name || f.properties.name || f.properties.NOME || '';
-        return znKeys.has(normalizar(nome));
-      });
+      const features = geojson.features.filter(f => znKeys.has(normalizar(getNome(f.properties))));
 
       if (!features.length) {
-        wrap.innerHTML = '<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Nenhum distrito encontrado no GeoJSON.</div>';
+        const exemplos = geojson.features.slice(0, 5).map(f => getNome(f.properties)).join(', ');
+        wrap.innerHTML = `<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Nenhum distrito da Zona Norte encontrado.<br><small>Campo: <b>${campoNome}</b> — Exemplos no GeoJSON: ${exemplos}</small></div>`;
         return;
       }
 
@@ -1849,14 +1882,14 @@ window.addEventListener('keydown', function(e) {
         .enter().append('path')
         .attr('d', path)
         .attr('fill', d => {
-          const k = nomeCanonical(d.properties.Name || d.properties.name || d.properties.NOME || '');
+          const k = nomeCanonical(getNome(d.properties));
           return k ? SUBPREFEITURAS[k].cor : '#ccc';
         })
         .attr('stroke', '#fff')
         .attr('stroke-width', 1.2)
         .style('cursor', 'pointer')
         .on('mousemove', function(event, d) {
-          const nome = d.properties.Name || d.properties.name || d.properties.NOME || '';
+          const nome = getNome(d.properties);
           const k = nomeCanonical(nome);
           const sub = k ? SUBPREFEITURAS[k].label : '';
           tooltip.style.opacity = '1';
@@ -1868,16 +1901,15 @@ window.addEventListener('keydown', function(e) {
           tooltip.style.opacity = '0';
         })
         .on('click', function(event, d) {
-          const nome = d.properties.Name || d.properties.name || d.properties.NOME || '';
+          const nome = getNome(d.properties);
           const k = nomeCanonical(nome);
           if (!k) return;
 
-          // Deselecionar anterior
           if (selecionado) {
             d3.select(selecionado)
               .attr('stroke', '#fff').attr('stroke-width', 1.2)
               .attr('fill', dd => {
-                const kk = nomeCanonical(dd.properties.Name || dd.properties.name || dd.properties.NOME || '');
+                const kk = nomeCanonical(getNome(dd.properties));
                 return kk ? SUBPREFEITURAS[kk].cor : '#ccc';
               });
           }
@@ -1886,7 +1918,6 @@ window.addEventListener('keydown', function(e) {
             .attr('stroke', '#1A1A1A').attr('stroke-width', 2.5)
             .attr('fill', d3.color(SUBPREFEITURAS[k].cor).darker(0.4));
 
-          // Painel de info
           document.getElementById('bairros-info-titulo').textContent = nome;
           document.getElementById('bairros-info-sub').textContent = SUBPREFEITURAS[k].label;
           const bairros = BAIRROS[k] || [];
@@ -1898,9 +1929,9 @@ window.addEventListener('keydown', function(e) {
         });
 
       renderLegenda();
-    }).catch(function(err) {
-      wrap.innerHTML = `<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Erro ao carregar mapa: ${err.message}</div>`;
-    });
+    } // fim processarGeoJSON
+
+    tentarURL(0);
   }
 
   window.abrirBairros = function() {
