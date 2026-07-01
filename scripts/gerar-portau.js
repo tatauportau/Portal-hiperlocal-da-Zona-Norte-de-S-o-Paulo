@@ -427,15 +427,15 @@ async function main() {
 
   // Atualiza topbar (data por extenso)
   html = html.replace(
-    /(<strong>)[^<]*(·\s*Edição completa do dia<\/strong>)/,
-    `$1${dataDisplay} · Edição completa do dia</strong>`
-  );
+  /<strong>[^<]*<\/strong>/,
+  `<strong>${dataPorExtenso} · Gerado às ${horaGeracao}</strong>`
+);
 
   // Atualiza hero <h1>Zona Norte, 28 de junho</h1>
-  html = html.replace(
-    /<h1>Zona Norte,\s*[^<]+<\/h1>/,
-    `<h1>Zona Norte, ${dataHero}</h1>`
-  );
+ html = html.replace(
+  /<h1>Zona Norte,[\s\S]*?<\/h1>/,
+  `<h1>Zona Norte, ${dataHero} <span style="font-size:0.5em; opacity:0.7; font-weight:400">· ${horaGeracao}</span></h1>`
+);
 
   // Substitui seções editoriais
   if (editorial.noticias?.length) {
