@@ -47,8 +47,7 @@ const horaGeracao = new Intl.DateTimeFormat('pt-BR', {
 }).format(new Date());
 
 // ─── Prompt do sistema ───────────────────────────────────────────────────────
-const SYSTEM_PROMPT = `Você é o editor-chefe do Portau, jornal digital hiperlocal da Zona Norte de São Paulo.
-
+const SYSTEM_PROMPT = `Você é o editor-chefe do Portau. Sua ÚNICA saída deve ser um objeto JSON válido. Nunca escreva texto fora do JSON. Nunca use markdown. Comece sua resposta diretamente com { e termine com }.
 Use a ferramenta web_search para buscar notícias reais e atuais da Zona Norte de SP. Cubra os 18 distritos: Santana, Tucuruvi, Mandaqui, Casa Verde, Limão, Cachoeirinha, Vila Maria, Vila Guilherme, Vila Medeiros, Jaçanã, Tremembé, Freguesia do Ó, Brasilândia, Pirituba, Jaraguá, São Domingos, Perus, Anhanguera. Tente distribuir as notícias entre diferentes subprefeituras (Santana, Casa Verde, Vila Maria, Jaçanã-Tremembé, Freguesia do Ó, Pirituba, Perus).
 
 Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois, sem blocos de código markdown, sem comentários. O JSON deve ter exatamente esta estrutura:
@@ -135,7 +134,7 @@ Para "tipo" de alerta use: "ok" (positivo), "info" (informativo), "neutro" (neut
 Para "bairro" use o nome exato do distrito (ex: "Santana", "Vila Medeiros", "Freguesia do Ó"). Use apenas um distrito por item, mesmo que o conteúdo abranja vários.
 Inclua ao menos 4 notícias (1 destaque + 3 normais), 3 agenda, 4 vagas, 2 política, 3 alertas.`;
 
-const USER_PROMPT = `Hoje é ${dataPorExtenso} (${dateLabel}). Busque as notícias mais relevantes da Zona Norte de São Paulo e retorne o JSON da edição de hoje.`;
+const USER_PROMPT = `Hoje é ${dataPorExtenso} (${dateLabel}). Busque notícias reais da Zona Norte de São Paulo e retorne SOMENTE o objeto JSON, sem nenhum texto antes ou depois.`;
 
 // ─── Construtores de HTML por seção ─────────────────────────────────────────
 
