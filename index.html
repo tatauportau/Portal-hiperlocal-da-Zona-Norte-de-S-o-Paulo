@@ -565,9 +565,6 @@
   .bairros-info-sub { font-size: 11px; color: var(--cinza-m); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
   .bairros-pills { display: flex; flex-wrap: wrap; gap: 6px; }
   .bairros-pill { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #fff; border: 1px solid var(--cinza-l); color: var(--cinza-q); }
-  .bairros-legenda { margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 8px; }
-  .bairros-leg-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--cinza-m); font-weight: 600; }
-  .bairros-leg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
@@ -1733,7 +1730,6 @@ window.addEventListener('keydown', function(e) {
       <div class="bairros-info-sub" id="bairros-info-sub"></div>
       <div class="bairros-pills" id="bairros-info-pills"></div>
     </div>
-    <div class="bairros-legenda" id="bairros-legenda"></div>
   </div>
 </div>
 
@@ -1803,19 +1799,7 @@ window.addEventListener('keydown', function(e) {
     return null;
   }
 
-  function renderLegenda() {
-    const vistos = new Map();
-    for (const v of Object.values(SUBPREFEITURAS)) {
-      if (!vistos.has(v.label)) vistos.set(v.label, v.cor);
-    }
-    const el = document.getElementById('bairros-legenda');
-    el.innerHTML = '';
-    for (const [label, cor] of vistos) {
-      el.innerHTML += `<div class="bairros-leg-item"><div class="bairros-leg-dot" style="background:${cor}"></div>${label}</div>`;
-    }
-  }
-
-  function carregarMapa() {
+function carregarMapa() {
     if (mapaCarregado) return;
     mapaCarregado = true;
 
@@ -1928,7 +1912,41 @@ window.addEventListener('keydown', function(e) {
           info.classList.add('visivel');
         });
 
-      renderLegenda();
+      // Labels de texto nos centroides dos distritos
+      svg.selectAll('text')
+        .data(features)
+        .enter().append('text')
+        .attr('x', d => path.centroid(d)[0])
+        .attr('y', d => path.centroid(d)[1])
+        .attr('text-anchor', 'middle')
+        .attr('dominant-baseline', 'central')
+        .attr('pointer-events', 'none')
+        .style('font-family', 'Inter, sans-serif')
+        .style('font-size', '9px')
+        .style('font-weight', '700')
+        .style('fill', '#fff')
+        .style('text-shadow', '0 1px 2px rgba(0,0,0,0.6)')
+        .each(function(d) {
+          const k = nomeCanonical(getNome(d.properties));
+          const nomeCompleto = k || getNome(d.properties);
+          const palavras = nomeCompleto.split(' ');
+          const el = d3.select(this);
+          // Quebra em até 2 linhas para caber no polígono
+          if (palavras.length <= 2) {
+            el.append('tspan').text(nomeCompleto);
+          } else {
+            const meio = Math.ceil(palavras.length / 2);
+            el.append('tspan')
+              .attr('x', path.centroid(d)[0])
+              .attr('dy', '-0.55em')
+              .text(palavras.slice(0, meio).join(' '));
+            el.append('tspan')
+              .attr('x', path.centroid(d)[0])
+              .attr('dy', '1.1em')
+              .text(palavras.slice(meio).join(' '));
+          }
+        });
+
     } // fim processarGeoJSON
 
     tentarURL(0);
