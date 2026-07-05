@@ -1995,6 +1995,29 @@ function carregarMapa() {
   };
 })();
 </script>
-
+  
+<script>
+// Reordenação fim de semana: sexta(5), sábado(6), domingo(0)
+(function() {
+  const dia = new Date().getDay();
+  const fds = dia === 0 || dia === 5 || dia === 6;
+  const bloco = document.getElementById('fim-de-semana-card');
+  if (fds && bloco) {
+    const feed = document.querySelector('.feed');
+    const noticias = document.getElementById('noticias');
+    if (feed && noticias) {
+      // Clona e estiliza para o feed
+      const clone = bloco.cloneNode(true);
+      clone.id = 'fim-de-semana-feed';
+      clone.style.marginBottom = '44px';
+      clone.style.borderLeft = '4px solid var(--amarelo)';
+      feed.insertBefore(clone, noticias);
+      // Esconde da sidebar
+      bloco.style.display = 'none';
+    }
+  }
+})();
+</script>
+  
 </body>
 </html>
