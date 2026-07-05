@@ -117,15 +117,8 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
       "desc": "string",
       "meta": "string"
     }
-  ],
-  "resumo_sidebar": {
-    "n_noticias": 4,
-    "n_eventos": 4,
-    "n_vagas": 4,
-    "n_politica": 2,
-    "n_alertas": 3,
-    "n_classificados": 6
-  }
+  ]
+  
 }
 
 Para "tag_categoria" use: "tag-seg" (segurança/saúde), "tag-edu" (educação/zeladoria), "tag-mob" (mobilidade), "tag-not" (geral).
