@@ -445,9 +445,7 @@ async function main() {
   if (editorial.alertas?.length) {
     html = replaceSection(html, 'alertas', buildAlertas(editorial.alertas));
   }
-  if (editorial.resumo_sidebar) {
-    html = replaceResumoSidebar(html, buildResumoSidebar(editorial.resumo_sidebar, dataCurta));
-  }
+  
 
   fs.writeFileSync(INDEX_PATH, html, 'utf8');
   console.log(`[Portau] index.html atualizado com sucesso (${html.length} bytes).`);
