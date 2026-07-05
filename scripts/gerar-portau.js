@@ -5,19 +5,15 @@
  * depois injeta no HTML original usando delimitadores de seção.
  * O arquivo resultante tem o tamanho completo do original.
  */
-
 const fs = require('fs');
 const path = require('path');
-
 const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY;
 if (!CLAUDE_API_KEY) {
   console.error('Erro: variável CLAUDE_API_KEY não definida.');
   process.exit(1);
 }
-
 const INDEX_PATH = path.resolve(__dirname, '..', 'index.html');
 let html = fs.readFileSync(INDEX_PATH, 'utf8');
-
 // Data no fuso horário de Brasília (America/Sao_Paulo)
 const tzDate = new Intl.DateTimeFormat('pt-BR', {
   timeZone: 'America/Sao_Paulo',
@@ -30,28 +26,26 @@ const mm = getPart('month');
 const yyyy = getPart('year');
 const diaN = parseInt(dd, 10);
 const diaSemana = getPart('weekday');
-// Capitaliza primeira letra do dia da semana
 const diaSemanaCapit = diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1);
 const mesesExt = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 const mesExt = mesesExt[parseInt(mm, 10) - 1];
 const dateLabel = `${dd}/${mm}/${yyyy}`;
 const dataPorExtenso = `${diaSemanaCapit}, ${diaN} de ${mesExt} de ${yyyy}`;
-// Formato curto para o hero: "29 de junho"
 const dataHero = `${diaN} de ${mesExt}`;
-
 // Hora de geração no fuso de Brasília
 const horaGeracao = new Intl.DateTimeFormat('pt-BR', {
   timeZone: 'America/Sao_Paulo',
   hour: '2-digit',
   minute: '2-digit',
 }).format(new Date());
+// Dia da semana numérico em Brasília (0=dom, 5=sex, 6=sab)
+const diaSemanaNum = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })).getDay();
+const ehFimDeSemana = diaSemanaNum === 0 || diaSemanaNum === 5 || diaSemanaNum === 6;
 
 // ─── Prompt do sistema ───────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `Você é o editor-chefe do Portau. Sua ÚNICA saída deve ser um objeto JSON válido. Nunca escreva texto fora do JSON. Nunca use markdown. Comece sua resposta diretamente com { e termine com }.
 Use a ferramenta web_search para buscar notícias reais e atuais da Zona Norte de SP. Cubra os 18 distritos: Santana, Tucuruvi, Mandaqui, Casa Verde, Limão, Cachoeirinha, Vila Maria, Vila Guilherme, Vila Medeiros, Jaçanã, Tremembé, Freguesia do Ó, Brasilândia, Pirituba, Jaraguá, São Domingos, Perus, Anhanguera. Tente distribuir as notícias entre diferentes subprefeituras (Santana, Casa Verde, Vila Maria, Jaçanã-Tremembé, Freguesia do Ó, Pirituba, Perus).
-
 Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois, sem blocos de código markdown, sem comentários. O JSON deve ter exatamente esta estrutura:
-
 {
   "data_display": "string — data por extenso, ex: Segunda-feira, 29 de junho de 2026",
   "data_curta": "string — ex: 29/06/2026",
@@ -117,20 +111,25 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
       "desc": "string",
       "meta": "string"
     }
+  ],
+  "fim_de_semana": [
+    {
+      "emoji": "string — ex: 🎵",
+      "titulo": "string — nome do evento",
+      "info": "string — ex: 05/07 · 20h · Sesc Santana · Gratuito"
+    }
   ]
-  
 }
-
 Para "tag_categoria" use: "tag-seg" (segurança/saúde), "tag-edu" (educação/zeladoria), "tag-mob" (mobilidade), "tag-not" (geral).
 Para "icone_classe" use: "ic-seg", "ic-edu", "ic-mob", "ic-eco".
 Para "tipo" de alerta use: "ok" (positivo), "info" (informativo), "neutro" (neutro/obras).
 Para "bairro" use o nome exato do distrito (ex: "Santana", "Vila Medeiros", "Freguesia do Ó"). Use apenas um distrito por item, mesmo que o conteúdo abranja vários.
-Inclua ao menos 4 notícias (1 destaque + 3 normais), 3 agenda, 4 vagas, 2 política, 3 alertas.`;
+Inclua ao menos 4 notícias (1 destaque + 3 normais), 3 agenda, 4 vagas, 2 política, 3 alertas.
+Inclua exatamente 3 dicas de eventos reais para o fim de semana mais próximo na Zona Norte em "fim_de_semana".`;
 
 const USER_PROMPT = `Hoje é ${dataPorExtenso} (${dateLabel}). Busque notícias reais da Zona Norte de São Paulo e retorne SOMENTE o objeto JSON, sem nenhum texto antes ou depois.`;
 
 // ─── Construtores de HTML por seção ─────────────────────────────────────────
-
 function buildNoticias(noticias) {
   const count = noticias.length;
   let html = `  <div class="secao" id="noticias">
@@ -138,7 +137,6 @@ function buildNoticias(noticias) {
       <div class="secao-titulo"><span class="barra barra-not"></span>Notícias</div>
       <span class="secao-count">${count} hoje</span>
     </div>\n`;
-
   for (const n of noticias) {
     if (n.destaque) {
       html += `
@@ -184,7 +182,6 @@ function buildAgenda(agenda, dataCurta) {
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
       <span class="secao-count">${count} eventos</span>
     </div>\n`;
-
   for (const e of agenda) {
     const gratuito = e.gratuito || !e.preco;
     const valorHtml = gratuito
@@ -212,7 +209,6 @@ function buildVagas(vagas) {
       <div class="secao-titulo"><span class="barra barra-vag"></span>Vagas de Emprego</div>
       <span class="secao-count">${count} vagas</span>
     </div>\n`;
-
   for (const v of vagas) {
     html += `
     <div class="card-vaga" data-bairro="${v.bairro || ''}">
@@ -237,7 +233,6 @@ function buildPolitica(politica) {
       <div class="secao-titulo"><span class="barra barra-pol"></span>Política Regional</div>
       <span class="secao-count">${count} itens</span>
     </div>\n`;
-
   for (const p of politica) {
     html += `
     <div class="card-pol" data-bairro="${p.bairro || ''}">
@@ -262,7 +257,6 @@ function buildAlertas(alertas) {
       <div class="secao-titulo"><span class="barra barra-dad"></span>Dados & Alertas</div>
       <span class="secao-count">${count} itens</span>
     </div>\n`;
-
   for (const a of alertas) {
     html += `
     <div class="alerta ${a.tipo}">
@@ -278,19 +272,27 @@ function buildAlertas(alertas) {
   return html;
 }
 
-
+function buildFimDeSemana(items) {
+  let html = `  <div class="sb-card" id="fim-de-semana-card">
+    <div class="sb-header">🎉 Este fim de semana</div>\n`;
+  for (const item of items) {
+    html += `    <div class="sb-item">
+      <div style="font-size:20px;">${item.emoji}</div>
+      <div><div class="sb-titulo">${item.titulo}</div><div class="sb-sub">${item.info}</div></div>
+    </div>\n`;
+  }
+  html += `  </div>`;
+  return html;
+}
 
 // ─── Substituição cirúrgica usando regex por seção ───────────────────────────
-
 function replaceSection(html, id, newContent) {
-  // Captura desde <div class="secao" id="id"> até o </div> de fechamento correspondente
   const open = `<div class="secao" id="${id}">`;
   const start = html.indexOf(open);
   if (start === -1) {
     console.warn(`[Portau] Seção #${id} não encontrada no HTML — pulando.`);
     return html;
   }
-
   let depth = 0;
   let i = start;
   while (i < html.length) {
@@ -310,14 +312,10 @@ function replaceSection(html, id, newContent) {
   return html;
 }
 
-
 // ─── Main ────────────────────────────────────────────────────────────────────
-
 async function main() {
   const { default: fetch } = await import('node-fetch');
-
   console.log(`[Portau] Buscando conteúdo editorial para ${dateLabel}...`);
-
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -333,26 +331,19 @@ async function main() {
       messages: [{ role: 'user', content: USER_PROMPT }],
     }),
   });
-
   if (!response.ok) {
     const err = await response.text();
     console.error(`[Portau] Erro na API (${response.status}): ${err}`);
     process.exit(1);
   }
-
   const data = await response.json();
   const textBlocks = (data.content || []).filter(b => b.type === 'text');
   if (textBlocks.length === 0) {
     console.error('[Portau] A API não retornou texto.');
     process.exit(1);
   }
-
   let rawText = textBlocks[textBlocks.length - 1].text.trim();
-
-  // Remove cerca de markdown ```json ... ```
   rawText = rawText.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/, '').trim();
-
-  // Extrai JSON a partir do primeiro {
   const jsonStart = rawText.indexOf('{');
   if (jsonStart === -1) {
     console.error('[Portau] JSON não encontrado na resposta.');
@@ -360,7 +351,6 @@ async function main() {
     process.exit(1);
   }
   rawText = rawText.slice(jsonStart);
-
   let editorial;
   try {
     editorial = JSON.parse(rawText);
@@ -369,10 +359,8 @@ async function main() {
     console.error(rawText.slice(0, 800));
     process.exit(1);
   }
-
   const dataCurta = editorial.data_curta || dateLabel;
   const dataDisplay = editorial.data_display || dataPorExtenso;
-
   console.log('[Portau] JSON recebido. Aplicando substituições cirúrgicas...');
 
   // Atualiza <title>
@@ -380,18 +368,16 @@ async function main() {
     /<title>.*?<\/title>/,
     `<title>Portau — Edição do Dia · ${dataCurta}</title>`
   );
-
-  // Atualiza topbar (data por extenso)
+  // Atualiza topbar
   html = html.replace(
-  /<strong>[^<]*<\/strong>/,
-  `<strong>${dataPorExtenso} · Gerado às ${horaGeracao}</strong>`
-);
-
-  // Atualiza hero <h1>Zona Norte, 28 de junho</h1>
- html = html.replace(
-  /<h1>Zona Norte,[\s\S]*?<\/h1>/,
-  `<h1>Zona Norte, ${dataHero} <span style="font-size:0.5em; opacity:0.7; font-weight:400">· ${horaGeracao}</span></h1>`
-);
+    /<strong>[^<]*<\/strong>/,
+    `<strong>${dataPorExtenso} · Gerado às ${horaGeracao}</strong>`
+  );
+  // Atualiza hero h1
+  html = html.replace(
+    /<h1>Zona Norte,[\s\S]*?<\/h1>/,
+    `<h1>Zona Norte, ${dataHero} <span style="font-size:0.5em; opacity:0.7; font-weight:400">· ${horaGeracao}</span></h1>`
+  );
 
   // Substitui seções editoriais
   if (editorial.noticias?.length) {
@@ -409,7 +395,22 @@ async function main() {
   if (editorial.alertas?.length) {
     html = replaceSection(html, 'alertas', buildAlertas(editorial.alertas));
   }
-  
+
+  // Atualiza bloco fim de semana na sidebar
+  if (editorial.fim_de_semana?.length) {
+    html = html.replace(
+      /<div class="sb-card" id="fim-de-semana-card">[\s\S]*?<\/div>\s*<\/div>/,
+      buildFimDeSemana(editorial.fim_de_semana)
+    );
+  }
+
+  // Marca visibilidade do bloco fim de semana (sexta=5, sábado=6, domingo=0)
+  if (ehFimDeSemana) {
+    html = html.replace(
+      'id="fim-de-semana-card"',
+      'id="fim-de-semana-card" data-fds="true"'
+    );
+  }
 
   fs.writeFileSync(INDEX_PATH, html, 'utf8');
   console.log(`[Portau] index.html atualizado com sucesso (${html.length} bytes).`);
