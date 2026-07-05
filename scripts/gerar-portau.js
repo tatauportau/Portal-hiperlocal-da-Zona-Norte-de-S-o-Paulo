@@ -278,18 +278,7 @@ function buildAlertas(alertas) {
   return html;
 }
 
-function buildResumoSidebar(r, dataCurta) {
-  const [dia, mes] = dataCurta.split('/');
-  return `  <div class="resumo-box">
-    <div class="resumo-titulo">📋 Edição de hoje · ${dia}/${mes}</div>
-    <div class="resumo-linha"><span>📰 Notícias</span><span class="resumo-n">${r.n_noticias}</span></div>
-    <div class="resumo-linha"><span>🗓️ Eventos</span><span class="resumo-n">${r.n_eventos}</span></div>
-    <div class="resumo-linha"><span>💼 Vagas</span><span class="resumo-n">${r.n_vagas}</span></div>
-    <div class="resumo-linha"><span>🏛️ Política</span><span class="resumo-n">${r.n_politica}</span></div>
-    <div class="resumo-linha"><span>⚠️ Alertas</span><span class="resumo-n">${r.n_alertas}</span></div>
-    <div class="resumo-linha"><span>🛒 Classificados</span><span class="resumo-n">${r.n_classificados}</span></div>
-  </div>`;
-}
+
 
 // ─── Substituição cirúrgica usando regex por seção ───────────────────────────
 
@@ -321,31 +310,6 @@ function replaceSection(html, id, newContent) {
   return html;
 }
 
-function replaceResumoSidebar(html, newContent) {
-  const open = '<div class="resumo-box">';
-  const close = '</div>';
-  const start = html.indexOf(open);
-  if (start === -1) {
-    console.warn('[Portau] resumo-box não encontrado — pulando sidebar.');
-    return html;
-  }
-  let depth = 0;
-  let i = start;
-  while (i < html.length) {
-    if (html[i] === '<') {
-      if (html.startsWith('<div', i)) depth++;
-      else if (html.startsWith('</div>', i)) {
-        depth--;
-        if (depth === 0) {
-          const end = i + close.length;
-          return html.slice(0, start) + newContent + html.slice(end);
-        }
-      }
-    }
-    i++;
-  }
-  return html;
-}
 
 // ─── Main ────────────────────────────────────────────────────────────────────
 
