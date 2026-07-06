@@ -14,6 +14,38 @@ if (!CLAUDE_API_KEY) {
 }
 const INDEX_PATH = path.resolve(__dirname, '..', 'index.html');
 let html = fs.readFileSync(INDEX_PATH, 'utf8');
+
+// ─── Bairros por distrito (462 bairros, 18 distritos) ───────────────────────
+const BAIRROS_PATH = path.resolve(__dirname, '..', 'data', 'bairros-por-distrito.json');
+const BAIRROS_POR_DISTRITO = JSON.parse(fs.readFileSync(BAIRROS_PATH, 'utf8'));
+const DISTRITO_KEYS = Object.keys(BAIRROS_POR_DISTRITO);
+
+function normalizar(s) {
+  return (s || '')
+    .toString()
+    .normalize('NFD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+// Mapa reverso: bairro (ou distrito) normalizado -> nome exato do distrito
+const BAIRRO_TO_DISTRITO = {};
+for (const distrito of DISTRITO_KEYS) {
+  BAIRRO_TO_DISTRITO[normalizar(distrito)] = distrito;
+  for (const bairro of BAIRROS_POR_DISTRITO[distrito]) {
+    BAIRRO_TO_DISTRITO[normalizar(bairro)] = distrito;
+  }
+}
+function resolverDistrito(nomeBairro) {
+  return BAIRRO_TO_DISTRITO[normalizar(nomeBairro)] || null;
+}
+
+// Lista formatada "DISTRITO: bairro1, bairro2, ..." para o prompt da IA
+const LISTA_BAIRROS_PROMPT = DISTRITO_KEYS
+  .map(d => `${d}: ${BAIRROS_POR_DISTRITO[d].join(', ')}`)
+  .join('\n');
+
 // Data no fuso horário de Brasília (America/Sao_Paulo)
 const tzDate = new Intl.DateTimeFormat('pt-BR', {
   timeZone: 'America/Sao_Paulo',
@@ -44,7 +76,9 @@ const ehFimDeSemana = diaSemanaNum === 0 || diaSemanaNum === 5 || diaSemanaNum =
 
 // ─── Prompt do sistema ───────────────────────────────────────────────────────
 const SYSTEM_PROMPT = `Você é o editor-chefe do Portau. Sua ÚNICA saída deve ser um objeto JSON válido. Nunca escreva texto fora do JSON. Nunca use markdown. Comece sua resposta diretamente com { e termine com }.
-Use a ferramenta web_search para buscar notícias reais e atuais da Zona Norte de SP. Cubra os 18 distritos: Santana, Tucuruvi, Mandaqui, Casa Verde, Limão, Cachoeirinha, Vila Maria, Vila Guilherme, Vila Medeiros, Jaçanã, Tremembé, Freguesia do Ó, Brasilândia, Pirituba, Jaraguá, São Domingos, Perus, Anhanguera. Tente distribuir as notícias entre diferentes subprefeituras (Santana, Casa Verde, Vila Maria, Jaçanã-Tremembé, Freguesia do Ó, Pirituba, Perus).
+Use a ferramenta web_search para buscar notícias reais e atuais da Zona Norte de SP. Cubra os 18 distritos e, sempre que a notícia mencionar um bairro específico dentro deles, use o nome exato desse bairro (não apenas o nome do distrito) no campo "bairro" — isso deixa a cobertura muito mais precisa. Escolha entre os bairros oficiais abaixo, agrupados por distrito:
+${LISTA_BAIRROS_PROMPT}
+Se não for possível identificar o bairro específico da notícia, use o nome do distrito mesmo (ex: "Santana"). Tente distribuir as notícias entre diferentes subprefeituras (Santana, Casa Verde, Vila Maria, Jaçanã-Tremembé, Freguesia do Ó, Pirituba, Perus).
 Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois, sem blocos de código markdown, sem comentários. O JSON deve ter exatamente esta estrutura:
 {
   "data_display": "string — data por extenso, ex: Segunda-feira, 29 de junho de 2026",
@@ -56,7 +90,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
       "tag_bairro": "📍 Santana",
-      "bairro": "string — nome exato do distrito, ex: Santana",
+      "bairro": "string — nome do bairro específico (ex: Parada Inglesa) ou, se não souber, o distrito (ex: Santana)",
       "titulo": "string",
       "resumo": "string",
       "fonte": "string",
@@ -71,7 +105,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
       "dia": "string — ex: 29",
       "mes": "string — ex: Jun",
       "cor_fundo": "string — ex: #E65100",
-      "bairro": "string — nome exato do distrito, ex: Santana",
+      "bairro": "string — nome do bairro específico (ex: Vila Nova Cachoeirinha) ou, se não souber, o distrito (ex: Santana)",
       "titulo": "string",
       "hora": "string",
       "local": "string",
@@ -86,7 +120,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
       "icone": "string",
       "titulo": "string",
       "empresa": "string",
-      "bairro": "string",
+      "bairro": "string — nome do bairro específico ou, se não souber, o distrito",
       "requisitos": "string",
       "tipo": "CLT",
       "fonte": "string",
@@ -96,7 +130,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
   "politica": [
     {
       "orgao": "string — ex: 🚇 Governo do Estado de SP",
-      "bairro": "string — nome exato do distrito, ex: Santana",
+      "bairro": "string — nome do bairro específico ou, se não souber, o distrito",
       "titulo": "string",
       "impacto": "string",
       "status": "string",
@@ -123,7 +157,7 @@ Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois,
 Para "tag_categoria" use: "tag-seg" (segurança/saúde), "tag-edu" (educação/zeladoria), "tag-mob" (mobilidade), "tag-not" (geral).
 Para "icone_classe" use: "ic-seg", "ic-edu", "ic-mob", "ic-eco".
 Para "tipo" de alerta use: "ok" (positivo), "info" (informativo), "neutro" (neutro/obras).
-Para "bairro" use o nome exato do distrito (ex: "Santana", "Vila Medeiros", "Freguesia do Ó"). Use apenas um distrito por item, mesmo que o conteúdo abranja vários.
+Para "tag_bairro" use o formato "📍 " seguido do mesmo valor usado em "bairro".
 Inclua ao menos 4 notícias (1 destaque + 3 normais), 3 agenda, 4 vagas, 2 política, 3 alertas.
 Inclua exatamente 3 dicas de eventos reais para o fim de semana mais próximo na Zona Norte em "fim_de_semana".`;
 
@@ -138,9 +172,10 @@ function buildNoticias(noticias) {
       <span class="secao-count">${count} hoje</span>
     </div>\n`;
   for (const n of noticias) {
+    const distrito = resolverDistrito(n.bairro) || '';
     if (n.destaque) {
       html += `
-    <div class="card-noticia destaque" data-bairro="${n.bairro || ''}">
+    <div class="card-noticia destaque" data-bairro="${n.bairro || ''}" data-distrito="${distrito}">
       <div class="destaque-pill">${n.pill || '⭐ Destaque'}</div>
       <div class="card-tags">
         <span class="tag ${n.tag_categoria}">${n.tag_label}</span>
@@ -155,7 +190,7 @@ function buildNoticias(noticias) {
     </div>\n`;
     } else {
       html += `
-    <a class="card-noticia" href="${n.url || '#'}" target="_blank" data-bairro="${n.bairro || ''}">
+    <a class="card-noticia" href="${n.url || '#'}" target="_blank" data-bairro="${n.bairro || ''}" data-distrito="${distrito}">
       <div class="card-icone ${n.icone_classe}">${n.icone}</div>
       <div>
         <div class="card-tags"><span class="tag ${n.tag_categoria}">${n.tag_label}</span><span class="tag-bairro">${n.tag_bairro}</span></div>
@@ -183,12 +218,13 @@ function buildAgenda(agenda, dataCurta) {
       <span class="secao-count">${count} eventos</span>
     </div>\n`;
   for (const e of agenda) {
+    const distrito = resolverDistrito(e.bairro) || '';
     const gratuito = e.gratuito || !e.preco;
     const valorHtml = gratuito
       ? `<span class="evento-valor valor-gratis">Gratuito</span>`
       : `<span class="evento-valor valor-pago">${e.preco}</span>`;
     html += `
-    <a class="card-evento" href="${e.url || '#'}" target="_blank" data-bairro="${e.bairro || ''}">
+    <a class="card-evento" href="${e.url || '#'}" target="_blank" data-bairro="${e.bairro || ''}" data-distrito="${distrito}">
       <div class="evento-data" style="background:${e.cor_fundo};"><span class="evento-dia">${e.dia || diaAtual}</span><span class="evento-mes">${e.mes}</span></div>
       <div>
         <div class="evento-titulo">${e.titulo}</div>
@@ -210,8 +246,9 @@ function buildVagas(vagas) {
       <span class="secao-count">${count} vagas</span>
     </div>\n`;
   for (const v of vagas) {
+    const distrito = resolverDistrito(v.bairro) || '';
     html += `
-    <div class="card-vaga" data-bairro="${v.bairro || ''}">
+    <div class="card-vaga" data-bairro="${v.bairro || ''}" data-distrito="${distrito}">
       <div class="vaga-icone">${v.icone}</div>
       <div style="flex:1">
         <div class="vaga-titulo">${v.titulo}</div>
@@ -234,8 +271,9 @@ function buildPolitica(politica) {
       <span class="secao-count">${count} itens</span>
     </div>\n`;
   for (const p of politica) {
+    const distrito = resolverDistrito(p.bairro) || '';
     html += `
-    <div class="card-pol" data-bairro="${p.bairro || ''}">
+    <div class="card-pol" data-bairro="${p.bairro || ''}" data-distrito="${distrito}">
       <div class="pol-orgao">${p.orgao}</div>
       <div class="pol-titulo">${p.titulo}</div>
       <div class="pol-impacto">${p.impacto}</div>
@@ -316,6 +354,7 @@ function replaceSection(html, id, newContent) {
 async function main() {
   const { default: fetch } = await import('node-fetch');
   console.log(`[Portau] Buscando conteúdo editorial para ${dateLabel}...`);
+  console.log(`[Portau] Cobertura: ${DISTRITO_KEYS.length} distritos, ${Object.values(BAIRROS_POR_DISTRITO).reduce((s, l) => s + l.length, 0)} bairros.`);
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
