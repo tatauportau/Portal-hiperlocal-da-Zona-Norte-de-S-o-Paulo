@@ -902,10 +902,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
-    <!-- AGENDA -->
-    <!-- AGENDA -->
-    <!-- AGENDA -->
-    <!-- AGENDA -->
   <div class="secao" id="agenda">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
@@ -1487,76 +1483,121 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
 </div>
 
 
+<!-- MODAL BAIRROS -->
+<div class="bairros-overlay" id="bairros-overlay" onclick="if(event.target===this)fecharBairros()">
+  <div class="bairros-painel">
+    <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
+    <div class="bairros-titulo">🗺️ Bairros da Zona Norte</div>
+    <div class="bairros-sub">Clique num distrito para ver os bairros</div>
+    <div id="bairros-svg-wrap"></div>
+    <div class="bairros-tooltip" id="bairros-tooltip"></div>
+    <div class="bairros-info" id="bairros-info">
+      <div class="bairros-info-titulo" id="bairros-info-titulo"></div>
+      <div class="bairros-info-sub" id="bairros-info-sub"></div>
+      <div class="bairros-pills" id="bairros-pills"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+// ── MAPA DE BAIRROS (D3.js + GeoJSON oficial GeoSampa/Prefeitura-SP) ──
+let _bairrosCarregado = false;
+let _geoDistritosZN = null;
+let _bairrosPorDistrito = null;
+
+function abrirBairros(){
+  document.getElementById('bairros-overlay').classList.add('aberto');
+  if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
+}
+function fecharBairros(){
+  document.getElementById('bairros-overlay').classList.remove('aberto');
+}
+
+async function carregarMapaBairros(){
+  const wrap = document.getElementById('bairros-svg-wrap');
+  wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#999;font-size:13px;">Carregando mapa...</div>';
+  try {
+    const [geo, bairros] = await Promise.all([
+      fetch('./data/distritos-zona-norte.geojson').then(r => r.json()),
+      fetch('./data/bairros-por-distrito.json').then(r => r.json())
+    ]);
+    _geoDistritosZN = geo;
+    _bairrosPorDistrito = bairros;
+    desenharMapaBairros(geo, bairros);
+  } catch (e) {
+    wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#c0392b;font-size:13px;">Não foi possível carregar o mapa dos bairros.</div>';
+    console.error('Erro ao carregar mapa de bairros:', e);
+  }
+}
+
+const CORES_SUBPREF_ZN = {
+  'SANTANA':'#D62828', 'TUCURUVI':'#D62828', 'MANDAQUI':'#D62828',
+  'JAÇANÃ':'#F77F00', 'TREMEMBÉ':'#F77F00',
+  'CASA VERDE':'#FCBF49', 'LIMÃO':'#FCBF49', 'CACHOEIRINHA':'#FCBF49',
+  'FREGUESIA DO Ó':'#06A77D', 'BRASILÂNDIA':'#06A77D',
+  'VILA MARIA':'#3D5A80', 'VILA GUILHERME':'#3D5A80', 'VILA MEDEIROS':'#3D5A80',
+  'PIRITUBA':'#7B2CBF', 'JARAGUÁ':'#7B2CBF', 'SÃO DOMINGOS':'#7B2CBF',
+  'PERUS':'#023047', 'ANHANGUERA':'#023047'
+};
+
+function desenharMapaBairros(geo, bairrosPorDistrito){
+  const wrap = document.getElementById('bairros-svg-wrap');
+  wrap.innerHTML = '';
+  const width  = wrap.clientWidth || 660;
+  const height = Math.round(width * 0.95);
+
+  const projection = d3.geoMercator().fitExtent([[8,8],[width-8,height-8]], geo);
+  const geoPathGen = d3.geoPath(projection);
+
+  const svg = d3.select(wrap).append('svg').attr('viewBox', `0 0 ${width} ${height}`);
+  const tooltip = document.getElementById('bairros-tooltip');
+
+  svg.selectAll('path')
+    .data(geo.features)
+    .join('path')
+      .attr('d', geoPathGen)
+      .attr('fill', d => CORES_SUBPREF_ZN[d.properties.id] || '#ccc')
+      .attr('fill-opacity', 0.72)
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 1.2)
+      .style('cursor', 'pointer')
+      .on('mousemove', function(event, d){
+        tooltip.textContent = d.properties.nome;
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY + 10) + 'px';
+        tooltip.style.opacity = 1;
+        d3.select(this).attr('fill-opacity', 1);
+      })
+      .on('mouseleave', function(){
+        tooltip.style.opacity = 0;
+        d3.select(this).attr('fill-opacity', 0.72);
+      })
+      .on('click', function(event, d){
+        svg.selectAll('path').attr('stroke-width', 1.2).attr('stroke', '#fff');
+        d3.select(this).attr('stroke-width', 3).attr('stroke', '#222');
+        mostrarInfoDistrito(d.properties, bairrosPorDistrito);
+      });
+}
+
+function mostrarInfoDistrito(props, bairrosPorDistrito){
+  const info   = document.getElementById('bairros-info');
+  const titulo = document.getElementById('bairros-info-titulo');
+  const sub    = document.getElementById('bairros-info-sub');
+  const pills  = document.getElementById('bairros-pills');
+
+  const lista = bairrosPorDistrito[props.id] || [];
+  titulo.textContent = props.nome;
+  sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
+  pills.innerHTML = lista.map(b => `<span class="bairros-pill">${b}</span>`).join('');
+  info.classList.add('visivel');
+}
+</script>
+
 <script>
 // ── PAINEL ANALYTICS ─────────────────────────────────────────
-const GA_PROPERTY_ID = '399155331';
-const SA_EMAIL = 'portau-analytics@portau-analytics.iam.gserviceaccount.com';
-const SA_KEY = `-----BEGIN PRIVATE KEY-----
-MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDOWfXkyXeJdYTX
-bWcSgVb7rYdSF736qlDSV6HodlpZdYSiKRqqFDSdi+1Xg2QhUpW3AhLV6CKPxeyG
-YhrJVDCDJBi09jsD8LOefxA0zkZQB5wbeKrj2v1618d0V6DJ1duQBzKoq6oOYlnH
-TyfS41ySRU8VQ96BffC012GCkQ8NLb/sEKc68TtAcK9xHY0BzTW0KCvvKySuPfZI
-P6e/mi8B0S+Eue1Owar0uNRjbqnozmm3EfkkH3tdGlFGtcPa9nX+qPg420XP0vFC
-R3GLfChhkuiKuMKJB/IqBgPZQCHQwVCVmbzJnhKrnMEz2vpCKdd8HpJ0u83WX9w2
-HzhTtLINAgMBAAECggEACIITY5UI+DfKZpAst/RxmoaboJS5BmeqVcSQ45hUU6xG
-7+Fjp4/rYXQ+W3rf5d3VWB/eQ0ft0OFsxgJahLg+GHzPBfsXENZbrup3R8NviRI0
-lg9iIGtMQ0SNWpctr9TBAk3BrCGz18xR/lKdsOd4pCahGEky7ezm6qtCFSjs/B02
-nmxjD8a5tUf81lD/APuPuXiNmt9tH93bakWUCHNXQ2zQNNw2PtPzP/Rovp07o6Wc
-Dh0ubfxmp1aX6zmGuKyXjtFOcvR++OOv4Eo0Tj6hR7oZtKyIhJMmKpezK1EMhw9e
-4wWfXNjMcqhAlJgEJ90wM4sBslnGcHsK9O7bFGwmowKBgQD3QERxodcWHTGhWnL6
-/i5/lr+UG7YPCM0P8YrRSxKs3U9hquMzoMWCnoWdBCDXqjisBotFonoxwnHUFXJ3
-574TfUUdE9QFTFyuqBmWE1vlWfX/CzFgfKJ5nD2Eu7EHU/3z/scm/h6ojk/IdKXl
-Hiaqf7Mb6ksiTLkeqCjKkBuHXwKBgQDVpzPKt5zGilXMAtGKc+025LZyBDaaxhyi
-biuwsvVWdWgeD/1eZSDMXsJEzqPV+3RnxZlUOxDFb8f/NQKgdDF2cNLZTdWZmDnr
-AK3LAVx7VXvWvtbNpUn5S/fbX6p/a9SP0kk9mJN8q/FKFDXhSFPzPJHfahLd8jKA
-e108JFYaEwKBgQDhzaO0UyVnYMoOndgcOT6l7zqPPK+ME3GTefhZI8KudH8mpzZP
-1CgNHlDQEREdZKvVDzTqJ3SJNRdXpS6hKteAXQtdftpG7HJIX+TeFlf6oanzfnld
-sPWBMptMOU13b9Ghn7Cpf7LoJO/gFgfbsymE1JLyj4qGjKMTyGdYdzts6QKBgBzy
-JTsuuyfO8CbOrvLyF85bGDjER12av6BmCrdK16BaEbwY8HvMebAWmn1V/a5s/e1d
-QRO/WNtW9KKn3O4+L8FbMcXNHMZNcHNdSS56xbvT7g4/Fr0PysDiwPbQtDnFMyw1
-EkUtGbZHWU5vBIm8EdufdiftqBa3zI3JqO0QAzZPAoGBANJnfOiHOlxDpdN7cI98
-c0De/9Tqoh4Llvco9rp8b0TPPR0H+ui5VCd17cH8+GckH73/LubArPfrbq97qeFW
-Qmmq6oU85kHL4W5CKbUDqXM2WgvvGt3mbvfuC/PVxYUSz4XWmTPB+QbSPR3Ks1nE
-vngpkxHuhoUYqDh9XnvBmQU8
------END PRIVATE KEY-----`;
-
-const flagMap = {
-  'Brazil':'🇧🇷','United States':'🇺🇸','Portugal':'🇵🇹','Argentina':'🇦🇷',
-  'Belgium':'🇧🇪','Germany':'🇩🇪','France':'🇫🇷','United Kingdom':'🇬🇧',
-  'Italy':'🇮🇹','Spain':'🇪🇸','Japan':'🇯🇵','Canada':'🇨🇦','Australia':'🇦🇺',
-  'Mexico':'🇲🇽','Chile':'🇨🇱','Colombia':'🇨🇴','Netherlands':'🇳🇱',
-};
-const pNome = c => c === 'Brazil' ? 'Brasil' : c;
-const flag  = c => flagMap[c] || '🌍';
-
-async function getToken() {
-  const hdr = btoa(JSON.stringify({alg:'RS256',typ:'JWT'})).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
-  const now = Math.floor(Date.now()/1000);
-  const clm = btoa(JSON.stringify({
-    iss:SA_EMAIL, scope:'https://www.googleapis.com/auth/analytics.readonly',
-    aud:'https://oauth2.googleapis.com/token', exp:now+3600, iat:now
-  })).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
-  const unsigned = hdr+'.'+clm;
-  const pem = SA_KEY.replace(/-----BEGIN PRIVATE KEY-----|-----END PRIVATE KEY-----|\n/g,'');
-  const keyData = Uint8Array.from(atob(pem), c=>c.charCodeAt(0));
-  const key = await crypto.subtle.importKey('pkcs8',keyData.buffer,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['sign']);
-  const sig = await crypto.subtle.sign('RSASSA-PKCS1-v1_5',key,new TextEncoder().encode(unsigned));
-  const sigB64 = btoa(String.fromCharCode(...new Uint8Array(sig))).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
-  const jwt = unsigned+'.'+sigB64;
-  const r = await fetch('https://oauth2.googleapis.com/token',{
-    method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
-    body:`grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`
-  });
-  return (await r.json()).access_token;
-}
-
-async function gaReport(token, body, realtime=false) {
-  const ep = realtime
-    ? `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runRealtimeReport`
-    : `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runReport`;
-  const r = await fetch(ep,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body)});
-  return r.json();
-}
+// Dados carregados via função serverless segura (netlify/functions/analytics.js).
+// Nenhuma credencial fica no cliente.
 
 async function carregarGA() {
   document.getElementById('ga-conteudo').innerHTML = '<div class="ga-loading"><span class="ga-spinner"></span>Carregando...</div>';
@@ -1754,251 +1795,6 @@ window.addEventListener('keydown', function(e) {
 });
 </script>
 
-<!-- MODAL BAIRROS -->
-<div class="bairros-overlay" id="bairros-overlay" onclick="if(event.target===this)fecharBairros()">
-  <div class="bairros-painel">
-    <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
-    <div class="bairros-titulo">Zona Norte de São Paulo</div>
-    <div class="bairros-sub">Clique num distrito para ver os bairros</div>
-    <div id="bairros-svg-wrap"></div>
-    <div class="bairros-tooltip" id="bairros-tooltip"></div>
-    <div class="bairros-info" id="bairros-info">
-      <div class="bairros-info-titulo" id="bairros-info-titulo"></div>
-      <div class="bairros-info-sub" id="bairros-info-sub"></div>
-      <div class="bairros-pills" id="bairros-info-pills"></div>
-    </div>
-  </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-<script>
-(function() {
-  const GEOJSON_URLS = [
-    'https://cdn.jsdelivr.net/gh/codigourbano/distritos-sp/distritos-sp.geojson',
-    'https://cdn.jsdelivr.net/gh/codigourbano/distritos-sp@master/distritos-sp.geojson',
-  ];
-
-  const SUBPREFEITURAS = {
-    'SANTANA':         { label: 'Santana/Tucuruvi', cor: '#1D9E75' },
-    'TUCURUVI':        { label: 'Santana/Tucuruvi', cor: '#1D9E75' },
-    'MANDAQUI':        { label: 'Santana/Tucuruvi', cor: '#1D9E75' },
-    'CASA VERDE':      { label: 'Casa Verde/Limão',  cor: '#5DCAA5' },
-    'LIMÃO':           { label: 'Casa Verde/Limão',  cor: '#5DCAA5' },
-    'CACHOEIRINHA':    { label: 'Casa Verde/Limão',  cor: '#5DCAA5' },
-    'VILA MARIA':      { label: 'Vila Maria/Guilherme', cor: '#378ADD' },
-    'VILA GUILHERME':  { label: 'Vila Maria/Guilherme', cor: '#378ADD' },
-    'VILA MEDEIROS':   { label: 'Vila Maria/Guilherme', cor: '#378ADD' },
-    'JAÇANÃ':          { label: 'Jaçanã/Tremembé',  cor: '#EF9F27' },
-    'TREMEMBÉ':        { label: 'Jaçanã/Tremembé',  cor: '#EF9F27' },
-    'FREGUESIA DO Ó':  { label: 'Freguesia/Brasilândia', cor: '#D4537E' },
-    'BRASILÂNDIA':     { label: 'Freguesia/Brasilândia', cor: '#D4537E' },
-    'PIRITUBA':        { label: 'Pirituba/Jaraguá',  cor: '#7F77DD' },
-    'JARAGUÁ':         { label: 'Pirituba/Jaraguá',  cor: '#7F77DD' },
-    'SÃO DOMINGOS':    { label: 'Pirituba/Jaraguá',  cor: '#7F77DD' },
-    'PERUS':           { label: 'Perus/Anhanguera',  cor: '#D85A30' },
-    'ANHANGUERA':      { label: 'Perus/Anhanguera',  cor: '#D85A30' },
-  };
-
-  const BAIRROS = {
-    'SANTANA':        ['Santana','Alto de Santana','Parada Inglesa','Jardim São Paulo','Lauzane Paulista'],
-    'TUCURUVI':       ['Tucuruvi','Vila Mazzei','Vila Nova Galvão','Imirim','Parque Edu Chaves'],
-    'MANDAQUI':       ['Mandaqui','Horto Florestal','Vila Gustavo','Jardim Brasil','Carandiru'],
-    'CASA VERDE':     ['Casa Verde','Casa Verde Alta','Casa Verde Média','Jardim São Bento','Piqueri'],
-    'LIMÃO':          ['Limão','Bairro do Limão','Jardim Peri Novo','Vila Ilze'],
-    'CACHOEIRINHA':   ['Cachoeirinha','Vila Nova Cachoeirinha','Jardim Nakamura','Vila Constância'],
-    'VILA MARIA':     ['Vila Maria','Vila Aurora','Parque Novo Mundo'],
-    'VILA GUILHERME': ['Vila Guilherme','Vila Constância','Jardim Leda'],
-    'VILA MEDEIROS':  ['Vila Medeiros','Parque Edu Chaves','Vila Sabrina','Vila Nivi'],
-    'JAÇANÃ':         ['Jaçanã','Jardim Japão','Jardim Peri','Vila Isa'],
-    'TREMEMBÉ':       ['Tremembé','Jardim Tremembé','Chora Menino'],
-    'FREGUESIA DO Ó': ['Freguesia do Ó','Ponte Rasa','Jardim Damasceno'],
-    'BRASILÂNDIA':    ['Brasilândia','Vila Nova Brasilândia','Jardim Tietê','Vila Dionisia'],
-    'PIRITUBA':       ['Pirituba','Vila Jaguara','Jardim Peri Alto'],
-    'JARAGUÁ':        ['Jaraguá','Taipas','Parque Jaraguá','Jardim Líbano'],
-    'SÃO DOMINGOS':   ['São Domingos','Jardim São Domingos','Vila Minas Gerais'],
-    'PERUS':          ['Perus','Jardim Perus','Sítio do Morro','Colônia Japonesa'],
-    'ANHANGUERA':     ['Anhanguera','Parque Anhanguera','Jardim Anhanguera'],
-  };
-
-  let mapaCarregado = false;
-
-  function normalizar(s) {
-    return (s || '').toUpperCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/\s+/g,' ').trim();
-  }
-
-  function nomeCanonical(nome) {
-    const n = normalizar(nome);
-    for (const k of Object.keys(SUBPREFEITURAS)) {
-      if (normalizar(k) === n) return k;
-    }
-    return null;
-  }
-
-function carregarMapa() {
-    if (mapaCarregado) return;
-    mapaCarregado = true;
-
-    const wrap = document.getElementById('bairros-svg-wrap');
-    wrap.innerHTML = '<div style="text-align:center;padding:2rem;color:#999;font-size:13px;">Carregando mapa…</div>';
-
-    // Tenta cada URL em sequência até uma funcionar
-    function tentarURL(idx) {
-      if (idx >= GEOJSON_URLS.length) {
-        wrap.innerHTML = `<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Não foi possível carregar o GeoJSON após ${GEOJSON_URLS.length} tentativas.</div>`;
-        return;
-      }
-      const url = GEOJSON_URLS[idx];
-      fetch(url)
-        .then(function(r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status + ' — ' + url);
-          return r.json();
-        })
-        .then(function(geojson) { processarGeoJSON(geojson); })
-        .catch(function(err) {
-          console.warn('[Portau] GeoJSON falhou (' + url + '):', err.message);
-          tentarURL(idx + 1);
-        });
-    }
-
-    function processarGeoJSON(geojson) {
-      // Diagnóstico: mostra as propriedades do primeiro feature no console
-      if (geojson.features && geojson.features.length) {
-        console.log('[Portau] GeoJSON carregado — propriedades do 1º feature:', geojson.features[0].properties);
-      }
-
-      // Detecta automaticamente qual campo contém o nome do distrito
-      const CAMPOS_NOME = ['ds_nome','NM_DIST','NOME','Nome','nome','Name','name','DS_NOME'];
-      const primeiroProps = geojson.features[0]?.properties || {};
-      const campoNome = CAMPOS_NOME.find(c => primeiroProps[c] !== undefined) || CAMPOS_NOME[0];
-      console.log('[Portau] Campo de nome detectado:', campoNome, '— valor exemplo:', primeiroProps[campoNome]);
-
-      function getNome(props) { return props[campoNome] || ''; }
-
-      const znKeys = new Set(Object.keys(SUBPREFEITURAS).map(normalizar));
-      const features = geojson.features.filter(f => znKeys.has(normalizar(getNome(f.properties))));
-
-      if (!features.length) {
-        const exemplos = geojson.features.slice(0, 5).map(f => getNome(f.properties)).join(', ');
-        wrap.innerHTML = `<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Nenhum distrito da Zona Norte encontrado.<br><small>Campo: <b>${campoNome}</b> — Exemplos no GeoJSON: ${exemplos}</small></div>`;
-        return;
-      }
-
-      wrap.innerHTML = '';
-      const W = wrap.clientWidth || 640;
-      const H = Math.round(W * 0.72);
-
-      const svg = d3.select(wrap).append('svg')
-        .attr('viewBox', `0 0 ${W} ${H}`)
-        .attr('width', W).attr('height', H);
-
-      const proj = d3.geoMercator().fitSize([W, H], { type: 'FeatureCollection', features });
-      const path = d3.geoPath().projection(proj);
-      const tooltip = document.getElementById('bairros-tooltip');
-      let selecionado = null;
-
-      svg.selectAll('path')
-        .data(features)
-        .enter().append('path')
-        .attr('d', path)
-        .attr('fill', d => {
-          const k = nomeCanonical(getNome(d.properties));
-          return k ? SUBPREFEITURAS[k].cor : '#ccc';
-        })
-        .attr('stroke', '#fff')
-        .attr('stroke-width', 1.2)
-        .style('cursor', 'pointer')
-        .on('mousemove', function(event, d) {
-          const nome = getNome(d.properties);
-          const k = nomeCanonical(nome);
-          const sub = k ? SUBPREFEITURAS[k].label : '';
-          tooltip.style.opacity = '1';
-          tooltip.style.left = (event.clientX + 14) + 'px';
-          tooltip.style.top  = (event.clientY - 28) + 'px';
-          tooltip.innerHTML = `<strong>${nome}</strong>${sub ? '<br><span style="font-weight:400;opacity:0.75">' + sub + '</span>' : ''}`;
-        })
-        .on('mouseleave', function() {
-          tooltip.style.opacity = '0';
-        })
-        .on('click', function(event, d) {
-          const nome = getNome(d.properties);
-          const k = nomeCanonical(nome);
-          if (!k) return;
-
-          if (selecionado) {
-            d3.select(selecionado)
-              .attr('stroke', '#fff').attr('stroke-width', 1.2)
-              .attr('fill', dd => {
-                const kk = nomeCanonical(getNome(dd.properties));
-                return kk ? SUBPREFEITURAS[kk].cor : '#ccc';
-              });
-          }
-          selecionado = this;
-          d3.select(this)
-            .attr('stroke', '#1A1A1A').attr('stroke-width', 2.5)
-            .attr('fill', d3.color(SUBPREFEITURAS[k].cor).darker(0.4));
-
-          document.getElementById('bairros-info-titulo').textContent = nome;
-          document.getElementById('bairros-info-sub').textContent = SUBPREFEITURAS[k].label;
-          const bairros = BAIRROS[k] || [];
-          document.getElementById('bairros-info-pills').innerHTML =
-            bairros.map(b => `<span class="bairros-pill">${b}</span>`).join('');
-          const info = document.getElementById('bairros-info');
-          info.style.borderLeft = `4px solid ${SUBPREFEITURAS[k].cor}`;
-          info.classList.add('visivel');
-        });
-
-      // Labels de texto nos centroides dos distritos
-      svg.selectAll('text')
-        .data(features)
-        .enter().append('text')
-        .attr('x', d => path.centroid(d)[0])
-        .attr('y', d => path.centroid(d)[1])
-        .attr('text-anchor', 'middle')
-        .attr('dominant-baseline', 'central')
-        .attr('pointer-events', 'none')
-        .style('font-family', 'Inter, sans-serif')
-        .style('font-size', '9px')
-        .style('font-weight', '700')
-        .style('fill', '#fff')
-        .style('text-shadow', '0 1px 2px rgba(0,0,0,0.6)')
-        .each(function(d) {
-          const k = nomeCanonical(getNome(d.properties));
-          const nomeCompleto = k || getNome(d.properties);
-          const palavras = nomeCompleto.split(' ');
-          const el = d3.select(this);
-          // Quebra em até 2 linhas para caber no polígono
-          if (palavras.length <= 2) {
-            el.append('tspan').text(nomeCompleto);
-          } else {
-            const meio = Math.ceil(palavras.length / 2);
-            el.append('tspan')
-              .attr('x', path.centroid(d)[0])
-              .attr('dy', '-0.55em')
-              .text(palavras.slice(0, meio).join(' '));
-            el.append('tspan')
-              .attr('x', path.centroid(d)[0])
-              .attr('dy', '1.1em')
-              .text(palavras.slice(meio).join(' '));
-          }
-        });
-
-    } // fim processarGeoJSON
-
-    tentarURL(0);
-  }
-
-  window.abrirBairros = function() {
-    document.getElementById('bairros-overlay').classList.add('aberto');
-    document.getElementById('bairros-info').classList.remove('visivel');
-    setTimeout(carregarMapa, 50);
-  };
-  window.fecharBairros = function() {
-    document.getElementById('bairros-overlay').classList.remove('aberto');
-  };
-})();
-</script>
   
 <script>
 // Reordenação fim de semana: sexta(5), sábado(6), domingo(0)
