@@ -1552,9 +1552,21 @@ function desenharMapaBairros(geo, bairrosPorDistrito){
 
   const projection = d3.geoMercator().fitExtent([[8,8],[width-8,height-8]], geo);
   const geoPathGen = d3.geoPath(projection);
+  const fontSize = Math.max(8, Math.min(13, width / 50));
 
   const svg = d3.select(wrap).append('svg').attr('viewBox', `0 0 ${width} ${height}`);
   const tooltip = document.getElementById('bairros-tooltip');
+
+  let pathSelecionado = null;
+
+  function selecionarDistrito(elemento, props){
+    if (pathSelecionado && pathSelecionado !== elemento) {
+      d3.select(pathSelecionado).attr('stroke-width', 1.2).attr('stroke', '#fff').attr('fill-opacity', 0.72);
+    }
+    pathSelecionado = elemento;
+    d3.select(elemento).attr('stroke-width', 3).attr('stroke', '#222').attr('fill-opacity', 1);
+    mostrarInfoDistrito(props, bairrosPorDistrito);
+  }
 
   svg.selectAll('path')
     .data(geo.features)
@@ -1565,22 +1577,35 @@ function desenharMapaBairros(geo, bairrosPorDistrito){
       .attr('stroke', '#fff')
       .attr('stroke-width', 1.2)
       .style('cursor', 'pointer')
+      .style('pointer-events', 'auto')
       .on('mousemove', function(event, d){
         tooltip.textContent = d.properties.nome;
         tooltip.style.left = (event.clientX + 14) + 'px';
         tooltip.style.top  = (event.clientY + 10) + 'px';
         tooltip.style.opacity = 1;
-        d3.select(this).attr('fill-opacity', 1);
+        if (this !== pathSelecionado) d3.select(this).attr('fill-opacity', 1);
       })
       .on('mouseleave', function(){
         tooltip.style.opacity = 0;
-        d3.select(this).attr('fill-opacity', 0.72);
+        if (this !== pathSelecionado) d3.select(this).attr('fill-opacity', 0.72);
       })
       .on('click', function(event, d){
-        svg.selectAll('path').attr('stroke-width', 1.2).attr('stroke', '#fff');
-        d3.select(this).attr('stroke-width', 3).attr('stroke', '#222');
-        mostrarInfoDistrito(d.properties, bairrosPorDistrito);
+        selecionarDistrito(this, d.properties);
       });
+
+  svg.selectAll('text.distrito-label')
+    .data(geo.features)
+    .join('text')
+      .attr('class', 'distrito-label')
+      .attr('x', d => geoPathGen.centroid(d)[0])
+      .attr('y', d => geoPathGen.centroid(d)[1])
+      .attr('text-anchor', 'middle')
+      .attr('dominant-baseline', 'middle')
+      .attr('font-size', fontSize)
+      .attr('font-weight', 600)
+      .attr('fill', '#fff')
+      .style('pointer-events', 'none')
+      .text(d => d.properties.nome);
 }
 
 function mostrarInfoDistrito(props, bairrosPorDistrito){
