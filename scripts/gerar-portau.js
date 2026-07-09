@@ -401,7 +401,14 @@ async function main() {
   const dataCurta = editorial.data_curta || dateLabel;
   const dataDisplay = editorial.data_display || dataPorExtenso;
   console.log('[Portau] JSON recebido. Aplicando substituições cirúrgicas...');
-
+console.log(`[Portau] Notícias: ${editorial.noticias?.length || 0}`);
+console.log(`[Portau] Agenda: ${editorial.agenda?.length || 0}`);
+console.log(`[Portau] Vagas: ${editorial.vagas?.length || 0}`);
+console.log(`[Portau] Política: ${editorial.politica?.length || 0}`);
+console.log(`[Portau] Alertas: ${editorial.alertas?.length || 0}`);
+console.log(`[Portau] Fim de semana: ${editorial.fim_de_semana?.length || 0}`);
+console.log(`[Portau] Distritos cobertos: ${[...new Set(editorial.noticias?.map(n => n.bairro))].join(', ')}`);
+  
   // Atualiza <title>
   html = html.replace(
     /<title>.*?<\/title>/,
