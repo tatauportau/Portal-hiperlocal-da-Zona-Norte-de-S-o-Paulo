@@ -565,8 +565,11 @@
   }
   .bairros-info-titulo { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; margin-bottom: 4px; }
   .bairros-info-sub { font-size: 11px; color: var(--cinza-m); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+  .bairros-search { width: 100%; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--cinza-l); margin-bottom: 10px; font-size: 13px; font-family: 'Inter', sans-serif; box-sizing: border-box; outline: none; }
+  .bairros-search:focus { border-color: var(--verde); }
   .bairros-pills { display: flex; flex-wrap: wrap; gap: 6px; }
   .bairros-pill { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #fff; border: 1px solid var(--cinza-l); color: var(--cinza-q); }
+  .bairros-vazio { font-size: 12px; color: var(--cinza-m); display: none; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
@@ -1499,7 +1502,9 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
       <div class="bairros-info" id="bairros-info">
         <div class="bairros-info-titulo" id="bairros-info-titulo">Selecione um distrito</div>
         <div class="bairros-info-sub" id="bairros-info-sub">Clique no mapa ao lado</div>
+        <input class="bairros-search" id="bairros-search" type="text" placeholder="Buscar bairro..." oninput="filtrarBairros()">
         <div class="bairros-pills" id="bairros-pills"></div>
+        <div class="bairros-vazio" id="bairros-vazio">Nenhum bairro encontrado</div>
       </div>
     </div>
     <div class="bairros-tooltip" id="bairros-tooltip"></div>
@@ -1616,16 +1621,35 @@ function desenharMapaBairros(geo, bairrosPorDistrito){
       .text(d => d.properties.nome);
 }
 
+function semAcento(s) {
+  return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+
+function filtrarBairros() {
+  const q = semAcento(document.getElementById('bairros-search').value);
+  const pills = document.querySelectorAll('#bairros-pills .bairros-pill');
+  let visiveis = 0;
+  pills.forEach(p => {
+    const match = !q || semAcento(p.textContent).includes(q);
+    p.style.display = match ? '' : 'none';
+    if (match) visiveis++;
+  });
+  document.getElementById('bairros-vazio').style.display = (q && visiveis === 0) ? 'block' : 'none';
+}
+
 function mostrarInfoDistrito(props, bairrosPorDistrito){
-  const info   = document.getElementById('bairros-info');
   const titulo = document.getElementById('bairros-info-titulo');
   const sub    = document.getElementById('bairros-info-sub');
   const pills  = document.getElementById('bairros-pills');
+  const search = document.getElementById('bairros-search');
+  const vazio  = document.getElementById('bairros-vazio');
 
-  const lista = bairrosPorDistrito[props.id] || [];
+  const lista = (bairrosPorDistrito[props.id] || []).slice().sort((a, b) => a.localeCompare(b, 'pt-BR'));
   titulo.textContent = props.nome;
   sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
   pills.innerHTML = lista.map(b => `<span class="bairros-pill">${b}</span>`).join('');
+  search.value = '';
+  vazio.style.display = 'none';
 }
 </script>
 
