@@ -158,8 +158,8 @@ Para "tag_categoria" use: "tag-seg" (segurança/saúde), "tag-edu" (educação/z
 Para "icone_classe" use: "ic-seg", "ic-edu", "ic-mob", "ic-eco".
 Para "tipo" de alerta use: "ok" (positivo), "info" (informativo), "neutro" (neutro/obras).
 Para "tag_bairro" use o formato "📍 " seguido do mesmo valor usado em "bairro".
-Inclua ao menos 4 notícias (1 destaque + 3 normais), 3 agenda, 4 vagas, 2 política, 3 alertas.
-Inclua exatamente 3 dicas de eventos reais para o fim de semana mais próximo na Zona Norte em "fim_de_semana".`;
+Inclua ao menos 8 notícias (1 destaque + 7 normais), 5 agenda, 4 vagas, 3 política, 4 alertas. Quanto mais notícias reais encontrar, melhor — não limite a quantidade.
+Inclua exatamente 6 dicas de eventos reais para o fim de semana mais próximo na Zona Norte em "fim_de_semana".`;
 
 const USER_PROMPT = `Hoje é ${dataPorExtenso} (${dateLabel}). Busque notícias reais da Zona Norte de São Paulo e retorne SOMENTE o objeto JSON, sem nenhum texto antes ou depois.`;
 
