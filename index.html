@@ -533,10 +533,13 @@
   .bairros-overlay.aberto { display: flex; }
   .bairros-painel {
     background: #fff; border-radius: 16px; padding: 1.5rem;
-    width: 700px; max-width: 95vw; max-height: 90vh;
+    width: 900px; max-width: 95vw; max-height: 90vh;
     overflow-y: auto; position: relative;
     box-shadow: 0 24px 64px rgba(0,0,0,0.35);
     animation: gaEntrar 0.22s ease;
+  }
+  .bairros-corpo {
+    display: grid; grid-template-columns: 60% 40%; gap: 1rem; align-items: start;
   }
   .bairros-fechar {
     position: absolute; top: 14px; right: 14px;
@@ -556,11 +559,10 @@
     pointer-events: none; opacity: 0; transition: opacity 0.15s; z-index: 1100;
     font-family: 'Inter', sans-serif;
   }
-  .bairros-info {
-    margin-top: 1rem; padding: 1rem; background: #f8f3e8;
-    border-radius: 12px; display: none;
+  .bairros-corpo .bairros-info {
+    padding: 1rem; background: #f8f3e8;
+    border-radius: 12px; display: block; min-height: 200px;
   }
-  .bairros-info.visivel { display: block; }
   .bairros-info-titulo { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; margin-bottom: 4px; }
   .bairros-info-sub { font-size: 11px; color: var(--cinza-m); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
   .bairros-pills { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -1492,13 +1494,15 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
     <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
     <div class="bairros-titulo">🗺️ Bairros da Zona Norte</div>
     <div class="bairros-sub">Clique num distrito para ver os bairros</div>
-    <div id="bairros-svg-wrap"></div>
-    <div class="bairros-tooltip" id="bairros-tooltip"></div>
-    <div class="bairros-info" id="bairros-info">
-      <div class="bairros-info-titulo" id="bairros-info-titulo"></div>
-      <div class="bairros-info-sub" id="bairros-info-sub"></div>
-      <div class="bairros-pills" id="bairros-pills"></div>
+    <div class="bairros-corpo">
+      <div id="bairros-svg-wrap"></div>
+      <div class="bairros-info" id="bairros-info">
+        <div class="bairros-info-titulo" id="bairros-info-titulo">Selecione um distrito</div>
+        <div class="bairros-info-sub" id="bairros-info-sub">Clique no mapa ao lado</div>
+        <div class="bairros-pills" id="bairros-pills"></div>
+      </div>
     </div>
+    <div class="bairros-tooltip" id="bairros-tooltip"></div>
   </div>
 </div>
 
@@ -1511,6 +1515,10 @@ let _bairrosPorDistrito = null;
 
 function abrirBairros(){
   document.getElementById('bairros-overlay').classList.add('aberto');
+  document.getElementById('bairros-info-titulo').textContent = 'Selecione um distrito';
+  document.getElementById('bairros-info-sub').textContent = 'Clique no mapa ao lado';
+  document.getElementById('bairros-pills').innerHTML = '';
+  document.getElementById('bairros-info').style.borderLeft = '';
   if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
 }
 function fecharBairros(){
@@ -1618,7 +1626,6 @@ function mostrarInfoDistrito(props, bairrosPorDistrito){
   titulo.textContent = props.nome;
   sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
   pills.innerHTML = lista.map(b => `<span class="bairros-pill">${b}</span>`).join('');
-  info.classList.add('visivel');
 }
 </script>
 
