@@ -533,10 +533,13 @@
   .bairros-overlay.aberto { display: flex; }
   .bairros-painel {
     background: #fff; border-radius: 16px; padding: 1.5rem;
-    width: 700px; max-width: 95vw; max-height: 90vh;
+    width: 900px; max-width: 95vw; max-height: 90vh;
     overflow-y: auto; position: relative;
     box-shadow: 0 24px 64px rgba(0,0,0,0.35);
     animation: gaEntrar 0.22s ease;
+  }
+  .bairros-corpo {
+    display: grid; grid-template-columns: 60% 40%; gap: 1rem; align-items: start;
   }
   .bairros-fechar {
     position: absolute; top: 14px; right: 14px;
@@ -557,10 +560,9 @@
     font-family: 'Inter', sans-serif;
   }
   .bairros-info {
-    margin-top: 1rem; padding: 1rem; background: #f8f3e8;
-    border-radius: 12px; display: none;
+    padding: 1rem; background: #f8f3e8;
+    border-radius: 12px; display: block; height: 100%;
   }
-  .bairros-info.visivel { display: block; }
   .bairros-info-titulo { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; margin-bottom: 4px; }
   .bairros-info-sub { font-size: 11px; color: var(--cinza-m); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
   .bairros-pills { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -1723,13 +1725,15 @@ window.addEventListener('keydown', function(e) {
     <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
     <div class="bairros-titulo">Zona Norte de São Paulo</div>
     <div class="bairros-sub">Clique num distrito para ver os bairros</div>
-    <div id="bairros-svg-wrap"></div>
-    <div class="bairros-tooltip" id="bairros-tooltip"></div>
-    <div class="bairros-info" id="bairros-info">
-      <div class="bairros-info-titulo" id="bairros-info-titulo"></div>
-      <div class="bairros-info-sub" id="bairros-info-sub"></div>
-      <div class="bairros-pills" id="bairros-info-pills"></div>
+    <div class="bairros-corpo">
+      <div id="bairros-svg-wrap"></div>
+      <div class="bairros-info" id="bairros-info">
+        <div class="bairros-info-titulo" id="bairros-info-titulo">Selecione um distrito</div>
+        <div class="bairros-info-sub" id="bairros-info-sub">Clique no mapa</div>
+        <div class="bairros-pills" id="bairros-info-pills"></div>
+      </div>
     </div>
+    <div class="bairros-tooltip" id="bairros-tooltip"></div>
   </div>
 </div>
 
@@ -1909,7 +1913,6 @@ function carregarMapa() {
             bairros.map(b => `<span class="bairros-pill">${b}</span>`).join('');
           const info = document.getElementById('bairros-info');
           info.style.borderLeft = `4px solid ${SUBPREFEITURAS[k].cor}`;
-          info.classList.add('visivel');
         });
 
       // Labels de texto nos centroides dos distritos
@@ -1954,7 +1957,10 @@ function carregarMapa() {
 
   window.abrirBairros = function() {
     document.getElementById('bairros-overlay').classList.add('aberto');
-    document.getElementById('bairros-info').classList.remove('visivel');
+    document.getElementById('bairros-info-titulo').textContent = 'Selecione um distrito';
+    document.getElementById('bairros-info-sub').textContent = 'Clique no mapa';
+    document.getElementById('bairros-info-pills').innerHTML = '';
+    document.getElementById('bairros-info').style.borderLeft = '';
     setTimeout(carregarMapa, 50);
   };
   window.fecharBairros = function() {
