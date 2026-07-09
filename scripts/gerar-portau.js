@@ -364,7 +364,7 @@ async function main() {
     },
     body: JSON.stringify({
       model: 'claude-sonnet-4-6',
-      max_tokens: 8000,
+      max_tokens: 16000,
       tools: [{ type: 'web_search_20250305', name: 'web_search' }],
       system: SYSTEM_PROMPT,
       messages: [{ role: 'user', content: USER_PROMPT }],
