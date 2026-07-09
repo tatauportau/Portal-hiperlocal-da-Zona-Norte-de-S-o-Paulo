@@ -2,7 +2,7 @@ name: Portau Diario
 
 on:
   schedule:
-    - cron: "0 9 * * *"
+    - cron: "15 11 * * *"
   workflow_dispatch:
 
 jobs:

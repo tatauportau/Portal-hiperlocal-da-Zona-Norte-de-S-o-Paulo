@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portau — Edição do Dia · 30/06/2026</title>
+<title>Portau — Edição do Dia · 08/07/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TD0G4J8CR"></script>
@@ -35,7 +35,7 @@
   .hero p{color:rgba(255,255,255,0.65);font-size:14px;}
   .hero-stats{display:grid;grid-template-columns:repeat(4,minmax(90px,1fr));gap:10px;min-width:420px;}
   .hero-stat{text-align:center;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 20px;display:flex;flex-direction:column;align-items:center;gap:8px;}
-  
+
   .hero-stat-label{font-size:11px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.08em;}
   .ancora-bar{background:var(--branco);border-bottom:1px solid var(--cinza-l);padding:0 24px;position:sticky;top:64px;z-index:90;}
   .ancora-inner{max-width:1160px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;}
@@ -108,7 +108,7 @@
   .cla-nome{font-size:13px;font-weight:600;margin-bottom:3px;}
   .cla-detalhe{font-size:12px;color:var(--cinza-m);}
   .cla-preco{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:var(--verde);white-space:nowrap;}
-  
+
   /* SIDEBAR */
   .sb-card{background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;overflow:hidden;margin-bottom:18px;}
   .sb-header{padding:14px 18px;border-bottom:1px solid var(--cinza-l);font-family:'Syne',sans-serif;font-size:13px;font-weight:800;}
@@ -310,7 +310,7 @@
   }
 
 
-  
+
 
   /* BARRINHA DO CARRINHO */
   .carro-bar {
@@ -533,13 +533,10 @@
   .bairros-overlay.aberto { display: flex; }
   .bairros-painel {
     background: #fff; border-radius: 16px; padding: 1.5rem;
-    width: 900px; max-width: 95vw; max-height: 90vh;
+    width: 700px; max-width: 95vw; max-height: 90vh;
     overflow-y: auto; position: relative;
     box-shadow: 0 24px 64px rgba(0,0,0,0.35);
     animation: gaEntrar 0.22s ease;
-  }
-  .bairros-corpo {
-    display: grid; grid-template-columns: 60% 40%; gap: 1rem; align-items: start;
   }
   .bairros-fechar {
     position: absolute; top: 14px; right: 14px;
@@ -560,9 +557,10 @@
     font-family: 'Inter', sans-serif;
   }
   .bairros-info {
-    padding: 1rem; background: #f8f3e8;
-    border-radius: 12px; display: block; height: 100%;
+    margin-top: 1rem; padding: 1rem; background: #f8f3e8;
+    border-radius: 12px; display: none;
   }
+  .bairros-info.visivel { display: block; }
   .bairros-info-titulo { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; margin-bottom: 4px; }
   .bairros-info-sub { font-size: 11px; color: var(--cinza-m); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
   .bairros-pills { display: flex; flex-wrap: wrap; gap: 6px; }
@@ -649,7 +647,7 @@ setInterval(carregarTicker, 900000);
 
 <div class="topbar">
   <span>📍 Zona Norte de São Paulo</span>
-  <strong>Terça-feira, 30 de junho de 2026 · Edição completa do dia</strong>
+ <strong>Quarta-feira, 8 de julho de 2026 · Gerado às 13:53</strong>
 </div>
 
 
@@ -767,7 +765,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="hero">
   <div class="hero-inner">
     <div>
-      <h1>Zona Norte, 30 de junho</h1>
+     <h1>Zona Norte, 8 de julho <span style="font-size:0.5em; opacity:0.7; font-weight:400">· 13:53</span></h1>
     </div>
     <div class="hero-stats">
       <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
@@ -797,92 +795,100 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="feed">
 
       <!-- NOTÍCIAS -->
-        <div class="secao" id="noticias">
+                                <div class="secao" id="noticias">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-not"></span>Notícias</div>
       <span class="secao-count">6 hoje</span>
     </div>
 
-    <div class="card-noticia destaque" data-bairro="Vila Medeiros">
+    <div class="card-noticia destaque" data-bairro="Vila Medeiros" data-distrito="VILA MEDEIROS">
       <div class="destaque-pill">🚨 Alerta de Saúde</div>
       <div class="card-tags">
         <span class="tag tag-seg">Saúde</span>
         <span class="tag-bairro">📍 Vila Medeiros</span>
       </div>
-      <div class="card-titulo">Sarampo na Zona Norte: 3 casos confirmados em Vila Medeiros e vacinação é ampliada para bebês de 6 meses</div>
-      <div class="card-resumo">A confirmação de três casos de sarampo no distrito de Vila Medeiros levou a Prefeitura de São Paulo a ampliar a vacinação para crianças entre 6 meses e 11 meses e 29 dias. O Ministério da Saúde enviou cerca de 100 mil doses para SP e Guarulhos. Duas das crianças frequentavam a mesma creche. Todos os pacientes evoluíram para cura, mas a vigilância epidemiológica segue em varredura no distrito. A vacinação ocorre nas UBSs de segunda a sábado, das 7h às 19h.</div>
+      <div class="card-titulo">Sarampo na Vila Medeiros: três casos confirmados e SP amplia vacinação para bebês</div>
+      <div class="card-resumo">Três casos de sarampo foram confirmados no distrito de Vila Medeiros, na Zona Norte, levando a Prefeitura de São Paulo a ampliar a vacinação para bebês entre 6 meses e 11 meses e 29 dias. A operação de varredura vacinal segue em todo o distrito. Os três pacientes já evoluíram para cura, mas as autoridades reforçam o alerta para atualização da carteirinha nas UBSs, das 7h às 19h.</div>
       <div class="card-footer">
-        <div class="card-meta"><span>Prefeitura de SP / Ministério da Saúde / Diário Zona Norte</span><span class="dot3"></span><span>Hoje, 08h00</span></div>
+        <div class="card-meta"><span>Diário Zona Norte / Prefeitura de SP</span><span class="dot3"></span><span>Hoje, 08h00</span></div>
         <span class="card-link">Leia mais →</span>
       </div>
     </div>
 
-    <a class="card-noticia" href="https://www.diariozonanorte.com.br/apos-cinco-anos-corredor-da-av-imirim-deve-ser-entregue-em-julho-de-2026-o-custo-por-quilometro-e-de-r-205-milhoes/" target="_blank" data-bairro="Mandaqui">
-      <div class="card-icone ic-mob">🚌</div>
+    <a class="card-noticia" href="https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/" target="_blank" data-bairro="Freguesia do Ó" data-distrito="FREGUESIA DO Ó">
+      <div class="card-icone ic-mob">🚇</div>
       <div>
-        <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Mandaqui</span></div>
-        <div class="card-titulo">Corredor de ônibus da Av. Imirim: obras no 5º ano com custo de R$ 102,6 mi e entrega prevista para julho</div>
-        <div class="card-resumo">As obras de modernização do corredor exclusivo de ônibus da Avenida Imirim, com 4,6 km de extensão entre a Av. Deputado Emílio Carlos e a Alameda Afonso Schmidt, acumulam mais um adiamento. A entrega, agora prevista para julho de 2026, deve beneficiar 112 mil pessoas por dia com mais agilidade, acessibilidade e enterramento de fiação. Moradores e comerciantes convivem há cinco anos com os transtornos das intervenções.</div>
+        <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Freguesia do Ó</span></div>
+        <div class="card-titulo">Linha 6-Laranja do Metrô inaugura estações na Zona Norte com acesso gratuito</div>
+        <div class="card-resumo">As primeiras seis estações da Linha 6-Laranja entraram em operação assistida em 2 de julho, incluindo a estação Freguesia do Ó — a única diretamente na Zona Norte neste primeiro trecho. O serviço funciona das 10h às 15h, de segunda a sexta, com acesso gratuito. Ainda em 2026, as estações Brasilândia e Itaberaba-Hospital Vila Penteado devem ser inauguradas, completando a chegada do metrô ao coração da Zona Norte.</div>
         <div class="card-footer">
-          <div class="card-meta"><span>Diário Zona Norte / SP Obras</span><span class="dot3"></span><span>Hoje, 09h30</span></div>
+          <div class="card-meta"><span>Diário do Transporte / Metrópoles</span><span class="dot3"></span><span>Hoje, 09h00</span></div>
           <span class="card-link">Leia mais →</span>
         </div>
       </div>
     </a>
 
-    <a class="card-noticia" href="https://www.semanariozonanorte.com.br/" target="_blank" data-bairro="Vila Guilherme">
-      <div class="card-icone ic-seg">🔒</div>
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/parada-inglesa-ganha-praca-renovada-com-esportes-lazer-e-mais-seguranca-para-moradores/" target="_blank" data-bairro="Parada Inglesa" data-distrito="TUCURUVI">
+      <div class="card-icone ic-edu">🌳</div>
       <div>
-        <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Vila Guilherme</span></div>
-        <div class="card-titulo">5º BPM/M prende pai e filho em flagrante por roubo na Zona Norte</div>
-        <div class="card-resumo">O 5º Batalhão de Polícia Militar Metropolitano (5º BPM/M), responsável pelo policiamento da Zona Norte da capital, efetuou a prisão em flagrante de pai e filho envolvidos em roubo na região. A ocorrência reforça o trabalho ostensivo do batalhão nos distritos da Zona Norte. Os índices estaduais de roubo atingiram o menor nível histórico em 2026, com queda de 24% no primeiro bimestre em relação ao mesmo período de 2025.</div>
+        <div class="card-tags"><span class="tag tag-edu">Zeladoria</span><span class="tag-bairro">📍 Parada Inglesa</span></div>
+        <div class="card-titulo">Praça Nossa Senhora dos Prazeres é reinaugurada com quadras, pista de skate e espaço pet</div>
+        <div class="card-resumo">A Praça Nossa Senhora dos Prazeres, na Parada Inglesa, ao lado da estação de metrô, foi reinaugurada após obras de requalificação com investimento de aproximadamente R$ 974 mil. O espaço ganhou quadra de basquete 3x3, quadra de beach tennis, pista de skate reformada, playground, espaço pet e área de convivência com deck de madeira. A segurança foi reforçada com dois pontos do programa Smart Sampa.</div>
         <div class="card-footer">
-          <div class="card-meta"><span>Semanário Zona Norte / SSP-SP</span><span class="dot3"></span><span>Hoje, 10h45</span></div>
+          <div class="card-meta"><span>Diário Zona Norte / Universo ZN</span><span class="dot3"></span><span>Hoje, 10h30</span></div>
           <span class="card-link">Leia mais →</span>
         </div>
       </div>
     </a>
 
-    <a class="card-noticia" href="https://www.artesp.sp.gov.br/artesp/noticias/100-dias-rodoanel" target="_blank" data-bairro="Jaraguá">
-      <div class="card-icone ic-mob">🛣️</div>
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/" target="_blank" data-bairro="Santana" data-distrito="SANTANA">
+      <div class="card-icone ic-seg">🏥</div>
       <div>
-        <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Jaraguá</span></div>
-        <div class="card-titulo">Rodoanel Norte Trecho 2: obras avançam rumo à Av. Raimundo Pereira de Magalhães com entrega prevista para 2º semestre</div>
-        <div class="card-resumo">As obras do Trecho 2 do Rodoanel Norte Mário Covas seguem em execução com mais de 60% de avanço, conectando a Rodovia Fernão Dias à Avenida Raimundo Pereira de Magalhães, em Jaraguá. A entrega integral está prevista para o segundo semestre de 2026. O primeiro trecho, inaugurado em dezembro de 2025, já registra 100 dias de operação sem acidentes fatais e retirou cerca de 15 mil veículos pesados por dia das marginais da capital.</div>
+        <div class="card-tags"><span class="tag tag-not">Desenvolvimento</span><span class="tag-bairro">📍 Santana</span></div>
+        <div class="card-titulo">Hospital de R$ 600 milhões da Rede Mater Dei vai transformar paisagem de Santana</div>
+        <div class="card-resumo">A construção do novo hospital da Rede Mater Dei, com investimento superior a R$ 600 milhões, promete revolucionar o atendimento médico em Santana e impulsionar a economia local com centenas de vagas temporárias durante a obra e postos permanentes após a inauguração. O empreendimento chega em momento de forte valorização imobiliária na região, em meio às novas restrições de altura impostas pelo aeroporto Campo de Marte.</div>
         <div class="card-footer">
-          <div class="card-meta"><span>ARTESP / Agência SP / Diário Zona Norte</span><span class="dot3"></span><span>Hoje, 11h00</span></div>
+          <div class="card-meta"><span>Diário Zona Norte / Encontra Santana</span><span class="dot3"></span><span>Hoje, 11h00</span></div>
           <span class="card-link">Leia mais →</span>
         </div>
       </div>
     </a>
 
-    <a class="card-noticia" href="https://prefeitura.sp.gov.br/web/obras/w/com-8-piscin%C3%B5es-em-constru%C3%A7%C3%A3o-e-outros-6-entregues-gest%C3%A3o-prioriza-combate-%C3%A0s-enchentes-em-todas-as-regi%C3%B5es-da-cidade" target="_blank" data-bairro="Brasilândia">
-      <div class="card-icone ic-edu">💧</div>
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/armazem-solidario-da-brasilandia-oferece-alimentos-com-ate-50-de-desconto-saiba-quem-pode-comprar-la/" target="_blank" data-bairro="Brasilândia" data-distrito="BRASILÂNDIA">
+      <div class="card-icone ic-eco">🛒</div>
       <div>
-        <div class="card-tags"><span class="tag tag-edu">Zeladoria</span><span class="tag-bairro">📍 Brasilândia</span></div>
-        <div class="card-titulo">Piscinão do Carumbé avança para conter enchentes históricas na Brasilândia</div>
-        <div class="card-resumo">A Prefeitura de São Paulo confirma andamento das obras do piscinão do Carumbé, na Brasilândia, que promete aliviar as cheias que há décadas atingem o distrito. A iniciativa integra o pacote de R$ 8,4 bilhões investidos em drenagem pela atual gestão. Na região de Perus, onde três reservatórios foram entregues entre 2024 e 2025, os pontos de alagamento caíram 86,7%, de 15 para apenas 2 ocorrências registradas em 2025.</div>
+        <div class="card-tags"><span class="tag tag-not">Economia</span><span class="tag-bairro">📍 Brasilândia</span></div>
+        <div class="card-titulo">Armazém Solidário da Brasilândia completa 2 anos com 196 mil atendimentos e 3 milhões de itens vendidos</div>
+        <div class="card-resumo">O Armazém Solidário da Brasilândia, na Estrada do Sabão, 806, completa dois anos com mais de 196 mil pessoas atendidas e 3 milhões de produtos vendidos com desconto de 30% a 50% em relação ao comércio convencional. Exclusivo para famílias inscritas no CadÚnico, o espaço funciona de terça a sábado, das 9h às 18h, e é referência de segurança alimentar na Zona Norte.</div>
         <div class="card-footer">
-          <div class="card-meta"><span>Prefeitura de São Paulo / SMSO</span><span class="dot3"></span><span>Hoje, 14h00</span></div>
+          <div class="card-meta"><span>Diário Zona Norte / Prefeitura de SP</span><span class="dot3"></span><span>Hoje, 12h00</span></div>
           <span class="card-link">Leia mais →</span>
         </div>
       </div>
     </a>
 
-    <a class="card-noticia" href="https://prefeitura.sp.gov.br/w/prefeitura-presente-pirituba-jaragua" target="_blank" data-bairro="Pirituba">
-      <div class="card-icone ic-mob">🏗️</div>
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/urbia-vai-devolver-concessao-do-horto-florestal-e-parque-da-cantareira-governo-do-estado-de-sao-paulo-prepara-nova-licitacao/" target="_blank" data-bairro="Horto Florestal" data-distrito="TREMEMBÉ">
+      <div class="card-icone ic-edu">🌿</div>
       <div>
-        <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Pirituba</span></div>
-        <div class="card-titulo">Ligação viária Pirituba-Lapa tem obras retomadas com investimento de R$ 209,5 milhões</div>
-        <div class="card-resumo">A retomada das obras da ligação viária Pirituba-Lapa foi confirmada pelo prefeito Ricardo Nunes durante visita à região. Com prazo de execução previsto para dezembro de 2026 e investimento municipal de R$ 209,5 milhões, a obra atende reivindicação histórica de mais de 40 anos dos moradores de Pirituba. As construções estavam suspensas pela Justiça desde abril de 2020 e foram retomadas após decisão judicial favorável à Prefeitura.</div>
+        <div class="card-tags"><span class="tag tag-edu">Meio Ambiente</span><span class="tag-bairro">📍 Horto Florestal</span></div>
+        <div class="card-titulo">Urbia devolve concessão do Horto Florestal e Parque da Cantareira; Estado prepara nova licitação</div>
+        <div class="card-resumo">A concessionária Urbia comunicou a desistência da concessão do Parque Estadual da Cantareira e do Horto Florestal, ambos na Zona Norte de São Paulo. A decisão foi publicada no Diário Oficial e os dois parques foram reincluídos no Programa de Parcerias de Investimentos do Estado. A Urbia permanece responsável pela gestão durante o período de transição, garantindo a continuidade dos serviços aos visitantes.</div>
         <div class="card-footer">
-          <div class="card-meta"><span>Prefeitura de São Paulo</span><span class="dot3"></span><span>Hoje, 15h30</span></div>
+          <div class="card-meta"><span>Diário Zona Norte / G1</span><span class="dot3"></span><span>Hoje, 14h00</span></div>
           <span class="card-link">Leia mais →</span>
         </div>
       </div>
     </a>
   </div>
 
+    <!-- AGENDA -->
+    <!-- AGENDA -->
+    <!-- AGENDA -->
+    <!-- AGENDA -->
+    <!-- AGENDA -->
+    <!-- AGENDA -->
+    <!-- AGENDA -->
+    <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
@@ -890,46 +896,49 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   <div class="secao" id="agenda">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
-      <span class="secao-count">4 eventos</span>
+      <span class="secao-count">3 eventos</span>
     </div>
 
-    <a class="card-evento" href="https://searadionaotoca.blogspot.com/2026/06/dre-pirituba-jaraguaconvocacao-para.html" target="_blank" data-bairro="Pirituba">
-      <div class="evento-data" style="background:#1565C0;"><span class="evento-dia">30</span><span class="evento-mes">Jun</span></div>
-      <div>
-        <div class="evento-titulo">Programa Recreio nas Férias – Credenciamento de Educadores (DRE Pirituba/Jaraguá)</div>
-        <div class="evento-info"><span>⏰ 17h00 às 19h00</span><span>📍 DRE Pirituba/Jaraguá – Rua Aurélia, 996, Vila Romana</span><span>Atribuição de vagas remanescentes para Coordenadores de Polo, Agentes de Recreação e Oficineiros para o programa Recreio nas Férias – edição julho/2026. Vagas nos CEUs Pêra Marmelo, CEU Perus, CEU Taipas e outros 13 polos da DRE.</span></div>
-        <span class="evento-valor valor-gratis">Gratuito</span>
-      </div>
-    </a>
-
-    <a class="card-evento" href="https://www.diariozonanorte.com.br/" target="_blank" data-bairro="Santana">
+    <a class="card-evento" href="https://saopauloparacriancas.com.br/mundo-do-circo-sp/" target="_blank" data-bairro="Carandiru" data-distrito="VILA GUILHERME">
       <div class="evento-data" style="background:#E65100;"><span class="evento-dia">10</span><span class="evento-mes">Jul</span></div>
       <div>
-        <div class="evento-titulo">Festival do Japão 2026 – Gastronomia, cultura pop e shows</div>
-        <div class="evento-info"><span>⏰ Das 10h às 22h (10 a 12/07)</span><span>📍 Pavilhão de Exposições do Anhembi – Santana</span><span>A 29ª edição do Festival do Japão reúne gastronomia das 47 províncias japonesas, shows de Yumi Matsuzawa, cultura pop, ancestralidade e oficinas culturais. Expectativa de receber mais de 200 mil visitantes ao longo dos três dias de evento.</span></div>
-        <span class="evento-valor valor-pago">A confirmar</span>
-      </div>
-    </a>
-
-    <a class="card-evento" href="https://www.campanhadoagasalho.sp.gov.br/" target="_blank" data-bairro="Perus">
-      <div class="evento-data" style="background:#2E7D32;"><span class="evento-dia">30</span><span class="evento-mes">Jun</span></div>
-      <div>
-        <div class="evento-titulo">Campanha do Agasalho 2026 – Último dia de arrecadação nas estações CPTM</div>
-        <div class="evento-info"><span>⏰ Das 6h às 22h</span><span>📍 Estações CPTM Perus, Jaraguá e Pirituba</span><span>Hoje é o último dia da fase de arrecadação nas estações de transporte público. Doe agasalhos, cobertores, meias e calçados em bom estado nas estações CPTM da Zona Norte. A campanha do Fundo Social de SP já arrecadou R$ 1,5 milhão em doações financeiras em 2026.</span></div>
+        <div class="evento-titulo">Mundo do Circo SP — Espetáculos gratuitos no Parque da Juventude</div>
+        <div class="evento-info"><span>⏰ A partir das 14h (retirar ingresso 1h antes)</span><span>📍 Parque da Juventude, Av. Cruzeiro do Sul, 2630 — Carandiru</span><span>O Parque da Juventude, na Zona Norte, recebe espetáculos circenses gratuitos com o Circo Moscou Internacional e outras atrações. Programação para todas as idades, com classificação livre. Acesso pela estação Carandiru (Linha 1-Azul).</span></div>
         <span class="evento-valor valor-gratis">Gratuito</span>
       </div>
     </a>
 
-    <a class="card-evento" href="https://searadionaotoca.blogspot.com/2026/06/dre-pirituba-jaraguaconvocacao-para.html" target="_blank" data-bairro="Jaçanã">
-      <div class="evento-data" style="background:#6A1B9A;"><span class="evento-dia">01</span><span class="evento-mes">Jul</span></div>
+    <a class="card-evento" href="https://www.sescsp.org.br/unidades/santana/" target="_blank" data-bairro="Parada Inglesa" data-distrito="TUCURUVI">
+      <div class="evento-data" style="background:#1565C0;"><span class="evento-dia">11</span><span class="evento-mes">Jul</span></div>
       <div>
-        <div class="evento-titulo">Recreio nas Férias 2026 – CEU Parque Anhanguera e polos da Zona Norte</div>
-        <div class="evento-info"><span>⏰ Das 8h às 17h</span><span>📍 CEU Parque Anhanguera e demais CEUs da Zona Norte</span><span>Início do programa Recreio nas Férias – julho/2026, com atividades sensoriais, oficinas de artes, esportes, capoeira, dança e cultura hip-hop para crianças e jovens nos 16 polos da DRE Pirituba/Jaraguá. Programação gratuita durante todo o mês de julho.</span></div>
+        <div class="evento-titulo">Férias no Sesc Santana — Fábrica de Brinquedos e Oficinas para a Família</div>
+        <div class="evento-info"><span>⏰ Diversos horários (confirmar no site)</span><span>📍 Sesc Santana, Av. Luiz Dumont Villares, 579 — Parada Inglesa</span><span>Durante as férias de julho, o Sesc Santana oferece programação gratuita com o espetáculo circense Fábrica de Brinquedos, oficinas culturais, atividades esportivas e de lazer para crianças e famílias. Classificação livre.</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://www.infraestruturameioambiente.sp.gov.br/institutoflorestal/" target="_blank" data-bairro="Horto Florestal" data-distrito="TREMEMBÉ">
+      <div class="evento-data" style="background:#2E7D32;"><span class="evento-dia">12</span><span class="evento-mes">Jul</span></div>
+      <div>
+        <div class="evento-titulo">Visita ao Horto Florestal — Trilhas e Área Verde no Coração da Zona Norte</div>
+        <div class="evento-info"><span>⏰ Terça a domingo, das 6h às 18h</span><span>📍 Parque Estadual Alberto Löfgren (Horto Florestal), R. do Horto, 931 — Tremembé</span><span>Aproveite as férias escolares para conhecer o Horto Florestal, um dos mais importantes parques estaduais da Zona Norte, com trilhas, área de piquenique, viveiro de mudas e rica biodiversidade de Mata Atlântica. Entrada gratuita.</span></div>
         <span class="evento-valor valor-gratis">Gratuito</span>
       </div>
     </a>
   </div>
 
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
+    <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
@@ -940,47 +949,59 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <span class="secao-count">4 vagas</span>
     </div>
 
-    <div class="card-vaga" data-bairro="Santana">
-      <div class="vaga-icone">💼</div>
+    <div class="card-vaga" data-bairro="Santana" data-distrito="SANTANA">
+      <div class="vaga-icone">🛡️</div>
       <div style="flex:1">
-        <div class="vaga-titulo">Assistente de Atendimento</div>
-        <div class="vaga-info"><span>🏢 Adobe Brasil</span><span>📍 Santana</span><span>Ensino médio completo, boa comunicação, conhecimento básico em informática</span></div>
+        <div class="vaga-titulo">Agente de Segurança Patrimonial</div>
+        <div class="vaga-info"><span>🏢 Empresa de Segurança (Zona Norte SP)</span><span>📍 Santana</span><span>Ensino Médio completo, curso de vigilante (SESVESP), experiência em segurança patrimonial. CNH B desejável.</span></div>
         <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
       </div>
-      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">GuiaZN.net · 20 dias</div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Catho / Indeed · 2 dias</div>
     </div>
 
-    <div class="card-vaga" data-bairro="Tucuruvi">
-      <div class="vaga-icone">🏪</div>
+    <div class="card-vaga" data-bairro="Mandaqui" data-distrito="MANDAQUI">
+      <div class="vaga-icone">🏥</div>
       <div style="flex:1">
-        <div class="vaga-titulo">Vendedor(a) de Colchões</div>
-        <div class="vaga-info"><span>🏢 Sleep House</span><span>📍 Tucuruvi</span><span>Experiência em vendas no varejo, ensino médio completo, proatividade</span></div>
+        <div class="vaga-titulo">Técnico(a) de Enfermagem</div>
+        <div class="vaga-info"><span>🏢 Hospital da Zona Norte SP</span><span>📍 Mandaqui</span><span>Técnico de Enfermagem com COREN ativo, experiência em UTI ou Pronto-Socorro. Disponibilidade para turnos.</span></div>
         <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
       </div>
-      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">GuiaZN.net · 25 dias</div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Vagas.com / Indeed · 1 dia</div>
     </div>
 
-    <div class="card-vaga" data-bairro="Santana">
-      <div class="vaga-icone">🏢</div>
+    <div class="card-vaga" data-bairro="Tucuruvi" data-distrito="TUCURUVI">
+      <div class="vaga-icone">🚌</div>
       <div style="flex:1">
-        <div class="vaga-titulo">Auxiliar Administrativo Jr.</div>
-        <div class="vaga-info"><span>🏢 Empresa de Tecnologia</span><span>📍 Santana</span><span>Ensino médio completo, Excel e Word básico, boa comunicação e organização. Presencial próximo ao metrô.</span></div>
+        <div class="vaga-titulo">Motorista de Ônibus Urbano</div>
+        <div class="vaga-info"><span>🏢 Empresa de Transporte Coletivo SP</span><span>📍 Tucuruvi</span><span>CNH categoria D, curso Mopp, experiência mínima de 1 ano como motorista de ônibus. Disponibilidade para escala.</span></div>
         <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
       </div>
-      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Jooble.org · 15 dias</div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">InfoJobs / Catho · 3 dias</div>
     </div>
 
-    <div class="card-vaga" data-bairro="Casa Verde">
-      <div class="vaga-icone">🔧</div>
+    <div class="card-vaga" data-bairro="Vila Guilherme" data-distrito="VILA GUILHERME">
+      <div class="vaga-icone">🍕</div>
       <div style="flex:1">
-        <div class="vaga-titulo">Assistente de Compras</div>
-        <div class="vaga-info"><span>🏢 ETC Terra Construtora</span><span>📍 Casa Verde</span><span>Experiência em compras ou suprimentos, conhecimento em ERP, ensino superior em andamento ou completo</span></div>
+        <div class="vaga-titulo">Operador(a) de Caixa / Atendente</div>
+        <div class="vaga-info"><span>🏢 Rede de Alimentação (Zona Norte)</span><span>📍 Vila Guilherme</span><span>Ensino Médio completo, experiência em atendimento ao cliente ou caixa. Disponibilidade para fins de semana.</span></div>
         <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
       </div>
-      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Indeed.com.br · 12 dias</div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">LinkedIn / Catho · Hoje</div>
     </div>
   </div>
 
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
+    <!-- POLÍTICA -->
     <!-- POLÍTICA -->
     <!-- POLÍTICA -->
     <!-- POLÍTICA -->
@@ -991,27 +1012,39 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <span class="secao-count">2 itens</span>
     </div>
 
-    <div class="card-pol" data-bairro="Mandaqui">
-      <div class="pol-orgao">🏙️ Prefeitura de São Paulo</div>
-      <div class="pol-titulo">Subprefeitura Santana/Tucuruvi/Mandaqui será pioneira na implantação do AR Digital em SP</div>
-      <div class="pol-impacto">A iniciativa vai facilitar o acesso a serviços, melhorar a comunicação com os cerca de 324 mil moradores dos três distritos e tornar os atendimentos mais rápidos e eficientes. Será a primeira subprefeitura da cidade a adotar o sistema de Atendimento Regional Digital.</div>
+    <div class="card-pol" data-bairro="Brasilândia" data-distrito="BRASILÂNDIA">
+      <div class="pol-orgao">🚇 Governo do Estado de SP</div>
+      <div class="pol-titulo">Estações Brasilândia e Itaberaba da Linha 6-Laranja previstas para 2026</div>
+      <div class="pol-impacto">Com a inauguração do primeiro trecho (João Paulo I–Perdizes), o Governo do Estado prevê ainda para este ano a abertura das estações Brasilândia e Itaberaba-Hospital Vila Penteado, ambas na Zona Norte. Quando concluída, a linha reduzirá o tempo de viagem entre a Brasilândia e o centro de 1h30 para apenas 23 minutos.</div>
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-        <span class="pol-status">Em implantação</span>
-        <span style="font-size:12px;color:var(--cinza-m);">Prefeitura de São Paulo – sampanews.sp.gov.br</span>
+        <span class="pol-status">Em andamento</span>
+        <span style="font-size:12px;color:var(--cinza-m);">Diário do Estado de SP / Metrópoles</span>
       </div>
     </div>
 
-    <div class="card-pol" data-bairro="Jaraguá">
-      <div class="pol-orgao">🏛️ Governo do Estado de SP</div>
-      <div class="pol-titulo">Rodoanel Norte Trecho 2: conclusão prevista para setembro de 2026 com ligação até a Av. Raimundo Pereira de Magalhães</div>
-      <div class="pol-impacto">O trecho final de 20 km, que atravessa São Paulo, Guarulhos e Arujá, quando concluído permitirá o fechamento do anel viário de 176 km ao redor da capital e a retirada de até 18 mil caminhões das marginais. Investimento total de R$ 3,4 bilhões.</div>
+    <div class="card-pol" data-bairro="Vila Medeiros" data-distrito="VILA MEDEIROS">
+      <div class="pol-orgao">🏛️ Prefeitura de São Paulo</div>
+      <div class="pol-titulo">Prefeitura amplia vacinação contra sarampo após casos confirmados na Zona Norte</div>
+      <div class="pol-impacto">Após confirmação de três casos de sarampo no distrito de Vila Medeiros, a Prefeitura de São Paulo passou a oferecer a 'dose zero' da vacina tríplice viral para bebês de 6 a 11 meses. Operação de varredura vacinal está em curso em todo o distrito, com vacinação de segunda a sábado nas UBSs, das 7h às 19h.</div>
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-        <span class="pol-status">Em obras – mais de 60% concluído</span>
-        <span style="font-size:12px;color:var(--cinza-m);">ARTESP / Agência SP</span>
+        <span class="pol-status">Em execução</span>
+        <span style="font-size:12px;color:var(--cinza-m);">Prefeitura de SP / Ministério da Saúde</span>
       </div>
     </div>
   </div>
 
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
+    <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
@@ -1025,27 +1058,27 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <div class="alerta info">
       <div style="font-size:24px;flex-shrink:0;">🦠</div>
       <div>
-        <div class="alerta-titulo">Alerta de Sarampo – Vila Medeiros</div>
-        <div class="alerta-desc">Três casos confirmados no distrito. Vacinação ampliada para bebês de 6 a 11 meses nas UBSs de SP. Procure a unidade de saúde mais próxima pelo app Busca Saúde. Campanha segue até agosto.</div>
-        <div class="alerta-meta">Saúde Pública</div>
-      </div>
-    </div>
-
-    <div class="alerta neutro">
-      <div style="font-size:24px;flex-shrink:0;">🚧</div>
-      <div>
-        <div class="alerta-titulo">Obras na Av. Imirim – Mandaqui/Imirim</div>
-        <div class="alerta-desc">Corredor de ônibus com entrega prevista para julho de 2026. Motoristas e passageiros devem contar com alterações no trânsito e pontos de ônibus provisórios ao longo dos 4,6 km de obras entre a Av. Dep. Emílio Carlos e a Al. Afonso Schmidt.</div>
-        <div class="alerta-meta">Mobilidade Urbana</div>
+        <div class="alerta-titulo">Alerta de Sarampo — Zona Norte</div>
+        <div class="alerta-desc">Três casos confirmados em Vila Medeiros. Vacine bebês de 6 a 11 meses nas UBSs (7h–19h). Todos os casos evoluíram para cura, mas a vigilância continua ativa.</div>
+        <div class="alerta-meta">Procure sua UBS mais próxima em: buscasaude.prefeitura.sp.gov.br</div>
       </div>
     </div>
 
     <div class="alerta ok">
-      <div style="font-size:24px;flex-shrink:0;">🧥</div>
+      <div style="font-size:24px;flex-shrink:0;">🚇</div>
       <div>
-        <div class="alerta-titulo">Campanha do Agasalho 2026 – doe nas estações CPTM</div>
-        <div class="alerta-desc">Último dia de coleta nas estações Perus, Jaraguá e Pirituba da CPTM. A campanha do Fundo Social de SP conta com mais de 900 pontos de arrecadação no estado. Aceita roupas, cobertores, meias e calçados em bom estado. Doações via PIX: doacoesfussp@sp.gov.br.</div>
-        <div class="alerta-meta">Solidariedade</div>
+        <div class="alerta-titulo">Metrô Linha 6-Laranja — Acesso Gratuito</div>
+        <div class="alerta-desc">Estação Freguesia do Ó aberta em operação assistida das 10h às 15h (seg.–sex.). Acesso gratuito durante o período de testes. Aproveite!</div>
+        <div class="alerta-meta">Estação mais próxima da Zona Norte: Freguesia do Ó</div>
+      </div>
+    </div>
+
+    <div class="alerta neutro">
+      <div style="font-size:24px;flex-shrink:0;">🌳</div>
+      <div>
+        <div class="alerta-titulo">Horto Florestal e Cantareira sem mudanças imediatas</div>
+        <div class="alerta-desc">A Urbia devolveu a concessão dos parques ao Estado, mas segue administrando durante a transição. Visitantes não devem perceber alterações nos serviços por enquanto.</div>
+        <div class="alerta-meta">Nova licitação está sendo preparada pelo Governo do Estado de SP</div>
       </div>
     </div>
   </div>
@@ -1093,16 +1126,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   <!-- SIDEBAR  <!-- SIDEBAR
 
 <!-- SIDEBAR -->
-<aside class="sidebar">
-        <div class="resumo-box">
-    <div class="resumo-titulo">📋 Edição de hoje · 30/06</div>
-    <div class="resumo-linha"><span>📰 Notícias</span><span class="resumo-n">6</span></div>
-    <div class="resumo-linha"><span>🗓️ Eventos</span><span class="resumo-n">4</span></div>
-    <div class="resumo-linha"><span>💼 Vagas</span><span class="resumo-n">4</span></div>
-    <div class="resumo-linha"><span>🏛️ Política</span><span class="resumo-n">2</span></div>
-    <div class="resumo-linha"><span>⚠️ Alertas</span><span class="resumo-n">3</span></div>
-    <div class="resumo-linha"><span>🛒 Classificados</span><span class="resumo-n">6</span></div>
-  </div>
+
 
   <div class="sb-card">
     <div class="sb-header">✅ Situação agora</div>
@@ -1120,12 +1144,22 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <div class="sb-item"><div class="sb-num">1</div><div><div class="sb-titulo">Parada Inglesa</div><div class="sb-sub">Obras Rua Inglesa</div></div></div>
   </div>
 
-  <div class="sb-card">
+  <div class="sb-card" id="fim-de-semana-card" data-fds="true" data-fds="true">
     <div class="sb-header">🎉 Este fim de semana</div>
-    <div class="sb-item"><div style="font-size:20px;">🎵</div><div><div class="sb-titulo">Silvero Pereira / Belchior</div><div class="sb-sub">26–28/06 · 20h · Sesc Santana</div></div></div>
-    <div class="sb-item"><div style="font-size:20px;">🎭</div><div><div class="sb-titulo">Catimba — Cia. Teatral</div><div class="sb-sub">27/06 · 16h · Gratuito</div></div></div>
-    <div class="sb-item"><div style="font-size:20px;">⚽</div><div><div class="sb-titulo">Futebol das Ancestrais</div><div class="sb-sub">28/06 · 14h · Gratuito</div></div></div>
-  </div>
+    <div class="sb-item">
+      <div style="font-size:20px;">🌳</div>
+      <div><div class="sb-titulo">Lazer no Parque da Juventude — Férias de Julho</div><div class="sb-sub">05 e 06/07 · 08h às 18h · Parque da Juventude, Santana · Gratuito</div></div>
+    </div>
+    <div class="sb-item">
+      <div style="font-size:20px;">🚇</div>
+      <div><div class="sb-titulo">Passeio gratuito na nova Linha 6-Laranja do Metrô</div><div class="sb-sub">05/07 (seg–sex) · 10h às 15h · Estação Freguesia do Ó até Perdizes · Gratuito (fase assistida)</div></div>
+    </div>
+    <div class="sb-item">
+      <div style="font-size:20px;">🛒</div>
+      <div><div class="sb-titulo">Armazém Solidário Brasilândia — Feira e Compras com desconto</div><div class="sb-sub">Ter a Sáb · 09h às 18h · Estrada do Sabão, 806 – Brasilândia · Para inscritos no CadÚnico</div></div>
+    </div>
+  </div></div>
+</div>
 
   <div style="background:var(--verde);border-radius:14px;padding:18px;color:var(--branco);text-align:center;">
     <div style="font-size:22px;margin-bottom:8px;">📬</div>
@@ -1452,76 +1486,146 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
 </div>
 
 
+<!-- MODAL BAIRROS -->
+<div class="bairros-overlay" id="bairros-overlay" onclick="if(event.target===this)fecharBairros()">
+  <div class="bairros-painel">
+    <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
+    <div class="bairros-titulo">🗺️ Bairros da Zona Norte</div>
+    <div class="bairros-sub">Clique num distrito para ver os bairros</div>
+    <div id="bairros-svg-wrap"></div>
+    <div class="bairros-tooltip" id="bairros-tooltip"></div>
+    <div class="bairros-info" id="bairros-info">
+      <div class="bairros-info-titulo" id="bairros-info-titulo"></div>
+      <div class="bairros-info-sub" id="bairros-info-sub"></div>
+      <div class="bairros-pills" id="bairros-pills"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+// ── MAPA DE BAIRROS (D3.js + GeoJSON oficial GeoSampa/Prefeitura-SP) ──
+let _bairrosCarregado = false;
+let _geoDistritosZN = null;
+let _bairrosPorDistrito = null;
+
+function abrirBairros(){
+  document.getElementById('bairros-overlay').classList.add('aberto');
+  if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
+}
+function fecharBairros(){
+  document.getElementById('bairros-overlay').classList.remove('aberto');
+}
+
+async function carregarMapaBairros(){
+  const wrap = document.getElementById('bairros-svg-wrap');
+  wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#999;font-size:13px;">Carregando mapa...</div>';
+  try {
+    const [geo, bairros] = await Promise.all([
+      fetch('./data/distritos-zona-norte.geojson').then(r => r.json()),
+      fetch('./data/bairros-por-distrito.json').then(r => r.json())
+    ]);
+    _geoDistritosZN = geo;
+    _bairrosPorDistrito = bairros;
+    desenharMapaBairros(geo, bairros);
+  } catch (e) {
+    wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#c0392b;font-size:13px;">Não foi possível carregar o mapa dos bairros.</div>';
+    console.error('Erro ao carregar mapa de bairros:', e);
+  }
+}
+
+const CORES_SUBPREF_ZN = {
+  'SANTANA':'#D62828', 'TUCURUVI':'#D62828', 'MANDAQUI':'#D62828',
+  'JAÇANÃ':'#F77F00', 'TREMEMBÉ':'#F77F00',
+  'CASA VERDE':'#FCBF49', 'LIMÃO':'#FCBF49', 'CACHOEIRINHA':'#FCBF49',
+  'FREGUESIA DO Ó':'#06A77D', 'BRASILÂNDIA':'#06A77D',
+  'VILA MARIA':'#3D5A80', 'VILA GUILHERME':'#3D5A80', 'VILA MEDEIROS':'#3D5A80',
+  'PIRITUBA':'#7B2CBF', 'JARAGUÁ':'#7B2CBF', 'SÃO DOMINGOS':'#7B2CBF',
+  'PERUS':'#023047', 'ANHANGUERA':'#023047'
+};
+
+function desenharMapaBairros(geo, bairrosPorDistrito){
+  const wrap = document.getElementById('bairros-svg-wrap');
+  wrap.innerHTML = '';
+  const width  = wrap.clientWidth || 660;
+  const height = Math.round(width * 0.95);
+
+  const projection = d3.geoMercator().fitExtent([[8,8],[width-8,height-8]], geo);
+  const geoPathGen = d3.geoPath(projection);
+  const fontSize = Math.max(8, Math.min(13, width / 50));
+
+  const svg = d3.select(wrap).append('svg').attr('viewBox', `0 0 ${width} ${height}`);
+  const tooltip = document.getElementById('bairros-tooltip');
+
+  let pathSelecionado = null;
+
+  function selecionarDistrito(elemento, props){
+    if (pathSelecionado && pathSelecionado !== elemento) {
+      d3.select(pathSelecionado).attr('stroke-width', 1.2).attr('stroke', '#fff').attr('fill-opacity', 0.72);
+    }
+    pathSelecionado = elemento;
+    d3.select(elemento).attr('stroke-width', 3).attr('stroke', '#222').attr('fill-opacity', 1);
+    mostrarInfoDistrito(props, bairrosPorDistrito);
+  }
+
+  svg.selectAll('path')
+    .data(geo.features)
+    .join('path')
+      .attr('d', geoPathGen)
+      .attr('fill', d => CORES_SUBPREF_ZN[d.properties.id] || '#ccc')
+      .attr('fill-opacity', 0.72)
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 1.2)
+      .style('cursor', 'pointer')
+      .style('pointer-events', 'auto')
+      .on('mousemove', function(event, d){
+        tooltip.textContent = d.properties.nome;
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY + 10) + 'px';
+        tooltip.style.opacity = 1;
+        if (this !== pathSelecionado) d3.select(this).attr('fill-opacity', 1);
+      })
+      .on('mouseleave', function(){
+        tooltip.style.opacity = 0;
+        if (this !== pathSelecionado) d3.select(this).attr('fill-opacity', 0.72);
+      })
+      .on('click', function(event, d){
+        selecionarDistrito(this, d.properties);
+      });
+
+  svg.selectAll('text.distrito-label')
+    .data(geo.features)
+    .join('text')
+      .attr('class', 'distrito-label')
+      .attr('x', d => geoPathGen.centroid(d)[0])
+      .attr('y', d => geoPathGen.centroid(d)[1])
+      .attr('text-anchor', 'middle')
+      .attr('dominant-baseline', 'middle')
+      .attr('font-size', fontSize)
+      .attr('font-weight', 600)
+      .attr('fill', '#fff')
+      .style('pointer-events', 'none')
+      .text(d => d.properties.nome);
+}
+
+function mostrarInfoDistrito(props, bairrosPorDistrito){
+  const info   = document.getElementById('bairros-info');
+  const titulo = document.getElementById('bairros-info-titulo');
+  const sub    = document.getElementById('bairros-info-sub');
+  const pills  = document.getElementById('bairros-pills');
+
+  const lista = bairrosPorDistrito[props.id] || [];
+  titulo.textContent = props.nome;
+  sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
+  pills.innerHTML = lista.map(b => `<span class="bairros-pill">${b}</span>`).join('');
+  info.classList.add('visivel');
+}
+</script>
+
 <script>
 // ── PAINEL ANALYTICS ─────────────────────────────────────────
-const GA_PROPERTY_ID = '399155331';
-const SA_EMAIL = 'portau-analytics@portau-analytics.iam.gserviceaccount.com';
-const SA_KEY = `-----BEGIN PRIVATE KEY-----
-MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDOWfXkyXeJdYTX
-bWcSgVb7rYdSF736qlDSV6HodlpZdYSiKRqqFDSdi+1Xg2QhUpW3AhLV6CKPxeyG
-YhrJVDCDJBi09jsD8LOefxA0zkZQB5wbeKrj2v1618d0V6DJ1duQBzKoq6oOYlnH
-TyfS41ySRU8VQ96BffC012GCkQ8NLb/sEKc68TtAcK9xHY0BzTW0KCvvKySuPfZI
-P6e/mi8B0S+Eue1Owar0uNRjbqnozmm3EfkkH3tdGlFGtcPa9nX+qPg420XP0vFC
-R3GLfChhkuiKuMKJB/IqBgPZQCHQwVCVmbzJnhKrnMEz2vpCKdd8HpJ0u83WX9w2
-HzhTtLINAgMBAAECggEACIITY5UI+DfKZpAst/RxmoaboJS5BmeqVcSQ45hUU6xG
-7+Fjp4/rYXQ+W3rf5d3VWB/eQ0ft0OFsxgJahLg+GHzPBfsXENZbrup3R8NviRI0
-lg9iIGtMQ0SNWpctr9TBAk3BrCGz18xR/lKdsOd4pCahGEky7ezm6qtCFSjs/B02
-nmxjD8a5tUf81lD/APuPuXiNmt9tH93bakWUCHNXQ2zQNNw2PtPzP/Rovp07o6Wc
-Dh0ubfxmp1aX6zmGuKyXjtFOcvR++OOv4Eo0Tj6hR7oZtKyIhJMmKpezK1EMhw9e
-4wWfXNjMcqhAlJgEJ90wM4sBslnGcHsK9O7bFGwmowKBgQD3QERxodcWHTGhWnL6
-/i5/lr+UG7YPCM0P8YrRSxKs3U9hquMzoMWCnoWdBCDXqjisBotFonoxwnHUFXJ3
-574TfUUdE9QFTFyuqBmWE1vlWfX/CzFgfKJ5nD2Eu7EHU/3z/scm/h6ojk/IdKXl
-Hiaqf7Mb6ksiTLkeqCjKkBuHXwKBgQDVpzPKt5zGilXMAtGKc+025LZyBDaaxhyi
-biuwsvVWdWgeD/1eZSDMXsJEzqPV+3RnxZlUOxDFb8f/NQKgdDF2cNLZTdWZmDnr
-AK3LAVx7VXvWvtbNpUn5S/fbX6p/a9SP0kk9mJN8q/FKFDXhSFPzPJHfahLd8jKA
-e108JFYaEwKBgQDhzaO0UyVnYMoOndgcOT6l7zqPPK+ME3GTefhZI8KudH8mpzZP
-1CgNHlDQEREdZKvVDzTqJ3SJNRdXpS6hKteAXQtdftpG7HJIX+TeFlf6oanzfnld
-sPWBMptMOU13b9Ghn7Cpf7LoJO/gFgfbsymE1JLyj4qGjKMTyGdYdzts6QKBgBzy
-JTsuuyfO8CbOrvLyF85bGDjER12av6BmCrdK16BaEbwY8HvMebAWmn1V/a5s/e1d
-QRO/WNtW9KKn3O4+L8FbMcXNHMZNcHNdSS56xbvT7g4/Fr0PysDiwPbQtDnFMyw1
-EkUtGbZHWU5vBIm8EdufdiftqBa3zI3JqO0QAzZPAoGBANJnfOiHOlxDpdN7cI98
-c0De/9Tqoh4Llvco9rp8b0TPPR0H+ui5VCd17cH8+GckH73/LubArPfrbq97qeFW
-Qmmq6oU85kHL4W5CKbUDqXM2WgvvGt3mbvfuC/PVxYUSz4XWmTPB+QbSPR3Ks1nE
-vngpkxHuhoUYqDh9XnvBmQU8
------END PRIVATE KEY-----`;
-
-const flagMap = {
-  'Brazil':'🇧🇷','United States':'🇺🇸','Portugal':'🇵🇹','Argentina':'🇦🇷',
-  'Belgium':'🇧🇪','Germany':'🇩🇪','France':'🇫🇷','United Kingdom':'🇬🇧',
-  'Italy':'🇮🇹','Spain':'🇪🇸','Japan':'🇯🇵','Canada':'🇨🇦','Australia':'🇦🇺',
-  'Mexico':'🇲🇽','Chile':'🇨🇱','Colombia':'🇨🇴','Netherlands':'🇳🇱',
-};
-const pNome = c => c === 'Brazil' ? 'Brasil' : c;
-const flag  = c => flagMap[c] || '🌍';
-
-async function getToken() {
-  const hdr = btoa(JSON.stringify({alg:'RS256',typ:'JWT'})).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
-  const now = Math.floor(Date.now()/1000);
-  const clm = btoa(JSON.stringify({
-    iss:SA_EMAIL, scope:'https://www.googleapis.com/auth/analytics.readonly',
-    aud:'https://oauth2.googleapis.com/token', exp:now+3600, iat:now
-  })).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
-  const unsigned = hdr+'.'+clm;
-  const pem = SA_KEY.replace(/-----BEGIN PRIVATE KEY-----|-----END PRIVATE KEY-----|\n/g,'');
-  const keyData = Uint8Array.from(atob(pem), c=>c.charCodeAt(0));
-  const key = await crypto.subtle.importKey('pkcs8',keyData.buffer,{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['sign']);
-  const sig = await crypto.subtle.sign('RSASSA-PKCS1-v1_5',key,new TextEncoder().encode(unsigned));
-  const sigB64 = btoa(String.fromCharCode(...new Uint8Array(sig))).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
-  const jwt = unsigned+'.'+sigB64;
-  const r = await fetch('https://oauth2.googleapis.com/token',{
-    method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
-    body:`grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`
-  });
-  return (await r.json()).access_token;
-}
-
-async function gaReport(token, body, realtime=false) {
-  const ep = realtime
-    ? `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runRealtimeReport`
-    : `https://analyticsdata.googleapis.com/v1beta/properties/${GA_PROPERTY_ID}:runReport`;
-  const r = await fetch(ep,{method:'POST',headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},body:JSON.stringify(body)});
-  return r.json();
-}
+// Dados carregados via função serverless segura (netlify/functions/analytics.js).
+// Nenhuma credencial fica no cliente.
 
 async function carregarGA() {
   document.getElementById('ga-conteudo').innerHTML = '<div class="ga-loading"><span class="ga-spinner"></span>Carregando...</div>';
@@ -1694,17 +1798,24 @@ const SUB_MAP = {
   pirituba:  ['pirituba','jaraguá','são domingos'],
   perus:     ['perus','anhanguera'],
 };
+function normalizarTexto(s) {
+  return (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+}
 document.querySelectorAll('.sub-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('ativo'));
     btn.classList.add('ativo');
     const sub = btn.dataset.sub;
     const filtrar = sub !== 'todas';
-    const distritos = filtrar ? SUB_MAP[sub] : [];
+    const distritos = filtrar ? SUB_MAP[sub].map(normalizarTexto) : [];
     document.querySelectorAll('[data-bairro]').forEach(card => {
       if (!filtrar) { card.style.display = ''; return; }
-      const bairro = (card.dataset.bairro || '').toLowerCase();
-      card.style.display = distritos.some(d => bairro.includes(d)) ? '' : 'none';
+      const distritoCard = normalizarTexto(card.dataset.distrito || '');
+      const bairroCard = normalizarTexto(card.dataset.bairro || '');
+      const bate = distritoCard
+        ? distritos.includes(distritoCard)
+        : distritos.some(d => bairroCard.includes(d));
+      card.style.display = bate ? '' : 'none';
     });
   });
 });
@@ -1719,253 +1830,27 @@ window.addEventListener('keydown', function(e) {
 });
 </script>
 
-<!-- MODAL BAIRROS -->
-<div class="bairros-overlay" id="bairros-overlay" onclick="if(event.target===this)fecharBairros()">
-  <div class="bairros-painel">
-    <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
-    <div class="bairros-titulo">Zona Norte de São Paulo</div>
-    <div class="bairros-sub">Clique num distrito para ver os bairros</div>
-    <div class="bairros-corpo">
-      <div id="bairros-svg-wrap"></div>
-      <div class="bairros-info" id="bairros-info">
-        <div class="bairros-info-titulo" id="bairros-info-titulo">Selecione um distrito</div>
-        <div class="bairros-info-sub" id="bairros-info-sub">Clique no mapa</div>
-        <div class="bairros-pills" id="bairros-info-pills"></div>
-      </div>
-    </div>
-    <div class="bairros-tooltip" id="bairros-tooltip"></div>
-  </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 <script>
+// Reordenação fim de semana: sexta(5), sábado(6), domingo(0)
 (function() {
-  const GEOJSON_URLS = [
-    'https://cdn.jsdelivr.net/gh/codigourbano/distritos-sp/distritos-sp.geojson',
-    'https://cdn.jsdelivr.net/gh/codigourbano/distritos-sp@master/distritos-sp.geojson',
-  ];
-
-  const SUBPREFEITURAS = {
-    'SANTANA':         { label: 'Santana/Tucuruvi', cor: '#1D9E75' },
-    'TUCURUVI':        { label: 'Santana/Tucuruvi', cor: '#1D9E75' },
-    'MANDAQUI':        { label: 'Santana/Tucuruvi', cor: '#1D9E75' },
-    'CASA VERDE':      { label: 'Casa Verde/Limão',  cor: '#5DCAA5' },
-    'LIMÃO':           { label: 'Casa Verde/Limão',  cor: '#5DCAA5' },
-    'CACHOEIRINHA':    { label: 'Casa Verde/Limão',  cor: '#5DCAA5' },
-    'VILA MARIA':      { label: 'Vila Maria/Guilherme', cor: '#378ADD' },
-    'VILA GUILHERME':  { label: 'Vila Maria/Guilherme', cor: '#378ADD' },
-    'VILA MEDEIROS':   { label: 'Vila Maria/Guilherme', cor: '#378ADD' },
-    'JAÇANÃ':          { label: 'Jaçanã/Tremembé',  cor: '#EF9F27' },
-    'TREMEMBÉ':        { label: 'Jaçanã/Tremembé',  cor: '#EF9F27' },
-    'FREGUESIA DO Ó':  { label: 'Freguesia/Brasilândia', cor: '#D4537E' },
-    'BRASILÂNDIA':     { label: 'Freguesia/Brasilândia', cor: '#D4537E' },
-    'PIRITUBA':        { label: 'Pirituba/Jaraguá',  cor: '#7F77DD' },
-    'JARAGUÁ':         { label: 'Pirituba/Jaraguá',  cor: '#7F77DD' },
-    'SÃO DOMINGOS':    { label: 'Pirituba/Jaraguá',  cor: '#7F77DD' },
-    'PERUS':           { label: 'Perus/Anhanguera',  cor: '#D85A30' },
-    'ANHANGUERA':      { label: 'Perus/Anhanguera',  cor: '#D85A30' },
-  };
-
-  const BAIRROS = {
-    'SANTANA':        ['Santana','Alto de Santana','Parada Inglesa','Jardim São Paulo','Lauzane Paulista'],
-    'TUCURUVI':       ['Tucuruvi','Vila Mazzei','Vila Nova Galvão','Imirim','Parque Edu Chaves'],
-    'MANDAQUI':       ['Mandaqui','Horto Florestal','Vila Gustavo','Jardim Brasil','Carandiru'],
-    'CASA VERDE':     ['Casa Verde','Casa Verde Alta','Casa Verde Média','Jardim São Bento','Piqueri'],
-    'LIMÃO':          ['Limão','Bairro do Limão','Jardim Peri Novo','Vila Ilze'],
-    'CACHOEIRINHA':   ['Cachoeirinha','Vila Nova Cachoeirinha','Jardim Nakamura','Vila Constância'],
-    'VILA MARIA':     ['Vila Maria','Vila Aurora','Parque Novo Mundo'],
-    'VILA GUILHERME': ['Vila Guilherme','Vila Constância','Jardim Leda'],
-    'VILA MEDEIROS':  ['Vila Medeiros','Parque Edu Chaves','Vila Sabrina','Vila Nivi'],
-    'JAÇANÃ':         ['Jaçanã','Jardim Japão','Jardim Peri','Vila Isa'],
-    'TREMEMBÉ':       ['Tremembé','Jardim Tremembé','Chora Menino'],
-    'FREGUESIA DO Ó': ['Freguesia do Ó','Ponte Rasa','Jardim Damasceno'],
-    'BRASILÂNDIA':    ['Brasilândia','Vila Nova Brasilândia','Jardim Tietê','Vila Dionisia'],
-    'PIRITUBA':       ['Pirituba','Vila Jaguara','Jardim Peri Alto'],
-    'JARAGUÁ':        ['Jaraguá','Taipas','Parque Jaraguá','Jardim Líbano'],
-    'SÃO DOMINGOS':   ['São Domingos','Jardim São Domingos','Vila Minas Gerais'],
-    'PERUS':          ['Perus','Jardim Perus','Sítio do Morro','Colônia Japonesa'],
-    'ANHANGUERA':     ['Anhanguera','Parque Anhanguera','Jardim Anhanguera'],
-  };
-
-  let mapaCarregado = false;
-
-  function normalizar(s) {
-    return (s || '').toUpperCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/\s+/g,' ').trim();
-  }
-
-  function nomeCanonical(nome) {
-    const n = normalizar(nome);
-    for (const k of Object.keys(SUBPREFEITURAS)) {
-      if (normalizar(k) === n) return k;
+  const dia = new Date().getDay();
+  const fds = dia === 0 || dia === 5 || dia === 6;
+  const bloco = document.getElementById('fim-de-semana-card');
+  if (fds && bloco) {
+    const feed = document.querySelector('.feed');
+    const noticias = document.getElementById('noticias');
+    if (feed && noticias) {
+      // Clona e estiliza para o feed
+      const clone = bloco.cloneNode(true);
+      clone.id = 'fim-de-semana-feed';
+      clone.style.marginBottom = '44px';
+      clone.style.borderLeft = '4px solid var(--amarelo)';
+      feed.insertBefore(clone, noticias);
+      // Esconde da sidebar
+      bloco.style.display = 'none';
     }
-    return null;
   }
-
-function carregarMapa() {
-    if (mapaCarregado) return;
-    mapaCarregado = true;
-
-    const wrap = document.getElementById('bairros-svg-wrap');
-    wrap.innerHTML = '<div style="text-align:center;padding:2rem;color:#999;font-size:13px;">Carregando mapa…</div>';
-
-    // Tenta cada URL em sequência até uma funcionar
-    function tentarURL(idx) {
-      if (idx >= GEOJSON_URLS.length) {
-        wrap.innerHTML = `<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Não foi possível carregar o GeoJSON após ${GEOJSON_URLS.length} tentativas.</div>`;
-        return;
-      }
-      const url = GEOJSON_URLS[idx];
-      fetch(url)
-        .then(function(r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status + ' — ' + url);
-          return r.json();
-        })
-        .then(function(geojson) { processarGeoJSON(geojson); })
-        .catch(function(err) {
-          console.warn('[Portau] GeoJSON falhou (' + url + '):', err.message);
-          tentarURL(idx + 1);
-        });
-    }
-
-    function processarGeoJSON(geojson) {
-      // Diagnóstico: mostra as propriedades do primeiro feature no console
-      if (geojson.features && geojson.features.length) {
-        console.log('[Portau] GeoJSON carregado — propriedades do 1º feature:', geojson.features[0].properties);
-      }
-
-      // Detecta automaticamente qual campo contém o nome do distrito
-      const CAMPOS_NOME = ['ds_nome','NM_DIST','NOME','Nome','nome','Name','name','DS_NOME'];
-      const primeiroProps = geojson.features[0]?.properties || {};
-      const campoNome = CAMPOS_NOME.find(c => primeiroProps[c] !== undefined) || CAMPOS_NOME[0];
-      console.log('[Portau] Campo de nome detectado:', campoNome, '— valor exemplo:', primeiroProps[campoNome]);
-
-      function getNome(props) { return props[campoNome] || ''; }
-
-      const znKeys = new Set(Object.keys(SUBPREFEITURAS).map(normalizar));
-      const features = geojson.features.filter(f => znKeys.has(normalizar(getNome(f.properties))));
-
-      if (!features.length) {
-        const exemplos = geojson.features.slice(0, 5).map(f => getNome(f.properties)).join(', ');
-        wrap.innerHTML = `<div style="text-align:center;padding:2rem;color:#c00;font-size:13px;">Nenhum distrito da Zona Norte encontrado.<br><small>Campo: <b>${campoNome}</b> — Exemplos no GeoJSON: ${exemplos}</small></div>`;
-        return;
-      }
-
-      wrap.innerHTML = '';
-      const W = wrap.clientWidth || 640;
-      const H = Math.round(W * 0.72);
-
-      const svg = d3.select(wrap).append('svg')
-        .attr('viewBox', `0 0 ${W} ${H}`)
-        .attr('width', W).attr('height', H);
-
-      const proj = d3.geoMercator().fitSize([W, H], { type: 'FeatureCollection', features });
-      const path = d3.geoPath().projection(proj);
-      const tooltip = document.getElementById('bairros-tooltip');
-      let selecionado = null;
-
-      svg.selectAll('path')
-        .data(features)
-        .enter().append('path')
-        .attr('d', path)
-        .attr('fill', d => {
-          const k = nomeCanonical(getNome(d.properties));
-          return k ? SUBPREFEITURAS[k].cor : '#ccc';
-        })
-        .attr('stroke', '#fff')
-        .attr('stroke-width', 1.2)
-        .style('cursor', 'pointer')
-        .on('mousemove', function(event, d) {
-          const nome = getNome(d.properties);
-          const k = nomeCanonical(nome);
-          const sub = k ? SUBPREFEITURAS[k].label : '';
-          tooltip.style.opacity = '1';
-          tooltip.style.left = (event.clientX + 14) + 'px';
-          tooltip.style.top  = (event.clientY - 28) + 'px';
-          tooltip.innerHTML = `<strong>${nome}</strong>${sub ? '<br><span style="font-weight:400;opacity:0.75">' + sub + '</span>' : ''}`;
-        })
-        .on('mouseleave', function() {
-          tooltip.style.opacity = '0';
-        })
-        .on('click', function(event, d) {
-          const nome = getNome(d.properties);
-          const k = nomeCanonical(nome);
-          if (!k) return;
-
-          if (selecionado) {
-            d3.select(selecionado)
-              .attr('stroke', '#fff').attr('stroke-width', 1.2)
-              .attr('fill', dd => {
-                const kk = nomeCanonical(getNome(dd.properties));
-                return kk ? SUBPREFEITURAS[kk].cor : '#ccc';
-              });
-          }
-          selecionado = this;
-          d3.select(this)
-            .attr('stroke', '#1A1A1A').attr('stroke-width', 2.5)
-            .attr('fill', d3.color(SUBPREFEITURAS[k].cor).darker(0.4));
-
-          document.getElementById('bairros-info-titulo').textContent = nome;
-          document.getElementById('bairros-info-sub').textContent = SUBPREFEITURAS[k].label;
-          const bairros = BAIRROS[k] || [];
-          document.getElementById('bairros-info-pills').innerHTML =
-            bairros.map(b => `<span class="bairros-pill">${b}</span>`).join('');
-          const info = document.getElementById('bairros-info');
-          info.style.borderLeft = `4px solid ${SUBPREFEITURAS[k].cor}`;
-        });
-
-      // Labels de texto nos centroides dos distritos
-      svg.selectAll('text')
-        .data(features)
-        .enter().append('text')
-        .attr('x', d => path.centroid(d)[0])
-        .attr('y', d => path.centroid(d)[1])
-        .attr('text-anchor', 'middle')
-        .attr('dominant-baseline', 'central')
-        .attr('pointer-events', 'none')
-        .style('font-family', 'Inter, sans-serif')
-        .style('font-size', '9px')
-        .style('font-weight', '700')
-        .style('fill', '#fff')
-        .style('text-shadow', '0 1px 2px rgba(0,0,0,0.6)')
-        .each(function(d) {
-          const k = nomeCanonical(getNome(d.properties));
-          const nomeCompleto = k || getNome(d.properties);
-          const palavras = nomeCompleto.split(' ');
-          const el = d3.select(this);
-          // Quebra em até 2 linhas para caber no polígono
-          if (palavras.length <= 2) {
-            el.append('tspan').text(nomeCompleto);
-          } else {
-            const meio = Math.ceil(palavras.length / 2);
-            el.append('tspan')
-              .attr('x', path.centroid(d)[0])
-              .attr('dy', '-0.55em')
-              .text(palavras.slice(0, meio).join(' '));
-            el.append('tspan')
-              .attr('x', path.centroid(d)[0])
-              .attr('dy', '1.1em')
-              .text(palavras.slice(meio).join(' '));
-          }
-        });
-
-    } // fim processarGeoJSON
-
-    tentarURL(0);
-  }
-
-  window.abrirBairros = function() {
-    document.getElementById('bairros-overlay').classList.add('aberto');
-    document.getElementById('bairros-info-titulo').textContent = 'Selecione um distrito';
-    document.getElementById('bairros-info-sub').textContent = 'Clique no mapa';
-    document.getElementById('bairros-info-pills').innerHTML = '';
-    document.getElementById('bairros-info').style.borderLeft = '';
-    setTimeout(carregarMapa, 50);
-  };
-  window.fecharBairros = function() {
-    document.getElementById('bairros-overlay').classList.remove('aberto');
-  };
 })();
 </script>
 
