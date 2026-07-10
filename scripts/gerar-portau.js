@@ -312,8 +312,8 @@ function buildAlertas(alertas) {
 }
 
 function buildTickerNoticias(noticias) {
-  const titulos = noticias.map(n => n.titulo).join('|||');
-  return `<div id="portau-ticker-data" style="display:none">${titulos}</div>`;
+  const itens = noticias.map(n => `${n.titulo}::${n.url || '#'}`).join('|||');
+  return `<div id="portau-ticker-data" style="display:none">${itens}</div>`;
 }
 
 function buildFimDeSemana(items) {
