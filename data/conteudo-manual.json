@@ -134,7 +134,7 @@
       "dia": "11",
       "mes": "Jul",
       "cor_fundo": "#2E7D32",
-      "bairro": "Tremembé",
+      "bairro": "Horto Florestal",
       "titulo": "Festival Casa de Alice no Horto Florestal",
       "hora": "10h às 18h",
       "local": "Horto Florestal, Tremembé",
@@ -173,7 +173,7 @@
       "dia": "18",
       "mes": "Jul",
       "cor_fundo": "#2E7D32",
-      "bairro": "Tremembé",
+      "bairro": "Horto Florestal",
       "titulo": "Cinema no Palácio Florestal",
       "hora": "a definir",
       "local": "Horto Florestal, Tremembé",
@@ -212,7 +212,7 @@
       "dia": "25",
       "mes": "Jul",
       "cor_fundo": "#00838F",
-      "bairro": "Jaraguá",
+      "bairro": "Conjunto Residencial Elísio Teixeira Leite",
       "titulo": "\"O Circo da Lua\" na Biblioteca Érico Veríssimo",
       "hora": "14h",
       "local": "Biblioteca Érico Veríssimo, Conjunto Residencial Elísio Teixeira Leite",
@@ -345,7 +345,7 @@
     {
       "emoji": "🎪",
       "titulo": "Festival Casa de Alice no Horto Florestal",
-      "info": "11 e 12/07 · 10h às 18h · Tremembé · Entrada gratuita"
+      "info": "11 e 12/07 · 10h às 18h · Horto Florestal (Tremembé) · Entrada gratuita"
     },
     {
       "emoji": "🧵",
