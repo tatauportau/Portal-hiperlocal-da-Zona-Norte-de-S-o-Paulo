@@ -1,73 +1,305 @@
 {
-  "_instrucoes": "Edite este arquivo com o conteudo do dia e faca commit na branch principal. Depois va em Actions > Portau Diario > Run workflow para publicar. Cada 'bairro' deve ser um bairro ou distrito oficial da Zona Norte (veja data/bairros-por-distrito.json). Se deixar um array vazio ([]), a secao correspondente do site NAO sera alterada (mantem o que ja esta publicado). Duplique os exemplos abaixo para incluir mais itens.",
+  "_instrucoes": "Edite este arquivo com o conteudo do dia e faca commit na branch principal. Depois va em Actions > Portau Diario > Run workflow para publicar. Cada 'bairro' deve ser um bairro ou distrito oficial da Zona Norte (veja data/bairros-por-distrito.json). Se deixar um array vazio ([]), a secao correspondente do site NAO sera alterada (mantem o que ja esta publicado). Duplique os exemplos para incluir mais itens.",
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚨 Alerta de Saude",
+      "pill": "🚇 Mobilidade",
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Linha 6-Laranja começa a operar entre João Paulo I e Perdizes",
+      "resumo": "Seis novas estações — João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes — estão em operação assistida e gratuita das 10h às 15h, de segunda a sexta. O trecho até Brasilândia é esperado para outubro.",
+      "fonte": "Diário do Transporte",
+      "hora": "Operação assistida desde 03/07",
+      "url": "https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/",
+      "icone": "🚇",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-seg",
-      "tag_label": "Seguranca",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Parada Inglesa",
+      "bairro": "Parada Inglesa",
+      "titulo": "Praça Nossa Senhora dos Prazeres é entregue revitalizada na Parada Inglesa",
+      "resumo": "A praça ao lado da estação Parada Inglesa ganhou pista de caminhada recuperada, quadra de beach tennis, quadra 3x3, pista de skate e deck de madeira plástica. Reforma foi entregue pela Subprefeitura Santana/Tucuruvi em 28 de junho.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "28/06",
+      "url": "https://www.diariozonanorte.com.br/parada-inglesa-ganha-praca-renovada-com-esportes-lazer-e-mais-seguranca-para-moradores/",
+      "icone": "🌳",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Saúde",
       "tag_bairro": "📍 Santana",
       "bairro": "Santana",
-      "titulo": "Titulo da noticia em destaque",
-      "resumo": "Resumo curto da noticia.",
-      "fonte": "Nome da fonte",
-      "hora": "Hoje, 09h15",
-      "url": "https://exemplo.com",
-      "icone": "🔒",
+      "titulo": "Mater Dei e Bradesco Seguros vão construir hospital de R$ 600 milhões em Santana",
+      "resumo": "Unidade de alta complexidade terá 250 leitos e deve reforçar comércio local e valorização imobiliária, consolidando Santana como polo de serviços de saúde na Zona Norte.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Esta semana",
+      "url": "https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/",
+      "icone": "🏥",
       "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Tauste Supermercados chega a Santana e gera até 700 empregos",
+      "resumo": "Rede gaúcha inaugura loja na Avenida Braz Leme no segundo semestre, com 51 checkouts e estacionamento coberto gratuito para 662 carros. Mutirão de contratação já foi realizado na Anhanguera-Campus Marte.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Inauguração no 2º semestre",
+      "url": "https://www.diariozonanorte.com.br/gigante-do-varejo-tauste-supermercados-prepara-chegada-ao-bairro-de-santana-e-abre-mutirao-para-preencher-700-vagas/",
+      "icone": "🛒",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "CPTM autoriza obras da nova estação Vila Aurora, entre Perus e Jaraguá",
+      "resumo": "Secretaria de Transportes Metropolitanos deu ordem de serviço no fim de junho. A futura estação da Linha 7-Rubi vai beneficiar moradores de Cidade D'Abril, Jardim Ipanema, Vila Santa Lucrécia e Parque Nações Unidas.",
+      "fonte": "Subprefeitura Pirituba-Jaraguá",
+      "hora": "Fim de junho",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/5570",
+      "icone": "🚆",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Estação Pirituba vai ganhar elevadores e escadas rolantes",
+      "resumo": "Melhorias de acessibilidade fazem parte da PPP do Trem Intercidades, que inclui a requalificação de estações da Linha 7-Rubi.",
+      "fonte": "Metrô CPTM",
+      "hora": "Esta semana",
+      "url": "https://www.metrocptm.com.br/estacao-pirituba-recebera-melhorias-de-acessibilidade/",
+      "icone": "🛗",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Obras na Avenida Raimundo Pereira de Magalhães começam em julho",
+      "resumo": "Intervenções viárias preveem binário de acesso ao Terminal Lapa e nova passagem inferior sob a linha da CPTM, com conclusão prevista para dezembro.",
+      "fonte": "Prefeitura de São Paulo",
+      "hora": "Julho",
+      "url": "https://prefeitura.sp.gov.br/w/obras-da-ligacao-viaria-pirituba-lapa-seguem-em-andamento-em-ambos-os-bairros",
+      "icone": "🚧",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Política",
+      "tag_bairro": "📍 Brasilândia",
+      "bairro": "Brasilândia",
+      "titulo": "Guilherme Corrêa, do Salve Periférico, toma posse como vereador suplente pela Zona Norte",
+      "resumo": "Gestor público e liderança comunitária da Brasilândia assume a cadeira de Silvinho Leite (União), afastado por 31 dias a partir de 6 de julho.",
+      "fonte": "Câmara Municipal de SP",
+      "hora": "06/07",
+      "url": "https://www.saopaulo.sp.leg.br/blog/vereadores-suplentes-tomam-posse-na-camara-municipal-de-sao-paulo-2/",
+      "icone": "🏛️",
+      "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
-      "dia": "10",
+      "dia": "11",
       "mes": "Jul",
-      "cor_fundo": "#E65100",
+      "cor_fundo": "#7B1FA2",
       "bairro": "Vila Maria",
-      "titulo": "Nome do evento",
-      "hora": "19h",
-      "local": "Local do evento",
-      "descricao": "Descricao curta",
+      "titulo": "Show no Galpão Zona Norte",
+      "hora": "14h",
+      "local": "Galpão Zona Norte, Vila Maria Baixa",
+      "descricao": "Abertura dos portões às 14h",
+      "gratuito": false,
+      "preco": "A partir de R$ 30",
+      "url": "#"
+    },
+    {
+      "dia": "12",
+      "mes": "Jul",
+      "cor_fundo": "#00838F",
+      "bairro": "Santana",
+      "titulo": "Programação cultural de domingo no Sesc Santana",
+      "hora": "17h",
+      "local": "Sesc Santana",
+      "descricao": "Entrada gratuita",
       "gratuito": true,
       "preco": null,
-      "url": "https://exemplo.com"
+      "url": "https://www.sescsp.org.br/santana/"
+    },
+    {
+      "dia": "12",
+      "mes": "Jul",
+      "cor_fundo": "#E65100",
+      "bairro": "Imirim",
+      "titulo": "Roda de música na NaRua Bar",
+      "hora": "13h",
+      "local": "NaRua Bar, Imirim",
+      "descricao": "Entrada gratuita até às 15h",
+      "gratuito": true,
+      "preco": null,
+      "url": "#"
+    },
+    {
+      "dia": "12",
+      "mes": "Jul",
+      "cor_fundo": "#C62828",
+      "bairro": "Limão",
+      "titulo": "São João de Nóis Tudim no Centro de Tradições Nordestinas",
+      "hora": "",
+      "local": "CTN, Limão",
+      "descricao": "Forró ao vivo, quadrilha e gastronomia nordestina. Retirada de ingresso gratuito antecipada.",
+      "gratuito": true,
+      "preco": null,
+      "url": "#"
+    },
+    {
+      "dia": "10",
+      "mes": "Jul",
+      "cor_fundo": "#2E7D32",
+      "bairro": "Casa Verde",
+      "titulo": "Recreio nas Férias na rede municipal",
+      "hora": "",
+      "local": "CEIs e EMEIs da Zona Norte",
+      "descricao": "Atividades gratuitas para crianças de 0 a 14 anos durante o recesso escolar (6 a 17/07)",
+      "gratuito": true,
+      "preco": null,
+      "url": "#"
     }
   ],
   "vagas": [
     {
-      "icone": "💼",
-      "titulo": "Cargo",
-      "empresa": "Empresa",
-      "bairro": "Casa Verde",
-      "requisitos": "Requisitos resumidos",
+      "icone": "🛒",
+      "titulo": "Diversas funções (caixa, estoque, padaria, açougue)",
+      "empresa": "Tauste Supermercados",
+      "bairro": "Santana",
+      "requisitos": "Nova loja com 700 vagas previstas",
       "tipo": "CLT",
-      "fonte": "Fonte",
-      "dias_atras": "ha 2 dias"
+      "fonte": "DiárioZonaNorte",
+      "dias_atras": "mutirão recente"
+    },
+    {
+      "icone": "🐾",
+      "titulo": "Vendedor(a) segmento pet",
+      "empresa": "Rede de petshop",
+      "bairro": "Zona Norte",
+      "requisitos": "Contrato efetivo",
+      "tipo": "CLT",
+      "fonte": "Agrobase",
+      "dias_atras": "vaga aberta em 09/07"
+    },
+    {
+      "icone": "🐾",
+      "titulo": "Gerente jr. de loja pet",
+      "empresa": "Rede de petshop",
+      "bairro": "Zona Norte",
+      "requisitos": "Contrato efetivo",
+      "tipo": "CLT",
+      "fonte": "Agrobase",
+      "dias_atras": "vaga aberta em 08/07"
+    },
+    {
+      "icone": "🧪",
+      "titulo": "Técnico(a) de laboratório folguista",
+      "empresa": "Laboratório clínico",
+      "bairro": "Zona Norte",
+      "requisitos": "Contrato efetivo, disponibilidade de escala",
+      "tipo": "CLT",
+      "fonte": "Agrobase",
+      "dias_atras": "vaga aberta em 08/07"
     }
   ],
   "politica": [
     {
-      "orgao": "🚇 Governo do Estado de SP",
-      "bairro": "Freguesia do O",
-      "titulo": "Titulo",
-      "impacto": "Impacto descrito",
-      "status": "Status",
-      "fonte": "Fonte"
+      "orgao": "🏛️ Câmara Municipal de SP",
+      "bairro": "Brasilândia",
+      "titulo": "Vereador suplente Guilherme Corrêa assume cadeira representando a Zona Norte",
+      "impacto": "Liderança comunitária da Brasilândia e fundador do Salve Periférico passa a atuar no mandato de Silvinho Leite durante afastamento de 31 dias.",
+      "status": "Empossado em 06/07",
+      "fonte": "Câmara Municipal de SP"
+    },
+    {
+      "orgao": "🚆 Secretaria de Transportes Metropolitanos",
+      "bairro": "Jaraguá",
+      "titulo": "Ordem de serviço autoriza construção da estação Vila Aurora na Linha 7-Rubi",
+      "impacto": "Nova estação entre Perus e Jaraguá deve melhorar acesso de bairros como Cidade D'Abril e Parque Nações Unidas ao trem.",
+      "status": "Obra autorizada",
+      "fonte": "Subprefeitura Pirituba-Jaraguá"
+    },
+    {
+      "orgao": "🚇 CPTM / Governo do Estado de SP",
+      "bairro": "Pirituba",
+      "titulo": "PPP do Trem Intercidades inclui acessibilidade na Estação Pirituba",
+      "impacto": "Instalação de elevadores e escadas rolantes deve facilitar o acesso de idosos e pessoas com deficiência à Linha 7-Rubi.",
+      "status": "Em andamento",
+      "fonte": "Metrô CPTM"
     }
   ],
   "alertas": [
     {
+      "tipo": "info",
+      "emoji": "🥶",
+      "titulo": "Defesa Civil já decretou atenção para baixas temperaturas em julho",
+      "desc": "Frente fria trouxe queda brusca de temperatura e ventos mais intensos para a capital, com mínimas abaixo de 10°C em alguns pontos.",
+      "meta": "Defesa Civil de SP"
+    },
+    {
       "tipo": "ok",
-      "emoji": "☀️",
-      "titulo": "Titulo do alerta",
-      "desc": "Descricao",
-      "meta": "Meta info"
+      "emoji": "💉",
+      "titulo": "Vacinação contra gripe ampliada para toda a população",
+      "desc": "UBS da Zona Norte estão aplicando a vacina contra influenza sem exigência de grupo prioritário.",
+      "meta": "Secretaria Municipal da Saúde"
+    },
+    {
+      "tipo": "neutro",
+      "emoji": "🏫",
+      "titulo": "Recesso escolar da rede municipal vai até 17 de julho",
+      "desc": "Aulas retomam após o período de férias; Recreio nas Férias segue disponível em CEIs e EMEIs.",
+      "meta": "Secretaria Municipal de Educação"
+    },
+    {
+      "tipo": "ok",
+      "emoji": "🚇",
+      "titulo": "Seis novas estações de metrô em operação na Zona Norte",
+      "desc": "Linha 6-Laranja passou a operar em caráter assistido e gratuito entre João Paulo I e Perdizes, incluindo a estação Freguesia do Ó.",
+      "meta": "Diário do Transporte"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🎵",
-      "titulo": "Nome do evento",
-      "info": "11/07 . 20h . Local . Gratuito"
+      "emoji": "🎶",
+      "titulo": "Show no Galpão Zona Norte",
+      "info": "11/07 · 14h · Vila Maria Baixa · A partir de R$ 30"
+    },
+    {
+      "emoji": "🎭",
+      "titulo": "Programação de domingo no Sesc Santana",
+      "info": "12/07 · 17h · Santana · Gratuito"
+    },
+    {
+      "emoji": "🎤",
+      "titulo": "Roda de música na NaRua Bar",
+      "info": "12/07 · 13h às 15h · Imirim · Gratuito"
+    },
+    {
+      "emoji": "🪗",
+      "titulo": "São João de Nóis Tudim no CTN",
+      "info": "12/07 · Limão · Forró ao vivo · Gratuito (ingresso antecipado)"
     }
   ]
 }
