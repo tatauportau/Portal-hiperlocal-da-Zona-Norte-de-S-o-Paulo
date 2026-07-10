@@ -574,25 +574,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
 <body>
+<div id="portau-ticker-data" style="display:none">Portau · Portal hiperlocal da Zona Norte de São Paulo</div>
+  
+// SUBSTITUA o bloco <script> do ticker no index.html por este:
 
-<!-- TICKER NOTÍCIAS AO VIVO -->
-<div class="ticker-wrap" id="ticker-wrap">
-  <div class="ticker-label">🔴 Zona Norte</div>
-  <div style="overflow:hidden;flex:1;position:relative;">
-    <div class="ticker-track" id="ticker-track">
-      <span class="ticker-loading" id="ticker-loading">Carregando notícias...</span>
-    </div>
-  </div>
-</div>
-
-<script>
-// Feeds RSS da Zona Norte via proxy CORS
 const RSS_FEEDS = [
   'https://api.rss2json.com/v1/api.json?rss_url=https://g1.globo.com/sp/sao-paulo/rss2.xml&count=8',
   'https://api.rss2json.com/v1/api.json?rss_url=https://www.band.uol.com.br/noticias/rss/sao-paulo&count=5',
 ];
 
-// Palavras-chave da Zona Norte
 const KEYWORDS = [
   'zona norte','santana','tucuruvi','jaçanã','tremembé','vila guilherme',
   'casa verde','mandaqui','brasilândia','freguesia do ó','limão','parada inglesa',
@@ -602,8 +592,13 @@ const KEYWORDS = [
 
 async function carregarTicker() {
   try {
-    let noticias = [];
+    // 1. Títulos do dia gerados pelo script (prioridade máxima)
+    const tickerData = document.getElementById('portau-ticker-data');
+    let noticias = tickerData
+      ? tickerData.textContent.split('|||').filter(Boolean)
+      : [];
 
+    // 2. Complementa com RSS filtrado
     for (const url of RSS_FEEDS) {
       try {
         const r = await fetch(url);
@@ -618,7 +613,7 @@ async function carregarTicker() {
       } catch(e) {}
     }
 
-    // Se não encontrou nada filtrado, usa manchetes gerais de SP
+    // 3. Fallback final
     if (noticias.length === 0) {
       noticias = [
         'Zona Norte · Acompanhe as principais notícias da região',
@@ -634,7 +629,6 @@ async function carregarTicker() {
       `<span class="ticker-item">${n}</span>`
     ).join('');
 
-    // Ajusta velocidade baseada no tamanho
     const totalWidth = track.scrollWidth;
     const velocidade = Math.max(30, totalWidth / 80);
     track.style.animationDuration = velocidade + 's';
@@ -646,8 +640,8 @@ async function carregarTicker() {
 }
 
 carregarTicker();
-// Recarrega a cada 15 minutos
 setInterval(carregarTicker, 900000);
+  
 </script>
 
 <div class="topbar">
