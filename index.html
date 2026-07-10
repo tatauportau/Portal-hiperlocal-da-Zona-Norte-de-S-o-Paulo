@@ -640,7 +640,7 @@ async function carregarTicker() {
     ).join('');
 
     const totalWidth = track.scrollWidth;
-    const velocidade = Math.max(15, totalWidth / 200);
+    const velocidade = Math.max(15, totalWidth / 300);
     track.style.animationDuration = velocidade + 's';
 
   } catch(e) {
