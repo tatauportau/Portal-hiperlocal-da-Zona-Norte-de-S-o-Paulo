@@ -309,6 +309,11 @@ function buildAlertas(alertas) {
   return html;
 }
 
+function buildTickerNoticias(noticias) {
+  const titulos = noticias.map(n => n.titulo).join('|||');
+  return `<div id="portau-ticker-data" style="display:none">${titulos}</div>`;
+}
+
 function buildFimDeSemana(items) {
   let html = `  <div class="sb-card" id="fim-de-semana-card">
     <div class="sb-header">🎉 Este fim de semana</div>\n`;
@@ -448,7 +453,13 @@ console.log(`[Portau] Distritos cobertos: ${[...new Set(editorial.noticias?.map(
       buildFimDeSemana(editorial.fim_de_semana)
     );
   }
-
+// Atualiza ticker com títulos das notícias do dia
+  if (editorial.noticias?.length) {
+    html = html.replace(
+      /<div id="portau-ticker-data"[^>]*>[\s\S]*?<\/div>/,
+      buildTickerNoticias(editorial.noticias)
+    );
+  }
   // Marca visibilidade do bloco fim de semana (sexta=5, sábado=6, domingo=0)
   if (ehFimDeSemana) {
     html = html.replace(
