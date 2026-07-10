@@ -3,60 +3,60 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚇 Mobilidade",
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Linha 6-Laranja começa a operar entre João Paulo I e Perdizes",
-      "resumo": "Seis novas estações — João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes — estão em operação assistida e gratuita das 10h às 15h, de segunda a sexta. O trecho até Brasilândia é esperado para outubro.",
-      "fonte": "Diário do Transporte",
-      "hora": "Operação assistida desde 03/07",
-      "url": "https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/",
-      "icone": "🚇",
-      "icone_classe": "ic-mob"
+      "pill": "🚨 Segurança",
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "Idosa reage a assalto armado e ajuda a prender suspeito no Jaçanã",
+      "resumo": "A vítima passeava com o cachorro quando foi abordada por um homem armado. Ao perceber que a arma estava destravada enquanto ele digitava a senha do celular, ela reagiu e lutou pelo revólver. Moradores ajudaram a conter o suspeito até a chegada da Polícia Militar; com ele foram apreendidos celulares, joias, um revólver carregado e uma moto.",
+      "fonte": "BNews São Paulo",
+      "hora": "09/07",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/idosa-reage-e-luta-contra-bandido-durante-assalto-na-zona-norte.html",
+      "icone": "🚨",
+      "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Parada Inglesa",
-      "bairro": "Parada Inglesa",
-      "titulo": "Praça Nossa Senhora dos Prazeres é entregue revitalizada na Parada Inglesa",
-      "resumo": "A praça ao lado da estação Parada Inglesa ganhou pista de caminhada recuperada, quadra de beach tennis, quadra 3x3, pista de skate e deck de madeira plástica. Reforma foi entregue pela Subprefeitura Santana/Tucuruvi em 28 de junho.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "28/06",
-      "url": "https://www.diariozonanorte.com.br/parada-inglesa-ganha-praca-renovada-com-esportes-lazer-e-mais-seguranca-para-moradores/",
-      "icone": "🌳",
+      "tag_bairro": "📍 Vila Maria Alta",
+      "bairro": "Vila Maria Alta",
+      "titulo": "Câmeras registram assalto a família na Vila Maria Alta",
+      "resumo": "Dupla em uma motocicleta abordou e roubou pertences de uma família na Rua Moreira Vasconcelos. As imagens, capturadas por câmeras de segurança residenciais, mostram o momento da ação dos criminosos.",
+      "fonte": "BNews São Paulo",
+      "hora": "esta semana",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/camara-de-seguranca-registra-assalto-a-familia-em-sao-paulo-veja.html",
+      "icone": "📹",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Mater Dei e Bradesco Seguros vão construir hospital de R$ 600 milhões em Santana",
-      "resumo": "Unidade de alta complexidade terá 250 leitos e deve reforçar comércio local e valorização imobiliária, consolidando Santana como polo de serviços de saúde na Zona Norte.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "Esta semana",
-      "url": "https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/",
+      "tag_bairro": "📍 Jardim Damasceno",
+      "bairro": "Jardim Damasceno",
+      "titulo": "Prefeitura entrega duas novas UBSs na Freguesia do Ó/Brasilândia",
+      "resumo": "As UBS Santo Dias e Jardim Damasceno são a 472ª e a 473ª unidades básicas de saúde da rede municipal, ambas no território da Supervisão Técnica de Saúde Freguesia do Ó/Brasilândia. A UBS Jardim Damasceno funciona na Rua Grumixa, 71, de segunda a sexta, das 7h às 19h.",
+      "fonte": "Secretaria Municipal da Saúde",
+      "hora": "03/07",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/noticias/368950",
       "icone": "🏥",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Tauste Supermercados chega a Santana e gera até 700 empregos",
-      "resumo": "Rede gaúcha inaugura loja na Avenida Braz Leme no segundo semestre, com 51 checkouts e estacionamento coberto gratuito para 662 carros. Mutirão de contratação já foi realizado na Anhanguera-Campus Marte.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "Inauguração no 2º semestre",
-      "url": "https://www.diariozonanorte.com.br/gigante-do-varejo-tauste-supermercados-prepara-chegada-ao-bairro-de-santana-e-abre-mutirao-para-preencher-700-vagas/",
-      "icone": "🛒",
-      "icone_classe": "ic-eco"
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Linha 6-Laranja segue em operação assistida e gratuita entre João Paulo I e Perdizes",
+      "resumo": "Seis estações — João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes — funcionam em teste gratuito das 10h às 15h, de segunda a sexta. A extensão até Brasilândia é esperada para outubro.",
+      "fonte": "Diário do Transporte",
+      "hora": "operação desde 03/07",
+      "url": "https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/",
+      "icone": "🚇",
+      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
@@ -64,41 +64,41 @@
       "tag_label": "Mobilidade",
       "tag_bairro": "📍 Jaraguá",
       "bairro": "Jaraguá",
-      "titulo": "CPTM autoriza obras da nova estação Vila Aurora, entre Perus e Jaraguá",
-      "resumo": "Secretaria de Transportes Metropolitanos deu ordem de serviço no fim de junho. A futura estação da Linha 7-Rubi vai beneficiar moradores de Cidade D'Abril, Jardim Ipanema, Vila Santa Lucrécia e Parque Nações Unidas.",
+      "titulo": "CPTM autoriza obras da futura estação Vila Aurora, entre Perus e Jaraguá",
+      "resumo": "Ordem de serviço da Secretaria de Transportes Metropolitanos libera a construção da estação na Linha 7-Rubi, beneficiando moradores de Cidade D'Abril, Jardim Ipanema e Parque Nações Unidas.",
       "fonte": "Subprefeitura Pirituba-Jaraguá",
-      "hora": "Fim de junho",
+      "hora": "fim de junho",
       "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/5570",
       "icone": "🚆",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Estação Pirituba vai ganhar elevadores e escadas rolantes",
-      "resumo": "Melhorias de acessibilidade fazem parte da PPP do Trem Intercidades, que inclui a requalificação de estações da Linha 7-Rubi.",
-      "fonte": "Metrô CPTM",
-      "hora": "Esta semana",
-      "url": "https://www.metrocptm.com.br/estacao-pirituba-recebera-melhorias-de-acessibilidade/",
-      "icone": "🛗",
-      "icone_classe": "ic-mob"
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Tauste Supermercados abre loja em Santana com mutirão para até 700 vagas",
+      "resumo": "Rede gaúcha inaugura unidade na Avenida Braz Leme no segundo semestre, com 51 checkouts e estacionamento coberto gratuito para 662 carros. Mutirão de contratação já foi realizado na região.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "inauguração no 2º semestre",
+      "url": "https://www.diariozonanorte.com.br/gigante-do-varejo-tauste-supermercados-prepara-chegada-ao-bairro-de-santana-e-abre-mutirao-para-preencher-700-vagas/",
+      "icone": "🛒",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Obras na Avenida Raimundo Pereira de Magalhães começam em julho",
-      "resumo": "Intervenções viárias preveem binário de acesso ao Terminal Lapa e nova passagem inferior sob a linha da CPTM, com conclusão prevista para dezembro.",
-      "fonte": "Prefeitura de São Paulo",
-      "hora": "Julho",
-      "url": "https://prefeitura.sp.gov.br/w/obras-da-ligacao-viaria-pirituba-lapa-seguem-em-andamento-em-ambos-os-bairros",
-      "icone": "🚧",
-      "icone_classe": "ic-edu"
+      "tag_categoria": "tag-not",
+      "tag_label": "Geral",
+      "tag_bairro": "📍 Tucuruvi",
+      "bairro": "Tucuruvi",
+      "titulo": "Subprefeitura Santana/Tucuruvi vai ganhar unidade do Descomplica SP",
+      "resumo": "Programa municipal inspirado no Poupatempo vai oferecer mais de 350 serviços na região, com parceiros como Detran.SP, Instituto de Identificação, Sabesp e Correios. O projeto foi apresentado à comunidade em reunião aberta na Avenida Tucuruvi, 808.",
+      "fonte": "Secretaria Municipal de Inovação e Tecnologia",
+      "hora": "reunião em 11/07",
+      "url": "https://prefeitura.sp.gov.br/web/inovacao/w/noticias/279716",
+      "icone": "🏢",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
@@ -113,73 +113,126 @@
       "url": "https://www.saopaulo.sp.leg.br/blog/vereadores-suplentes-tomam-posse-na-camara-municipal-de-sao-paulo-2/",
       "icone": "🏛️",
       "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "EMEF Estação Jaraguá amplia rede municipal na Zona Norte com 600 vagas",
+      "resumo": "Unidade funciona em dois turnos e conta com sala de leitura, laboratório de informática e espaços para atividades físicas. Desde 2005, a Zona Norte ganhou 15 novas EMEFs, sete EMEIs, seis CEIs e dois CEUs, totalizando 35 novas unidades escolares.",
+      "fonte": "Secretaria Especial de Comunicação",
+      "hora": "em funcionamento",
+      "url": "https://prefeitura.sp.gov.br/web/comunicacao/w/noticias/111884",
+      "icone": "🏫",
+      "icone_classe": "ic-edu"
     }
   ],
   "agenda": [
     {
       "dia": "11",
       "mes": "Jul",
-      "cor_fundo": "#7B1FA2",
-      "bairro": "Vila Maria",
-      "titulo": "Show no Galpão Zona Norte",
-      "hora": "14h",
-      "local": "Galpão Zona Norte, Vila Maria Baixa",
-      "descricao": "Abertura dos portões às 14h",
-      "gratuito": false,
-      "preco": "A partir de R$ 30",
-      "url": "#"
-    },
-    {
-      "dia": "12",
-      "mes": "Jul",
-      "cor_fundo": "#00838F",
-      "bairro": "Santana",
-      "titulo": "Programação cultural de domingo no Sesc Santana",
-      "hora": "17h",
-      "local": "Sesc Santana",
-      "descricao": "Entrada gratuita",
+      "cor_fundo": "#2E7D32",
+      "bairro": "Tremembé",
+      "titulo": "Festival Casa de Alice no Horto Florestal",
+      "hora": "10h às 18h",
+      "local": "Horto Florestal, Tremembé",
+      "descricao": "Mais de 90 marcas autorais de gastronomia, artesanato, moda, decoração e bem-estar, com música ao vivo e atrações para toda a família. Entrada gratuita; produtos à venda.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.sescsp.org.br/santana/"
+      "url": "https://revistakdea360.com.br/noticia/75100/casa-de-alice-retorna-ao-horto-florestal-nos-dias-11-e-12-de-julho-com-festa-julina"
     },
     {
-      "dia": "12",
+      "dia": "11",
       "mes": "Jul",
       "cor_fundo": "#E65100",
-      "bairro": "Imirim",
-      "titulo": "Roda de música na NaRua Bar",
-      "hora": "13h",
-      "local": "NaRua Bar, Imirim",
-      "descricao": "Entrada gratuita até às 15h",
+      "bairro": "Jardim Maracanã",
+      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas",
+      "hora": "10h às 16h",
+      "local": "Sacolão da Freguesia do Ó, Av. João Paulo I, 2107 – Jardim Maracanã",
+      "descricao": "Feira gratuita de artesanato do programa municipal, com artesãos credenciados pela Prefeitura de São Paulo. Repete no dia 25/07.",
       "gratuito": true,
       "preco": null,
-      "url": "#"
+      "url": "https://prefeitura.sp.gov.br/w/feiras-do-m%C3%A3os-e-mentes-paulistanas-levam-artesanato-a-17-pontos-da-cidade-nas-f%C3%A9rias-de-julho"
     },
     {
-      "dia": "12",
+      "dia": "18",
       "mes": "Jul",
-      "cor_fundo": "#C62828",
-      "bairro": "Limão",
-      "titulo": "São João de Nóis Tudim no Centro de Tradições Nordestinas",
-      "hora": "",
-      "local": "CTN, Limão",
-      "descricao": "Forró ao vivo, quadrilha e gastronomia nordestina. Retirada de ingresso gratuito antecipada.",
+      "cor_fundo": "#00838F",
+      "bairro": "Parque Edu Chaves",
+      "titulo": "Apresentação \"Temos Vagas\" na Biblioteca José Mauro de Vasconcelos",
+      "hora": "14h",
+      "local": "Biblioteca José Mauro de Vasconcelos, Praça Comandante Eduardo de Oliveira, 100 – Parque Edu Chaves",
+      "descricao": "Atividade gratuita da programação Biblioteca Viva.",
       "gratuito": true,
       "preco": null,
-      "url": "#"
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
     },
     {
-      "dia": "10",
+      "dia": "18",
       "mes": "Jul",
       "cor_fundo": "#2E7D32",
-      "bairro": "Casa Verde",
-      "titulo": "Recreio nas Férias na rede municipal",
-      "hora": "",
-      "local": "CEIs e EMEIs da Zona Norte",
-      "descricao": "Atividades gratuitas para crianças de 0 a 14 anos durante o recesso escolar (6 a 17/07)",
+      "bairro": "Tremembé",
+      "titulo": "Cinema no Palácio Florestal",
+      "hora": "a definir",
+      "local": "Horto Florestal, Tremembé",
+      "descricao": "Sessão gratuita de cinema infantil ao ar livre, parte da programação de férias do Horto Florestal. Repete em 25/07.",
       "gratuito": true,
       "preco": null,
-      "url": "#"
+      "url": "https://universozn.com.br/ferias-horto-florestal-julho"
+    },
+    {
+      "dia": "19",
+      "mes": "Jul",
+      "cor_fundo": "#7B1FA2",
+      "bairro": "Tucuruvi",
+      "titulo": "Apresentação na Biblioteca Sylvia Orthof",
+      "hora": "11h",
+      "local": "Biblioteca Sylvia Orthof, Avenida Tucuruvi, 808 – Tucuruvi",
+      "descricao": "Atividade gratuita da programação Biblioteca Viva.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
+    },
+    {
+      "dia": "23",
+      "mes": "Jul",
+      "cor_fundo": "#C62828",
+      "bairro": "Santana",
+      "titulo": "Fábrica de Brinquedos no Sesc Santana",
+      "hora": "14h",
+      "local": "Sesc Santana, Área de Convivência",
+      "descricao": "Espetáculo de acrobacia, dança e um robô pneumático feito de material reciclado, para todas as idades. Gratuito, também no dia 24/07.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://saopauloparacriancas.com.br/ferias-julho-sesc-santana/"
+    },
+    {
+      "dia": "25",
+      "mes": "Jul",
+      "cor_fundo": "#00838F",
+      "bairro": "Jaraguá",
+      "titulo": "\"O Circo da Lua\" na Biblioteca Érico Veríssimo",
+      "hora": "14h",
+      "local": "Biblioteca Érico Veríssimo, Conjunto Residencial Elísio Teixeira Leite",
+      "descricao": "Atividade gratuita da programação Biblioteca Viva.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
+    },
+    {
+      "dia": "30",
+      "mes": "Jul",
+      "cor_fundo": "#E65100",
+      "bairro": "Pirituba",
+      "titulo": "Apresentação na Biblioteca Brito Broca",
+      "hora": "14h",
+      "local": "Biblioteca Brito Broca, Av. Mutinga, 1425 – Pirituba",
+      "descricao": "Atividade gratuita da programação Biblioteca Viva.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
     }
   ],
   "vagas": [
@@ -188,7 +241,7 @@
       "titulo": "Diversas funções (caixa, estoque, padaria, açougue)",
       "empresa": "Tauste Supermercados",
       "bairro": "Santana",
-      "requisitos": "Nova loja com 700 vagas previstas",
+      "requisitos": "Nova loja com até 700 vagas previstas",
       "tipo": "CLT",
       "fonte": "DiárioZonaNorte",
       "dias_atras": "mutirão recente"
@@ -198,7 +251,7 @@
       "titulo": "Vendedor(a) segmento pet",
       "empresa": "Rede de petshop",
       "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo",
+      "requisitos": "Contrato efetivo, disponibilidade para morar na região",
       "tipo": "CLT",
       "fonte": "Agrobase",
       "dias_atras": "vaga aberta em 09/07"
@@ -218,7 +271,7 @@
       "titulo": "Técnico(a) de laboratório folguista",
       "empresa": "Laboratório clínico",
       "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo, disponibilidade de escala",
+      "requisitos": "Contrato efetivo, disponibilidade de escala (região norte e leste)",
       "tipo": "CLT",
       "fonte": "Agrobase",
       "dias_atras": "vaga aberta em 08/07"
@@ -237,69 +290,72 @@
       "orgao": "🚆 Secretaria de Transportes Metropolitanos",
       "bairro": "Jaraguá",
       "titulo": "Ordem de serviço autoriza construção da estação Vila Aurora na Linha 7-Rubi",
-      "impacto": "Nova estação entre Perus e Jaraguá deve melhorar acesso de bairros como Cidade D'Abril e Parque Nações Unidas ao trem.",
+      "impacto": "Nova estação entre Perus e Jaraguá deve melhorar o acesso de bairros como Cidade D'Abril e Parque Nações Unidas ao trem.",
       "status": "Obra autorizada",
       "fonte": "Subprefeitura Pirituba-Jaraguá"
     },
     {
-      "orgao": "🚇 CPTM / Governo do Estado de SP",
-      "bairro": "Pirituba",
-      "titulo": "PPP do Trem Intercidades inclui acessibilidade na Estação Pirituba",
-      "impacto": "Instalação de elevadores e escadas rolantes deve facilitar o acesso de idosos e pessoas com deficiência à Linha 7-Rubi.",
-      "status": "Em andamento",
-      "fonte": "Metrô CPTM"
+      "orgao": "💻 Secretaria Municipal de Inovação e Tecnologia",
+      "bairro": "Tucuruvi",
+      "titulo": "Descomplica SP chega à Subprefeitura Santana/Tucuruvi",
+      "impacto": "Unidade vai concentrar mais de 350 serviços municipais e parceiros como Detran.SP, Sabesp e Correios em um só local.",
+      "status": "Projeto apresentado à comunidade em 11/07",
+      "fonte": "Secretaria Municipal de Inovação e Tecnologia"
+    },
+    {
+      "orgao": "🛣️ Artesp / Governo do Estado de SP",
+      "bairro": "Perus",
+      "titulo": "Pedágios sobem em mais de 30 rodovias paulistas, incluindo acessos usados pela Zona Norte",
+      "impacto": "Reajuste de 4,72% (com base no IPCA) passou a valer em 1º de julho nas rodovias das 1ª e 2ª fases do Programa Estadual de Concessões, incluindo vias de acesso usadas por quem mora em Perus e Anhanguera.",
+      "status": "Em vigor desde 01/07",
+      "fonte": "Agência Brasil"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
       "emoji": "🥶",
-      "titulo": "Defesa Civil já decretou atenção para baixas temperaturas em julho",
-      "desc": "Frente fria trouxe queda brusca de temperatura e ventos mais intensos para a capital, com mínimas abaixo de 10°C em alguns pontos.",
-      "meta": "Defesa Civil de SP"
-    },
-    {
-      "tipo": "ok",
-      "emoji": "💉",
-      "titulo": "Vacinação contra gripe ampliada para toda a população",
-      "desc": "UBS da Zona Norte estão aplicando a vacina contra influenza sem exigência de grupo prioritário.",
-      "meta": "Secretaria Municipal da Saúde"
+      "titulo": "Defesa Civil segue em atenção para frente fria e queda de temperatura",
+      "desc": "Desde 03/07, o estado de atenção da Defesa Civil aponta mínimas de até 13°C e ventos mais intensos em São Paulo, com clima típico de inverno.",
+      "meta": "Defesa Civil de São Paulo"
     },
     {
       "tipo": "neutro",
       "emoji": "🏫",
-      "titulo": "Recesso escolar da rede municipal vai até 17 de julho",
-      "desc": "Aulas retomam após o período de férias; Recreio nas Férias segue disponível em CEIs e EMEIs.",
+      "titulo": "Recesso escolar da rede municipal segue até 17 de julho",
+      "desc": "Aulas retomam após o período de férias; o Recreio nas Férias segue disponível gratuitamente em CEIs e EMEIs da Zona Norte.",
       "meta": "Secretaria Municipal de Educação"
     },
     {
       "tipo": "ok",
-      "emoji": "🚇",
-      "titulo": "Seis novas estações de metrô em operação na Zona Norte",
-      "desc": "Linha 6-Laranja passou a operar em caráter assistido e gratuito entre João Paulo I e Perdizes, incluindo a estação Freguesia do Ó.",
-      "meta": "Diário do Transporte"
+      "emoji": "🏥",
+      "titulo": "Zona Norte ganha duas novas UBSs na Freguesia do Ó/Brasilândia",
+      "desc": "UBS Santo Dias e UBS Jardim Damasceno, a 472ª e 473ª unidades da rede municipal, foram entregues em 03/07.",
+      "meta": "Secretaria Municipal da Saúde"
+    },
+    {
+      "tipo": "info",
+      "emoji": "🛣️",
+      "titulo": "Pedágios ficaram mais caros desde 1º de julho",
+      "desc": "Reajuste de 4,72% atinge mais de 30 rodovias paulistas, incluindo acessos usados por moradores de Perus e Anhanguera.",
+      "meta": "Agência Brasil"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🎶",
-      "titulo": "Show no Galpão Zona Norte",
-      "info": "11/07 · 14h · Vila Maria Baixa · A partir de R$ 30"
+      "emoji": "🎪",
+      "titulo": "Festival Casa de Alice no Horto Florestal",
+      "info": "11 e 12/07 · 10h às 18h · Tremembé · Entrada gratuita"
     },
     {
-      "emoji": "🎭",
-      "titulo": "Programação de domingo no Sesc Santana",
-      "info": "12/07 · 17h · Santana · Gratuito"
+      "emoji": "🧵",
+      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas",
+      "info": "11/07 · 10h às 16h · Sacolão da Freguesia do Ó (Jardim Maracanã) · Gratuito"
     },
     {
-      "emoji": "🎤",
-      "titulo": "Roda de música na NaRua Bar",
-      "info": "12/07 · 13h às 15h · Imirim · Gratuito"
-    },
-    {
-      "emoji": "🪗",
-      "titulo": "São João de Nóis Tudim no CTN",
-      "info": "12/07 · Limão · Forró ao vivo · Gratuito (ingresso antecipado)"
+      "emoji": "🏫",
+      "titulo": "Recreio nas Férias na rede municipal",
+      "info": "Até 17/07 · CEIs e EMEIs da Zona Norte · Gratuito"
     }
   ]
 }
