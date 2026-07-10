@@ -639,10 +639,7 @@ async function carregarTicker() {
       `<span class="ticker-item" onclick="window.open('${n.url}','_blank')">${n.titulo || n}</span>`
     ).join('');
 
-    const totalWidth = track.scrollWidth;
-    const velocidade = Math.max(15, totalWidth / 300);
-    track.style.animationDuration = velocidade + 's';
-
+   
   } catch(e) {
     document.getElementById('ticker-track').innerHTML =
       '<span class="ticker-item">Portau · Zona Norte de São Paulo · portauzn.com.br</span>'.repeat(6);
