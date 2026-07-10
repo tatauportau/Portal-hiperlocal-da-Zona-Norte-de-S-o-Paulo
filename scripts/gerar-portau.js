@@ -159,6 +159,7 @@ Para "icone_classe" use: "ic-seg", "ic-edu", "ic-mob", "ic-eco".
 Para "tipo" de alerta use: "ok" (positivo), "info" (informativo), "neutro" (neutro/obras).
 Para "tag_bairro" use o formato "📍 " seguido do mesmo valor usado em "bairro".
 Inclua ao menos 8 notícias (1 destaque + 7 normais), 5 agenda, 4 vagas, 3 política, 4 alertas. Quanto mais notícias reais encontrar, melhor — não limite a quantidade.
+Busque especificamente festas juninas, julinas e arraiais happening na Zona Norte em julho de 2026 para incluir na agenda.
 Inclua 6 dicas de eventos reais com datas FUTURAS (a partir de hoje, ${dateLabel}) para o fim de semana mais próximo na Zona Norte em "fim_de_semana". 
 Nunca inclua eventos com datas que já passaram. Se não encontrar 6, inclua quantos encontrar com datas futuras confirmadas.`;
 
