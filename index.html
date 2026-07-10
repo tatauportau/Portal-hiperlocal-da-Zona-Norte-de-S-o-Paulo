@@ -602,7 +602,10 @@ async function carregarTicker() {
     // 1. Títulos do dia gerados pelo script (prioridade máxima)
     const tickerData = document.getElementById('portau-ticker-data');
     let noticias = tickerData
-      ? tickerData.textContent.split('|||').filter(Boolean)
+      ? tickerData.textContent.split('|||').filter(Boolean).map(item => {
+      const [titulo, url] = item.split('::');
+      return { titulo, url: url || '#' };
+    })
       : [];
 
     // 2. Complementa com RSS filtrado
@@ -633,11 +636,11 @@ async function carregarTicker() {
     const itens = [...noticias, ...noticias];
     const track = document.getElementById('ticker-track');
     track.innerHTML = itens.map(n =>
-      `<span class="ticker-item">${n}</span>`
+      `<span class="ticker-item" onclick="window.open('${n.url}','_blank')">${n.titulo || n}</span>`
     ).join('');
 
     const totalWidth = track.scrollWidth;
-    const velocidade = Math.max(30, totalWidth / 80);
+    const velocidade = Math.max(20, totalWidth / 120);
     track.style.animationDuration = velocidade + 's';
 
   } catch(e) {
