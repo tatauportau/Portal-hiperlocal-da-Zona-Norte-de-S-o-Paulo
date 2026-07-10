@@ -1,0 +1,73 @@
+{
+  "_instrucoes": "Edite este arquivo com o conteudo do dia e faca commit na branch principal. Depois va em Actions > Portau Diario > Run workflow para publicar. Cada 'bairro' deve ser um bairro ou distrito oficial da Zona Norte (veja data/bairros-por-distrito.json). Se deixar um array vazio ([]), a secao correspondente do site NAO sera alterada (mantem o que ja esta publicado). Duplique os exemplos abaixo para incluir mais itens.",
+  "noticias": [
+    {
+      "destaque": true,
+      "pill": "🚨 Alerta de Saude",
+      "tag_categoria": "tag-seg",
+      "tag_label": "Seguranca",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Titulo da noticia em destaque",
+      "resumo": "Resumo curto da noticia.",
+      "fonte": "Nome da fonte",
+      "hora": "Hoje, 09h15",
+      "url": "https://exemplo.com",
+      "icone": "🔒",
+      "icone_classe": "ic-seg"
+    }
+  ],
+  "agenda": [
+    {
+      "dia": "10",
+      "mes": "Jul",
+      "cor_fundo": "#E65100",
+      "bairro": "Vila Maria",
+      "titulo": "Nome do evento",
+      "hora": "19h",
+      "local": "Local do evento",
+      "descricao": "Descricao curta",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://exemplo.com"
+    }
+  ],
+  "vagas": [
+    {
+      "icone": "💼",
+      "titulo": "Cargo",
+      "empresa": "Empresa",
+      "bairro": "Casa Verde",
+      "requisitos": "Requisitos resumidos",
+      "tipo": "CLT",
+      "fonte": "Fonte",
+      "dias_atras": "ha 2 dias"
+    }
+  ],
+  "politica": [
+    {
+      "orgao": "🚇 Governo do Estado de SP",
+      "bairro": "Freguesia do O",
+      "titulo": "Titulo",
+      "impacto": "Impacto descrito",
+      "status": "Status",
+      "fonte": "Fonte"
+    }
+  ],
+  "alertas": [
+    {
+      "tipo": "ok",
+      "emoji": "☀️",
+      "titulo": "Titulo do alerta",
+      "desc": "Descricao",
+      "meta": "Meta info"
+    }
+  ],
+  "fim_de_semana": [
+    {
+      "emoji": "🎵",
+      "titulo": "Nome do evento",
+      "info": "11/07 . 20h . Local . Gratuito"
+    }
+  ]
+}

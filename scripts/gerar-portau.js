@@ -1,21 +1,16 @@
 #!/usr/bin/env node
 /**
  * gerar-portau.js
- * Abordagem cirúrgica: pede à Claude API apenas o conteúdo editorial em JSON,
- * depois injeta no HTML original usando delimitadores de seção.
- * O arquivo resultante tem o tamanho completo do original.
+ * Le o conteudo editorial de data/conteudo-manual.json (preenchido a mao)
+ * e injeta no HTML original usando delimitadores de secao.
+ * Nao depende mais de nenhuma API externa.
  */
 const fs = require('fs');
 const path = require('path');
-const CLAUDE_API_KEY = process.env.CLAUDE_API_KEY;
-if (!CLAUDE_API_KEY) {
-  console.error('Erro: variável CLAUDE_API_KEY não definida.');
-  process.exit(1);
-}
 const INDEX_PATH = path.resolve(__dirname, '..', 'index.html');
 let html = fs.readFileSync(INDEX_PATH, 'utf8');
 
-// ─── Bairros por distrito (462 bairros, 18 distritos) ───────────────────────
+// ─── Bairros por distrito (462 bairros, 18 distritos) ─────────────────────────
 const BAIRROS_PATH = path.resolve(__dirname, '..', 'data', 'bairros-por-distrito.json');
 const BAIRROS_POR_DISTRITO = JSON.parse(fs.readFileSync(BAIRROS_PATH, 'utf8'));
 const DISTRITO_KEYS = Object.keys(BAIRROS_POR_DISTRITO);
@@ -41,12 +36,7 @@ function resolverDistrito(nomeBairro) {
   return BAIRRO_TO_DISTRITO[normalizar(nomeBairro)] || null;
 }
 
-// Lista formatada "DISTRITO: bairro1, bairro2, ..." para o prompt da IA
-const LISTA_BAIRROS_PROMPT = DISTRITO_KEYS
-  .map(d => `${d}: ${BAIRROS_POR_DISTRITO[d].join(', ')}`)
-  .join('\n');
-
-// Data no fuso horário de Brasília (America/Sao_Paulo)
+// Data no fuso horario de Brasilia (America/Sao_Paulo)
 const tzDate = new Intl.DateTimeFormat('pt-BR', {
   timeZone: 'America/Sao_Paulo',
   year: 'numeric', month: '2-digit', day: '2-digit',
@@ -59,118 +49,27 @@ const yyyy = getPart('year');
 const diaN = parseInt(dd, 10);
 const diaSemana = getPart('weekday');
 const diaSemanaCapit = diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1);
-const mesesExt = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const mesesExt = ['janeiro','fevereiro','marco','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 const mesExt = mesesExt[parseInt(mm, 10) - 1];
 const dateLabel = `${dd}/${mm}/${yyyy}`;
 const dataPorExtenso = `${diaSemanaCapit}, ${diaN} de ${mesExt} de ${yyyy}`;
 const dataHero = `${diaN} de ${mesExt}`;
-// Hora de geração no fuso de Brasília
+// Hora de geracao no fuso de Brasilia
 const horaGeracao = new Intl.DateTimeFormat('pt-BR', {
   timeZone: 'America/Sao_Paulo',
   hour: '2-digit',
   minute: '2-digit',
 }).format(new Date());
-// Dia da semana numérico em Brasília (0=dom, 5=sex, 6=sab)
+// Dia da semana numerico em Brasilia (0=dom, 5=sex, 6=sab)
 const diaSemanaNum = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' })).getDay();
 const ehFimDeSemana = diaSemanaNum === 0 || diaSemanaNum === 5 || diaSemanaNum === 6;
 
-// ─── Prompt do sistema ───────────────────────────────────────────────────────
-const SYSTEM_PROMPT = `Você é o editor-chefe do Portau. Sua ÚNICA saída deve ser um objeto JSON válido. Nunca escreva texto fora do JSON. Nunca use markdown. Comece sua resposta diretamente com { e termine com }.
-Use a ferramenta web_search para buscar notícias reais e atuais da Zona Norte de SP. Cubra os 18 distritos e, sempre que a notícia mencionar um bairro específico dentro deles, use o nome exato desse bairro (não apenas o nome do distrito) no campo "bairro" — isso deixa a cobertura muito mais precisa. Escolha entre os bairros oficiais abaixo, agrupados por distrito:
-${LISTA_BAIRROS_PROMPT}
-Se não for possível identificar o bairro específico da notícia, use o nome do distrito mesmo (ex: "Santana"). Tente distribuir as notícias entre diferentes subprefeituras (Santana, Casa Verde, Vila Maria, Jaçanã-Tremembé, Freguesia do Ó, Pirituba, Perus).
-Retorne EXCLUSIVAMENTE um objeto JSON válido, sem nenhum texto antes ou depois, sem blocos de código markdown, sem comentários. O JSON deve ter exatamente esta estrutura:
-{
-  "data_display": "string — data por extenso, ex: Segunda-feira, 29 de junho de 2026",
-  "data_curta": "string — ex: 29/06/2026",
-  "noticias": [
-    {
-      "destaque": true,
-      "pill": "string — ex: 🚨 Alerta de Saúde",
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Santana",
-      "bairro": "string — nome do bairro específico (ex: Parada Inglesa) ou, se não souber, o distrito (ex: Santana)",
-      "titulo": "string",
-      "resumo": "string",
-      "fonte": "string",
-      "hora": "string — ex: Hoje, 09h15",
-      "url": "string ou #",
-      "icone": "🔒",
-      "icone_classe": "ic-seg"
-    }
-  ],
-  "agenda": [
-    {
-      "dia": "string — ex: 29",
-      "mes": "string — ex: Jun",
-      "cor_fundo": "string — ex: #E65100",
-      "bairro": "string — nome do bairro específico (ex: Vila Nova Cachoeirinha) ou, se não souber, o distrito (ex: Santana)",
-      "titulo": "string",
-      "hora": "string",
-      "local": "string",
-      "descricao": "string",
-      "gratuito": true,
-      "preco": "string ou null",
-      "url": "string ou #"
-    }
-  ],
-  "vagas": [
-    {
-      "icone": "string",
-      "titulo": "string",
-      "empresa": "string",
-      "bairro": "string — nome do bairro específico ou, se não souber, o distrito",
-      "requisitos": "string",
-      "tipo": "CLT",
-      "fonte": "string",
-      "dias_atras": "string"
-    }
-  ],
-  "politica": [
-    {
-      "orgao": "string — ex: 🚇 Governo do Estado de SP",
-      "bairro": "string — nome do bairro específico ou, se não souber, o distrito",
-      "titulo": "string",
-      "impacto": "string",
-      "status": "string",
-      "fonte": "string"
-    }
-  ],
-  "alertas": [
-    {
-      "tipo": "ok",
-      "emoji": "☀️",
-      "titulo": "string",
-      "desc": "string",
-      "meta": "string"
-    }
-  ],
-  "fim_de_semana": [
-    {
-      "emoji": "string — ex: 🎵",
-      "titulo": "string — nome do evento",
-      "info": "string — ex: 05/07 · 20h · Sesc Santana · Gratuito"
-    }
-  ]
-}
-Para "tag_categoria" use: "tag-seg" (segurança/saúde), "tag-edu" (educação/zeladoria), "tag-mob" (mobilidade), "tag-not" (geral).
-Para "icone_classe" use: "ic-seg", "ic-edu", "ic-mob", "ic-eco".
-Para "tipo" de alerta use: "ok" (positivo), "info" (informativo), "neutro" (neutro/obras).
-Para "tag_bairro" use o formato "📍 " seguido do mesmo valor usado em "bairro".
-Inclua ao menos 8 notícias (1 destaque + 7 normais), 5 agenda, 4 vagas, 3 política, 4 alertas. Quanto mais notícias reais encontrar, melhor — não limite a quantidade.
-Busque especificamente festas juninas, julinas e arraiais happening na Zona Norte em julho de 2026 para incluir na agenda.
-Inclua 6 dicas de eventos reais com datas FUTURAS (a partir de hoje, ${dateLabel}) para o fim de semana mais próximo na Zona Norte em "fim_de_semana". 
-Nunca inclua eventos com datas que já passaram. Se não encontrar 6, inclua quantos encontrar com datas futuras confirmadas.`;
-
-const USER_PROMPT = `Hoje é ${dataPorExtenso} (${dateLabel}). Busque notícias reais da Zona Norte de São Paulo e retorne SOMENTE o objeto JSON, sem nenhum texto antes ou depois.`;
-
-// ─── Construtores de HTML por seção ─────────────────────────────────────────
+// ─── Construtores de HTML por secao ─────────────────────────────────────
 function buildNoticias(noticias) {
   const count = noticias.length;
   let html = `  <div class="secao" id="noticias">
     <div class="secao-header">
-      <div class="secao-titulo"><span class="barra barra-not"></span>Notícias</div>
+      <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
       <span class="secao-count">${count} hoje</span>
     </div>\n`;
   for (const n of noticias) {
@@ -266,10 +165,10 @@ function buildVagas(vagas) {
 
 function buildPolitica(politica) {
   const count = politica.length;
-  let html = `  <!-- POLÍTICA -->
+  let html = `  <!-- POLITICA -->
   <div class="secao" id="politica">
     <div class="secao-header">
-      <div class="secao-titulo"><span class="barra barra-pol"></span>Política Regional</div>
+      <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
       <span class="secao-count">${count} itens</span>
     </div>\n`;
   for (const p of politica) {
@@ -330,12 +229,12 @@ function buildFimDeSemana(items) {
   return html;
 }
 
-// ─── Substituição cirúrgica usando regex por seção ───────────────────────────
+// ─── Substituicao cirurgica usando regex por secao ──────────────────────────
 function replaceSection(html, id, newContent) {
   const open = `<div class="secao" id="${id}">`;
   const start = html.indexOf(open);
   if (start === -1) {
-    console.warn(`[Portau] Seção #${id} não encontrada no HTML — pulando.`);
+    console.warn(`[Portau] Secao #${id} nao encontrada no HTML — pulando.`);
     return html;
   }
   let depth = 0;
@@ -353,73 +252,43 @@ function replaceSection(html, id, newContent) {
     }
     i++;
   }
-  console.warn(`[Portau] Não foi possível encontrar o fechamento da seção #${id}.`);
+  console.warn(`[Portau] Nao foi possivel encontrar o fechamento da secao #${id}.`);
   return html;
 }
 
-// ─── Main ────────────────────────────────────────────────────────────────────
+// ─── Main ─────────────────────────────────────────────────────────────
 async function main() {
-  const { default: fetch } = await import('node-fetch');
-  console.log(`[Portau] Buscando conteúdo editorial para ${dateLabel}...`);
+  console.log(`[Portau] Carregando conteudo editorial manual para ${dateLabel}...`);
   console.log(`[Portau] Cobertura: ${DISTRITO_KEYS.length} distritos, ${Object.values(BAIRROS_POR_DISTRITO).reduce((s, l) => s + l.length, 0)} bairros.`);
-  const response = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'x-api-key': CLAUDE_API_KEY,
-      'anthropic-version': '2023-06-01',
-      'content-type': 'application/json',
-    },
-    body: JSON.stringify({
-      model: 'claude-sonnet-4-6',
-      max_tokens: 16000,
-      tools: [{ type: 'web_search_20250305', name: 'web_search' }],
-      system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: USER_PROMPT }],
-    }),
-  });
-  if (!response.ok) {
-    const err = await response.text();
-    console.error(`[Portau] Erro na API (${response.status}): ${err}`);
+
+  const CONTEUDO_PATH = path.resolve(__dirname, '..', 'data', 'conteudo-manual.json');
+  if (!fs.existsSync(CONTEUDO_PATH)) {
+    console.error(`[Portau] Arquivo nao encontrado: ${CONTEUDO_PATH}`);
+    console.error('[Portau] Preencha data/conteudo-manual.json com o conteudo do dia antes de rodar este script.');
     process.exit(1);
   }
-  const data = await response.json();
-  const textBlocks = (data.content || []).filter(b => b.type === 'text');
-  if (textBlocks.length === 0) {
-    console.error('[Portau] A API não retornou texto.');
-    process.exit(1);
-  }
-  let rawText = textBlocks[textBlocks.length - 1].text.trim();
-  rawText = rawText.replace(/^```json\s*/i, '').replace(/^```\s*/i, '').replace(/\s*```$/, '').trim();
-  const jsonStart = rawText.indexOf('{');
-  if (jsonStart === -1) {
-    console.error('[Portau] JSON não encontrado na resposta.');
-    console.error(rawText.slice(0, 500));
-    process.exit(1);
-  }
-  rawText = rawText.slice(jsonStart);
+
   let editorial;
   try {
-    editorial = JSON.parse(rawText);
+    editorial = JSON.parse(fs.readFileSync(CONTEUDO_PATH, 'utf8'));
   } catch (e) {
-    console.error('[Portau] Falha ao parsear JSON:', e.message);
-    console.error(rawText.slice(0, 800));
+    console.error('[Portau] Falha ao parsear data/conteudo-manual.json:', e.message);
     process.exit(1);
   }
+
   const dataCurta = editorial.data_curta || dateLabel;
-  const dataDisplay = editorial.data_display || dataPorExtenso;
-  console.log('[Portau] JSON recebido. Aplicando substituições cirúrgicas...');
-console.log(`[Portau] Notícias: ${editorial.noticias?.length || 0}`);
-console.log(`[Portau] Agenda: ${editorial.agenda?.length || 0}`);
-console.log(`[Portau] Vagas: ${editorial.vagas?.length || 0}`);
-console.log(`[Portau] Política: ${editorial.politica?.length || 0}`);
-console.log(`[Portau] Alertas: ${editorial.alertas?.length || 0}`);
-console.log(`[Portau] Fim de semana: ${editorial.fim_de_semana?.length || 0}`);
-console.log(`[Portau] Distritos cobertos: ${[...new Set(editorial.noticias?.map(n => n.bairro))].join(', ')}`);
-  
+  console.log('[Portau] Conteudo carregado. Aplicando substituicoes cirurgicas...');
+  console.log(`[Portau] Noticias: ${editorial.noticias?.length || 0}`);
+  console.log(`[Portau] Agenda: ${editorial.agenda?.length || 0}`);
+  console.log(`[Portau] Vagas: ${editorial.vagas?.length || 0}`);
+  console.log(`[Portau] Politica: ${editorial.politica?.length || 0}`);
+  console.log(`[Portau] Alertas: ${editorial.alertas?.length || 0}`);
+  console.log(`[Portau] Fim de semana: ${editorial.fim_de_semana?.length || 0}`);
+
   // Atualiza <title>
   html = html.replace(
     /<title>.*?<\/title>/,
-    `<title>Portau — Edição do Dia · ${dataCurta}</title>`
+    `<title>Portau — Edicao do Dia · ${dataCurta}</title>`
   );
   // Atualiza topbar
   html = html.replace(
@@ -432,7 +301,7 @@ console.log(`[Portau] Distritos cobertos: ${[...new Set(editorial.noticias?.map(
     `<h1>Zona Norte, ${dataHero} <span style="font-size:0.5em; opacity:0.7; font-weight:400">· ${horaGeracao}</span></h1>`
   );
 
-  // Substitui seções editoriais
+  // Substitui secoes editoriais
   if (editorial.noticias?.length) {
     html = replaceSection(html, 'noticias', buildNoticias(editorial.noticias));
   }
@@ -456,14 +325,14 @@ console.log(`[Portau] Distritos cobertos: ${[...new Set(editorial.noticias?.map(
       buildFimDeSemana(editorial.fim_de_semana)
     );
   }
-// Atualiza ticker com títulos das notícias do dia
+  // Atualiza ticker com titulos das noticias do dia
   if (editorial.noticias?.length) {
     html = html.replace(
       /<div id="portau-ticker-data"[^>]*>[\s\S]*?<\/div>/,
       buildTickerNoticias(editorial.noticias)
     );
   }
-  // Marca visibilidade do bloco fim de semana (sexta=5, sábado=6, domingo=0)
+  // Marca visibilidade do bloco fim de semana (sexta=5, sabado=6, domingo=0)
   if (ehFimDeSemana) {
     html = html.replace(
       'id="fim-de-semana-card"',
