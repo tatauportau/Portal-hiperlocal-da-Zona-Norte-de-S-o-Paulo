@@ -633,7 +633,7 @@ async function carregarTicker() {
     }
 
     // Duplica para loop contínuo
-    const itens = [...noticias, ...noticias];
+    const itens = [...noticias, ...noticias, ...noticias];
     const track = document.getElementById('ticker-track');
     track.innerHTML = itens.map(n =>
       `<span class="ticker-item" onclick="window.open('${n.url}','_blank')">${n.titulo || n}</span>`
