@@ -28,7 +28,7 @@
   nav a{font-size:13px;font-weight:600;color:var(--cinza-m);text-decoration:none;padding:6px 12px;border-radius:6px;}
   nav a:hover,nav a.ativo{background:var(--creme);color:var(--verde);}
   .hero{background:var(--verde);padding:40px 24px;color:var(--branco);}
-  .hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;}
+  .hero-inner{max-width:1160px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:24px;}
   .hero-eyebrow{font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--amarelo);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
   .hero-eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--amarelo);}
   .hero h1{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.1;margin-bottom:8px;}
@@ -769,10 +769,15 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 </header>
 
 <div class="hero">
-  <div class="hero-inner">
+  <div class="hero-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;">
     <div>
-     <h1>Zona Norte, 9 de julho <span style="font-size:0.5em; opacity:0.7; font-weight:400">· 23:23</span></h1>
+      <h1>Zona Norte, 9 de julho <span style="font-size:0.5em; opacity:0.7; font-weight:400">· 23:23</span></h1>
     </div>
+    <div class="hero-stats" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+      ...botões...
+    </div>
+  </div>
+</div>
     <div class="hero-stats">
       <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
       <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
