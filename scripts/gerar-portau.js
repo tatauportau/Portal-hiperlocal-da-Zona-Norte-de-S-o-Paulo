@@ -256,6 +256,39 @@ function replaceSection(html, id, newContent) {
   return html;
 }
 
+// Mesma logica de contagem de profundidade de <div>, mas para o card da
+// sidebar "Fim de Semana". Usa um regex tolerante para achar a tag de
+// abertura (que pode ja ter atributos extras, como data-fds="true",
+// acumulados de execucoes anteriores) e depois caminha ate o fechamento
+// correspondente, em vez de um regex fixo que quebra com HTML aninhado
+// ou com atributos adicionais na tag.
+function replaceFimDeSemanaCard(html, newContent) {
+  const openTagRegex = /<div class="sb-card" id="fim-de-semana-card"[^>]*>/;
+  const match = html.match(openTagRegex);
+  if (!match) {
+    console.warn('[Portau] Card #fim-de-semana-card nao encontrado no HTML — pulando.');
+    return html;
+  }
+  const start = match.index;
+  let depth = 0;
+  let i = start;
+  while (i < html.length) {
+    if (html[i] === '<') {
+      if (html.startsWith('<div', i)) depth++;
+      else if (html.startsWith('</div>', i)) {
+        depth--;
+        if (depth === 0) {
+          const end = i + '</div>'.length;
+          return html.slice(0, start) + newContent + html.slice(end);
+        }
+      }
+    }
+    i++;
+  }
+  console.warn('[Portau] Nao foi possivel encontrar o fechamento do card #fim-de-semana-card.');
+  return html;
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────
 async function main() {
   console.log(`[Portau] Carregando conteudo editorial manual para ${dateLabel}...`);
@@ -320,10 +353,7 @@ async function main() {
 
   // Atualiza bloco fim de semana na sidebar
   if (editorial.fim_de_semana?.length) {
-    html = html.replace(
-      /<div class="sb-card" id="fim-de-semana-card">[\s\S]*?<\/div>\s*<\/div>/,
-      buildFimDeSemana(editorial.fim_de_semana)
-    );
+    html = replaceFimDeSemanaCard(html, buildFimDeSemana(editorial.fim_de_semana));
   }
   // Atualiza ticker com titulos das noticias do dia
   if (editorial.noticias?.length) {
@@ -333,7 +363,9 @@ async function main() {
     );
   }
   // Marca visibilidade do bloco fim de semana (sexta=5, sabado=6, domingo=0)
-  if (ehFimDeSemana) {
+  // So adiciona o atributo se ele ainda nao existir, para nao acumular
+  // "data-fds=\"true\"" duplicado a cada execucao do workflow.
+  if (ehFimDeSemana && !html.includes('data-fds="true"')) {
     html = html.replace(
       'id="fim-de-semana-card"',
       'id="fim-de-semana-card" data-fds="true"'
