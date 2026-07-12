@@ -6,43 +6,57 @@
       "pill": "🚨 Segurança",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Jaçanã",
-      "bairro": "Jaçanã",
-      "titulo": "Idosa reage a assalto armado e ajuda a prender suspeito no Jaçanã",
-      "resumo": "A vítima passeava com o cachorro quando foi abordada por um homem armado. Ao perceber que a arma estava destravada enquanto ele digitava a senha do celular, ela reagiu e lutou pelo revólver. Moradores ajudaram a conter o suspeito até a chegada da Polícia Militar; com ele foram apreendidos celulares, joias, um revólver carregado e uma moto.",
-      "fonte": "BNews São Paulo",
-      "hora": "09/07",
-      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/idosa-reage-e-luta-contra-bandido-durante-assalto-na-zona-norte.html",
+      "tag_bairro": "📍 Zona Norte",
+      "bairro": "Zona Norte",
+      "titulo": "Rocam apreende mais de 2,6 mil porções de drogas e revólver com numeração suprimida na Zona Norte",
+      "resumo": "Equipes da Rocam do 43º Batalhão de Polícia Militar Metropolitano notaram forte odor de maconha durante patrulhamento de rotina e, ao vistoriar o imóvel, encontraram 1,7 mil porções de cocaína e 969 de maconha, além de um revólver calibre .38 com numeração suprimida escondido atrás de uma geladeira. Um homem foi preso e levado ao 73º Distrito Policial.",
+      "fonte": "Fato Paulista",
+      "hora": "10/07",
+      "url": "https://fatopaulista.com.br/policia-militar-apreensao-drogas-zona-norte-sp/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Vila Maria Alta",
-      "bairro": "Vila Maria Alta",
-      "titulo": "Câmeras registram assalto a família na Vila Maria Alta",
-      "resumo": "Dupla em uma motocicleta abordou e roubou pertences de uma família na Rua Moreira Vasconcelos. As imagens, capturadas por câmeras de segurança residenciais, mostram o momento da ação dos criminosos.",
-      "fonte": "BNews São Paulo",
-      "hora": "esta semana",
-      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/camara-de-seguranca-registra-assalto-a-familia-em-sao-paulo-veja.html",
-      "icone": "📹",
-      "icone_classe": "ic-seg"
+      "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Limão",
+      "bairro": "Limão",
+      "titulo": "Praça Agostinho Tomaselli é entregue revitalizada no Limão",
+      "resumo": "Após obra iniciada em janeiro, a praça localizada nas esquinas da rua Dona Estela Borges e Sebastião Henriques foi entregue à população no último sábado (4/07). O espaço ganhou alamedas com piso epóxi, playground emborrachado e cercado, academia ampliada, novo paisagismo e monitoramento por câmeras do Smart Sampa. A obra custou R$ 641 mil.",
+      "fonte": "Subprefeitura Casa Verde/Cachoeirinha/Limão",
+      "hora": "06/07",
+      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/no-distrito-do-lim%C3%A3o-mais-uma-pra%C3%A7a-%C3%A9-revitalizada.",
+      "icone": "🏞️",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Jardim Damasceno",
-      "bairro": "Jardim Damasceno",
-      "titulo": "Prefeitura entrega duas novas UBSs na Freguesia do Ó/Brasilândia",
-      "resumo": "As UBS Santo Dias e Jardim Damasceno são a 472ª e a 473ª unidades básicas de saúde da rede municipal, ambas no território da Supervisão Técnica de Saúde Freguesia do Ó/Brasilândia. A UBS Jardim Damasceno funciona na Rua Grumixa, 71, de segunda a sexta, das 7h às 19h.",
-      "fonte": "Secretaria Municipal da Saúde",
+      "tag_categoria": "tag-not",
+      "tag_label": "Meio Ambiente",
+      "tag_bairro": "📍 Conjunto Habitacional Turística",
+      "bairro": "Conjunto Habitacional Turística",
+      "titulo": "Décimo EcoEnel é inaugurado na Praça Vila Nova Esperança",
+      "resumo": "O novo ponto de troca de materiais recicláveis por descontos na conta de energia foi inaugurado no Conjunto Habitacional Turística, em Jaraguá, ampliando a rede de EcoEnel na região.",
+      "fonte": "Subprefeitura Pirituba/Jaraguá",
       "hora": "03/07",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/noticias/368950",
-      "icone": "🏥",
-      "icone_classe": "ic-seg"
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-d%C3%A9cimo-ecoenel-inaugurado-nesta-quinta-feira-03/07-na-pra%C3%A7a-vila-nova-esperan%C3%A7a",
+      "icone": "♻️",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Armazém Solidário chega a Pirituba/Jaraguá com descontos de até 50% em alimentos",
+      "resumo": "Programa da Prefeitura de São Paulo facilita o acesso a alimentos saudáveis para famílias cadastradas no CadÚnico, com foco em itens naturais e orgânicos, incentivando hábitos alimentares mais equilibrados na região.",
+      "fonte": "Subprefeitura Pirituba/Jaraguá",
+      "hora": "02/07",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-armaz%C3%A9m-solid%C3%A1rio-iniciativa-criada-pela-prefeitura-de-s%C3%A3o-paulo-que-visa-facilitar-o-acesso-a-alimentos-saud%C3%A1veis-para-fam%C3%ADlias-cadastradas-no-cad%C3%BAnico.",
+      "icone": "🛒",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
@@ -51,7 +65,7 @@
       "tag_bairro": "📍 Freguesia do Ó",
       "bairro": "Freguesia do Ó",
       "titulo": "Linha 6-Laranja segue em operação assistida e gratuita entre João Paulo I e Perdizes",
-      "resumo": "Seis estações — João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes — funcionam em teste gratuito das 10h às 15h, de segunda a sexta. A extensão até Brasilândia é esperada para outubro.",
+      "resumo": "Seis estações — João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes — seguem funcionando em teste gratuito das 10h às 15h, de segunda a sexta. A extensão até Brasilândia é esperada para outubro.",
       "fonte": "Diário do Transporte",
       "hora": "operação desde 03/07",
       "url": "https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/",
@@ -60,102 +74,20 @@
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "CPTM autoriza obras da futura estação Vila Aurora, entre Perus e Jaraguá",
-      "resumo": "Ordem de serviço da Secretaria de Transportes Metropolitanos libera a construção da estação na Linha 7-Rubi, beneficiando moradores de Cidade D'Abril, Jardim Ipanema e Parque Nações Unidas.",
-      "fonte": "Subprefeitura Pirituba-Jaraguá",
-      "hora": "fim de junho",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/5570",
-      "icone": "🚆",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Tauste Supermercados abre loja em Santana com mutirão para até 700 vagas",
-      "resumo": "Rede gaúcha inaugura unidade na Avenida Braz Leme no segundo semestre, com 51 checkouts e estacionamento coberto gratuito para 662 carros. Mutirão de contratação já foi realizado na região.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "inauguração no 2º semestre",
-      "url": "https://www.diariozonanorte.com.br/gigante-do-varejo-tauste-supermercados-prepara-chegada-ao-bairro-de-santana-e-abre-mutirao-para-preencher-700-vagas/",
-      "icone": "🛒",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Geral",
-      "tag_bairro": "📍 Tucuruvi",
-      "bairro": "Tucuruvi",
-      "titulo": "Subprefeitura Santana/Tucuruvi vai ganhar unidade do Descomplica SP",
-      "resumo": "Programa municipal inspirado no Poupatempo vai oferecer mais de 350 serviços na região, com parceiros como Detran.SP, Instituto de Identificação, Sabesp e Correios. O projeto foi apresentado à comunidade em reunião aberta na Avenida Tucuruvi, 808.",
-      "fonte": "Secretaria Municipal de Inovação e Tecnologia",
-      "hora": "reunião em 11/07",
-      "url": "https://prefeitura.sp.gov.br/web/inovacao/w/noticias/279716",
-      "icone": "🏢",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Política",
-      "tag_bairro": "📍 Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Guilherme Corrêa, do Salve Periférico, toma posse como vereador suplente pela Zona Norte",
-      "resumo": "Gestor público e liderança comunitária da Brasilândia assume a cadeira de Silvinho Leite (União), afastado por 31 dias a partir de 6 de julho.",
-      "fonte": "Câmara Municipal de SP",
-      "hora": "06/07",
-      "url": "https://www.saopaulo.sp.leg.br/blog/vereadores-suplentes-tomam-posse-na-camara-municipal-de-sao-paulo-2/",
-      "icone": "🏛️",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
       "tag_categoria": "tag-edu",
       "tag_label": "Educação",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "EMEF Estação Jaraguá amplia rede municipal na Zona Norte com 600 vagas",
-      "resumo": "Unidade funciona em dois turnos e conta com sala de leitura, laboratório de informática e espaços para atividades físicas. Desde 2005, a Zona Norte ganhou 15 novas EMEFs, sete EMEIs, seis CEIs e dois CEUs, totalizando 35 novas unidades escolares.",
-      "fonte": "Secretaria Especial de Comunicação",
-      "hora": "em funcionamento",
-      "url": "https://prefeitura.sp.gov.br/web/comunicacao/w/noticias/111884",
+      "tag_bairro": "📍 Zona Norte",
+      "bairro": "Zona Norte",
+      "titulo": "Recesso escolar da rede municipal segue até 17 de julho",
+      "resumo": "Enquanto as aulas não retomam, o Recreio nas Férias segue disponível gratuitamente em CEIs e EMEIs da Zona Norte, com atividades recreativas para crianças.",
+      "fonte": "Secretaria Municipal de Educação",
+      "hora": "até 17/07",
+      "url": "#",
       "icone": "🏫",
       "icone_classe": "ic-edu"
     }
   ],
   "agenda": [
-    {
-      "dia": "11",
-      "mes": "Jul",
-      "cor_fundo": "#2E7D32",
-      "bairro": "Horto Florestal",
-      "titulo": "Festival Casa de Alice no Horto Florestal",
-      "hora": "10h às 18h",
-      "local": "Horto Florestal, Tremembé",
-      "descricao": "Mais de 90 marcas autorais de gastronomia, artesanato, moda, decoração e bem-estar, com música ao vivo e atrações para toda a família. Entrada gratuita; produtos à venda.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://revistakdea360.com.br/noticia/75100/casa-de-alice-retorna-ao-horto-florestal-nos-dias-11-e-12-de-julho-com-festa-julina"
-    },
-    {
-      "dia": "11",
-      "mes": "Jul",
-      "cor_fundo": "#E65100",
-      "bairro": "Jardim Maracanã",
-      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas",
-      "hora": "10h às 16h",
-      "local": "Sacolão da Freguesia do Ó, Av. João Paulo I, 2107 – Jardim Maracanã",
-      "descricao": "Feira gratuita de artesanato do programa municipal, com artesãos credenciados pela Prefeitura de São Paulo. Repete no dia 25/07.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://prefeitura.sp.gov.br/w/feiras-do-m%C3%A3os-e-mentes-paulistanas-levam-artesanato-a-17-pontos-da-cidade-nas-f%C3%A9rias-de-julho"
-    },
     {
       "dia": "18",
       "mes": "Jul",
@@ -211,6 +143,19 @@
     {
       "dia": "25",
       "mes": "Jul",
+      "cor_fundo": "#E65100",
+      "bairro": "Jardim Maracanã",
+      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas",
+      "hora": "10h às 16h",
+      "local": "Sacolão da Freguesia do Ó, Av. João Paulo I, 2107 – Jardim Maracanã",
+      "descricao": "Feira gratuita de artesanato do programa municipal, com artesãos credenciados pela Prefeitura de São Paulo.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/w/feiras-do-m%C3%A3os-e-mentes-paulistanas-levam-artesanato-a-17-pontos-da-cidade-nas-f%C3%A9rias-de-julho"
+    },
+    {
+      "dia": "25",
+      "mes": "Jul",
       "cor_fundo": "#00838F",
       "bairro": "Conjunto Residencial Elísio Teixeira Leite",
       "titulo": "\"O Circo da Lua\" na Biblioteca Érico Veríssimo",
@@ -237,21 +182,31 @@
   ],
   "vagas": [
     {
-      "icone": "🛒",
-      "titulo": "Diversas funções (caixa, estoque, padaria, açougue)",
-      "empresa": "Tauste Supermercados",
-      "bairro": "Santana",
-      "requisitos": "Nova loja com até 700 vagas previstas",
+      "icone": "🐾",
+      "titulo": "Promotor(a) de vendas",
+      "empresa": "Rede de petshop",
+      "bairro": "Zona Norte",
+      "requisitos": "Autônomo/PJ, veículo próprio (moto ou carro), CNH válida, ensino médio",
       "tipo": "CLT",
-      "fonte": "DiárioZonaNorte",
-      "dias_atras": "mutirão recente"
+      "fonte": "Agrobase",
+      "dias_atras": "vaga aberta em 08/07"
     },
     {
       "icone": "🐾",
-      "titulo": "Vendedor(a) segmento pet",
+      "titulo": "Vendedor(a) externo(a) pet III",
       "empresa": "Rede de petshop",
       "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo, disponibilidade para morar na região",
+      "requisitos": "Contrato efetivo (CLT), superior incompleto",
+      "tipo": "CLT",
+      "fonte": "Agrobase",
+      "dias_atras": "vaga aberta em 06/07"
+    },
+    {
+      "icone": "🐾",
+      "titulo": "Vendedor segmento pet",
+      "empresa": "Rede de petshop",
+      "bairro": "Imirim",
+      "requisitos": "Contrato efetivo, disponibilidade para morar na região (Santana, Tucuruvi, Mandaqui, Casa Verde, Imirim, Vila Guilherme)",
       "tipo": "CLT",
       "fonte": "Agrobase",
       "dias_atras": "vaga aberta em 09/07"
@@ -261,17 +216,7 @@
       "titulo": "Gerente jr. de loja pet",
       "empresa": "Rede de petshop",
       "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo",
-      "tipo": "CLT",
-      "fonte": "Agrobase",
-      "dias_atras": "vaga aberta em 08/07"
-    },
-    {
-      "icone": "🧪",
-      "titulo": "Técnico(a) de laboratório folguista",
-      "empresa": "Laboratório clínico",
-      "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo, disponibilidade de escala (região norte e leste)",
+      "requisitos": "Contrato efetivo (CLT)",
       "tipo": "CLT",
       "fonte": "Agrobase",
       "dias_atras": "vaga aberta em 08/07"
@@ -279,83 +224,75 @@
   ],
   "politica": [
     {
-      "orgao": "🏛️ Câmara Municipal de SP",
-      "bairro": "Brasilândia",
-      "titulo": "Vereador suplente Guilherme Corrêa assume cadeira representando a Zona Norte",
-      "impacto": "Liderança comunitária da Brasilândia e fundador do Salve Periférico passa a atuar no mandato de Silvinho Leite durante afastamento de 31 dias.",
-      "status": "Empossado em 06/07",
-      "fonte": "Câmara Municipal de SP"
+      "orgao": "🏞️ Subprefeitura Casa Verde/Cachoeirinha/Limão",
+      "bairro": "Limão",
+      "titulo": "Praça Agostinho Tomaselli é entregue após reforma completa",
+      "impacto": "Obra de R$ 641 mil ganhou playground emborrachado, academia ampliada, novo paisagismo e monitoramento por câmeras do Smart Sampa.",
+      "status": "Entregue em 04/07",
+      "fonte": "Subprefeitura Casa Verde/Cachoeirinha/Limão"
     },
     {
-      "orgao": "🚆 Secretaria de Transportes Metropolitanos",
-      "bairro": "Jaraguá",
-      "titulo": "Ordem de serviço autoriza construção da estação Vila Aurora na Linha 7-Rubi",
-      "impacto": "Nova estação entre Perus e Jaraguá deve melhorar o acesso de bairros como Cidade D'Abril e Parque Nações Unidas ao trem.",
-      "status": "Obra autorizada",
-      "fonte": "Subprefeitura Pirituba-Jaraguá"
+      "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
+      "bairro": "Pirituba",
+      "titulo": "Armazém Solidário amplia acesso a alimentos para famílias do CadÚnico",
+      "impacto": "Descontos de até 50% em itens naturais e orgânicos para famílias cadastradas no CadÚnico da região.",
+      "status": "Em funcionamento desde 02/07",
+      "fonte": "Subprefeitura Pirituba/Jaraguá"
     },
     {
-      "orgao": "💻 Secretaria Municipal de Inovação e Tecnologia",
-      "bairro": "Tucuruvi",
-      "titulo": "Descomplica SP chega à Subprefeitura Santana/Tucuruvi",
-      "impacto": "Unidade vai concentrar mais de 350 serviços municipais e parceiros como Detran.SP, Sabesp e Correios em um só local.",
-      "status": "Projeto apresentado à comunidade em 11/07",
-      "fonte": "Secretaria Municipal de Inovação e Tecnologia"
-    },
-    {
-      "orgao": "🛣️ Artesp / Governo do Estado de SP",
-      "bairro": "Perus",
-      "titulo": "Pedágios sobem em mais de 30 rodovias paulistas, incluindo acessos usados pela Zona Norte",
-      "impacto": "Reajuste de 4,72% (com base no IPCA) passou a valer em 1º de julho nas rodovias das 1ª e 2ª fases do Programa Estadual de Concessões, incluindo vias de acesso usadas por quem mora em Perus e Anhanguera.",
-      "status": "Em vigor desde 01/07",
-      "fonte": "Agência Brasil"
+      "orgao": "🏗️ Prefeitura de São Paulo / Subprefeitura Vila Maria/Vila Guilherme",
+      "bairro": "Vila Medeiros",
+      "titulo": "Investimentos previstos incluem UBS, reforma do Hospital Vermelhinho e dois novos CEUs",
+      "impacto": "Estão planejados a construção da UBS Jardim Julieta, a revitalização do Hospital Municipal Vereador José Storopolli (Vermelhinho) e a criação de CEUs no Parque Novo Mundo e na Vila Medeiros.",
+      "status": "Investimentos previstos",
+      "fonte": "Prefeitura de São Paulo"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
       "emoji": "🥶",
-      "titulo": "Defesa Civil segue em atenção para frente fria e queda de temperatura",
-      "desc": "Desde 03/07, o estado de atenção da Defesa Civil aponta mínimas de até 13°C e ventos mais intensos em São Paulo, com clima típico de inverno.",
-      "meta": "Defesa Civil de São Paulo"
+      "titulo": "Governo de SP ativa Abrigo Solidário no Metrô por causa da onda de frio",
+      "desc": "O acolhimento na Estação Pedro II (Linha 3-Vermelha) funciona das 19h de segunda (13) às 8h de quinta (16), com colchões, cobertores e alimentação. Mínimas na Grande São Paulo podem chegar a 8°C entre terça e quinta.",
+      "meta": "Governo do Estado de SP / Defesa Civil"
+    },
+    {
+      "tipo": "info",
+      "emoji": "🚨",
+      "titulo": "Rocam apreende mais de 2,6 mil porções de drogas na Zona Norte",
+      "desc": "Ação do 43º Batalhão de Polícia Militar Metropolitano, na sexta-feira (10), resultou também na apreensão de um revólver calibre .38 com numeração suprimida.",
+      "meta": "Polícia Militar do Estado de São Paulo"
     },
     {
       "tipo": "neutro",
       "emoji": "🏫",
       "titulo": "Recesso escolar da rede municipal segue até 17 de julho",
-      "desc": "Aulas retomam após o período de férias; o Recreio nas Férias segue disponível gratuitamente em CEIs e EMEIs da Zona Norte.",
+      "desc": "O Recreio nas Férias segue disponível gratuitamente em CEIs e EMEIs da Zona Norte enquanto as aulas não retomam.",
       "meta": "Secretaria Municipal de Educação"
     },
     {
-      "tipo": "ok",
-      "emoji": "🏥",
-      "titulo": "Zona Norte ganha duas novas UBSs na Freguesia do Ó/Brasilândia",
-      "desc": "UBS Santo Dias e UBS Jardim Damasceno, a 472ª e 473ª unidades da rede municipal, foram entregues em 03/07.",
-      "meta": "Secretaria Municipal da Saúde"
-    },
-    {
       "tipo": "info",
-      "emoji": "🛣️",
-      "titulo": "Pedágios ficaram mais caros desde 1º de julho",
-      "desc": "Reajuste de 4,72% atinge mais de 30 rodovias paulistas, incluindo acessos usados por moradores de Perus e Anhanguera.",
-      "meta": "Agência Brasil"
+      "emoji": "💼",
+      "titulo": "Cate abre julho com mais de 1.700 vagas na Capital",
+      "desc": "A rede tem 8 unidades fixas na Zona Norte (Perus, Pirituba, Jaraguá, Santana/Tucuruvi, Casa Verde, Vila Maria/Vila Guilherme, Freguesia do Ó/Brasilândia e Jaçanã/Tremembé), com salários de R$ 1.069 a R$ 28.423 em áreas como saúde, comércio, logística e tecnologia.",
+      "meta": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🎪",
-      "titulo": "Festival Casa de Alice no Horto Florestal",
-      "info": "11 e 12/07 · 10h às 18h · Horto Florestal (Tremembé) · Entrada gratuita"
+      "emoji": "📖",
+      "titulo": "\"Temos Vagas\" na Biblioteca José Mauro de Vasconcelos",
+      "info": "18/07 · 14h · Parque Edu Chaves · Gratuito"
     },
     {
-      "emoji": "🧵",
-      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas",
-      "info": "11/07 · 10h às 16h · Sacolão da Freguesia do Ó (Jardim Maracanã) · Gratuito"
+      "emoji": "🎬",
+      "titulo": "Cinema no Palácio Florestal",
+      "info": "18/07 · Horto Florestal (Tremembé) · Gratuito"
     },
     {
-      "emoji": "🏫",
-      "titulo": "Recreio nas Férias na rede municipal",
-      "info": "Até 17/07 · CEIs e EMEIs da Zona Norte · Gratuito"
+      "emoji": "📚",
+      "titulo": "Apresentação na Biblioteca Sylvia Orthof",
+      "info": "19/07 · 11h · Tucuruvi · Gratuito"
     }
   ]
 }
