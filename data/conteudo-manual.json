@@ -6,71 +6,99 @@
       "pill": "🚨 Segurança",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Zona Norte",
-      "bairro": "Zona Norte",
-      "titulo": "Rocam apreende mais de 2,6 mil porções de drogas e revólver com numeração suprimida na Zona Norte",
-      "resumo": "Equipes da Rocam do 43º Batalhão de Polícia Militar Metropolitano notaram forte odor de maconha durante patrulhamento de rotina e, ao vistoriar o imóvel, encontraram 1,7 mil porções de cocaína e 969 de maconha, além de um revólver calibre .38 com numeração suprimida escondido atrás de uma geladeira. Um homem foi preso e levado ao 73º Distrito Policial.",
+      "tag_bairro": "📍 Jardim Mutinga",
+      "bairro": "Jardim Mutinga",
+      "titulo": "PM prende homem com mais de mil porções de drogas no Jardim Mutinga",
+      "resumo": "Equipes do 49º Batalhão de Polícia Militar Metropolitano abordaram um homem em atitude suspeita durante patrulhamento no Jardim Mutinga, na noite de sábado (11). Na mochila que carregava foram encontradas 491 porções de maconha, 372 de crack, 311 de cocaína e 11 frascos de lança-perfume, somando mais de 1.170 porções. O suspeito foi levado ao 33º Distrito Policial e autuado por tráfico de drogas.",
       "fonte": "Fato Paulista",
-      "hora": "10/07",
-      "url": "https://fatopaulista.com.br/policia-militar-apreensao-drogas-zona-norte-sp/",
+      "hora": "13/07",
+      "url": "https://fatopaulista.com.br/apreensao-drogas-prisao-zona-norte-sao-paulo/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Alerta",
+      "tag_bairro": "📍 Zona Norte",
+      "bairro": "Zona Norte",
+      "titulo": "Defesa Civil mantém estado de alerta para baixas temperaturas na cidade",
+      "resumo": "Em vigor desde domingo (12), o alerta da Defesa Civil Municipal, conforme a Portaria 802/2025, aponta previsão de mínimas próximas a 9°C na Grande São Paulo ao longo da semana, com a chegada de uma forte massa de ar frio.",
+      "fonte": "Prefeitura de São Paulo / Defesa Civil",
+      "hora": "12/07",
+      "url": "https://prefeitura.sp.gov.br/w/noticia/defesa-civil-municipal-mantem-toda-a-cidade-em-estado-de-alerta-para-baixas-temperaturas",
+      "icone": "🥶",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Limão",
-      "bairro": "Limão",
-      "titulo": "Praça Agostinho Tomaselli é entregue revitalizada no Limão",
-      "resumo": "Após obra iniciada em janeiro, a praça localizada nas esquinas da rua Dona Estela Borges e Sebastião Henriques foi entregue à população no último sábado (4/07). O espaço ganhou alamedas com piso epóxi, playground emborrachado e cercado, academia ampliada, novo paisagismo e monitoramento por câmeras do Smart Sampa. A obra custou R$ 641 mil.",
-      "fonte": "Subprefeitura Casa Verde/Cachoeirinha/Limão",
-      "hora": "06/07",
-      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/no-distrito-do-lim%C3%A3o-mais-uma-pra%C3%A7a-%C3%A9-revitalizada.",
-      "icone": "🏞️",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Conselho Tutelar da Casa Verde/Cachoeirinha muda para nova sede",
+      "resumo": "Antes instalado provisoriamente na sede da subprefeitura, o Conselho Tutelar da Casa Verde/Cachoeirinha passou a atender na Rua Buquira, 35, no Casa Verde, a partir de segunda-feira (7).",
+      "fonte": "Prefeitura de São Paulo / Subprefeitura Casa Verde",
+      "hora": "07/07",
+      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/49307",
+      "icone": "🏛️",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Meio Ambiente",
-      "tag_bairro": "📍 Conjunto Habitacional Turística",
-      "bairro": "Conjunto Habitacional Turística",
-      "titulo": "Décimo EcoEnel é inaugurado na Praça Vila Nova Esperança",
-      "resumo": "O novo ponto de troca de materiais recicláveis por descontos na conta de energia foi inaugurado no Conjunto Habitacional Turística, em Jaraguá, ampliando a rede de EcoEnel na região.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
-      "hora": "03/07",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-d%C3%A9cimo-ecoenel-inaugurado-nesta-quinta-feira-03/07-na-pra%C3%A7a-vila-nova-esperan%C3%A7a",
-      "icone": "♻️",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Armazém Solidário chega a Pirituba/Jaraguá com descontos de até 50% em alimentos",
-      "resumo": "Programa da Prefeitura de São Paulo facilita o acesso a alimentos saudáveis para famílias cadastradas no CadÚnico, com foco em itens naturais e orgânicos, incentivando hábitos alimentares mais equilibrados na região.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Vila Maria Baixa",
+      "bairro": "Vila Maria Baixa",
+      "titulo": "Prefeitura entrega 29ª UPA da cidade na Vila Maria Baixa",
+      "resumo": "A UPA III Vila Maria Baixa, no Parque Novo Mundo, passou a funcionar 24 horas com atendimento de clínica geral, pediatria, psiquiatria, ortopedia e odontologia de urgência. A unidade recebeu R$ 14,2 milhões em obras e deve beneficiar mais de 114 mil moradores da região, com atendimentos mensais saltando de 12 mil para 20 mil.",
+      "fonte": "Prefeitura de São Paulo / Secretaria Municipal da Saúde",
       "hora": "02/07",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-armaz%C3%A9m-solid%C3%A1rio-iniciativa-criada-pela-prefeitura-de-s%C3%A3o-paulo-que-visa-facilitar-o-acesso-a-alimentos-saud%C3%A1veis-para-fam%C3%ADlias-cadastradas-no-cad%C3%BAnico.",
-      "icone": "🛒",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/noticias/368844",
+      "icone": "🏥",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Obras de pavimentação avançam em vias de terra de Perus/Anhanguera",
+      "resumo": "Dentro do programa Prefeitura Presente, a Subprefeitura de Perus/Anhanguera pavimenta a Rua Padre Josino (480 metros, R$ 1,9 milhão) e outras vias, como Rua Fortaleza, Rua dos Lisiantos e Rua Magno Africano, com previsão de conclusão ainda em julho.",
+      "fonte": "Jornal Estação",
+      "hora": "conclusão prevista para julho",
+      "url": "https://www.jornalestacao.com.br/2026/05/26/prefeito-vistoria-obras-de-pavimentacao-em-vias-de-terra-em-perus-anhanguera-durante-o-prefeitura-presente/",
+      "icone": "🚧",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Linha 6-Laranja segue em operação assistida e gratuita entre João Paulo I e Perdizes",
-      "resumo": "Seis estações — João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes — seguem funcionando em teste gratuito das 10h às 15h, de segunda a sexta. A extensão até Brasilândia é esperada para outubro.",
-      "fonte": "Diário do Transporte",
-      "hora": "operação desde 03/07",
-      "url": "https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/",
-      "icone": "🚇",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "CET vai monitorar trânsito no Campo de Marte para corrida no domingo",
+      "resumo": "Para a etapa Santana do Circuito Caixa da Cidadania, no domingo (23/07), das 5h30 às 10h, a CET vai monitorar as imediações do Campo de Marte. A Ciclofaixa de Lazer da Zona Norte não será ativada entre a Av. Braz Leme e a Av. General Ataliba Leonel no mesmo período.",
+      "fonte": "Prefeitura de São Paulo / CET",
+      "hora": "evento em 23/07",
+      "url": "https://prefeitura.sp.gov.br/web/mobilidade/w/noticias/238053",
+      "icone": "🚦",
       "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Cate abre vagas de costura com prioridade para quem mora na Casa Verde e Freguesia do Ó",
+      "resumo": "O Cate tem cinco vagas para costureiras com conhecimento em máquina overlock e reta, salários de até R$ 2.200, com preferência para candidatos com fácil acesso aos bairros Casa Verde e Freguesia do Ó.",
+      "fonte": "Jornal O Dia SP / Cate",
+      "hora": "vagas em aberto",
+      "url": "https://www.jornalodiasp.com.br/cate-oferece-mais-de-1-600-vagas-de-emprego-com-salarios-de-ate-r-58-mil/",
+      "icone": "🧵",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
@@ -122,7 +150,7 @@
       "titulo": "Apresentação na Biblioteca Sylvia Orthof",
       "hora": "11h",
       "local": "Biblioteca Sylvia Orthof, Avenida Tucuruvi, 808 – Tucuruvi",
-      "descricao": "Atividade gratuita da programação Biblioteca Viva.",
+      "descricao": "Espetáculo infantil de teatro, malabarismo, comédia, dança e rap, parte da programação Biblioteca Viva.",
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
@@ -141,27 +169,14 @@
       "url": "https://saopauloparacriancas.com.br/ferias-julho-sesc-santana/"
     },
     {
-      "dia": "25",
+      "dia": "23",
       "mes": "Jul",
       "cor_fundo": "#E65100",
-      "bairro": "Jardim Maracanã",
-      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas",
-      "hora": "10h às 16h",
-      "local": "Sacolão da Freguesia do Ó, Av. João Paulo I, 2107 – Jardim Maracanã",
-      "descricao": "Feira gratuita de artesanato do programa municipal, com artesãos credenciados pela Prefeitura de São Paulo.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://prefeitura.sp.gov.br/w/feiras-do-m%C3%A3os-e-mentes-paulistanas-levam-artesanato-a-17-pontos-da-cidade-nas-f%C3%A9rias-de-julho"
-    },
-    {
-      "dia": "25",
-      "mes": "Jul",
-      "cor_fundo": "#00838F",
-      "bairro": "Conjunto Residencial Elísio Teixeira Leite",
-      "titulo": "\"O Circo da Lua\" na Biblioteca Érico Veríssimo",
-      "hora": "14h",
-      "local": "Biblioteca Érico Veríssimo, Conjunto Residencial Elísio Teixeira Leite",
-      "descricao": "Atividade gratuita da programação Biblioteca Viva.",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Programação de férias na Biblioteca Afonso Schmidt",
+      "hora": "9h",
+      "local": "Biblioteca Afonso Schmidt, Av. Elísio Teixeira Leite, 1470 – Freguesia do Ó/Brasilândia",
+      "descricao": "Atividade gratuita da programação Biblioteca Viva de julho.",
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
@@ -169,7 +184,7 @@
     {
       "dia": "30",
       "mes": "Jul",
-      "cor_fundo": "#E65100",
+      "cor_fundo": "#00838F",
       "bairro": "Pirituba",
       "titulo": "Apresentação na Biblioteca Brito Broca",
       "hora": "14h",
@@ -183,68 +198,86 @@
   "vagas": [
     {
       "icone": "🐾",
-      "titulo": "Promotor(a) de vendas",
+      "titulo": "Vendedor(a) segmento pet",
       "empresa": "Rede de petshop",
-      "bairro": "Zona Norte",
-      "requisitos": "Autônomo/PJ, veículo próprio (moto ou carro), CNH válida, ensino médio",
-      "tipo": "CLT",
-      "fonte": "Agrobase",
-      "dias_atras": "vaga aberta em 08/07"
-    },
-    {
-      "icone": "🐾",
-      "titulo": "Vendedor(a) externo(a) pet III",
-      "empresa": "Rede de petshop",
-      "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo (CLT), superior incompleto",
-      "tipo": "CLT",
-      "fonte": "Agrobase",
-      "dias_atras": "vaga aberta em 06/07"
-    },
-    {
-      "icone": "🐾",
-      "titulo": "Vendedor segmento pet",
-      "empresa": "Rede de petshop",
-      "bairro": "Imirim",
-      "requisitos": "Contrato efetivo, disponibilidade para morar na região (Santana, Tucuruvi, Mandaqui, Casa Verde, Imirim, Vila Guilherme)",
+      "bairro": "Vila Guilherme",
+      "requisitos": "Contrato efetivo (CLT), disponibilidade para morar na região (Santana, Tucuruvi, Mandaqui, Casa Verde, Imirim, Vila Guilherme)",
       "tipo": "CLT",
       "fonte": "Agrobase",
       "dias_atras": "vaga aberta em 09/07"
+    },
+    {
+      "icone": "🧪",
+      "titulo": "Técnico(a) de laboratório folguista",
+      "empresa": "Rede de laboratórios",
+      "bairro": "Zona Norte",
+      "requisitos": "Contrato efetivo (CLT), formação em Biologia, Biomedicina ou Técnico em Análises Clínicas",
+      "tipo": "CLT",
+      "fonte": "Agrobase",
+      "dias_atras": "vaga aberta em 08/07"
     },
     {
       "icone": "🐾",
       "titulo": "Gerente jr. de loja pet",
       "empresa": "Rede de petshop",
       "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo (CLT)",
+      "requisitos": "Contrato efetivo (CLT), formação em Administração, Biologia, Marketing ou Veterinária",
       "tipo": "CLT",
       "fonte": "Agrobase",
       "dias_atras": "vaga aberta em 08/07"
+    },
+    {
+      "icone": "🧵",
+      "titulo": "Costureira(o)",
+      "empresa": "Confecção (via Cate)",
+      "bairro": "Casa Verde",
+      "requisitos": "Conhecimento em máquina overlock e reta, confecção variada, salário de até R$ 2.200",
+      "tipo": "CLT",
+      "fonte": "Cate / Jornal O Dia SP",
+      "dias_atras": "vagas em aberto"
+    },
+    {
+      "icone": "🔧",
+      "titulo": "Funileiro / mecânico eletricista",
+      "empresa": "Oficinas do setor automotivo",
+      "bairro": "Zona Norte",
+      "requisitos": "29 vagas para funileiro, trocador de óleo, mecânico eletricista, pintor e engenheiro mecânico; salários de R$ 2.250 a R$ 3.587",
+      "tipo": "CLT",
+      "fonte": "Cate",
+      "dias_atras": "vagas em aberto"
     }
   ],
   "politica": [
     {
-      "orgao": "🏞️ Subprefeitura Casa Verde/Cachoeirinha/Limão",
-      "bairro": "Limão",
-      "titulo": "Praça Agostinho Tomaselli é entregue após reforma completa",
-      "impacto": "Obra de R$ 641 mil ganhou playground emborrachado, academia ampliada, novo paisagismo e monitoramento por câmeras do Smart Sampa.",
-      "status": "Entregue em 04/07",
-      "fonte": "Subprefeitura Casa Verde/Cachoeirinha/Limão"
+      "orgao": "🏗️ Subprefeitura Perus/Anhanguera",
+      "bairro": "Anhanguera",
+      "titulo": "Região de Perus/Anhanguera recebe R$ 39,64 milhões em investimentos previstos para 2026",
+      "impacto": "Recursos para asfalto, recapeamento, pavimentação, ampliação de equipamentos de saúde e educação, e obras de drenagem contra enchentes, dentro do programa Prefeitura Presente.",
+      "status": "Investimentos em andamento",
+      "fonte": "Prefeitura de São Paulo"
     },
     {
       "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
-      "bairro": "Pirituba",
-      "titulo": "Armazém Solidário amplia acesso a alimentos para famílias do CadÚnico",
-      "impacto": "Descontos de até 50% em itens naturais e orgânicos para famílias cadastradas no CadÚnico da região.",
-      "status": "Em funcionamento desde 02/07",
-      "fonte": "Subprefeitura Pirituba/Jaraguá"
+      "bairro": "São Domingos",
+      "titulo": "Prefeitura Presente leva R$ 490 milhões em investimentos a Pirituba, Jaraguá, São Domingos e Taipas",
+      "impacto": "Retomada das obras da ligação viária Pirituba-Lapa (R$ 209,5 milhões), reforma do Centro Educacional Esportivo Geraldo José de Almeida (R$ 16 milhões) e entrega de 50 escrituras definitivas a moradores do Conjunto Residencial Elísio Teixeira Leite.",
+      "status": "Anunciado",
+      "fonte": "Prefeitura de São Paulo"
     },
     {
-      "orgao": "🏗️ Prefeitura de São Paulo / Subprefeitura Vila Maria/Vila Guilherme",
-      "bairro": "Vila Medeiros",
-      "titulo": "Investimentos previstos incluem UBS, reforma do Hospital Vermelhinho e dois novos CEUs",
-      "impacto": "Estão planejados a construção da UBS Jardim Julieta, a revitalização do Hospital Municipal Vereador José Storopolli (Vermelhinho) e a criação de CEUs no Parque Novo Mundo e na Vila Medeiros.",
-      "status": "Investimentos previstos",
+      "orgao": "🌳 Subprefeitura Casa Verde/Cachoeirinha/Limão",
+      "bairro": "Jardim Antártica",
+      "titulo": "Orçamento Cidadão 2026 prioriza ecoponto, recuperação do Córrego Guaraú e UBS em Jardim Peri Alto",
+      "impacto": "Entre as propostas eleitas pelo Conselho Participativo Municipal está a revitalização de espaço municipal no Jardim Antártica, com projetos ambientais, educacionais e de sustentabilidade.",
+      "status": "2ª etapa concluída em 06/07",
+      "fonte": "Prefeitura de São Paulo / Subprefeitura Casa Verde"
+    },
+    {
+      "orgao": "🏥 Secretaria Municipal da Saúde",
+      "bairro": "Vila Maria Baixa",
+      "titulo": "29ª UPA da cidade é entregue na Vila Maria Baixa",
+      "impacto": "Investimento de R$ 14,2 milhões deve beneficiar mais de 114 mil moradores, com atendimentos mensais subindo de 12 mil para 20 mil consultas.",
+      "status": "Entregue em 02/07",
       "fonte": "Prefeitura de São Paulo"
     }
   ],
@@ -252,15 +285,15 @@
     {
       "tipo": "info",
       "emoji": "🥶",
-      "titulo": "Governo de SP ativa Abrigo Solidário no Metrô por causa da onda de frio",
-      "desc": "O acolhimento na Estação Pedro II (Linha 3-Vermelha) funciona das 19h de segunda (13) às 8h de quinta (16), com colchões, cobertores e alimentação. Mínimas na Grande São Paulo podem chegar a 8°C entre terça e quinta.",
-      "meta": "Governo do Estado de SP / Defesa Civil"
+      "titulo": "Defesa Civil mantém alerta para baixas temperaturas",
+      "desc": "Mínimas podem chegar a 9°C na Grande São Paulo ao longo da semana, com a chegada de uma nova frente fria.",
+      "meta": "Defesa Civil Municipal (Portaria 802/2025)"
     },
     {
       "tipo": "info",
       "emoji": "🚨",
-      "titulo": "Rocam apreende mais de 2,6 mil porções de drogas na Zona Norte",
-      "desc": "Ação do 43º Batalhão de Polícia Militar Metropolitano, na sexta-feira (10), resultou também na apreensão de um revólver calibre .38 com numeração suprimida.",
+      "titulo": "PM apreende mais de mil porções de drogas no Jardim Mutinga",
+      "desc": "Ação do 49º Batalhão de Polícia Militar Metropolitano resultou na prisão de um homem com maconha, crack, cocaína e lança-perfume, no sábado (11).",
       "meta": "Polícia Militar do Estado de São Paulo"
     },
     {
@@ -273,9 +306,16 @@
     {
       "tipo": "info",
       "emoji": "💼",
-      "titulo": "Cate abre julho com mais de 1.700 vagas na Capital",
-      "desc": "A rede tem 8 unidades fixas na Zona Norte (Perus, Pirituba, Jaraguá, Santana/Tucuruvi, Casa Verde, Vila Maria/Vila Guilherme, Freguesia do Ó/Brasilândia e Jaçanã/Tremembé), com salários de R$ 1.069 a R$ 28.423 em áreas como saúde, comércio, logística e tecnologia.",
+      "titulo": "Cate tem mais de 1.600 vagas de emprego na Capital",
+      "desc": "Salários variam de R$ 713 a R$ 5.834, com oportunidades em costura, mercado automotivo e cargos operacionais, incluindo vagas na Zona Norte.",
       "meta": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho"
+    },
+    {
+      "tipo": "info",
+      "emoji": "💉",
+      "titulo": "37 UBS da Zona Norte aplicam vacina contra febre amarela",
+      "desc": "Unidades seguem em esquema preventivo de vacinação; recomenda-se manter a caderneta em dia, especialmente durante as férias.",
+      "meta": "Secretaria Municipal da Saúde"
     }
   ],
   "fim_de_semana": [
@@ -293,6 +333,11 @@
       "emoji": "📚",
       "titulo": "Apresentação na Biblioteca Sylvia Orthof",
       "info": "19/07 · 11h · Tucuruvi · Gratuito"
+    },
+    {
+      "emoji": "♻️",
+      "titulo": "Atividades gratuitas no Sesc Casa Verde",
+      "info": "18/07 · 16h · Casa Verde · Gratuito"
     }
   ]
 }
