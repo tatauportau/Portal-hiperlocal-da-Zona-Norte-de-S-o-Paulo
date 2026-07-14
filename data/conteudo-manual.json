@@ -6,56 +6,56 @@
       "pill": "🚨 Segurança",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Jardim Mutinga",
-      "bairro": "Jardim Mutinga",
-      "titulo": "PM prende homem com mais de mil porções de drogas no Jardim Mutinga",
-      "resumo": "Equipes do 49º Batalhão de Polícia Militar Metropolitano abordaram um homem em atitude suspeita durante patrulhamento no Jardim Mutinga, na noite de sábado (11). Na mochila que carregava foram encontradas 491 porções de maconha, 372 de crack, 311 de cocaína e 11 frascos de lança-perfume, somando mais de 1.170 porções. O suspeito foi levado ao 33º Distrito Policial e autuado por tráfico de drogas.",
+      "tag_bairro": "📍 Zona Norte",
+      "bairro": "Zona Norte",
+      "titulo": "PM apreende mais de 2,6 mil porções de drogas e revólver com numeração raspada na Zona Norte",
+      "resumo": "Equipes da Rocam do 43º Batalhão de Polícia Militar Metropolitano encontraram, dentro de uma residência na Zona Norte, um estoque de 1,7 mil porções de cocaína e 969 de maconha, além de um revólver calibre .38 com a numeração de série suprimida, escondido atrás de uma geladeira. A ação ocorreu na sexta-feira (10) e o suspeito foi levado ao 73º Distrito Policial.",
       "fonte": "Fato Paulista",
-      "hora": "13/07",
-      "url": "https://fatopaulista.com.br/apreensao-drogas-prisao-zona-norte-sao-paulo/",
+      "hora": "10/07",
+      "url": "https://fatopaulista.com.br/policia-militar-apreensao-drogas-zona-norte-sp/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Alerta",
-      "tag_bairro": "📍 Zona Norte",
-      "bairro": "Zona Norte",
-      "titulo": "Defesa Civil mantém estado de alerta para baixas temperaturas na cidade",
-      "resumo": "Em vigor desde domingo (12), o alerta da Defesa Civil Municipal, conforme a Portaria 802/2025, aponta previsão de mínimas próximas a 9°C na Grande São Paulo ao longo da semana, com a chegada de uma forte massa de ar frio.",
-      "fonte": "Prefeitura de São Paulo / Defesa Civil",
-      "hora": "12/07",
-      "url": "https://prefeitura.sp.gov.br/w/noticia/defesa-civil-municipal-mantem-toda-a-cidade-em-estado-de-alerta-para-baixas-temperaturas",
-      "icone": "🥶",
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Mandaqui",
+      "bairro": "Mandaqui",
+      "titulo": "Diretor do Conjunto Hospitalar do Mandaqui fala sobre a unidade em entrevista exclusiva",
+      "resumo": "O jornal Semanário da Zona Norte publicou entrevista exclusiva com o Dr. Vanderlei de Almeida Rosa, diretor do Conjunto Hospitalar do Mandaqui, hospital geral e de ensino que funciona como referência de trauma para a Zona Norte.",
+      "fonte": "Serra da Cantareira Hoje",
+      "hora": "07/07",
+      "url": "https://www.serradacantareirahoje.com/2026/07/07/156259/",
+      "icone": "🏥",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Conselho Tutelar da Casa Verde/Cachoeirinha muda para nova sede",
-      "resumo": "Antes instalado provisoriamente na sede da subprefeitura, o Conselho Tutelar da Casa Verde/Cachoeirinha passou a atender na Rua Buquira, 35, no Casa Verde, a partir de segunda-feira (7).",
-      "fonte": "Prefeitura de São Paulo / Subprefeitura Casa Verde",
-      "hora": "07/07",
-      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/49307",
-      "icone": "🏛️",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Pirituba/Jaraguá ganha o décimo EcoEnel da subprefeitura, na Praça Vila Nova Esperança",
+      "resumo": "Inaugurado em 3 de julho, o novo ponto EcoEnel permite à população reciclar materiais recicláveis, obter descontos na conta de energia elétrica e contribuir para a sustentabilidade da região de Pirituba.",
+      "fonte": "Subprefeitura Pirituba/Jaraguá",
+      "hora": "03/07",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-d%C3%A9cimo-ecoenel-inaugurado-nesta-quinta-feira-03/07-na-pra%C3%A7a-vila-nova-esperan%C3%A7a",
+      "icone": "♻️",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Maria Baixa",
-      "bairro": "Vila Maria Baixa",
-      "titulo": "Prefeitura entrega 29ª UPA da cidade na Vila Maria Baixa",
-      "resumo": "A UPA III Vila Maria Baixa, no Parque Novo Mundo, passou a funcionar 24 horas com atendimento de clínica geral, pediatria, psiquiatria, ortopedia e odontologia de urgência. A unidade recebeu R$ 14,2 milhões em obras e deve beneficiar mais de 114 mil moradores da região, com atendimentos mensais saltando de 12 mil para 20 mil.",
-      "fonte": "Prefeitura de São Paulo / Secretaria Municipal da Saúde",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Armazém Solidário chega a Pirituba/Jaraguá com descontos de até 50% para famílias do CadÚnico",
+      "resumo": "A iniciativa da Prefeitura de São Paulo facilita o acesso a alimentos saudáveis, com descontos de até 50% em produtos naturais e orgânicos para famílias inscritas no CadÚnico da região.",
+      "fonte": "Subprefeitura Pirituba/Jaraguá",
       "hora": "02/07",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/noticias/368844",
-      "icone": "🏥",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-armaz%C3%A9m-solid%C3%A1rio-iniciativa-criada-pela-prefeitura-de-s%C3%A3o-paulo-que-visa-facilitar-o-acesso-a-alimentos-saud%C3%A1veis-para-fam%C3%ADlias-cadastradas-no-cad%C3%BAnico.",
+      "icone": "🛒",
       "icone_classe": "ic-eco"
     },
     {
@@ -64,12 +64,40 @@
       "tag_label": "Zeladoria",
       "tag_bairro": "📍 Perus",
       "bairro": "Perus",
-      "titulo": "Obras de pavimentação avançam em vias de terra de Perus/Anhanguera",
-      "resumo": "Dentro do programa Prefeitura Presente, a Subprefeitura de Perus/Anhanguera pavimenta a Rua Padre Josino (480 metros, R$ 1,9 milhão) e outras vias, como Rua Fortaleza, Rua dos Lisiantos e Rua Magno Africano, com previsão de conclusão ainda em julho.",
-      "fonte": "Jornal Estação",
-      "hora": "conclusão prevista para julho",
-      "url": "https://www.jornalestacao.com.br/2026/05/26/prefeito-vistoria-obras-de-pavimentacao-em-vias-de-terra-em-perus-anhanguera-durante-o-prefeitura-presente/",
+      "titulo": "Audiência pública discute drenagem dos Ribeirões Perus e Pinheirinhos",
+      "resumo": "A Prefeitura de São Paulo, por meio da Siurb, realizou audiência pública para colher contribuições da população para o Caderno de Drenagem da bacia hidrográfica dos Ribeirões Perus e Pinheirinhos, na região de Perus/Anhanguera.",
+      "fonte": "Subprefeitura Perus/Anhanguera",
+      "hora": "03/07",
+      "url": "https://prefeitura.sp.gov.br/web/perus/w/audi%C3%AAncia-p%C3%BAblica-do-caderno-de-drenagem-dos-ribeir%C3%B5es-perus-e-pinheirinhos",
       "icone": "🚧",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Brasilândia",
+      "bairro": "Brasilândia",
+      "titulo": "Cursos gratuitos de qualificação profissional começam hoje na Zona Norte",
+      "resumo": "O Fundo Social de São Paulo (Fussp) abre hoje (14) turmas gratuitas de qualificação em gastronomia, beleza, tecnologia, mecânica, elétrica e cuidados com idosos e crianças, distribuídas por instituições da Zona Norte, entre elas o B3 Brasilândia. As aulas seguem até 24/07 e as inscrições podem ser feitas em cursofussp.sp.gov.br até o segundo dia de aula.",
+      "fonte": "Fato Paulista",
+      "hora": "14/07",
+      "url": "https://fatopaulista.com.br/qualificacao-profissional-gratuita-sao-paulo/",
+      "icone": "🎓",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Zona Norte",
+      "bairro": "Zona Norte",
+      "titulo": "Massa de ar polar mantém mínimas de até 8°C na Grande São Paulo",
+      "resumo": "Uma intensa massa de ar frio de origem polar mantém a Região Metropolitana de São Paulo com mínimas próximas a 8°C ao longo desta semana, favorecendo nevoeiros pela manhã. A Defesa Civil recomenda cuidados redobrados com crianças, idosos, pessoas em situação de rua e animais de estimação.",
+      "fonte": "Fato Paulista",
+      "hora": "13/07",
+      "url": "https://fatopaulista.com.br/frio-sp-massa-ar-polar-temperaturas/",
+      "icone": "🥶",
       "icone_classe": "ic-eco"
     },
     {
@@ -90,29 +118,15 @@
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Cate abre vagas de costura com prioridade para quem mora na Casa Verde e Freguesia do Ó",
-      "resumo": "O Cate tem cinco vagas para costureiras com conhecimento em máquina overlock e reta, salários de até R$ 2.200, com preferência para candidatos com fácil acesso aos bairros Casa Verde e Freguesia do Ó.",
-      "fonte": "Jornal O Dia SP / Cate",
-      "hora": "vagas em aberto",
-      "url": "https://www.jornalodiasp.com.br/cate-oferece-mais-de-1-600-vagas-de-emprego-com-salarios-de-ate-r-58-mil/",
-      "icone": "🧵",
+      "tag_bairro": "📍 Parque Novo Mundo",
+      "bairro": "Parque Novo Mundo",
+      "titulo": "Cate Móvel leva vagas de emprego ao Parque Novo Mundo nesta semana",
+      "resumo": "O Cate Móvel esteve na Rua Giusepe Marino, 90, no Parque Novo Mundo, no dia 13/07, e retorna no dia 15/07 à Associação de Moradores do Parque Novo Mundo (Rua Jacarta, 4), oferecendo vagas de emprego, orientação para currículo e informações sobre cursos de qualificação. É necessário levar RG, CPF e carteira de trabalho.",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "hora": "13 e 15/07",
+      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/cate-m%C3%B3vel-passar%C3%A1-neste-m%C3%AAs-pelo-parque-novo-mundo-itaim-paulista-com-oportunidades-de-emprego",
+      "icone": "💼",
       "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Educação",
-      "tag_bairro": "📍 Zona Norte",
-      "bairro": "Zona Norte",
-      "titulo": "Recesso escolar da rede municipal segue até 17 de julho",
-      "resumo": "Enquanto as aulas não retomam, o Recreio nas Férias segue disponível gratuitamente em CEIs e EMEIs da Zona Norte, com atividades recreativas para crianças.",
-      "fonte": "Secretaria Municipal de Educação",
-      "hora": "até 17/07",
-      "url": "#",
-      "icone": "🏫",
-      "icone_classe": "ic-edu"
     }
   ],
   "agenda": [
@@ -182,14 +196,14 @@
       "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
     },
     {
-      "dia": "30",
+      "dia": "25",
       "mes": "Jul",
-      "cor_fundo": "#00838F",
-      "bairro": "Pirituba",
-      "titulo": "Apresentação na Biblioteca Brito Broca",
+      "cor_fundo": "#5D4037",
+      "bairro": "Parada de Taipas",
+      "titulo": "Apresentação na Biblioteca Érico Veríssimo",
       "hora": "14h",
-      "local": "Biblioteca Brito Broca, Av. Mutinga, 1425 – Pirituba",
-      "descricao": "Atividade gratuita da programação Biblioteca Viva.",
+      "local": "Biblioteca Érico Veríssimo, Rua Diógenes Dourado, 101 – Conjunto Residencial Elísio Teixeira Leite (Parada de Taipas)",
+      "descricao": "Atividade gratuita da programação Biblioteca Viva de julho.",
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/cultura/w/programa%C3%A7%C3%A3o-cultural-biblioteca-viva-de-julho"
@@ -217,16 +231,6 @@
       "dias_atras": "vaga aberta em 08/07"
     },
     {
-      "icone": "🐾",
-      "titulo": "Gerente jr. de loja pet",
-      "empresa": "Rede de petshop",
-      "bairro": "Zona Norte",
-      "requisitos": "Contrato efetivo (CLT), formação em Administração, Biologia, Marketing ou Veterinária",
-      "tipo": "CLT",
-      "fonte": "Agrobase",
-      "dias_atras": "vaga aberta em 08/07"
-    },
-    {
       "icone": "🧵",
       "titulo": "Costureira(o)",
       "empresa": "Confecção (via Cate)",
@@ -245,32 +249,42 @@
       "tipo": "CLT",
       "fonte": "Cate",
       "dias_atras": "vagas em aberto"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Atendimento do Cate Móvel no Parque Novo Mundo",
+      "empresa": "Cate Móvel / Prefeitura de São Paulo",
+      "bairro": "Parque Novo Mundo",
+      "requisitos": "Vagas de emprego, orientação para currículo e cursos de qualificação; é preciso levar RG, CPF e carteira de trabalho",
+      "tipo": "CLT",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "atendimento em 15/07"
     }
   ],
   "politica": [
     {
       "orgao": "🏗️ Subprefeitura Perus/Anhanguera",
       "bairro": "Anhanguera",
-      "titulo": "Região de Perus/Anhanguera recebe R$ 39,64 milhões em investimentos previstos para 2026",
-      "impacto": "Recursos para asfalto, recapeamento, pavimentação, ampliação de equipamentos de saúde e educação, e obras de drenagem contra enchentes, dentro do programa Prefeitura Presente.",
-      "status": "Investimentos em andamento",
+      "titulo": "Prefeitura Presente: região de Perus/Anhanguera recebe mais de R$ 1 bilhão em investimentos",
+      "impacto": "O prefeito passou o dia no território, entregou três piscinões e acompanhou a inauguração de uma estação de tratamento de esgoto ao lado do governador Tarcísio de Freitas.",
+      "status": "Anunciado em 27/05",
       "fonte": "Prefeitura de São Paulo"
     },
     {
       "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
-      "bairro": "São Domingos",
+      "bairro": "Jaraguá",
       "titulo": "Prefeitura Presente leva R$ 490 milhões em investimentos a Pirituba, Jaraguá, São Domingos e Taipas",
       "impacto": "Retomada das obras da ligação viária Pirituba-Lapa (R$ 209,5 milhões), reforma do Centro Educacional Esportivo Geraldo José de Almeida (R$ 16 milhões) e entrega de 50 escrituras definitivas a moradores do Conjunto Residencial Elísio Teixeira Leite.",
       "status": "Anunciado",
       "fonte": "Prefeitura de São Paulo"
     },
     {
-      "orgao": "🌳 Subprefeitura Casa Verde/Cachoeirinha/Limão",
-      "bairro": "Jardim Antártica",
-      "titulo": "Orçamento Cidadão 2026 prioriza ecoponto, recuperação do Córrego Guaraú e UBS em Jardim Peri Alto",
-      "impacto": "Entre as propostas eleitas pelo Conselho Participativo Municipal está a revitalização de espaço municipal no Jardim Antártica, com projetos ambientais, educacionais e de sustentabilidade.",
-      "status": "2ª etapa concluída em 06/07",
-      "fonte": "Prefeitura de São Paulo / Subprefeitura Casa Verde"
+      "orgao": "🌊 Siurb / Subprefeitura Perus/Anhanguera",
+      "bairro": "Perus",
+      "titulo": "Audiência pública debate Caderno de Drenagem dos Ribeirões Perus e Pinheirinhos",
+      "impacto": "Contribuições da população vão orientar o plano de drenagem da bacia hidrográfica que atinge a região de Perus.",
+      "status": "Realizada em 03/07",
+      "fonte": "Subprefeitura Perus/Anhanguera"
     },
     {
       "orgao": "🏥 Secretaria Municipal da Saúde",
@@ -285,23 +299,23 @@
     {
       "tipo": "info",
       "emoji": "🥶",
-      "titulo": "Defesa Civil mantém alerta para baixas temperaturas",
-      "desc": "Mínimas podem chegar a 9°C na Grande São Paulo ao longo da semana, com a chegada de uma nova frente fria.",
-      "meta": "Defesa Civil Municipal (Portaria 802/2025)"
+      "titulo": "Massa de ar polar mantém frio intenso em São Paulo",
+      "desc": "Mínimas podem ficar próximas a 8°C na Grande São Paulo ao longo da semana, com formação de nevoeiros pela manhã.",
+      "meta": "Defesa Civil do Estado de São Paulo"
+    },
+    {
+      "tipo": "info",
+      "emoji": "🏠",
+      "titulo": "Abrigo Solidário funciona na Estação Pedro II do Metrô até quinta (16)",
+      "desc": "Ativado às 19h de segunda-feira (13) em parceria com o Metrô, o abrigo oferece colchões, cobertores e alimentação a pessoas em situação de rua durante a onda de frio, incluindo seus animais de estimação.",
+      "meta": "Defesa Civil do Estado de São Paulo"
     },
     {
       "tipo": "info",
       "emoji": "🚨",
-      "titulo": "PM apreende mais de mil porções de drogas no Jardim Mutinga",
-      "desc": "Ação do 49º Batalhão de Polícia Militar Metropolitano resultou na prisão de um homem com maconha, crack, cocaína e lança-perfume, no sábado (11).",
+      "titulo": "PM apreende drogas e revólver com numeração raspada na Zona Norte",
+      "desc": "Ação da Rocam do 43º Batalhão de Polícia Militar Metropolitano resultou na apreensão de 2,6 mil porções de cocaína e maconha e um revólver .38, na sexta-feira (10).",
       "meta": "Polícia Militar do Estado de São Paulo"
-    },
-    {
-      "tipo": "neutro",
-      "emoji": "🏫",
-      "titulo": "Recesso escolar da rede municipal segue até 17 de julho",
-      "desc": "O Recreio nas Férias segue disponível gratuitamente em CEIs e EMEIs da Zona Norte enquanto as aulas não retomam.",
-      "meta": "Secretaria Municipal de Educação"
     },
     {
       "tipo": "info",
@@ -311,11 +325,11 @@
       "meta": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho"
     },
     {
-      "tipo": "info",
-      "emoji": "💉",
-      "titulo": "37 UBS da Zona Norte aplicam vacina contra febre amarela",
-      "desc": "Unidades seguem em esquema preventivo de vacinação; recomenda-se manter a caderneta em dia, especialmente durante as férias.",
-      "meta": "Secretaria Municipal da Saúde"
+      "tipo": "neutro",
+      "emoji": "🏫",
+      "titulo": "Recesso escolar da rede municipal segue até 17 de julho",
+      "desc": "O Recreio nas Férias segue disponível gratuitamente em CEIs e EMEIs da Zona Norte enquanto as aulas não retomam.",
+      "meta": "Secretaria Municipal de Educação"
     }
   ],
   "fim_de_semana": [
@@ -333,11 +347,6 @@
       "emoji": "📚",
       "titulo": "Apresentação na Biblioteca Sylvia Orthof",
       "info": "19/07 · 11h · Tucuruvi · Gratuito"
-    },
-    {
-      "emoji": "♻️",
-      "titulo": "Atividades gratuitas no Sesc Casa Verde",
-      "info": "18/07 · 16h · Casa Verde · Gratuito"
     }
   ]
 }
