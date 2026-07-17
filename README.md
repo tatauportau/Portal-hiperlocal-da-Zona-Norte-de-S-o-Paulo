@@ -13,11 +13,14 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 ├── data/
 │   ├── bairros-por-distrito.json     # 462 bairros organizados por distrito
 │   └── distritos-zona-norte.geojson  # Geodados oficiais dos 18 distritos
+├── vendor/
+│   └── d3.min.js                # D3.js hospedado localmente (evita bloqueio de CDN externo)
 ├── scripts/
 │   └── gerar-portau.js         # Script de geração automática de conteúdo
 ├── netlify/
 │   └── functions/
-│       ├── analytics.js        # Função serverless para Google Analytics 4
+│       ├── estatisticas.js     # Função serverless para Google Analytics 4 (nome evita filtros de "analytics")
+│       ├── live-news.js        # Busca/filtra RSS do G1 e Band no servidor (com cache)
 │       └── disparar-portau.js  # Função schedulada que dispara o workflow GitHub
 ├── netlify.toml                # Configuração Netlify + scheduler
 └── .github/
@@ -115,7 +118,7 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 ### Faixa do ticker (topo fixo)
 - Fundo preto com borda amarela
 - Mostra títulos das notícias do dia (gerados pelo script)
-- Complementa com RSS do G1/Band filtrado por palavras-chave da Zona Norte
+- Complementa com RSS do G1/Band filtrado por palavras-chave da Zona Norte (buscado server-side via `live-news.js`, com cache de 20min)
 - Velocidade: `20s` no CSS (`.ticker-track animation`)
 - Dados: `<div id="portau-ticker-data">titulo1|||titulo2</div>`
 
@@ -147,14 +150,14 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 - Duplo clique abre painel Google Analytics 4
 
 ### Modal Bairros
-- Mapa D3.js com GeoJSON de `data/distritos-zona-norte.geojson`
+- Mapa D3.js (`vendor/d3.min.js`, hospedado localmente) com GeoJSON de `data/distritos-zona-norte.geojson`
 - Cores por subprefeitura
 - Clique no distrito mostra lista de bairros com busca
 
 ### Analytics (GA4)
 - Property ID: `399155331`
 - Service Account: `portau-analytics@portau-analytics.iam.gserviceaccount.com`
-- Dados via Netlify Function `analytics.js`
+- Dados via Netlify Function `estatisticas.js` (endpoint `/.netlify/functions/estatisticas`, nome escolhido para não conter "analytics" — bloqueadores corporativos filtram esse termo na URL)
 - Métricas: usuários ativos, leitores 7 dias, sessões, tempo médio, países, cidades, dispositivos
 
 ---
