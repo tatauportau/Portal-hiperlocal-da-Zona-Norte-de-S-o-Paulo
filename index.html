@@ -585,19 +585,7 @@
 </div>
 <div id="portau-ticker-data" style="display:none">PM apreende mais de 2,6 mil porções de drogas e revólver com numeração raspada na Zona Norte::https://fatopaulista.com.br/policia-militar-apreensao-drogas-zona-norte-sp/|||Diretor do Conjunto Hospitalar do Mandaqui fala sobre a unidade em entrevista exclusiva::https://www.serradacantareirahoje.com/2026/07/07/156259/|||Pirituba/Jaraguá ganha o décimo EcoEnel da subprefeitura, na Praça Vila Nova Esperança::https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-d%C3%A9cimo-ecoenel-inaugurado-nesta-quinta-feira-03/07-na-pra%C3%A7a-vila-nova-esperan%C3%A7a|||Armazém Solidário chega a Pirituba/Jaraguá com descontos de até 50% para famílias do CadÚnico::https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/conhe%C3%A7a-o-armaz%C3%A9m-solid%C3%A1rio-iniciativa-criada-pela-prefeitura-de-s%C3%A3o-paulo-que-visa-facilitar-o-acesso-a-alimentos-saud%C3%A1veis-para-fam%C3%ADlias-cadastradas-no-cad%C3%BAnico.|||Audiência pública discute drenagem dos Ribeirões Perus e Pinheirinhos::https://prefeitura.sp.gov.br/web/perus/w/audi%C3%AAncia-p%C3%BAblica-do-caderno-de-drenagem-dos-ribeir%C3%B5es-perus-e-pinheirinhos|||Cursos gratuitos de qualificação profissional começam hoje na Zona Norte::https://fatopaulista.com.br/qualificacao-profissional-gratuita-sao-paulo/|||Massa de ar polar mantém mínimas de até 8°C na Grande São Paulo::https://fatopaulista.com.br/frio-sp-massa-ar-polar-temperaturas/|||CET vai monitorar trânsito no Campo de Marte para corrida no domingo::https://prefeitura.sp.gov.br/web/mobilidade/w/noticias/238053|||Cate Móvel leva vagas de emprego ao Parque Novo Mundo nesta semana::https://prefeitura.sp.gov.br/web/desenvolvimento/w/cate-m%C3%B3vel-passar%C3%A1-neste-m%C3%AAs-pelo-parque-novo-mundo-itaim-paulista-com-oportunidades-de-emprego</div>
 
-  <script>  
-const RSS_FEEDS = [
-  'https://api.rss2json.com/v1/api.json?rss_url=https://g1.globo.com/sp/sao-paulo/rss2.xml&count=8',
-  'https://api.rss2json.com/v1/api.json?rss_url=https://www.band.uol.com.br/noticias/rss/sao-paulo&count=5',
-];
-
-const KEYWORDS = [
-  'zona norte','santana','tucuruvi','jaçanã','tremembé','vila guilherme',
-  'casa verde','mandaqui','brasilândia','freguesia do ó','limão','parada inglesa',
-  'vila medeiros','campo de marte','cantareira','carandiru','cachoeirinha',
-  'jardim são paulo','vila nova cachoeirinha','vila aurora'
-];
-
+<script>
 async function carregarTicker() {
   try {
     // 1. Títulos do dia gerados pelo script (prioridade máxima)
@@ -609,20 +597,14 @@ async function carregarTicker() {
     })
       : [];
 
-    // 2. Complementa com RSS filtrado
-    for (const url of RSS_FEEDS) {
-      try {
-        const r = await fetch(url);
+    // 2. Complementa com RSS filtrado (via Netlify Function, server-side)
+    try {
+      const r = await fetch('/.netlify/functions/live-news');
+      if (r.ok) {
         const d = await r.json();
-        if (d.items) {
-          const filtradas = d.items.filter(item => {
-            const texto = (item.title + ' ' + (item.description||'')).toLowerCase();
-            return KEYWORDS.some(k => texto.includes(k));
-          });
-          noticias = noticias.concat(filtradas.map(i => i.title));
-        }
-      } catch(e) {}
-    }
+        noticias = noticias.concat(d.noticias || []);
+      }
+    } catch(e) {}
 
     // 3. Fallback final
     if (noticias.length === 0) {
@@ -643,7 +625,7 @@ async function carregarTicker() {
    
   } catch(e) {
     document.getElementById('ticker-track').innerHTML =
-      '<span class="ticker-item">Portau · Zona Norte de São Paulo · portauzn.com.br</span>'.repeat(6);
+      '<span class="ticker-item">Não foi possível carregar as notícias ao vivo no momento.</span>'.repeat(3);
   }
 }
 
