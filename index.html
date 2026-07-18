@@ -19,7 +19,7 @@
   body{font-family:'Inter',sans-serif;background:var(--creme);color:var(--cinza-q);font-size:15px;line-height:1.6;}
   .topbar{background:var(--verde);color:rgba(255,255,255,0.7);font-size:12px;padding:6px 24px;display:flex;justify-content:space-between;}
   .topbar strong{color:var(--amarelo);}
-  header{background:var(--branco);border-bottom:3px solid var(--amarelo);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+  header{background:var(--branco);border-bottom:3px solid var(--amarelo);padding:0 24px;position:fixed;top:32px;left:0;right:0;z-index:150;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
   .header-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:8px 0;gap:16px;flex-wrap:wrap;}
   .sub-nav-strip{background:transparent;display:flex;gap:6px;overflow-x:auto;flex:1 1 auto;order:3;width:100%;justify-content:center;}
   .sub-nav-strip::-webkit-scrollbar{display:none;}
@@ -44,6 +44,22 @@
 
   .hero-stat-label{font-size:11px;color:rgba(255,255,255,0.55);text-transform:uppercase;letter-spacing:0.08em;}
   .ancora-bar{background:var(--branco);border-bottom:1px solid var(--cinza-l);padding:0 24px;position:sticky;top:64px;z-index:90;}
+  #fixo-spacer{width:100%;}
+  .filtro-painel{background:var(--creme);border-bottom:1px solid var(--cinza-l);max-height:0;overflow:hidden;transition:max-height .3s ease, padding .3s ease;}
+  .filtro-painel.aberto{max-height:70vh;overflow-y:auto;}
+  .filtro-painel-inner{max-width:1160px;margin:0 auto;padding:0 24px;}
+  .filtro-painel.aberto .filtro-painel-inner{padding:18px 24px;}
+  .filtro-painel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:12px;}
+  .filtro-painel-titulo{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--cinza-q);}
+  .filtro-painel-titulo span{color:var(--verde);}
+  .filtro-fechar{background:var(--branco);border:1px solid var(--cinza-l);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:14px;color:var(--cinza-m);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .filtro-fechar:hover{background:var(--cinza-l);}
+  .filtro-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;}
+  .filtro-item{background:var(--branco);border:1px solid var(--cinza-l);border-radius:10px;padding:12px 14px;text-decoration:none;color:inherit;display:block;transition:box-shadow .15s,transform .15s;}
+  .filtro-item:hover{box-shadow:0 4px 14px rgba(0,0,0,0.08);transform:translateY(-1px);}
+  .filtro-item-tag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--verde);margin-bottom:4px;display:block;}
+  .filtro-item-titulo{font-size:13px;font-weight:600;line-height:1.35;}
+  .filtro-vazio{font-size:13px;color:var(--cinza-m);padding:6px 0;}
   .ancora-inner{max-width:1160px;margin:0 auto;display:flex;gap:4px;overflow-x:auto;}
   .ancora-inner::-webkit-scrollbar{display:none;}
   .ancora-btn{font-size:13px;font-weight:600;color:var(--cinza-m);text-decoration:none;padding:12px 16px;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.15s;}
@@ -646,11 +662,43 @@ setInterval(carregarTicker, 900000);
   
 </script>
 
-<div class="topbar">
-  <span>📍 Zona Norte de São Paulo</span>
- <strong>Sexta-feira, 17 de julho de 2026 · Gerado às 18:14</strong>
-</div>
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">Por<span>tau</span>
+      <span class="logo-sub">Zona Norte · São Paulo</span>
+    </a>
 
+    <div class="sub-nav-strip" id="sub-nav-strip">
+      <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
+      <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
+      <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
+      <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
+      <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
+      <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
+      <button class="sub-btn" data-sub="pirituba"><i class="ti ti-building-factory"></i><span>Pirituba</span></button>
+      <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
+    </div>
+
+    <!-- GLOBO INTERATIVO -->
+    <div class="globo-wrap" id="globo-wrap">
+      <canvas id="globo-canvas" width="68" height="68"></canvas>
+      <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
+    </div>
+
+  </div>
+</header>
+
+<div id="fixo-spacer"></div>
+
+<div class="filtro-painel" id="filtro-painel">
+  <div class="filtro-painel-inner">
+    <div class="filtro-painel-header">
+      <div class="filtro-painel-titulo" id="filtro-painel-titulo"></div>
+      <button class="filtro-fechar" id="filtro-fechar" title="Fechar">✕</button>
+    </div>
+    <div class="filtro-grid" id="filtro-grid"></div>
+  </div>
+</div>
 
 <!-- CLIMA ZONA NORTE -->
 <div class="clima-bar" id="clima-bar">
@@ -667,7 +715,7 @@ setInterval(carregarTicker, 900000);
       <span class="clima-alerta ok" id="clima-alerta">✅ Sem alertas</span>
       <span class="clima-update-live" id="clima-hora-live"></span>
     </div>
-    <div class="clima-update" id="clima-update">17 de julho · 18:14</div>
+    <div class="clima-update" id="clima-update">Sexta-feira, 17 de julho de 2026 · Gerado às 18:14</div>
   </div>
 </div>
 
@@ -739,35 +787,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   <div class="carro-linha"></div>
   <div class="carro-label">🚗 Trânsito ao vivo · Zona Norte · Clique para abrir</div>
   <div class="carro-icon">🚗</div>
-</div>
-
-<header>
-  <div class="header-inner">
-    <a href="#" class="logo">Por<span>tau</span>
-      <span class="logo-sub">Zona Norte · São Paulo</span>
-    </a>
-
-    <div class="sub-nav-strip" id="sub-nav-strip">
-      <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
-      <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
-      <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
-      <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
-      <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
-      <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
-      <button class="sub-btn" data-sub="pirituba"><i class="ti ti-building-factory"></i><span>Pirituba</span></button>
-      <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
-    </div>
-
-    <!-- GLOBO INTERATIVO -->
-    <div class="globo-wrap" id="globo-wrap">
-      <canvas id="globo-canvas" width="68" height="68"></canvas>
-      <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
-    </div>
-
-  </div>
-</header>
-
-  </div>
 </div>
 
 <div class="ancora-bar">
@@ -2025,9 +2044,64 @@ const SUB_MAP = {
   pirituba:  ['pirituba','jaraguá','são domingos'],
   perus:     ['perus','anhanguera'],
 };
+const SUB_LABEL = {
+  santana:   'Santana / Tucuruvi / Mandaqui',
+  casaverde: 'Casa Verde / Limão / Cachoeirinha',
+  vilamaria: 'Vila Maria / Vila Guilherme / Vila Medeiros',
+  jacana:    'Jaçanã / Tremembé',
+  freguesia: 'Freguesia do Ó / Brasilândia',
+  pirituba:  'Pirituba / Jaraguá / São Domingos',
+  perus:     'Perus / Anhanguera',
+};
 function normalizarTexto(s) {
   return (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
 }
+function extrairTituloCard(card) {
+  const sel = ['.card-titulo','.evento-titulo','.vaga-titulo','.pol-titulo'];
+  for (const s of sel) { const el = card.querySelector(s); if (el) return el.textContent.trim(); }
+  return card.textContent.trim().replace(/\s+/g,' ').slice(0, 90);
+}
+function extrairLinkCard(card) {
+  if (card.tagName === 'A') return card.href;
+  const a = card.querySelector('a[href]');
+  return a ? a.href : null;
+}
+function extrairTagCard(card) {
+  const tag = card.querySelector('.tag, .pol-orgao, .evento-valor, .vaga-badge');
+  return tag ? tag.textContent.trim() : '';
+}
+function fecharFiltroPainel() {
+  document.getElementById('filtro-painel').classList.remove('aberto');
+}
+function abrirFiltroPainel(sub) {
+  const painel = document.getElementById('filtro-painel');
+  const titulo = document.getElementById('filtro-painel-titulo');
+  const grid = document.getElementById('filtro-grid');
+
+  const visiveis = [...document.querySelectorAll('[data-bairro]')].filter(c => c.style.display !== 'none');
+  titulo.innerHTML = `Notícias de <span>${SUB_LABEL[sub]}</span> · ${visiveis.length} ${visiveis.length === 1 ? 'item' : 'itens'}`;
+
+  if (visiveis.length === 0) {
+    grid.innerHTML = '<div class="filtro-vazio">Nenhum conteúdo publicado para esta região ainda hoje.</div>';
+  } else {
+    grid.innerHTML = visiveis.map(card => {
+      const titulo = extrairTituloCard(card);
+      const link = extrairLinkCard(card);
+      const tag = extrairTagCard(card);
+      const conteudo = `${tag ? `<span class="filtro-item-tag">${tag}</span>` : ''}<span class="filtro-item-titulo">${titulo}</span>`;
+      return link
+        ? `<a class="filtro-item" href="${link}" target="_blank" rel="noopener">${conteudo}</a>`
+        : `<div class="filtro-item" style="cursor:default;">${conteudo}</div>`;
+    }).join('');
+  }
+  painel.classList.add('aberto');
+}
+document.getElementById('filtro-fechar').addEventListener('click', () => {
+  fecharFiltroPainel();
+  document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('ativo'));
+  document.querySelector('.sub-btn[data-sub="todas"]').classList.add('ativo');
+  document.querySelectorAll('[data-bairro]').forEach(card => { card.style.display = ''; });
+});
 document.querySelectorAll('.sub-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('ativo'));
@@ -2044,8 +2118,28 @@ document.querySelectorAll('.sub-btn').forEach(btn => {
         : distritos.some(d => bairroCard.includes(d));
       card.style.display = bate ? '' : 'none';
     });
+    if (filtrar) { abrirFiltroPainel(sub); } else { fecharFiltroPainel(); }
+    ajustarOffsetsFixos();
   });
 });
+
+// ── OFFSETS DOS ELEMENTOS FIXOS (ticker + header) ────
+function ajustarOffsetsFixos() {
+  const ticker = document.getElementById('ticker-wrap');
+  const header = document.querySelector('header');
+  const spacer = document.getElementById('fixo-spacer');
+  const ancora = document.querySelector('.ancora-bar');
+  if (!ticker || !header || !spacer) return;
+  const alturaTicker = ticker.offsetHeight;
+  const alturaHeader = header.offsetHeight;
+  header.style.top = alturaTicker + 'px';
+  spacer.style.height = (alturaTicker + alturaHeader) + 'px';
+  if (ancora) ancora.style.top = (alturaTicker + alturaHeader) + 'px';
+}
+window.addEventListener('load', ajustarOffsetsFixos);
+window.addEventListener('resize', ajustarOffsetsFixos);
+ajustarOffsetsFixos();
+setTimeout(ajustarOffsetsFixos, 300);
 
 // ── KEYDOWN UNIFICADO ────────────────────────────────
 window.addEventListener('keydown', function(e) {
