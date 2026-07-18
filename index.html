@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portau — Edicao do Dia · 18/07/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TD0G4J8CR"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -242,6 +241,588 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
 <body>
-PLACEHOLDER_BODY_TO_BE_REPLACED_NEXT_CALL
+  <div class="ticker-wrap" id="ticker-wrap">
+  <div style="overflow:hidden;flex:1;position:relative;">
+    <div class="ticker-track" id="ticker-track">
+      <span class="ticker-loading" id="ticker-loading">Carregando notícias...</span>
+    </div>
+  </div>
+</div>
+<div id="portau-ticker-data" style="display:none">Sarampo: Vila Medeiros registra três casos confirmados e São Paulo amplia vacinação para bebês::https://www.diariozonanorte.com.br/sarampo-vila-medeiros-registra-tres-casos-confirmados-e-sao-paulo-amplia-vacinacao-para-bebes/|||Homem é rendido e tem aliança roubada por assaltante em moto na Freguesia do Ó::https://www.bnewssaopaulo.com.br/noticias/policia/criminoso-invade-calcada-e-rouba-alianca-de-homem-na-zona-norte-de-sp.html|||Dupla furta moto na Vila Guilherme e é surpreendida pela PM ao tentar novo crime minutos depois::https://ncnews.com.br/2026/07/10/dupla-furta-moto-na-zona-norte-tenta-novo-crime-minutos-depois-e-acaba-surpreendida-pela-pm-em-sao-paulo/|||Subprefeitura e forças de segurança fazem operação contra a "Feira do Rolo" em Vila Nova Cachoeirinha::https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/40024|||Linha 7-Rubi terá velocidade reduzida entre Perus e Franco da Rocha neste domingo (19/07)::https://diariodotransporte.com.br/2026/07/17/linha-7-rubi-tera-operacao-com-velocidade-reduzida-neste-domingo-19-para-obras-de-modernizacao-2/|||Parada Inglesa ganha praça renovada com quadra, skate e pet park::https://www.diariozonanorte.com.br/parada-inglesa-ganha-praca-renovada-com-esportes-lazer-e-mais-seguranca-para-moradores/|||PM-SP publica edital com 2 mil vagas para Aluno-Soldado e salário de R$ 5,4 mil::https://tribunadejundiai.com.br/economia/concursos/concurso-pm-sp-2026/|||Metrô promove campanha de vacinação contra sarampo, caxumba e rubéola com foco na Tucuruvi::https://www.metro.sp.gov.br/2026/07/13/metro-recebe-campanha-de-vacinacao-em-seis-estacoes/|||Furtos e roubos a residências caem 25% na capital após polícia desarticular quadrilha::https://www.agenciasp.sp.gov.br/furtos-e-roubos-a-residencias-capital/</div>
+
+<script>
+async function carregarTicker() {
+  try {
+    const tickerData = document.getElementById('portau-ticker-data');
+    let noticias = tickerData
+      ? tickerData.textContent.split('|||').filter(Boolean).map(item => {
+      const [titulo, url] = item.split('::');
+      return { titulo, url: url || '#' };
+    })
+      : [];
+    try {
+      const r = await fetch('/.netlify/functions/live-news');
+      if (r.ok) {
+        const d = await r.json();
+        noticias = noticias.concat(d.noticias || []);
+      }
+    } catch(e) {}
+    if (noticias.length === 0) {
+      noticias = [
+        'Zona Norte · Acompanhe as principais notícias da região',
+        'Portau · Portal hiperlocal da Zona Norte de São Paulo',
+        'Santana · Tucuruvi · Jaçanã · Casa Verde · Mandaqui · Tremembé',
+      ];
+    }
+    const itens = [...noticias, ...noticias];
+    const track = document.getElementById('ticker-track');
+    track.innerHTML = itens.map(n =>
+      `<span class="ticker-item" onclick="window.open('${n.url}','_blank')">${n.titulo || n}</span>`
+    ).join('');
+  } catch(e) {
+    document.getElementById('ticker-track').innerHTML =
+      '<span class="ticker-item">Não foi possível carregar as notícias ao vivo no momento.</span>'.repeat(3);
+  }
+}
+carregarTicker();
+setInterval(carregarTicker, 900000);
+</script>
+
+<header>
+  <div class="header-inner">
+    <a href="#" class="logo">
+      <div class="logo-img-crop"><img class="logo-img" src="data:image/png;base64,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" alt="Portau"></div>
+    </a>
+
+    <div class="sub-nav-strip" id="sub-nav-strip">
+      <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
+      <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
+      <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
+      <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
+      <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
+      <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
+      <button class="sub-btn" data-sub="pirituba"><i class="ti ti-building-factory"></i><span>Pirituba</span></button>
+      <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
+    </div>
+
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;">
+      <div class="clima-chip">
+        <span id="clima-icone">⏳</span>
+        <span class="clima-local">Zona Norte</span>
+        <span class="clima-temp" id="clima-temp">--°C</span>
+        <span class="clima-item" id="clima-cond" style="display:none;">Carregando...</span>
+        <span class="clima-alerta ok" id="clima-alerta" style="display:none;">Sem alertas</span>
+        <i class="ti ti-search" style="font-size:13px;color:var(--cinza-m);"></i>
+      </div>
+      <div class="globo-wrap" id="globo-wrap">
+        <canvas id="globo-canvas" width="68" height="68"></canvas>
+        <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
+      </div>
+      <div style="font-size:9px;color:var(--cinza-m);white-space:nowrap;">
+        <span id="clima-update">Sábado, 18 de julho de 2026 · Gerado às 18:41</span><span id="clima-hora-live" style="display:none;"></span>
+      </div>
+    </div>
+    <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
+
+  </div>
+</header>
+
+<div id="fixo-spacer"></div>
+
+<div class="filtro-painel" id="filtro-painel">
+  <div class="filtro-painel-inner">
+    <div class="filtro-painel-header">
+      <div class="filtro-painel-titulo" id="filtro-painel-titulo"></div>
+      <button class="filtro-fechar" id="filtro-fechar" title="Fechar">✕</button>
+    </div>
+    <div class="filtro-grid" id="filtro-grid"></div>
+  </div>
+</div>
+
+<script>
+const LAT = -23.5025;
+const LNG = -46.6283;
+const WMO = {
+  0:'☀️ Céu limpo', 1:'🌤️ Poucas nuvens', 2:'⛅ Parcialmente nublado',
+  3:'☁️ Nublado', 45:'🌫️ Neblina', 48:'🌫️ Geada',
+  51:'🌦️ Garoa leve', 53:'🌦️ Garoa', 55:'🌧️ Garoa intensa',
+  61:'🌧️ Chuva leve', 63:'🌧️ Chuva', 65:'🌧️ Chuva forte',
+  71:'❄️ Neve leve', 80:'🌦️ Pancadas leves', 81:'⛈️ Pancadas',
+  82:'⛈️ Pancadas fortes', 95:'⛈️ Trovoada', 99:'⛈️ Trovoada com granizo'
+};
+async function carregarClima() {
+  try {
+    const url = `https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LNG}&current=temperature_2m,weathercode,precipitation_probability,windspeed_10m,precipitation&timezone=America/Sao_Paulo&forecast_days=1`;
+    const r = await fetch(url);
+    const d = await r.json();
+    const c = d.current;
+    const temp   = Math.round(c.temperature_2m);
+    const codigo = c.weathercode;
+    const chuva  = c.precipitation_probability;
+    const vento  = Math.round(c.windspeed_10m);
+    const precip = c.precipitation;
+    const cond   = WMO[codigo] || '🌡️ --';
+    document.getElementById('clima-temp').textContent = temp + '°C';
+    document.getElementById('clima-icone').textContent = cond.split(' ')[0];
+    document.getElementById('clima-cond').textContent = cond.split(' ').slice(1).join(' ');
+    document.getElementById('clima-chuva').textContent = chuva + '%';
+    document.getElementById('clima-vento').textContent = vento + ' km/h';
+    const alertaEl = document.getElementById('clima-alerta');
+    if (chuva >= 70 || precip > 5) {
+      alertaEl.textContent = '⚠️ Risco de chuva';
+      alertaEl.className = 'clima-alerta';
+    } else if (chuva >= 40) {
+      alertaEl.textContent = '🌂 Leve chance de chuva';
+      alertaEl.className = 'clima-alerta';
+    } else {
+      alertaEl.textContent = '✅ Sem alertas';
+      alertaEl.className = 'clima-alerta ok';
+    }
+    const agora = new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+    document.getElementById('clima-hora-live').textContent = 'Atualizado ' + agora;
+  } catch(e) {
+    document.getElementById('clima-cond').textContent = 'Indisponível';
+  }
+}
+carregarClima();
+setInterval(carregarClima, 900000);
+</script>
+
+<div class="carro-bar" onclick="abrirWaze()" title="Clique para ver o trânsito ao vivo!">
+  <div class="carro-estrada"></div>
+  <div class="carro-linha"></div>
+  <div class="carro-label">🚗 Trânsito ao vivo · Zona Norte · Clique para abrir</div>
+  <div class="carro-icon">🚗</div>
+</div>
+
+<div class="ancora-bar">
+  <div class="ancora-inner">
+    <a href="#" class="ancora-btn ativo" data-secao="todas">✨ Edição do Dia</a>
+    <a href="#" class="ancora-btn" onclick="abrirBairros();return false;">📍 Bairros</a>
+    <a href="#noticias" class="ancora-btn" data-secao="noticias">📰 Notícias</a>
+    <a href="#agenda" class="ancora-btn" data-secao="agenda">🗓️ Agenda</a>
+    <a href="#vagas" class="ancora-btn" data-secao="vagas">💼 Vagas</a>
+    <a href="#politica" class="ancora-btn" data-secao="politica">🏛️ Política</a>
+    <a href="#alertas" class="ancora-btn" data-secao="alertas">📊 Alertas</a>
+    <a href="#classificados" class="ancora-btn" data-secao="classificados">🛒 Classificados</a>
+    <a href="#" class="ancora-btn">📈 Dados</a>
+    <a href="#" class="ancora-btn">👥 Comunidade</a>
+  </div>
+</div>
+
+<div class="page">
+<div class="feed">
+
+  <div class="secao" id="noticias">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
+      <span class="secao-count">9 hoje</span>
+    </div>
+
+    <div class="card-noticia destaque" data-bairro="Vila Medeiros" data-distrito="VILA MEDEIROS">
+      <div class="destaque-pill">🩺 Saúde</div>
+      <div class="card-tags">
+        <span class="tag tag-not">Saúde</span>
+        <span class="tag-bairro">📍 Vila Medeiros</span>
+      </div>
+      <div class="card-titulo">Sarampo: Vila Medeiros registra três casos confirmados e São Paulo amplia vacinação para bebês</div>
+      <div class="card-resumo">Três casos de sarampo foram confirmados na Vila Medeiros, na Zona Norte, entre crianças de até 1 ano e 1 mês. Em resposta, desde 27 de junho a Secretaria Municipal da Saúde passou a vacinar bebês de 6 a 11 meses e 29 dias nas UBSs do município, com varredura vacinal casa a casa mantida no distrito.</div>
+      <div class="card-footer">
+        <div class="card-meta"><span>DiárioZonaNorte</span><span class="dot3"></span><span>atualizado em 13/07</span></div>
+        <span class="card-link">Leia mais →</span>
+      </div>
+    </div>
+
+    <a class="card-noticia" href="https://www.bnewssaopaulo.com.br/noticias/policia/criminoso-invade-calcada-e-rouba-alianca-de-homem-na-zona-norte-de-sp.html" target="_blank" data-bairro="Freguesia do Ó" data-distrito="FREGUESIA DO Ó">
+      <div class="card-icone ic-seg">🚨</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Freguesia do Ó</span></div>
+        <div class="card-titulo">Homem é rendido e tem aliança roubada por assaltante em moto na Freguesia do Ó</div>
+        <div class="card-resumo">Um homem foi assaltado na manhã de sexta-feira (10/07) na Rua Professor Carlos Nobre Rosa, na Freguesia do Ó. Um suspeito em uma motocicleta subiu na calçada, abordou a vítima em frente a uma oficina mecânica, a rendeu armado e levou sua aliança.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>BNews São Paulo</span><span class="dot3"></span><span>10/07</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://ncnews.com.br/2026/07/10/dupla-furta-moto-na-zona-norte-tenta-novo-crime-minutos-depois-e-acaba-surpreendida-pela-pm-em-sao-paulo/" target="_blank" data-bairro="Vila Guilherme" data-distrito="VILA GUILHERME">
+      <div class="card-icone ic-seg">🚔</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Vila Guilherme</span></div>
+        <div class="card-titulo">Dupla furta moto na Vila Guilherme e é surpreendida pela PM ao tentar novo crime minutos depois</div>
+        <div class="card-resumo">Uma motocicleta foi furtada na Vila Guilherme e, poucos minutos depois, dois homens foram flagrados pelo 4º Batalhão de Polícia Militar tentando furtar outro veículo na região. Um deles foi encontrado escondido em uma loja de conveniência e detido; o segundo suspeito fugiu.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>NC News</span><span class="dot3"></span><span>10/07</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/40024" target="_blank" data-bairro="Cachoeirinha" data-distrito="CACHOEIRINHA">
+      <div class="card-icone ic-seg">🚧</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Cachoeirinha</span></div>
+        <div class="card-titulo">Subprefeitura e forças de segurança fazem operação contra a "Feira do Rolo" em Vila Nova Cachoeirinha</div>
+        <div class="card-resumo">No domingo (14/07), a Subprefeitura Casa Verde/Limão/Cachoeirinha, em parceria com Guarda Civil Metropolitana, Polícia Militar, Polícia Civil e CET, realizou operação de fiscalização contra o comércio irregular na Avenida Afonso Lopes Vieira, conhecida como "Feira do Rolo".</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>Subprefeitura Casa Verde/Limão/Cachoeirinha</span><span class="dot3"></span><span>14/07</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://diariodotransporte.com.br/2026/07/17/linha-7-rubi-tera-operacao-com-velocidade-reduzida-neste-domingo-19-para-obras-de-modernizacao-2/" target="_blank" data-bairro="Perus" data-distrito="PERUS">
+      <div class="card-icone ic-mob">🚆</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Perus</span></div>
+        <div class="card-titulo">Linha 7-Rubi terá velocidade reduzida entre Perus e Franco da Rocha neste domingo (19/07)</div>
+        <div class="card-resumo">A TIC Trens realizará intervenções no sistema de sinalização entre as estações Perus e Franco da Rocha, das 8h às 18h de domingo, dentro do projeto TIC Eixo Norte. As composições vão circular com velocidade reduzida e o tempo de viagem na linha deve aumentar cerca de 10 minutos.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>Diário do Transporte</span><span class="dot3"></span><span>domingo, 19/07</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://www.diariozonanorte.com.br/parada-inglesa-ganha-praca-renovada-com-esportes-lazer-e-mais-seguranca-para-moradores/" target="_blank" data-bairro="Parada Inglesa" data-distrito="TUCURUVI">
+      <div class="card-icone ic-eco">🏞️</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-not">Zeladoria</span><span class="tag-bairro">📍 Parada Inglesa</span></div>
+        <div class="card-titulo">Parada Inglesa ganha praça renovada com quadra, skate e pet park</div>
+        <div class="card-resumo">A Praça Nossa Senhora dos Prazeres, ao lado da Estação Parada Inglesa, foi entregue à população em 28/06 pela Subprefeitura Santana/Tucuruvi. A reforma incluiu recuperação do piso, novo playground, pet park, quadra de beach tennis, quadra 3x3, pista de skate e deck de madeira plástica.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>DiárioZonaNorte</span><span class="dot3"></span><span>atualizado em julho</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://tribunadejundiai.com.br/economia/concursos/concurso-pm-sp-2026/" target="_blank" data-bairro="Zona Norte" data-distrito="">
+      <div class="card-icone ic-eco">🎓</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-not">Economia</span><span class="tag-bairro">📍 Zona Norte</span></div>
+        <div class="card-titulo">PM-SP publica edital com 2 mil vagas para Aluno-Soldado e salário de R$ 5,4 mil</div>
+        <div class="card-resumo">A Polícia Militar de São Paulo abriu concurso para 2.000 vagas de Aluno-Soldado do Quadro de Praças, com remuneração inicial de R$ 5.482,51. Inscrições vão de 15/06 a 21/08 pela Vunesp, exigem nível médio completo, idade entre 17 e 30 anos e CNH categoria B; provas previstas para 20/09.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>Tribuna de Jundiaí</span><span class="dot3"></span><span>inscrições até 21/08</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://www.metro.sp.gov.br/2026/07/13/metro-recebe-campanha-de-vacinacao-em-seis-estacoes/" target="_blank" data-bairro="Tucuruvi" data-distrito="TUCURUVI">
+      <div class="card-icone ic-eco">💉</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-not">Saúde</span><span class="tag-bairro">📍 Tucuruvi</span></div>
+        <div class="card-titulo">Metrô promove campanha de vacinação contra sarampo, caxumba e rubéola com foco na Tucuruvi</div>
+        <div class="card-resumo">Em parceria com a Secretaria Municipal da Saúde, o Metrô realizou campanha de vacinação em seis estações na segunda quinzena de julho, com atenção especial à estação Tucuruvi, na Zona Norte, região que registrou casos recentes de sarampo.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>Metrô de São Paulo</span><span class="dot3"></span><span>13/07</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+
+    <a class="card-noticia" href="https://www.agenciasp.sp.gov.br/furtos-e-roubos-a-residencias-capital/" target="_blank" data-bairro="Zona Norte" data-distrito="">
+      <div class="card-icone ic-seg">📉</div>
+      <div>
+        <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Zona Norte</span></div>
+        <div class="card-titulo">Furtos e roubos a residências caem 25% na capital após polícia desarticular quadrilha</div>
+        <div class="card-resumo">A Agência SP informou que os furtos e roubos a residências caíram 25% na capital paulista após ação policial que desarticulou uma quadrilha especializada nesse tipo de crime, resultado que também beneficia bairros da Zona Norte.</div>
+        <div class="card-footer">
+          <div class="card-meta"><span>Agência SP</span><span class="dot3"></span><span>julho/2026</span></div>
+          <span class="card-link">Leia mais →</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="secao" id="agenda">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
+      <span class="secao-count">6 eventos</span>
+    </div>
+
+    <a class="card-evento" href="https://jornalturismoeeventos.com.br/horto-florestal-ferias-julho-programacao-sao-paulo/" target="_blank" data-bairro="Horto Florestal" data-distrito="TREMEMBÉ">
+      <div class="evento-data" style="background:#2E7D32;"><span class="evento-dia">18</span><span class="evento-mes">Jul</span></div>
+      <div>
+        <div class="evento-titulo">Minha Primeira Trilha</div>
+        <div class="evento-info"><span>⏰ a definir</span><span>📍 Horto Florestal (Parque Estadual Alberto Löfgren), Tremembé</span><span>Experiência de trilha guiada voltada a crianças que estão começando a explorar áreas de mata, parte da programação de férias de julho do Horto Florestal.</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://jornalturismoeeventos.com.br/horto-florestal-ferias-julho-programacao-sao-paulo/" target="_blank" data-bairro="Horto Florestal" data-distrito="TREMEMBÉ">
+      <div class="evento-data" style="background:#5D4037;"><span class="evento-dia">18</span><span class="evento-mes">Jul</span></div>
+      <div>
+        <div class="evento-titulo">Cinema no Palácio Florestal</div>
+        <div class="evento-info"><span>⏰ a definir</span><span>📍 Horto Florestal, Tremembé</span><span>Sessão gratuita de cinema infantil e clássicos ao ar livre, dentro da programação de férias de julho. Repete em 25/07.</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://bsp.org.br/agenda/" target="_blank" data-bairro="Santana" data-distrito="SANTANA">
+      <div class="evento-data" style="background:#7B1FA2;"><span class="evento-dia">19</span><span class="evento-mes">Jul</span></div>
+      <div>
+        <div class="evento-titulo">Sarau da Juventude</div>
+        <div class="evento-info"><span>⏰ 14h às 16h</span><span>📍 Biblioteca de São Paulo, Av. Cruzeiro do Sul, 2630 – Santana</span><span>Encontro poético-musical com microfone aberto para leitura de poesias, apresentações musicais autorais e rodas de conversa, voltado a adolescentes e jovens. Acontece às quintas (13h-15h) e domingos (14h-16h) até 26/07.</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://jornalturismoeeventos.com.br/horto-florestal-ferias-julho-programacao-sao-paulo/" target="_blank" data-bairro="Horto Florestal" data-distrito="TREMEMBÉ">
+      <div class="evento-data" style="background:#00838F;"><span class="evento-dia">20</span><span class="evento-mes">Jul</span></div>
+      <div>
+        <div class="evento-titulo">Aula gratuita de zumba</div>
+        <div class="evento-info"><span>⏰ 10h30 às 12h30</span><span>📍 Horto Florestal, tenda de eventos, Tremembé</span><span>Aulas gratuitas de zumba para todas as idades, com repetições nos dias 21, 27 e 28/07.</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://saopauloparacriancas.com.br/ferias-julho-sesc-santana/" target="_blank" data-bairro="Santana" data-distrito="SANTANA">
+      <div class="evento-data" style="background:#C62828;"><span class="evento-dia">23</span><span class="evento-mes">Jul</span></div>
+      <div>
+        <div class="evento-titulo">Fábrica de Brinquedos no Sesc Santana</div>
+        <div class="evento-info"><span>⏰ 14h</span><span>📍 Sesc Santana, Área de Convivência</span><span>Espetáculo de acrobacia, dança e um robô pneumático feito de material reciclado, para todas as idades. Gratuito, repete em 24/07.</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+
+    <a class="card-evento" href="https://jornalturismoeeventos.com.br/horto-florestal-ferias-julho-programacao-sao-paulo/" target="_blank" data-bairro="Horto Florestal" data-distrito="TREMEMBÉ">
+      <div class="evento-data" style="background:#2E7D32;"><span class="evento-dia">24</span><span class="evento-mes">Jul</span></div>
+      <div>
+        <div class="evento-titulo">Volta ao Mundo pelo Horto Florestal</div>
+        <div class="evento-info"><span>⏰ a definir</span><span>📍 Horto Florestal, Tremembé</span><span>Atividade que convida o público a conhecer árvores originárias de diferentes continentes e curiosidades sobre a diversidade botânica do parque.</span></div>
+        <span class="evento-valor valor-gratis">Gratuito</span>
+      </div>
+    </a>
+  </div>
+
+  <div class="secao" id="vagas">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-vag"></span>Vagas de Emprego</div>
+      <span class="secao-count">5 vagas</span>
+    </div>
+
+    <div class="card-vaga" data-bairro="Cachoeirinha" data-distrito="CACHOEIRINHA">
+      <div class="vaga-icone">🛍️</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Atendente de loja</div>
+        <div class="vaga-info"><span>🏢 Rede de varejo</span><span>📍 Cachoeirinha</span><span>Vaga em loja na Vila Nova Cachoeirinha, Zona Norte; disponibilidade de horário comercial</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">InfoJobs · vaga aberta em julho/2026</div>
+    </div>
+
+    <div class="card-vaga" data-bairro="Zona Norte" data-distrito="">
+      <div class="vaga-icone">💡</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Leiturista e entregador(a) de conta de luz</div>
+        <div class="vaga-info"><span>🏢 Concessionária de energia (via Cate)</span><span>📍 Zona Norte</span><span>100 vagas com seleção realizada em 10/07; não é necessário experiência prévia</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Secretaria Municipal de Desenvolvimento Econômico e Trabalho · seleção em 10/07</div>
+    </div>
+
+    <div class="card-vaga" data-bairro="Casa Verde" data-distrito="CASA VERDE">
+      <div class="vaga-icone">💼</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Diversas vagas no Cate Casa Verde</div>
+        <div class="vaga-info"><span>🏢 Unidade Cate Casa Verde</span><span>📍 Casa Verde</span><span>Atendimento presencial na Av. Ordem e Progresso, 1001; levar RG, CPF e carteira de trabalho</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Cate / Prefeitura de São Paulo · vagas abertas em julho/2026</div>
+    </div>
+
+    <div class="card-vaga" data-bairro="Jaçanã" data-distrito="JAÇANÃ">
+      <div class="vaga-icone">💼</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Diversas vagas no Cate Jaçanã/Tremembé</div>
+        <div class="vaga-info"><span>🏢 Unidade Cate Jaçanã/Tremembé</span><span>📍 Jaçanã</span><span>Atendimento presencial na Rua Luís Stamatis, 300 - Jaçanã; levar RG, CPF e carteira de trabalho</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Cate / Prefeitura de São Paulo · vagas abertas em julho/2026</div>
+    </div>
+
+    <div class="card-vaga" data-bairro="Pirituba" data-distrito="PIRITUBA">
+      <div class="vaga-icone">💼</div>
+      <div style="flex:1">
+        <div class="vaga-titulo">Diversas vagas no Cate Pirituba</div>
+        <div class="vaga-info"><span>🏢 Unidade Cate Pirituba</span><span>📍 Pirituba</span><span>Atendimento presencial na Rua Paula Ferreira, 1708 - Vila Pirituba; levar RG, CPF e carteira de trabalho</span></div>
+        <div style="margin-top:6px;"><span class="vaga-badge">CLT</span></div>
+      </div>
+      <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Cate / Prefeitura de São Paulo · vagas abertas em julho/2026</div>
+    </div>
+  </div>
+
+  <div class="secao" id="politica">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
+      <span class="secao-count">3 itens</span>
+    </div>
+
+    <div class="card-pol" data-bairro="Brasilândia" data-distrito="BRASILÂNDIA">
+      <div class="pol-orgao">🌊 Secretaria Municipal de Infraestrutura e Obras</div>
+      <div class="pol-titulo">Piscinão Carumbé, na Brasilândia, avança com investimento de R$ 56,2 milhões</div>
+      <div class="pol-impacto">O reservatório, com capacidade de 9.200 m³, deve beneficiar cerca de 240 mil pessoas na região quando entregue, como parte do plano municipal de combate a enchentes na Zona Norte.</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">Em construção</span>
+        <span style="font-size:12px;color:var(--cinza-m);">Secretaria Municipal de Infraestrutura e Obras</span>
+      </div>
+    </div>
+
+    <div class="card-pol" data-bairro="Mandaqui" data-distrito="MANDAQUI">
+      <div class="pol-orgao">🌊 Secretaria Municipal de Infraestrutura e Obras</div>
+      <div class="pol-titulo">Prefeitura avança em projeto de novo piscinão no Lauzane</div>
+      <div class="pol-impacto">O projeto de implantação de um piscinão na região do córrego Lauzane, na Zona Norte, integra o Plano de Metas 2025-2028 do município para reduzir alagamentos na região.</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">Em fase de projeto</span>
+        <span style="font-size:12px;color:var(--cinza-m);">Gazeta da Vila Guilherme</span>
+      </div>
+    </div>
+
+    <div class="card-pol" data-bairro="Casa Verde" data-distrito="CASA VERDE">
+      <div class="pol-orgao">🏛️ Subprefeitura Casa Verde/Limão/Cachoeirinha</div>
+      <div class="pol-titulo">Orçamento Cidadão 2026 entra na 2ª etapa e CPM escolhe 15 propostas para a região</div>
+      <div class="pol-impacto">Após participação de 2.571 pessoas e apresentação de 80 propostas na 1ª etapa, o Conselho Participativo Municipal selecionou 15 propostas para o território de Casa Verde, Limão e Cachoeirinha, que seguem para análise de viabilidade da Secretaria de Planejamento.</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">Em análise de viabilidade</span>
+        <span style="font-size:12px;color:var(--cinza-m);">Subprefeitura Casa Verde/Limão/Cachoeirinha</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="secao" id="alertas">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-dad"></span>Dados & Alertas</div>
+      <span class="secao-count">5 itens</span>
+    </div>
+
+    <div class="alerta info">
+      <div style="font-size:24px;flex-shrink:0;">🩺</div>
+      <div>
+        <div class="alerta-titulo">Sarampo: Vila Medeiros com casos confirmados e vacinação ampliada</div>
+        <div class="alerta-desc">Três casos confirmados na Vila Medeiros levaram a Secretaria Municipal da Saúde a ampliar a vacinação para bebês de 6 a 11 meses e manter varredura vacinal no distrito.</div>
+        <div class="alerta-meta">Secretaria Municipal da Saúde</div>
+      </div>
+    </div>
+
+    <div class="alerta info">
+      <div style="font-size:24px;flex-shrink:0;">💉</div>
+      <div>
+        <div class="alerta-titulo">Metrô reforça vacinação contra sarampo com foco na Tucuruvi</div>
+        <div class="alerta-desc">Campanha de vacinação contra sarampo, caxumba e rubéola foi realizada em seis estações do Metrô na segunda quinzena de julho, com atenção especial à região da Tucuruvi.</div>
+        <div class="alerta-meta">Metrô de São Paulo / Secretaria Municipal da Saúde</div>
+      </div>
+    </div>
+
+    <div class="alerta info">
+      <div style="font-size:24px;flex-shrink:0;">🚆</div>
+      <div>
+        <div class="alerta-titulo">Linha 7-Rubi opera com velocidade reduzida entre Perus e Franco da Rocha no domingo (19/07)</div>
+        <div class="alerta-desc">Obras de modernização da sinalização vão reduzir a velocidade dos trens entre 8h e 18h, com acréscimo de cerca de 10 minutos no tempo de viagem da linha.</div>
+        <div class="alerta-meta">TIC Trens / CPTM</div>
+      </div>
+    </div>
+
+    <div class="alerta info">
+      <div style="font-size:24px;flex-shrink:0;">💼</div>
+      <div>
+        <div class="alerta-titulo">Cate abre semana com mais de 1.700 vagas de emprego na Capital</div>
+        <div class="alerta-desc">Postos do Cate, incluindo unidades da Zona Norte, oferecem vagas com salários de R$ 1.069 a R$ 28.423 em setores como saúde, comércio, serviços, construção e logística.</div>
+        <div class="alerta-meta">Secretaria Municipal de Desenvolvimento Econômico e Trabalho</div>
+      </div>
+    </div>
+
+    <div class="alerta ok">
+      <div style="font-size:24px;flex-shrink:0;">📉</div>
+      <div>
+        <div class="alerta-titulo">Furtos e roubos a residências caem 25% na capital</div>
+        <div class="alerta-desc">Após a polícia desarticular uma quadrilha especializada nesse tipo de crime, a capital registrou queda de 25% nos furtos e roubos a residências, incluindo bairros da Zona Norte.</div>
+        <div class="alerta-meta">SSP-SP / Agência SP</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="secao" id="classificados">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-cla"></span>Classificados & Serviços</div>
+      <span class="secao-count">6 anúncios</span>
+    </div>
+
+    <div class="cla-grupo">
+      <div class="cla-grupo-titulo">🏠 Imóveis para Alugar</div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Casa na Vila Guilherme — 2 dorms, próx. ao shopping</div><div class="cla-detalhe">FB Marketplace</div></div>
+        <div class="cla-preco">R$ 1.800</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Apartamento Mobiliado em Santana — direto c/ proprietário</div><div class="cla-detalhe">OLX</div></div>
+        <div class="cla-preco">R$ 2.500</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Kitnet na Parada Inglesa — individual e segura</div><div class="cla-detalhe">FB Marketplace</div></div>
+        <div class="cla-preco">R$ 1.250</div>
+      </div>
+    </div>
+
+    <div class="cla-grupo">
+      <div class="cla-grupo-titulo">🛠️ Serviços & Aulas</div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Reforço Escolar — Português e Matemática</div><div class="cla-detalhe">Professora Ana Paula · Santana · Superprof</div></div>
+        <div class="cla-preco">R$ 25/h</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Pequenos Reparos Domésticos — Hidráulica e Elétrica</div><div class="cla-detalhe">📍 Zona Norte</div></div>
+        <div class="cla-preco">A consultar</div>
+      </div>
+      <div class="cla-card">
+        <div><div class="cla-nome">Diarista e Faxina</div><div class="cla-detalhe">📍 Santana / Vila Guilherme · Facebook</div></div>
+        <div class="cla-preco">R$ 220/dia</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sb-card" id="fim-de-semana-card" data-fds="true">
+    <div class="sb-header">🎉 Este fim de semana</div>
+    <div class="sb-item">
+      <div style="font-size:20px;">🥾</div>
+      <div><div class="sb-titulo">Minha Primeira Trilha no Horto Florestal</div><div class="sb-sub">18/07 · Horto Florestal (Tremembé) · Gratuito</div></div>
+    </div>
+    <div class="sb-item">
+      <div style="font-size:20px;">🎬</div>
+      <div><div class="sb-titulo">Cinema no Palácio Florestal</div><div class="sb-sub">18/07 · Horto Florestal (Tremembé) · Gratuito</div></div>
+    </div>
+    <div class="sb-item">
+      <div style="font-size:20px;">🎤</div>
+      <div><div class="sb-titulo">Sarau da Juventude na Biblioteca de São Paulo</div><div class="sb-sub">19/07 · 14h às 16h · Santana · Gratuito</div></div>
+    </div>
+  </div></div>
+</div>
+
+  <div style="background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;padding:18px;color:var(--cinza-q);text-align:center;">
+    <div style="font-size:22px;margin-bottom:8px;">📬</div>
+    <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:800;margin-bottom:6px;">Receba o Portau todo dia</div>
+    <div style="font-size:12px;color:var(--cinza-m);margin-bottom:14px;">A edição completa da Zona Norte no seu e-mail às 8h.</div>
+    <div style="background:var(--amarelo);color:var(--cinza-q);font-weight:700;font-size:13px;padding:10px 16px;border-radius:8px;cursor:pointer;">Assinar newsletter gratuita</div>
+  </div>
+</aside>
+</div>
+</div>
+
+<script>
+document.getElementById('filtro-fechar').addEventListener('click', () => {
+  document.getElementById('filtro-painel').classList.remove('aberto');
+  document.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('ativo'));
+  document.querySelector('.sub-btn[data-sub="todas"]').classList.add('ativo');
+  document.querySelectorAll('[data-bairro]').forEach(card => { card.style.display = ''; });
+});
+</script>
+
+<script>
+window.addEventListener('load', function(){});
+</script>
+
 </body>
 </html>
