@@ -328,10 +328,14 @@ async function main() {
     /<strong>[^<]*<\/strong>/,
     `<strong>${dataPorExtenso} · Gerado às ${horaGeracao}</strong>`
   );
-  // Atualiza hero h1
+  // Atualiza data/hora exibida na barra do clima (id="clima-update").
+  // Substitui o antigo regex de <h1>Zona Norte,...</h1>, que foi removido
+  // do HTML nos commits de redesign de layout (fe71731 / 907a270) — desde
+  // entao esse local nunca mais era atualizado, embora o proprio commit
+  // ja avisasse que o regex precisava apontar para #clima-update.
   html = html.replace(
-    /<h1>Zona Norte,[\s\S]*?<\/h1>/,
-    `<h1>Zona Norte, ${dataHero} <span style="font-size:0.5em; opacity:0.7; font-weight:400">· ${horaGeracao}</span></h1>`
+    /<span id="clima-update">[^<]*<\/span>/,
+    `<span id="clima-update">${dataPorExtenso} · Gerado às ${horaGeracao}</span>`
   );
 
   // Substitui secoes editoriais
