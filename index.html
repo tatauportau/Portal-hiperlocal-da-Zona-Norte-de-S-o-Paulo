@@ -2307,6 +2307,8 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
 
       <input class="login-input" type="text" id="anuncio-vaga-horario" placeholder="Horário (ex.: Seg-Sex, 8h às 17h) — opcional" maxlength="200">
 
+      <input class="login-input" type="text" id="anuncio-vaga-salario" placeholder="Salário (ex.: R$ 1.800 ou A combinar) — opcional" maxlength="60">
+
       <div style="font-size:11px;color:var(--cinza-m);">Benefícios (opcional):</div>
       <div class="anuncio-vaga-beneficios-grid" id="anuncio-vaga-beneficios-grid">
         <label><input type="checkbox" value="Vale-transporte"> Vale-transporte</label>
@@ -2687,6 +2689,7 @@ async function publicarVagaEmpresa() {
     ? document.getElementById('anuncio-vaga-titulo-outro').value.trim()
     : tituloSelect;
   const horario = document.getElementById('anuncio-vaga-horario').value.trim();
+  const salario = document.getElementById('anuncio-vaga-salario').value.trim();
   const beneficios = Array.from(document.querySelectorAll('#anuncio-vaga-beneficios-grid input[type="checkbox"]:checked'))
     .map(c => c.value)
     .filter(v => v !== '__outro__');
@@ -2750,6 +2753,7 @@ async function publicarVagaEmpresa() {
     whatsapp_contato: whatsappFormatado ? whatsappFormatado.replace(/\D/g, '') : null,
     titulo_vaga: tituloVaga,
     horario: horario || null,
+    salario: salario || null,
     beneficios,
     beneficios_outro: beneficioOutro || null,
     descricao,
@@ -2805,6 +2809,7 @@ function criarCardVagaEmpresa(v) {
     : `<span class="vaga-candidatar-email">Candidatura: ${escapeHtml(v.email_contato)}</span>`;
   const beneficiosTexto = [...(v.beneficios || []), v.beneficios_outro].filter(Boolean).join(', ');
   const horarioHtml = v.horario ? `<span>⏰ ${escapeHtml(v.horario)}</span>` : '';
+  const salarioBadgeHtml = v.salario ? `<span class="vaga-badge">💰 ${escapeHtml(v.salario)}</span>` : '';
   const beneficiosHtml = beneficiosTexto ? `<div class="vaga-beneficios">🎁 ${escapeHtml(beneficiosTexto)}</div>` : '';
   card.innerHTML = `
     <div class="vaga-icone">📢</div>
@@ -2817,6 +2822,7 @@ function criarCardVagaEmpresa(v) {
       ${beneficiosHtml}
       <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
         <span class="vaga-badge">${escapeHtml(v.tipo_contrato)}</span>
+        ${salarioBadgeHtml}
         ${candidatarHtml}
       </div>
     </div>

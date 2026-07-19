@@ -290,6 +290,12 @@ Claude Cowork (agendamento próprio, roda sozinho)
       ⏰) e `beneficios`/`beneficios_outro` aparecem juntos numa linha
       própria (ícone 🎁, classe `.vaga-beneficios`) — tudo passando por
       `escapeHtml()` como os demais campos vindos do formulário público.
+    - `salario` (novo, opcional, `sql/007_vagas_empresas_salario.sql`):
+      texto livre alfanumérico de propósito (não é um `number`) — permite
+      tanto um valor ("R$ 1.800") quanto algo como "A combinar", sem exigir
+      formato fixo. Aparece como badge (💰) ao lado do badge de tipo de
+      contrato no card, em vez de entrar na linha de info — mantém os dois
+      "fatos rápidos" da vaga (contrato + salário) juntos visualmente.
   - **Exibição:** os cards de empresas aparecem na mesma seção "Vagas de
     Emprego", misturados com as vagas editoriais, com o selo "📢 Vaga
     Patrocinada" (classe `.vaga-patrocinada`) e sempre no topo da lista
