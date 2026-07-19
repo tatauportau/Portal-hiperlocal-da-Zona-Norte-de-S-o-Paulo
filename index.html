@@ -2552,6 +2552,7 @@ function atualizarTopbarAuth(session) {
     entrarBtn.style.display = '';
     usuarioChip.style.display = 'none';
   }
+  carregarVagasEmpresas();
 }
 
 if (sb) {
@@ -2672,7 +2673,7 @@ async function publicarVagaEmpresa() {
   document.getElementById('anuncio-vaga-form').reset();
   _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
   atualizarResumoFormularioVaga();
-  sucessoEl.textContent = 'Vaga publicada com sucesso! Ela já está visível na seção Vagas de Emprego.';
+  sucessoEl.textContent = 'Vaga publicada com sucesso! Ela já está visível para os usuários cadastrados na seção Vagas de Emprego.';
   sucessoEl.style.display = 'block';
   carregarVagasEmpresas();
 }
@@ -2718,12 +2719,28 @@ function criarCardVagaEmpresa(v) {
   return card;
 }
 
+function atualizarContadorVagas(secaoVagas, totalPatrocinadas) {
+  const countEl = secaoVagas.querySelector('.secao-count');
+  if (!countEl) return;
+  const totalEditorial = secaoVagas.querySelectorAll('.card-vaga:not(.vaga-patrocinada)').length;
+  countEl.textContent = `${totalEditorial + totalPatrocinadas} vagas`;
+}
+
 async function carregarVagasEmpresas() {
-  if (!sb) return;
-  const { data, error } = await sb.from('vagas_empresas').select('*').eq('ativa', true).order('criado_em', { ascending: false });
-  if (error || !data) return;
   const secaoVagas = document.getElementById('vagas');
   if (!secaoVagas) return;
+
+  // Vagas patrocinadas sao um beneficio de quem tem cadastro — sem sessao
+  // ativa, nao carrega (e remove qualquer card que tenha ficado de um
+  // login anterior, ex.: apos logout).
+  if (!sb || !sessaoAtual) {
+    secaoVagas.querySelectorAll('.vaga-patrocinada').forEach(el => el.remove());
+    atualizarContadorVagas(secaoVagas, 0);
+    return;
+  }
+
+  const { data, error } = await sb.from('vagas_empresas').select('*').eq('ativa', true).order('criado_em', { ascending: false });
+  if (error || !data) return;
   secaoVagas.querySelectorAll('.vaga-patrocinada').forEach(el => el.remove());
   const header = secaoVagas.querySelector('.secao-header');
   // Insere em ordem reversa (mais antiga primeiro) logo apos o header, para
@@ -2731,13 +2748,8 @@ async function carregarVagasEmpresas() {
   [...data].reverse().forEach(v => {
     header.insertAdjacentElement('afterend', criarCardVagaEmpresa(v));
   });
-  const countEl = secaoVagas.querySelector('.secao-count');
-  if (countEl) {
-    const totalEditorial = secaoVagas.querySelectorAll('.card-vaga:not(.vaga-patrocinada)').length;
-    countEl.textContent = `${totalEditorial + data.length} vagas`;
-  }
+  atualizarContadorVagas(secaoVagas, data.length);
 }
-if (sb) carregarVagasEmpresas();
 
 const SUB_MAP = {
   santana:   ['santana','tucuruvi','mandaqui'],

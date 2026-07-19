@@ -266,9 +266,17 @@ Claude Cowork (agendamento próprio, roda sozinho)
     Emprego", misturados com as vagas editoriais, com o selo "📢 Vaga
     Patrocinada" (classe `.vaga-patrocinada`) e sempre no topo da lista
     (mais recente primeiro). São carregados via `carregarVagasEmpresas()`
-    no carregamento da página (client-side, não fazem parte do
-    `index.html` estático gerado por `gerar-portau.js` — por isso não se
-    perdem nem se acumulam a cada geração diária).
+    (client-side, não fazem parte do `index.html` estático gerado por
+    `gerar-portau.js` — por isso não se perdem nem se acumulam a cada
+    geração diária).
+  - **Só aparecem para quem tem cadastro:** diferente das vagas editoriais
+    (que continuam visíveis pra todo mundo, inclusive na aba "Edição do
+    Dia" — ver seção de gate de login acima), as vagas patrocinadas são
+    tratadas como benefício de quem tem conta. `carregarVagasEmpresas()`
+    só busca/renderiza se `sessaoAtual` existir; a função roda de novo a
+    cada mudança de estado de login (chamada no fim de
+    `atualizarTopbarAuth()`), então os cards aparecem assim que a pessoa
+    loga e somem assim que desloga, sem precisar recarregar a página.
   - **Segurança:** todo texto vindo do formulário (nome da empresa,
     título, descrição, bairro) passa por `escapeHtml()` antes de virar
     HTML — os dados vêm de um formulário público, sem login, então são
