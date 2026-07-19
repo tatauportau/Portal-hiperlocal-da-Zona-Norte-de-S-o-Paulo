@@ -447,7 +447,15 @@ Claude Cowork (agendamento próprio, roda sozinho)
     esse cache a cada clique ou a cada recarga (ex.: depois de
     cancelar/editar/marcar contratada). Reabrir o painel sempre volta pro
     filtro "Ativas" (default deliberado — evita a empresa abrir o painel e
-    ver logo de cara vagas canceladas/expiradas/antigas misturadas).
+    ver logo de cara vagas canceladas/expiradas/antigas misturadas). Cada
+    botão mostra a quantidade entre parênteses (ex.: "Ativas (2)"), via
+    `atualizarContadoresFiltroMinhasVagas()` — roda toda vez que
+    `renderizarMinhasVagas()` roda, então os números ficam sempre
+    consistentes com `_minhasVagasCache`, mesmo depois de cancelar/marcar
+    contratada (o card muda de categoria, a contagem acompanha). Nota
+    importante: o texto do botão é recalculado inteiro a cada render — se
+    algum dia quiser adicionar algo ao lado do texto, editar direto o
+    `.textContent` do botão vai perder essa adição.
     **"Ativas" e "Expiradas" não são valores de `status`**
     no banco (ambos são `status = 'ativa'`) — o filtro distingue pela
     comparação `expira_em` vs. `now()` no próprio client, então esses dois

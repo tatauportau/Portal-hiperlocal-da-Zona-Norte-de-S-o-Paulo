@@ -3202,7 +3202,25 @@ function filtrarMinhasVagas(filtro) {
   renderizarMinhasVagas();
 }
 
+const MINHAS_VAGAS_FILTRO_LABEL = { todas: 'Todas', ativa: 'Ativas', expirada: 'Expiradas', cancelada: 'Canceladas', contratada: 'Contratadas' };
+
+function atualizarContadoresFiltroMinhasVagas() {
+  const agora = new Date();
+  const contagens = {
+    todas: _minhasVagasCache.length,
+    ativa: _minhasVagasCache.filter(v => v.status === 'ativa' && new Date(v.expira_em) > agora).length,
+    expirada: _minhasVagasCache.filter(v => v.status === 'ativa' && new Date(v.expira_em) <= agora).length,
+    cancelada: _minhasVagasCache.filter(v => v.status === 'cancelada').length,
+    contratada: _minhasVagasCache.filter(v => v.status === 'contratada').length,
+  };
+  document.querySelectorAll('#minhas-vagas-filtros .minha-vaga-filtro-btn').forEach(btn => {
+    const chave = btn.dataset.filtro;
+    btn.textContent = `${MINHAS_VAGAS_FILTRO_LABEL[chave]} (${contagens[chave]})`;
+  });
+}
+
 function renderizarMinhasVagas() {
+  atualizarContadoresFiltroMinhasVagas();
   const lista = document.getElementById('minhas-vagas-lista');
   if (!lista) return;
   if (_minhasVagasCache.length === 0) {
