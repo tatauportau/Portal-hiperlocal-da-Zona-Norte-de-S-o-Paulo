@@ -29,7 +29,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 009_vincular_empresa_rpc.sql  # Migração: RPC pra vincular empresa a conta ja existente
 │   ├── 010_empresa_contato_e_publicado_por.sql  # Migração: e-mail/celular da empresa + responsável pelo anúncio
 │   ├── 011_permite_validade_1_dia.sql  # Migração: permite dias_validade=1 (além de 7/14/21/30)
-│   └── 012_candidaturas_vagas.sql  # Migração: candidaturas de leitores (opt-in, compartilha nome/bairro/celular)
+│   ├── 012_candidaturas_vagas.sql  # Migração: candidaturas de leitores (opt-in, compartilha nome/bairro/celular)
+│   └── 013_corrige_recursao_rls_candidaturas.sql  # Migração: corrige recursão infinita de RLS entre vagas_empresas e candidaturas_vagas
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -573,6 +574,33 @@ Claude Cowork (agendamento próprio, roda sozinho)
     (`.in('vaga_id', ...)`), agrupada em `_candidaturasPorVagaId` — visível
     pra qualquer um da empresa (não só quem criou a vaga), já que ver
     candidatos não é uma ação restrita como editar/cancelar/contratar.
+
+  ### Bug corrigido (19/07/2026): recursão infinita de RLS entre vagas_empresas e candidaturas_vagas — `sql/013_corrige_recursao_rls_candidaturas.sql`
+
+  A 4ª policy de select em `vagas_empresas` (item acima) consulta
+  `candidaturas_vagas`; `candidaturas_vagas_select_empresa` já consultava
+  `vagas_empresas` de volta. RLS de uma tabela reavalia a RLS de qualquer
+  tabela referenciada numa subquery — isso criou um ciclo (avaliar RLS de
+  A aciona RLS de B, que aciona RLS de A de novo, indefinidamente) que o
+  Postgres detecta e aborta com "infinite recursion detected in policy for
+  relation...". Como o Postgres precisa avaliar **todas** as policies
+  permissivas pra fazer o OR entre elas, isso quebrava **toda** consulta
+  autenticada a `vagas_empresas` — vagas patrocinadas sumiam pra qualquer
+  usuário logado (inclusive o painel "Minhas Vagas" da própria empresa),
+  mesmo uma vaga recém-criada. Só não afetava visitante anônimo porque
+  policies `to authenticated` nem são avaliadas pro papel `anon` — por
+  isso testes com a `anon key` (sem sessão real) não reproduziam o
+  problema, o que atrasou o diagnóstico.
+
+  Fix: os dois pontos de referência cruzada passam a usar funções
+  `security definer` (`candidatei_me_a_vaga()`, `sou_empresa_da_vaga()`)
+  — consultam a tabela referenciada por baixo da RLS dela (dono da tabela
+  ignora a própria RLS, mesmo mecanismo de `minha_empresa_id()`/
+  `handle_new_user()`), quebrando o ciclo porque a função não dispara
+  reavaliação de policy na tabela que consulta por dentro. **Lição pro
+  futuro:** duas tabelas com RLS nunca devem se referenciar diretamente
+  uma na policy da outra — sempre passar por uma função `security
+  definer` de cada lado.
 
   ### Busca/filtro na seção Vagas
 
