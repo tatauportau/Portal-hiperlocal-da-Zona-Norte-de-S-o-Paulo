@@ -144,7 +144,10 @@ function buildVagas(vagas) {
   <div class="secao" id="vagas">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-vag"></span>Vagas de Emprego</div>
-      <span class="secao-count">${count} vagas</span>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="anuncio-vaga-btn" onclick="abrirAnuncioVaga()">📢 Anuncie sua vaga</button>
+        <span class="secao-count">${count} vagas</span>
+      </div>
     </div>\n`;
   for (const v of vagas) {
     const distrito = resolverDistrito(v.bairro) || '';

@@ -20,7 +20,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 ├── sql/
 │   ├── 001_auth_profiles.sql   # Migração: tabela profiles + RLS + trigger de cadastro
 │   ├── 002_add_celular.sql     # Migração: coluna celular + checagem de duplicidade
-│   └── 003_add_email.sql       # Migração: coluna email (copiada de auth.users)
+│   ├── 003_add_email.sql       # Migração: coluna email (copiada de auth.users)
+│   └── 004_vagas_empresas.sql  # Migração: tabela vagas_empresas (vagas patrocinadas por empresas)
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -225,6 +226,67 @@ Claude Cowork (agendamento próprio, roda sozinho)
 
 ---
 
+## Vagas Restritas a Cadastrados + Vagas de Empresas (Anuncie sua vaga)
+
+- **Gate de login no menu:** os itens **💼 Vagas**, **🛒 Classificados** e
+  **👥 Comunidade** da `.ancora-bar` exigem sessão ativa (Supabase Auth). Sem
+  login, o clique abre o modal de login/cadastro com uma mensagem
+  contextual (`abrirLogin(aba, mensagem)`, parâmetro `mensagem` opcional)
+  em vez de navegar até a seção. **Importante:** esse gate é só no clique
+  do menu — o conteúdo dessas seções continua presente no HTML e visível
+  normalmente na aba "✨ Edição do Dia" (feed com todas as seções
+  misturadas), por decisão consciente de escopo (evitar o trabalho maior de
+  ocultar cards individualmente ali). Rastreado via `sessaoAtual` (variável
+  global atualizada em `atualizarTopbarAuth`), não uma tabela/flag no
+  banco. **Comunidade** ainda não tem seção própria (ver roadmap) — o
+  clique, quando logado, só mostra um aviso "em breve".
+
+- **Vagas de empresas (anúncio patrocinado):** empresas podem publicar
+  vagas direto no site pelo botão "📢 Anuncie sua vaga" no cabeçalho da
+  seção Vagas, sem precisar criar conta e **sem aprovação manual antes de
+  publicar** (decisão consciente para testar o modelo primeiro). O
+  formulário grava direto na tabela `public.vagas_empresas` (schema em
+  `sql/004_vagas_empresas.sql`) usando a mesma `anon key` do Supabase já
+  usada pelo cadastro de leitor — RLS permite `insert` público e `select`
+  público apenas de linhas com `ativa = true`.
+  - **Moderação é reativa, não preventiva:** para remover uma vaga
+    indevida/spam, rodar `update public.vagas_empresas set ativa = false
+    where id = '...'` no SQL Editor do Supabase (ou editar a linha pelo
+    Table Editor) — não há policy de `update`/`delete` pública, só quem
+    acessa o painel consegue.
+  - **Anti-spam leve:** campo honeypot invisível no formulário
+    (`#anuncio-vaga-site`); não há CAPTCHA nem rate limit — como o insert é
+    público, uma leva de envios automatizados ainda é possível. Considerar
+    CAPTCHA ou uma Netlify Function intermediária se isso virar problema na
+    prática.
+  - **Exibição:** os cards de empresas aparecem na mesma seção "Vagas de
+    Emprego", misturados com as vagas editoriais, com o selo "📢 Vaga
+    Patrocinada" (classe `.vaga-patrocinada`) e sempre no topo da lista
+    (mais recente primeiro). São carregados via `carregarVagasEmpresas()`
+    no carregamento da página (client-side, não fazem parte do
+    `index.html` estático gerado por `gerar-portau.js` — por isso não se
+    perdem nem se acumulam a cada geração diária).
+  - **Segurança:** todo texto vindo do formulário (nome da empresa,
+    título, descrição, bairro) passa por `escapeHtml()` antes de virar
+    HTML — os dados vêm de um formulário público, sem login, então são
+    tratados como não confiáveis. O link de candidatura só é usado como
+    `href` se começar com `http://` ou `https://` (`linkCandidaturaSeguro`),
+    para não permitir esquemas como `javascript:`.
+  - **Cobrança:** gratuito durante um período de testes, **até 19/08/2026**
+    (constante `VAGAS_GRATIS_ATE` no `index.html`, também citada no aviso
+    exibido dentro do formulário). Depois dessa data, publicar vagas pode
+    passar a ser pago — ainda não há gateway de pagamento integrado nem
+    modelo de cobrança definido; é decisão futura.
+  - **Bairro do anúncio:** mesmo padrão do cadastro de leitor — campo com
+    autocomplete restrito aos 462 bairros da Zona Norte (mesma
+    `data/bairros-por-distrito.json` e mesma `<datalist>` do cadastro de
+    usuário), com campo livre alternativo para quem é de fora da região.
+    Usa o mesmo mapa bairro→distrito (`_bairroParaDistrito`) para resolver
+    o `data-distrito` do card e assim funcionar certinho no filtro por
+    subprefeitura.
+
+---
+
 ## Distritos Cobertos
 
 | Subprefeitura | Distritos |
@@ -278,7 +340,10 @@ Claude Cowork (agendamento próprio, roda sozinho)
 - ✅ Topbar com data/hora de geração
 - ✅ Cadastro de usuários com login (Supabase Auth)
 - ✅ Logo movida de base64 inline para `assets/logo.png` (evita truncamento acidental do HTML)
-- 🔲 Fluxo de pagamento/upgrade para assinante
+- ✅ Vagas, Classificados e Comunidade restritos a usuários logados (gate no menu)
+- ✅ Empresas podem publicar vagas patrocinadas sem login (formulário público, sem aprovação prévia, gratuito até 19/08/2026)
+- 🔲 Cobrança das vagas de empresas após o período de testes (19/08/2026)
+- 🔲 Fluxo de pagamento/upgrade para assinante leitor
 - 🔲 Chat da comunidade (Firebase ou Netlify DB)
 - 🔲 Área comercial para empresas
 - 🔲 Mapa no hero substituindo botões

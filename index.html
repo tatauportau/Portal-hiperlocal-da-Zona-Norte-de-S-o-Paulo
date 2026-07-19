@@ -603,6 +603,14 @@
   .login-link { font-size: 12px; color: var(--cinza-m); text-align: center; cursor: pointer; text-decoration: underline; margin-top: 2px; }
   .login-erro { font-size: 12px; color: var(--vermelho); text-align: center; display: none; }
   .login-sucesso { font-size: 12px; color: #2e7d32; text-align: center; display: none; }
+
+  /* VAGAS DE EMPRESAS (anuncio pago/patrocinado) */
+  .anuncio-vaga-btn{font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid var(--cinza-q);background:var(--branco);color:var(--cinza-q);cursor:pointer;white-space:nowrap;transition:background .15s,color .15s;font-family:'Inter',sans-serif;}
+  .anuncio-vaga-btn:hover{background:var(--cinza-q);color:var(--branco);}
+  .card-vaga.vaga-patrocinada{border-left:4px solid var(--cinza-q);}
+  .vaga-patrocinada-pill{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:var(--cinza-q);color:var(--branco);white-space:nowrap;}
+  .vaga-candidatar{font-size:11px;font-weight:700;color:var(--cinza-q);text-decoration:underline;}
+  .vaga-candidatar-email{font-size:11px;color:var(--cinza-m);}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
@@ -1078,7 +1086,10 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   <div class="secao" id="vagas">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-vag"></span>Vagas de Emprego</div>
-      <span class="secao-count">5 vagas</span>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="anuncio-vaga-btn" onclick="abrirAnuncioVaga()">📢 Anuncie sua vaga</button>
+        <span class="secao-count">5 vagas</span>
+      </div>
     </div>
 
     <div class="card-vaga" data-bairro="Cachoeirinha" data-distrito="CACHOEIRINHA">
@@ -2028,6 +2039,39 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
   </div>
 </div>
 
+<!-- MODAL ANUNCIE SUA VAGA (empresas) -->
+<div class="login-overlay" id="anuncio-vaga-overlay">
+  <div class="login-painel">
+    <button class="login-fechar" onclick="fecharAnuncioVaga()">✕</button>
+    <div class="login-titulo">Anuncie sua vaga</div>
+    <div class="login-sub" id="anuncio-vaga-aviso">Publique gratuitamente durante o período de testes.</div>
+
+    <form class="login-form ativo" id="anuncio-vaga-form" onsubmit="event.preventDefault(); publicarVagaEmpresa();">
+      <input type="text" id="anuncio-vaga-site" name="site" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
+      <input class="login-input" type="text" id="anuncio-vaga-empresa" placeholder="Nome da empresa" required maxlength="120">
+      <input class="login-input" type="email" id="anuncio-vaga-email" placeholder="E-mail de contato" required autocomplete="email">
+      <input class="login-input" type="tel" id="anuncio-vaga-whatsapp" placeholder="WhatsApp (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
+      <input class="login-input" type="text" id="anuncio-vaga-titulo" placeholder="Título da vaga" required maxlength="120">
+      <textarea class="login-input" id="anuncio-vaga-descricao" placeholder="Descrição da vaga (requisitos, horário, benefícios, etc.)" required maxlength="600" rows="3" style="resize:vertical;"></textarea>
+      <input class="login-input" type="text" id="anuncio-vaga-bairro-zn" placeholder="Bairro da Zona Norte (opcional)" list="login-bairros-datalist" autocomplete="off">
+      <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se for fora da Zona Norte:</div>
+      <input class="login-input" type="text" id="anuncio-vaga-bairro-outro" placeholder="Outra cidade ou bairro">
+      <select class="login-select" id="anuncio-vaga-tipo" required>
+        <option value="" disabled selected>Tipo de contrato</option>
+        <option value="CLT">CLT</option>
+        <option value="PJ">PJ</option>
+        <option value="Estágio">Estágio</option>
+        <option value="Temporário">Temporário</option>
+        <option value="Freelance">Freelance</option>
+      </select>
+      <input class="login-input" type="url" id="anuncio-vaga-link" placeholder="Link para candidatura (opcional)">
+      <div class="login-erro" id="anuncio-vaga-erro"></div>
+      <div class="login-sucesso" id="anuncio-vaga-sucesso"></div>
+      <button class="login-btn" type="submit" id="anuncio-vaga-btn-enviar">Publicar vaga</button>
+    </form>
+  </div>
+</div>
+
 <script>
 let wazeAberto = false;
 
@@ -2081,13 +2125,18 @@ function mostrarLoginTab(aba) {
 
 let _bairrosSelectCarregado = false;
 let _bairrosZonaNorteSet = null;
+let _bairroParaDistrito = null;
 function carregarBairrosSelect() {
   if (_bairrosSelectCarregado) return;
   _bairrosSelectCarregado = true;
   fetch('./data/bairros-por-distrito.json').then(r => r.json()).then(porDistrito => {
     const nomes = new Set();
-    Object.values(porDistrito).forEach(lista => lista.forEach(b => nomes.add(b)));
+    const mapa = {};
+    Object.entries(porDistrito).forEach(([distrito, lista]) => {
+      lista.forEach(b => { nomes.add(b); mapa[normalizarTexto(b)] = distrito; });
+    });
     _bairrosZonaNorteSet = nomes;
+    _bairroParaDistrito = mapa;
     const datalist = document.getElementById('login-bairros-datalist');
     datalist.innerHTML = Array.from(nomes).sort((a, b) => a.localeCompare(b, 'pt-BR'))
       .map(nome => `<option value="${nome}"></option>`).join('');
@@ -2273,6 +2322,148 @@ document.addEventListener('click', function(e) {
   }
 });
 
+// --- VAGAS DE EMPRESAS (anuncio patrocinado, formulario publico) ---
+// Periodo de testes sem cobranca (ver sql/004_vagas_empresas.sql).
+const VAGAS_GRATIS_ATE = new Date('2026-08-19T00:00:00-03:00');
+
+function formatarDataPtBr(d) {
+  return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+
+function escapeHtml(s) {
+  return (s ?? '').toString()
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+}
+
+function linkCandidaturaSeguro(url) {
+  return /^https?:\/\//i.test(url || '') ? url : null;
+}
+
+function abrirAnuncioVaga() {
+  if (!sb) {
+    alert('Cadastro ainda não configurado. Tente novamente mais tarde.');
+    return;
+  }
+  document.getElementById('anuncio-vaga-aviso').textContent =
+    `🎁 Período de testes: publicação gratuita até ${formatarDataPtBr(VAGAS_GRATIS_ATE)}. Depois disso, publicar vagas poderá passar a ser pago.`;
+  carregarBairrosSelect();
+  document.getElementById('anuncio-vaga-erro').style.display = 'none';
+  document.getElementById('anuncio-vaga-sucesso').style.display = 'none';
+  document.getElementById('anuncio-vaga-form').reset();
+  document.getElementById('anuncio-vaga-overlay').classList.add('aberto');
+}
+function fecharAnuncioVaga() {
+  document.getElementById('anuncio-vaga-overlay').classList.remove('aberto');
+}
+
+async function publicarVagaEmpresa() {
+  const erroEl = document.getElementById('anuncio-vaga-erro');
+  const sucessoEl = document.getElementById('anuncio-vaga-sucesso');
+  erroEl.style.display = 'none';
+  sucessoEl.style.display = 'none';
+
+  // Honeypot anti-spam: campo invisível que só um robô preencheria.
+  if (document.getElementById('anuncio-vaga-site').value) return;
+
+  const nomeEmpresa = document.getElementById('anuncio-vaga-empresa').value.trim();
+  const emailContato = document.getElementById('anuncio-vaga-email').value.trim();
+  const whatsappFormatado = document.getElementById('anuncio-vaga-whatsapp').value.trim();
+  const tituloVaga = document.getElementById('anuncio-vaga-titulo').value.trim();
+  const descricao = document.getElementById('anuncio-vaga-descricao').value.trim();
+  const bairroZN = document.getElementById('anuncio-vaga-bairro-zn').value.trim();
+  const bairroOutro = document.getElementById('anuncio-vaga-bairro-outro').value.trim();
+  const tipoContrato = document.getElementById('anuncio-vaga-tipo').value;
+  const link = document.getElementById('anuncio-vaga-link').value.trim();
+
+  if (bairroZN && bairroOutro) {
+    erroEl.textContent = 'Preencha só um dos dois campos de localização: da Zona Norte OU de fora.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  if (bairroZN && _bairrosZonaNorteSet && !_bairrosZonaNorteSet.has(bairroZN)) {
+    erroEl.textContent = 'Selecione um bairro válido da lista, ou preencha "Outra cidade ou bairro" abaixo.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  const bairro = bairroZN || bairroOutro;
+  if (!nomeEmpresa || !emailContato || !tituloVaga || !descricao || !bairro || !tipoContrato) {
+    erroEl.textContent = 'Preencha todos os campos obrigatórios.';
+    erroEl.style.display = 'block';
+    return;
+  }
+
+  const btn = document.getElementById('anuncio-vaga-btn-enviar');
+  btn.disabled = true;
+  const { error } = await sb.from('vagas_empresas').insert({
+    nome_empresa: nomeEmpresa,
+    email_contato: emailContato,
+    whatsapp_contato: whatsappFormatado ? whatsappFormatado.replace(/\D/g, '') : null,
+    titulo_vaga: tituloVaga,
+    descricao,
+    bairro,
+    tipo_contrato: tipoContrato,
+    link_candidatura: link || null,
+  });
+  btn.disabled = false;
+
+  if (error) {
+    erroEl.textContent = 'Não foi possível publicar. Tente novamente em instantes.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  document.getElementById('anuncio-vaga-form').reset();
+  sucessoEl.textContent = 'Vaga publicada com sucesso! Ela já está visível na seção Vagas de Emprego.';
+  sucessoEl.style.display = 'block';
+  carregarVagasEmpresas();
+}
+
+function criarCardVagaEmpresa(v) {
+  const distrito = (_bairroParaDistrito && _bairroParaDistrito[normalizarTexto(v.bairro)]) || '';
+  const card = document.createElement('div');
+  card.className = 'card-vaga vaga-patrocinada';
+  card.dataset.bairro = v.bairro || '';
+  card.dataset.distrito = distrito;
+  const linkOk = linkCandidaturaSeguro(v.link_candidatura);
+  const candidatarHtml = linkOk
+    ? `<a href="${escapeHtml(linkOk)}" target="_blank" rel="noopener nofollow" class="vaga-candidatar">Candidatar-se →</a>`
+    : `<span class="vaga-candidatar-email">Candidatura: ${escapeHtml(v.email_contato)}</span>`;
+  card.innerHTML = `
+    <div class="vaga-icone">📢</div>
+    <div style="flex:1">
+      <div class="vaga-titulo">${escapeHtml(v.titulo_vaga)}</div>
+      <div class="vaga-info"><span>🏢 ${escapeHtml(v.nome_empresa)}</span><span>📍 ${escapeHtml(v.bairro)}</span><span>${escapeHtml(v.descricao)}</span></div>
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+        <span class="vaga-badge">${escapeHtml(v.tipo_contrato)}</span>
+        <span class="vaga-patrocinada-pill">📢 Vaga Patrocinada</span>
+        ${candidatarHtml}
+      </div>
+    </div>
+  `;
+  return card;
+}
+
+async function carregarVagasEmpresas() {
+  if (!sb) return;
+  const { data, error } = await sb.from('vagas_empresas').select('*').eq('ativa', true).order('criado_em', { ascending: false });
+  if (error || !data) return;
+  const secaoVagas = document.getElementById('vagas');
+  if (!secaoVagas) return;
+  secaoVagas.querySelectorAll('.vaga-patrocinada').forEach(el => el.remove());
+  const header = secaoVagas.querySelector('.secao-header');
+  // Insere em ordem reversa (mais antiga primeiro) logo apos o header, para
+  // que ao final a mais recente fique no topo da lista.
+  [...data].reverse().forEach(v => {
+    header.insertAdjacentElement('afterend', criarCardVagaEmpresa(v));
+  });
+  const countEl = secaoVagas.querySelector('.secao-count');
+  if (countEl) {
+    const totalEditorial = secaoVagas.querySelectorAll('.card-vaga:not(.vaga-patrocinada)').length;
+    countEl.textContent = `${totalEditorial + data.length} vagas`;
+  }
+}
+if (sb) carregarVagasEmpresas();
+
 const SUB_MAP = {
   santana:   ['santana','tucuruvi','mandaqui'],
   casaverde: ['casa verde','limão','cachoeirinha'],
@@ -2421,6 +2612,7 @@ window.addEventListener('keydown', function(e) {
     if (document.getElementById('waze-overlay').classList.contains('aberto')) fecharWaze();
     if (document.getElementById('bairros-overlay').classList.contains('aberto')) fecharBairros();
     if (document.getElementById('login-overlay').classList.contains('aberto')) fecharLogin();
+    if (document.getElementById('anuncio-vaga-overlay').classList.contains('aberto')) fecharAnuncioVaga();
   }
 });
 </script>
