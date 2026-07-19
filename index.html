@@ -619,6 +619,14 @@
   .bairros-pill.selecionada:hover{background:var(--cinza-q);border-color:var(--cinza-q);color:var(--branco);}
   .local-vaga-resumo{margin-top:12px;font-size:11px;color:var(--cinza-m);display:flex;flex-wrap:wrap;gap:6px;}
   .local-vaga-chip{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--creme);border:1px solid var(--cinza-l);color:var(--cinza-q);}
+  .minha-vaga-card{background:var(--branco);border:1px solid var(--cinza-l);border-radius:12px;padding:14px 16px;margin-bottom:10px;}
+  .minha-vaga-status{font-size:10px;font-weight:800;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;flex-shrink:0;}
+  .minha-vaga-status-ativa{background:#E8F5E9;color:#2e7d32;}
+  .minha-vaga-status-expirada{background:var(--creme);color:var(--cinza-m);}
+  .minha-vaga-status-cancelada{background:#FFEBEE;color:var(--vermelho);}
+  .minha-vaga-status-contratada{background:#E3F2FD;color:var(--azul);}
+  .minha-vaga-detalhe{font-size:12px;color:var(--cinza-m);margin-top:6px;}
+  .minha-vaga-subform{margin-top:8px;padding-top:8px;border-top:1px solid var(--cinza-l);display:flex;flex-direction:column;gap:0;}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
@@ -723,6 +731,7 @@ setInterval(carregarTicker, 900000);
       <div class="auth-usuario" id="auth-usuario" onclick="toggleAuthMenu()">
         <span id="auth-usuario-nome">Olá</span><i class="ti ti-chevron-down" style="font-size:12px;"></i>
         <div class="auth-usuario-menu" id="auth-usuario-menu">
+          <button id="auth-minhas-vagas-btn" style="display:none;" onclick="abrirMinhasVagas()">🏢 Minhas Vagas</button>
           <button onclick="fazerLogout()">Sair</button>
         </div>
       </div>
@@ -2243,6 +2252,12 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se não mora na Zona Norte:</div>
       <input class="login-input" type="text" id="login-criar-bairro-outro" placeholder="Sua cidade ou bairro">
       <input class="login-input" type="tel" id="login-criar-celular" placeholder="Celular com DDD (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
+      <label style="font-size:12px;color:var(--cinza-m);display:flex;align-items:center;gap:6px;">
+        <input type="checkbox" id="login-criar-sou-empresa" onchange="onSouEmpresaChange()"> Sou uma empresa (quero anunciar vagas)
+      </label>
+      <input class="login-input" type="text" id="login-criar-cnpj" placeholder="CNPJ" style="display:none;" maxlength="18" oninput="this.value = formatarCnpj(this.value)" onblur="checarCnpjExistente()">
+      <div class="login-sub" id="login-criar-cnpj-aviso" style="display:none;margin:-4px 0 0;"></div>
+      <input class="login-input" type="text" id="login-criar-nome-empresa" placeholder="Nome da empresa" style="display:none;" maxlength="120">
       <div class="login-erro" id="login-criar-erro"></div>
       <div class="login-sucesso" id="login-criar-sucesso"></div>
       <button class="login-btn" type="submit" id="login-criar-btn">Criar conta</button>
@@ -2271,7 +2286,7 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
 <div class="login-overlay" id="anuncio-vaga-overlay">
   <div class="login-painel">
     <button class="login-fechar" onclick="fecharAnuncioVaga()">✕</button>
-    <div class="login-titulo">Anuncie sua vaga</div>
+    <div class="login-titulo" id="anuncio-vaga-titulo-modal">Anuncie sua vaga</div>
     <div class="login-sub" id="anuncio-vaga-aviso">Publique gratuitamente durante o período de testes.</div>
 
     <form class="login-form ativo" id="anuncio-vaga-form" onsubmit="event.preventDefault(); publicarVagaEmpresa();">
@@ -2337,6 +2352,15 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
         <option value="Freelance">Freelance</option>
       </select>
       <input class="login-input" type="url" id="anuncio-vaga-link" placeholder="Link para candidatura (opcional)">
+      <div id="anuncio-vaga-validade-wrap">
+        <div style="font-size:11px;color:var(--cinza-m);">Por quanto tempo a vaga fica visível?</div>
+        <select class="login-select" id="anuncio-vaga-dias-validade" required>
+          <option value="7">7 dias</option>
+          <option value="14">14 dias</option>
+          <option value="21">21 dias</option>
+          <option value="30" selected>30 dias</option>
+        </select>
+      </div>
       <div class="login-erro" id="anuncio-vaga-erro"></div>
       <div class="login-sucesso" id="anuncio-vaga-sucesso"></div>
       <button class="login-btn" type="submit" id="anuncio-vaga-btn-enviar">Publicar vaga</button>
@@ -2365,6 +2389,16 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
         <div class="bairros-vazio" id="local-vaga-vazio">Nenhum bairro encontrado</div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- MODAL MINHAS VAGAS (empresa gerencia suas proprias vagas) -->
+<div class="bairros-overlay" id="minhas-vagas-overlay" onclick="if(event.target===this)fecharMinhasVagas()">
+  <div class="bairros-painel" style="width:640px;">
+    <button class="bairros-fechar" onclick="fecharMinhasVagas()">✕</button>
+    <div class="bairros-titulo">🏢 Minhas Vagas</div>
+    <div class="bairros-sub">Vagas publicadas pela sua empresa</div>
+    <div id="minhas-vagas-lista"></div>
   </div>
 </div>
 
@@ -2470,6 +2504,53 @@ function formatarCelular(v) {
   return v;
 }
 
+function onSouEmpresaChange() {
+  const ehEmpresa = document.getElementById('login-criar-sou-empresa').checked;
+  document.getElementById('login-criar-cnpj').style.display = ehEmpresa ? '' : 'none';
+  document.getElementById('login-criar-nome-empresa').style.display = ehEmpresa ? '' : 'none';
+  if (!ehEmpresa) {
+    document.getElementById('login-criar-cnpj').value = '';
+    document.getElementById('login-criar-nome-empresa').value = '';
+    document.getElementById('login-criar-cnpj-aviso').style.display = 'none';
+  }
+}
+
+function formatarCnpj(v) {
+  v = v.replace(/\D/g, '').slice(0, 14);
+  if (v.length > 12) return v.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{0,2})/, '$1.$2.$3/$4-$5').replace(/-$/, '');
+  if (v.length > 8) return v.replace(/(\d{2})(\d{3})(\d{3})(\d{0,4})/, '$1.$2.$3/$4');
+  if (v.length > 5) return v.replace(/(\d{2})(\d{3})(\d{0,3})/, '$1.$2.$3');
+  if (v.length > 2) return v.replace(/(\d{2})(\d{0,3})/, '$1.$2');
+  return v;
+}
+
+function cnpjValido(cnpjFormatado) {
+  const c = (cnpjFormatado || '').replace(/\D/g, '');
+  if (c.length !== 14 || /^(\d)\1{13}$/.test(c)) return false;
+  const calcularDigito = (base) => {
+    const pesos = base.length === 12
+      ? [5,4,3,2,9,8,7,6,5,4,3,2]
+      : [6,5,4,3,2,9,8,7,6,5,4,3,2];
+    const soma = base.split('').reduce((acc, d, i) => acc + parseInt(d, 10) * pesos[i], 0);
+    const resto = soma % 11;
+    return resto < 2 ? 0 : 11 - resto;
+  };
+  const d1 = calcularDigito(c.slice(0, 12));
+  const d2 = calcularDigito(c.slice(0, 12) + d1);
+  return c === c.slice(0, 12) + String(d1) + String(d2);
+}
+
+async function checarCnpjExistente() {
+  const aviso = document.getElementById('login-criar-cnpj-aviso');
+  aviso.style.display = 'none';
+  const cnpj = document.getElementById('login-criar-cnpj').value.trim();
+  if (!cnpj || !sb) return;
+  const { data, error } = await sb.rpc('empresa_por_cnpj', { numero: cnpj });
+  if (error || !data || !data[0] || !data[0].existe) return;
+  aviso.textContent = `Essa empresa (${data[0].nome_empresa}) já está cadastrada — sua conta vai entrar como parte da equipe dela.`;
+  aviso.style.display = 'block';
+}
+
 function mensagemErroAuth(error) {
   if (error.code === 'over_email_send_rate_limit') {
     return 'Muitos e-mails enviados em pouco tempo. Aguarde alguns minutos e tente novamente.';
@@ -2518,6 +2599,21 @@ async function criarConta() {
     return;
   }
   const celular = celularFormatado ? celularFormatado.replace(/\D/g, '') : null;
+
+  const ehEmpresa = document.getElementById('login-criar-sou-empresa').checked;
+  const cnpjFormatado = document.getElementById('login-criar-cnpj').value.trim();
+  const nomeEmpresa = document.getElementById('login-criar-nome-empresa').value.trim();
+  if (ehEmpresa) {
+    if (!cnpjValido(cnpjFormatado)) {
+      mostrarErroLogin('login-criar-erro', 'CNPJ inválido. Confira os números digitados.');
+      return;
+    }
+    if (!nomeEmpresa) {
+      mostrarErroLogin('login-criar-erro', 'Informe o nome da empresa.');
+      return;
+    }
+  }
+
   const btn = document.getElementById('login-criar-btn');
   btn.disabled = true;
   if (celular) {
@@ -2528,9 +2624,14 @@ async function criarConta() {
       return;
     }
   }
+  const metadata = { nome, bairro, celular };
+  if (ehEmpresa) {
+    metadata.cnpj = cnpjFormatado.replace(/\D/g, '');
+    metadata.nome_empresa = nomeEmpresa;
+  }
   const { error } = await sb.auth.signUp({
     email, password: senha,
-    options: { data: { nome, bairro, celular } }
+    options: { data: metadata }
   });
   btn.disabled = false;
   if (error) {
@@ -2587,19 +2688,25 @@ function toggleAuthMenu() {
 }
 
 let sessaoAtual = null;
-function atualizarTopbarAuth(session) {
+let perfilAtual = null;
+async function atualizarTopbarAuth(session) {
   sessaoAtual = session;
   const entrarBtn = document.getElementById('auth-entrar-btn');
   const usuarioChip = document.getElementById('auth-usuario');
+  const minhasVagasBtn = document.getElementById('auth-minhas-vagas-btn');
   if (session && session.user) {
     const nome = (session.user.user_metadata && session.user.user_metadata.nome) || session.user.email.split('@')[0];
     document.getElementById('auth-usuario-nome').textContent = 'Olá, ' + nome;
     entrarBtn.style.display = 'none';
     usuarioChip.style.display = 'flex';
+    const { data } = await sb.from('profiles').select('empresa_id').eq('id', session.user.id).single();
+    perfilAtual = data || null;
   } else {
     entrarBtn.style.display = '';
     usuarioChip.style.display = 'none';
+    perfilAtual = null;
   }
+  minhasVagasBtn.style.display = perfilAtual && perfilAtual.empresa_id ? '' : 'none';
   carregarVagasEmpresas();
 }
 
@@ -2637,11 +2744,25 @@ function linkCandidaturaSeguro(url) {
   return /^https?:\/\//i.test(url || '') ? url : null;
 }
 
+let _editandoVagaId = null;
+
 function abrirAnuncioVaga() {
   if (!sb) {
     alert('Cadastro ainda não configurado. Tente novamente mais tarde.');
     return;
   }
+  if (!sessaoAtual) {
+    abrirLogin('entrar', 'Cadastre-se ou entre com sua conta de empresa para anunciar uma vaga.');
+    return;
+  }
+  if (!perfilAtual || !perfilAtual.empresa_id) {
+    alert('Essa conta ainda não é uma conta de empresa. Crie uma conta marcando "Sou uma empresa" (com CNPJ) para poder anunciar vagas.');
+    return;
+  }
+  _editandoVagaId = null;
+  document.getElementById('anuncio-vaga-titulo-modal').textContent = 'Anuncie sua vaga';
+  document.getElementById('anuncio-vaga-btn-enviar').textContent = 'Publicar vaga';
+  document.getElementById('anuncio-vaga-validade-wrap').style.display = '';
   document.getElementById('anuncio-vaga-aviso').textContent =
     `🎁 Período de testes: publicação gratuita até ${formatarDataPtBr(VAGAS_GRATIS_ATE)}. Depois disso, publicar vagas poderá passar a ser pago.`;
   document.getElementById('anuncio-vaga-erro').style.display = 'none';
@@ -2745,9 +2866,7 @@ async function publicarVagaEmpresa() {
     if (set && set.size > 0) bairrosPorDistritoObj[d] = Array.from(set);
   });
 
-  const btn = document.getElementById('anuncio-vaga-btn-enviar');
-  btn.disabled = true;
-  const { error } = await sb.from('vagas_empresas').insert({
+  const dadosComuns = {
     nome_empresa: nomeEmpresa,
     email_contato: emailContato,
     whatsapp_contato: whatsappFormatado ? whatsappFormatado.replace(/\D/g, '') : null,
@@ -2762,7 +2881,16 @@ async function publicarVagaEmpresa() {
     localizacao_externa: bairroOutro || null,
     tipo_contrato: tipoContrato,
     link_candidatura: link || null,
-  });
+  };
+
+  const btn = document.getElementById('anuncio-vaga-btn-enviar');
+  btn.disabled = true;
+  const { error } = _editandoVagaId
+    ? await sb.from('vagas_empresas').update(dadosComuns).eq('id', _editandoVagaId)
+    : await sb.from('vagas_empresas').insert({
+        ...dadosComuns,
+        dias_validade: parseInt(document.getElementById('anuncio-vaga-dias-validade').value, 10),
+      });
   btn.disabled = false;
 
   if (error) {
@@ -2771,14 +2899,19 @@ async function publicarVagaEmpresa() {
     erroEl.style.display = 'block';
     return;
   }
+  const eraEdicao = !!_editandoVagaId;
   document.getElementById('anuncio-vaga-form').reset();
   document.getElementById('anuncio-vaga-titulo-outro').style.display = 'none';
   document.getElementById('anuncio-vaga-beneficio-outro').style.display = 'none';
   _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
+  _editandoVagaId = null;
   atualizarResumoFormularioVaga();
-  sucessoEl.textContent = 'Vaga publicada com sucesso! Ela já está visível para os usuários cadastrados na seção Vagas de Emprego.';
+  sucessoEl.textContent = eraEdicao
+    ? 'Vaga atualizada com sucesso!'
+    : 'Vaga publicada com sucesso! Ela já está visível para os usuários cadastrados na seção Vagas de Emprego.';
   sucessoEl.style.display = 'block';
   carregarVagasEmpresas();
+  if (eraEdicao) carregarMinhasVagas();
 }
 
 function textoLocalizacaoVaga(v) {
@@ -2860,6 +2993,219 @@ async function carregarVagasEmpresas() {
     header.insertAdjacentElement('afterend', criarCardVagaEmpresa(v));
   });
   atualizarContadorVagas(secaoVagas, data.length);
+}
+
+// --- MINHAS VAGAS (painel de gerenciamento: editar/cancelar/marcar contratada) ---
+async function abrirMinhasVagas() {
+  if (!perfilAtual || !perfilAtual.empresa_id) return;
+  document.getElementById('minhas-vagas-overlay').classList.add('aberto');
+  document.getElementById('auth-usuario-menu').classList.remove('aberto');
+  await carregarMinhasVagas();
+}
+function fecharMinhasVagas() {
+  document.getElementById('minhas-vagas-overlay').classList.remove('aberto');
+}
+
+async function carregarMinhasVagas() {
+  const lista = document.getElementById('minhas-vagas-lista');
+  if (!lista) return;
+  if (!perfilAtual || !perfilAtual.empresa_id) { lista.innerHTML = ''; return; }
+  lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Carregando...</div>';
+  // Filtro explicito por empresa_id: as policies de select sao permissivas
+  // (OR'd), entao um select('*') sem esse filtro tambem traria vagas ativas
+  // de outras empresas via a policy publica — o filtro e' o que de fato
+  // restringe a visao a "minhas vagas".
+  const { data, error } = await sb.from('vagas_empresas').select('*').eq('empresa_id', perfilAtual.empresa_id).order('criado_em', { ascending: false });
+  if (error || !data) {
+    lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--vermelho);font-size:13px;">Não foi possível carregar suas vagas.</div>';
+    return;
+  }
+  if (data.length === 0) {
+    lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Nenhuma vaga publicada ainda.</div>';
+    return;
+  }
+  lista.innerHTML = '';
+  data.forEach(v => lista.appendChild(criarCardMinhaVaga(v)));
+}
+
+const NOTAS_CONTRATACAO = ['', 'Péssimo', 'Ruim', 'Bom', 'Ótimo', 'Excelente'];
+
+function criarCardMinhaVaga(v) {
+  const card = document.createElement('div');
+  card.className = 'minha-vaga-card';
+
+  const expirada = new Date(v.expira_em) <= new Date();
+  const podeAgir = v.status === 'ativa' && !expirada && sessaoAtual && v.criado_por_user_id === sessaoAtual.user.id;
+
+  let statusLabel = 'Ativa';
+  let statusClasse = 'minha-vaga-status-ativa';
+  if (v.status === 'cancelada') { statusLabel = 'Cancelada'; statusClasse = 'minha-vaga-status-cancelada'; }
+  else if (v.status === 'contratada') { statusLabel = 'Contratada pelo Portau'; statusClasse = 'minha-vaga-status-contratada'; }
+  else if (expirada) { statusLabel = 'Expirada'; statusClasse = 'minha-vaga-status-expirada'; }
+
+  const detalhesExtra = [];
+  if (v.status === 'cancelada' && v.motivo_cancelamento) {
+    detalhesExtra.push(`<div class="minha-vaga-detalhe">Motivo do cancelamento: ${escapeHtml(v.motivo_cancelamento)}</div>`);
+  }
+  if (v.status === 'contratada') {
+    detalhesExtra.push(`<div class="minha-vaga-detalhe">Nota: ${escapeHtml(String(v.contratado_nota))} (${escapeHtml(NOTAS_CONTRATACAO[v.contratado_nota] || '')}) — ${escapeHtml(v.contratado_descricao || '')}</div>`);
+  }
+
+  const acoesHtml = podeAgir ? `
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;">
+      <button type="button" class="anuncio-vaga-btn" data-acao="editar">✏️ Editar</button>
+      <button type="button" class="anuncio-vaga-btn" data-acao="cancelar">🚫 Cancelar</button>
+      <button type="button" class="anuncio-vaga-btn" data-acao="contratada">✅ Marcar como contratada</button>
+    </div>
+    <div class="minha-vaga-subform" data-form="cancelar" style="display:none;">
+      <textarea class="login-input" placeholder="Motivo do cancelamento (obrigatório)" rows="2" maxlength="500"></textarea>
+      <div class="login-erro" style="display:none;"></div>
+      <button type="button" class="login-btn" style="margin-top:6px;">Confirmar cancelamento</button>
+    </div>
+    <div class="minha-vaga-subform" data-form="contratada" style="display:none;">
+      <select class="login-select">
+        <option value="" disabled selected>Nota da experiência</option>
+        <option value="1">1 - Péssimo</option>
+        <option value="2">2 - Ruim</option>
+        <option value="3">3 - Bom</option>
+        <option value="4">4 - Ótimo</option>
+        <option value="5">5 - Excelente</option>
+      </select>
+      <textarea class="login-input" placeholder="Descreva a experiência (obrigatório, mín. 10 caracteres)" rows="2" maxlength="1000" style="margin-top:6px;"></textarea>
+      <div class="login-erro" style="display:none;"></div>
+      <button type="button" class="login-btn" style="margin-top:6px;">Confirmar contratação</button>
+    </div>
+  ` : '';
+
+  card.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+      <div>
+        <div class="vaga-titulo" style="margin-bottom:2px;">${escapeHtml(v.titulo_vaga)}</div>
+        <div style="font-size:11px;color:var(--cinza-m);">📍 ${escapeHtml(textoLocalizacaoVaga(v))} · expira em ${formatarDataPtBr(new Date(v.expira_em))}</div>
+      </div>
+      <span class="minha-vaga-status ${statusClasse}">${statusLabel}</span>
+    </div>
+    ${detalhesExtra.join('')}
+    ${acoesHtml}
+  `;
+
+  if (podeAgir) {
+    card.querySelector('[data-acao="editar"]').addEventListener('click', () => iniciarEdicaoVaga(v));
+
+    const formCancelar = card.querySelector('[data-form="cancelar"]');
+    const formContratada = card.querySelector('[data-form="contratada"]');
+
+    card.querySelector('[data-acao="cancelar"]').addEventListener('click', () => {
+      formCancelar.style.display = formCancelar.style.display === 'none' ? '' : 'none';
+      formContratada.style.display = 'none';
+    });
+    card.querySelector('[data-acao="contratada"]').addEventListener('click', () => {
+      formContratada.style.display = formContratada.style.display === 'none' ? '' : 'none';
+      formCancelar.style.display = 'none';
+    });
+
+    formCancelar.querySelector('.login-btn').addEventListener('click', async () => {
+      const textarea = formCancelar.querySelector('textarea');
+      const erro = formCancelar.querySelector('.login-erro');
+      const motivo = textarea.value.trim();
+      if (motivo.length < 3) {
+        erro.textContent = 'Descreva o motivo do cancelamento (mín. 3 caracteres).';
+        erro.style.display = 'block';
+        return;
+      }
+      const { error } = await sb.from('vagas_empresas').update({ status: 'cancelada', motivo_cancelamento: motivo }).eq('id', v.id);
+      if (error) {
+        console.error('Erro ao cancelar vaga:', error);
+        erro.textContent = 'Não foi possível cancelar. Tente novamente.';
+        erro.style.display = 'block';
+        return;
+      }
+      carregarMinhasVagas();
+      carregarVagasEmpresas();
+    });
+
+    formContratada.querySelector('.login-btn').addEventListener('click', async () => {
+      const select = formContratada.querySelector('select');
+      const textarea = formContratada.querySelector('textarea');
+      const erro = formContratada.querySelector('.login-erro');
+      const nota = parseInt(select.value, 10);
+      const desc = textarea.value.trim();
+      if (!nota) {
+        erro.textContent = 'Escolha uma nota de 1 a 5.';
+        erro.style.display = 'block';
+        return;
+      }
+      if (desc.length < 10) {
+        erro.textContent = 'Descreva a experiência (mín. 10 caracteres).';
+        erro.style.display = 'block';
+        return;
+      }
+      const { error } = await sb.from('vagas_empresas').update({ status: 'contratada', contratado_nota: nota, contratado_descricao: desc }).eq('id', v.id);
+      if (error) {
+        console.error('Erro ao marcar vaga como contratada:', error);
+        erro.textContent = 'Não foi possível registrar. Tente novamente.';
+        erro.style.display = 'block';
+        return;
+      }
+      carregarMinhasVagas();
+      carregarVagasEmpresas();
+    });
+  }
+
+  return card;
+}
+
+function iniciarEdicaoVaga(v) {
+  fecharMinhasVagas();
+  _editandoVagaId = v.id;
+  document.getElementById('anuncio-vaga-titulo-modal').textContent = 'Editar vaga';
+  document.getElementById('anuncio-vaga-btn-enviar').textContent = 'Salvar alterações';
+  document.getElementById('anuncio-vaga-validade-wrap').style.display = 'none';
+  document.getElementById('anuncio-vaga-aviso').textContent = 'Edite os dados da sua vaga.';
+  document.getElementById('anuncio-vaga-erro').style.display = 'none';
+  document.getElementById('anuncio-vaga-sucesso').style.display = 'none';
+
+  document.getElementById('anuncio-vaga-empresa').value = v.nome_empresa || '';
+  document.getElementById('anuncio-vaga-email').value = v.email_contato || '';
+  document.getElementById('anuncio-vaga-whatsapp').value = v.whatsapp_contato ? formatarCelular(v.whatsapp_contato) : '';
+  document.getElementById('anuncio-vaga-horario').value = v.horario || '';
+  document.getElementById('anuncio-vaga-salario').value = v.salario || '';
+  document.getElementById('anuncio-vaga-descricao').value = v.descricao || '';
+  document.getElementById('anuncio-vaga-bairro-outro').value = v.localizacao_externa || '';
+  document.getElementById('anuncio-vaga-tipo').value = v.tipo_contrato || '';
+  document.getElementById('anuncio-vaga-link').value = v.link_candidatura || '';
+
+  const tituloSelect = document.getElementById('anuncio-vaga-titulo-select');
+  const opcoes = Array.from(tituloSelect.options).map(o => o.value);
+  const tituloOutro = document.getElementById('anuncio-vaga-titulo-outro');
+  if (opcoes.includes(v.titulo_vaga)) {
+    tituloSelect.value = v.titulo_vaga;
+    tituloOutro.style.display = 'none';
+    tituloOutro.value = '';
+  } else {
+    tituloSelect.value = '__outro__';
+    tituloOutro.style.display = '';
+    tituloOutro.value = v.titulo_vaga || '';
+  }
+
+  const beneficiosSet = new Set(v.beneficios || []);
+  document.querySelectorAll('#anuncio-vaga-beneficios-grid input[type="checkbox"]').forEach(chk => {
+    if (chk.id === 'anuncio-vaga-beneficio-outro-check') return;
+    chk.checked = beneficiosSet.has(chk.value);
+  });
+  const outroCheck = document.getElementById('anuncio-vaga-beneficio-outro-check');
+  const outroTexto = document.getElementById('anuncio-vaga-beneficio-outro');
+  outroCheck.checked = !!v.beneficios_outro;
+  outroTexto.style.display = v.beneficios_outro ? '' : 'none';
+  outroTexto.value = v.beneficios_outro || '';
+
+  _selecaoLocalVaga = {
+    distritosCompletos: new Set(v.distritos_completos || []),
+    bairrosParciais: Object.fromEntries(Object.entries(v.bairros_por_distrito || {}).map(([d, arr]) => [d, new Set(arr)])),
+  };
+  atualizarResumoFormularioVaga();
+
+  document.getElementById('anuncio-vaga-overlay').classList.add('aberto');
 }
 
 const SUB_MAP = {
@@ -3012,6 +3358,7 @@ window.addEventListener('keydown', function(e) {
     if (document.getElementById('login-overlay').classList.contains('aberto')) fecharLogin();
     if (document.getElementById('anuncio-vaga-overlay').classList.contains('aberto')) fecharAnuncioVaga();
     if (document.getElementById('local-vaga-overlay').classList.contains('aberto')) fecharSelecaoLocal();
+    if (document.getElementById('minhas-vagas-overlay').classList.contains('aberto')) fecharMinhasVagas();
   }
 });
 </script>

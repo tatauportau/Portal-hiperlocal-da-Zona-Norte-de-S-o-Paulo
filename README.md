@@ -244,24 +244,26 @@ Claude Cowork (agendamento próprio, roda sozinho)
   para **Vagas** também destaca a existência de vagas patrocinadas
   (`MENSAGENS_GATE_LOGIN.vagas`), como chamada para o cadastro.
 
-- **Vagas de empresas (anúncio patrocinado):** empresas podem publicar
-  vagas direto no site pelo botão "📢 Anuncie sua vaga" no cabeçalho da
-  seção Vagas, sem precisar criar conta e **sem aprovação manual antes de
-  publicar** (decisão consciente para testar o modelo primeiro). O
-  formulário grava direto na tabela `public.vagas_empresas` (schema em
-  `sql/004_vagas_empresas.sql`) usando a mesma `anon key` do Supabase já
-  usada pelo cadastro de leitor — RLS permite `insert` público e `select`
-  público apenas de linhas com `ativa = true`.
-  - **Moderação é reativa, não preventiva:** para remover uma vaga
-    indevida/spam, rodar `update public.vagas_empresas set ativa = false
-    where id = '...'` no SQL Editor do Supabase (ou editar a linha pelo
-    Table Editor) — não há policy de `update`/`delete` pública, só quem
-    acessa o painel consegue.
+- **Vagas de empresas (anúncio patrocinado):** empresas publicam vagas pelo
+  botão "📢 Anuncie sua vaga" no cabeçalho da seção Vagas. **Desde
+  `sql/008_empresas_e_vagas_ownership.sql`, isso exige conta de empresa**
+  (ver seção "Contas de empresa" logo abaixo) — deixou de ser publicação
+  anônima. O formulário grava na tabela `public.vagas_empresas` (schema
+  original em `sql/004_vagas_empresas.sql`, evoluído nas migrações
+  seguintes) usando a mesma `anon key`/sessão do Supabase Auth já usada
+  pelo cadastro de leitor.
+  - **Moderação continua reativa, agora em duas camadas:** a própria
+    empresa cancela/edita as próprias vagas (ver "Minhas Vagas" abaixo).
+    Pra remoção administrativa de algo indevido/spam que a empresa não
+    tirou, `ativa = false` continua sendo o botão-de-pânico do Carlos via
+    SQL Editor/Table Editor — independe do `status` do ciclo de vida
+    normal (ativa/cancelada/contratada) e não é uma coluna editável pela
+    empresa (fora do `grant update` de `sql/008`).
   - **Anti-spam leve:** campo honeypot invisível no formulário
-    (`#anuncio-vaga-site`); não há CAPTCHA nem rate limit — como o insert é
-    público, uma leva de envios automatizados ainda é possível. Considerar
-    CAPTCHA ou uma Netlify Function intermediária se isso virar problema na
-    prática.
+    (`#anuncio-vaga-site`); não há CAPTCHA nem rate limit. Como agora
+    exige conta (`sql/008`), o exercício de "poluir" o site fica mais caro
+    do que antes (precisa criar conta + confirmar e-mail), mas ainda não
+    há verificação real de CNPJ — ver "Contas de empresa" abaixo.
   - **Validação de tamanho espelha as constraints do banco:** `nome_empresa`
     (mín. 2), `titulo_vaga` (mín. 3) e `descricao` (mín. 10) têm `check
     (char_length(...))` em `sql/004_vagas_empresas.sql` — o formulário
@@ -313,8 +315,9 @@ Claude Cowork (agendamento próprio, roda sozinho)
     loga e somem assim que desloga, sem precisar recarregar a página.
   - **Segurança:** todo texto vindo do formulário (nome da empresa,
     título, descrição, bairro) passa por `escapeHtml()` antes de virar
-    HTML — os dados vêm de um formulário público, sem login, então são
-    tratados como não confiáveis. O link de candidatura só é usado como
+    HTML — mesmo exigindo conta, o texto digitado pela empresa continua
+    tratado como não confiável (qualquer campo de texto livre é vetor de
+    XSS armazenado, com ou sem login). O link de candidatura só é usado como
     `href` se começar com `http://` ou `https://` (`linkCandidaturaSeguro`),
     para não permitir esquemas como `javascript:`.
   - **Cobrança:** gratuito durante um período de testes, **até 19/08/2026**
@@ -356,6 +359,88 @@ Claude Cowork (agendamento próprio, roda sozinho)
       um único valor (as vagas editoriais, que não mudaram) continuam
       funcionando igual, já que dividir uma string sem vírgula por vírgula
       simplesmente devolve um array de um item.
+
+  ### Contas de empresa (CNPJ) — `sql/008_empresas_e_vagas_ownership.sql`
+
+  Publicar vaga deixou de ser anônimo. Empresa cria conta pelo mesmo
+  cadastro de leitor (`#login-form-criar`), marcando o checkbox "Sou uma
+  empresa" (`onSouEmpresaChange()`), que revela CNPJ (`formatarCnpj()` +
+  validação de dígito verificador em `cnpjValido()`, mod-11 completo) e
+  Nome da empresa. `criarConta()` manda `cnpj`/`nome_empresa` crus em
+  `options.data` do `signUp()` — **nunca** um `empresa_id` calculado no
+  client, porque `raw_user_meta_data` é controlado por quem chama a API; a
+  resolução empresa↔usuário só acontece dentro do trigger
+  `handle_new_user()` (`security definer`, roda no servidor), que faz um
+  `insert ... on conflict (cnpj) do update ... returning id` atômico em
+  `public.empresas` e grava o `empresa_id` resultante em `profiles`. Duas
+  contas com o mesmo CNPJ caem na mesma empresa automaticamente (útil pra
+  mais de uma pessoa da mesma empresa gerenciar vagas) — o formulário
+  avisa disso antes de submeter via `checarCnpjExistente()` →
+  `empresa_por_cnpj()` (RPC, mesmo padrão do `celular_ja_cadastrado` do
+  `sql/002`).
+
+  - **`empresa_id` não é editável depois do cadastro** (fica fora do
+    `grant update` de `profiles`, igual `subscription_tier` desde o
+    `sql/001`) — ninguém vira empresa depois de já ter conta de leitor
+    sem passar pelo trigger de novo.
+  - **Risco aceito conscientemente:** não há verificação real do CNPJ
+    (Receita Federal, domínio de e-mail, etc.) — qualquer um pode digitar
+    um CNPJ que não é dele e entrar como "colega" daquela empresa. Sem
+    aprovação prévia também aqui (mesma filosofia do `sql/004`); mitigação
+    é a moderação manual que o Carlos já faz.
+  - **`perfilAtual`** (variável de módulo em `index.html`) guarda
+    `{empresa_id}` do usuário logado, buscado dentro de
+    `atualizarTopbarAuth()` (que virou `async`) toda vez que a sessão
+    muda. É o que decide se aparece o botão "🏢 Minhas Vagas" no menu do
+    usuário e se `abrirAnuncioVaga()` deixa publicar.
+
+  ### Ciclo de vida da vaga: validade, editar, cancelar, contratada
+
+  - **Validade escolhida pelo anunciante:** select "Por quanto tempo a
+    vaga fica visível?" com 7/14/21/30 dias (`anuncio-vaga-dias-validade`,
+    30 pré-selecionado). Gravado em `dias_validade` (só no `insert`, não é
+    editável depois — fora do `grant update`) e `expira_em` é calculado por
+    um trigger `before insert` (`calcular_expira_em_vaga()`) — não podia
+    ser coluna `generated` porque aritmética `timestamptz + interval` não
+    é imutável pro Postgres (depende do `TimeZone` da sessão), mas a
+    garantia é a mesma: nunca vem do client, sempre derivado de
+    `criado_em + dias_validade`, não tem como dessincronizar. A policy
+    pública de select exige `expira_em > now()`, então a vaga some
+    sozinha do site sem precisar de cron job nem de ninguém rodar nada.
+  - **Dono da vaga:** `criado_por_user_id` (default `auth.uid()`) e
+    `empresa_id` (default `minha_empresa_id()`) são preenchidos pelo
+    banco, nunca pelo client — `publicarVagaEmpresa()` não envia essas
+    colunas. Se uma conta de leitor comum (sem `empresa_id`) tentasse
+    inserir, o `not null` de `empresa_id` já barra antes mesmo da RLS
+    entrar em jogo.
+  - **Editar — só quem criou aquela vaga específica** (pedido explícito,
+    não é "qualquer um da empresa"): policy de `update` exige
+    `criado_por_user_id = auth.uid()`. A visão de "Minhas Vagas" já é por
+    empresa inteira (todo mundo vê todas as vagas da empresa, pra dar
+    transparência), mas os botões de ação (`criarCardMinhaVaga()`) só
+    aparecem na vaga se `v.criado_por_user_id === sessaoAtual.user.id` —
+    editar reaproveita o próprio formulário "Anuncie sua vaga"
+    (`iniciarEdicaoVaga()` repopula tudo, inclusive reconstruindo
+    `_selecaoLocalVaga` a partir de `distritos_completos`/
+    `bairros_por_distrito` e os checkboxes de benefícios) e faz
+    `.update()` em vez de `.insert()` (`_editandoVagaId`), sem enviar
+    `dias_validade`.
+  - **Só dá pra agir enquanto `status = 'ativa'` e não expirou** — a
+    própria policy de `update` do banco exige isso (`using (... status =
+    'ativa' and expira_em > now())`), então mesmo que alguém tente burlar
+    a UI, o banco recusa. Depois de cancelada/contratada/expirada, só
+    publicando uma vaga nova.
+  - **Cancelar:** exige motivo (`motivo_cancelamento`, mín. 3 caracteres,
+    `check` no banco também exige isso quando `status = 'cancelada'`) —
+    não apaga a linha, só muda `status`. Formulário inline dentro do
+    próprio card em "Minhas Vagas" (mesmo idioma de revelar-ao-clicar do
+    `beneficio-outro`).
+  - **"Contratado pelo Portau":** pede nota 1–5 (1-péssimo … 5-excelente)
+    e descrição da experiência (mín. 10 caracteres) — ambos exigidos pelo
+    `check` do banco quando `status = 'contratada'`. **Só uso interno por
+    enquanto**, não aparece em lugar nenhum público do site. Consulta útil
+    pro Carlos acompanhar:
+    `select avg(contratado_nota), count(*) from vagas_empresas where status='contratada';`
 
 ---
 
