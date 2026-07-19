@@ -805,12 +805,12 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <a href="#" class="ancora-btn" onclick="abrirBairros();return false;">📍 Bairros</a>
     <a href="#noticias" class="ancora-btn" data-secao="noticias">📰 Notícias</a>
     <a href="#agenda" class="ancora-btn" data-secao="agenda">🗓️ Agenda</a>
-    <a href="#vagas" class="ancora-btn" data-secao="vagas">💼 Vagas</a>
+    <a href="#vagas" class="ancora-btn" data-secao="vagas" data-requer-login="1">💼 Vagas</a>
     <a href="#politica" class="ancora-btn" data-secao="politica">🏛️ Política</a>
     <a href="#alertas" class="ancora-btn" data-secao="alertas">📊 Alertas</a>
-    <a href="#classificados" class="ancora-btn" data-secao="classificados">🛒 Classificados</a>
+    <a href="#classificados" class="ancora-btn" data-secao="classificados" data-requer-login="1">🛒 Classificados</a>
     <a href="#" class="ancora-btn">📈 Dados</a>
-    <a href="#" class="ancora-btn">👥 Comunidade</a>
+    <a href="#" class="ancora-btn" onclick="acessarComunidade();return false;">👥 Comunidade</a>
   </div>
 </div>
 
@@ -2094,12 +2094,13 @@ function carregarBairrosSelect() {
   }).catch(() => { _bairrosSelectCarregado = false; });
 }
 
-function abrirLogin(aba) {
+function abrirLogin(aba, mensagem) {
   if (!sb) {
     alert('Cadastro ainda não configurado. Tente novamente mais tarde.');
     return;
   }
   mostrarLoginTab(aba || 'entrar');
+  if (mensagem) document.getElementById('login-sub').textContent = mensagem;
   document.getElementById('login-overlay').classList.add('aberto');
 }
 
@@ -2240,7 +2241,9 @@ function toggleAuthMenu() {
   document.getElementById('auth-usuario-menu').classList.toggle('aberto');
 }
 
+let sessaoAtual = null;
 function atualizarTopbarAuth(session) {
+  sessaoAtual = session;
   const entrarBtn = document.getElementById('auth-entrar-btn');
   const usuarioChip = document.getElementById('auth-usuario');
   if (session && session.user) {
@@ -2377,11 +2380,27 @@ window.addEventListener('resize', ajustarOffsetsFixos);
 ajustarOffsetsFixos();
 setTimeout(ajustarOffsetsFixos, 300);
 
+const MENSAGENS_GATE_LOGIN = {
+  vagas: 'Cadastre-se ou entre para ver as vagas de emprego da Zona Norte.',
+  classificados: 'Cadastre-se ou entre para ver os classificados e serviços.',
+};
+function acessarComunidade() {
+  if (!sessaoAtual) {
+    abrirLogin('entrar', 'Cadastre-se ou entre para acessar a Comunidade.');
+    return;
+  }
+  alert('Comunidade em breve! Estamos preparando essa novidade para você. 🎉');
+}
 const secaoBotoes = document.querySelectorAll('.ancora-btn[data-secao]');
 const todasSecoes = document.querySelectorAll('.secao');
 secaoBotoes.forEach(btn => {
   btn.addEventListener('click', function(e) {
     const alvo = btn.dataset.secao;
+    if (btn.dataset.requerLogin && !sessaoAtual) {
+      e.preventDefault();
+      abrirLogin('entrar', MENSAGENS_GATE_LOGIN[alvo] || 'Cadastre-se ou entre para acessar este conteúdo.');
+      return;
+    }
     secaoBotoes.forEach(b => b.classList.remove('ativo'));
     btn.classList.add('ativo');
     if (alvo === 'todas') {
