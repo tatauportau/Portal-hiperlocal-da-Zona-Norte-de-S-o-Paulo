@@ -611,6 +611,15 @@
   .vaga-patrocinada-pill{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:var(--cinza-q);color:var(--branco);white-space:nowrap;}
   .vaga-candidatar{font-size:11px;font-weight:700;color:var(--cinza-q);text-decoration:underline;}
   .vaga-candidatar-email{font-size:11px;color:var(--cinza-m);}
+  .vaga-candidatar-portau-btn{font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid var(--cinza-q);background:var(--cinza-q);color:var(--branco);cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .15s;}
+  .vaga-candidatar-portau-btn:hover{opacity:.85;}
+  .vaga-candidatar-feito{font-size:11px;font-weight:700;color:#2e7d32;}
+  .candidatura-vaga-resumo{background:var(--creme);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--cinza-q);line-height:1.6;margin-bottom:10px;}
+  .vagas-filtro-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+  .vagas-filtro-busca{flex:1;min-width:180px;padding:9px 12px;border-radius:8px;border:1px solid var(--cinza-l);font-size:13px;font-family:'Inter',sans-serif;outline:none;}
+  .vagas-filtro-busca:focus{border-color:var(--cinza-q);}
+  .vagas-filtro-tipo{padding:9px 12px;border-radius:8px;border:1px solid var(--cinza-l);font-size:13px;font-family:'Inter',sans-serif;background:var(--branco);outline:none;}
+  .vagas-filtro-vazio{font-size:13px;color:var(--cinza-m);text-align:center;padding:16px 0;}
   #local-vaga-overlay{z-index:1002;}
   .anuncio-vaga-beneficios-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;font-size:12px;color:var(--cinza-q);}
   .anuncio-vaga-beneficios-grid label{display:flex;align-items:center;gap:6px;cursor:pointer;}
@@ -737,6 +746,7 @@ setInterval(carregarTicker, 900000);
         <div class="auth-usuario-menu" id="auth-usuario-menu">
           <button id="auth-minhas-vagas-btn" style="display:none;" onclick="abrirMinhasVagas()">🏢 Minhas Vagas</button>
           <button id="auth-vincular-empresa-btn" style="display:none;" onclick="abrirVincularEmpresa()">🏢 Vincular empresa</button>
+          <button id="auth-minhas-candidaturas-btn" style="display:none;" onclick="abrirMinhasCandidaturas()">📋 Minhas Candidaturas</button>
           <button onclick="fazerLogout()">Sair</button>
         </div>
       </div>
@@ -1116,7 +1126,20 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       </div>
     </div>
 
-    <div class="card-vaga" data-bairro="Casa Verde" data-distrito="CASA VERDE">
+    <div class="vagas-filtro-bar" id="vagas-filtro-bar">
+      <input type="text" class="vagas-filtro-busca" id="vagas-filtro-busca" placeholder="Buscar por cargo ou palavra-chave..." oninput="aplicarFiltroVagas()">
+      <select class="vagas-filtro-tipo" id="vagas-filtro-tipo" onchange="aplicarFiltroVagas()">
+        <option value="">Todos os tipos</option>
+        <option value="CLT">CLT</option>
+        <option value="PJ">PJ</option>
+        <option value="Estágio">Estágio</option>
+        <option value="Temporário">Temporário</option>
+        <option value="Freelance">Freelance</option>
+      </select>
+    </div>
+    <div class="vagas-filtro-vazio" id="vagas-filtro-vazio" style="display:none;">Nenhuma vaga encontrada com esses filtros.</div>
+
+    <div class="card-vaga" data-bairro="Casa Verde" data-distrito="CASA VERDE" data-tipo="CLT">
       <div class="vaga-icone">🧵</div>
       <div style="flex:1">
         <div class="vaga-titulo">Costureira(o) - overlock e reta</div>
@@ -1126,7 +1149,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Jornal Notícias da Região · vagas abertas em julho/2026, salário até R$ 2.200</div>
     </div>
 
-    <div class="card-vaga" data-bairro="Cachoeirinha" data-distrito="CACHOEIRINHA">
+    <div class="card-vaga" data-bairro="Cachoeirinha" data-distrito="CACHOEIRINHA" data-tipo="CLT">
       <div class="vaga-icone">🎬</div>
       <div style="flex:1">
         <div class="vaga-titulo">Bilheteiro(a)</div>
@@ -1136,7 +1159,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Jornal Notícias da Região · vagas abertas em julho/2026, salário até R$ 1.805</div>
     </div>
 
-    <div class="card-vaga" data-bairro="Zona Norte" data-distrito="">
+    <div class="card-vaga" data-bairro="Zona Norte" data-distrito="" data-tipo="CLT">
       <div class="vaga-icone">📞</div>
       <div style="flex:1">
         <div class="vaga-titulo">Operador(a) de telemarketing</div>
@@ -1146,7 +1169,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <div style="font-size:11px;color:var(--cinza-m);white-space:nowrap;">Jornal Notícias da Região · vagas abertas em julho/2026, salário até R$ 1.740</div>
     </div>
 
-    <div class="card-vaga" data-bairro="Zona Norte" data-distrito="">
+    <div class="card-vaga" data-bairro="Zona Norte" data-distrito="" data-tipo="CLT">
       <div class="vaga-icone">🔧</div>
       <div style="flex:1">
         <div class="vaga-titulo">Funileiro(a) / mecânico(a) / trocador(a) de óleo</div>
@@ -2396,6 +2419,19 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
   </div>
 </div>
 
+<!-- MODAL CANDIDATAR-SE A VAGA (leitor confirma compartilhar nome/bairro/celular) -->
+<div class="login-overlay" id="candidatura-vaga-overlay">
+  <div class="login-painel">
+    <button class="login-fechar" onclick="fecharCandidaturaVaga()">✕</button>
+    <div class="login-titulo">Candidatar-se</div>
+    <div class="login-sub" id="candidatura-vaga-titulo-vaga"></div>
+    <div class="candidatura-vaga-resumo" id="candidatura-vaga-resumo"></div>
+    <div class="login-erro" id="candidatura-vaga-erro"></div>
+    <div class="login-sucesso" id="candidatura-vaga-sucesso"></div>
+    <button class="login-btn" id="candidatura-vaga-btn-confirmar" onclick="confirmarCandidaturaVaga()">Confirmar candidatura</button>
+  </div>
+</div>
+
 <!-- MODAL SELECIONAR LOCAL DA VAGA (mesmo padrao do modal Bairros, com selecao multipla) -->
 <div class="bairros-overlay" id="local-vaga-overlay" onclick="if(event.target===this)fecharSelecaoLocal()">
   <div class="bairros-painel">
@@ -2434,6 +2470,16 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <button class="minha-vaga-filtro-btn" data-filtro="contratada" onclick="filtrarMinhasVagas('contratada')">Contratadas</button>
     </div>
     <div id="minhas-vagas-lista"></div>
+  </div>
+</div>
+
+<!-- MODAL MINHAS CANDIDATURAS (leitor ve as vagas em que se candidatou) -->
+<div class="bairros-overlay" id="minhas-candidaturas-overlay" onclick="if(event.target===this)fecharMinhasCandidaturas()">
+  <div class="bairros-painel" style="width:640px;">
+    <button class="bairros-fechar" onclick="fecharMinhasCandidaturas()">✕</button>
+    <div class="bairros-titulo">📋 Minhas Candidaturas</div>
+    <div class="bairros-sub">Vagas em que você se candidatou</div>
+    <div id="minhas-candidaturas-lista"></div>
   </div>
 </div>
 
@@ -2827,7 +2873,7 @@ async function atualizarTopbarAuth(session) {
     entrarBtn.style.display = 'none';
     usuarioChip.style.display = 'flex';
     const { data } = await sb.from('profiles')
-      .select('empresa_id, nome, celular, email, empresas(nome_empresa, email_empresa, celular_empresa)')
+      .select('empresa_id, nome, bairro, celular, email, empresas(nome_empresa, email_empresa, celular_empresa)')
       .eq('id', session.user.id).single();
     perfilAtual = data || null;
   } else {
@@ -2836,9 +2882,14 @@ async function atualizarTopbarAuth(session) {
     perfilAtual = null;
   }
   const vincularEmpresaBtn = document.getElementById('auth-vincular-empresa-btn');
+  const minhasCandidaturasBtn = document.getElementById('auth-minhas-candidaturas-btn');
   const temEmpresa = !!(perfilAtual && perfilAtual.empresa_id);
   minhasVagasBtn.style.display = temEmpresa ? '' : 'none';
   vincularEmpresaBtn.style.display = (session && session.user && !temEmpresa) ? '' : 'none';
+  // "Minhas Candidaturas" e' pro leitor, nao so' pra quem tem empresa —
+  // aparece pra qualquer conta logada (uma conta de empresa tambem pode
+  // se candidatar a vagas de outras empresas como leitor comum).
+  minhasCandidaturasBtn.style.display = (session && session.user) ? '' : 'none';
   carregarVagasEmpresas();
 }
 
@@ -3118,6 +3169,7 @@ function criarCardVagaEmpresa(v) {
   card.className = 'card-vaga vaga-patrocinada';
   card.dataset.distrito = Array.from(distritos).join(',');
   card.dataset.bairro = bairrosEspecificos.length ? bairrosEspecificos.join(',') : (v.localizacao_externa || '');
+  card.dataset.tipo = v.tipo_contrato || '';
 
   const linkOk = linkCandidaturaSeguro(v.link_candidatura);
   const candidatarHtml = linkOk
@@ -3127,6 +3179,10 @@ function criarCardVagaEmpresa(v) {
   const horarioHtml = v.horario ? `<span>⏰ ${escapeHtml(v.horario)}</span>` : '';
   const salarioBadgeHtml = v.salario ? `<span class="vaga-badge">💰 ${escapeHtml(v.salario)}</span>` : '';
   const beneficiosHtml = beneficiosTexto ? `<div class="vaga-beneficios">🎁 ${escapeHtml(beneficiosTexto)}</div>` : '';
+  const jaCandidatou = _minhasCandidaturasVagaIds.has(v.id);
+  const candidatarPortauHtml = jaCandidatou
+    ? `<span class="vaga-candidatar-feito">✓ Você já se candidatou</span>`
+    : `<button type="button" class="vaga-candidatar-portau-btn">📩 Candidatar-se pelo Portau</button>`;
   card.innerHTML = `
     <div class="vaga-icone">📢</div>
     <div style="flex:1">
@@ -3141,9 +3197,13 @@ function criarCardVagaEmpresa(v) {
         ${salarioBadgeHtml}
         ${candidatarHtml}
       </div>
+      <div style="margin-top:6px;">${candidatarPortauHtml}</div>
       ${v.publicado_por ? `<div style="font-size:10px;color:var(--cinza-m);margin-top:4px;">Publicado por: ${escapeHtml(v.publicado_por)}</div>` : ''}
     </div>
   `;
+  if (!jaCandidatou) {
+    card.querySelector('.vaga-candidatar-portau-btn').addEventListener('click', () => abrirCandidaturaVaga(v));
+  }
   return card;
 }
 
@@ -3184,6 +3244,13 @@ async function carregarVagasEmpresas() {
     .eq('ativa', true).eq('status', 'ativa').gt('expira_em', agoraIso)
     .order('criado_em', { ascending: false });
   if (error || !data) return;
+
+  // Uma unica query pra saber em quais vagas o leitor logado ja se
+  // candidatou, pra decidir o estado do botao em cada card sem consulta
+  // por card.
+  const { data: minhas } = await sb.from('candidaturas_vagas').select('vaga_id').eq('candidato_user_id', sessaoAtual.user.id);
+  _minhasCandidaturasVagaIds = new Set((minhas || []).map(c => c.vaga_id));
+
   secaoVagas.querySelectorAll('.vaga-patrocinada').forEach(el => el.remove());
   const header = secaoVagas.querySelector('.secao-header');
   // Insere em ordem reversa (mais antiga primeiro) logo apos o header, para
@@ -3194,8 +3261,133 @@ async function carregarVagasEmpresas() {
   atualizarContadorVagas(secaoVagas, data.length);
 }
 
+// --- CANDIDATAR-SE PELO PORTAU (leitor compartilha nome/bairro/celular) ---
+let _vagaEmCandidatura = null;
+
+function abrirCandidaturaVaga(v) {
+  if (!sessaoAtual) {
+    abrirLogin('entrar', 'Cadastre-se ou entre para se candidatar a esta vaga.');
+    return;
+  }
+  if (!perfilAtual || !perfilAtual.nome || !perfilAtual.celular) {
+    alert('Complete seu cadastro (nome e celular) antes de se candidatar a uma vaga.');
+    return;
+  }
+  _vagaEmCandidatura = v;
+  document.getElementById('candidatura-vaga-titulo-vaga').textContent = `${v.titulo_vaga} — ${v.nome_empresa}`;
+  document.getElementById('candidatura-vaga-resumo').innerHTML = `
+    Ao confirmar, a empresa vai ver:<br>
+    <strong>Nome:</strong> ${escapeHtml(perfilAtual.nome)}<br>
+    <strong>Bairro:</strong> ${escapeHtml(perfilAtual.bairro || 'não informado')}<br>
+    <strong>Celular:</strong> ${escapeHtml(formatarCelular(perfilAtual.celular))}
+  `;
+  document.getElementById('candidatura-vaga-erro').style.display = 'none';
+  document.getElementById('candidatura-vaga-sucesso').style.display = 'none';
+  document.getElementById('candidatura-vaga-btn-confirmar').style.display = '';
+  document.getElementById('candidatura-vaga-overlay').classList.add('aberto');
+}
+function fecharCandidaturaVaga() {
+  document.getElementById('candidatura-vaga-overlay').classList.remove('aberto');
+  _vagaEmCandidatura = null;
+}
+
+async function confirmarCandidaturaVaga() {
+  if (!_vagaEmCandidatura) return;
+  const erroEl = document.getElementById('candidatura-vaga-erro');
+  const sucessoEl = document.getElementById('candidatura-vaga-sucesso');
+  erroEl.style.display = 'none';
+  sucessoEl.style.display = 'none';
+
+  const btn = document.getElementById('candidatura-vaga-btn-confirmar');
+  btn.disabled = true;
+  const { error } = await sb.from('candidaturas_vagas').insert({ vaga_id: _vagaEmCandidatura.id });
+  btn.disabled = false;
+
+  if (error && error.code !== '23505') {
+    console.error('Erro ao registrar candidatura:', error);
+    erroEl.textContent = 'Não foi possível registrar sua candidatura. Tente novamente.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  // 23505 (violacao de unicidade) so' acontece se ja existia candidatura
+  // pra essa vaga+usuario (ex.: duplo clique) — trata como sucesso.
+  _minhasCandidaturasVagaIds.add(_vagaEmCandidatura.id);
+  sucessoEl.textContent = 'Candidatura registrada! A empresa já pode ver seu contato.';
+  sucessoEl.style.display = 'block';
+  btn.style.display = 'none';
+  carregarVagasEmpresas();
+}
+
+// --- MINHAS CANDIDATURAS (leitor ve/retira candidaturas ja feitas) ---
+async function abrirMinhasCandidaturas() {
+  if (!sessaoAtual) return;
+  document.getElementById('minhas-candidaturas-overlay').classList.add('aberto');
+  document.getElementById('auth-usuario-menu').classList.remove('aberto');
+  await carregarMinhasCandidaturas();
+}
+function fecharMinhasCandidaturas() {
+  document.getElementById('minhas-candidaturas-overlay').classList.remove('aberto');
+}
+
+async function carregarMinhasCandidaturas() {
+  const lista = document.getElementById('minhas-candidaturas-lista');
+  if (!lista || !sessaoAtual) return;
+  lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Carregando...</div>';
+  const { data, error } = await sb.from('candidaturas_vagas')
+    .select('id, vaga_id, criado_em, vagas_empresas(titulo_vaga, nome_empresa, tipo_contrato, status, expira_em)')
+    .eq('candidato_user_id', sessaoAtual.user.id)
+    .order('criado_em', { ascending: false });
+  if (error || !data) {
+    lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--vermelho);font-size:13px;">Não foi possível carregar suas candidaturas.</div>';
+    return;
+  }
+  if (data.length === 0) {
+    lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Você ainda não se candidatou a nenhuma vaga.</div>';
+    return;
+  }
+  lista.innerHTML = '';
+  data.forEach(c => lista.appendChild(criarCardMinhaCandidatura(c)));
+}
+
+function criarCardMinhaCandidatura(c) {
+  const vaga = c.vagas_empresas || {};
+  let statusLabel = 'Ativa';
+  let statusClasse = 'minha-vaga-status-ativa';
+  if (vaga.status === 'cancelada') { statusLabel = 'Cancelada pela empresa'; statusClasse = 'minha-vaga-status-cancelada'; }
+  else if (vaga.status === 'contratada') { statusLabel = 'Vaga preenchida'; statusClasse = 'minha-vaga-status-contratada'; }
+  else if (vaga.expira_em && new Date(vaga.expira_em) <= new Date()) { statusLabel = 'Expirada'; statusClasse = 'minha-vaga-status-expirada'; }
+
+  const card = document.createElement('div');
+  card.className = 'minha-vaga-card';
+  card.innerHTML = `
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
+      <div>
+        <div class="vaga-titulo" style="margin-bottom:2px;">${escapeHtml(vaga.titulo_vaga || '(vaga removida)')}</div>
+        <div style="font-size:11px;color:var(--cinza-m);">🏢 ${escapeHtml(vaga.nome_empresa || '')} · candidatura em ${formatarDataPtBr(new Date(c.criado_em))}</div>
+      </div>
+      <span class="minha-vaga-status ${statusClasse}">${escapeHtml(statusLabel)}</span>
+    </div>
+    <button type="button" class="anuncio-vaga-btn" style="margin-top:8px;" data-acao="retirar">Retirar candidatura</button>
+  `;
+  card.querySelector('[data-acao="retirar"]').addEventListener('click', async () => {
+    const { error } = await sb.from('candidaturas_vagas').delete().eq('id', c.id);
+    if (error) {
+      console.error('Erro ao retirar candidatura:', error);
+      return;
+    }
+    _minhasCandidaturasVagaIds.delete(c.vaga_id);
+    carregarMinhasCandidaturas();
+  });
+  return card;
+}
+
+// IDs das vagas em que o leitor logado ja se candidatou (Set, atualizado a
+// cada carregarVagasEmpresas() e a cada candidatar-se/retirar candidatura).
+let _minhasCandidaturasVagaIds = new Set();
+
 // --- MINHAS VAGAS (painel de gerenciamento: editar/cancelar/marcar contratada) ---
 let _minhasVagasCache = [];
+let _candidaturasPorVagaId = {};
 let _minhasVagasFiltroAtual = 'todas';
 
 async function abrirMinhasVagas() {
@@ -3278,6 +3470,19 @@ async function carregarMinhasVagas() {
     return;
   }
   _minhasVagasCache = data;
+
+  // Uma unica query batched pra todos os candidatos de todas as vagas da
+  // empresa, agrupada por vaga_id — evita N+1 (uma consulta por card).
+  _candidaturasPorVagaId = {};
+  if (data.length > 0) {
+    const { data: candidaturas } = await sb.from('candidaturas_vagas')
+      .select('vaga_id, nome_candidato, bairro_candidato, celular_candidato, criado_em')
+      .in('vaga_id', data.map(v => v.id));
+    (candidaturas || []).forEach(c => {
+      (_candidaturasPorVagaId[c.vaga_id] || (_candidaturasPorVagaId[c.vaga_id] = [])).push(c);
+    });
+  }
+
   renderizarMinhasVagas();
 }
 
@@ -3333,6 +3538,16 @@ function criarCardMinhaVaga(v) {
     </div>
   ` : '';
 
+  const candidatos = _candidaturasPorVagaId[v.id] || [];
+  const candidatosHtml = candidatos.length > 0 ? `
+    <div style="margin-top:8px;">
+      <button type="button" class="anuncio-vaga-btn" data-acao="candidatos">👥 ${candidatos.length} candidato${candidatos.length === 1 ? '' : 's'}</button>
+      <div class="minha-vaga-subform" data-form="candidatos" style="display:none;">
+        ${candidatos.map(c => `<div class="minha-vaga-detalhe">${escapeHtml(c.nome_candidato)} · ${escapeHtml(c.bairro_candidato || 'bairro não informado')} · ${escapeHtml(formatarCelular(c.celular_candidato))}</div>`).join('')}
+      </div>
+    </div>
+  ` : '';
+
   card.innerHTML = `
     <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;">
       <div>
@@ -3342,8 +3557,16 @@ function criarCardMinhaVaga(v) {
       <span class="minha-vaga-status ${statusClasse}">${statusLabel}</span>
     </div>
     ${detalhesExtra.join('')}
+    ${candidatosHtml}
     ${acoesHtml}
   `;
+
+  if (candidatos.length > 0) {
+    const formCandidatos = card.querySelector('[data-form="candidatos"]');
+    card.querySelector('[data-acao="candidatos"]').addEventListener('click', () => {
+      formCandidatos.style.display = formCandidatos.style.display === 'none' ? '' : 'none';
+    });
+  }
 
   if (podeAgir) {
     card.querySelector('[data-acao="editar"]').addEventListener('click', () => iniciarEdicaoVaga(v));
@@ -3552,8 +3775,49 @@ document.querySelectorAll('.sub-btn').forEach(btn => {
     });
     if (filtrar) { abrirFiltroPainel(sub); } else { fecharFiltroPainel(); }
     ajustarOffsetsFixos();
+    aplicarFiltroVagas();
   });
 });
+
+// --- BUSCA/FILTRO DENTRO DA SECAO VAGAS (palavra-chave + tipo + subprefeitura) ---
+function aplicarFiltroVagas() {
+  const secaoVagas = document.getElementById('vagas');
+  const buscaEl = document.getElementById('vagas-filtro-busca');
+  const tipoEl = document.getElementById('vagas-filtro-tipo');
+  const vazioEl = document.getElementById('vagas-filtro-vazio');
+  if (!secaoVagas || !buscaEl || !tipoEl) return;
+
+  // Recalcula a mesma condicao de subprefeitura do handler .sub-btn (em vez
+  // de confiar no style.display ja aplicado por ele) — assim este filtro
+  // funciona de forma autocontida, independente da ordem de chamada entre
+  // o clique de subprefeitura e a digitacao na busca/tipo.
+  const subAtivoBtn = document.querySelector('.sub-btn.ativo');
+  const sub = subAtivoBtn ? subAtivoBtn.dataset.sub : 'todas';
+  const filtrarSub = sub !== 'todas';
+  const distritosSub = filtrarSub ? SUB_MAP[sub].map(normalizarTexto) : [];
+
+  const termoBusca = normalizarTexto(buscaEl.value.trim());
+  const tipoSelecionado = tipoEl.value;
+
+  let visiveis = 0;
+  secaoVagas.querySelectorAll('.card-vaga').forEach(card => {
+    let bateSub = true;
+    if (filtrarSub) {
+      const distritosCard = (card.dataset.distrito || '').split(',').map(normalizarTexto).filter(Boolean);
+      const bairrosCard = (card.dataset.bairro || '').split(',').map(normalizarTexto).filter(Boolean);
+      bateSub = distritosCard.length
+        ? distritosCard.some(d => distritosSub.includes(d))
+        : distritosSub.some(d => bairrosCard.some(b => b.includes(d)));
+    }
+    const bateBusca = !termoBusca || normalizarTexto(card.textContent).includes(termoBusca);
+    const bateTipo = !tipoSelecionado || (card.dataset.tipo || '') === tipoSelecionado;
+    const bate = bateSub && bateBusca && bateTipo;
+    card.style.display = bate ? '' : 'none';
+    if (bate) visiveis++;
+  });
+
+  vazioEl.style.display = (visiveis === 0) ? 'block' : 'none';
+}
 
 function ajustarOffsetsFixos() {
   const ticker = document.getElementById('ticker-wrap');
@@ -3619,6 +3883,8 @@ window.addEventListener('keydown', function(e) {
     if (document.getElementById('local-vaga-overlay').classList.contains('aberto')) fecharSelecaoLocal();
     if (document.getElementById('minhas-vagas-overlay').classList.contains('aberto')) fecharMinhasVagas();
     if (document.getElementById('vincular-empresa-overlay').classList.contains('aberto')) fecharVincularEmpresa();
+    if (document.getElementById('candidatura-vaga-overlay').classList.contains('aberto')) fecharCandidaturaVaga();
+    if (document.getElementById('minhas-candidaturas-overlay').classList.contains('aberto')) fecharMinhasCandidaturas();
   }
 });
 </script>

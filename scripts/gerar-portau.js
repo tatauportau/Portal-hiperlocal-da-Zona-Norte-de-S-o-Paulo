@@ -148,11 +148,24 @@ function buildVagas(vagas) {
         <button class="anuncio-vaga-btn" onclick="abrirAnuncioVaga()">📢 Anuncie sua vaga</button>
         <span class="secao-count">${count} vagas</span>
       </div>
-    </div>\n`;
+    </div>
+
+    <div class="vagas-filtro-bar" id="vagas-filtro-bar">
+      <input type="text" class="vagas-filtro-busca" id="vagas-filtro-busca" placeholder="Buscar por cargo ou palavra-chave..." oninput="aplicarFiltroVagas()">
+      <select class="vagas-filtro-tipo" id="vagas-filtro-tipo" onchange="aplicarFiltroVagas()">
+        <option value="">Todos os tipos</option>
+        <option value="CLT">CLT</option>
+        <option value="PJ">PJ</option>
+        <option value="Estágio">Estágio</option>
+        <option value="Temporário">Temporário</option>
+        <option value="Freelance">Freelance</option>
+      </select>
+    </div>
+    <div class="vagas-filtro-vazio" id="vagas-filtro-vazio" style="display:none;">Nenhuma vaga encontrada com esses filtros.</div>\n`;
   for (const v of vagas) {
     const distrito = resolverDistrito(v.bairro) || '';
     html += `
-    <div class="card-vaga" data-bairro="${v.bairro || ''}" data-distrito="${distrito}">
+    <div class="card-vaga" data-bairro="${v.bairro || ''}" data-distrito="${distrito}" data-tipo="${v.tipo || ''}">
       <div class="vaga-icone">${v.icone}</div>
       <div style="flex:1">
         <div class="vaga-titulo">${v.titulo}</div>

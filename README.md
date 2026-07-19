@@ -28,7 +28,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 008_empresas_e_vagas_ownership.sql  # Migração: contas de empresa (CNPJ) + ciclo de vida das vagas
 │   ├── 009_vincular_empresa_rpc.sql  # Migração: RPC pra vincular empresa a conta ja existente
 │   ├── 010_empresa_contato_e_publicado_por.sql  # Migração: e-mail/celular da empresa + responsável pelo anúncio
-│   └── 011_permite_validade_1_dia.sql  # Migração: permite dias_validade=1 (além de 7/14/21/30)
+│   ├── 011_permite_validade_1_dia.sql  # Migração: permite dias_validade=1 (além de 7/14/21/30)
+│   └── 012_candidaturas_vagas.sql  # Migração: candidaturas de leitores (opt-in, compartilha nome/bairro/celular)
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -523,6 +524,73 @@ Claude Cowork (agendamento próprio, roda sozinho)
     enquanto**, não aparece em lugar nenhum público do site. Consulta útil
     pro Carlos acompanhar:
     `select avg(contratado_nota), count(*) from vagas_empresas where status='contratada';`
+
+  ### Candidaturas de leitores — `sql/012_candidaturas_vagas.sql`
+
+  Lado do candidato (complementar ao lado da empresa acima). Leitor logado
+  clica "📩 Candidatar-se pelo Portau" num card de vaga patrocinada
+  (`criarCardVagaEmpresa()` — botão ao lado, não em cima, do
+  `candidatarHtml` já existente, que é o canal externo da própria empresa
+  — link ou e-mail). Abre um modal de confirmação (`#candidatura-vaga-overlay`)
+  mostrando exatamente o que vai ser compartilhado, e só então grava.
+
+  - **Nome/bairro/celular do candidato são preenchidos no servidor**
+    (trigger `before insert` `preencher_candidatura_vaga()`, lê `profiles`
+    por `auth.uid()`) — o client manda só `vaga_id`, nunca esses três
+    campos. Mesma disciplina de "nunca confiar em dado de identidade vindo
+    do client" já usada em `criado_por_user_id`/`empresa_id`/`expira_em`
+    de `vagas_empresas`, mesmo o candidato só podendo "mentir" sobre os
+    próprios dados (não é uma vulnerabilidade contra terceiros, é
+    consistência de design).
+  - **Um candidato por vaga** (`unique(vaga_id, candidato_user_id)`) — dá
+    erro `23505` numa segunda tentativa (ex.: duplo clique), tratado como
+    sucesso em `confirmarCandidaturaVaga()`, não como falha.
+  - **Insert só em vaga genuinamente ativa**: a policy de insert confere
+    explicitamente `ativa=true and status='ativa' and expira_em > now()`
+    — não basta a vaga aparecer no feed público, o banco recusa candidatura
+    a vaga cancelada/expirada mesmo que a UI tente.
+  - **4ª policy de select em `vagas_empresas`** (`vagas_empresas_select_candidato_proprio`):
+    sem ela, "Minhas Candidaturas" não conseguiria mostrar o título/empresa
+    de uma vaga já expirada/cancelada/contratada — as 3 policies de select
+    já existentes (pública-ativa, própria-empresa) não cobrem "leitor que
+    se candidatou a uma vaga que não é mais dele nem é mais pública".
+    Mesmo padrão de `minha_empresa_id()`, só que na direção candidato→vaga
+    em vez de empresa→vaga.
+  - **`_minhasCandidaturasVagaIds`** (Set, populado em `carregarVagasEmpresas()`
+    com uma única query batched pro feed inteiro) decide, por card, se
+    mostra o botão ou o estado "✓ Você já se candidatou" — sem consulta
+    por card.
+  - **Retirar candidatura** (`criarCardMinhaCandidatura()`, painel "📋 Minhas
+    Candidaturas" — botão no menu do usuário, visível pra **qualquer**
+    conta logada, não só leitor comum, já que uma conta de empresa também
+    pode se candidatar a vagas de outras empresas): `delete` simples, sem
+    policy de update — reaplicar depois é um insert novo, perde o
+    histórico do ciclo anterior (troca aceitável, decisão consciente).
+  - **Empresa vê os candidatos** (`criarCardMinhaVaga()`, botão "👥 N
+    candidatos" com o mesmo idioma de revelar-ao-clicar do
+    Cancelar/Contratada): `carregarMinhasVagas()` busca todos os
+    candidatos de todas as vagas da empresa numa única query batched
+    (`.in('vaga_id', ...)`), agrupada em `_candidaturasPorVagaId` — visível
+    pra qualquer um da empresa (não só quem criou a vaga), já que ver
+    candidatos não é uma ação restrita como editar/cancelar/contratar.
+
+  ### Busca/filtro na seção Vagas
+
+  Barra de busca (palavra-chave) + `<select>` de tipo de contrato logo
+  abaixo do cabeçalho de `#vagas` (presente tanto no `index.html` quanto
+  no template `buildVagas()` de `scripts/gerar-portau.js`, pra sobreviver
+  à geração diária). `aplicarFiltroVagas()` **recalcula do zero** a
+  condição de subprefeitura (lendo `.sub-btn.ativo`) em vez de confiar no
+  `style.display` já aplicado pelo handler de subprefeitura — importante:
+  uma primeira versão dessa função só checava `if (card.style.display ===
+  'none') return`, o que "prendia" um card escondido por uma busca anterior
+  e impedia ele de reaparecer quando a busca era limpa depois. Corrigido
+  antes de subir. O handler de clique do `.sub-btn` ganhou uma linha a mais
+  (`aplicarFiltroVagas()` no final) pra reaplicar busca/tipo depois de
+  trocar de subprefeitura, em vez de dois filtros brigando pelo mesmo
+  `style.display`. Cards editoriais ganharam `data-tipo="CLT"` (e
+  `gerar-portau.js` grava `data-tipo="${v.tipo}"` nas próximas gerações);
+  `criarCardVagaEmpresa()` grava `card.dataset.tipo = v.tipo_contrato`.
 
 ---
 
