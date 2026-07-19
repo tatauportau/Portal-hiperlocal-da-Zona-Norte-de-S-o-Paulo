@@ -612,6 +612,9 @@
   .vaga-candidatar{font-size:11px;font-weight:700;color:var(--cinza-q);text-decoration:underline;}
   .vaga-candidatar-email{font-size:11px;color:var(--cinza-m);}
   #local-vaga-overlay{z-index:1002;}
+  .anuncio-vaga-beneficios-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;font-size:12px;color:var(--cinza-q);}
+  .anuncio-vaga-beneficios-grid label{display:flex;align-items:center;gap:6px;cursor:pointer;}
+  .vaga-beneficios{font-size:11px;color:var(--cinza-m);margin-top:4px;}
   .bairros-pill.selecionada{background:var(--cinza-q);border-color:var(--cinza-q);color:var(--branco);}
   .bairros-pill.selecionada:hover{background:var(--cinza-q);border-color:var(--cinza-q);color:var(--branco);}
   .local-vaga-resumo{margin-top:12px;font-size:11px;color:var(--cinza-m);display:flex;flex-wrap:wrap;gap:6px;}
@@ -2276,8 +2279,49 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <input class="login-input" type="text" id="anuncio-vaga-empresa" placeholder="Nome da empresa" required minlength="2" maxlength="120">
       <input class="login-input" type="email" id="anuncio-vaga-email" placeholder="E-mail de contato" required autocomplete="email">
       <input class="login-input" type="tel" id="anuncio-vaga-whatsapp" placeholder="WhatsApp (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
-      <input class="login-input" type="text" id="anuncio-vaga-titulo" placeholder="Título da vaga" required minlength="3" maxlength="120">
-      <textarea class="login-input" id="anuncio-vaga-descricao" placeholder="Descrição da vaga (requisitos, horário, benefícios, etc. — mín. 10 caracteres)" required minlength="10" maxlength="600" rows="3" style="resize:vertical;"></textarea>
+      <select class="login-select" id="anuncio-vaga-titulo-select" required onchange="onTituloVagaChange()">
+        <option value="" disabled selected>Título da vaga</option>
+        <option value="Atendente">Atendente</option>
+        <option value="Vendedor(a)">Vendedor(a)</option>
+        <option value="Caixa">Caixa</option>
+        <option value="Estoquista">Estoquista</option>
+        <option value="Repositor(a)">Repositor(a)</option>
+        <option value="Auxiliar Administrativo">Auxiliar Administrativo</option>
+        <option value="Recepcionista">Recepcionista</option>
+        <option value="Auxiliar de Cozinha">Auxiliar de Cozinha</option>
+        <option value="Cozinheiro(a)">Cozinheiro(a)</option>
+        <option value="Garçom/Garçonete">Garçom/Garçonete</option>
+        <option value="Motorista">Motorista</option>
+        <option value="Entregador(a)/Motoboy">Entregador(a)/Motoboy</option>
+        <option value="Auxiliar de Limpeza">Auxiliar de Limpeza</option>
+        <option value="Diarista">Diarista</option>
+        <option value="Porteiro(a)/Zelador(a)">Porteiro(a)/Zelador(a)</option>
+        <option value="Segurança/Vigilante">Segurança/Vigilante</option>
+        <option value="Cuidador(a)/Babá">Cuidador(a)/Babá</option>
+        <option value="Técnico(a) de Enfermagem">Técnico(a) de Enfermagem</option>
+        <option value="Auxiliar de Produção">Auxiliar de Produção</option>
+        <option value="Professor(a)/Auxiliar Educacional">Professor(a)/Auxiliar Educacional</option>
+        <option value="__outro__">Outro (especifique)</option>
+      </select>
+      <input class="login-input" type="text" id="anuncio-vaga-titulo-outro" placeholder="Digite o título da vaga" style="display:none;" maxlength="120">
+
+      <input class="login-input" type="text" id="anuncio-vaga-horario" placeholder="Horário (ex.: Seg-Sex, 8h às 17h) — opcional" maxlength="200">
+
+      <div style="font-size:11px;color:var(--cinza-m);">Benefícios (opcional):</div>
+      <div class="anuncio-vaga-beneficios-grid" id="anuncio-vaga-beneficios-grid">
+        <label><input type="checkbox" value="Vale-transporte"> Vale-transporte</label>
+        <label><input type="checkbox" value="Vale-refeição"> Vale-refeição</label>
+        <label><input type="checkbox" value="Vale-alimentação"> Vale-alimentação</label>
+        <label><input type="checkbox" value="Plano de saúde"> Plano de saúde</label>
+        <label><input type="checkbox" value="Plano odontológico"> Plano odontológico</label>
+        <label><input type="checkbox" value="Seguro de vida"> Seguro de vida</label>
+        <label><input type="checkbox" value="Cesta básica"> Cesta básica</label>
+        <label><input type="checkbox" value="Comissão/Bonificação"> Comissão/Bonificação</label>
+        <label><input type="checkbox" id="anuncio-vaga-beneficio-outro-check" value="__outro__" onchange="onBeneficioOutroChange()"> Outro</label>
+      </div>
+      <input class="login-input" type="text" id="anuncio-vaga-beneficio-outro" placeholder="Descreva o outro benefício" style="display:none;" maxlength="200">
+
+      <textarea class="login-input" id="anuncio-vaga-descricao" placeholder="Requisitos e outras informações (mín. 10 caracteres)" required minlength="10" maxlength="600" rows="3" style="resize:vertical;"></textarea>
       <button type="button" class="anuncio-vaga-btn" style="width:100%;justify-content:center;padding:10px;" onclick="abrirSelecaoLocal()">📍 Selecionar bairros/distritos da Zona Norte</button>
       <div id="anuncio-vaga-local-resumo" style="font-size:11px;color:var(--cinza-m);text-align:center;">Nenhum local selecionado ainda.</div>
       <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se for fora da Zona Norte:</div>
@@ -2601,12 +2645,29 @@ function abrirAnuncioVaga() {
   document.getElementById('anuncio-vaga-erro').style.display = 'none';
   document.getElementById('anuncio-vaga-sucesso').style.display = 'none';
   document.getElementById('anuncio-vaga-form').reset();
+  document.getElementById('anuncio-vaga-titulo-outro').style.display = 'none';
+  document.getElementById('anuncio-vaga-beneficio-outro').style.display = 'none';
   _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
   atualizarResumoFormularioVaga();
   document.getElementById('anuncio-vaga-overlay').classList.add('aberto');
 }
 function fecharAnuncioVaga() {
   document.getElementById('anuncio-vaga-overlay').classList.remove('aberto');
+}
+
+function onTituloVagaChange() {
+  const select = document.getElementById('anuncio-vaga-titulo-select');
+  const outro = document.getElementById('anuncio-vaga-titulo-outro');
+  const ehOutro = select.value === '__outro__';
+  outro.style.display = ehOutro ? '' : 'none';
+  if (!ehOutro) outro.value = '';
+}
+
+function onBeneficioOutroChange() {
+  const check = document.getElementById('anuncio-vaga-beneficio-outro-check');
+  const outro = document.getElementById('anuncio-vaga-beneficio-outro');
+  outro.style.display = check.checked ? '' : 'none';
+  if (!check.checked) outro.value = '';
 }
 
 async function publicarVagaEmpresa() {
@@ -2621,7 +2682,17 @@ async function publicarVagaEmpresa() {
   const nomeEmpresa = document.getElementById('anuncio-vaga-empresa').value.trim();
   const emailContato = document.getElementById('anuncio-vaga-email').value.trim();
   const whatsappFormatado = document.getElementById('anuncio-vaga-whatsapp').value.trim();
-  const tituloVaga = document.getElementById('anuncio-vaga-titulo').value.trim();
+  const tituloSelect = document.getElementById('anuncio-vaga-titulo-select').value;
+  const tituloVaga = tituloSelect === '__outro__'
+    ? document.getElementById('anuncio-vaga-titulo-outro').value.trim()
+    : tituloSelect;
+  const horario = document.getElementById('anuncio-vaga-horario').value.trim();
+  const beneficios = Array.from(document.querySelectorAll('#anuncio-vaga-beneficios-grid input[type="checkbox"]:checked'))
+    .map(c => c.value)
+    .filter(v => v !== '__outro__');
+  const beneficioOutro = document.getElementById('anuncio-vaga-beneficio-outro-check').checked
+    ? document.getElementById('anuncio-vaga-beneficio-outro').value.trim()
+    : '';
   const descricao = document.getElementById('anuncio-vaga-descricao').value.trim();
   const bairroOutro = document.getElementById('anuncio-vaga-bairro-outro').value.trim();
   const tipoContrato = document.getElementById('anuncio-vaga-tipo').value;
@@ -2660,6 +2731,11 @@ async function publicarVagaEmpresa() {
     erroEl.style.display = 'block';
     return;
   }
+  if (document.getElementById('anuncio-vaga-beneficio-outro-check').checked && !beneficioOutro) {
+    erroEl.textContent = 'Descreva o outro benefício, ou desmarque a opção "Outro".';
+    erroEl.style.display = 'block';
+    return;
+  }
 
   const bairrosPorDistritoObj = {};
   Object.entries(_selecaoLocalVaga.bairrosParciais).forEach(([d, set]) => {
@@ -2673,6 +2749,9 @@ async function publicarVagaEmpresa() {
     email_contato: emailContato,
     whatsapp_contato: whatsappFormatado ? whatsappFormatado.replace(/\D/g, '') : null,
     titulo_vaga: tituloVaga,
+    horario: horario || null,
+    beneficios,
+    beneficios_outro: beneficioOutro || null,
     descricao,
     distritos_completos: Array.from(_selecaoLocalVaga.distritosCompletos),
     bairros_por_distrito: bairrosPorDistritoObj,
@@ -2689,6 +2768,8 @@ async function publicarVagaEmpresa() {
     return;
   }
   document.getElementById('anuncio-vaga-form').reset();
+  document.getElementById('anuncio-vaga-titulo-outro').style.display = 'none';
+  document.getElementById('anuncio-vaga-beneficio-outro').style.display = 'none';
   _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
   atualizarResumoFormularioVaga();
   sucessoEl.textContent = 'Vaga publicada com sucesso! Ela já está visível para os usuários cadastrados na seção Vagas de Emprego.';
@@ -2722,11 +2803,15 @@ function criarCardVagaEmpresa(v) {
   const candidatarHtml = linkOk
     ? `<a href="${escapeHtml(linkOk)}" target="_blank" rel="noopener nofollow" class="vaga-candidatar">Candidatar-se →</a>`
     : `<span class="vaga-candidatar-email">Candidatura: ${escapeHtml(v.email_contato)}</span>`;
+  const beneficiosTexto = [...(v.beneficios || []), v.beneficios_outro].filter(Boolean).join(', ');
+  const horarioHtml = v.horario ? `<span>⏰ ${escapeHtml(v.horario)}</span>` : '';
+  const beneficiosHtml = beneficiosTexto ? `<div class="vaga-beneficios">🎁 ${escapeHtml(beneficiosTexto)}</div>` : '';
   card.innerHTML = `
     <div class="vaga-icone">📢</div>
     <div style="flex:1">
       <div class="vaga-titulo">${escapeHtml(v.titulo_vaga)}</div>
-      <div class="vaga-info"><span>🏢 ${escapeHtml(v.nome_empresa)}</span><span>📍 ${escapeHtml(textoLocalizacaoVaga(v))}</span><span>${escapeHtml(v.descricao)}</span></div>
+      <div class="vaga-info"><span>🏢 ${escapeHtml(v.nome_empresa)}</span><span>📍 ${escapeHtml(textoLocalizacaoVaga(v))}</span>${horarioHtml}<span>${escapeHtml(v.descricao)}</span></div>
+      ${beneficiosHtml}
       <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
         <span class="vaga-badge">${escapeHtml(v.tipo_contrato)}</span>
         <span class="vaga-patrocinada-pill">📢 Vaga Patrocinada</span>

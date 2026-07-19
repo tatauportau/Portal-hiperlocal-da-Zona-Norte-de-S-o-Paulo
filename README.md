@@ -271,6 +271,25 @@ Claude Cowork (agendamento próprio, roda sozinho)
     publicar" genérico. Se o Supabase ainda assim recusar por outro motivo,
     o erro real vai pro `console.error` do navegador para facilitar
     diagnóstico.
+  - **Título, horário e benefícios (`sql/006_vagas_empresas_horario_beneficios.sql`):**
+    - `titulo_vaga` deixou de ser texto livre solto — agora é um `<select>`
+      com os cargos mais comuns da região (Atendente, Vendedor(a), Auxiliar
+      Administrativo, Motorista, etc., lista fixa no HTML) + opção "Outro
+      (especifique)" que revela um campo de texto (`onTituloVagaChange()`).
+      O valor final gravado em `titulo_vaga` é sempre texto simples — não
+      houve mudança de schema para esse campo, só a forma de preenchê-lo.
+    - `horario` (novo, opcional): texto livre curto (ex.: "Seg-Sex, 8h às
+      17h"), sem lista pré-definida (decisão consciente — horários variam
+      demais para caber em poucas opções fixas).
+    - `beneficios` (novo, opcional): checklist de múltipla escolha
+      (Vale-transporte, Vale-refeição, Plano de saúde, etc.) + checkbox
+      "Outro" que revela `beneficios_outro` (texto livre,
+      `onBeneficioOutroChange()`). Ambos ficam null/vazio se a empresa não
+      preencher nada.
+    - No card, `horario` aparece como mais um item da linha de info (ícone
+      ⏰) e `beneficios`/`beneficios_outro` aparecem juntos numa linha
+      própria (ícone 🎁, classe `.vaga-beneficios`) — tudo passando por
+      `escapeHtml()` como os demais campos vindos do formulário público.
   - **Exibição:** os cards de empresas aparecem na mesma seção "Vagas de
     Emprego", misturados com as vagas editoriais, com o selo "📢 Vaga
     Patrocinada" (classe `.vaga-patrocinada`) e sempre no topo da lista
