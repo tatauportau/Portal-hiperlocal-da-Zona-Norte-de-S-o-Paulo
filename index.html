@@ -2273,11 +2273,11 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
 
     <form class="login-form ativo" id="anuncio-vaga-form" onsubmit="event.preventDefault(); publicarVagaEmpresa();">
       <input type="text" id="anuncio-vaga-site" name="site" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
-      <input class="login-input" type="text" id="anuncio-vaga-empresa" placeholder="Nome da empresa" required maxlength="120">
+      <input class="login-input" type="text" id="anuncio-vaga-empresa" placeholder="Nome da empresa" required minlength="2" maxlength="120">
       <input class="login-input" type="email" id="anuncio-vaga-email" placeholder="E-mail de contato" required autocomplete="email">
       <input class="login-input" type="tel" id="anuncio-vaga-whatsapp" placeholder="WhatsApp (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
-      <input class="login-input" type="text" id="anuncio-vaga-titulo" placeholder="Título da vaga" required maxlength="120">
-      <textarea class="login-input" id="anuncio-vaga-descricao" placeholder="Descrição da vaga (requisitos, horário, benefícios, etc.)" required maxlength="600" rows="3" style="resize:vertical;"></textarea>
+      <input class="login-input" type="text" id="anuncio-vaga-titulo" placeholder="Título da vaga" required minlength="3" maxlength="120">
+      <textarea class="login-input" id="anuncio-vaga-descricao" placeholder="Descrição da vaga (requisitos, horário, benefícios, etc. — mín. 10 caracteres)" required minlength="10" maxlength="600" rows="3" style="resize:vertical;"></textarea>
       <button type="button" class="anuncio-vaga-btn" style="width:100%;justify-content:center;padding:10px;" onclick="abrirSelecaoLocal()">📍 Selecionar bairros/distritos da Zona Norte</button>
       <div id="anuncio-vaga-local-resumo" style="font-size:11px;color:var(--cinza-m);text-align:center;">Nenhum local selecionado ainda.</div>
       <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se for fora da Zona Norte:</div>
@@ -2305,7 +2305,11 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
     <div class="bairros-titulo">🗺️ Onde a vaga se aplica?</div>
     <div class="bairros-sub">Clique num distrito no mapa e marque os bairros — ou selecione o distrito inteiro</div>
     <div class="bairros-corpo">
-      <div id="local-vaga-svg-wrap"></div>
+      <div>
+        <div id="local-vaga-svg-wrap"></div>
+        <div class="local-vaga-resumo" id="local-vaga-resumo">Nenhum distrito ou bairro selecionado ainda.</div>
+        <button class="login-btn" style="margin-top:12px;" onclick="confirmarSelecaoLocal()">Confirmar seleção</button>
+      </div>
       <div class="bairros-info" id="local-vaga-info">
         <div class="bairros-info-titulo" id="local-vaga-info-titulo">Selecione um distrito</div>
         <div class="bairros-info-sub" id="local-vaga-info-sub">Clique no mapa ao lado</div>
@@ -2315,8 +2319,6 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
         <div class="bairros-vazio" id="local-vaga-vazio">Nenhum bairro encontrado</div>
       </div>
     </div>
-    <div class="local-vaga-resumo" id="local-vaga-resumo">Nenhum distrito ou bairro selecionado ainda.</div>
-    <button class="login-btn" style="margin-top:12px;" onclick="confirmarSelecaoLocal()">Confirmar seleção</button>
   </div>
 </div>
 
@@ -2643,6 +2645,21 @@ async function publicarVagaEmpresa() {
     erroEl.style.display = 'block';
     return;
   }
+  if (nomeEmpresa.length < 2) {
+    erroEl.textContent = 'O nome da empresa precisa ter pelo menos 2 caracteres.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  if (tituloVaga.length < 3) {
+    erroEl.textContent = 'O título da vaga precisa ter pelo menos 3 caracteres.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  if (descricao.length < 10) {
+    erroEl.textContent = 'A descrição precisa ter pelo menos 10 caracteres.';
+    erroEl.style.display = 'block';
+    return;
+  }
 
   const bairrosPorDistritoObj = {};
   Object.entries(_selecaoLocalVaga.bairrosParciais).forEach(([d, set]) => {
@@ -2666,7 +2683,8 @@ async function publicarVagaEmpresa() {
   btn.disabled = false;
 
   if (error) {
-    erroEl.textContent = 'Não foi possível publicar. Tente novamente em instantes.';
+    console.error('Erro ao publicar vaga de empresa:', error);
+    erroEl.textContent = 'Não foi possível publicar. Confira se todos os campos estão preenchidos corretamente e tente novamente.';
     erroEl.style.display = 'block';
     return;
   }

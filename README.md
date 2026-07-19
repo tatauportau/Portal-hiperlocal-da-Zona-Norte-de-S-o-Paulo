@@ -262,6 +262,15 @@ Claude Cowork (agendamento próprio, roda sozinho)
     público, uma leva de envios automatizados ainda é possível. Considerar
     CAPTCHA ou uma Netlify Function intermediária se isso virar problema na
     prática.
+  - **Validação de tamanho espelha as constraints do banco:** `nome_empresa`
+    (mín. 2), `titulo_vaga` (mín. 3) e `descricao` (mín. 10) têm `check
+    (char_length(...))` em `sql/004_vagas_empresas.sql` — o formulário
+    valida os mesmos mínimos em `publicarVagaEmpresa()` (com mensagem
+    específica) e via atributo `minlength` nos campos, para o erro aparecer
+    de forma clara antes de tentar gravar, em vez de um "não foi possível
+    publicar" genérico. Se o Supabase ainda assim recusar por outro motivo,
+    o erro real vai pro `console.error` do navegador para facilitar
+    diagnóstico.
   - **Exibição:** os cards de empresas aparecem na mesma seção "Vagas de
     Emprego", misturados com as vagas editoriais, com o selo "📢 Vaga
     Patrocinada" (classe `.vaga-patrocinada`) e sempre no topo da lista
