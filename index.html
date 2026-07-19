@@ -3167,7 +3167,22 @@ async function carregarVagasEmpresas() {
     return;
   }
 
-  const { data, error } = await sb.from('vagas_empresas').select('*').eq('ativa', true).order('criado_em', { ascending: false });
+  // Filtro explicito por ativa/status/expira_em: a policy de select da
+  // propria empresa (sql/008) deixa uma empresa logada ver TODAS as suas
+  // vagas (inclusive canceladas/expiradas/contratadas), pra alimentar o
+  // painel "Minhas Vagas". Como as policies de select sao permissivas
+  // (OR'd), um select('*').eq('ativa', true) sozinho tambem trazia essas
+  // vagas nao-ativas aqui — feed publico, sem esse filtro, empresa via
+  // as proprias vagas jah encerradas misturadas com o resto (bug real,
+  // reportado 19/07/2026: "Vendedor(a)"/"Atendente" continuavam
+  // aparecendo no feed geral mesmo depois de canceladas). O filtro
+  // explicito abaixo replica exatamente a condicao da policy publica,
+  // garantindo que so' vagas genuinamente ativas apareçam aqui,
+  // independente de qual policy esteja liberando a leitura por baixo.
+  const agoraIso = new Date().toISOString();
+  const { data, error } = await sb.from('vagas_empresas').select('*')
+    .eq('ativa', true).eq('status', 'ativa').gt('expira_em', agoraIso)
+    .order('criado_em', { ascending: false });
   if (error || !data) return;
   secaoVagas.querySelectorAll('.vaga-patrocinada').forEach(el => el.remove());
   const header = secaoVagas.querySelector('.secao-header');

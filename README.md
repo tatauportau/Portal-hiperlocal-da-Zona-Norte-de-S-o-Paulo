@@ -319,6 +319,22 @@ Claude Cowork (agendamento próprio, roda sozinho)
     cada mudança de estado de login (chamada no fim de
     `atualizarTopbarAuth()`), então os cards aparecem assim que a pessoa
     loga e somem assim que desloga, sem precisar recarregar a página.
+  - **Bug corrigido (19/07/2026): feed geral vazava vagas não-ativas da
+    própria empresa do usuário logado.** `carregarVagasEmpresas()` fazia
+    `select('*').eq('ativa', true)` sem mais nada — como as policies de
+    select são permissivas (OR'd — ver `sql/008`), quando quem está logado
+    é dono de uma empresa, a policy `vagas_empresas_select_propria_empresa`
+    (que existe pra alimentar o painel "Minhas Vagas" com TODAS as vagas
+    da empresa, inclusive canceladas/expiradas/contratadas) também liberava
+    essas linhas pra essa mesma consulta do feed geral — então a própria
+    empresa via suas vagas já encerradas misturadas ali, mesmo elas nunca
+    aparecendo pra um visitante anônimo (só reproduzia logado). Corrigido
+    adicionando os mesmos filtros da policy pública direto na consulta
+    (`.eq('status','ativa').gt('expira_em', <agora>)`), garantindo que o
+    feed geral só mostre vagas genuinamente ativas **independente de qual
+    policy esteja liberando a leitura por baixo**. Mesma categoria de
+    cuidado já documentada pra `carregarMinhasVagas()` (filtro explícito
+    por `empresa_id`), só que na direção oposta.
   - **Segurança:** todo texto vindo do formulário (nome da empresa,
     título, descrição, bairro) passa por `escapeHtml()` antes de virar
     HTML — mesmo exigindo conta, o texto digitado pela empresa continua
