@@ -22,7 +22,11 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 002_add_celular.sql     # Migração: coluna celular + checagem de duplicidade
 │   ├── 003_add_email.sql       # Migração: coluna email (copiada de auth.users)
 │   ├── 004_vagas_empresas.sql  # Migração: tabela vagas_empresas (vagas patrocinadas por empresas)
-│   └── 005_vagas_empresas_localizacao.sql  # Migração: localização vira multi-distrito/bairro (em vez de 1 bairro só)
+│   ├── 005_vagas_empresas_localizacao.sql  # Migração: localização vira multi-distrito/bairro (em vez de 1 bairro só)
+│   ├── 006_vagas_empresas_horario_beneficios.sql  # Migração: campos horario/beneficios
+│   ├── 007_vagas_empresas_salario.sql  # Migração: campo salario
+│   ├── 008_empresas_e_vagas_ownership.sql  # Migração: contas de empresa (CNPJ) + ciclo de vida das vagas
+│   └── 009_vincular_empresa_rpc.sql  # Migração: RPC pra vincular empresa a conta ja existente
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -379,10 +383,23 @@ Claude Cowork (agendamento próprio, roda sozinho)
   `empresa_por_cnpj()` (RPC, mesmo padrão do `celular_ja_cadastrado` do
   `sql/002`).
 
-  - **`empresa_id` não é editável depois do cadastro** (fica fora do
+  - **`empresa_id` não é editável via `update()` direto** (fica fora do
     `grant update` de `profiles`, igual `subscription_tier` desde o
-    `sql/001`) — ninguém vira empresa depois de já ter conta de leitor
-    sem passar pelo trigger de novo.
+    `sql/001`) — a única forma de uma conta ganhar `empresa_id` depois de
+    já existir é a RPC `vincular_minha_empresa()` abaixo, nunca um
+    `update()` livre.
+  - **Vincular empresa numa conta já existente** (`sql/009_vincular_empresa_rpc.sql`):
+    quem já tinha conta de leitor antes dessa feature (ou só esqueceu de
+    marcar "Sou uma empresa" no cadastro) vincula depois pelo menu do
+    usuário → "🏢 Vincular empresa" (só aparece se a conta ainda não tem
+    `empresa_id` — vira "🏢 Minhas Vagas" assim que vincula,
+    `atualizarTopbarAuth()` alterna os dois). A RPC
+    `vincular_minha_empresa(cnpj, nome_empresa)` é `security definer` mas
+    só opera sobre a própria conta (`auth.uid()`, nunca um id vindo do
+    client) e recusa se a conta já tiver empresa — não dá pra "trocar" de
+    empresa por essa via, só vincular uma vez. Mesmo find-or-create
+    atômico do trigger de cadastro (`on conflict (cnpj) do update ...
+    returning id`).
   - **Risco aceito conscientemente:** não há verificação real do CNPJ
     (Receita Federal, domínio de e-mail, etc.) — qualquer um pode digitar
     um CNPJ que não é dele e entrar como "colega" daquela empresa. Sem

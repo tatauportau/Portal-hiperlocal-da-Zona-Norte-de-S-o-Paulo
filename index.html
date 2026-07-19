@@ -732,6 +732,7 @@ setInterval(carregarTicker, 900000);
         <span id="auth-usuario-nome">Olá</span><i class="ti ti-chevron-down" style="font-size:12px;"></i>
         <div class="auth-usuario-menu" id="auth-usuario-menu">
           <button id="auth-minhas-vagas-btn" style="display:none;" onclick="abrirMinhasVagas()">🏢 Minhas Vagas</button>
+          <button id="auth-vincular-empresa-btn" style="display:none;" onclick="abrirVincularEmpresa()">🏢 Vincular empresa</button>
           <button onclick="fazerLogout()">Sair</button>
         </div>
       </div>
@@ -2368,6 +2369,23 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
   </div>
 </div>
 
+<!-- MODAL VINCULAR EMPRESA (conta ja cadastrada como leitor vira tambem conta de empresa) -->
+<div class="login-overlay" id="vincular-empresa-overlay">
+  <div class="login-painel">
+    <button class="login-fechar" onclick="fecharVincularEmpresa()">✕</button>
+    <div class="login-titulo">Vincular empresa</div>
+    <div class="login-sub">Cadastre o CNPJ da sua empresa para poder anunciar vagas com esta conta.</div>
+    <form class="login-form ativo" id="vincular-empresa-form" onsubmit="event.preventDefault(); vincularEmpresa();">
+      <input class="login-input" type="text" id="vincular-empresa-cnpj" placeholder="CNPJ" maxlength="18" oninput="this.value = formatarCnpj(this.value)" onblur="checarCnpjExistenteVincular()">
+      <div class="login-sub" id="vincular-empresa-cnpj-aviso" style="display:none;margin:-4px 0 0;"></div>
+      <input class="login-input" type="text" id="vincular-empresa-nome" placeholder="Nome da empresa" maxlength="120">
+      <div class="login-erro" id="vincular-empresa-erro"></div>
+      <div class="login-sucesso" id="vincular-empresa-sucesso"></div>
+      <button class="login-btn" type="submit" id="vincular-empresa-btn-enviar">Vincular empresa</button>
+    </form>
+  </div>
+</div>
+
 <!-- MODAL SELECIONAR LOCAL DA VAGA (mesmo padrao do modal Bairros, com selecao multipla) -->
 <div class="bairros-overlay" id="local-vaga-overlay" onclick="if(event.target===this)fecharSelecaoLocal()">
   <div class="bairros-painel">
@@ -2551,6 +2569,73 @@ async function checarCnpjExistente() {
   aviso.style.display = 'block';
 }
 
+function abrirVincularEmpresa() {
+  document.getElementById('auth-usuario-menu').classList.remove('aberto');
+  document.getElementById('vincular-empresa-form').reset();
+  document.getElementById('vincular-empresa-erro').style.display = 'none';
+  document.getElementById('vincular-empresa-sucesso').style.display = 'none';
+  document.getElementById('vincular-empresa-cnpj-aviso').style.display = 'none';
+  document.getElementById('vincular-empresa-overlay').classList.add('aberto');
+}
+function fecharVincularEmpresa() {
+  document.getElementById('vincular-empresa-overlay').classList.remove('aberto');
+}
+
+async function checarCnpjExistenteVincular() {
+  const aviso = document.getElementById('vincular-empresa-cnpj-aviso');
+  aviso.style.display = 'none';
+  const cnpj = document.getElementById('vincular-empresa-cnpj').value.trim();
+  if (!cnpj || !sb) return;
+  const { data, error } = await sb.rpc('empresa_por_cnpj', { numero: cnpj });
+  if (error || !data || !data[0] || !data[0].existe) return;
+  aviso.textContent = `Essa empresa (${data[0].nome_empresa}) já está cadastrada — sua conta vai entrar como parte da equipe dela.`;
+  aviso.style.display = 'block';
+}
+
+async function vincularEmpresa() {
+  const erroEl = document.getElementById('vincular-empresa-erro');
+  const sucessoEl = document.getElementById('vincular-empresa-sucesso');
+  erroEl.style.display = 'none';
+  sucessoEl.style.display = 'none';
+
+  const cnpj = document.getElementById('vincular-empresa-cnpj').value.trim();
+  const nomeEmpresa = document.getElementById('vincular-empresa-nome').value.trim();
+  if (!cnpjValido(cnpj)) {
+    erroEl.textContent = 'CNPJ inválido. Confira os números digitados.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  if (!nomeEmpresa) {
+    erroEl.textContent = 'Informe o nome da empresa.';
+    erroEl.style.display = 'block';
+    return;
+  }
+
+  const btn = document.getElementById('vincular-empresa-btn-enviar');
+  btn.disabled = true;
+  const { data, error } = await sb.rpc('vincular_minha_empresa', {
+    p_cnpj: cnpj.replace(/\D/g, ''),
+    p_nome_empresa: nomeEmpresa,
+  });
+  btn.disabled = false;
+
+  if (error) {
+    console.error('Erro ao vincular empresa:', error);
+    erroEl.textContent = (error.message || '').includes('vinculada')
+      ? 'Esta conta já está vinculada a uma empresa.'
+      : 'Não foi possível vincular. Confira o CNPJ e tente novamente.';
+    erroEl.style.display = 'block';
+    return;
+  }
+
+  perfilAtual = perfilAtual || {};
+  perfilAtual.empresa_id = data;
+  document.getElementById('auth-vincular-empresa-btn').style.display = 'none';
+  document.getElementById('auth-minhas-vagas-btn').style.display = '';
+  sucessoEl.textContent = 'Empresa vinculada com sucesso! Agora você já pode anunciar vagas.';
+  sucessoEl.style.display = 'block';
+}
+
 function mensagemErroAuth(error) {
   if (error.code === 'over_email_send_rate_limit') {
     return 'Muitos e-mails enviados em pouco tempo. Aguarde alguns minutos e tente novamente.';
@@ -2706,7 +2791,10 @@ async function atualizarTopbarAuth(session) {
     usuarioChip.style.display = 'none';
     perfilAtual = null;
   }
-  minhasVagasBtn.style.display = perfilAtual && perfilAtual.empresa_id ? '' : 'none';
+  const vincularEmpresaBtn = document.getElementById('auth-vincular-empresa-btn');
+  const temEmpresa = !!(perfilAtual && perfilAtual.empresa_id);
+  minhasVagasBtn.style.display = temEmpresa ? '' : 'none';
+  vincularEmpresaBtn.style.display = (session && session.user && !temEmpresa) ? '' : 'none';
   carregarVagasEmpresas();
 }
 
@@ -3359,6 +3447,7 @@ window.addEventListener('keydown', function(e) {
     if (document.getElementById('anuncio-vaga-overlay').classList.contains('aberto')) fecharAnuncioVaga();
     if (document.getElementById('local-vaga-overlay').classList.contains('aberto')) fecharSelecaoLocal();
     if (document.getElementById('minhas-vagas-overlay').classList.contains('aberto')) fecharMinhasVagas();
+    if (document.getElementById('vincular-empresa-overlay').classList.contains('aberto')) fecharVincularEmpresa();
   }
 });
 </script>
