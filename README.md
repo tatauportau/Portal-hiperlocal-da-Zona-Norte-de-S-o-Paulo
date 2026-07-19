@@ -438,6 +438,14 @@ Claude Cowork (agendamento próprio, roda sozinho)
 
   ### Ciclo de vida da vaga: validade, editar, cancelar, contratada
 
+  - **Filtro no painel "Minhas Vagas":** botões "Todas / Anunciadas /
+    Canceladas / Contratadas" (`filtrarMinhasVagas()`) filtram só no
+    client, sem nova consulta ao banco — `carregarMinhasVagas()` guarda
+    tudo em `_minhasVagasCache` (já veio inteiro da policy de select por
+    empresa) e `renderizarMinhasVagas()` reaplica o filtro atual sobre
+    esse cache a cada clique ou a cada recarga (ex.: depois de
+    cancelar/editar/marcar contratada). Reabrir o painel sempre volta pro
+    filtro "Todas".
   - **Validade escolhida pelo anunciante:** select "Por quanto tempo a
     vaga fica visível?" com 7/14/21/30 dias (`anuncio-vaga-dias-validade`,
     30 pré-selecionado). Gravado em `dias_validade` (só no `insert`, não é

@@ -627,6 +627,10 @@
   .minha-vaga-status-contratada{background:#E3F2FD;color:var(--azul);}
   .minha-vaga-detalhe{font-size:12px;color:var(--cinza-m);margin-top:6px;}
   .minha-vaga-subform{margin-top:8px;padding-top:8px;border-top:1px solid var(--cinza-l);display:flex;flex-direction:column;gap:0;}
+  .minhas-vagas-filtros{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
+  .minha-vaga-filtro-btn{font-size:12px;font-weight:700;padding:6px 14px;border-radius:20px;border:1px solid var(--cinza-l);background:var(--branco);color:var(--cinza-m);cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;}
+  .minha-vaga-filtro-btn:hover{border-color:var(--cinza-q);}
+  .minha-vaga-filtro-btn.ativo{background:var(--cinza-q);border-color:var(--cinza-q);color:var(--branco);}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
@@ -2421,6 +2425,12 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
     <button class="bairros-fechar" onclick="fecharMinhasVagas()">✕</button>
     <div class="bairros-titulo">🏢 Minhas Vagas</div>
     <div class="bairros-sub">Vagas publicadas pela sua empresa</div>
+    <div class="minhas-vagas-filtros" id="minhas-vagas-filtros">
+      <button class="minha-vaga-filtro-btn ativo" data-filtro="todas" onclick="filtrarMinhasVagas('todas')">Todas</button>
+      <button class="minha-vaga-filtro-btn" data-filtro="ativa" onclick="filtrarMinhasVagas('ativa')">Anunciadas</button>
+      <button class="minha-vaga-filtro-btn" data-filtro="cancelada" onclick="filtrarMinhasVagas('cancelada')">Canceladas</button>
+      <button class="minha-vaga-filtro-btn" data-filtro="contratada" onclick="filtrarMinhasVagas('contratada')">Contratadas</button>
+    </div>
     <div id="minhas-vagas-lista"></div>
   </div>
 </div>
@@ -3168,14 +3178,44 @@ async function carregarVagasEmpresas() {
 }
 
 // --- MINHAS VAGAS (painel de gerenciamento: editar/cancelar/marcar contratada) ---
+let _minhasVagasCache = [];
+let _minhasVagasFiltroAtual = 'todas';
+
 async function abrirMinhasVagas() {
   if (!perfilAtual || !perfilAtual.empresa_id) return;
   document.getElementById('minhas-vagas-overlay').classList.add('aberto');
   document.getElementById('auth-usuario-menu').classList.remove('aberto');
+  filtrarMinhasVagas('todas');
   await carregarMinhasVagas();
 }
 function fecharMinhasVagas() {
   document.getElementById('minhas-vagas-overlay').classList.remove('aberto');
+}
+
+function filtrarMinhasVagas(filtro) {
+  _minhasVagasFiltroAtual = filtro;
+  document.querySelectorAll('#minhas-vagas-filtros .minha-vaga-filtro-btn').forEach(b => {
+    b.classList.toggle('ativo', b.dataset.filtro === filtro);
+  });
+  renderizarMinhasVagas();
+}
+
+function renderizarMinhasVagas() {
+  const lista = document.getElementById('minhas-vagas-lista');
+  if (!lista) return;
+  if (_minhasVagasCache.length === 0) {
+    lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Nenhuma vaga publicada ainda.</div>';
+    return;
+  }
+  const dados = _minhasVagasFiltroAtual === 'todas'
+    ? _minhasVagasCache
+    : _minhasVagasCache.filter(v => v.status === _minhasVagasFiltroAtual);
+  if (dados.length === 0) {
+    lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Nenhuma vaga encontrada para este filtro.</div>';
+    return;
+  }
+  lista.innerHTML = '';
+  dados.forEach(v => lista.appendChild(criarCardMinhaVaga(v)));
 }
 
 async function carregarMinhasVagas() {
@@ -3192,12 +3232,8 @@ async function carregarMinhasVagas() {
     lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--vermelho);font-size:13px;">Não foi possível carregar suas vagas.</div>';
     return;
   }
-  if (data.length === 0) {
-    lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Nenhuma vaga publicada ainda.</div>';
-    return;
-  }
-  lista.innerHTML = '';
-  data.forEach(v => lista.appendChild(criarCardMinhaVaga(v)));
+  _minhasVagasCache = data;
+  renderizarMinhasVagas();
 }
 
 const NOTAS_CONTRATACAO = ['', 'Péssimo', 'Ruim', 'Bom', 'Ótimo', 'Excelente'];
