@@ -14,7 +14,10 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── bairros-por-distrito.json     # 462 bairros organizados por distrito
 │   └── distritos-zona-norte.geojson  # Geodados oficiais dos 18 distritos
 ├── vendor/
-│   └── d3.min.js                # D3.js hospedado localmente (evita bloqueio de CDN externo)
+│   ├── d3.min.js                # D3.js hospedado localmente (evita bloqueio de CDN externo)
+│   └── supabase.min.js          # supabase-js hospedado localmente (mesmo motivo do d3)
+├── sql/
+│   └── 001_auth_profiles.sql   # Migração: tabela profiles + RLS + trigger de cadastro
 ├── scripts/
 │   └── gerar-portau.js         # Script de geração automática de conteúdo
 ├── netlify/
@@ -162,6 +165,33 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 
 ---
 
+## Cadastro de Usuário (Login)
+
+- **Provedor:** Supabase (Postgres + Auth gerenciada — hash de senha, e-mail
+  de confirmação e reset de senha ficam a cargo do Supabase, não há código
+  próprio de autenticação).
+- **Client-side apenas:** `supabase-js` (vendorizado em `vendor/supabase.min.js`,
+  mesmo motivo do `vendor/d3.min.js`) fala direto com o Supabase pelo
+  browser. Não há Netlify Function para isso — a `anon key` é segura para
+  ficar no client, a segurança vem das políticas RLS do banco.
+- **Configuração:** em `index.html`, procurar as constantes `SUPABASE_URL` e
+  `SUPABASE_ANON_KEY` (perto de `irWaze`/`SUB_MAP`) e preencher com os
+  valores de Project Settings → API do painel Supabase.
+- **Schema do banco:** rodar `sql/001_auth_profiles.sql` manualmente no
+  SQL Editor do Supabase. Cria a tabela `profiles` (nome, bairro, distrito,
+  `subscription_tier` default `'free'`) com RLS, e um trigger que popula o
+  perfil automaticamente no cadastro. `subscription_tier` não é editável
+  pelo próprio usuário (só via `service_role key`, num contexto servidor —
+  ainda não implementado, ver roadmap).
+- **Inspeção manual do banco:** o Postgres do Supabase é Postgres de
+  verdade — dá pra pegar a connection string em Project Settings → Database
+  e plugar no pgAdmin4 (ou outro client) pra consultar as tabelas.
+- **Fora de escopo por enquanto:** fluxo de pagamento/upgrade para
+  "assinante" e qualquer conteúdo realmente gated por `subscription_tier` —
+  o campo já existe no banco, mas nada no site checa essa flag ainda.
+
+---
+
 ## Distritos Cobertos
 
 | Subprefeitura | Distritos |
@@ -207,7 +237,8 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 - ✅ Cobertura de 462 bairros via bairros-por-distrito.json
 - ✅ Scheduler via Netlify Functions (14h Brasília)
 - ✅ Topbar com data/hora de geração
-- 🔲 Cadastro de usuários
+- ✅ Cadastro de usuários com login (Supabase Auth)
+- 🔲 Fluxo de pagamento/upgrade para assinante
 - 🔲 Chat da comunidade (Firebase ou Netlify DB)
 - 🔲 Área comercial para empresas
 - 🔲 Mapa no hero substituindo botões

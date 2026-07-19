@@ -570,6 +570,39 @@
   .bairros-pill { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #fff; border: 1px solid var(--cinza-l); color: var(--cinza-q); text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: background .15s, border-color .15s, color .15s; }
   .bairros-pill:hover { background: var(--amarelo); border-color: var(--amarelo); color: var(--cinza-q); }
   .bairros-vazio { font-size: 12px; color: var(--cinza-m); display: none; }
+
+  /* AUTH (topbar) */
+  .auth-chip { display: flex; align-items: center; gap: 8px; flex-shrink: 0; position: relative; }
+  .auth-entrar-btn { font-size: 12px; font-weight: 700; color: var(--cinza-q); background: var(--branco); border: 1px solid var(--cinza-l); padding: 7px 16px; border-radius: 20px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all .15s; }
+  .auth-entrar-btn:hover { border-color: var(--cinza-q); }
+  .auth-usuario { display: none; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--cinza-q); cursor: pointer; padding: 6px 10px; border-radius: 20px; }
+  .auth-usuario:hover { background: var(--creme); }
+  .auth-usuario-menu { display: none; position: absolute; top: 100%; right: 0; margin-top: 8px; background: var(--branco); border: 1px solid var(--cinza-l); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); min-width: 150px; overflow: hidden; z-index: 200; }
+  .auth-usuario-menu.aberto { display: block; }
+  .auth-usuario-menu button { width: 100%; text-align: left; padding: 10px 14px; border: none; background: none; font-size: 12px; font-family: 'Inter', sans-serif; color: var(--cinza-q); cursor: pointer; }
+  .auth-usuario-menu button:hover { background: var(--creme); }
+
+  /* MODAL LOGIN */
+  .login-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 1001; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
+  .login-overlay.aberto { display: flex; }
+  .login-painel { background: var(--branco); border-radius: 16px; width: 380px; max-width: 92vw; max-height: 90vh; overflow-y: auto; position: relative; box-shadow: 0 24px 64px rgba(0,0,0,0.35); animation: modal-in 0.25s ease; padding: 28px 24px 24px; }
+  .login-fechar { position: absolute; top: 14px; right: 14px; width: 32px; height: 32px; border-radius: 50%; border: none; background: #f0f0f0; color: #555; font-size: 17px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.15s; }
+  .login-fechar:hover { background: #ddd; }
+  .login-titulo { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: var(--cinza-q); margin-bottom: 4px; text-align: center; }
+  .login-sub { font-size: 12px; color: var(--cinza-m); text-align: center; margin-bottom: 18px; }
+  .login-tabs { display: flex; border-bottom: 1px solid var(--cinza-l); margin-bottom: 18px; }
+  .login-tab { flex: 1; text-align: center; padding: 10px 0; font-size: 13px; font-weight: 700; color: var(--cinza-m); cursor: pointer; border-bottom: 2px solid transparent; font-family: 'Inter', sans-serif; }
+  .login-tab.ativo { color: var(--cinza-q); border-bottom-color: var(--cinza-q); }
+  .login-form { display: none; flex-direction: column; gap: 10px; }
+  .login-form.ativo { display: flex; }
+  .login-input, .login-select { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--cinza-l); font-size: 13px; font-family: 'Inter', sans-serif; outline: none; box-sizing: border-box; background: var(--branco); }
+  .login-input:focus, .login-select:focus { border-color: var(--cinza-q); }
+  .login-btn { width: 100%; padding: 11px; border-radius: 8px; border: none; background: var(--cinza-q); color: var(--branco); font-weight: 700; font-size: 13px; cursor: pointer; font-family: 'Inter', sans-serif; margin-top: 4px; transition: opacity 0.15s; }
+  .login-btn:hover { opacity: 0.85; }
+  .login-btn:disabled { opacity: 0.5; cursor: default; }
+  .login-link { font-size: 12px; color: var(--cinza-m); text-align: center; cursor: pointer; text-decoration: underline; margin-top: 2px; }
+  .login-erro { font-size: 12px; color: var(--vermelho); text-align: center; display: none; }
+  .login-sucesso { font-size: 12px; color: #2e7d32; text-align: center; display: none; }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
@@ -668,6 +701,16 @@ setInterval(carregarTicker, 900000);
       </div>
     </div>
     <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
+
+    <div class="auth-chip">
+      <button class="auth-entrar-btn" id="auth-entrar-btn" onclick="abrirLogin()">Entrar</button>
+      <div class="auth-usuario" id="auth-usuario" onclick="toggleAuthMenu()">
+        <span id="auth-usuario-nome">Olá</span><i class="ti ti-chevron-down" style="font-size:12px;"></i>
+        <div class="auth-usuario-menu" id="auth-usuario-menu">
+          <button onclick="fazerLogout()">Sair</button>
+        </div>
+      </div>
+    </div>
 
   </div>
 </header>
@@ -1638,6 +1681,7 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
   "ANHANGUERA": ["Anhanguera", "Jardim Anhanguera", "Parque Anhanguera", "Jardim Britânia", "Conjunto Residencial Canaã", "Vila Chica Luiza", "Jardim Clei", "Jardim Escócia", "Parque Esperança", "Chácara Jaraguá", "Vila Jaraguá", "Jardim Jaraguá", "Morada do Sol", "Parque Morro Doce", "Vila dos Palmares", "Conjunto Residencial Paraíso", "Jardim Rosinha", "Residencial Sol Nascente 1", "Residencial Sol Nascente 2", "Residencial Sol Nascente 3", "Residencial Sol Nascente 4", "Vila Sulina"]
 }</script>
 <script src="./vendor/d3.min.js"></script>
+<script src="./vendor/supabase.min.js"></script>
 <script>
 let _bairrosCarregado = false;
 let _geoDistritosZN = null;
@@ -1927,6 +1971,59 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
   </div>
 </div>
 
+<!-- MODAL LOGIN -->
+<div class="login-overlay" id="login-overlay" onclick="if(event.target===this)fecharLogin()">
+  <div class="login-painel">
+    <button class="login-fechar" onclick="fecharLogin()">✕</button>
+    <div class="login-titulo">Portau</div>
+    <div class="login-sub" id="login-sub">Entre ou crie sua conta gratuita</div>
+
+    <div class="login-tabs" id="login-tabs">
+      <div class="login-tab ativo" id="login-tab-entrar" onclick="mostrarLoginTab('entrar')">Entrar</div>
+      <div class="login-tab" id="login-tab-criar" onclick="mostrarLoginTab('criar')">Criar conta</div>
+    </div>
+
+    <form class="login-form ativo" id="login-form-entrar" onsubmit="event.preventDefault(); fazerLogin();">
+      <input class="login-input" type="email" id="login-entrar-email" placeholder="E-mail" required autocomplete="email">
+      <input class="login-input" type="password" id="login-entrar-senha" placeholder="Senha" required autocomplete="current-password">
+      <div class="login-erro" id="login-entrar-erro"></div>
+      <button class="login-btn" type="submit" id="login-entrar-btn">Entrar</button>
+      <div class="login-link" onclick="mostrarLoginTab('esqueci')">Esqueci minha senha</div>
+    </form>
+
+    <form class="login-form" id="login-form-criar" onsubmit="event.preventDefault(); criarConta();">
+      <input class="login-input" type="text" id="login-criar-nome" placeholder="Nome" required autocomplete="name">
+      <input class="login-input" type="email" id="login-criar-email" placeholder="E-mail" required autocomplete="email">
+      <input class="login-input" type="password" id="login-criar-senha" placeholder="Senha (mín. 6 caracteres)" minlength="6" required autocomplete="new-password">
+      <input class="login-input" type="text" id="login-criar-bairro-zn" placeholder="Bairro da Zona Norte (opcional)" list="login-bairros-datalist" autocomplete="off">
+      <datalist id="login-bairros-datalist"></datalist>
+      <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se não mora na Zona Norte:</div>
+      <input class="login-input" type="text" id="login-criar-bairro-outro" placeholder="Sua cidade ou bairro">
+      <input class="login-input" type="tel" id="login-criar-celular" placeholder="Celular com DDD (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
+      <div class="login-erro" id="login-criar-erro"></div>
+      <div class="login-sucesso" id="login-criar-sucesso"></div>
+      <button class="login-btn" type="submit" id="login-criar-btn">Criar conta</button>
+    </form>
+
+    <form class="login-form" id="login-form-esqueci" onsubmit="event.preventDefault(); enviarResetSenha();">
+      <div class="login-sub" style="margin-bottom:6px;">Informe seu e-mail para receber o link de redefinição</div>
+      <input class="login-input" type="email" id="login-esqueci-email" placeholder="E-mail" required autocomplete="email">
+      <div class="login-erro" id="login-esqueci-erro"></div>
+      <div class="login-sucesso" id="login-esqueci-sucesso"></div>
+      <button class="login-btn" type="submit" id="login-esqueci-btn">Enviar link</button>
+      <div class="login-link" onclick="mostrarLoginTab('entrar')">Voltar para entrar</div>
+    </form>
+
+    <form class="login-form" id="login-form-nova-senha" onsubmit="event.preventDefault(); salvarNovaSenha();">
+      <div class="login-sub" style="margin-bottom:6px;">Defina sua nova senha</div>
+      <input class="login-input" type="password" id="nova-senha-1" placeholder="Nova senha (mín. 6 caracteres)" minlength="6" required autocomplete="new-password">
+      <input class="login-input" type="password" id="nova-senha-2" placeholder="Confirmar nova senha" minlength="6" required autocomplete="new-password">
+      <div class="login-erro" id="nova-senha-erro"></div>
+      <button class="login-btn" type="submit">Salvar nova senha</button>
+    </form>
+  </div>
+</div>
+
 <script>
 let wazeAberto = false;
 
@@ -1949,6 +2046,225 @@ function irWaze(lat, lon, btn) {
   document.querySelectorAll('.wbairro-btn').forEach(b => b.classList.remove('ativo'));
   btn.classList.add('ativo');
 }
+
+// --- AUTH (Supabase) ---
+// Preencher com os valores de Project Settings → API do painel Supabase.
+// A anon key é segura para ficar no client (a segurança vem das políticas RLS no banco).
+const SUPABASE_URL = 'https://jsmcdmefnswswctqiwxs.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_PA5OWWaABL5_GbOk4Ajwtw_jSuBLMDr';
+const sb = SUPABASE_URL.startsWith('http') ? supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY) : null;
+
+function mostrarLoginTab(aba) {
+  ['entrar', 'criar', 'esqueci', 'nova-senha'].forEach(f => {
+    const form = document.getElementById('login-form-' + f);
+    if (form) form.classList.toggle('ativo', f === aba);
+  });
+  const mostrarTabs = (aba === 'entrar' || aba === 'criar');
+  document.getElementById('login-tabs').style.display = mostrarTabs ? 'flex' : 'none';
+  if (mostrarTabs) {
+    document.getElementById('login-tab-entrar').classList.toggle('ativo', aba === 'entrar');
+    document.getElementById('login-tab-criar').classList.toggle('ativo', aba === 'criar');
+  }
+  const subTextos = {
+    entrar: 'Entre ou crie sua conta gratuita',
+    criar: 'Entre ou crie sua conta gratuita',
+    esqueci: 'Redefinir senha',
+    'nova-senha': 'Defina sua nova senha',
+  };
+  document.getElementById('login-sub').textContent = subTextos[aba] || '';
+  if (aba === 'criar') carregarBairrosSelect();
+}
+
+let _bairrosSelectCarregado = false;
+let _bairrosZonaNorteSet = null;
+function carregarBairrosSelect() {
+  if (_bairrosSelectCarregado) return;
+  _bairrosSelectCarregado = true;
+  fetch('./data/bairros-por-distrito.json').then(r => r.json()).then(porDistrito => {
+    const nomes = new Set();
+    Object.values(porDistrito).forEach(lista => lista.forEach(b => nomes.add(b)));
+    _bairrosZonaNorteSet = nomes;
+    const datalist = document.getElementById('login-bairros-datalist');
+    datalist.innerHTML = Array.from(nomes).sort((a, b) => a.localeCompare(b, 'pt-BR'))
+      .map(nome => `<option value="${nome}"></option>`).join('');
+  }).catch(() => { _bairrosSelectCarregado = false; });
+}
+
+function abrirLogin(aba) {
+  if (!sb) {
+    alert('Cadastro ainda não configurado. Tente novamente mais tarde.');
+    return;
+  }
+  mostrarLoginTab(aba || 'entrar');
+  document.getElementById('login-overlay').classList.add('aberto');
+}
+
+function fecharLogin() {
+  document.getElementById('login-overlay').classList.remove('aberto');
+}
+
+function mostrarErroLogin(id, msg) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.style.display = 'block';
+}
+function esconderErroLogin(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+function formatarCelular(v) {
+  v = v.replace(/\D/g, '').slice(0, 11);
+  if (v.length > 6) return v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3').replace(/-$/, '');
+  if (v.length > 2) return v.replace(/(\d{2})(\d{0,5})/, '($1) $2');
+  if (v.length > 0) return '(' + v;
+  return v;
+}
+
+function mensagemErroAuth(error) {
+  if (error.code === 'over_email_send_rate_limit') {
+    return 'Muitos e-mails enviados em pouco tempo. Aguarde alguns minutos e tente novamente.';
+  }
+  if (error.code === 'user_already_exists' || error.message.includes('already registered')) {
+    return 'Este e-mail já está cadastrado.';
+  }
+  return 'Não foi possível concluir. Tente novamente em instantes.';
+}
+
+async function fazerLogin() {
+  esconderErroLogin('login-entrar-erro');
+  const email = document.getElementById('login-entrar-email').value.trim();
+  const senha = document.getElementById('login-entrar-senha').value;
+  const btn = document.getElementById('login-entrar-btn');
+  btn.disabled = true;
+  const { error } = await sb.auth.signInWithPassword({ email, password: senha });
+  btn.disabled = false;
+  if (error) {
+    mostrarErroLogin('login-entrar-erro', 'E-mail ou senha inválidos.');
+    return;
+  }
+  fecharLogin();
+}
+
+async function criarConta() {
+  esconderErroLogin('login-criar-erro');
+  document.getElementById('login-criar-sucesso').style.display = 'none';
+  const nome = document.getElementById('login-criar-nome').value.trim();
+  const email = document.getElementById('login-criar-email').value.trim();
+  const senha = document.getElementById('login-criar-senha').value;
+  const bairroZN = document.getElementById('login-criar-bairro-zn').value.trim();
+  const bairroOutro = document.getElementById('login-criar-bairro-outro').value.trim();
+  if (bairroZN && bairroOutro) {
+    mostrarErroLogin('login-criar-erro', 'Preencha só um dos dois campos de bairro: da Zona Norte OU de fora.');
+    return;
+  }
+  if (bairroZN && _bairrosZonaNorteSet && !_bairrosZonaNorteSet.has(bairroZN)) {
+    mostrarErroLogin('login-criar-erro', 'Selecione um bairro válido da lista da Zona Norte, ou preencha o campo "Sua cidade ou bairro" abaixo.');
+    return;
+  }
+  const bairro = bairroZN || bairroOutro;
+  const celularFormatado = document.getElementById('login-criar-celular').value.trim();
+  if (celularFormatado && !/^\(\d{2}\) \d{5}-\d{4}$/.test(celularFormatado)) {
+    mostrarErroLogin('login-criar-erro', 'Celular inválido. Use o formato (11) 98765-4321.');
+    return;
+  }
+  const celular = celularFormatado ? celularFormatado.replace(/\D/g, '') : null;
+  const btn = document.getElementById('login-criar-btn');
+  btn.disabled = true;
+  if (celular) {
+    const { data: celularExiste } = await sb.rpc('celular_ja_cadastrado', { numero: celular });
+    if (celularExiste) {
+      btn.disabled = false;
+      mostrarErroLogin('login-criar-erro', 'Este celular já está cadastrado em outra conta.');
+      return;
+    }
+  }
+  const { error } = await sb.auth.signUp({
+    email, password: senha,
+    options: { data: { nome, bairro, celular } }
+  });
+  btn.disabled = false;
+  if (error) {
+    mostrarErroLogin('login-criar-erro', mensagemErroAuth(error));
+    return;
+  }
+  document.getElementById('login-form-criar').reset();
+  const sucesso = document.getElementById('login-criar-sucesso');
+  sucesso.textContent = 'Conta criada! Confira seu e-mail para confirmar o cadastro.';
+  sucesso.style.display = 'block';
+}
+
+async function enviarResetSenha() {
+  esconderErroLogin('login-esqueci-erro');
+  document.getElementById('login-esqueci-sucesso').style.display = 'none';
+  const email = document.getElementById('login-esqueci-email').value.trim();
+  const btn = document.getElementById('login-esqueci-btn');
+  btn.disabled = true;
+  const { error } = await sb.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin + window.location.pathname });
+  btn.disabled = false;
+  if (error) {
+    mostrarErroLogin('login-esqueci-erro', mensagemErroAuth(error));
+    return;
+  }
+  const sucesso = document.getElementById('login-esqueci-sucesso');
+  sucesso.textContent = 'Link enviado! Confira seu e-mail.';
+  sucesso.style.display = 'block';
+}
+
+async function salvarNovaSenha() {
+  esconderErroLogin('nova-senha-erro');
+  const s1 = document.getElementById('nova-senha-1').value;
+  const s2 = document.getElementById('nova-senha-2').value;
+  if (s1 !== s2) {
+    mostrarErroLogin('nova-senha-erro', 'As senhas não coincidem.');
+    return;
+  }
+  const { error } = await sb.auth.updateUser({ password: s1 });
+  if (error) {
+    mostrarErroLogin('nova-senha-erro', 'Não foi possível salvar a nova senha.');
+    return;
+  }
+  fecharLogin();
+  alert('Senha atualizada com sucesso!');
+}
+
+async function fazerLogout() {
+  await sb.auth.signOut();
+  document.getElementById('auth-usuario-menu').classList.remove('aberto');
+}
+
+function toggleAuthMenu() {
+  document.getElementById('auth-usuario-menu').classList.toggle('aberto');
+}
+
+function atualizarTopbarAuth(session) {
+  const entrarBtn = document.getElementById('auth-entrar-btn');
+  const usuarioChip = document.getElementById('auth-usuario');
+  if (session && session.user) {
+    const nome = (session.user.user_metadata && session.user.user_metadata.nome) || session.user.email.split('@')[0];
+    document.getElementById('auth-usuario-nome').textContent = 'Olá, ' + nome;
+    entrarBtn.style.display = 'none';
+    usuarioChip.style.display = 'flex';
+  } else {
+    entrarBtn.style.display = '';
+    usuarioChip.style.display = 'none';
+  }
+}
+
+if (sb) {
+  sb.auth.getSession().then(({ data }) => atualizarTopbarAuth(data.session));
+  sb.auth.onAuthStateChange((_evento, session) => atualizarTopbarAuth(session));
+  if (window.location.hash.includes('type=recovery')) {
+    abrirLogin('nova-senha');
+  }
+}
+
+document.addEventListener('click', function(e) {
+  const menu = document.getElementById('auth-usuario-menu');
+  const chip = document.getElementById('auth-usuario');
+  if (menu.classList.contains('aberto') && !chip.contains(e.target)) {
+    menu.classList.remove('aberto');
+  }
+});
 
 const SUB_MAP = {
   santana:   ['santana','tucuruvi','mandaqui'],
@@ -2081,6 +2397,7 @@ window.addEventListener('keydown', function(e) {
     if (document.getElementById('ga-overlay').classList.contains('aberto')) fecharGA();
     if (document.getElementById('waze-overlay').classList.contains('aberto')) fecharWaze();
     if (document.getElementById('bairros-overlay').classList.contains('aberto')) fecharBairros();
+    if (document.getElementById('login-overlay').classList.contains('aberto')) fecharLogin();
   }
 });
 </script>
