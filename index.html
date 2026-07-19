@@ -2809,12 +2809,14 @@ function criarCardVagaEmpresa(v) {
   card.innerHTML = `
     <div class="vaga-icone">📢</div>
     <div style="flex:1">
-      <div class="vaga-titulo">${escapeHtml(v.titulo_vaga)}</div>
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+        <span class="vaga-patrocinada-pill">📢 Vaga Patrocinada</span>
+        <span class="vaga-titulo" style="margin-bottom:0;">${escapeHtml(v.titulo_vaga)}</span>
+      </div>
       <div class="vaga-info"><span>🏢 ${escapeHtml(v.nome_empresa)}</span><span>📍 ${escapeHtml(textoLocalizacaoVaga(v))}</span>${horarioHtml}<span>${escapeHtml(v.descricao)}</span></div>
       ${beneficiosHtml}
       <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
         <span class="vaga-badge">${escapeHtml(v.tipo_contrato)}</span>
-        <span class="vaga-patrocinada-pill">📢 Vaga Patrocinada</span>
         ${candidatarHtml}
       </div>
     </div>
