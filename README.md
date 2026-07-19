@@ -27,7 +27,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 007_vagas_empresas_salario.sql  # Migração: campo salario
 │   ├── 008_empresas_e_vagas_ownership.sql  # Migração: contas de empresa (CNPJ) + ciclo de vida das vagas
 │   ├── 009_vincular_empresa_rpc.sql  # Migração: RPC pra vincular empresa a conta ja existente
-│   └── 010_empresa_contato_e_publicado_por.sql  # Migração: e-mail/celular da empresa + responsável pelo anúncio
+│   ├── 010_empresa_contato_e_publicado_por.sql  # Migração: e-mail/celular da empresa + responsável pelo anúncio
+│   └── 011_permite_validade_1_dia.sql  # Migração: permite dias_validade=1 (além de 7/14/21/30)
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -438,17 +439,22 @@ Claude Cowork (agendamento próprio, roda sozinho)
 
   ### Ciclo de vida da vaga: validade, editar, cancelar, contratada
 
-  - **Filtro no painel "Minhas Vagas":** botões "Todas / Anunciadas /
-    Canceladas / Contratadas" (`filtrarMinhasVagas()`) filtram só no
+  - **Filtro no painel "Minhas Vagas":** botões "Todas / Ativas / Expiradas
+    / Canceladas / Contratadas" (`filtrarMinhasVagas()`) filtram só no
     client, sem nova consulta ao banco — `carregarMinhasVagas()` guarda
     tudo em `_minhasVagasCache` (já veio inteiro da policy de select por
     empresa) e `renderizarMinhasVagas()` reaplica o filtro atual sobre
     esse cache a cada clique ou a cada recarga (ex.: depois de
     cancelar/editar/marcar contratada). Reabrir o painel sempre volta pro
-    filtro "Todas".
+    filtro "Todas". **"Ativas" e "Expiradas" não são valores de `status`**
+    no banco (ambos são `status = 'ativa'`) — o filtro distingue pela
+    comparação `expira_em` vs. `now()` no próprio client, então esses dois
+    filtros são um derivado, não um `.eq('status', ...)` direto.
   - **Validade escolhida pelo anunciante:** select "Por quanto tempo a
-    vaga fica visível?" com 7/14/21/30 dias (`anuncio-vaga-dias-validade`,
-    30 pré-selecionado). Gravado em `dias_validade` (só no `insert`, não é
+    vaga fica visível?" com 1/7/14/21/30 dias (`anuncio-vaga-dias-validade`,
+    30 pré-selecionado; a opção de 1 dia — `sql/011_permite_validade_1_dia.sql`
+    — existe principalmente pra testar expiração sem esperar uma semana).
+    Gravado em `dias_validade` (só no `insert`, não é
     editável depois — fora do `grant update`) e `expira_em` é calculado por
     um trigger `before insert` (`calcular_expira_em_vaga()`) — não podia
     ser coluna `generated` porque aritmética `timestamptz + interval` não

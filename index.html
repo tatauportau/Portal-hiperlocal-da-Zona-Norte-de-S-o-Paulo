@@ -2363,6 +2363,7 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <div id="anuncio-vaga-validade-wrap">
         <div style="font-size:11px;color:var(--cinza-m);">Por quanto tempo a vaga fica visível?</div>
         <select class="login-select" id="anuncio-vaga-dias-validade" required>
+          <option value="1">1 dia</option>
           <option value="7">7 dias</option>
           <option value="14">14 dias</option>
           <option value="21">21 dias</option>
@@ -2427,7 +2428,8 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
     <div class="bairros-sub">Vagas publicadas pela sua empresa</div>
     <div class="minhas-vagas-filtros" id="minhas-vagas-filtros">
       <button class="minha-vaga-filtro-btn ativo" data-filtro="todas" onclick="filtrarMinhasVagas('todas')">Todas</button>
-      <button class="minha-vaga-filtro-btn" data-filtro="ativa" onclick="filtrarMinhasVagas('ativa')">Anunciadas</button>
+      <button class="minha-vaga-filtro-btn" data-filtro="ativa" onclick="filtrarMinhasVagas('ativa')">Ativas</button>
+      <button class="minha-vaga-filtro-btn" data-filtro="expirada" onclick="filtrarMinhasVagas('expirada')">Expiradas</button>
       <button class="minha-vaga-filtro-btn" data-filtro="cancelada" onclick="filtrarMinhasVagas('cancelada')">Canceladas</button>
       <button class="minha-vaga-filtro-btn" data-filtro="contratada" onclick="filtrarMinhasVagas('contratada')">Contratadas</button>
     </div>
@@ -3207,9 +3209,19 @@ function renderizarMinhasVagas() {
     lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Nenhuma vaga publicada ainda.</div>';
     return;
   }
-  const dados = _minhasVagasFiltroAtual === 'todas'
-    ? _minhasVagasCache
-    : _minhasVagasCache.filter(v => v.status === _minhasVagasFiltroAtual);
+  const agora = new Date();
+  let dados;
+  if (_minhasVagasFiltroAtual === 'todas') {
+    dados = _minhasVagasCache;
+  } else if (_minhasVagasFiltroAtual === 'ativa') {
+    // "Ativa" no filtro = status ativa E ainda dentro da validade
+    // (expirada tem filtro proprio, embora o status no banco seja o mesmo).
+    dados = _minhasVagasCache.filter(v => v.status === 'ativa' && new Date(v.expira_em) > agora);
+  } else if (_minhasVagasFiltroAtual === 'expirada') {
+    dados = _minhasVagasCache.filter(v => v.status === 'ativa' && new Date(v.expira_em) <= agora);
+  } else {
+    dados = _minhasVagasCache.filter(v => v.status === _minhasVagasFiltroAtual);
+  }
   if (dados.length === 0) {
     lista.innerHTML = '<div style="padding:20px;text-align:center;color:var(--cinza-m);font-size:13px;">Nenhuma vaga encontrada para este filtro.</div>';
     return;
