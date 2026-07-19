@@ -26,7 +26,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 006_vagas_empresas_horario_beneficios.sql  # Migração: campos horario/beneficios
 │   ├── 007_vagas_empresas_salario.sql  # Migração: campo salario
 │   ├── 008_empresas_e_vagas_ownership.sql  # Migração: contas de empresa (CNPJ) + ciclo de vida das vagas
-│   └── 009_vincular_empresa_rpc.sql  # Migração: RPC pra vincular empresa a conta ja existente
+│   ├── 009_vincular_empresa_rpc.sql  # Migração: RPC pra vincular empresa a conta ja existente
+│   └── 010_empresa_contato_e_publicado_por.sql  # Migração: e-mail/celular da empresa + responsável pelo anúncio
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -394,12 +395,36 @@ Claude Cowork (agendamento próprio, roda sozinho)
     usuário → "🏢 Vincular empresa" (só aparece se a conta ainda não tem
     `empresa_id` — vira "🏢 Minhas Vagas" assim que vincula,
     `atualizarTopbarAuth()` alterna os dois). A RPC
-    `vincular_minha_empresa(cnpj, nome_empresa)` é `security definer` mas
-    só opera sobre a própria conta (`auth.uid()`, nunca um id vindo do
-    client) e recusa se a conta já tiver empresa — não dá pra "trocar" de
-    empresa por essa via, só vincular uma vez. Mesmo find-or-create
-    atômico do trigger de cadastro (`on conflict (cnpj) do update ...
-    returning id`).
+    `vincular_minha_empresa(cnpj, nome_empresa, email_empresa?, celular_empresa?)`
+    é `security definer` mas só opera sobre a própria conta (`auth.uid()`,
+    nunca um id vindo do client) e recusa se a conta já tiver empresa —
+    não dá pra "trocar" de empresa por essa via, só vincular uma vez.
+    Mesmo find-or-create atômico do trigger de cadastro (`on conflict
+    (cnpj) do update ... returning id`).
+  - **Contato da empresa (`sql/010_empresa_contato_e_publicado_por.sql`):**
+    `empresas` ganhou `email_empresa`/`celular_empresa` (opcionais,
+    coletados uma vez no cadastro/vínculo — igual `nome_empresa`, nunca
+    sobrescritos por quem entra depois via CNPJ existente, já que o
+    `on conflict` só faz um update no-op de `cnpj`). O formulário "Anuncie
+    sua vaga" **parou de pedir pra retypar** nome da empresa, e-mail e
+    celular a cada anúncio — `prepararContatoAnuncioVaga()` resolve tudo
+    isso a partir da conta (prioridade: dado da empresa; sem isso, cai pro
+    e-mail/celular do próprio usuário logado) e mostra só como texto
+    (`#anuncio-vaga-empresa-info`), com uma nota "para alterar, atualize no
+    seu cadastro" — não há UI de edição de cadastro ainda, é só a
+    orientação. Celular de empresa pode ser fixo (DDD+8) ou celular
+    (DDD+9); `formatarCelular()` só formata celular certo, por isso existe
+    `formatarTelefoneEmpresa()` à parte (decide o agrupamento pelo total
+    de dígitos) usada nesses campos e nessa exibição.
+  - **Responsável pelo anúncio (`publicado_por`):** se a empresa tem só
+    uma conta vinculada, o formulário nem pergunta — usa o nome dela
+    direto. Com mais de uma, aparece um `<select>` com o nome de cada
+    pessoa vinculada à empresa **mais uma opção genérica** "Nome da Empresa
+    (empresa)" (`prepararContatoAnuncioVaga()` monta a lista buscando
+    `profiles` pelo mesmo `empresa_id`). Guardado como texto simples em
+    `publicado_por` (sem FK — mesmo padrão de `titulo_vaga`), aparece no
+    card público (`criarCardVagaEmpresa()`) e no painel de gerenciamento
+    (`criarCardMinhaVaga()`), sempre via `escapeHtml()`.
   - **Risco aceito conscientemente:** não há verificação real do CNPJ
     (Receita Federal, domínio de e-mail, etc.) — qualquer um pode digitar
     um CNPJ que não é dele e entrar como "colega" daquela empresa. Sem

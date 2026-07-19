@@ -2258,6 +2258,8 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <input class="login-input" type="text" id="login-criar-cnpj" placeholder="CNPJ" style="display:none;" maxlength="18" oninput="this.value = formatarCnpj(this.value)" onblur="checarCnpjExistente()">
       <div class="login-sub" id="login-criar-cnpj-aviso" style="display:none;margin:-4px 0 0;"></div>
       <input class="login-input" type="text" id="login-criar-nome-empresa" placeholder="Nome da empresa" style="display:none;" maxlength="120">
+      <input class="login-input" type="email" id="login-criar-email-empresa" placeholder="E-mail da empresa (opcional)" style="display:none;" maxlength="160">
+      <input class="login-input" type="tel" id="login-criar-celular-empresa" placeholder="Celular/Tel. da empresa (opcional)" style="display:none;" maxlength="15" oninput="this.value = formatarTelefoneEmpresa(this.value)">
       <div class="login-erro" id="login-criar-erro"></div>
       <div class="login-sucesso" id="login-criar-sucesso"></div>
       <button class="login-btn" type="submit" id="login-criar-btn">Criar conta</button>
@@ -2291,9 +2293,11 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
 
     <form class="login-form ativo" id="anuncio-vaga-form" onsubmit="event.preventDefault(); publicarVagaEmpresa();">
       <input type="text" id="anuncio-vaga-site" name="site" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;">
-      <input class="login-input" type="text" id="anuncio-vaga-empresa" placeholder="Nome da empresa" required minlength="2" maxlength="120">
-      <input class="login-input" type="email" id="anuncio-vaga-email" placeholder="E-mail de contato" required autocomplete="email">
-      <input class="login-input" type="tel" id="anuncio-vaga-whatsapp" placeholder="WhatsApp (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
+      <div id="anuncio-vaga-empresa-info" style="font-size:12px;color:var(--cinza-m);background:var(--creme);border-radius:8px;padding:10px 12px;line-height:1.6;"></div>
+      <div id="anuncio-vaga-responsavel-wrap">
+        <div style="font-size:11px;color:var(--cinza-m);">Responsável pelo anúncio</div>
+        <select class="login-select" id="anuncio-vaga-responsavel"></select>
+      </div>
       <select class="login-select" id="anuncio-vaga-titulo-select" required onchange="onTituloVagaChange()">
         <option value="" disabled selected>Título da vaga</option>
         <option value="Atendente">Atendente</option>
@@ -2378,6 +2382,8 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <input class="login-input" type="text" id="vincular-empresa-cnpj" placeholder="CNPJ" maxlength="18" oninput="this.value = formatarCnpj(this.value)" onblur="checarCnpjExistenteVincular()">
       <div class="login-sub" id="vincular-empresa-cnpj-aviso" style="display:none;margin:-4px 0 0;"></div>
       <input class="login-input" type="text" id="vincular-empresa-nome" placeholder="Nome da empresa" maxlength="120">
+      <input class="login-input" type="email" id="vincular-empresa-email" placeholder="E-mail da empresa (opcional)" maxlength="160">
+      <input class="login-input" type="tel" id="vincular-empresa-celular" placeholder="Celular/Tel. da empresa (opcional)" maxlength="15" oninput="this.value = formatarTelefoneEmpresa(this.value)">
       <div class="login-erro" id="vincular-empresa-erro"></div>
       <div class="login-sucesso" id="vincular-empresa-sucesso"></div>
       <button class="login-btn" type="submit" id="vincular-empresa-btn-enviar">Vincular empresa</button>
@@ -2521,13 +2527,29 @@ function formatarCelular(v) {
   return v;
 }
 
+// Telefone de empresa pode ser fixo (DDD + 8 digitos) ou celular (DDD + 9)
+// — formatarCelular() sozinho so' formata certo o formato celular; esta
+// versao decide o agrupamento pelo total de digitos.
+function formatarTelefoneEmpresa(v) {
+  v = v.replace(/\D/g, '').slice(0, 11);
+  if (v.length > 10) return v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3').replace(/-$/, '');
+  if (v.length > 6) return v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3').replace(/-$/, '');
+  if (v.length > 2) return v.replace(/(\d{2})(\d{0,4})/, '($1) $2');
+  if (v.length > 0) return '(' + v;
+  return v;
+}
+
 function onSouEmpresaChange() {
   const ehEmpresa = document.getElementById('login-criar-sou-empresa').checked;
   document.getElementById('login-criar-cnpj').style.display = ehEmpresa ? '' : 'none';
   document.getElementById('login-criar-nome-empresa').style.display = ehEmpresa ? '' : 'none';
+  document.getElementById('login-criar-email-empresa').style.display = ehEmpresa ? '' : 'none';
+  document.getElementById('login-criar-celular-empresa').style.display = ehEmpresa ? '' : 'none';
   if (!ehEmpresa) {
     document.getElementById('login-criar-cnpj').value = '';
     document.getElementById('login-criar-nome-empresa').value = '';
+    document.getElementById('login-criar-email-empresa').value = '';
+    document.getElementById('login-criar-celular-empresa').value = '';
     document.getElementById('login-criar-cnpj-aviso').style.display = 'none';
   }
 }
@@ -2610,11 +2632,16 @@ async function vincularEmpresa() {
     return;
   }
 
+  const emailEmpresa = document.getElementById('vincular-empresa-email').value.trim();
+  const celularEmpresaFormatado = document.getElementById('vincular-empresa-celular').value.trim();
+
   const btn = document.getElementById('vincular-empresa-btn-enviar');
   btn.disabled = true;
   const { data, error } = await sb.rpc('vincular_minha_empresa', {
     p_cnpj: cnpj.replace(/\D/g, ''),
     p_nome_empresa: nomeEmpresa,
+    p_email_empresa: emailEmpresa || null,
+    p_celular_empresa: celularEmpresaFormatado ? celularEmpresaFormatado.replace(/\D/g, '') : null,
   });
   btn.disabled = false;
 
@@ -2712,6 +2739,10 @@ async function criarConta() {
   if (ehEmpresa) {
     metadata.cnpj = cnpjFormatado.replace(/\D/g, '');
     metadata.nome_empresa = nomeEmpresa;
+    const emailEmpresa = document.getElementById('login-criar-email-empresa').value.trim();
+    const celularEmpresaFormatado = document.getElementById('login-criar-celular-empresa').value.trim();
+    if (emailEmpresa) metadata.email_empresa = emailEmpresa;
+    if (celularEmpresaFormatado) metadata.celular_empresa = celularEmpresaFormatado.replace(/\D/g, '');
   }
   const { error } = await sb.auth.signUp({
     email, password: senha,
@@ -2783,7 +2814,9 @@ async function atualizarTopbarAuth(session) {
     document.getElementById('auth-usuario-nome').textContent = 'Olá, ' + nome;
     entrarBtn.style.display = 'none';
     usuarioChip.style.display = 'flex';
-    const { data } = await sb.from('profiles').select('empresa_id').eq('id', session.user.id).single();
+    const { data } = await sb.from('profiles')
+      .select('empresa_id, nome, celular, email, empresas(nome_empresa, email_empresa, celular_empresa)')
+      .eq('id', session.user.id).single();
     perfilAtual = data || null;
   } else {
     entrarBtn.style.display = '';
@@ -2833,7 +2866,7 @@ function linkCandidaturaSeguro(url) {
 
 let _editandoVagaId = null;
 
-function abrirAnuncioVaga() {
+async function abrirAnuncioVaga() {
   if (!sb) {
     alert('Cadastro ainda não configurado. Tente novamente mais tarde.');
     return;
@@ -2859,10 +2892,59 @@ function abrirAnuncioVaga() {
   document.getElementById('anuncio-vaga-beneficio-outro').style.display = 'none';
   _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
   atualizarResumoFormularioVaga();
+  await prepararContatoAnuncioVaga();
   document.getElementById('anuncio-vaga-overlay').classList.add('aberto');
 }
 function fecharAnuncioVaga() {
   document.getElementById('anuncio-vaga-overlay').classList.remove('aberto');
+}
+
+// Dados de contato da vaga (nome da empresa, e-mail, celular) nao sao mais
+// digitados a cada anuncio — vem do cadastro da empresa (com fallback pro
+// cadastro do proprio usuario) e ficam so' pra leitura no formulario.
+let _contatoAnuncioVaga = { nomeEmpresa: '', email: '', celular: '' };
+
+async function prepararContatoAnuncioVaga() {
+  const empresa = (perfilAtual && perfilAtual.empresas) || {};
+  const nomeEmpresa = empresa.nome_empresa || '';
+  const email = empresa.email_empresa || (sessaoAtual && sessaoAtual.user.email) || '';
+  const celular = empresa.celular_empresa || (perfilAtual && perfilAtual.celular) || '';
+  _contatoAnuncioVaga = { nomeEmpresa, email, celular };
+
+  const infoEl = document.getElementById('anuncio-vaga-empresa-info');
+  infoEl.innerHTML = `
+    <div><strong>Empresa:</strong> ${escapeHtml(nomeEmpresa)}</div>
+    <div><strong>E-mail de contato:</strong> ${escapeHtml(email || 'não informado')}</div>
+    <div><strong>Celular:</strong> ${escapeHtml(celular ? formatarTelefoneEmpresa(celular) : 'não informado')}</div>
+    <div style="margin-top:4px;font-size:11px;">Para alterar esses dados, atualize no seu cadastro.</div>
+  `;
+
+  const select = document.getElementById('anuncio-vaga-responsavel');
+  const wrap = document.getElementById('anuncio-vaga-responsavel-wrap');
+  select.innerHTML = '';
+  let colegas = [];
+  if (perfilAtual && perfilAtual.empresa_id) {
+    const { data } = await sb.from('profiles').select('id, nome').eq('empresa_id', perfilAtual.empresa_id);
+    colegas = data || [];
+  }
+  colegas.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c.nome || '(sem nome)';
+    opt.textContent = c.nome || '(sem nome)';
+    select.appendChild(opt);
+  });
+  const optEmpresa = document.createElement('option');
+  optEmpresa.value = `${nomeEmpresa} (empresa)`;
+  optEmpresa.textContent = `${nomeEmpresa} (empresa)`;
+  select.appendChild(optEmpresa);
+
+  if (colegas.length <= 1) {
+    wrap.style.display = 'none';
+    select.value = colegas[0] ? (colegas[0].nome || '(sem nome)') : optEmpresa.value;
+  } else {
+    wrap.style.display = '';
+    select.value = colegas[0] ? (colegas[0].nome || '(sem nome)') : optEmpresa.value;
+  }
 }
 
 function onTituloVagaChange() {
@@ -2889,9 +2971,10 @@ async function publicarVagaEmpresa() {
   // Honeypot anti-spam: campo invisível que só um robô preencheria.
   if (document.getElementById('anuncio-vaga-site').value) return;
 
-  const nomeEmpresa = document.getElementById('anuncio-vaga-empresa').value.trim();
-  const emailContato = document.getElementById('anuncio-vaga-email').value.trim();
-  const whatsappFormatado = document.getElementById('anuncio-vaga-whatsapp').value.trim();
+  const nomeEmpresa = _contatoAnuncioVaga.nomeEmpresa;
+  const emailContato = _contatoAnuncioVaga.email;
+  const whatsappFormatado = _contatoAnuncioVaga.celular;
+  const publicadoPor = document.getElementById('anuncio-vaga-responsavel').value;
   const tituloSelect = document.getElementById('anuncio-vaga-titulo-select').value;
   const tituloVaga = tituloSelect === '__outro__'
     ? document.getElementById('anuncio-vaga-titulo-outro').value.trim()
@@ -2968,6 +3051,7 @@ async function publicarVagaEmpresa() {
     localizacao_externa: bairroOutro || null,
     tipo_contrato: tipoContrato,
     link_candidatura: link || null,
+    publicado_por: publicadoPor || null,
   };
 
   const btn = document.getElementById('anuncio-vaga-btn-enviar');
@@ -3045,6 +3129,7 @@ function criarCardVagaEmpresa(v) {
         ${salarioBadgeHtml}
         ${candidatarHtml}
       </div>
+      ${v.publicado_por ? `<div style="font-size:10px;color:var(--cinza-m);margin-top:4px;">Publicado por: ${escapeHtml(v.publicado_por)}</div>` : ''}
     </div>
   `;
   return card;
@@ -3131,6 +3216,9 @@ function criarCardMinhaVaga(v) {
   else if (expirada) { statusLabel = 'Expirada'; statusClasse = 'minha-vaga-status-expirada'; }
 
   const detalhesExtra = [];
+  if (v.publicado_por) {
+    detalhesExtra.push(`<div class="minha-vaga-detalhe">Publicado por: ${escapeHtml(v.publicado_por)}</div>`);
+  }
   if (v.status === 'cancelada' && v.motivo_cancelamento) {
     detalhesExtra.push(`<div class="minha-vaga-detalhe">Motivo do cancelamento: ${escapeHtml(v.motivo_cancelamento)}</div>`);
   }
@@ -3242,7 +3330,7 @@ function criarCardMinhaVaga(v) {
   return card;
 }
 
-function iniciarEdicaoVaga(v) {
+async function iniciarEdicaoVaga(v) {
   fecharMinhasVagas();
   _editandoVagaId = v.id;
   document.getElementById('anuncio-vaga-titulo-modal').textContent = 'Editar vaga';
@@ -3252,9 +3340,12 @@ function iniciarEdicaoVaga(v) {
   document.getElementById('anuncio-vaga-erro').style.display = 'none';
   document.getElementById('anuncio-vaga-sucesso').style.display = 'none';
 
-  document.getElementById('anuncio-vaga-empresa').value = v.nome_empresa || '';
-  document.getElementById('anuncio-vaga-email').value = v.email_contato || '';
-  document.getElementById('anuncio-vaga-whatsapp').value = v.whatsapp_contato ? formatarCelular(v.whatsapp_contato) : '';
+  await prepararContatoAnuncioVaga();
+  const responsavelSelect = document.getElementById('anuncio-vaga-responsavel');
+  if (v.publicado_por && Array.from(responsavelSelect.options).some(o => o.value === v.publicado_por)) {
+    responsavelSelect.value = v.publicado_por;
+  }
+
   document.getElementById('anuncio-vaga-horario').value = v.horario || '';
   document.getElementById('anuncio-vaga-salario').value = v.salario || '';
   document.getElementById('anuncio-vaga-descricao').value = v.descricao || '';
