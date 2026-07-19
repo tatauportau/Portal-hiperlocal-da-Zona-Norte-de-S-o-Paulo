@@ -21,7 +21,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 001_auth_profiles.sql   # Migração: tabela profiles + RLS + trigger de cadastro
 │   ├── 002_add_celular.sql     # Migração: coluna celular + checagem de duplicidade
 │   ├── 003_add_email.sql       # Migração: coluna email (copiada de auth.users)
-│   └── 004_vagas_empresas.sql  # Migração: tabela vagas_empresas (vagas patrocinadas por empresas)
+│   ├── 004_vagas_empresas.sql  # Migração: tabela vagas_empresas (vagas patrocinadas por empresas)
+│   └── 005_vagas_empresas_localizacao.sql  # Migração: localização vira multi-distrito/bairro (em vez de 1 bairro só)
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -239,7 +240,9 @@ Claude Cowork (agendamento próprio, roda sozinho)
   ocultar cards individualmente ali). Rastreado via `sessaoAtual` (variável
   global atualizada em `atualizarTopbarAuth`), não uma tabela/flag no
   banco. **Comunidade** ainda não tem seção própria (ver roadmap) — o
-  clique, quando logado, só mostra um aviso "em breve".
+  clique, quando logado, só mostra um aviso "em breve". A mensagem exibida
+  para **Vagas** também destaca a existência de vagas patrocinadas
+  (`MENSAGENS_GATE_LOGIN.vagas`), como chamada para o cadastro.
 
 - **Vagas de empresas (anúncio patrocinado):** empresas podem publicar
   vagas direto no site pelo botão "📢 Anuncie sua vaga" no cabeçalho da
@@ -277,13 +280,40 @@ Claude Cowork (agendamento próprio, roda sozinho)
     exibido dentro do formulário). Depois dessa data, publicar vagas pode
     passar a ser pago — ainda não há gateway de pagamento integrado nem
     modelo de cobrança definido; é decisão futura.
-  - **Bairro do anúncio:** mesmo padrão do cadastro de leitor — campo com
-    autocomplete restrito aos 462 bairros da Zona Norte (mesma
-    `data/bairros-por-distrito.json` e mesma `<datalist>` do cadastro de
-    usuário), com campo livre alternativo para quem é de fora da região.
-    Usa o mesmo mapa bairro→distrito (`_bairroParaDistrito`) para resolver
-    o `data-distrito` do card e assim funcionar certinho no filtro por
-    subprefeitura.
+  - **Localização do anúncio (mapa com seleção múltipla):** o formulário
+    reaproveita o mesmo mapa D3 + GeoJSON do modal "📍 Bairros" (mesmos
+    dados embutidos `#bairros-geo-embutido`/`#bairros-dados-embutido`,
+    carregados uma única vez via `garantirDadosMapaBairros()` e
+    compartilhados entre os dois modais), num modal próprio
+    (`#local-vaga-overlay`) que permite marcar **um ou mais distritos e/ou
+    bairros específicos dentro deles** — diferente do modal original de
+    Bairros, que é só informativo (links para o Google Earth) e não
+    seleciona nada.
+    - Estado da seleção fica em `_selecaoLocalVaga = { distritosCompletos:
+      Set, bairrosParciais: { DISTRITO: Set } }`. Marcar todos os bairros
+      de um distrito (manualmente ou pelo botão "Selecionar o distrito
+      inteiro") promove aquele distrito para `distritosCompletos`;
+      desmarcar um bairro específico de um distrito completo faz o
+      caminho inverso (volta a ser parcial, com os demais bairros ainda
+      marcados).
+    - Gravado em duas colunas (`sql/005_vagas_empresas_localizacao.sql`):
+      `distritos_completos text[]` (distritos inteiros) e
+      `bairros_por_distrito jsonb` (`{ "DISTRITO": ["Bairro X", ...] }`,
+      só para distritos com seleção parcial). Regra de exibição no card
+      (`textoLocalizacaoVaga()`): distrito completo → mostra só o nome do
+      distrito; distrito parcial → mostra o nome do distrito seguido dos
+      bairros marcados.
+    - Alternativa mutuamente exclusiva: campo livre "Outra cidade ou
+      bairro" (`localizacao_externa`) para empresa fora da Zona Norte,
+      mesmo padrão do campo "bairroOutro" do cadastro de leitor.
+    - Para o filtro por subprefeitura (`.sub-btn`) funcionar com vagas que
+      têm mais de um distrito/bairro, `data-distrito` e `data-bairro` do
+      card viraram listas separadas por vírgula (ex.:
+      `data-distrito="SANTANA,TUCURUVI"`) — o handler de clique do filtro
+      foi ajustado para dividir por vírgula antes de comparar; cards com
+      um único valor (as vagas editoriais, que não mudaram) continuam
+      funcionando igual, já que dividir uma string sem vírgula por vírgula
+      simplesmente devolve um array de um item.
 
 ---
 

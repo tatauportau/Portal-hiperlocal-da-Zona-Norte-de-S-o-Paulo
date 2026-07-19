@@ -113,7 +113,7 @@
   .card-vaga:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-2px);}
   .vaga-icone{width:44px;height:44px;border-radius:10px;background:#E3F2FD;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
   .vaga-titulo{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px;}
-  .vaga-info{font-size:12px;color:var(--cinza-m);display:flex;flex-wrap:wrap;gap:8px;}
+  .vaga-info{font-size:12px;color:var(--cinza-m);display:flex;flex-direction:column;gap:4px;}
   .vaga-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;background:#E3F2FD;color:var(--azul);}
   .card-pol{background:var(--branco);border:1px solid var(--cinza-l);border-left:4px solid var(--marrom);border-radius:14px;padding:18px 20px;margin-bottom:10px;transition:box-shadow 0.15s;}
   .card-pol:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);}
@@ -611,6 +611,11 @@
   .vaga-patrocinada-pill{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:var(--cinza-q);color:var(--branco);white-space:nowrap;}
   .vaga-candidatar{font-size:11px;font-weight:700;color:var(--cinza-q);text-decoration:underline;}
   .vaga-candidatar-email{font-size:11px;color:var(--cinza-m);}
+  #local-vaga-overlay{z-index:1002;}
+  .bairros-pill.selecionada{background:var(--cinza-q);border-color:var(--cinza-q);color:var(--branco);}
+  .bairros-pill.selecionada:hover{background:var(--cinza-q);border-color:var(--cinza-q);color:var(--branco);}
+  .local-vaga-resumo{margin-top:12px;font-size:11px;color:var(--cinza-m);display:flex;flex-wrap:wrap;gap:6px;}
+  .local-vaga-chip{font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;background:var(--creme);border:1px solid var(--cinza-l);color:var(--cinza-q);}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
@@ -1714,23 +1719,26 @@ function fecharBairros(){
   document.getElementById('bairros-overlay').classList.remove('aberto');
 }
 
+async function garantirDadosMapaBairros(){
+  if (_geoDistritosZN && _bairrosPorDistrito) return;
+  const geoEmbutido = document.getElementById('bairros-geo-embutido');
+  const dadosEmbutido = document.getElementById('bairros-dados-embutido');
+  const [geo, bairros] = (geoEmbutido && dadosEmbutido)
+    ? [JSON.parse(geoEmbutido.textContent), JSON.parse(dadosEmbutido.textContent)]
+    : await Promise.all([
+        fetch('./data/distritos-zona-norte.geojson').then(r => r.json()),
+        fetch('./data/bairros-por-distrito.json').then(r => r.json())
+      ]);
+  _geoDistritosZN = geo;
+  _bairrosPorDistrito = bairros;
+}
+
 async function carregarMapaBairros(){
   const wrap = document.getElementById('bairros-svg-wrap');
   wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#999;font-size:13px;">Carregando mapa...</div>';
   try {
-    const geoEmbutido = document.getElementById('bairros-geo-embutido');
-    const dadosEmbutido = document.getElementById('bairros-dados-embutido');
-
-    const [geo, bairros] = (geoEmbutido && dadosEmbutido)
-      ? [JSON.parse(geoEmbutido.textContent), JSON.parse(dadosEmbutido.textContent)]
-      : await Promise.all([
-          fetch('./data/distritos-zona-norte.geojson').then(r => r.json()),
-          fetch('./data/bairros-por-distrito.json').then(r => r.json())
-        ]);
-
-    _geoDistritosZN = geo;
-    _bairrosPorDistrito = bairros;
-    desenharMapaBairros(geo, bairros);
+    await garantirDadosMapaBairros();
+    desenharMapaBairros(_geoDistritosZN, _bairrosPorDistrito);
   } catch (e) {
     wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#c0392b;font-size:13px;">Não foi possível carregar o mapa dos bairros.</div>';
     console.error('Erro ao carregar mapa de bairros:', e);
@@ -1845,6 +1853,223 @@ function mostrarInfoDistrito(props, bairrosPorDistrito){
   pills.innerHTML = lista.map(b => `<a class="bairros-pill" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth">📍 ${b}</a>`).join('');
   search.value = '';
   vazio.style.display = 'none';
+}
+
+// --- SELECAO MULTIPLA DE LOCAL (mesmo padrao do modal Bairros, para o formulario "Anuncie sua vaga") ---
+let _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
+let _distritoAtivoLocalVaga = null;
+let _svgPathsLocalVaga = null;
+
+function tituloCaseDistrito(id) {
+  return (id || '').toLowerCase().split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+
+function nomeDistritoPorId(id) {
+  const f = _geoDistritosZN && (_geoDistritosZN.features || []).find(f => f.properties.id === id);
+  return f ? f.properties.nome : tituloCaseDistrito(id);
+}
+
+async function abrirSelecaoLocal() {
+  document.getElementById('local-vaga-overlay').classList.add('aberto');
+  document.getElementById('local-vaga-info-titulo').textContent = 'Selecione um distrito';
+  document.getElementById('local-vaga-info-sub').textContent = 'Clique no mapa ao lado';
+  document.getElementById('local-vaga-todos-btn').style.display = 'none';
+  document.getElementById('local-vaga-search').style.display = 'none';
+  document.getElementById('local-vaga-pills').innerHTML = '';
+  _distritoAtivoLocalVaga = null;
+  await garantirDadosMapaBairros();
+  desenharMapaSelecaoLocal(_geoDistritosZN, _bairrosPorDistrito);
+  atualizarResumoSelecaoLocal();
+}
+function fecharSelecaoLocal() {
+  document.getElementById('local-vaga-overlay').classList.remove('aberto');
+}
+
+function estadoSelecaoDistrito(distritoId) {
+  if (_selecaoLocalVaga.distritosCompletos.has(distritoId)) return 'completo';
+  if ((_selecaoLocalVaga.bairrosParciais[distritoId] || new Set()).size > 0) return 'parcial';
+  return 'nenhum';
+}
+
+function desenharMapaSelecaoLocal(geo, bairrosPorDistrito) {
+  const wrap = document.getElementById('local-vaga-svg-wrap');
+  wrap.innerHTML = '';
+  const width  = wrap.clientWidth || 660;
+  const height = Math.round(width * 0.95);
+
+  const projection = d3.geoMercator().fitExtent([[8,8],[width-8,height-8]], geo);
+  const geoPathGen = d3.geoPath(projection);
+  const fontSize = Math.max(8, Math.min(13, width / 50));
+
+  const svg = d3.select(wrap).append('svg').attr('viewBox', `0 0 ${width} ${height}`);
+  const tooltip = document.getElementById('bairros-tooltip');
+
+  _svgPathsLocalVaga = svg.selectAll('path')
+    .data(geo.features)
+    .join('path')
+      .attr('d', geoPathGen)
+      .attr('fill', d => CORES_SUBPREF_ZN[d.properties.id] || '#ccc')
+      .attr('fill-opacity', 0.72)
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 1.2)
+      .style('cursor', 'pointer')
+      .on('mousemove', function(event, d){
+        tooltip.textContent = d.properties.nome;
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY + 10) + 'px';
+        tooltip.style.opacity = 1;
+      })
+      .on('mouseleave', function(){ tooltip.style.opacity = 0; })
+      .on('click', function(event, d){
+        _distritoAtivoLocalVaga = d.properties.id;
+        document.getElementById('local-vaga-search').value = '';
+        renderizarPainelDistrito(d.properties);
+        atualizarEstilosMapaSelecao();
+      });
+
+  svg.selectAll('text.distrito-label')
+    .data(geo.features)
+    .join('text')
+      .attr('class', 'distrito-label')
+      .attr('x', d => geoPathGen.centroid(d)[0])
+      .attr('y', d => geoPathGen.centroid(d)[1])
+      .attr('text-anchor', 'middle')
+      .attr('dominant-baseline', 'middle')
+      .attr('font-size', fontSize)
+      .attr('font-weight', 600)
+      .attr('fill', '#fff')
+      .style('pointer-events', 'none')
+      .text(d => d.properties.nome);
+
+  atualizarEstilosMapaSelecao();
+}
+
+function atualizarEstilosMapaSelecao() {
+  if (!_svgPathsLocalVaga) return;
+  _svgPathsLocalVaga
+    .attr('stroke', d => d.properties.id === _distritoAtivoLocalVaga ? '#222' : (estadoSelecaoDistrito(d.properties.id) !== 'nenhum' ? '#000' : '#fff'))
+    .attr('stroke-width', d => d.properties.id === _distritoAtivoLocalVaga ? 3 : (estadoSelecaoDistrito(d.properties.id) !== 'nenhum' ? 2.5 : 1.2))
+    .attr('fill-opacity', d => estadoSelecaoDistrito(d.properties.id) === 'completo' ? 1 : 0.72);
+}
+
+function renderizarPainelDistrito(props) {
+  const titulo  = document.getElementById('local-vaga-info-titulo');
+  const sub     = document.getElementById('local-vaga-info-sub');
+  const pills   = document.getElementById('local-vaga-pills');
+  const search  = document.getElementById('local-vaga-search');
+  const todosBtn = document.getElementById('local-vaga-todos-btn');
+
+  const lista = (_bairrosPorDistrito[props.id] || []).slice().sort((a, b) => a.localeCompare(b, 'pt-BR'));
+  titulo.textContent = props.nome;
+  sub.textContent = lista.length + (lista.length === 1 ? ' bairro selecionável' : ' bairros selecionáveis');
+  search.style.display = lista.length > 6 ? '' : 'none';
+
+  const completo = _selecaoLocalVaga.distritosCompletos.has(props.id);
+  const parciais = _selecaoLocalVaga.bairrosParciais[props.id] || new Set();
+
+  pills.innerHTML = '';
+  lista.forEach(b => {
+    const marcado = completo || parciais.has(b);
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'bairros-pill' + (marcado ? ' selecionada' : '');
+    btn.textContent = (marcado ? '✓ ' : '') + b;
+    btn.addEventListener('click', () => toggleBairroLocalVaga(props.id, b));
+    pills.appendChild(btn);
+  });
+
+  todosBtn.style.display = '';
+  todosBtn.textContent = completo ? '✓ Distrito inteiro selecionado (clique para desmarcar)' : '☐ Selecionar o distrito inteiro';
+  todosBtn.onclick = () => toggleDistritoCompleto(props.id, props.nome);
+
+  filtrarLocalVagaBairros();
+}
+
+function toggleBairroLocalVaga(distritoId, bairro) {
+  if (_selecaoLocalVaga.distritosCompletos.has(distritoId)) {
+    const todos = new Set(_bairrosPorDistrito[distritoId] || []);
+    todos.delete(bairro);
+    _selecaoLocalVaga.distritosCompletos.delete(distritoId);
+    _selecaoLocalVaga.bairrosParciais[distritoId] = todos;
+  } else {
+    const atual = new Set(_selecaoLocalVaga.bairrosParciais[distritoId] || []);
+    if (atual.has(bairro)) atual.delete(bairro); else atual.add(bairro);
+    const totalBairros = (_bairrosPorDistrito[distritoId] || []).length;
+    if (atual.size > 0 && atual.size === totalBairros) {
+      _selecaoLocalVaga.distritosCompletos.add(distritoId);
+      delete _selecaoLocalVaga.bairrosParciais[distritoId];
+    } else if (atual.size === 0) {
+      delete _selecaoLocalVaga.bairrosParciais[distritoId];
+    } else {
+      _selecaoLocalVaga.bairrosParciais[distritoId] = atual;
+    }
+  }
+  renderizarPainelDistrito({ id: distritoId, nome: nomeDistritoPorId(distritoId) });
+  atualizarEstilosMapaSelecao();
+  atualizarResumoSelecaoLocal();
+}
+
+function toggleDistritoCompleto(distritoId, nome) {
+  if (_selecaoLocalVaga.distritosCompletos.has(distritoId)) {
+    _selecaoLocalVaga.distritosCompletos.delete(distritoId);
+  } else {
+    _selecaoLocalVaga.distritosCompletos.add(distritoId);
+    delete _selecaoLocalVaga.bairrosParciais[distritoId];
+  }
+  renderizarPainelDistrito({ id: distritoId, nome });
+  atualizarEstilosMapaSelecao();
+  atualizarResumoSelecaoLocal();
+}
+
+function filtrarLocalVagaBairros() {
+  const q = semAcento(document.getElementById('local-vaga-search').value);
+  const pills = document.querySelectorAll('#local-vaga-pills .bairros-pill');
+  let visiveis = 0;
+  pills.forEach(p => {
+    const match = !q || semAcento(p.textContent).includes(q);
+    p.style.display = match ? '' : 'none';
+    if (match) visiveis++;
+  });
+  document.getElementById('local-vaga-vazio').style.display = (q && visiveis === 0) ? 'block' : 'none';
+}
+
+function resumoSelecaoLocalTextos() {
+  const partes = [];
+  _selecaoLocalVaga.distritosCompletos.forEach(id => {
+    partes.push(nomeDistritoPorId(id));
+  });
+  Object.entries(_selecaoLocalVaga.bairrosParciais).forEach(([id, bairros]) => {
+    if (!bairros || bairros.size === 0) return;
+    partes.push(`${nomeDistritoPorId(id)}: ${Array.from(bairros).sort((a, b) => a.localeCompare(b, 'pt-BR')).join(', ')}`);
+  });
+  return partes;
+}
+
+function atualizarResumoSelecaoLocal() {
+  const resumo = document.getElementById('local-vaga-resumo');
+  const partes = resumoSelecaoLocalTextos();
+  resumo.innerHTML = '';
+  if (partes.length === 0) {
+    resumo.textContent = 'Nenhum distrito ou bairro selecionado ainda.';
+    return;
+  }
+  partes.forEach(texto => {
+    const chip = document.createElement('span');
+    chip.className = 'local-vaga-chip';
+    chip.textContent = texto;
+    resumo.appendChild(chip);
+  });
+}
+
+function atualizarResumoFormularioVaga() {
+  const campo = document.getElementById('anuncio-vaga-local-resumo');
+  const partes = resumoSelecaoLocalTextos();
+  campo.textContent = partes.length ? partes.join(' · ') : 'Nenhum local selecionado ainda.';
+}
+
+function confirmarSelecaoLocal() {
+  atualizarResumoFormularioVaga();
+  fecharSelecaoLocal();
 }
 </script>
 
@@ -2053,7 +2278,8 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <input class="login-input" type="tel" id="anuncio-vaga-whatsapp" placeholder="WhatsApp (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
       <input class="login-input" type="text" id="anuncio-vaga-titulo" placeholder="Título da vaga" required maxlength="120">
       <textarea class="login-input" id="anuncio-vaga-descricao" placeholder="Descrição da vaga (requisitos, horário, benefícios, etc.)" required maxlength="600" rows="3" style="resize:vertical;"></textarea>
-      <input class="login-input" type="text" id="anuncio-vaga-bairro-zn" placeholder="Bairro da Zona Norte (opcional)" list="login-bairros-datalist" autocomplete="off">
+      <button type="button" class="anuncio-vaga-btn" style="width:100%;justify-content:center;padding:10px;" onclick="abrirSelecaoLocal()">📍 Selecionar bairros/distritos da Zona Norte</button>
+      <div id="anuncio-vaga-local-resumo" style="font-size:11px;color:var(--cinza-m);text-align:center;">Nenhum local selecionado ainda.</div>
       <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se for fora da Zona Norte:</div>
       <input class="login-input" type="text" id="anuncio-vaga-bairro-outro" placeholder="Outra cidade ou bairro">
       <select class="login-select" id="anuncio-vaga-tipo" required>
@@ -2069,6 +2295,28 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <div class="login-sucesso" id="anuncio-vaga-sucesso"></div>
       <button class="login-btn" type="submit" id="anuncio-vaga-btn-enviar">Publicar vaga</button>
     </form>
+  </div>
+</div>
+
+<!-- MODAL SELECIONAR LOCAL DA VAGA (mesmo padrao do modal Bairros, com selecao multipla) -->
+<div class="bairros-overlay" id="local-vaga-overlay" onclick="if(event.target===this)fecharSelecaoLocal()">
+  <div class="bairros-painel">
+    <button class="bairros-fechar" onclick="fecharSelecaoLocal()">✕</button>
+    <div class="bairros-titulo">🗺️ Onde a vaga se aplica?</div>
+    <div class="bairros-sub">Clique num distrito no mapa e marque os bairros — ou selecione o distrito inteiro</div>
+    <div class="bairros-corpo">
+      <div id="local-vaga-svg-wrap"></div>
+      <div class="bairros-info" id="local-vaga-info">
+        <div class="bairros-info-titulo" id="local-vaga-info-titulo">Selecione um distrito</div>
+        <div class="bairros-info-sub" id="local-vaga-info-sub">Clique no mapa ao lado</div>
+        <button type="button" class="anuncio-vaga-btn" id="local-vaga-todos-btn" style="display:none;width:100%;justify-content:center;margin-bottom:10px;">Selecionar o distrito inteiro</button>
+        <input class="bairros-search" id="local-vaga-search" type="text" placeholder="Buscar bairro..." oninput="filtrarLocalVagaBairros()" style="display:none;">
+        <div class="bairros-pills" id="local-vaga-pills"></div>
+        <div class="bairros-vazio" id="local-vaga-vazio">Nenhum bairro encontrado</div>
+      </div>
+    </div>
+    <div class="local-vaga-resumo" id="local-vaga-resumo">Nenhum distrito ou bairro selecionado ainda.</div>
+    <button class="login-btn" style="margin-top:12px;" onclick="confirmarSelecaoLocal()">Confirmar seleção</button>
   </div>
 </div>
 
@@ -2347,10 +2595,11 @@ function abrirAnuncioVaga() {
   }
   document.getElementById('anuncio-vaga-aviso').textContent =
     `🎁 Período de testes: publicação gratuita até ${formatarDataPtBr(VAGAS_GRATIS_ATE)}. Depois disso, publicar vagas poderá passar a ser pago.`;
-  carregarBairrosSelect();
   document.getElementById('anuncio-vaga-erro').style.display = 'none';
   document.getElementById('anuncio-vaga-sucesso').style.display = 'none';
   document.getElementById('anuncio-vaga-form').reset();
+  _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
+  atualizarResumoFormularioVaga();
   document.getElementById('anuncio-vaga-overlay').classList.add('aberto');
 }
 function fecharAnuncioVaga() {
@@ -2371,27 +2620,33 @@ async function publicarVagaEmpresa() {
   const whatsappFormatado = document.getElementById('anuncio-vaga-whatsapp').value.trim();
   const tituloVaga = document.getElementById('anuncio-vaga-titulo').value.trim();
   const descricao = document.getElementById('anuncio-vaga-descricao').value.trim();
-  const bairroZN = document.getElementById('anuncio-vaga-bairro-zn').value.trim();
   const bairroOutro = document.getElementById('anuncio-vaga-bairro-outro').value.trim();
   const tipoContrato = document.getElementById('anuncio-vaga-tipo').value;
   const link = document.getElementById('anuncio-vaga-link').value.trim();
 
-  if (bairroZN && bairroOutro) {
-    erroEl.textContent = 'Preencha só um dos dois campos de localização: da Zona Norte OU de fora.';
+  const temSelecaoMapa = _selecaoLocalVaga.distritosCompletos.size > 0
+    || Object.values(_selecaoLocalVaga.bairrosParciais).some(s => s && s.size > 0);
+
+  if (temSelecaoMapa && bairroOutro) {
+    erroEl.textContent = 'Escolha só uma opção de localização: bairros/distritos da Zona Norte OU outra cidade/bairro.';
     erroEl.style.display = 'block';
     return;
   }
-  if (bairroZN && _bairrosZonaNorteSet && !_bairrosZonaNorteSet.has(bairroZN)) {
-    erroEl.textContent = 'Selecione um bairro válido da lista, ou preencha "Outra cidade ou bairro" abaixo.';
+  if (!temSelecaoMapa && !bairroOutro) {
+    erroEl.textContent = 'Selecione ao menos um bairro/distrito da Zona Norte, ou informe uma cidade/bairro fora da região.';
     erroEl.style.display = 'block';
     return;
   }
-  const bairro = bairroZN || bairroOutro;
-  if (!nomeEmpresa || !emailContato || !tituloVaga || !descricao || !bairro || !tipoContrato) {
+  if (!nomeEmpresa || !emailContato || !tituloVaga || !descricao || !tipoContrato) {
     erroEl.textContent = 'Preencha todos os campos obrigatórios.';
     erroEl.style.display = 'block';
     return;
   }
+
+  const bairrosPorDistritoObj = {};
+  Object.entries(_selecaoLocalVaga.bairrosParciais).forEach(([d, set]) => {
+    if (set && set.size > 0) bairrosPorDistritoObj[d] = Array.from(set);
+  });
 
   const btn = document.getElementById('anuncio-vaga-btn-enviar');
   btn.disabled = true;
@@ -2401,7 +2656,9 @@ async function publicarVagaEmpresa() {
     whatsapp_contato: whatsappFormatado ? whatsappFormatado.replace(/\D/g, '') : null,
     titulo_vaga: tituloVaga,
     descricao,
-    bairro,
+    distritos_completos: Array.from(_selecaoLocalVaga.distritosCompletos),
+    bairros_por_distrito: bairrosPorDistritoObj,
+    localizacao_externa: bairroOutro || null,
     tipo_contrato: tipoContrato,
     link_candidatura: link || null,
   });
@@ -2413,17 +2670,35 @@ async function publicarVagaEmpresa() {
     return;
   }
   document.getElementById('anuncio-vaga-form').reset();
+  _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
+  atualizarResumoFormularioVaga();
   sucessoEl.textContent = 'Vaga publicada com sucesso! Ela já está visível na seção Vagas de Emprego.';
   sucessoEl.style.display = 'block';
   carregarVagasEmpresas();
 }
 
+function textoLocalizacaoVaga(v) {
+  const partes = [];
+  (v.distritos_completos || []).forEach(d => partes.push(tituloCaseDistrito(d)));
+  Object.entries(v.bairros_por_distrito || {}).forEach(([distrito, bairros]) => {
+    if (Array.isArray(bairros) && bairros.length) {
+      partes.push(`${tituloCaseDistrito(distrito)}: ${bairros.join(', ')}`);
+    }
+  });
+  if (v.localizacao_externa) partes.push(v.localizacao_externa);
+  return partes.length ? partes.join(' · ') : 'Zona Norte';
+}
+
 function criarCardVagaEmpresa(v) {
-  const distrito = (_bairroParaDistrito && _bairroParaDistrito[normalizarTexto(v.bairro)]) || '';
+  const distritos = new Set(v.distritos_completos || []);
+  Object.keys(v.bairros_por_distrito || {}).forEach(d => distritos.add(d));
+  const bairrosEspecificos = Object.values(v.bairros_por_distrito || {}).flat();
+
   const card = document.createElement('div');
   card.className = 'card-vaga vaga-patrocinada';
-  card.dataset.bairro = v.bairro || '';
-  card.dataset.distrito = distrito;
+  card.dataset.distrito = Array.from(distritos).join(',');
+  card.dataset.bairro = bairrosEspecificos.length ? bairrosEspecificos.join(',') : (v.localizacao_externa || '');
+
   const linkOk = linkCandidaturaSeguro(v.link_candidatura);
   const candidatarHtml = linkOk
     ? `<a href="${escapeHtml(linkOk)}" target="_blank" rel="noopener nofollow" class="vaga-candidatar">Candidatar-se →</a>`
@@ -2432,7 +2707,7 @@ function criarCardVagaEmpresa(v) {
     <div class="vaga-icone">📢</div>
     <div style="flex:1">
       <div class="vaga-titulo">${escapeHtml(v.titulo_vaga)}</div>
-      <div class="vaga-info"><span>🏢 ${escapeHtml(v.nome_empresa)}</span><span>📍 ${escapeHtml(v.bairro)}</span><span>${escapeHtml(v.descricao)}</span></div>
+      <div class="vaga-info"><span>🏢 ${escapeHtml(v.nome_empresa)}</span><span>📍 ${escapeHtml(textoLocalizacaoVaga(v))}</span><span>${escapeHtml(v.descricao)}</span></div>
       <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
         <span class="vaga-badge">${escapeHtml(v.tipo_contrato)}</span>
         <span class="vaga-patrocinada-pill">📢 Vaga Patrocinada</span>
@@ -2540,11 +2815,11 @@ document.querySelectorAll('.sub-btn').forEach(btn => {
     const distritos = filtrar ? SUB_MAP[sub].map(normalizarTexto) : [];
     document.querySelectorAll('[data-bairro]').forEach(card => {
       if (!filtrar) { card.style.display = ''; return; }
-      const distritoCard = normalizarTexto(card.dataset.distrito || '');
-      const bairroCard = normalizarTexto(card.dataset.bairro || '');
-      const bate = distritoCard
-        ? distritos.includes(distritoCard)
-        : distritos.some(d => bairroCard.includes(d));
+      const distritosCard = (card.dataset.distrito || '').split(',').map(normalizarTexto).filter(Boolean);
+      const bairrosCard = (card.dataset.bairro || '').split(',').map(normalizarTexto).filter(Boolean);
+      const bate = distritosCard.length
+        ? distritosCard.some(d => distritos.includes(d))
+        : distritos.some(d => bairrosCard.some(b => b.includes(d)));
       card.style.display = bate ? '' : 'none';
     });
     if (filtrar) { abrirFiltroPainel(sub); } else { fecharFiltroPainel(); }
@@ -2572,7 +2847,7 @@ ajustarOffsetsFixos();
 setTimeout(ajustarOffsetsFixos, 300);
 
 const MENSAGENS_GATE_LOGIN = {
-  vagas: 'Cadastre-se ou entre para ver as vagas de emprego da Zona Norte.',
+  vagas: 'Cadastre-se ou entre para ver as vagas de emprego da Zona Norte — inclusive as 📢 Vagas Patrocinadas de empresas parceiras!',
   classificados: 'Cadastre-se ou entre para ver os classificados e serviços.',
 };
 function acessarComunidade() {
@@ -2613,6 +2888,7 @@ window.addEventListener('keydown', function(e) {
     if (document.getElementById('bairros-overlay').classList.contains('aberto')) fecharBairros();
     if (document.getElementById('login-overlay').classList.contains('aberto')) fecharLogin();
     if (document.getElementById('anuncio-vaga-overlay').classList.contains('aberto')) fecharAnuncioVaga();
+    if (document.getElementById('local-vaga-overlay').classList.contains('aberto')) fecharSelecaoLocal();
   }
 });
 </script>
