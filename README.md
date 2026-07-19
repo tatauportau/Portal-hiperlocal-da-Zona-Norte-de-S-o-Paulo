@@ -1,6 +1,6 @@
 # Portau — Portal Hiperlocal da Zona Norte de São Paulo
 
-Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona Norte de SP, com atualização automática diária via Claude API.
+Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona Norte de SP, com atualização automática diária: o conteúdo editorial é pesquisado pelo Claude Cowork e publicado via pipeline Netlify + GitHub Actions.
 
 🌐 **URL:** [portauzn.com.br](https://portauzn.com.br)
 
@@ -12,7 +12,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 ├── index.html                  # Portal completo (single-page)
 ├── data/
 │   ├── bairros-por-distrito.json     # 462 bairros organizados por distrito
-│   └── distritos-zona-norte.geojson  # Geodados oficiais dos 18 distritos
+│   ├── distritos-zona-norte.geojson  # Geodados oficiais dos 18 distritos
+│   └── conteudo-manual.json          # Conteúdo editorial do dia (gerado pelo Claude Cowork)
 ├── vendor/
 │   ├── d3.min.js                # D3.js hospedado localmente (evita bloqueio de CDN externo)
 │   └── supabase.min.js          # supabase-js hospedado localmente (mesmo motivo do d3)
@@ -21,7 +22,7 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 002_add_celular.sql     # Migração: coluna celular + checagem de duplicidade
 │   └── 003_add_email.sql       # Migração: coluna email (copiada de auth.users)
 ├── scripts/
-│   └── gerar-portau.js         # Script de geração automática de conteúdo
+│   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
 │   └── functions/
 │       ├── estatisticas.js     # Função serverless para Google Analytics 4 (nome evita filtros de "analytics")
@@ -38,19 +39,29 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 ## Fluxo de Atualização Automática
 
 ```
-Netlify Scheduler (14h Brasília / 17h UTC)
-    └── disparar-portau.js
-        └── chama GitHub API (workflow_dispatch)
-            └── portau-diario.yml (GitHub Actions)
-                └── gerar-portau.js
-                    ├── Lê index.html atual
-                    ├── Chama Claude API (claude-sonnet-4-6)
-                    │   └── web_search para notícias reais da Zona Norte
-                    │   └── retorna JSON editorial
-                    ├── Injeta conteúdo no HTML (substituições cirúrgicas)
-                    └── Commita index.html no branch principal
-                        └── Netlify deploy automático
+Claude Cowork (agendamento próprio, roda sozinho)
+    └── pesquisa o conteúdo editorial do dia
+        └── gera/commita data/conteudo-manual.json no repositório
+            └── Netlify Scheduler (14h Brasília / 17h UTC)
+                └── disparar-portau.js
+                    └── chama GitHub API (workflow_dispatch)
+                        └── portau-diario.yml (GitHub Actions)
+                            └── gerar-portau.js
+                                ├── Lê data/conteudo-manual.json
+                                ├── Injeta conteúdo no HTML (substituições cirúrgicas)
+                                └── Commita index.html no branch principal
+                                    └── Netlify deploy automático
 ```
+
+> ⚠️ **Mudança importante (jul/2026):** `gerar-portau.js` **não chama mais a
+> API da Claude** (`claude-sonnet-4-6` + `web_search`) para gerar conteúdo.
+> Antes, o próprio script pesquisava e gerava o JSON editorial via API a
+> cada execução; agora ele só lê `data/conteudo-manual.json`, que é
+> pesquisado e commitado separadamente pelo **Claude Cowork** (rodando com
+> agendamento próprio, antes do horário do disparo às 14h). Essa mudança
+> foi intencional — decisão de deixar a pesquisa via Cowork por enquanto —
+> e não por falta de saldo na API (o saldo foi verificado e está ok). Pode
+> voltar a ser 100% automatizado via API no futuro, se decidido.
 
 ---
 
@@ -59,7 +70,7 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 ### GitHub Secrets
 | Variável | Descrição |
 |----------|-----------|
-| `CLAUDE_API_KEY` | Chave da API Anthropic (console.anthropic.com) |
+| `CLAUDE_API_KEY` | Chave da API Anthropic (console.anthropic.com). **Não usada atualmente** por `gerar-portau.js` — mantida no repositório para uso futuro, caso a geração de conteúdo volte a ser feita via API em vez do Cowork. |
 
 ### Netlify Environment Variables
 | Variável | Descrição |
@@ -74,22 +85,20 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 - **Horário:** 14h00 Brasília (17h00 UTC)
 - **Configurado em:** `netlify.toml` → `schedule = "0 17 * * *"`
 - **Mecanismo:** Netlify Function `disparar-portau.js` chama GitHub API para disparar o workflow
+- **Nota:** esse horário dispara a etapa de *publicação* (injeção do conteúdo no HTML). A etapa de *pesquisa* do conteúdo do dia é feita separadamente pelo Claude Cowork, em horário próprio, antes das 14h — é preciso que `data/conteudo-manual.json` já esteja commitado quando o workflow rodar.
 
 ---
 
 ## Script gerar-portau.js
 
 ### O que faz
-1. Lê `bairros-por-distrito.json` (462 bairros, 18 distritos)
-2. Calcula data/hora no fuso `America/Sao_Paulo`
-3. Chama Claude API com `web_search` para buscar notícias reais
-4. Recebe JSON editorial e injeta no `index.html` via regex/indexOf
+1. Lê `data/conteudo-manual.json` (conteúdo editorial do dia, preenchido pelo Claude Cowork)
+2. Lê `bairros-por-distrito.json` (462 bairros, 18 distritos) para resolver automaticamente o `distrito` de cada item a partir do campo `bairro`
+3. Calcula data/hora no fuso `America/Sao_Paulo`
+4. Injeta o conteúdo no `index.html` via substituições cirúrgicas por seção (percorre a árvore de `<div>`s até achar o fechamento correspondente, não é um regex simples)
 5. Commita o HTML atualizado
 
-### Configurações da API
-- **Modelo:** `claude-sonnet-4-6`
-- **Max tokens:** 16000
-- **Tools:** `web_search_20250305`
+> Não depende mais de nenhuma API externa (nem Claude, nem web_search) — ver aviso na seção "Fluxo de Atualização Automática" acima.
 
 ### Seções geradas automaticamente
 | Seção | Mínimo |
@@ -101,18 +110,19 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 | Alertas | 4 itens |
 | Fim de semana | 6 eventos (datas futuras) |
 
+*(Esses mínimos valem para o conteúdo esperado em `data/conteudo-manual.json`; o script em si não impõe um mínimo, apenas injeta o que encontrar.)*
+
 ### Logs no GitHub Actions
 ```
-[Portau] Buscando conteúdo editorial para DD/MM/YYYY...
+[Portau] Carregando conteudo editorial manual para DD/MM/YYYY...
 [Portau] Cobertura: 18 distritos, 462 bairros.
-[Portau] JSON recebido. Aplicando substituições cirúrgicas...
-[Portau] Notícias: X
+[Portau] Conteudo carregado. Aplicando substituicoes cirurgicas...
+[Portau] Noticias: X
 [Portau] Agenda: X
 [Portau] Vagas: X
-[Portau] Política: X
+[Portau] Politica: X
 [Portau] Alertas: X
 [Portau] Fim de semana: X
-[Portau] Distritos cobertos: ...
 [Portau] index.html atualizado com sucesso (XXXXX bytes).
 ```
 
@@ -240,16 +250,22 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 
 ## Custos
 
-- **Claude API:** ~US$ 1,50 por execução (claude-sonnet-4-6, max_tokens 16000)
-- **Custo mensal estimado:** ~US$ 45 (30 execuções/mês)
-- **Recarga:** manual em console.anthropic.com → Plans & Billing
-- **Ativar recarga automática recomendado** para evitar interrupções
+- **Geração de conteúdo:** desde jul/2026, feita via Claude Cowork (pesquisa
+  e preenchimento de `data/conteudo-manual.json`), e não mais via chamada
+  paga à API da Claude a cada execução do workflow.
+- **`CLAUDE_API_KEY`:** secret mantido no repositório (GitHub Actions) para
+  uso futuro, caso a geração volte a ser feita via API.
+- **Custos do modelo anterior** (quando `gerar-portau.js` chamava a API
+  diretamente, antes de jul/2026, para referência): ~US$ 1,50 por execução
+  (`claude-sonnet-4-6`, max_tokens 16000), ~US$ 45/mês estimado (30
+  execuções/mês). Não se aplicam enquanto o pipeline atual (Cowork) estiver
+  ativo.
 
 ---
 
 ## Histórico de Funcionalidades
 
-- ✅ Pipeline automático Claude API → GitHub Actions → Netlify
+- ✅ Pipeline automático: Claude Cowork (pesquisa) → GitHub Actions → Netlify (publicação)
 - ✅ Ticker de notícias com títulos do dia
 - ✅ Widget de clima Open-Meteo
 - ✅ Mapa interativo D3.js com GeoJSON oficial
@@ -261,6 +277,7 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 - ✅ Scheduler via Netlify Functions (14h Brasília)
 - ✅ Topbar com data/hora de geração
 - ✅ Cadastro de usuários com login (Supabase Auth)
+- ✅ Logo movida de base64 inline para `assets/logo.png` (evita truncamento acidental do HTML)
 - 🔲 Fluxo de pagamento/upgrade para assinante
 - 🔲 Chat da comunidade (Firebase ou Netlify DB)
 - 🔲 Área comercial para empresas
