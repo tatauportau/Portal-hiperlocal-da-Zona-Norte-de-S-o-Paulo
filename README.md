@@ -17,7 +17,9 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── d3.min.js                # D3.js hospedado localmente (evita bloqueio de CDN externo)
 │   └── supabase.min.js          # supabase-js hospedado localmente (mesmo motivo do d3)
 ├── sql/
-│   └── 001_auth_profiles.sql   # Migração: tabela profiles + RLS + trigger de cadastro
+│   ├── 001_auth_profiles.sql   # Migração: tabela profiles + RLS + trigger de cadastro
+│   ├── 002_add_celular.sql     # Migração: coluna celular + checagem de duplicidade
+│   └── 003_add_email.sql       # Migração: coluna email (copiada de auth.users)
 ├── scripts/
 │   └── gerar-portau.js         # Script de geração automática de conteúdo
 ├── netlify/
@@ -177,12 +179,33 @@ Netlify Scheduler (14h Brasília / 17h UTC)
 - **Configuração:** em `index.html`, procurar as constantes `SUPABASE_URL` e
   `SUPABASE_ANON_KEY` (perto de `irWaze`/`SUB_MAP`) e preencher com os
   valores de Project Settings → API do painel Supabase.
-- **Schema do banco:** rodar `sql/001_auth_profiles.sql` manualmente no
-  SQL Editor do Supabase. Cria a tabela `profiles` (nome, bairro, distrito,
-  `subscription_tier` default `'free'`) com RLS, e um trigger que popula o
-  perfil automaticamente no cadastro. `subscription_tier` não é editável
-  pelo próprio usuário (só via `service_role key`, num contexto servidor —
-  ainda não implementado, ver roadmap).
+- **Schema do banco:** rodar `sql/001_auth_profiles.sql`, `sql/002_add_celular.sql`
+  e `sql/003_add_email.sql`, nessa ordem, no SQL Editor do Supabase. Juntos
+  criam a tabela `profiles` (nome, bairro, distrito, celular, email,
+  `subscription_tier` default `'free'`) com RLS, um trigger que popula o
+  perfil automaticamente no cadastro, e um índice único parcial + função
+  RPC (`celular_ja_cadastrado`) para bloquear celular duplicado antes de
+  criar a conta. `subscription_tier` e `email` não são editáveis pelo
+  próprio usuário (só via `service_role key`, num contexto servidor — ainda
+  não implementado, ver roadmap).
+- **Cadastro de bairro:** campo com autocomplete restrito aos 462 bairros
+  da Zona Norte (`data/bairros-por-distrito.json`, validado no submit), com
+  um segundo campo livre para quem não mora na região.
+- **Celular:** opcional, com máscara `(11) 98765-4321`, gravado só com
+  dígitos (pronto para prefixar `55` numa futura integração com WhatsApp).
+- **E-mail transacional (SMTP):** o serviço de e-mail embutido do Supabase
+  tem limite baixíssimo (poucos e-mails/hora), só serve para teste. Em
+  produção está configurado um SMTP próprio via Gmail (Authentication →
+  Emails → SMTP Settings, usando uma "Senha de app" do Google, nunca a
+  senha normal da conta) — considerar migrar para Resend/Brevo se o volume
+  de cadastros crescer.
+- **Redirect URLs:** configurado em Authentication → URL Configuration
+  (Site URL = `https://portauzn.com.br`, com `http://localhost:PORTA/**`
+  também na lista para testes locais) — sem isso, o link do e-mail de
+  confirmação tenta redirecionar para um endereço padrão inexistente.
+- **Modal de login:** só fecha pelo botão ✕ ou tecla Esc (clique fora foi
+  desativado de propósito — um arrastar de mouse pra selecionar texto podia
+  disparar o fechamento acidental e perder os dados digitados).
 - **Inspeção manual do banco:** o Postgres do Supabase é Postgres de
   verdade — dá pra pegar a connection string em Project Settings → Database
   e plugar no pgAdmin4 (ou outro client) pra consultar as tabelas.
