@@ -446,7 +446,9 @@ Claude Cowork (agendamento próprio, roda sozinho)
     empresa) e `renderizarMinhasVagas()` reaplica o filtro atual sobre
     esse cache a cada clique ou a cada recarga (ex.: depois de
     cancelar/editar/marcar contratada). Reabrir o painel sempre volta pro
-    filtro "Todas". **"Ativas" e "Expiradas" não são valores de `status`**
+    filtro "Ativas" (default deliberado — evita a empresa abrir o painel e
+    ver logo de cara vagas canceladas/expiradas/antigas misturadas).
+    **"Ativas" e "Expiradas" não são valores de `status`**
     no banco (ambos são `status = 'ativa'`) — o filtro distingue pela
     comparação `expira_em` vs. `now()` no próprio client, então esses dois
     filtros são um derivado, não um `.eq('status', ...)` direto.

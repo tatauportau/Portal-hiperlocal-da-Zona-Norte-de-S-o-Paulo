@@ -3187,7 +3187,7 @@ async function abrirMinhasVagas() {
   if (!perfilAtual || !perfilAtual.empresa_id) return;
   document.getElementById('minhas-vagas-overlay').classList.add('aberto');
   document.getElementById('auth-usuario-menu').classList.remove('aberto');
-  filtrarMinhasVagas('todas');
+  filtrarMinhasVagas('ativa');
   await carregarMinhasVagas();
 }
 function fecharMinhasVagas() {
