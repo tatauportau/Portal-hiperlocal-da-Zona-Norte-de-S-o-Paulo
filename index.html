@@ -611,7 +611,7 @@
   .vaga-patrocinada-pill{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:var(--cinza-q);color:var(--branco);white-space:nowrap;}
   .vaga-candidatar{font-size:11px;font-weight:700;color:var(--cinza-q);text-decoration:underline;}
   .vaga-candidatar-email{font-size:11px;color:var(--cinza-m);}
-  .vaga-candidatar-portau-btn{font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid var(--cinza-q);background:var(--cinza-q);color:var(--branco);cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .15s;}
+  .vaga-candidatar-portau-btn{font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid var(--cinza-m);background:var(--cinza-m);color:var(--branco);cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .15s;}
   .vaga-candidatar-portau-btn:hover{opacity:.85;}
   .vaga-candidatar-feito{font-size:11px;font-weight:700;color:#2e7d32;}
   .candidatura-vaga-resumo{background:var(--creme);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--cinza-q);line-height:1.6;margin-bottom:10px;}
@@ -3180,9 +3180,16 @@ function criarCardVagaEmpresa(v) {
   const salarioBadgeHtml = v.salario ? `<span class="vaga-badge">💰 ${escapeHtml(v.salario)}</span>` : '';
   const beneficiosHtml = beneficiosTexto ? `<div class="vaga-beneficios">🎁 ${escapeHtml(beneficiosTexto)}</div>` : '';
   const jaCandidatou = _minhasCandidaturasVagaIds.has(v.id);
-  const candidatarPortauHtml = jaCandidatou
-    ? `<span class="vaga-candidatar-feito">✓ Você já se candidatou</span>`
-    : `<button type="button" class="vaga-candidatar-portau-btn">📩 Candidatar-se pelo Portau</button>`;
+  const mesmaEmpresa = !!(perfilAtual && perfilAtual.empresa_id && v.empresa_id && perfilAtual.empresa_id === v.empresa_id);
+  let candidatarPortauHtml = '';
+  if (jaCandidatou) {
+    candidatarPortauHtml = `<span class="vaga-candidatar-feito">✓ Você já se candidatou</span>`;
+  } else if (!mesmaEmpresa) {
+    // Usuario de uma empresa nao pode se candidatar a vaga da propria
+    // empresa — nesse caso nem mostra o botao (bloqueado tambem no
+    // banco, ver sql/014).
+    candidatarPortauHtml = `<button type="button" class="vaga-candidatar-portau-btn">📩 Candidatar-se pelo Portau</button>`;
+  }
   card.innerHTML = `
     <div class="vaga-icone">📢</div>
     <div style="flex:1">
@@ -3201,7 +3208,7 @@ function criarCardVagaEmpresa(v) {
       ${v.publicado_por ? `<div style="font-size:10px;color:var(--cinza-m);margin-top:4px;">Publicado por: ${escapeHtml(v.publicado_por)}</div>` : ''}
     </div>
   `;
-  if (!jaCandidatou) {
+  if (!jaCandidatou && !mesmaEmpresa) {
     card.querySelector('.vaga-candidatar-portau-btn').addEventListener('click', () => abrirCandidaturaVaga(v));
   }
   return card;

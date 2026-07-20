@@ -30,7 +30,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 010_empresa_contato_e_publicado_por.sql  # Migração: e-mail/celular da empresa + responsável pelo anúncio
 │   ├── 011_permite_validade_1_dia.sql  # Migração: permite dias_validade=1 (além de 7/14/21/30)
 │   ├── 012_candidaturas_vagas.sql  # Migração: candidaturas de leitores (opt-in, compartilha nome/bairro/celular)
-│   └── 013_corrige_recursao_rls_candidaturas.sql  # Migração: corrige recursão infinita de RLS entre vagas_empresas e candidaturas_vagas
+│   ├── 013_corrige_recursao_rls_candidaturas.sql  # Migração: corrige recursão infinita de RLS entre vagas_empresas e candidaturas_vagas
+│   └── 014_bloqueia_candidatura_propria_empresa.sql  # Migração: bloqueia candidatura à vaga da própria empresa
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -550,6 +551,15 @@ Claude Cowork (agendamento próprio, roda sozinho)
     explicitamente `ativa=true and status='ativa' and expira_em > now()`
     — não basta a vaga aparecer no feed público, o banco recusa candidatura
     a vaga cancelada/expirada mesmo que a UI tente.
+  - **Usuário de empresa não pode se candidatar a vaga da própria empresa**
+    (`sql/014_bloqueia_candidatura_propria_empresa.sql`) — checado nos
+    dois lados: no banco, a policy de insert também exige `not
+    mesma_empresa_da_vaga(vaga_id)` (função `security definer`, compara
+    `profiles.empresa_id` do candidato com `vagas_empresas.empresa_id` da
+    vaga, por baixo da RLS das duas — mesmo cuidado do `sql/013` pra não
+    reintroduzir recursão); no client, `criarCardVagaEmpresa()` nem mostra
+    o botão nesse caso (`mesmaEmpresa`, comparando `perfilAtual.empresa_id`
+    com `v.empresa_id`), em vez de mostrar e deixar a tentativa falhar.
   - **4ª policy de select em `vagas_empresas`** (`vagas_empresas_select_candidato_proprio`):
     sem ela, "Minhas Candidaturas" não conseguiria mostrar o título/empresa
     de uma vaga já expirada/cancelada/contratada — as 3 policies de select
