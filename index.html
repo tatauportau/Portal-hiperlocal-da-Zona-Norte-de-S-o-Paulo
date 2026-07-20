@@ -2274,6 +2274,21 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
       <input class="login-input" type="text" id="login-criar-nome" placeholder="Nome" required autocomplete="name">
       <input class="login-input" type="email" id="login-criar-email" placeholder="E-mail" required autocomplete="email">
       <input class="login-input" type="password" id="login-criar-senha" placeholder="Senha (mín. 6 caracteres)" minlength="6" required autocomplete="new-password">
+      <select class="login-select" id="login-criar-sexo" required>
+        <option value="" disabled selected>Sexo</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Prefiro não informar">Prefiro não informar</option>
+      </select>
+      <input class="login-input" type="date" id="login-criar-nascimento" placeholder="Data de nascimento" required>
+      <select class="login-select" id="login-criar-estado-civil" required>
+        <option value="" disabled selected>Estado civil</option>
+        <option value="Solteiro(a)">Solteiro(a)</option>
+        <option value="Casado(a)">Casado(a)</option>
+        <option value="Divorciado(a)">Divorciado(a)</option>
+        <option value="Viúvo(a)">Viúvo(a)</option>
+        <option value="União estável">União estável</option>
+      </select>
       <input class="login-input" type="text" id="login-criar-bairro-zn" placeholder="Bairro da Zona Norte (opcional)" list="login-bairros-datalist" autocomplete="off">
       <datalist id="login-bairros-datalist"></datalist>
       <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se não mora na Zona Norte:</div>
@@ -2751,6 +2766,13 @@ async function criarConta() {
   const nome = document.getElementById('login-criar-nome').value.trim();
   const email = document.getElementById('login-criar-email').value.trim();
   const senha = document.getElementById('login-criar-senha').value;
+  const sexo = document.getElementById('login-criar-sexo').value;
+  const dataNascimento = document.getElementById('login-criar-nascimento').value;
+  const estadoCivil = document.getElementById('login-criar-estado-civil').value;
+  if (!sexo || !dataNascimento || !estadoCivil) {
+    mostrarErroLogin('login-criar-erro', 'Preencha sexo, data de nascimento e estado civil.');
+    return;
+  }
   const bairroZN = document.getElementById('login-criar-bairro-zn').value.trim();
   const bairroOutro = document.getElementById('login-criar-bairro-outro').value.trim();
   if (bairroZN && bairroOutro) {
@@ -2793,7 +2815,7 @@ async function criarConta() {
       return;
     }
   }
-  const metadata = { nome, bairro, celular };
+  const metadata = { nome, bairro, celular, sexo, data_nascimento: dataNascimento, estado_civil: estadoCivil };
   if (ehEmpresa) {
     metadata.cnpj = cnpjFormatado.replace(/\D/g, '');
     metadata.nome_empresa = nomeEmpresa;
@@ -2873,7 +2895,7 @@ async function atualizarTopbarAuth(session) {
     entrarBtn.style.display = 'none';
     usuarioChip.style.display = 'flex';
     const { data } = await sb.from('profiles')
-      .select('empresa_id, nome, bairro, celular, email, empresas(nome_empresa, email_empresa, celular_empresa)')
+      .select('empresa_id, nome, bairro, celular, email, sexo, data_nascimento, estado_civil, empresas(nome_empresa, email_empresa, celular_empresa)')
       .eq('id', session.user.id).single();
     perfilAtual = data || null;
   } else {
@@ -2915,6 +2937,26 @@ const VAGAS_GRATIS_ATE = new Date('2026-08-19T00:00:00-03:00');
 
 function formatarDataPtBr(d) {
   return d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+}
+
+// Recebe uma data no formato 'YYYY-MM-DD' (coluna `date` do Postgres) e
+// devolve um objeto Date em horario local meio-dia — evita o "T00:00:00Z"
+// (UTC) que, em fusos negativos como o do Brasil, mostraria o dia
+// anterior ao formatar.
+function dataLocalDeStringSql(dataStr) {
+  if (!dataStr) return null;
+  return new Date(dataStr + 'T00:00:00');
+}
+
+function calcularIdade(dataStr) {
+  const nascimento = dataLocalDeStringSql(dataStr);
+  if (!nascimento) return null;
+  const hoje = new Date();
+  let idade = hoje.getFullYear() - nascimento.getFullYear();
+  const aindaNaoFezAniversario = (hoje.getMonth() < nascimento.getMonth())
+    || (hoje.getMonth() === nascimento.getMonth() && hoje.getDate() < nascimento.getDate());
+  if (aindaNaoFezAniversario) idade--;
+  return idade;
 }
 
 function escapeHtml(s) {
@@ -3281,17 +3323,21 @@ function abrirCandidaturaVaga(v) {
     abrirLogin('entrar', 'Cadastre-se ou entre para se candidatar a esta vaga.');
     return;
   }
-  if (!perfilAtual || !perfilAtual.nome || !perfilAtual.celular) {
-    alert('Complete seu cadastro (nome e celular) antes de se candidatar a uma vaga.');
+  if (!perfilAtual || !perfilAtual.nome || !perfilAtual.celular || !perfilAtual.sexo || !perfilAtual.data_nascimento || !perfilAtual.estado_civil) {
+    alert('Complete seu cadastro (nome, celular, sexo, data de nascimento e estado civil) antes de se candidatar a uma vaga.');
     return;
   }
   _vagaEmCandidatura = v;
+  const idade = calcularIdade(perfilAtual.data_nascimento);
   document.getElementById('candidatura-vaga-titulo-vaga').textContent = `${v.titulo_vaga} — ${v.nome_empresa}`;
   document.getElementById('candidatura-vaga-resumo').innerHTML = `
     Ao confirmar, a empresa vai ver:<br>
     <strong>Nome:</strong> ${escapeHtml(perfilAtual.nome)}<br>
     <strong>Bairro:</strong> ${escapeHtml(perfilAtual.bairro || 'não informado')}<br>
-    <strong>Celular:</strong> ${escapeHtml(formatarCelular(perfilAtual.celular))}
+    <strong>Celular:</strong> ${escapeHtml(formatarCelular(perfilAtual.celular))}<br>
+    <strong>Sexo:</strong> ${escapeHtml(perfilAtual.sexo)}<br>
+    <strong>Data de nascimento:</strong> ${escapeHtml(formatarDataPtBr(dataLocalDeStringSql(perfilAtual.data_nascimento)))}${idade !== null ? ` (${idade} anos)` : ''}<br>
+    <strong>Estado civil:</strong> ${escapeHtml(perfilAtual.estado_civil)}
   `;
   document.getElementById('candidatura-vaga-erro').style.display = 'none';
   document.getElementById('candidatura-vaga-sucesso').style.display = 'none';
@@ -3488,7 +3534,7 @@ async function carregarMinhasVagas() {
   _candidaturasPorVagaId = {};
   if (data.length > 0) {
     const { data: candidaturas } = await sb.from('candidaturas_vagas')
-      .select('vaga_id, nome_candidato, bairro_candidato, celular_candidato, criado_em')
+      .select('vaga_id, nome_candidato, bairro_candidato, celular_candidato, sexo_candidato, data_nascimento_candidato, estado_civil_candidato, criado_em')
       .in('vaga_id', data.map(v => v.id));
     (candidaturas || []).forEach(c => {
       (_candidaturasPorVagaId[c.vaga_id] || (_candidaturasPorVagaId[c.vaga_id] = [])).push(c);
@@ -3555,7 +3601,13 @@ function criarCardMinhaVaga(v) {
     <div style="margin-top:8px;">
       <button type="button" class="anuncio-vaga-btn" data-acao="candidatos">👥 ${candidatos.length} candidato${candidatos.length === 1 ? '' : 's'}</button>
       <div class="minha-vaga-subform" data-form="candidatos" style="display:none;">
-        ${candidatos.map(c => `<div class="minha-vaga-detalhe">${escapeHtml(c.nome_candidato)} · ${escapeHtml(c.bairro_candidato || 'bairro não informado')} · ${escapeHtml(formatarCelular(c.celular_candidato))}</div>`).join('')}
+        ${candidatos.map(c => {
+          const idadeC = calcularIdade(c.data_nascimento_candidato);
+          const nascimentoTexto = c.data_nascimento_candidato
+            ? `${formatarDataPtBr(dataLocalDeStringSql(c.data_nascimento_candidato))}${idadeC !== null ? ` (${idadeC} anos)` : ''}`
+            : 'não informado';
+          return `<div class="minha-vaga-detalhe">${escapeHtml(c.nome_candidato)} · ${escapeHtml(c.bairro_candidato || 'bairro não informado')} · ${escapeHtml(formatarCelular(c.celular_candidato))} · ${escapeHtml(c.sexo_candidato || 'não informado')} · ${nascimentoTexto} · ${escapeHtml(c.estado_civil_candidato || 'não informado')}</div>`;
+        }).join('')}
       </div>
     </div>
   ` : '';

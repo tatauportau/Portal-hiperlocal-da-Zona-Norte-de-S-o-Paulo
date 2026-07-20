@@ -31,7 +31,8 @@ Portal de notícias hiperlocal que cobre os 18 distritos e 462 bairros da Zona N
 │   ├── 011_permite_validade_1_dia.sql  # Migração: permite dias_validade=1 (além de 7/14/21/30)
 │   ├── 012_candidaturas_vagas.sql  # Migração: candidaturas de leitores (opt-in, compartilha nome/bairro/celular)
 │   ├── 013_corrige_recursao_rls_candidaturas.sql  # Migração: corrige recursão infinita de RLS entre vagas_empresas e candidaturas_vagas
-│   └── 014_bloqueia_candidatura_propria_empresa.sql  # Migração: bloqueia candidatura à vaga da própria empresa
+│   ├── 014_bloqueia_candidatura_propria_empresa.sql  # Migração: bloqueia candidatura à vaga da própria empresa
+│   └── 015_dados_demograficos_candidato.sql  # Migração: sexo/data de nascimento/estado civil no cadastro do leitor
 ├── scripts/
 │   └── gerar-portau.js         # Lê data/conteudo-manual.json e injeta no HTML
 ├── netlify/
@@ -584,6 +585,44 @@ Claude Cowork (agendamento próprio, roda sozinho)
     (`.in('vaga_id', ...)`), agrupada em `_candidaturasPorVagaId` — visível
     pra qualquer um da empresa (não só quem criou a vaga), já que ver
     candidatos não é uma ação restrita como editar/cancelar/contratar.
+
+  ### Dados demográficos do leitor (sexo/nascimento/estado civil) — `sql/015_dados_demograficos_candidato.sql`
+
+  Três campos novos no cadastro do leitor (`#login-form-criar`): sexo,
+  data de nascimento e estado civil. Motivo: dado importante pra
+  estatísticas futuras do Portau e essencial pra empresa avaliar quem se
+  candidata a uma vaga — pedido explícito do Carlos junto com a observação
+  de mostrar a idade calculada ao lado da data de nascimento, não só a
+  data crua.
+
+  - **Obrigatórios no formulário** (`required` nos 3 campos), mas
+    **nullable no banco** — mesmo padrão já usado pra nome/bairro/celular
+    desde o `sql/001`, pra não quebrar contas já existentes (que ficam com
+    esses campos nulos até existir uma tela de editar cadastro).
+  - **Opções fixas via `check` constraint**: sexo em
+    `Masculino/Feminino/Prefiro não informar`; estado civil em
+    `Solteiro(a)/Casado(a)/Divorciado(a)/Viúvo(a)/União estável` — mesmo
+    padrão comum usado em outros cadastros, evita texto livre nesses
+    campos.
+  - **`handle_new_user()`** grava os 3 campos vindos do `raw_user_meta_data`
+    no insert de `profiles`, mesmo mecanismo já usado pra nome/bairro/celular.
+  - **Idade nunca é armazenada** — é sempre calculada no client a partir de
+    `data_nascimento` (`calcularIdade()`), tanto pro leitor quanto pra
+    empresa, pra nunca ficar desatualizada.
+  - **`dataLocalDeStringSql()`**: Postgres `date` volta como string
+    `'YYYY-MM-DD'`; `new Date('YYYY-MM-DD')` sozinho interpreta como UTC
+    meia-noite, o que no fuso do Brasil (UTC-3) exibe o dia anterior. O
+    helper força horário local (`'T00:00:00'`) antes de formatar/calcular
+    idade.
+  - **Candidatura a vaga passa a exigir os 3 campos também**
+    (`abrirCandidaturaVaga()`), e o snapshot em `candidaturas_vagas`
+    (`sexo_candidato`, `data_nascimento_candidato`, `estado_civil_candidato`)
+    é preenchido pelo mesmo trigger `preencher_candidatura_vaga()` que já
+    grava nome/bairro/celular — nunca confiando em valor vindo do client.
+  - **Empresa vê os 3 campos na lista de candidatos** (`criarCardMinhaVaga()`):
+    nome · bairro · celular · sexo · data de nascimento (idade) · estado
+    civil, com fallback "não informado" pra candidaturas anteriores a essa
+    migração (sem esses campos preenchidos).
 
   ### Bug corrigido (19/07/2026): recursão infinita de RLS entre vagas_empresas e candidaturas_vagas — `sql/013_corrige_recursao_rls_candidaturas.sql`
 
