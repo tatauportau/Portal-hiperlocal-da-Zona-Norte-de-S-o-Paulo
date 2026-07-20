@@ -2766,21 +2766,42 @@ async function vincularEmpresa() {
   sucessoEl.style.display = 'block';
 }
 
-function abrirEditarCadastro() {
+async function abrirEditarCadastro() {
   document.getElementById('auth-usuario-menu').classList.remove('aberto');
-  if (!perfilAtual) return;
+  if (!sessaoAtual || !sessaoAtual.user) return;
+  const idAlvo = sessaoAtual.user.id;
   document.getElementById('editar-cadastro-erro').style.display = 'none';
   document.getElementById('editar-cadastro-sucesso').style.display = 'none';
   document.getElementById('editar-cadastro-btn-salvar').disabled = false;
-  document.getElementById('editar-cadastro-nome').value = perfilAtual.nome || '';
-  document.getElementById('editar-cadastro-sexo').value = perfilAtual.sexo || '';
-  document.getElementById('editar-cadastro-nascimento').value = perfilAtual.data_nascimento || '';
-  document.getElementById('editar-cadastro-estado-civil').value = perfilAtual.estado_civil || '';
-  const bairroAtual = perfilAtual.bairro || '';
+  document.getElementById('editar-cadastro-form').reset();
+
+  // Busca o perfil na hora (em vez de confiar em perfilAtual em cache),
+  // pra nunca pre-preencher com dado de uma sessao anterior — ex.: se o
+  // usuario clicar aqui logo apos trocar de conta, antes do
+  // atualizarTopbarAuth() assincrono terminar de atualizar perfilAtual.
+  const { data, error } = await sb.from('profiles')
+    .select('nome, bairro, celular, sexo, data_nascimento, estado_civil')
+    .eq('id', idAlvo).single();
+  // A sessao pode ter trocado de novo enquanto essa busca estava em voo —
+  // se nao for mais a sessao atual, descarta o resultado.
+  if (!sessaoAtual || sessaoAtual.user.id !== idAlvo) return;
+  if (error || !data) {
+    document.getElementById('editar-cadastro-erro').textContent = 'Não foi possível carregar seu cadastro. Tente novamente.';
+    document.getElementById('editar-cadastro-erro').style.display = 'block';
+    document.getElementById('editar-cadastro-overlay').classList.add('aberto');
+    return;
+  }
+  perfilAtual = { ...perfilAtual, ...data };
+
+  document.getElementById('editar-cadastro-nome').value = data.nome || '';
+  document.getElementById('editar-cadastro-sexo').value = data.sexo || '';
+  document.getElementById('editar-cadastro-nascimento').value = data.data_nascimento || '';
+  document.getElementById('editar-cadastro-estado-civil').value = data.estado_civil || '';
+  const bairroAtual = data.bairro || '';
   const ehBairroZN = bairroAtual && _bairrosZonaNorteSet && _bairrosZonaNorteSet.has(bairroAtual);
   document.getElementById('editar-cadastro-bairro-zn').value = ehBairroZN ? bairroAtual : '';
   document.getElementById('editar-cadastro-bairro-outro').value = (bairroAtual && !ehBairroZN) ? bairroAtual : '';
-  document.getElementById('editar-cadastro-celular').value = perfilAtual.celular ? formatarCelular(perfilAtual.celular) : '';
+  document.getElementById('editar-cadastro-celular').value = data.celular ? formatarCelular(data.celular) : '';
   document.getElementById('editar-cadastro-overlay').classList.add('aberto');
 }
 function fecharEditarCadastro() {
@@ -2828,6 +2849,11 @@ async function salvarEditarCadastro() {
   }
   const celular = celularFormatado ? celularFormatado.replace(/\D/g, '') : null;
 
+  if (!sessaoAtual || !sessaoAtual.user) {
+    erroEl.textContent = 'Sua sessão expirou. Entre novamente e tente de novo.';
+    erroEl.style.display = 'block';
+    return;
+  }
   const btn = document.getElementById('editar-cadastro-btn-salvar');
   btn.disabled = true;
   const { error } = await sb.from('profiles').update({
