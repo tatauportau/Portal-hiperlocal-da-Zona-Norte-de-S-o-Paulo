@@ -28,12 +28,8 @@
   .topbar strong{color:var(--cinza-q);}
   header{background:var(--branco);border-bottom:1px solid var(--cinza-l);padding:0 24px;position:fixed;top:32px;left:0;right:0;z-index:150;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
   .header-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:8px 0;gap:16px;flex-wrap:wrap;}
-  .sub-nav-strip{background:transparent;display:flex;gap:6px;overflow-x:auto;flex:1 1 0;min-width:0;order:3;width:100%;justify-content:flex-start;align-items:center;mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent 100%);-webkit-mask-image:linear-gradient(to right,#000 calc(100% - 28px),transparent 100%);}
-  .sub-nav-strip::-webkit-scrollbar{display:none;}
-  @media (min-width:860px){
-    .header-inner{flex-wrap:nowrap;}
-    .sub-nav-strip{order:0;width:auto;}
-  }
+  .sub-nav-row{background:var(--creme);border-top:1px solid var(--cinza-l);padding:0 24px;}
+  .sub-nav-strip{max-width:1160px;margin:0 auto;background:transparent;display:flex;gap:6px;flex-wrap:wrap;justify-content:center;align-items:center;padding:8px 0;}
   .logo{display:flex;flex-direction:row;align-items:center;gap:12px;text-decoration:none;flex-shrink:0;}
   .logo-img-crop{height:56px;display:flex;align-items:center;flex-shrink:0;}
   .logo-img{height:56px;width:auto;aspect-ratio:790/311;display:block;}
@@ -708,17 +704,6 @@ setInterval(carregarTicker, 900000);
       <div class="logo-img-crop"><img class="logo-img" src="assets/logo.png" alt="Portau"></div>
     </a>
 
-    <div class="sub-nav-strip" id="sub-nav-strip">
-      <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
-      <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
-      <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
-      <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
-      <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
-      <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
-      <button class="sub-btn" data-sub="pirituba"><i class="ti ti-building-factory"></i><span>Pirituba</span></button>
-      <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
-    </div>
-
     <div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex-shrink:0;">
       <div class="clima-chip">
         <span id="clima-icone">⏳</span>
@@ -752,6 +737,18 @@ setInterval(carregarTicker, 900000);
       </div>
     </div>
 
+  </div>
+  <div class="sub-nav-row">
+    <div class="sub-nav-strip" id="sub-nav-strip">
+      <button class="sub-btn ativo" data-sub="todas"><i class="ti ti-map-2"></i><span>Todas</span></button>
+      <button class="sub-btn" data-sub="santana"><i class="ti ti-building-skyscraper"></i><span>Santana</span></button>
+      <button class="sub-btn" data-sub="casaverde"><i class="ti ti-trees"></i><span>Casa Verde</span></button>
+      <button class="sub-btn" data-sub="vilamaria"><i class="ti ti-home"></i><span>Vila Maria</span></button>
+      <button class="sub-btn" data-sub="jacana"><i class="ti ti-mountain"></i><span>Jaçanã</span></button>
+      <button class="sub-btn" data-sub="freguesia"><i class="ti ti-building-church"></i><span>Freguesia</span></button>
+      <button class="sub-btn" data-sub="pirituba"><i class="ti ti-building-factory"></i><span>Pirituba</span></button>
+      <button class="sub-btn" data-sub="perus"><i class="ti ti-tree"></i><span>Perus</span></button>
+    </div>
   </div>
 </header>
 
