@@ -28,7 +28,7 @@
   .topbar strong{color:var(--cinza-q);}
   header{background:var(--branco);border-bottom:1px solid var(--cinza-l);padding:0 24px;position:fixed;top:32px;left:0;right:0;z-index:150;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
   .header-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:8px 0;gap:16px;flex-wrap:wrap;}
-  .sub-nav-strip{background:transparent;display:flex;gap:6px;overflow-x:auto;flex:1 1 0;min-width:0;order:3;width:100%;justify-content:center;align-items:center;}
+  .sub-nav-strip{background:transparent;display:flex;gap:6px;overflow-x:auto;flex:1 1 0;min-width:0;order:3;width:100%;justify-content:flex-start;align-items:center;}
   .sub-nav-strip::-webkit-scrollbar{display:none;}
   @media (min-width:860px){
     .header-inner{flex-wrap:nowrap;}
@@ -611,8 +611,8 @@
   .vaga-patrocinada-pill{font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:20px;background:var(--cinza-q);color:var(--branco);white-space:nowrap;}
   .vaga-candidatar{font-size:11px;font-weight:700;color:var(--cinza-q);text-decoration:underline;}
   .vaga-candidatar-email{font-size:11px;color:var(--cinza-m);}
-  .vaga-candidatar-portau-btn{font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid #6E6E6E;background:#6E6E6E;color:var(--branco);cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .15s;}
-  .vaga-candidatar-portau-btn:hover{opacity:.85;}
+  .vaga-candidatar-portau-btn{font-size:11px;font-weight:700;padding:6px 12px;border-radius:20px;border:1px solid var(--cinza-q);background:var(--branco);color:var(--cinza-q);cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;transition:background .15s,color .15s;}
+  .vaga-candidatar-portau-btn:hover{background:var(--cinza-q);color:var(--branco);}
   .vaga-candidatar-feito{font-size:11px;font-weight:700;color:#2e7d32;}
   .candidatura-vaga-resumo{background:var(--creme);border-radius:8px;padding:10px 12px;font-size:12px;color:var(--cinza-q);line-height:1.6;margin-bottom:10px;}
   .vagas-filtro-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
