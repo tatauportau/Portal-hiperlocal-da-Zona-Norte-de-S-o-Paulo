@@ -729,6 +729,7 @@ setInterval(carregarTicker, 900000);
       <div class="auth-usuario" id="auth-usuario" onclick="toggleAuthMenu()">
         <span id="auth-usuario-nome">Olá</span><i class="ti ti-chevron-down" style="font-size:12px;"></i>
         <div class="auth-usuario-menu" id="auth-usuario-menu">
+          <button onclick="abrirEditarCadastro()">✏️ Editar Cadastro</button>
           <button id="auth-minhas-vagas-btn" style="display:none;" onclick="abrirMinhasVagas()">🏢 Minhas Vagas</button>
           <button id="auth-vincular-empresa-btn" style="display:none;" onclick="abrirVincularEmpresa()">🏢 Vincular empresa</button>
           <button id="auth-minhas-candidaturas-btn" style="display:none;" onclick="abrirMinhasCandidaturas()">📋 Minhas Candidaturas</button>
@@ -2431,6 +2432,39 @@ document.getElementById('globo-wrap').addEventListener('dblclick', abrirGA);
   </div>
 </div>
 
+<!-- MODAL EDITAR CADASTRO -->
+<div class="login-overlay" id="editar-cadastro-overlay">
+  <div class="login-painel">
+    <button class="login-fechar" onclick="fecharEditarCadastro()">✕</button>
+    <div class="login-titulo">Editar Cadastro</div>
+    <form class="login-form ativo" id="editar-cadastro-form" onsubmit="event.preventDefault(); salvarEditarCadastro();">
+      <input class="login-input" type="text" id="editar-cadastro-nome" placeholder="Nome" required autocomplete="name">
+      <select class="login-select" id="editar-cadastro-sexo" required>
+        <option value="" disabled>Sexo</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Prefiro não informar">Prefiro não informar</option>
+      </select>
+      <input class="login-input" type="date" id="editar-cadastro-nascimento" placeholder="Data de nascimento" required>
+      <select class="login-select" id="editar-cadastro-estado-civil" required>
+        <option value="" disabled>Estado civil</option>
+        <option value="Solteiro(a)">Solteiro(a)</option>
+        <option value="Casado(a)">Casado(a)</option>
+        <option value="Divorciado(a)">Divorciado(a)</option>
+        <option value="Viúvo(a)">Viúvo(a)</option>
+        <option value="União estável">União estável</option>
+      </select>
+      <input class="login-input" type="text" id="editar-cadastro-bairro-zn" placeholder="Bairro da Zona Norte (opcional)" list="login-bairros-datalist" autocomplete="off">
+      <div style="font-size:11px;color:var(--cinza-m);text-align:center;">ou, se não mora na Zona Norte:</div>
+      <input class="login-input" type="text" id="editar-cadastro-bairro-outro" placeholder="Sua cidade ou bairro">
+      <input class="login-input" type="tel" id="editar-cadastro-celular" placeholder="Celular com DDD (opcional)" oninput="this.value = formatarCelular(this.value)" maxlength="15">
+      <div class="login-erro" id="editar-cadastro-erro"></div>
+      <div class="login-sucesso" id="editar-cadastro-sucesso"></div>
+      <button class="login-btn" type="submit" id="editar-cadastro-btn-salvar">Salvar</button>
+    </form>
+  </div>
+</div>
+
 <!-- MODAL CANDIDATAR-SE A VAGA (leitor confirma compartilhar nome/bairro/celular) -->
 <div class="login-overlay" id="candidatura-vaga-overlay">
   <div class="login-painel">
@@ -2729,6 +2763,95 @@ async function vincularEmpresa() {
   document.getElementById('auth-vincular-empresa-btn').style.display = 'none';
   document.getElementById('auth-minhas-vagas-btn').style.display = '';
   sucessoEl.textContent = 'Empresa vinculada com sucesso! Agora você já pode anunciar vagas.';
+  sucessoEl.style.display = 'block';
+}
+
+function abrirEditarCadastro() {
+  document.getElementById('auth-usuario-menu').classList.remove('aberto');
+  if (!perfilAtual) return;
+  document.getElementById('editar-cadastro-erro').style.display = 'none';
+  document.getElementById('editar-cadastro-sucesso').style.display = 'none';
+  document.getElementById('editar-cadastro-btn-salvar').disabled = false;
+  document.getElementById('editar-cadastro-nome').value = perfilAtual.nome || '';
+  document.getElementById('editar-cadastro-sexo').value = perfilAtual.sexo || '';
+  document.getElementById('editar-cadastro-nascimento').value = perfilAtual.data_nascimento || '';
+  document.getElementById('editar-cadastro-estado-civil').value = perfilAtual.estado_civil || '';
+  const bairroAtual = perfilAtual.bairro || '';
+  const ehBairroZN = bairroAtual && _bairrosZonaNorteSet && _bairrosZonaNorteSet.has(bairroAtual);
+  document.getElementById('editar-cadastro-bairro-zn').value = ehBairroZN ? bairroAtual : '';
+  document.getElementById('editar-cadastro-bairro-outro').value = (bairroAtual && !ehBairroZN) ? bairroAtual : '';
+  document.getElementById('editar-cadastro-celular').value = perfilAtual.celular ? formatarCelular(perfilAtual.celular) : '';
+  document.getElementById('editar-cadastro-overlay').classList.add('aberto');
+}
+function fecharEditarCadastro() {
+  document.getElementById('editar-cadastro-overlay').classList.remove('aberto');
+}
+
+async function salvarEditarCadastro() {
+  const erroEl = document.getElementById('editar-cadastro-erro');
+  const sucessoEl = document.getElementById('editar-cadastro-sucesso');
+  erroEl.style.display = 'none';
+  sucessoEl.style.display = 'none';
+
+  const nome = document.getElementById('editar-cadastro-nome').value.trim();
+  const sexo = document.getElementById('editar-cadastro-sexo').value;
+  const dataNascimento = document.getElementById('editar-cadastro-nascimento').value;
+  const estadoCivil = document.getElementById('editar-cadastro-estado-civil').value;
+  if (!nome) {
+    erroEl.textContent = 'Informe seu nome.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  if (!sexo || !dataNascimento || !estadoCivil) {
+    erroEl.textContent = 'Preencha sexo, data de nascimento e estado civil.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  const bairroZN = document.getElementById('editar-cadastro-bairro-zn').value.trim();
+  const bairroOutro = document.getElementById('editar-cadastro-bairro-outro').value.trim();
+  if (bairroZN && bairroOutro) {
+    erroEl.textContent = 'Preencha só um dos dois campos de bairro: da Zona Norte OU de fora.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  if (bairroZN && _bairrosZonaNorteSet && !_bairrosZonaNorteSet.has(bairroZN)) {
+    erroEl.textContent = 'Selecione um bairro válido da lista da Zona Norte, ou preencha o campo "Sua cidade ou bairro" abaixo.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  const bairro = bairroZN || bairroOutro || null;
+  const celularFormatado = document.getElementById('editar-cadastro-celular').value.trim();
+  if (celularFormatado && !/^\(\d{2}\) \d{5}-\d{4}$/.test(celularFormatado)) {
+    erroEl.textContent = 'Celular inválido. Use o formato (11) 98765-4321.';
+    erroEl.style.display = 'block';
+    return;
+  }
+  const celular = celularFormatado ? celularFormatado.replace(/\D/g, '') : null;
+
+  const btn = document.getElementById('editar-cadastro-btn-salvar');
+  btn.disabled = true;
+  const { error } = await sb.from('profiles').update({
+    nome, bairro, celular, sexo, data_nascimento: dataNascimento, estado_civil: estadoCivil,
+  }).eq('id', sessaoAtual.user.id);
+  btn.disabled = false;
+
+  if (error) {
+    console.error('Erro ao salvar cadastro:', error);
+    erroEl.textContent = (error.code === '23505')
+      ? 'Este celular já está cadastrado em outra conta.'
+      : 'Não foi possível salvar. Tente novamente.';
+    erroEl.style.display = 'block';
+    return;
+  }
+
+  perfilAtual.nome = nome;
+  perfilAtual.bairro = bairro;
+  perfilAtual.celular = celular;
+  perfilAtual.sexo = sexo;
+  perfilAtual.data_nascimento = dataNascimento;
+  perfilAtual.estado_civil = estadoCivil;
+  document.getElementById('auth-usuario-nome').textContent = 'Olá, ' + nome;
+  sucessoEl.textContent = 'Cadastro atualizado com sucesso!';
   sucessoEl.style.display = 'block';
 }
 
@@ -3322,6 +3445,7 @@ function abrirCandidaturaVaga(v) {
   }
   if (!perfilAtual || !perfilAtual.nome || !perfilAtual.celular || !perfilAtual.sexo || !perfilAtual.data_nascimento || !perfilAtual.estado_civil) {
     alert('Complete seu cadastro (nome, celular, sexo, data de nascimento e estado civil) antes de se candidatar a uma vaga.');
+    abrirEditarCadastro();
     return;
   }
   _vagaEmCandidatura = v;
@@ -3944,6 +4068,7 @@ window.addEventListener('keydown', function(e) {
     if (document.getElementById('local-vaga-overlay').classList.contains('aberto')) fecharSelecaoLocal();
     if (document.getElementById('minhas-vagas-overlay').classList.contains('aberto')) fecharMinhasVagas();
     if (document.getElementById('vincular-empresa-overlay').classList.contains('aberto')) fecharVincularEmpresa();
+    if (document.getElementById('editar-cadastro-overlay').classList.contains('aberto')) fecharEditarCadastro();
     if (document.getElementById('candidatura-vaga-overlay').classList.contains('aberto')) fecharCandidaturaVaga();
     if (document.getElementById('minhas-candidaturas-overlay').classList.contains('aberto')) fecharMinhasCandidaturas();
   }

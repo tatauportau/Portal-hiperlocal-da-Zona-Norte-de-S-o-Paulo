@@ -624,6 +624,38 @@ Claude Cowork (agendamento próprio, roda sozinho)
     civil, com fallback "não informado" pra candidaturas anteriores a essa
     migração (sem esses campos preenchidos).
 
+  ### Editar Cadastro (20/07/2026)
+
+  Gap encontrado em teste: contas criadas antes do `sql/015` ficam com
+  sexo/data_nascimento/estado_civil nulos, e não existia nenhuma tela pra
+  o leitor preencher esses dados depois — `abrirCandidaturaVaga()` só
+  mostrava um alerta pedindo pra completar o cadastro, sem nenhum caminho
+  pra fazer isso. Novo item **"✏️ Editar Cadastro"** no menu do usuário
+  (`abrirEditarCadastro()`/`salvarEditarCadastro()`, modal
+  `#editar-cadastro-overlay`, mesmo shell dos outros modais do site).
+
+  - **Sem migração nova**: os grants de `update` em `profiles`
+    (`nome, bairro, distrito, celular, sexo, data_nascimento,
+    estado_civil`) já tinham sido emitidos no `sql/015` — só faltava a UI.
+  - **Pré-preenche a partir de `perfilAtual`** ao abrir; campo de bairro
+    reusa o mesmo padrão de dois campos do cadastro (dropdown da Zona
+    Norte vs. "sua cidade ou bairro"), decidindo qual dos dois preencher
+    checando se o bairro salvo está em `_bairrosZonaNorteSet`.
+  - **Mesma validação do cadastro** (nome obrigatório; sexo/nascimento/
+    estado civil obrigatórios; só um dos dois campos de bairro; celular
+    no formato `(11) 98765-4321` se preenchido).
+  - **Erro de celular duplicado tratado direto do `update`** (código
+    Postgres `23505`, índice único parcial `profiles_celular_unico` do
+    `sql/002`) em vez de pré-checar via `celular_ja_cadastrado` RPC como
+    no cadastro — a RPC não exclui a própria linha do usuário, então
+    reusar o número já cadastrado (sem mudança) acusaria falso positivo
+    de duplicidade.
+  - **`abrirCandidaturaVaga()` agora abre o modal automaticamente** quando
+    o cadastro está incompleto, em vez de só mostrar o alerta e deixar o
+    leitor sem próximo passo.
+  - Sucesso atualiza `perfilAtual` e o nome na topbar em memória — sem
+    precisar recarregar a página pra refletir a mudança.
+
   ### Bug corrigido (19/07/2026): recursão infinita de RLS entre vagas_empresas e candidaturas_vagas — `sql/013_corrige_recursao_rls_candidaturas.sql`
 
   A 4ª policy de select em `vagas_empresas` (item acima) consulta
