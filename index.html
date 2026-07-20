@@ -3259,11 +3259,16 @@ async function carregarVagasEmpresas() {
   _minhasCandidaturasVagaIds = new Set((minhas || []).map(c => c.vaga_id));
 
   secaoVagas.querySelectorAll('.vaga-patrocinada').forEach(el => el.remove());
-  const header = secaoVagas.querySelector('.secao-header');
-  // Insere em ordem reversa (mais antiga primeiro) logo apos o header, para
+  // Ancora e' o ultimo elemento estatico antes da lista de cards (a barra
+  // de busca/filtro), nao o header — inserir "afterend" do header
+  // empurrava a barra de busca pra baixo a cada card patrocinado
+  // adicionado, fazendo ela acabar aparecendo depois das vagas em vez de
+  // no topo da secao (bug reportado 19/07/2026).
+  const ancora = secaoVagas.querySelector('#vagas-filtro-vazio') || secaoVagas.querySelector('.secao-header');
+  // Insere em ordem reversa (mais antiga primeiro) logo apos a ancora, para
   // que ao final a mais recente fique no topo da lista.
   [...data].reverse().forEach(v => {
-    header.insertAdjacentElement('afterend', criarCardVagaEmpresa(v));
+    ancora.insertAdjacentElement('afterend', criarCardVagaEmpresa(v));
   });
   atualizarContadorVagas(secaoVagas, data.length);
 }
