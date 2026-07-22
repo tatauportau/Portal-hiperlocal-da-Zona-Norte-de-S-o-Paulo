@@ -4121,5 +4121,218 @@ window.addEventListener('keydown', function(e) {
 })();
 </script>
 
+<div id="tour-dim"></div>
+<div id="tour-balao">
+  <div class="tour-topo">
+    <img id="tour-avatar" class="tour-avatar" src="" alt="Guia PortauZN">
+    <div class="tour-texto" id="tour-texto"></div>
+  </div>
+  <div class="tour-rodape">
+    <span class="tour-passo" id="tour-passo"></span>
+    <div class="tour-botoes">
+      <button class="tour-pular" onclick="pularTourPortau()">Pular</button>
+      <button class="tour-voltar" id="tour-btn-voltar" onclick="tourPassoAnterior()">Voltar</button>
+      <button class="tour-proximo" id="tour-btn-proximo" onclick="tourProximoPasso()">Próximo</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #tour-dim{
+    position:fixed; inset:0; background:rgba(20,20,20,.6); z-index:9998;
+    opacity:0; pointer-events:none; transition:opacity .25s ease;
+  }
+  #tour-dim.ativo{opacity:1; pointer-events:auto;}
+  .tour-alvo{
+    position:relative; z-index:9999;
+    box-shadow:0 0 0 5px #fff, 0 0 0 8px #0051A8, 0 8px 30px rgba(0,0,0,.35);
+    border-radius:12px;
+    transition:box-shadow .2s ease;
+  }
+  #tour-balao{
+    position:fixed; z-index:10000; width:300px; max-width:calc(100vw - 32px);
+    background:#fff; border-radius:16px; box-shadow:0 12px 40px rgba(0,0,0,.25);
+    padding:16px; opacity:0; transform:translateY(6px); transition:opacity .2s ease, transform .2s ease;
+    pointer-events:none; font-family:'Inter',Arial,sans-serif;
+  }
+  #tour-balao.ativo{opacity:1; transform:translateY(0); pointer-events:auto;}
+  .tour-topo{display:flex; gap:12px; align-items:flex-start;}
+  .tour-avatar{width:56px; height:56px; border-radius:50%; object-fit:cover; flex-shrink:0; background:#faf8f4;}
+  .tour-texto{font-size:13.5px; line-height:1.5; color:#2b2b2b; padding-top:2px;}
+  .tour-rodape{display:flex; align-items:center; justify-content:space-between; margin-top:14px;}
+  .tour-passo{font-size:11px; color:#6b6b6b; font-weight:600;}
+  .tour-botoes{display:flex; gap:8px;}
+  .tour-botoes button{
+    border:none; border-radius:8px; padding:7px 14px; font-size:12.5px; font-weight:600; cursor:pointer;
+  }
+  .tour-pular{background:transparent; color:#6b6b6b;}
+  .tour-voltar{background:#f0ede6; color:#2b2b2b;}
+  .tour-proximo{background:#0051A8; color:#fff;}
+  @media (max-width:640px){
+    #tour-balao{ left:16px !important; right:16px !important; width:auto !important; top:auto !important; bottom:16px !important; }
+  }
+</style>
+
+<script>
+(function(){
+
+  const CHAVE_LOCALSTORAGE = 'portau_tour_visto';
+
+  const AVATAR = {
+    aplaudindo: 'assets/mascote-aplaudindo.png',
+    neutro: 'assets/mascote-neutro.png',
+    positivo: 'assets/mascote-positivo.png'
+  };
+
+  const PASSOS_TOUR = [
+    {
+      alvo: null,
+      imagem: 'aplaudindo',
+      texto: 'Oi! Eu sou o guia do PortauZN. Deixa eu te mostrar rapidinho como funciona por aqui! 👋'
+    },
+    {
+      alvo: '#sub-nav-strip',
+      imagem: 'neutro',
+      texto: 'Aqui você filtra as notícias pela sua região — Santana, Casa Verde, Jaçanã e mais.'
+    },
+    {
+      alvo: '#noticias',
+      imagem: 'neutro',
+      texto: 'Todo dia tem novidade fresquinha da Zona Norte: notícias, agenda, vagas, política e alertas.'
+    },
+    {
+      alvo: '.ancora-btn[onclick*="abrirBairros"]',
+      imagem: 'neutro',
+      texto: 'Clique aqui pra abrir o mapa da Zona Norte, descubra quantos bairros existem na Zona Norte!'
+    },
+    {
+      alvo: '.carro-bar',
+      imagem: 'neutro',
+      texto: 'Nesta estrada o nosso motorista te leva para o Waze pelos bairros da Zona Norte — basta entrar e clicar na estrada.'
+    },
+    {
+      alvo: '.globo-wrap',
+      imagem: 'neutro',
+      texto: 'Vamos brincar de girar o mundo? Esse globo também mostra como estão os acessos ao PortauZN — é só dar dois cliques nele.'
+    },
+    {
+      alvo: '#vagas',
+      imagem: 'neutro',
+      texto: 'Empresas perto de você vão publicar suas vagas no PortauZN — e você pode se candidatar enviando seus dados para a empresa. Boa sorte!'
+    },
+    {
+      alvo: '#auth-entrar-btn',
+      imagem: 'positivo',
+      texto: 'Faça seu cadastro e não perca nada do seu bairro. Bora? 🎉',
+      ultimo: true
+    }
+  ];
+
+  let passoAtual = 0;
+  let alvoAnteriorEl = null;
+
+  function limparAlvo(){
+    if (alvoAnteriorEl) {
+      alvoAnteriorEl.classList.remove('tour-alvo');
+      alvoAnteriorEl = null;
+    }
+  }
+
+  function posicionarBalao(el){
+    const balao = document.getElementById('tour-balao');
+    const margem = 16;
+
+    if (window.innerWidth <= 640) return; // CSS já fixa embaixo no mobile
+
+    if (!el) {
+      balao.style.top = '50%';
+      balao.style.left = '50%';
+      balao.style.transform = 'translate(-50%,-50%)';
+      return;
+    }
+
+    const r = el.getBoundingClientRect();
+    let top = r.bottom + margem;
+    let left = r.left;
+
+    if (left + 300 > window.innerWidth - 16) left = window.innerWidth - 316;
+    if (left < 16) left = 16;
+    if (top + 160 > window.innerHeight) top = Math.max(16, r.top - 160 - margem);
+
+    balao.style.transform = 'none';
+    balao.style.top = top + 'px';
+    balao.style.left = left + 'px';
+  }
+
+  function renderPasso(){
+    while (passoAtual < PASSOS_TOUR.length - 1 && PASSOS_TOUR[passoAtual].alvo && !document.querySelector(PASSOS_TOUR[passoAtual].alvo)) {
+      passoAtual++;
+    }
+
+    const passo = PASSOS_TOUR[passoAtual];
+    limparAlvo();
+
+    const el = passo.alvo ? document.querySelector(passo.alvo) : null;
+    if (el) {
+      el.classList.add('tour-alvo');
+      el.scrollIntoView({ behavior:'smooth', block:'center' });
+      alvoAnteriorEl = el;
+    }
+
+    document.getElementById('tour-avatar').src = AVATAR[passo.imagem];
+    document.getElementById('tour-texto').textContent = passo.texto;
+    document.getElementById('tour-passo').textContent = (passoAtual+1) + ' de ' + PASSOS_TOUR.length;
+    document.getElementById('tour-btn-voltar').style.visibility = passoAtual === 0 ? 'hidden' : 'visible';
+    document.getElementById('tour-btn-proximo').textContent = passo.ultimo ? 'Concluir' : 'Próximo';
+
+    setTimeout(() => posicionarBalao(el), el ? 800 : 0);
+  }
+
+  window.iniciarTourPortau = function(forcar){
+    if (!forcar && localStorage.getItem(CHAVE_LOCALSTORAGE)) return;
+    passoAtual = 0;
+    document.getElementById('tour-dim').classList.add('ativo');
+    document.getElementById('tour-balao').classList.add('ativo');
+    renderPasso();
+  };
+
+  function encerrarTour(){
+    limparAlvo();
+    document.getElementById('tour-dim').classList.remove('ativo');
+    document.getElementById('tour-balao').classList.remove('ativo');
+    localStorage.setItem(CHAVE_LOCALSTORAGE, '1');
+  }
+
+  window.tourProximoPasso = function(){
+    const passo = PASSOS_TOUR[passoAtual];
+    if (passo.ultimo) { encerrarTour(); return; }
+    passoAtual++;
+    renderPasso();
+  };
+
+  window.tourPassoAnterior = function(){
+    if (passoAtual === 0) return;
+    passoAtual--;
+    renderPasso();
+  };
+
+  window.pularTourPortau = function(){
+    encerrarTour();
+  };
+
+  window.addEventListener('resize', () => {
+    if (document.getElementById('tour-balao').classList.contains('ativo')) {
+      const passo = PASSOS_TOUR[passoAtual];
+      posicionarBalao(passo.alvo ? document.querySelector(passo.alvo) : null);
+    }
+  });
+
+  window.addEventListener('load', () => {
+    setTimeout(() => window.iniciarTourPortau(false), 1000);
+  });
+
+})();
+</script>
+
 </body>
 </html>
