@@ -18,6 +18,11 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-23 — Code (2)
+
+- **Revertido** o fix de largura (`corrigirLarguraFixos`) e o `viewport-fit=cover` da entrada anterior: a correção causou um problema pior em produção (conteúdo sobrepondo/quebrando na tela, visto pelo Carlos ao testar no celular). Removido também o botão "Instalar app" do header a pedido dele.
+- Estado atual: voltamos ao bug visual original (header/ticker mais largos que a tela em certos contextos), sem o novo problema de sobreposição. Causa raiz identificada (ver entrada anterior) mas o fix aplicado não é seguro como estava — precisa de outra abordagem. **Retomar nesta investigação antes de tentar de novo**, testando com mais cuidado em viewport real antes de publicar.
+
 ## 2026-07-23 — Code
 
 - Achada e corrigida a causa raiz do bug de "zoom" no PWA instalado (investigado ao longo de várias sessões, ver entradas de 22/07 abaixo): qualquer elemento `position:fixed` com `left:0;right:0` ou `inset:0` (header, ticker de notícias no topo, todos os modais/overlays) renderizava ~1.64x mais largo que o viewport real. Reproduzido tanto no Android do Carlos quanto num navegador desktop redimensionado, incluindo direto em produção — não é específico de WebAPK/Android. `document.documentElement.clientWidth` sempre reportava o valor certo; só a largura desses elementos fixed vinha errada, e não dependia do conteúdo do ticker (testado isolando).
