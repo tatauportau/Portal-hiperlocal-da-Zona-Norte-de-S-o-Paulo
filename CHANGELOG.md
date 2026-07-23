@@ -18,6 +18,12 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-22 — Code (3)
+
+- Novo passo final no tour de boas-vindas convidando a instalar o PWA: no Chrome/Android, botão "Instalar" dispara o prompt nativo (`beforeinstallprompt`) direto; no iPhone (Safari não suporta esse evento), mostra instrução manual (Compartilhar > Adicionar à Tela de Início); sem prompt disponível, aponta pro ícone da barra de endereço. Passo é pulado automaticamente se o site já estiver rodando em modo standalone (já instalado). Motivado pelo Carlos ter testado e achado o ícone de instalar padrão do navegador pequeno demais pra ser descoberto sozinho.
+- Botão "?" fixo no header (ao lado do "Entrar", sempre visível) pra reabrir o tour quando o usuário quiser — antes só rodava automaticamente na 1ª visita via `localStorage`.
+- Bug corrigido durante o teste: como o passo de instalação é o último do array, a lógica de "pular passo automaticamente" (usada quando um elemento-alvo não existe) não conseguia pular esse passo específico por causa da guarda de limite do array — corrigido pra checar a condição de pular antes de renderizar, não só dentro do loop de avanço.
+
 ## 2026-07-22 — Code (2)
 
 - Portau agora é instalável como PWA (Progressive Web App): `manifest.json`, `sw.js` e ícones novos em `assets/icons/` (recortados do símbolo globo+pin do logo existente). Motivado por 82% dos acessos ao site serem via celular (GA4).
