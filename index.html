@@ -578,6 +578,8 @@
   .auth-chip { display: flex; align-items: center; gap: 8px; flex-shrink: 0; position: relative; }
   .auth-entrar-btn { font-size: 12px; font-weight: 700; color: var(--cinza-q); background: var(--branco); border: 1px solid var(--cinza-l); padding: 7px 16px; border-radius: 20px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all .15s; }
   .auth-entrar-btn:hover { border-color: var(--cinza-q); }
+  .tour-ajuda-btn { width: 30px; height: 30px; flex-shrink: 0; font-size: 14px; font-weight: 800; color: var(--cinza-q); background: var(--branco); border: 1px solid var(--cinza-l); border-radius: 50%; cursor: pointer; font-family: 'Inter', sans-serif; transition: all .15s; }
+  .tour-ajuda-btn:hover { border-color: var(--cinza-q); background: var(--creme); }
   .auth-usuario { display: none; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--cinza-q); cursor: pointer; padding: 6px 10px; border-radius: 20px; }
   .auth-usuario:hover { background: var(--creme); }
   .auth-usuario-menu { display: none; position: absolute; top: 100%; right: 0; margin-top: 8px; background: var(--branco); border: 1px solid var(--cinza-l); border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); min-width: 150px; overflow: hidden; z-index: 200; }
@@ -732,6 +734,7 @@ setInterval(carregarTicker, 900000);
     <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
 
     <div class="auth-chip">
+      <button class="tour-ajuda-btn" onclick="window.iniciarTourPortau(true)" title="Ver tour de boas-vindas de novo">?</button>
       <button class="auth-entrar-btn" id="auth-entrar-btn" onclick="abrirLogin()">Entrar</button>
       <div class="auth-usuario" id="auth-usuario" onclick="toggleAuthMenu()">
         <span id="auth-usuario-nome">Olá</span><i class="ti ti-chevron-down" style="font-size:12px;"></i>
