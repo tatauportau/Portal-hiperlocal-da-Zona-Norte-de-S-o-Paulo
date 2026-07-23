@@ -18,6 +18,13 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-22 — Code (4)
+
+- Corrigidos 2 problemas relatados pelo Carlos após instalar o PWA num Android real:
+  - Ícone na tela inicial ilegível: `assets/icons/icon-maskable-512.png` tinha fundo azul, mesma cor do globo do símbolo — o globo sumia visualmente, sobrando só o pin verde. Fundo trocado pra branco.
+  - Layout/texto grande demais ao abrir o app instalado (e a barrinha de trânsito "quebrando", texto/emoji do carrinho sobrepondo): bug conhecido do Android WebView/WebAPK que infla fonte automaticamente em modo standalone. Corrigido com `text-size-adjust:100%` no `<html>`.
+- Essas duas mudanças só são visíveis depois de: (1) publicar em produção e (2) o app já instalado no celular atualizar — ícone/manifest de PWA instalado não atualiza na hora, pode levar até desinstalar e reinstalar pra garantir.
+
 ## 2026-07-22 — Code (3)
 
 - Novo passo final no tour de boas-vindas convidando a instalar o PWA: no Chrome/Android, botão "Instalar" dispara o prompt nativo (`beforeinstallprompt`) direto; no iPhone (Safari não suporta esse evento), mostra instrução manual (Compartilhar > Adicionar à Tela de Início); sem prompt disponível, aponta pro ícone da barra de endereço. Passo é pulado automaticamente se o site já estiver rodando em modo standalone (já instalado). Motivado pelo Carlos ter testado e achado o ícone de instalar padrão do navegador pequeno demais pra ser descoberto sozinho.
