@@ -4441,22 +4441,31 @@ if ('serviceWorker' in navigator) {
 </script>
 
 <!-- DEBUG TEMPORÁRIO — investigando bug de zoom no PWA instalado. Remover depois. -->
-<div id="debug-viewport" style="position:fixed;bottom:8px;left:8px;z-index:99999;background:rgba(0,0,0,.85);color:#0f0;font:10px/1.4 monospace;padding:8px 10px;border-radius:8px;max-width:260px;white-space:pre-wrap;"></div>
+<div id="debug-viewport" style="position:fixed;bottom:8px;left:8px;z-index:99999;background:rgba(0,0,0,.9);color:#0f0;font:9px/1.35 monospace;padding:8px 10px;border-radius:8px;max-width:260px;max-height:70vh;overflow-y:auto;white-space:pre-wrap;"></div>
 <script>
 (function(){
   function atualizarDebug(){
     const el = document.getElementById('debug-viewport');
     if (!el) return;
     const raiz = getComputedStyle(document.documentElement);
+    const corpo = getComputedStyle(document.body);
     el.textContent =
       'standalone: ' + (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true) + '\n' +
       'innerW x innerH: ' + window.innerWidth + ' x ' + window.innerHeight + '\n' +
+      'outerW x outerH: ' + window.outerWidth + ' x ' + window.outerHeight + '\n' +
       'clientW x clientH: ' + document.documentElement.clientWidth + ' x ' + document.documentElement.clientHeight + '\n' +
       'screen: ' + window.screen.width + ' x ' + window.screen.height + '\n' +
+      'screen avail: ' + window.screen.availWidth + ' x ' + window.screen.availHeight + '\n' +
       'devicePixelRatio: ' + window.devicePixelRatio + '\n' +
       'visualViewport.scale: ' + (window.visualViewport ? window.visualViewport.scale : 'n/a') + '\n' +
-      'visualViewport W: ' + (window.visualViewport ? window.visualViewport.width : 'n/a') + '\n' +
-      'html font-size: ' + raiz.fontSize;
+      'visualViewport W x H: ' + (window.visualViewport ? window.visualViewport.width + ' x ' + window.visualViewport.height : 'n/a') + '\n' +
+      'visualViewport offset: ' + (window.visualViewport ? window.visualViewport.offsetLeft + ',' + window.visualViewport.offsetTop : 'n/a') + '\n' +
+      'html font-size: ' + raiz.fontSize + '\n' +
+      'html transform: ' + raiz.transform + '\n' +
+      'html zoom: ' + raiz.zoom + '\n' +
+      'body transform: ' + corpo.transform + '\n' +
+      'body zoom: ' + corpo.zoom + '\n' +
+      'html w x h (px): ' + document.documentElement.offsetWidth + ' x ' + document.documentElement.offsetHeight;
   }
   atualizarDebug();
   window.addEventListener('resize', atualizarDebug);
