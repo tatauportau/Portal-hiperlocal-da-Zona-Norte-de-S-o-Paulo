@@ -18,6 +18,13 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-23 — Code
+
+- Achada e corrigida a causa raiz do bug de "zoom" no PWA instalado (investigado ao longo de várias sessões, ver entradas de 22/07 abaixo): qualquer elemento `position:fixed` com `left:0;right:0` ou `inset:0` (header, ticker de notícias no topo, todos os modais/overlays) renderizava ~1.64x mais largo que o viewport real. Reproduzido tanto no Android do Carlos quanto num navegador desktop redimensionado, incluindo direto em produção — não é específico de WebAPK/Android. `document.documentElement.clientWidth` sempre reportava o valor certo; só a largura desses elementos fixed vinha errada, e não dependia do conteúdo do ticker (testado isolando).
+- Fix: força a largura (e altura, pros overlays em tela cheia) desses elementos via JS usando `clientWidth`/`clientHeight`, recalculando em `load`/`resize`/`orientationchange`/`visualViewport.resize`.
+- Removido o badge de debug temporário adicionado pra essa investigação.
+- Duas tentativas anteriores (`text-size-adjust:100%` e `viewport-fit=cover`) não resolveram — mantidas no código por serem boas práticas de qualquer forma, mas não eram a causa.
+
 ## 2026-07-22 — Code (5)
 
 - Passo de instalação removido do final do tour (ficava cansativo, motivo relatado pelo Carlos); tour voltou aos 8 passos originais.
