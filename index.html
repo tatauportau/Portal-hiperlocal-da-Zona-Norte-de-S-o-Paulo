@@ -4440,5 +4440,30 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
+<!-- DEBUG TEMPORÁRIO — investigando bug de zoom no PWA instalado. Remover depois. -->
+<div id="debug-viewport" style="position:fixed;bottom:8px;left:8px;z-index:99999;background:rgba(0,0,0,.85);color:#0f0;font:10px/1.4 monospace;padding:8px 10px;border-radius:8px;max-width:260px;white-space:pre-wrap;"></div>
+<script>
+(function(){
+  function atualizarDebug(){
+    const el = document.getElementById('debug-viewport');
+    if (!el) return;
+    const raiz = getComputedStyle(document.documentElement);
+    el.textContent =
+      'standalone: ' + (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true) + '\n' +
+      'innerW x innerH: ' + window.innerWidth + ' x ' + window.innerHeight + '\n' +
+      'clientW x clientH: ' + document.documentElement.clientWidth + ' x ' + document.documentElement.clientHeight + '\n' +
+      'screen: ' + window.screen.width + ' x ' + window.screen.height + '\n' +
+      'devicePixelRatio: ' + window.devicePixelRatio + '\n' +
+      'visualViewport.scale: ' + (window.visualViewport ? window.visualViewport.scale : 'n/a') + '\n' +
+      'visualViewport W: ' + (window.visualViewport ? window.visualViewport.width : 'n/a') + '\n' +
+      'html font-size: ' + raiz.fontSize;
+  }
+  atualizarDebug();
+  window.addEventListener('resize', atualizarDebug);
+  window.addEventListener('load', atualizarDebug);
+  if (window.visualViewport) window.visualViewport.addEventListener('resize', atualizarDebug);
+})();
+</script>
+
 </body>
 </html>
