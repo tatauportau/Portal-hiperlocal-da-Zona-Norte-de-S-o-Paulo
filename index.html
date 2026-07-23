@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portau — Edicao do Dia · 22/07/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
@@ -579,14 +579,6 @@
   .auth-chip { display: flex; align-items: center; gap: 8px; flex-shrink: 0; position: relative; }
   .auth-entrar-btn { font-size: 12px; font-weight: 700; color: var(--cinza-q); background: var(--branco); border: 1px solid var(--cinza-l); padding: 7px 16px; border-radius: 20px; cursor: pointer; font-family: 'Inter', sans-serif; transition: all .15s; }
   .auth-entrar-btn:hover { border-color: var(--cinza-q); }
-  .entrar-instalar-wrap { display: flex; flex-direction: column; align-items: center; gap: 3px; }
-  .instalar-wrap { position: relative; }
-  .instalar-chip { font-size: 10px; font-weight: 700; color: var(--cinza-m); background: transparent; border: none; cursor: pointer; font-family: 'Inter', sans-serif; padding: 2px 4px; white-space: nowrap; }
-  .instalar-chip:hover { color: #0051A8; }
-  .instalar-popover { position: absolute; top: calc(100% + 8px); right: 0; width: 220px; background: var(--branco); border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,.18); padding: 12px; opacity: 0; pointer-events: none; transform: translateY(4px); transition: opacity .15s, transform .15s; z-index: 200; font-family: 'Inter', sans-serif; }
-  .instalar-wrap:hover .instalar-popover, .instalar-popover.aberto { opacity: 1; pointer-events: auto; transform: translateY(0); }
-  .instalar-popover-texto { font-size: 12px; line-height: 1.5; color: var(--cinza-q); margin-bottom: 8px; }
-  .instalar-popover-btn { display: none; width: 100%; background: #0051A8; color: #fff; border: none; border-radius: 8px; padding: 7px; font-size: 12.5px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; }
   .tour-ajuda-btn { width: 40px; height: 40px; flex-shrink: 0; padding: 0; border: 1px solid var(--cinza-l); border-radius: 50%; cursor: pointer; overflow: hidden; transition: all .15s; }
   .tour-ajuda-btn:hover { border-color: var(--cinza-q); }
   .tour-ajuda-btn img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -747,16 +739,7 @@ setInterval(carregarTicker, 900000);
       <button class="tour-ajuda-btn" onclick="window.iniciarTourPortau(true)" title="Ver tour de boas-vindas de novo">
         <img src="assets/mascote-ajuda.png" alt="Guia PortauZN">
       </button>
-      <div class="entrar-instalar-wrap">
-        <button class="auth-entrar-btn" id="auth-entrar-btn" onclick="abrirLogin()">Entrar</button>
-        <div class="instalar-wrap" id="instalar-wrap">
-          <button class="instalar-chip" onclick="window.toggleInstalarPopover(event)">📲 Instalar app</button>
-          <div class="instalar-popover" id="instalar-popover">
-            <div class="instalar-popover-texto" id="instalar-popover-texto"></div>
-            <button class="instalar-popover-btn" id="instalar-popover-btn" onclick="window.acionarInstalacao()">Instalar</button>
-          </div>
-        </div>
-      </div>
+      <button class="auth-entrar-btn" id="auth-entrar-btn" onclick="abrirLogin()">Entrar</button>
       <div class="auth-usuario" id="auth-usuario" onclick="toggleAuthMenu()">
         <span id="auth-usuario-nome">Olá</span><i class="ti ti-chevron-down" style="font-size:12px;"></i>
         <div class="auth-usuario-menu" id="auth-usuario-menu">
@@ -4205,71 +4188,6 @@ window.addEventListener('keydown', function(e) {
 </style>
 
 <script>
-  window.deferredInstallPrompt = null;
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    window.deferredInstallPrompt = e;
-    atualizarPopoverInstalar();
-  });
-
-  function pwaInstalado(){
-    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
-  }
-
-  function iOSDispositivo(){
-    return /iPad|iPhone|iPod/.test(navigator.userAgent);
-  }
-
-  function atualizarPopoverInstalar(){
-    const wrap = document.getElementById('instalar-wrap');
-    if (!wrap) return;
-
-    if (pwaInstalado()) {
-      wrap.style.display = 'none';
-      return;
-    }
-
-    const textoEl = document.getElementById('instalar-popover-texto');
-    const btnEl = document.getElementById('instalar-popover-btn');
-
-    if (window.deferredInstallPrompt) {
-      textoEl.textContent = 'Instale o Portau na tela do seu celular pra acessar mais rápido, sem digitar o link toda vez. 📲';
-      btnEl.style.display = 'block';
-    } else if (iOSDispositivo()) {
-      textoEl.textContent = 'No iPhone: toque no ícone de compartilhar (⬆️) do navegador e escolha "Adicionar à Tela de Início". 📲';
-      btnEl.style.display = 'none';
-    } else {
-      textoEl.textContent = 'Procure o ícone de instalar (⊕) na barra de endereço do navegador pra adicionar o Portau à tela inicial. 📲';
-      btnEl.style.display = 'none';
-    }
-  }
-
-  window.toggleInstalarPopover = function(event){
-    event.stopPropagation();
-    atualizarPopoverInstalar();
-    document.getElementById('instalar-popover').classList.toggle('aberto');
-  };
-
-  window.acionarInstalacao = function(){
-    if (window.deferredInstallPrompt) {
-      window.deferredInstallPrompt.prompt();
-      window.deferredInstallPrompt.userChoice.finally(() => { window.deferredInstallPrompt = null; });
-    }
-    document.getElementById('instalar-popover').classList.remove('aberto');
-  };
-
-  document.addEventListener('click', (event) => {
-    const wrap = document.getElementById('instalar-wrap');
-    if (wrap && !wrap.contains(event.target)) {
-      document.getElementById('instalar-popover').classList.remove('aberto');
-    }
-  });
-
-  window.addEventListener('appinstalled', atualizarPopoverInstalar);
-  window.addEventListener('load', atualizarPopoverInstalar);
-</script>
-
-<script>
 (function(){
 
   const CHAVE_LOCALSTORAGE = 'portau_tour_visto';
@@ -4438,30 +4356,6 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-</script>
-
-<script>
-(function(){
-  function corrigirLarguraFixos(){
-    const cw = document.documentElement.clientWidth;
-    const ch = document.documentElement.clientHeight;
-
-    document.querySelectorAll('header, .ticker-wrap').forEach((el) => {
-      el.style.width = cw + 'px';
-    });
-
-    document.querySelectorAll('.ga-overlay, .waze-overlay, .bairros-overlay, .login-overlay, #tour-dim').forEach((el) => {
-      el.style.width = cw + 'px';
-      el.style.height = ch + 'px';
-    });
-  }
-
-  corrigirLarguraFixos();
-  window.addEventListener('load', corrigirLarguraFixos);
-  window.addEventListener('resize', corrigirLarguraFixos);
-  window.addEventListener('orientationchange', corrigirLarguraFixos);
-  if (window.visualViewport) window.visualViewport.addEventListener('resize', corrigirLarguraFixos);
-})();
 </script>
 
 </body>
