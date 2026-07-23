@@ -4181,6 +4181,14 @@ window.addEventListener('keydown', function(e) {
 </style>
 
 <script>
+  window.deferredInstallPrompt = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    window.deferredInstallPrompt = e;
+  });
+</script>
+
+<script>
 (function(){
 
   const CHAVE_LOCALSTORAGE = 'portau_tour_visto';
@@ -4230,10 +4238,34 @@ window.addEventListener('keydown', function(e) {
     {
       alvo: '#auth-entrar-btn',
       imagem: 'positivo',
-      texto: 'Faça seu cadastro e não perca nada do seu bairro. Bora? 🎉',
-      ultimo: true
+      texto: 'Faça seu cadastro e não perca nada do seu bairro. Bora? 🎉'
+    },
+    {
+      alvo: null,
+      imagem: 'positivo',
+      instalar: true,
+      ultimo: true,
+      texto: ''
     }
   ];
+
+  function pwaInstalado(){
+    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  }
+
+  function iOS(){
+    return /iPad|iPhone|iPod/.test(navigator.userAgent);
+  }
+
+  function dadosPassoInstalar(){
+    if (window.deferredInstallPrompt) {
+      return { texto: 'Curtiu? Instale o Portau na tela do seu celular pra acessar mais rápido, sem digitar o link toda vez. 📲', botao: 'Instalar' };
+    }
+    if (iOS()) {
+      return { texto: 'Curtiu? No iPhone, toque no ícone de compartilhar (⬆️) do navegador e escolha "Adicionar à Tela de Início" pra ter o Portau como um app. 📲', botao: 'Concluir' };
+    }
+    return { texto: 'Curtiu? Procure o ícone de instalar (⊕) na barra de endereço do navegador pra adicionar o Portau à tela inicial. 📲', botao: 'Concluir' };
+  }
 
   let passoAtual = 0;
   let alvoAnteriorEl = null;
@@ -4272,11 +4304,20 @@ window.addEventListener('keydown', function(e) {
   }
 
   function renderPasso(){
-    while (passoAtual < PASSOS_TOUR.length - 1 && PASSOS_TOUR[passoAtual].alvo && !document.querySelector(PASSOS_TOUR[passoAtual].alvo)) {
+    while (passoAtual < PASSOS_TOUR.length - 1 && (
+      (PASSOS_TOUR[passoAtual].alvo && !document.querySelector(PASSOS_TOUR[passoAtual].alvo)) ||
+      (PASSOS_TOUR[passoAtual].instalar && pwaInstalado())
+    )) {
       passoAtual++;
     }
 
     const passo = PASSOS_TOUR[passoAtual];
+
+    if (passo.instalar && pwaInstalado()) {
+      encerrarTour();
+      return;
+    }
+
     limparAlvo();
 
     const el = passo.alvo ? document.querySelector(passo.alvo) : null;
@@ -4286,11 +4327,13 @@ window.addEventListener('keydown', function(e) {
       alvoAnteriorEl = el;
     }
 
+    const infoInstalar = passo.instalar ? dadosPassoInstalar() : null;
+
     document.getElementById('tour-avatar').src = AVATAR[passo.imagem];
-    document.getElementById('tour-texto').textContent = passo.texto;
+    document.getElementById('tour-texto').textContent = infoInstalar ? infoInstalar.texto : passo.texto;
     document.getElementById('tour-passo').textContent = (passoAtual+1) + ' de ' + PASSOS_TOUR.length;
     document.getElementById('tour-btn-voltar').style.visibility = passoAtual === 0 ? 'hidden' : 'visible';
-    document.getElementById('tour-btn-proximo').textContent = passo.ultimo ? 'Concluir' : 'Próximo';
+    document.getElementById('tour-btn-proximo').textContent = infoInstalar ? infoInstalar.botao : (passo.ultimo ? 'Concluir' : 'Próximo');
 
     setTimeout(() => posicionarBalao(el), el ? 800 : 0);
   }
@@ -4312,6 +4355,10 @@ window.addEventListener('keydown', function(e) {
 
   window.tourProximoPasso = function(){
     const passo = PASSOS_TOUR[passoAtual];
+    if (passo.instalar && window.deferredInstallPrompt) {
+      window.deferredInstallPrompt.prompt();
+      window.deferredInstallPrompt.userChoice.finally(() => { window.deferredInstallPrompt = null; });
+    }
     if (passo.ultimo) { encerrarTour(); return; }
     passoAtual++;
     renderPasso();
