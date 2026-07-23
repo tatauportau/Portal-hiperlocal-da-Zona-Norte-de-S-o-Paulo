@@ -18,6 +18,12 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-22 — Code (5)
+
+- Passo de instalação removido do final do tour (ficava cansativo, motivo relatado pelo Carlos); tour voltou aos 8 passos originais.
+- Instalação virou um ícone próprio "📲 Instalar app" abaixo do botão Entrar, com balão explicativo no hover/toque — some sozinho quando o PWA já está instalado.
+- Ícone do maskable corrigido (fundo azul→branco, ver entrada anterior) resolveu o problema visual, mas o layout/texto grandes e a barrinha de trânsito quebrada no app instalado **continuam** mesmo depois do `text-size-adjust:100%`. Hipótese revisada: não é auto-boost de fonte (o logo/imagens também cresceram, não só texto) — mais provável é a configuração de "Zoom de tela" do Android/Samsung, que escala apps instalados (WebAPK) mas não abas do Chrome. Ainda não confirmado com o Carlos; investigar antes de tentar outro fix de CSS.
+
 ## 2026-07-22 — Code (4)
 
 - Corrigidos 2 problemas relatados pelo Carlos após instalar o PWA num Android real:
