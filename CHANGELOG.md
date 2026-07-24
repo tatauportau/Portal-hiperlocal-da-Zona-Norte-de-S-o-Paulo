@@ -18,6 +18,13 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-23 — Code (4)
+
+- **Causa raiz real do bug de largura/"zoom" no app instalado finalmente encontrada e corrigida** (a entrada "Code" de mais cedo hoje tinha um diagnóstico errado — ticker de notícias — e o fix foi revertido em "Code (2)" por causar problema pior). Causa verdadeira: o rodapé de cada card de vaga (fonte/data/salário, texto vindo de fontes externas como Jooble/Cate, comprimento variável) é `white-space:nowrap` dentro de uma linha flex (`.card-vaga`) sem `min-width:0` — quando o texto é longo o suficiente, o card é forçado mais largo que a tela. Diferente do ticker (contido por `overflow:hidden`) e da barra de atalhos `.ancora-bar` (contida por `overflow-x:auto`) — ambos descartados como causa por bisecção sistemática, removendo cada um da fonte e recarregando do zero —, o card de vaga não tem nenhuma contenção, e é esse tipo de overflow real e sem clipping que faz o Chrome/WebView mobile inflar a largura de todo o "layout viewport" da página, afetando até elementos `position:fixed` (header, ticker) que passavam a renderizar ~1.7x mais largos que a tela real.
+- Fix (`index.html`, `.card-vaga` no bloco `<style>`): o texto do rodapé do card agora quebra pra linha própria (`flex-basis:100%`) em vez de forçar tudo numa linha só. Correção fica só no CSS, que o pipeline (`gerar-portau.js`) nunca sobrescreve — sobrevive à atualização automática diária.
+- Metodologia nova pra esse tipo de bug (evitar repetir o ciclo de tentativa-erro-revert em produção de sessões anteriores): criada página de diagnóstico isolada (`teste-zoom.html`, removida no fim da sessão) com painel mostrando `innerWidth`/`clientWidth`/`visualViewport`/`devicePixelRatio` ao vivo, testada e confirmada no celular real do Carlos — tanto no Chrome normal quanto no app instalado (`display-mode:standalone`, cenário original do bug) — antes de tocar no `index.html` de produção.
+- Descoberta lateral: pra testar em modo standalone sem interferir no app real instalado, foi preciso um `manifest-teste.json` próprio (start_url apontando pra página de teste) — reusar o `manifest.json`/service worker de produção faz o Android instalar um atalho que abre o app real, não a página de teste.
+
 ## 2026-07-23 — Code (3)
 
 - Tour de boas-vindas reduzido de 8 para 2 passos (abertura + aviso de cadastro) — Carlos relatou que os 8 passos cansavam na primeira visita.
