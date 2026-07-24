@@ -29,8 +29,8 @@
 </style>
 <title>Portau — Edicao do Dia · 23/07/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#0051A8">
+<link rel="manifest" href="manifest-teste.json">
+<meta name="theme-color" content="#C0392B">
 <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -4467,13 +4467,8 @@ window.addEventListener('keydown', function(e) {
 </script>
 
 <script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch((err) => {
-      console.warn('Falha ao registrar service worker:', err);
-    });
-  });
-}
+// service worker desativado nesta página de teste de propósito —
+// evita conflito de scope com o service worker do app real
 </script>
 
 <!-- ===== painel de diagnóstico do bug de largura — só existe nesta página de teste ===== -->
