@@ -671,6 +671,23 @@
   .minha-vaga-filtro-btn{font-size:12px;font-weight:700;padding:6px 14px;border-radius:20px;border:1px solid var(--cinza-l);background:var(--branco);color:var(--cinza-m);cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s;}
   .minha-vaga-filtro-btn:hover{border-color:var(--cinza-q);}
   .minha-vaga-filtro-btn.ativo{background:var(--cinza-q);border-color:var(--cinza-q);color:var(--branco);}
+
+  /* conteúdo do painel no mesmo tamanho dos botões de distrito — só os
+     títulos de seção (.secao-titulo) e cabeçalhos de card equivalentes
+     (.sb-header, .cla-grupo-titulo) mantêm o tamanho maior, pra ainda dar
+     pra distinguir a estrutura da página. */
+  @media(max-width:600px){
+    .card-titulo,.card-noticia.destaque .card-titulo,.card-resumo,.card-meta,.card-link,
+    .tag,.tag-bairro,
+    .evento-titulo,.evento-info,.evento-valor,
+    .vaga-titulo,.vaga-info,.vaga-badge,.vagas-filtro-busca,.vagas-filtro-tipo,.anuncio-vaga-btn,
+    .pol-titulo,.pol-impacto,.pol-orgao,.pol-status,
+    .alerta-titulo,.alerta-desc,.alerta-meta,
+    .cla-nome,.cla-detalhe,.cla-preco,
+    .destaque-pill,.secao-count,
+    .sb-titulo,.sb-sub
+    { font-size:10px; }
+  }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
 </head>
