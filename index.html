@@ -4402,7 +4402,10 @@ window.addEventListener('keydown', function(e) {
   }
 
   window.iniciarTourPortau = function(forcar){
-    if (!forcar && localStorage.getItem(CHAVE_LOCALSTORAGE)) return;
+    if (!forcar && localStorage.getItem(CHAVE_LOCALSTORAGE)) {
+      if (window.tentarMostrarInstalarBanner) window.tentarMostrarInstalarBanner();
+      return;
+    }
     passoAtual = 0;
     document.getElementById('tour-dim').classList.add('ativo');
     document.getElementById('tour-balao').classList.add('ativo');
@@ -4414,6 +4417,7 @@ window.addEventListener('keydown', function(e) {
     document.getElementById('tour-dim').classList.remove('ativo');
     document.getElementById('tour-balao').classList.remove('ativo');
     localStorage.setItem(CHAVE_LOCALSTORAGE, '1');
+    if (window.tentarMostrarInstalarBanner) setTimeout(window.tentarMostrarInstalarBanner, 400);
   }
 
   window.tourProximoPasso = function(){
@@ -4496,6 +4500,119 @@ window.addEventListener('keydown', function(e) {
     }
   });
 
+})();
+</script>
+
+<div id="pwa-instalar-banner">
+  <img src="assets/icons/icon-192.png" alt="" class="pwa-instalar-icone">
+  <div class="pwa-instalar-texto">
+    <strong>Instale o Portau</strong>
+    <span id="pwa-instalar-msg">Acesso mais rápido, direto da tela inicial do celular.</span>
+  </div>
+  <div class="pwa-instalar-acoes">
+    <button id="pwa-instalar-btn" type="button">Instalar</button>
+    <button id="pwa-instalar-fechar" type="button" aria-label="Fechar">&times;</button>
+  </div>
+</div>
+
+<style>
+  #pwa-instalar-banner{
+    position:fixed; left:12px; right:12px; bottom:12px; z-index:9997;
+    background:#fff; border-radius:14px; box-shadow:0 12px 32px rgba(0,0,0,.22);
+    padding:12px; display:flex; align-items:center; gap:10px;
+    font-family:'Inter',Arial,sans-serif;
+    opacity:0; transform:translateY(12px); pointer-events:none;
+    transition:opacity .25s ease, transform .25s ease;
+    max-width:380px; margin:0 auto;
+  }
+  #pwa-instalar-banner.ativo{opacity:1; transform:translateY(0); pointer-events:auto;}
+  .pwa-instalar-icone{width:44px; height:44px; border-radius:10px; flex-shrink:0;}
+  .pwa-instalar-texto{flex:1; min-width:0;}
+  .pwa-instalar-texto strong{display:block; font-size:13.5px; color:#1A1A1A;}
+  .pwa-instalar-texto span{display:block; font-size:12px; color:#4A4A4A; line-height:1.4; margin-top:2px;}
+  .pwa-instalar-acoes{display:flex; align-items:center; gap:4px; flex-shrink:0;}
+  #pwa-instalar-btn{
+    background:#0051A8; color:#fff; border:none; border-radius:8px;
+    padding:8px 14px; font-size:12.5px; font-weight:600; cursor:pointer; white-space:nowrap;
+  }
+  #pwa-instalar-fechar{
+    background:transparent; border:none; color:#8a8a8a; font-size:20px; line-height:1;
+    cursor:pointer; padding:4px 6px;
+  }
+  @media (min-width:641px){ #pwa-instalar-banner{ display:none !important; } }
+</style>
+
+<script>
+(function(){
+  const CHAVE_INSTALADO = 'portau_pwa_instalado';
+  const CHAVE_DISPENSADO = 'portau_pwa_banner_dispensado';
+
+  const banner = document.getElementById('pwa-instalar-banner');
+  const msgEl = document.getElementById('pwa-instalar-msg');
+  const btnInstalar = document.getElementById('pwa-instalar-btn');
+  const btnFechar = document.getElementById('pwa-instalar-fechar');
+  let deferredPrompt = null;
+  let jaMostrado = false;
+
+  function ehMobile(){
+    return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  }
+  function ehIOS(){
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent) && !window.MSStream;
+  }
+  function estaStandalone(){
+    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  }
+  function elegivel(){
+    return ehMobile() && !estaStandalone() && !localStorage.getItem(CHAVE_INSTALADO) && !localStorage.getItem(CHAVE_DISPENSADO);
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!jaMostrado && elegivel() && document.readyState === 'complete') {
+      window.tentarMostrarInstalarBanner();
+    }
+  });
+
+  window.addEventListener('appinstalled', () => {
+    localStorage.setItem(CHAVE_INSTALADO, '1');
+    banner.classList.remove('ativo');
+  });
+
+  window.tentarMostrarInstalarBanner = function(){
+    if (jaMostrado || !elegivel()) return;
+
+    if (ehIOS()) {
+      msgEl.textContent = 'Toque em Compartilhar e depois em "Adicionar à Tela de Início".';
+      btnInstalar.style.display = 'none';
+      jaMostrado = true;
+      banner.classList.add('ativo');
+      return;
+    }
+
+    if (deferredPrompt) {
+      jaMostrado = true;
+      banner.classList.add('ativo');
+    }
+    // Se ainda não veio o evento beforeinstallprompt, o listener acima mostra o banner assim que ele chegar.
+  };
+
+  btnInstalar.addEventListener('click', async () => {
+    banner.classList.remove('ativo');
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt();
+    const resultado = await deferredPrompt.userChoice;
+    if (resultado.outcome !== 'accepted') {
+      localStorage.setItem(CHAVE_DISPENSADO, '1');
+    }
+    deferredPrompt = null;
+  });
+
+  btnFechar.addEventListener('click', () => {
+    banner.classList.remove('ativo');
+    localStorage.setItem(CHAVE_DISPENSADO, '1');
+  });
 })();
 </script>
 
