@@ -4151,6 +4151,16 @@ window.addEventListener('keydown', function(e) {
   </div>
 </div>
 
+<div id="dica-balao">
+  <div class="tour-topo">
+    <img id="dica-avatar" class="tour-avatar" src="" alt="Guia PortauZN">
+    <div class="tour-texto" id="dica-texto"></div>
+  </div>
+  <div class="tour-rodape" style="justify-content:flex-end;">
+    <button class="tour-proximo" onclick="fecharDicaPortau()">Entendi</button>
+  </div>
+</div>
+
 <style>
   #tour-dim{
     position:fixed; inset:0; background:rgba(20,20,20,.6); z-index:9998;
@@ -4182,8 +4192,16 @@ window.addEventListener('keydown', function(e) {
   .tour-pular{background:transparent; color:#6b6b6b;}
   .tour-voltar{background:#f0ede6; color:#2b2b2b;}
   .tour-proximo{background:#0051A8; color:#fff;}
+  #dica-balao{
+    position:fixed; z-index:10000; width:300px; max-width:calc(100vw - 32px);
+    background:#fff; border-radius:16px; box-shadow:0 12px 40px rgba(0,0,0,.25);
+    padding:16px; opacity:0; transform:translateY(6px); transition:opacity .2s ease, transform .2s ease;
+    pointer-events:none; font-family:'Inter',Arial,sans-serif;
+  }
+  #dica-balao.ativo{opacity:1; transform:translateY(0); pointer-events:auto;}
   @media (max-width:640px){
     #tour-balao{ left:16px !important; right:16px !important; width:auto !important; top:auto !important; bottom:16px !important; }
+    #dica-balao{ left:16px !important; right:16px !important; width:auto !important; top:auto !important; bottom:16px !important; }
   }
 </style>
 
@@ -4205,40 +4223,50 @@ window.addEventListener('keydown', function(e) {
       texto: 'Oi! Eu sou o guia do PortauZN. Deixa eu te mostrar rapidinho como funciona por aqui! 👋'
     },
     {
-      alvo: '#sub-nav-strip',
-      imagem: 'neutro',
-      texto: 'Aqui você filtra as notícias pela sua região — Santana, Casa Verde, Jaçanã e mais.'
-    },
-    {
-      alvo: '#noticias',
-      imagem: 'neutro',
-      texto: 'Todo dia tem novidade fresquinha da Zona Norte: notícias, agenda, vagas, política e alertas.'
-    },
-    {
-      alvo: '.ancora-btn[onclick*="abrirBairros"]',
-      imagem: 'neutro',
-      texto: 'Clique aqui pra abrir o mapa da Zona Norte, descubra quantos bairros existem na Zona Norte!'
-    },
-    {
-      alvo: '.carro-bar',
-      imagem: 'neutro',
-      texto: 'Nesta estrada o nosso motorista te leva para o Waze pelos bairros da Zona Norte — basta entrar e clicar na estrada.'
-    },
-    {
-      alvo: '.globo-wrap',
-      imagem: 'neutro',
-      texto: 'Vamos brincar de girar o mundo? Esse globo também mostra como estão os acessos ao PortauZN — é só dar dois cliques nele.'
-    },
-    {
-      alvo: '#vagas',
-      imagem: 'neutro',
-      texto: 'Empresas perto de você vão publicar suas vagas no PortauZN — e você pode se candidatar enviando seus dados para a empresa. Boa sorte!'
-    },
-    {
       alvo: '#auth-entrar-btn',
       imagem: 'positivo',
       texto: 'Faça seu cadastro e não perca nada do seu bairro. Bora? 🎉',
       ultimo: true
+    }
+  ];
+
+  // Dicas contextuais: aparecem só no primeiro clique de cada ponto, uma vez por visitante.
+  const DICAS_CLIQUE = [
+    {
+      chave: 'subnav',
+      seletor: '#sub-nav-strip',
+      imagem: 'neutro',
+      texto: 'Aqui você filtra as notícias pela sua região — Santana, Casa Verde, Jaçanã e mais.'
+    },
+    {
+      chave: 'noticias',
+      seletor: '#noticias',
+      imagem: 'neutro',
+      texto: 'Todo dia tem novidade fresquinha da Zona Norte: notícias, agenda, vagas, política e alertas.'
+    },
+    {
+      chave: 'bairros',
+      seletor: '.ancora-btn[onclick*="abrirBairros"]',
+      imagem: 'neutro',
+      texto: 'Esse é o mapa da Zona Norte — dá pra ver quantos bairros existem na região!'
+    },
+    {
+      chave: 'carro',
+      seletor: '.carro-bar',
+      imagem: 'neutro',
+      texto: 'Nesta estrada o nosso motorista te leva para o Waze pelos bairros da Zona Norte — clique de novo pra seguir.'
+    },
+    {
+      chave: 'globo',
+      seletor: '.globo-wrap',
+      imagem: 'neutro',
+      texto: 'Vamos brincar de girar o mundo? Esse globo também mostra como estão os acessos ao PortauZN — é só dar dois cliques nele.'
+    },
+    {
+      chave: 'vagas',
+      seletor: '#vagas',
+      imagem: 'neutro',
+      texto: 'Empresas perto de você vão publicar suas vagas no PortauZN — e você pode se candidatar enviando seus dados para a empresa. Boa sorte!'
     }
   ];
 
@@ -4343,6 +4371,58 @@ window.addEventListener('keydown', function(e) {
 
   window.addEventListener('load', () => {
     setTimeout(() => window.iniciarTourPortau(false), 1000);
+  });
+
+  const CHAVE_DICA_PREFIXO = 'portau_dica_';
+  let dicaAlvoEl = null;
+
+  function posicionarDica(el){
+    const balao = document.getElementById('dica-balao');
+    const margem = 16;
+    if (window.innerWidth <= 640) return; // CSS já fixa embaixo no mobile
+
+    const r = el.getBoundingClientRect();
+    let top = r.bottom + margem;
+    let left = r.left;
+
+    if (left + 300 > window.innerWidth - 16) left = window.innerWidth - 316;
+    if (left < 16) left = 16;
+    if (top + 160 > window.innerHeight) top = Math.max(16, r.top - 160 - margem);
+
+    balao.style.top = top + 'px';
+    balao.style.left = left + 'px';
+  }
+
+  function mostrarDica(dica, el){
+    if (localStorage.getItem(CHAVE_DICA_PREFIXO + dica.chave)) return;
+    localStorage.setItem(CHAVE_DICA_PREFIXO + dica.chave, '1');
+
+    if (dicaAlvoEl) dicaAlvoEl.classList.remove('tour-alvo');
+    el.classList.add('tour-alvo');
+    dicaAlvoEl = el;
+
+    document.getElementById('dica-avatar').src = AVATAR[dica.imagem];
+    document.getElementById('dica-texto').textContent = dica.texto;
+    document.getElementById('dica-balao').classList.add('ativo');
+    posicionarDica(el);
+  }
+
+  window.fecharDicaPortau = function(){
+    if (dicaAlvoEl) { dicaAlvoEl.classList.remove('tour-alvo'); dicaAlvoEl = null; }
+    document.getElementById('dica-balao').classList.remove('ativo');
+  };
+
+  document.addEventListener('click', function(e){
+    for (const dica of DICAS_CLIQUE) {
+      const el = e.target.closest(dica.seletor);
+      if (el) { mostrarDica(dica, el); break; }
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (document.getElementById('dica-balao').classList.contains('ativo') && dicaAlvoEl) {
+      posicionarDica(dicaAlvoEl);
+    }
   });
 
 })();

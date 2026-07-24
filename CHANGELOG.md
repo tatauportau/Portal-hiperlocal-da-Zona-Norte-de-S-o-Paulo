@@ -18,6 +18,12 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-23 — Code (3)
+
+- Tour de boas-vindas reduzido de 8 para 2 passos (abertura + aviso de cadastro) — Carlos relatou que os 8 passos cansavam na primeira visita.
+- Os 6 passos removidos (sub-nav de bairros, notícias, botão Bairros, carro-bar/Waze, globo, vagas) viraram dicas contextuais que aparecem uma única vez, no primeiro clique de cada ponto — não mais empurrados de uma vez no onboarding. Implementado com novo balão `#dica-balao` (mesmo visual do `#tour-balao`, sem overlay de dim para não bloquear a ação normal do clique) e chaves individuais em `localStorage` (`portau_dica_*`) por ponto.
+- Textos dos 3 pontos que abrem ação ao clicar (Bairros, carro, globo) ajustados de "instrução antes do clique" pra "confirmação depois do clique", já que agora disparam reativamente.
+
 ## 2026-07-23 — Code (2)
 
 - **Revertido** o fix de largura (`corrigirLarguraFixos`) e o `viewport-fit=cover` da entrada anterior: a correção causou um problema pior em produção (conteúdo sobrepondo/quebrando na tela, visto pelo Carlos ao testar no celular). Removido também o botão "Instalar app" do header a pedido dele.
