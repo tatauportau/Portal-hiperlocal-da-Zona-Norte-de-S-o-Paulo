@@ -38,6 +38,9 @@
   .header-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;min-height:64px;padding:8px 0;gap:16px;flex-wrap:wrap;}
   .sub-nav-row{background:var(--creme);border-top:1px solid var(--cinza-l);padding:0 24px;}
   .sub-nav-strip{max-width:1160px;margin:0 auto;background:transparent;display:flex;gap:6px;flex-wrap:wrap;justify-content:center;align-items:center;padding:8px 0;}
+  @media(max-width:900px){
+    .sub-nav-strip{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  }
   .logo{display:flex;flex-direction:row;align-items:center;gap:12px;text-decoration:none;flex-shrink:0;}
   .logo-img-crop{height:56px;display:flex;align-items:center;flex-shrink:0;}
   .logo-img{height:56px;width:auto;aspect-ratio:790/311;display:block;}
