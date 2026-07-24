@@ -21,6 +21,7 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 ## 2026-07-24 — Code
 
 - Grade de distritos no header (Todas/Santana/Casa Verde/.../Perus) virou rolagem horizontal no mobile (`≤900px`) em vez de quebrar em 3 linhas — Carlos relatou que isso empurrava o conteúdo pra baixo demais, sobrando pouco espaço de tela pra navegar (mais perceptível depois do fix de largura acima, já que antes dava pra "trapacear" dando pinça pra ver mais). `.sub-nav-strip` passa a `flex-wrap:nowrap;overflow-x:auto`, mesmo padrão seguro já usado em `.ancora-inner`; desktop sem mudança.
+- Logo (56px→40px) e globo interativo (68px→44px) menores no mobile (`≤600px`), mesmo motivo (espaço vertical do header). Canvas do globo ganha `width/height:100%` pra escalar visualmente sem mudar a resolução interna de desenho nem afetar a lógica de rotação por arraste (usa delta de movimento, não posição absoluta). Desktop inalterado.
 
 ## 2026-07-23 — Code (4)
 
