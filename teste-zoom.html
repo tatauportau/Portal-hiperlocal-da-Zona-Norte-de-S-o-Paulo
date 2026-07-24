@@ -15,8 +15,17 @@
   }
 </script>
 <style>
-  html.com-fix-teste header,
-  html.com-fix-teste .ticker-wrap { contain: layout paint; }
+  /* causa raiz real (confirmada por bisecção): o rodapé de cada card de vaga
+     (fonte/data/salário) é nowrap dentro de um flex row sem min-width:0,
+     o que força o card a ficar mais largo que a tela — overflow real,
+     sem contenção, que infla o viewport do navegador mobile inteiro. */
+  html.com-fix-teste .card-vaga > div:last-child {
+    white-space: normal !important;
+    min-width: 0;
+    flex-basis: 100%;
+    margin-top: 2px;
+  }
+  html.com-fix-teste .card-vaga { flex-wrap: wrap; }
 </style>
 <title>Portau — Edicao do Dia · 23/07/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
