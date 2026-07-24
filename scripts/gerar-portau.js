@@ -52,6 +52,7 @@ const diaSemanaCapit = diaSemana.charAt(0).toUpperCase() + diaSemana.slice(1);
 const mesesExt = ['janeiro','fevereiro','marco','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
 const mesExt = mesesExt[parseInt(mm, 10) - 1];
 const dateLabel = `${dd}/${mm}/${yyyy}`;
+const yy = yyyy.slice(-2);
 const dataPorExtenso = `${diaSemanaCapit}, ${diaN} de ${mesExt} de ${yyyy}`;
 const dataHero = `${diaN} de ${mesExt}`;
 // Hora de geracao no fuso de Brasilia
@@ -351,7 +352,7 @@ async function main() {
   // ja avisasse que o regex precisava apontar para #clima-update.
   html = html.replace(
     /<span id="clima-update">[^<]*<\/span>/,
-    `<span id="clima-update">${dataPorExtenso} · Gerado às ${horaGeracao}</span>`
+    `<span id="clima-update">${dd}/${mm}/${yy} ${horaGeracao}</span>`
   );
 
   // Substitui secoes editoriais
