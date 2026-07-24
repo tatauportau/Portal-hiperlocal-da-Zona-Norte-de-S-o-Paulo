@@ -87,12 +87,12 @@ function buildNoticias(noticias) {
       <div class="card-resumo">${n.resumo}</div>
       <div class="card-footer">
         <div class="card-meta"><span>${n.fonte}</span><span class="dot3"></span><span>${n.hora}</span></div>
-        <span class="card-link">Leia mais →</span>
+        <a class="card-link" href="${n.url || '#'}" target="_blank" rel="noopener">Leia mais →</a>
       </div>
     </div>\n`;
     } else {
       html += `
-    <a class="card-noticia" href="${n.url || '#'}" target="_blank" data-bairro="${n.bairro || ''}" data-distrito="${distrito}">
+    <div class="card-noticia" data-bairro="${n.bairro || ''}" data-distrito="${distrito}">
       <div class="card-icone ${n.icone_classe}">${n.icone}</div>
       <div>
         <div class="card-tags"><span class="tag ${n.tag_categoria}">${n.tag_label}</span><span class="tag-bairro">${n.tag_bairro}</span></div>
@@ -100,10 +100,10 @@ function buildNoticias(noticias) {
         <div class="card-resumo">${n.resumo}</div>
         <div class="card-footer">
           <div class="card-meta"><span>${n.fonte}</span><span class="dot3"></span><span>${n.hora}</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="${n.url || '#'}" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>\n`;
+    </div>\n`;
     }
   }
   html += `  </div>`;

@@ -107,6 +107,12 @@
   .card-meta{font-size:11px;color:rgba(74,74,74,0.55);display:flex;align-items:center;gap:5px;}
   .dot3{width:3px;height:3px;border-radius:50%;background:currentColor;}
   .card-link{font-size:12px;font-weight:600;color:var(--verde);text-decoration:none;}
+  /* manchete-somente: resumo/impacto/descrição só aparecem ao expandir a headline */
+  .card-resumo,.pol-impacto,.alerta-desc{display:none;}
+  .expandido .card-resumo,.expandido .pol-impacto,.expandido .alerta-desc{display:block;}
+  .card-titulo,.pol-titulo,.alerta-titulo{cursor:pointer;}
+  .card-titulo::after,.pol-titulo::after,.alerta-titulo::after{content:'⌄';display:inline-block;margin-left:6px;font-size:12px;color:var(--cinza-m);transition:transform .15s;}
+  .expandido .card-titulo::after,.expandido .pol-titulo::after,.expandido .alerta-titulo::after{transform:rotate(180deg);}
   .card-evento{background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;padding:18px;margin-bottom:10px;display:grid;grid-template-columns:56px 1fr;gap:14px;text-decoration:none;color:inherit;transition:box-shadow 0.15s,transform 0.15s;}
   .card-evento:hover{box-shadow:0 6px 20px rgba(0,0,0,0.08);transform:translateY(-2px);}
   .evento-data{border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px 4px;text-align:center;color:var(--branco);}
@@ -724,7 +730,15 @@ async function carregarTicker() {
 
 carregarTicker();
 setInterval(carregarTicker, 900000);
-  
+
+// clique na manchete (notícias/política/alertas) expande/recolhe o resumo,
+// sem interceptar cliques em links de verdade (ex: "Leia mais")
+document.addEventListener('click', (e) => {
+  if (e.target.closest('a')) return;
+  const card = e.target.closest('.card-noticia, .card-pol, .alerta');
+  if (card) card.classList.toggle('expandido');
+});
+
 </script>
 
 <header>
@@ -888,7 +902,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="feed">
 
       <!-- NOTÍCIAS -->
-                                                                                      <div class="secao" id="noticias">
+                                                                                        <div class="secao" id="noticias">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
       <span class="secao-count">8 hoje</span>
@@ -904,11 +918,11 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       <div class="card-resumo">A terceira e última audiência pública para a implantação do Campus Jaçanã do IFSP acontece em 24/07, às 19h, no CEU Tremembé Maria Firmina dos Reis. Foram definidos os eixos tecnológicos iniciais (Controle e Processos Industriais e Informação e Comunicação) e as primeiras atividades, com cursos de extensão, devem começar já em agosto.</div>
       <div class="card-footer">
         <div class="card-meta"><span>DiárioZonaNorte</span><span class="dot3"></span><span>audiência em 24/07, 19h</span></div>
-        <span class="card-link">Leia mais →</span>
+        <a class="card-link" href="https://www.diariozonanorte.com.br/campus-do-instituto-federal-no-jacana-tera-ultima-audiencia-publica-no-dia-24-de-julho-atividades-comecam-em-agosto/" target="_blank" rel="noopener">Leia mais →</a>
       </div>
     </div>
 
-    <a class="card-noticia" href="https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/" target="_blank" data-bairro="Freguesia do Ó" data-distrito="FREGUESIA DO Ó">
+    <div class="card-noticia" data-bairro="Freguesia do Ó" data-distrito="FREGUESIA DO Ó">
       <div class="card-icone ic-mob">🚇</div>
       <div>
         <div class="card-tags"><span class="tag tag-mob">Mobilidade</span><span class="tag-bairro">📍 Freguesia do Ó</span></div>
@@ -916,12 +930,12 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <div class="card-resumo">Desde 2 de julho, seis estações da Linha 6-Laranja funcionam em operação assistida: João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, SESC-Pompeia e Perdizes. O acesso é gratuito das 10h às 15h, de segunda a sexta-feira. A estação Brasilândia deve entrar em operação até o fim de 2026.</div>
         <div class="card-footer">
           <div class="card-meta"><span>Diário do Transporte</span><span class="dot3"></span><span>desde 02/07</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="card-noticia" href="https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/" target="_blank" data-bairro="Santana" data-distrito="SANTANA">
+    <div class="card-noticia" data-bairro="Santana" data-distrito="SANTANA">
       <div class="card-icone ic-eco">🏥</div>
       <div>
         <div class="card-tags"><span class="tag tag-not">Economia</span><span class="tag-bairro">📍 Santana</span></div>
@@ -929,12 +943,12 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <div class="card-resumo">Um novo hospital, investimento de mais de R$ 600 milhões da Rede Mater Dei, está a caminho em Santana. O empreendimento chega em meio à forte valorização imobiliária da região, impulsionada por novas regras de altura ligadas à expansão operacional do Aeroporto de Campo de Marte.</div>
         <div class="card-footer">
           <div class="card-meta"><span>DiárioZonaNorte</span><span class="dot3"></span><span>julho/2026</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="card-noticia" href="https://universozn.com.br/armazem-solidario-brasilandia" target="_blank" data-bairro="Brasilândia" data-distrito="BRASILÂNDIA">
+    <div class="card-noticia" data-bairro="Brasilândia" data-distrito="BRASILÂNDIA">
       <div class="card-icone ic-eco">🛒</div>
       <div>
         <div class="card-tags"><span class="tag tag-not">Economia</span><span class="tag-bairro">📍 Brasilândia</span></div>
@@ -942,12 +956,12 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <div class="card-resumo">A unidade da Estrada do Sabão, 806, já recebeu mais de 196 mil pessoas desde 2024 e vende alimentos com desconto de 30% a 50% para famílias inscritas no CadÚnico. As prateleiras priorizam alimentos naturais e orgânicos, sem ultraprocessados, refrigerantes ou bebidas alcoólicas. Atendimento de terça a sábado, das 9h às 18h.</div>
         <div class="card-footer">
           <div class="card-meta"><span>Universo ZN / DiárioZonaNorte</span><span class="dot3"></span><span>julho/2026</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="https://universozn.com.br/armazem-solidario-brasilandia" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="card-noticia" href="https://www.bnewssaopaulo.com.br/noticias/policia/camara-de-seguranca-registra-assalto-a-familia-em-sao-paulo-veja.html" target="_blank" data-bairro="Vila Maria Alta" data-distrito="VILA MARIA">
+    <div class="card-noticia" data-bairro="Vila Maria Alta" data-distrito="VILA MARIA">
       <div class="card-icone ic-seg">🚨</div>
       <div>
         <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Vila Maria Alta</span></div>
@@ -955,12 +969,12 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <div class="card-resumo">Uma família teve pertences roubados em ação criminosa na Rua Moreira Vasconcelos, na Vila Maria Alta, por dois homens em uma motocicleta.</div>
         <div class="card-footer">
           <div class="card-meta"><span>BNews São Paulo</span><span class="dot3"></span><span>julho/2026</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="https://www.bnewssaopaulo.com.br/noticias/policia/camara-de-seguranca-registra-assalto-a-familia-em-sao-paulo-veja.html" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="card-noticia" href="https://ncnews.com.br/2026/07/10/dupla-furta-moto-na-zona-norte-tenta-novo-crime-minutos-depois-e-acaba-surpreendida-pela-pm-em-sao-paulo/" target="_blank" data-bairro="Vila Guilherme" data-distrito="VILA GUILHERME">
+    <div class="card-noticia" data-bairro="Vila Guilherme" data-distrito="VILA GUILHERME">
       <div class="card-icone ic-seg">🚨</div>
       <div>
         <div class="card-tags"><span class="tag tag-seg">Segurança</span><span class="tag-bairro">📍 Vila Guilherme</span></div>
@@ -968,12 +982,12 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <div class="card-resumo">Dois suspeitos furtaram uma motocicleta na Vila Guilherme, na Zona Norte, e tentaram um novo crime minutos depois na Barra Funda. Um deles foi encontrado escondido em uma loja de conveniência de um posto de combustíveis e detido; o outro fugiu.</div>
         <div class="card-footer">
           <div class="card-meta"><span>NC News</span><span class="dot3"></span><span>10/07</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="https://ncnews.com.br/2026/07/10/dupla-furta-moto-na-zona-norte-tenta-novo-crime-minutos-depois-e-acaba-surpreendida-pela-pm-em-sao-paulo/" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="card-noticia" href="https://esportividade.com.br/evento/evento-gratuito-com-kit-trilhas-de-sp-2026-parque-anhanguera/" target="_blank" data-bairro="Anhanguera" data-distrito="ANHANGUERA">
+    <div class="card-noticia" data-bairro="Anhanguera" data-distrito="ANHANGUERA">
       <div class="card-icone ic-eco">🥾</div>
       <div>
         <div class="card-tags"><span class="tag tag-not">Esporte</span><span class="tag-bairro">📍 Anhanguera</span></div>
@@ -981,12 +995,12 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <div class="card-resumo">No dia 18/07, o programa gratuito Trilhas de SP levou 900 caminhantes ao Parque Anhanguera, na Zona Norte, com inscrições gratuitas e medalha de participação para quem completou o percurso.</div>
         <div class="card-footer">
           <div class="card-meta"><span>Esportividade</span><span class="dot3"></span><span>18/07</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="https://esportividade.com.br/evento/evento-gratuito-com-kit-trilhas-de-sp-2026-parque-anhanguera/" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>
+    </div>
 
-    <a class="card-noticia" href="https://esportividade.com.br/evento/parque-anhanguera-perus-circuito-popular-de-corrida-de-sao-paulo/" target="_blank" data-bairro="Perus" data-distrito="PERUS">
+    <div class="card-noticia" data-bairro="Perus" data-distrito="PERUS">
       <div class="card-icone ic-eco">🏃</div>
       <div>
         <div class="card-tags"><span class="tag tag-not">Esporte</span><span class="tag-bairro">📍 Perus</span></div>
@@ -994,10 +1008,10 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <div class="card-resumo">No domingo (19/07), o Parque Anhanguera, em Perus, sediou a sétima etapa do Circuito Popular de corrida da cidade, com prova de 5 km em asfalto e trilhas de terra. Os corredores inscritos doaram 1 kg de alimento não perecível, destinado a uma entidade beneficente.</div>
         <div class="card-footer">
           <div class="card-meta"><span>Esportividade</span><span class="dot3"></span><span>19/07</span></div>
-          <span class="card-link">Leia mais →</span>
+          <a class="card-link" href="https://esportividade.com.br/evento/parque-anhanguera-perus-circuito-popular-de-corrida-de-sao-paulo/" target="_blank" rel="noopener">Leia mais →</a>
         </div>
       </div>
-    </a>
+    </div>
   </div>
 
     <!-- AGENDA -->
@@ -1250,6 +1264,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- POLITICA -->
     <!-- POLITICA -->
     <!-- POLITICA -->
+    <!-- POLITICA -->
   <div class="secao" id="politica">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
@@ -1297,6 +1312,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </div>
   </div>
 
+    <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
