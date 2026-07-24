@@ -18,6 +18,10 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-07-24 — Code
+
+- Grade de distritos no header (Todas/Santana/Casa Verde/.../Perus) virou rolagem horizontal no mobile (`≤900px`) em vez de quebrar em 3 linhas — Carlos relatou que isso empurrava o conteúdo pra baixo demais, sobrando pouco espaço de tela pra navegar (mais perceptível depois do fix de largura acima, já que antes dava pra "trapacear" dando pinça pra ver mais). `.sub-nav-strip` passa a `flex-wrap:nowrap;overflow-x:auto`, mesmo padrão seguro já usado em `.ancora-inner`; desktop sem mudança.
+
 ## 2026-07-23 — Code (4)
 
 - **Causa raiz real do bug de largura/"zoom" no app instalado finalmente encontrada e corrigida** (a entrada "Code" de mais cedo hoje tinha um diagnóstico errado — ticker de notícias — e o fix foi revertido em "Code (2)" por causar problema pior). Causa verdadeira: o rodapé de cada card de vaga (fonte/data/salário, texto vindo de fontes externas como Jooble/Cate, comprimento variável) é `white-space:nowrap` dentro de uma linha flex (`.card-vaga`) sem `min-width:0` — quando o texto é longo o suficiente, o card é forçado mais largo que a tela. Diferente do ticker (contido por `overflow:hidden`) e da barra de atalhos `.ancora-bar` (contida por `overflow-x:auto`) — ambos descartados como causa por bisecção sistemática, removendo cada um da fonte e recarregando do zero —, o card de vaga não tem nenhuma contenção, e é esse tipo de overflow real e sem clipping que faz o Chrome/WebView mobile inflar a largura de todo o "layout viewport" da página, afetando até elementos `position:fixed` (header, ticker) que passavam a renderizar ~1.7x mais largos que a tela real.
