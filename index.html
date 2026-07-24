@@ -687,6 +687,18 @@
     .destaque-pill,.secao-count,
     .sb-titulo,.sb-sub
     { font-size:10px; }
+
+    /* painel do mapa de bairros: coluna de bairros era só 40% do modal
+       (muito estreita, nomes quebravam em várias linhas) e as fontes não
+       tinham nenhum ajuste pra mobile. */
+    .bairros-corpo{grid-template-columns:1fr;}
+    .bairros-titulo{font-size:15px;}
+    .bairros-sub{font-size:10px;}
+    .bairros-info-titulo{font-size:12px;}
+    .bairros-info-sub{font-size:10px;}
+    .bairros-search{font-size:10px;}
+    .bairros-pill{font-size:10px;padding:4px 10px;}
+    .bairros-vazio{font-size:10px;}
   }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.19.0/tabler-icons.min.css">
