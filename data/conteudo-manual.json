@@ -3,72 +3,72 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🎓 Educação",
-      "tag_categoria": "tag-edu",
-      "tag_label": "Educação",
-      "tag_bairro": "📍 Jaçanã",
-      "bairro": "Jaçanã",
-      "titulo": "Campus do Instituto Federal no Jaçanã tem última audiência pública nesta sexta (24/07)",
-      "resumo": "A terceira e última audiência pública para a implantação do Campus Jaçanã do IFSP acontece em 24/07, às 19h, no CEU Tremembé Maria Firmina dos Reis. Foram definidos os eixos tecnológicos iniciais (Controle e Processos Industriais e Informação e Comunicação) e as primeiras atividades, com cursos de extensão, devem começar já em agosto.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "audiência em 24/07, 19h",
-      "url": "https://www.diariozonanorte.com.br/campus-do-instituto-federal-no-jacana-tera-ultima-audiencia-publica-no-dia-24-de-julho-atividades-comecam-em-agosto/",
-      "icone": "🏫",
-      "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
+      "pill": "🚆 Mobilidade",
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Linha 6-Laranja opera com seis estações na Zona Norte, incluindo Freguesia do Ó",
-      "resumo": "Desde 2 de julho, seis estações da Linha 6-Laranja funcionam em operação assistida: João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, SESC-Pompeia e Perdizes. O acesso é gratuito das 10h às 15h, de segunda a sexta-feira. A estação Brasilândia deve entrar em operação até o fim de 2026.",
-      "fonte": "Diário do Transporte",
-      "hora": "desde 02/07",
-      "url": "https://diariodotransporte.com.br/2026/07/04/primeiras-estacoes-da-linha-6-laranja-entram-em-operacao/",
-      "icone": "🚇",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Estação Pirituba da Linha 7-Rubi começa a receber obras de modernização neste semestre",
+      "resumo": "A concessionária TIC Trens vai iniciar, no segundo semestre de 2026, as primeiras intervenções de modernização da Estação Pirituba, incluindo acessibilidade universal, revitalização da via permanente e da rede aérea, e substituição dos sistemas de comunicação, sinalização e energia. Vila Aurora e Francisco Morato já receberam a nova identidade visual da concessionária.",
+      "fonte": "Folha Noroeste",
+      "hora": "julho/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/obras-da-estacao-pirituba-da-linha-7-rubi-comecam-neste-semestre/",
+      "icone": "🚆",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Hospital de R$ 600 milhões da Rede Mater Dei reforça transformação de Santana",
-      "resumo": "Um novo hospital, investimento de mais de R$ 600 milhões da Rede Mater Dei, está a caminho em Santana. O empreendimento chega em meio à forte valorização imobiliária da região, impulsionada por novas regras de altura ligadas à expansão operacional do Aeroporto de Campo de Marte.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "julho/2026",
-      "url": "https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/",
-      "icone": "🏥",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Enel abre inscrições para troca gratuita de geladeiras e lâmpadas no Jaraguá",
+      "resumo": "Nos dias 23 e 24 de julho, o Centro de Integração da Cidadania (CIC) Oeste, na Estrada das Taipas, 990, recebeu inscrições do programa Enel Compartilha Eficiência para troca gratuita de geladeiras e lâmpadas. É necessário ser cliente Enel com consumo médio de até 250 kWh/mês e não ter sido beneficiado por programa semelhante nos últimos dez anos.",
+      "fonte": "Folha Noroeste",
+      "hora": "23-24/07",
+      "url": "https://folhanoroeste.com.br/cotidiano/abertas-inscricoes-para-programa-de-troca-gratuita-de-geladeiras-e-lampadas-no-jaragua/",
+      "icone": "🧊",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Armazém Solidário da Brasilândia completa 2 anos com mais de 3 milhões de itens vendidos",
-      "resumo": "A unidade da Estrada do Sabão, 806, já recebeu mais de 196 mil pessoas desde 2024 e vende alimentos com desconto de 30% a 50% para famílias inscritas no CadÚnico. As prateleiras priorizam alimentos naturais e orgânicos, sem ultraprocessados, refrigerantes ou bebidas alcoólicas. Atendimento de terça a sábado, das 9h às 18h.",
-      "fonte": "Universo ZN / DiárioZonaNorte",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Cate abre a semana com mais de 1.700 vagas de emprego na capital, com pontos em Pirituba e Freguesia/Brasilândia",
+      "resumo": "Os Centros de Apoio ao Trabalho e Empreendedorismo (Cate) abriram julho com mais de 1.700 vagas em setores como saúde, comércio, serviços, construção civil e logística, com salários entre R$ 1.069 e R$ 28.423. Na região, há atendimento no Cate Pirituba (Rua Paula Ferreira, 1708) e no Cate Freguesia/Brasilândia (Av. João Marcelino Branco, 95).",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
       "hora": "julho/2026",
-      "url": "https://universozn.com.br/armazem-solidario-brasilandia",
-      "icone": "🛒",
+      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/julho-come%C3%A7a-com-mais-de-1.700-vagas-de-emprego-na-capital",
+      "icone": "💼",
       "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Subprefeitura Freguesia do Ó/Brasilândia participa do Mutirão de Limpeza deste sábado",
+      "resumo": "No sábado (25/07), das 9h às 12h, a Subprefeitura Freguesia do Ó/Brasilândia participa do Mutirão de Limpeza, ação simultânea em todas as subprefeituras de São Paulo dentro do Movimento SP. O ponto de encontro é na Rua Beranizia de Paula Oliveira, 251, e voluntários podem se inscrever pelo site do movimento.",
+      "fonte": "Folha Noroeste",
+      "hora": "25/07, 9h às 12h",
+      "url": "https://folhanoroeste.com.br/regional/sub-freguesia-realizara-mutirao-de-limpeza-dia-25-veja-onde-sera-o-ponto-de-encontro/",
+      "icone": "🧹",
+      "icone_classe": "ic-edu"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Vila Maria Alta",
-      "bairro": "Vila Maria Alta",
-      "titulo": "Dupla em moto assalta família na Rua Moreira Vasconcelos, na Vila Maria Alta",
-      "resumo": "Uma família teve pertences roubados em ação criminosa na Rua Moreira Vasconcelos, na Vila Maria Alta, por dois homens em uma motocicleta.",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "Idosa reage e luta contra bandido durante assalto no Jaçanã",
+      "resumo": "Uma idosa reagiu e lutou contra um assaltante armado durante uma abordagem no Jaçanã, Zona Norte de São Paulo. Segundo a polícia, imagens de câmeras de segurança do bairro mostram que o suspeito já havia feito abordagens semelhantes recentemente na região.",
       "fonte": "BNews São Paulo",
       "hora": "julho/2026",
-      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/camara-de-seguranca-registra-assalto-a-familia-em-sao-paulo-veja.html",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/idosa-reage-e-luta-contra-bandido-durante-assalto-na-zona-norte.html",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
@@ -76,135 +76,122 @@
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Vila Guilherme",
-      "bairro": "Vila Guilherme",
-      "titulo": "Dupla furta moto na Vila Guilherme e é surpreendida pela PM minutos depois",
-      "resumo": "Dois suspeitos furtaram uma motocicleta na Vila Guilherme, na Zona Norte, e tentaram um novo crime minutos depois na Barra Funda. Um deles foi encontrado escondido em uma loja de conveniência de um posto de combustíveis e detido; o outro fugiu.",
-      "fonte": "NC News",
-      "hora": "10/07",
-      "url": "https://ncnews.com.br/2026/07/10/dupla-furta-moto-na-zona-norte-tenta-novo-crime-minutos-depois-e-acaba-surpreendida-pela-pm-em-sao-paulo/",
+      "tag_bairro": "📍 Limão",
+      "bairro": "Limão",
+      "titulo": "Dupla é presa em flagrante por furto de celulares na Zona Norte",
+      "resumo": "Uma dupla foi presa em flagrante durante uma abordagem na Avenida Otaviano Alves de Lima, na Zona Norte, no sábado (11/07). Segundo as vítimas, o modus operandi era se aproximar de veículos parados em um semáforo, em uma motocicleta, e arrancar celulares fixados nos suportes do painel.",
+      "fonte": "BNews São Paulo",
+      "hora": "11/07",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/furto-de-celulares-dupla-e-presa-em-flagrante-na-zona-norte.html",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Esporte",
-      "tag_bairro": "📍 Anhanguera",
-      "bairro": "Anhanguera",
-      "titulo": "Trilhas de SP reúne 900 caminhantes no Parque Anhanguera",
-      "resumo": "No dia 18/07, o programa gratuito Trilhas de SP levou 900 caminhantes ao Parque Anhanguera, na Zona Norte, com inscrições gratuitas e medalha de participação para quem completou o percurso.",
-      "fonte": "Esportividade",
-      "hora": "18/07",
-      "url": "https://esportividade.com.br/evento/evento-gratuito-com-kit-trilhas-de-sp-2026-parque-anhanguera/",
-      "icone": "🥾",
-      "icone_classe": "ic-eco"
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Motiva Autoban leva ação de saúde e conscientização a caminhoneiros na Rodovia dos Bandeirantes",
+      "resumo": "Antecipando o Dia Nacional do Motorista (25/07), a concessionária Motiva Autoban promoveu uma manhã de ações de saúde e segurança viária para caminhoneiros no km 56 da Rodovia dos Bandeirantes, sentido capital, próximo a Perus, com aferição de pressão arterial, teste de glicemia e simulação dos efeitos da embriaguez ao volante.",
+      "fonte": "Folha Noroeste",
+      "hora": "23/07",
+      "url": "https://folhanoroeste.com.br/regional/motiva-autoban-celebra-o-dia-do-motorista-com-conscientizacao-para-caminhoneiros-na-rodovia-dos-bandeirantes/",
+      "icone": "🚚",
+      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Esporte",
-      "tag_bairro": "📍 Perus",
-      "bairro": "Perus",
-      "titulo": "Parque Anhanguera/Perus recebe 7ª etapa do Circuito Popular de Corrida de São Paulo",
-      "resumo": "No domingo (19/07), o Parque Anhanguera, em Perus, sediou a sétima etapa do Circuito Popular de corrida da cidade, com prova de 5 km em asfalto e trilhas de terra. Os corredores inscritos doaram 1 kg de alimento não perecível, destinado a uma entidade beneficente.",
-      "fonte": "Esportividade",
-      "hora": "19/07",
-      "url": "https://esportividade.com.br/evento/parque-anhanguera-perus-circuito-popular-de-corrida-de-sao-paulo/",
-      "icone": "🏃",
-      "icone_classe": "ic-eco"
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Conseg Pirituba convoca reunião comunitária de segurança para terça-feira (28/07)",
+      "resumo": "O Conselho Comunitário de Segurança (Conseg) Pirituba realiza, na terça-feira (28/07), às 19h30, reunião aberta à comunidade para receber demandas de moradores relacionadas à segurança pública, na Av. Santa Mônica, 809. Entrada livre, sem necessidade de inscrição.",
+      "fonte": "Folha Noroeste",
+      "hora": "28/07, 19h30",
+      "url": "https://folhanoroeste.com.br/cotidiano/conseg-pirituba-realiza-encontro-na-proxima-terca-28-no-bairro/",
+      "icone": "🚔",
+      "icone_classe": "ic-seg"
     }
   ],
   "agenda": [
     {
-      "dia": "24",
-      "mes": "Jul",
-      "cor_fundo": "#1565C0",
-      "bairro": "Jaçanã",
-      "titulo": "3ª e última audiência pública do Campus IFSP Jaçanã",
-      "hora": "19h",
-      "local": "CEU Tremembé Maria Firmina dos Reis, Rua Adauto Bezerra Delgado, 94 – Parque Casa de Pedra",
-      "descricao": "Audiência final para definir a oferta acadêmica inicial do novo Campus Jaçanã do Instituto Federal, com transmissão ao vivo pelo YouTube.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://www.diariozonanorte.com.br/campus-do-instituto-federal-no-jacana-tera-ultima-audiencia-publica-no-dia-24-de-julho-atividades-comecam-em-agosto/"
-    },
-    {
       "dia": "25",
       "mes": "Jul",
-      "cor_fundo": "#C62828",
-      "bairro": "Limão",
-      "titulo": "São João de Nóis Tudim (último fim de semana)",
-      "hora": "a partir das 10h",
-      "local": "Centro de Tradições Nordestinas, Rua Jacofer, 615 – Limão",
-      "descricao": "Festa junina tradicional com gastronomia nordestina, forró pé de serra, xote, baião e quadrilha, no seu último final de semana de programação. Entrada gratuita, mas é preciso retirar ingresso com antecedência.",
+      "cor_fundo": "#7B1FA2",
+      "bairro": "Santana",
+      "titulo": "Festa de Sant'Ana 2026",
+      "hora": "11h às 22h",
+      "local": "Basílica de Sant'Ana, Rua Voluntários da Pátria, 2060 – Santana",
+      "descricao": "Festa tradicional em homenagem à padroeira do bairro, com programação religiosa, shows e atividades culturais neste sábado e domingo.",
       "gratuito": true,
       "preco": null,
-      "url": "https://agendavivasp.com.br/cultural-events?admissionType=FREE"
+      "url": "https://www.serradacantareirahoje.com/2026/07/20/grandiosa-festa-de-santana-2026/"
     },
     {
       "dia": "25",
       "mes": "Jul",
       "cor_fundo": "#2E7D32",
-      "bairro": "Brasilândia",
-      "titulo": "Cinema na Fábrica",
-      "hora": "a definir",
-      "local": "Fábrica de Cultura Brasilândia, Av. General Penha Brasil, 2508",
-      "descricao": "Sessão gratuita de cinema para toda a família, parte da programação de férias de julho da Fábrica de Cultura da Brasilândia.",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Mutirão de Limpeza da Subprefeitura Freguesia do Ó/Brasilândia",
+      "hora": "9h às 12h",
+      "local": "Ponto de encontro: Rua Beranizia de Paula Oliveira, 251",
+      "descricao": "Ação de limpeza, educação ambiental e conscientização sobre descarte correto de resíduos, parte do Movimento SP realizado simultaneamente em todas as subprefeituras.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.fabricasdecultura.org.br/brasilandia/"
+      "url": "https://folhanoroeste.com.br/regional/sub-freguesia-realizara-mutirao-de-limpeza-dia-25-veja-onde-sera-o-ponto-de-encontro/"
     },
     {
       "dia": "26",
       "mes": "Jul",
-      "cor_fundo": "#7B1FA2",
-      "bairro": "Santana",
-      "titulo": "Sarau da Juventude",
-      "hora": "14h às 16h",
-      "local": "Biblioteca de São Paulo, Av. Cruzeiro do Sul, 2630 – Santana",
-      "descricao": "Encontro poético-musical com microfone aberto, apresentações musicais autorais e rodas de conversa para adolescentes e jovens.",
+      "cor_fundo": "#C62828",
+      "bairro": "Jaraguá",
+      "titulo": "Casarão Arte Livre",
+      "hora": "11h às 18h",
+      "local": "Parque Municipal Pinheirinho D'água, Av. Amador Aguiar, 701 – City Jaraguá",
+      "descricao": "Evento cultural gratuito com espaço para crianças, encontro de carros antigos, oficina de percussão, exposição de arte, roda de conversa, massagem relaxante e música ao vivo.",
       "gratuito": true,
       "preco": null,
-      "url": "https://bsp.org.br/agenda/"
+      "url": "https://folhanoroeste.com.br/regional/casarao-arte-livre-realiza-mais-um-evento-de-arte-e-lazer-em-parque-no-jaragua/"
     },
     {
       "dia": "26",
-      "mes": "Jul",
-      "cor_fundo": "#558B2F",
-      "bairro": "Vila Guilherme",
-      "titulo": "Feira de Orgânicos Lar Center",
-      "hora": "8h às 13h",
-      "local": "Avenida Otto Baumgart, 500 – Vila Guilherme",
-      "descricao": "Feira semanal de produtos orgânicos e sem agrotóxicos, aos domingos, na Vila Guilherme.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/prefeitura-de-sao-paulo/w/feiras-org%C3%A2nicas-da-capital-oferecem-alimentos-sem-agrot%C3%B3xicos-em-diferentes-regi%C3%B5es-da-cidade"
-    },
-    {
-      "dia": "27",
       "mes": "Jul",
       "cor_fundo": "#00838F",
-      "bairro": "Tremembé",
-      "titulo": "Aula gratuita de zumba no Horto Florestal",
-      "hora": "10h30 às 12h30",
-      "local": "Horto Florestal, tenda de eventos – Tremembé",
-      "descricao": "Aula gratuita de zumba para todas as idades, dentro da programação de férias do Horto Florestal.",
+      "bairro": "Pirituba",
+      "titulo": "Cine Pirituba Cultural: Mostra de Curtas Ecofalante",
+      "hora": "15h",
+      "local": "Biblioteca Brito Broca, Av. Mutinga, 1425 – Pirituba",
+      "descricao": "Sessão gratuita com exibição dos curtas \"Vanille\" e \"Meu Nome é Maalum\", seguida de roda de conversa sobre identidade, ancestralidade e combate ao preconceito. Pipoca e lanches inclusos.",
       "gratuito": true,
       "preco": null,
-      "url": "https://jornalturismoeeventos.com.br/horto-florestal-ferias-julho-programacao-sao-paulo/"
+      "url": "https://folhanoroeste.com.br/regional/cine-pirituba-cultural-exibe-mostra-de-curtas-ecofalante-na-av-mutinga/"
+    },
+    {
+      "dia": "28",
+      "mes": "Jul",
+      "cor_fundo": "#558B2F",
+      "bairro": "Pirituba",
+      "titulo": "Reunião comunitária do Conseg Pirituba",
+      "hora": "19h30",
+      "local": "Av. Santa Mônica, 809 – Pirituba",
+      "descricao": "Encontro aberto à comunidade para apresentar demandas relacionadas à segurança pública no bairro. Entrada livre, sem necessidade de inscrição prévia.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/cotidiano/conseg-pirituba-realiza-encontro-na-proxima-terca-28-no-bairro/"
     }
   ],
   "vagas": [
     {
-      "icone": "📦",
-      "titulo": "Repositor(a) de mercadorias / Atendente de loja",
-      "empresa": "Vaga via Cate Móvel",
-      "bairro": "Conjunto Jova Rural",
-      "requisitos": "80 vagas com benefícios como seguro de vida, auxílio-creche e assistência médica; atendimento presencial no Conjunto Habitacional Jova Rural, Rua Ari da Rocha Miranda, 36",
+      "icone": "💼",
+      "titulo": "Mais de 1.700 vagas de emprego no Cate (diversas áreas)",
+      "empresa": "Cate Pirituba / Cate Freguesia-Brasilândia",
+      "bairro": "Pirituba",
+      "requisitos": "Salários entre R$ 1.069 (aprendiz administrativo) e R$ 28.423 (médico generalista); apresentar RG, CPF e carteira de trabalho no atendimento presencial",
       "tipo": "CLT",
-      "fonte": "Cate / Prefeitura de São Paulo",
-      "dias_atras": "atendimento em 21/07, das 9h às 15h, salário R$ 2.100"
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "vagas abertas em julho/2026"
     },
     {
       "icone": "🔧",
@@ -239,88 +226,80 @@
   ],
   "politica": [
     {
-      "orgao": "🏥 Subprefeitura Jaçanã/Tremembé",
-      "bairro": "Jardim Fontalis",
-      "titulo": "Obras da nova UBS Jardim Fontalis são anunciadas no Jaçanã/Tremembé",
-      "impacto": "Investimento de R$ 11 milhões para nova sede da UBS Jardim Fontalis, em terreno de cerca de 1.196 m² na Rua Ushikichi Kamiya com Rua Porfírio Vera Cruz, ampliando o atendimento de saúde na região.",
-      "status": "Obras anunciadas",
-      "fonte": "Secretaria Municipal de Justiça / Prefeitura de São Paulo"
+      "orgao": "🚆 TIC Trens (concessionária CPTM)",
+      "bairro": "Pirituba",
+      "titulo": "Modernização da Estação Pirituba (Linha 7-Rubi) é anunciada para o 2º semestre",
+      "impacto": "Obras vão implantar acessibilidade universal, revitalizar a via permanente e a rede aérea, e substituir sistemas de comunicação, sinalização e energia da estação.",
+      "status": "Início previsto para o 2º semestre de 2026",
+      "fonte": "Folha Noroeste"
     },
     {
-      "orgao": "🚧 Subprefeitura Jaçanã/Tremembé",
-      "bairro": "Tremembé",
-      "titulo": "Prefeitura investe R$ 240 milhões em 16 obras contra enchentes no Jaçanã/Tremembé",
-      "impacto": "Recursos do Fundo Municipal de Saneamento Ambiental e Infraestrutura (FMSAI) e da Caixa Econômica Federal financiam contenção de encostas, recuperação ambiental, rede de esgoto e drenagem de águas pluviais na região.",
-      "status": "Em andamento",
-      "fonte": "Secretaria Municipal de Justiça / Prefeitura de São Paulo"
+      "orgao": "🔌 CIC Oeste (Secretaria da Justiça e Cidadania) / Enel",
+      "bairro": "Jaraguá",
+      "titulo": "Programa Enel Compartilha Eficiência abre inscrições para troca de geladeiras e lâmpadas",
+      "impacto": "Clientes Enel com baixo consumo de energia podem se cadastrar para substituição gratuita de equipamentos, reduzindo o consumo elétrico de famílias da região.",
+      "status": "Inscrições realizadas em 23 e 24/07",
+      "fonte": "Folha Noroeste"
     },
     {
-      "orgao": "🏛️ Subprefeitura Perus",
-      "bairro": "Perus",
-      "titulo": "SIURB realiza audiência pública sobre drenagem dos córregos Perus e Pinheirinhos",
-      "impacto": "A Prefeitura, por meio da SIURB, ouviu contribuições da população para o caderno de drenagem da bacia dos córregos Perus e Pinheirinhos, etapa que subsidia futuras obras contra alagamentos na região.",
-      "status": "Consulta pública realizada em 03/07",
-      "fonte": "Subprefeitura Perus"
-    },
-    {
-      "orgao": "🌳 Secretaria de Meio Ambiente do Estado",
-      "bairro": "Horto Florestal",
-      "titulo": "Urbia devolve concessão do Horto Florestal e do Parque Cantareira ao governo do Estado",
-      "impacto": "Resolução publicada em 2 de julho reincluiu as duas áreas de preservação no Programa de Parcerias de Investimentos do Estado, autorizando estudos para uma nova licitação. A concessionária segue responsável pela gestão dos parques até a assinatura de um novo contrato.",
-      "status": "Devolução formalizada, nova licitação em estudo",
-      "fonte": "DiárioZonaNorte"
+      "orgao": "🚔 Conseg Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Conselho Comunitário de Segurança convoca reunião com moradores",
+      "impacto": "Encontro permite que moradores apresentem diretamente suas demandas de segurança pública às autoridades locais, subsidiando o planejamento de policiamento na região.",
+      "status": "Reunião agendada para 28/07, 19h30",
+      "fonte": "Folha Noroeste"
     }
   ],
   "alertas": [
     {
       "tipo": "neutro",
-      "emoji": "🌧️",
-      "titulo": "Frente fria traz chuva fraca e queda de temperatura no fim de semana",
-      "desc": "Sábado (25/07) deve ter mínima de 15°C e máxima de 23°C, com chuva fraca; domingo (26/07) fica mais frio, com mínima de 14°C e máxima de 21°C.",
+      "emoji": "🌥️",
+      "titulo": "Fim de semana começa nublado e termina com sol entre nuvens",
+      "desc": "Sábado (25/07) deve amanhecer nublado com chuviscos, melhorando ao longo do dia, com mínima de 14°C e máxima de 21°C. Domingo (26/07) tem sol entre nuvens, sem previsão de chuva significativa, com mínima de 14°C e máxima de 23°C.",
       "meta": "Previsão meteorológica"
     },
     {
       "tipo": "info",
-      "emoji": "💉",
-      "titulo": "Vacinação contra sarampo segue reforçada na Zona Norte",
-      "desc": "Após casos de sarampo confirmados em SP em 2026, alguns notificados na Vila Medeiros, bebês de 6 a 11 meses recebem a dose zero da tríplice viral e a população é orientada a manter a caderneta em dia.",
-      "meta": "Secretaria de Estado da Saúde"
-    },
-    {
-      "tipo": "info",
-      "emoji": "🚇",
-      "titulo": "Linha 6-Laranja opera gratuita entre Freguesia do Ó e Perdizes",
-      "desc": "Na fase inicial de operação, das 10h às 15h em dias úteis, o acesso às seis primeiras estações da nova linha do Metrô é gratuito.",
-      "meta": "Metrô de São Paulo"
+      "emoji": "📱",
+      "titulo": "SP Mulher Segura: aplicativo reúne denúncia, medida protetiva e botão do pânico",
+      "desc": "O app, disponível para Android e iOS com login gov.br, permite registrar boletim de ocorrência a qualquer hora, solicitar medida protetiva de urgência e, para quem já tem proteção judicial vigente, acionar botão do pânico direto ao Copom.",
+      "meta": "Governo do Estado de São Paulo"
     },
     {
       "tipo": "ok",
-      "emoji": "📈",
-      "titulo": "Armazéns Solidários registram crescimento de 30% nos atendimentos",
-      "desc": "Entre fevereiro e maio de 2026, os Armazéns Solidários da capital, incluindo a unidade da Brasilândia, tiveram aumento exponencial de atendimentos, com crescimento total de 30% no período.",
-      "meta": "Secretaria Executiva de Segurança Alimentar e Nutricional e de Abastecimento"
+      "emoji": "💼",
+      "titulo": "Capital abre julho com mais de 1.700 vagas de emprego pelo Cate",
+      "desc": "Vagas em saúde, comércio, serviços, construção civil e logística, com salários entre R$ 1.069 e R$ 28.423, incluindo atendimento presencial nos Cates de Pirituba e Freguesia/Brasilândia.",
+      "meta": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho"
+    },
+    {
+      "tipo": "info",
+      "emoji": "🚨",
+      "titulo": "Polícia reforça atenção a furtos de celular em abordagens de moto na Zona Norte",
+      "desc": "Casos recentes registrados na Av. Otaviano Alves de Lima (Limão) e no Jaçanã mostram dupla em moto abordando vítimas para levar celulares e pertences; um suspeito foi preso em flagrante.",
+      "meta": "BNews São Paulo"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🎪",
-      "titulo": "São João de Nóis Tudim (encerramento)",
-      "info": "25-26/07 · a partir das 10h · Centro de Tradições Nordestinas, Limão · Gratuito"
+      "emoji": "⛪",
+      "titulo": "Festa de Sant'Ana 2026",
+      "info": "25-26/07 · 11h às 22h · Basílica de Sant'Ana, Santana · Gratuito"
+    },
+    {
+      "emoji": "🧹",
+      "titulo": "Mutirão de Limpeza Freguesia do Ó/Brasilândia",
+      "info": "25/07 · 9h às 12h · Rua Beranizia de Paula Oliveira, 251 · Gratuito"
+    },
+    {
+      "emoji": "🎨",
+      "titulo": "Casarão Arte Livre",
+      "info": "26/07 · 11h às 18h · Parque Pinheirinho D'água, Jaraguá · Gratuito"
     },
     {
       "emoji": "🎬",
-      "titulo": "Cinema na Fábrica de Cultura Brasilândia",
-      "info": "25/07 · Fábrica de Cultura, Brasilândia · Gratuito"
-    },
-    {
-      "emoji": "🎤",
-      "titulo": "Sarau da Juventude na Biblioteca de São Paulo",
-      "info": "26/07 · 14h às 16h · Santana · Gratuito"
-    },
-    {
-      "emoji": "🥬",
-      "titulo": "Feira de Orgânicos Lar Center",
-      "info": "26/07 · 8h às 13h · Vila Guilherme · Gratuito"
+      "titulo": "Cine Pirituba Cultural: Mostra de Curtas Ecofalante",
+      "info": "26/07 · 15h · Biblioteca Brito Broca, Pirituba · Gratuito"
     }
   ]
 }
