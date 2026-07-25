@@ -3,60 +3,60 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚆 Mobilidade",
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Estação Pirituba da Linha 7-Rubi começa a receber obras de modernização neste semestre",
-      "resumo": "A concessionária TIC Trens vai iniciar, no segundo semestre de 2026, as primeiras intervenções de modernização da Estação Pirituba, incluindo acessibilidade universal, revitalização da via permanente e da rede aérea, e substituição dos sistemas de comunicação, sinalização e energia. Vila Aurora e Francisco Morato já receberam a nova identidade visual da concessionária.",
-      "fonte": "Folha Noroeste",
-      "hora": "julho/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/obras-da-estacao-pirituba-da-linha-7-rubi-comecam-neste-semestre/",
-      "icone": "🚆",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Enel abre inscrições para troca gratuita de geladeiras e lâmpadas no Jaraguá",
-      "resumo": "Nos dias 23 e 24 de julho, o Centro de Integração da Cidadania (CIC) Oeste, na Estrada das Taipas, 990, recebeu inscrições do programa Enel Compartilha Eficiência para troca gratuita de geladeiras e lâmpadas. É necessário ser cliente Enel com consumo médio de até 250 kWh/mês e não ter sido beneficiado por programa semelhante nos últimos dez anos.",
-      "fonte": "Folha Noroeste",
-      "hora": "23-24/07",
-      "url": "https://folhanoroeste.com.br/cotidiano/abertas-inscricoes-para-programa-de-troca-gratuita-de-geladeiras-e-lampadas-no-jaragua/",
-      "icone": "🧊",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Cate abre a semana com mais de 1.700 vagas de emprego na capital, com pontos em Pirituba e Freguesia/Brasilândia",
-      "resumo": "Os Centros de Apoio ao Trabalho e Empreendedorismo (Cate) abriram julho com mais de 1.700 vagas em setores como saúde, comércio, serviços, construção civil e logística, com salários entre R$ 1.069 e R$ 28.423. Na região, há atendimento no Cate Pirituba (Rua Paula Ferreira, 1708) e no Cate Freguesia/Brasilândia (Av. João Marcelino Branco, 95).",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "hora": "julho/2026",
-      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/julho-come%C3%A7a-com-mais-de-1.700-vagas-de-emprego-na-capital",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Subprefeitura Freguesia do Ó/Brasilândia participa do Mutirão de Limpeza deste sábado",
-      "resumo": "No sábado (25/07), das 9h às 12h, a Subprefeitura Freguesia do Ó/Brasilândia participa do Mutirão de Limpeza, ação simultânea em todas as subprefeituras de São Paulo dentro do Movimento SP. O ponto de encontro é na Rua Beranizia de Paula Oliveira, 251, e voluntários podem se inscrever pelo site do movimento.",
-      "fonte": "Folha Noroeste",
-      "hora": "25/07, 9h às 12h",
-      "url": "https://folhanoroeste.com.br/regional/sub-freguesia-realizara-mutirao-de-limpeza-dia-25-veja-onde-sera-o-ponto-de-encontro/",
-      "icone": "🧹",
+      "pill": "🎓 Educação",
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "IFSP realiza última audiência pública do futuro Campus Jaçanã; atividades começam em agosto",
+      "resumo": "Na sexta-feira (24/07), o Instituto Federal de São Paulo (IFSP) realizou no CÉU Tremembé Maria Firmina dos Reis a terceira e última audiência pública para definir a oferta acadêmica inicial do novo Campus Jaçanã. O encontro apresentou o cronograma de implantação e as ações previstas para o início das atividades, com cursos de extensão já programados para agosto de 2026, antes da chegada dos cursos técnicos e superiores.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "24/07, 19h",
+      "url": "https://www.diariozonanorte.com.br/campus-do-instituto-federal-no-jacana-tera-ultima-audiencia-publica-no-dia-24-de-julho-atividades-comecam-em-agosto/",
+      "icone": "🎓",
       "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Meio Ambiente",
+      "tag_bairro": "📍 Horto Florestal",
+      "bairro": "Horto Florestal",
+      "titulo": "Urbia vai devolver concessão do Horto Florestal e do Parque da Cantareira ao governo de SP",
+      "resumo": "A concessionária Urbia, responsável desde 2022 pela administração do Parque Estadual Alberto Löfgren (Horto Florestal) e do Parque Estadual da Cantareira, negocia devolver a concessão ao Governo do Estado. A empresa afirma ter cumprido os investimentos contratuais, mas não encontrou viabilidade financeira na operação dos parques. As duas áreas foram reincluídas no Programa Estadual de Parcerias e uma nova licitação está sendo estudada.",
+      "fonte": "Diário do Grande ABC / Serra da Cantareira Hoje",
+      "hora": "02/07",
+      "url": "https://www.serradacantareirahoje.com/2026/07/02/02-07-26-urbia-negocia-devolver-concessao-dos-parques-cantareira-e-horto-florestal-governo-de-sp-estuda-nova-licitacao/",
+      "icone": "🌳",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Cachoeirinha",
+      "bairro": "Cachoeirinha",
+      "titulo": "Subprefeitura realiza mega operação contra comércio irregular em feira na região de Cachoeirinha",
+      "resumo": "Em ação conjunta com Guarda Civil Metropolitana, Polícia Militar, Polícia Civil e CET, a Subprefeitura Casa Verde/Cachoeirinha/Limão fiscalizou o comércio irregular na Avenida Afonso Lopes Vieira. A operação abordou 101 pessoas e 28 veículos, resultando na apreensão de 91 sacas de mercadorias diversas.",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Casa Verde",
+      "hora": "14/07",
+      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/40024",
+      "icone": "🚔",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Serviços",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Conselho Tutelar de Casa Verde/Cachoeirinha muda para nova sede na Rua Buquira",
+      "resumo": "Desde a segunda-feira (07/07), o Conselho Tutelar de Casa Verde/Cachoeirinha atende em nova sede, na Rua Buquira, nº 35, no bairro Casa Verde. A mudança busca melhorar as condições de atendimento a crianças e adolescentes da região.",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Casa Verde",
+      "hora": "07/07",
+      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/49307",
+      "icone": "🏛️",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
@@ -79,7 +79,7 @@
       "tag_bairro": "📍 Limão",
       "bairro": "Limão",
       "titulo": "Dupla é presa em flagrante por furto de celulares na Zona Norte",
-      "resumo": "Uma dupla foi presa em flagrante durante uma abordagem na Avenida Otaviano Alves de Lima, na Zona Norte, no sábado (11/07). Segundo as vítimas, o modus operandi era se aproximar de veículos parados em um semáforo, em uma motocicleta, e arrancar celulares fixados nos suportes do painel.",
+      "resumo": "Uma dupla foi presa em flagrante durante uma abordagem na Avenida Otaviano Alves de Lima, no Limão, no sábado (11/07). Segundo as vítimas, o modus operandi era se aproximar de veículos parados em um semáforo, em uma motocicleta, e arrancar celulares fixados nos suportes do painel.",
       "fonte": "BNews São Paulo",
       "hora": "11/07",
       "url": "https://www.bnewssaopaulo.com.br/noticias/policia/furto-de-celulares-dupla-e-presa-em-flagrante-na-zona-norte.html",
@@ -88,31 +88,73 @@
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Perus",
-      "bairro": "Perus",
-      "titulo": "Motiva Autoban leva ação de saúde e conscientização a caminhoneiros na Rodovia dos Bandeirantes",
-      "resumo": "Antecipando o Dia Nacional do Motorista (25/07), a concessionária Motiva Autoban promoveu uma manhã de ações de saúde e segurança viária para caminhoneiros no km 56 da Rodovia dos Bandeirantes, sentido capital, próximo a Perus, com aferição de pressão arterial, teste de glicemia e simulação dos efeitos da embriaguez ao volante.",
-      "fonte": "Folha Noroeste",
-      "hora": "23/07",
-      "url": "https://folhanoroeste.com.br/regional/motiva-autoban-celebra-o-dia-do-motorista-com-conscientizacao-para-caminhoneiros-na-rodovia-dos-bandeirantes/",
-      "icone": "🚚",
-      "icone_classe": "ic-mob"
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Criminoso invade calçada e rouba aliança de morador na Freguesia do Ó",
+      "resumo": "Um homem foi assaltado na Rua Professor Carlos Nobre Rosa, na Freguesia do Ó, no dia 10/07. Imagens de câmeras de segurança mostram um suspeito em uma motocicleta subindo na calçada e se aproximando da vítima, que estava em frente a uma oficina mecânica; armado, o criminoso levou a aliança do homem e fugiu em seguida.",
+      "fonte": "BNews São Paulo",
+      "hora": "10/07",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/criminoso-invade-calcada-e-rouba-alianca-de-homem-na-zona-norte-de-sp.html",
+      "icone": "🚨",
+      "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
+      "tag_bairro": "📍 Vila Maria Alta",
+      "bairro": "Vila Maria Alta",
+      "titulo": "Câmera de segurança registra assalto a família na Vila Maria Alta",
+      "resumo": "Uma família teve pertences roubados na Rua Moreira Vasconcelos, na Vila Maria Alta, Zona Norte. Imagens de câmeras de segurança mostram as vítimas sendo surpreendidas por dois homens em uma motocicleta.",
+      "fonte": "BNews São Paulo",
+      "hora": "julho/2026",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/camara-de-seguranca-registra-assalto-a-familia-em-sao-paulo-veja.html",
+      "icone": "🚨",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Enel abre inscrições para troca gratuita de geladeiras e lâmpadas no Jaraguá",
+      "resumo": "Nos dias 23 e 24 de julho, o Centro de Integração da Cidadania (CIC) Oeste, na Estrada das Taipas, 990, recebeu inscrições do programa Enel Compartilha Eficiência para troca gratuita de geladeiras e lâmpadas. É necessário ser cliente Enel com consumo médio de até 250 kWh/mês e não ter sido beneficiado por programa semelhante nos últimos dez anos.",
+      "fonte": "Folha Noroeste",
+      "hora": "23-24/07",
+      "url": "https://folhanoroeste.com.br/cotidiano/abertas-inscricoes-para-programa-de-troca-gratuita-de-geladeiras-e-lampadas-no-jaragua/",
+      "icone": "🧊",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Subprefeitura de Perus intensifica ações de tapa-buraco e reforma de sarjetas",
+      "resumo": "A Subprefeitura Perus/Anhanguera tem programação de zeladoria urbana em julho com serviços de tapa-buraco e reforma de sarjeta em vias como o Calçadão da Estação (sob o viaduto), Rua Herculano José dos Santos, Rua Vicente J. dos Santos e Rua Luís Domingos de Castro. Moradores também podem solicitar poda de árvores, limpeza de córregos e outros serviços de zeladoria pelo canal SP156.",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus",
+      "hora": "julho/2026",
+      "url": "https://prefeitura.sp.gov.br/web/perus/w/zeladoria_urbana/84902",
+      "icone": "🚧",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
-      "titulo": "Conseg Pirituba convoca reunião comunitária de segurança para terça-feira (28/07)",
-      "resumo": "O Conselho Comunitário de Segurança (Conseg) Pirituba realiza, na terça-feira (28/07), às 19h30, reunião aberta à comunidade para receber demandas de moradores relacionadas à segurança pública, na Av. Santa Mônica, 809. Entrada livre, sem necessidade de inscrição.",
-      "fonte": "Folha Noroeste",
-      "hora": "28/07, 19h30",
-      "url": "https://folhanoroeste.com.br/cotidiano/conseg-pirituba-realiza-encontro-na-proxima-terca-28-no-bairro/",
-      "icone": "🚔",
-      "icone_classe": "ic-seg"
+      "titulo": "Programa Aedes do Bem chega a Pirituba para reduzir a população do mosquito da dengue",
+      "resumo": "A Prefeitura de São Paulo firmou parceria com a empresa Flyttr para implementar em larga escala o projeto Aedes do Bem, que usa mosquitos estéreis para reduzir a população do Aedes aegypti. A ação já trata áreas em Pirituba, além de Jardim Ângela e Itaim Paulista, e em outras cidades já alcançou até 96% de supressão do mosquito transmissor da dengue nas áreas tratadas.",
+      "fonte": "Jornal do Brás",
+      "hora": "julho/2026",
+      "url": "https://jornaldobras.com.br/noticia/130323/cidade-de-sao-paulo-e-flyttr-lancam-parceria-estrategica-para-combater-o-mosquito-da-dengue-em-larga-escala",
+      "icone": "🦟",
+      "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
@@ -143,6 +185,19 @@
       "url": "https://folhanoroeste.com.br/regional/sub-freguesia-realizara-mutirao-de-limpeza-dia-25-veja-onde-sera-o-ponto-de-encontro/"
     },
     {
+      "dia": "25",
+      "mes": "Jul",
+      "cor_fundo": "#EF6C00",
+      "bairro": "Limão",
+      "titulo": "São João de Nóis Tudim - último fim de semana no CTN",
+      "hora": "sáb. 11h à 0h · dom. 11h às 22h",
+      "local": "Centro de Tradições Nordestinas, Rua Jacofer, 615 – Limão",
+      "descricao": "Última semana da festa junina do CTN, com forró ao vivo, quadrilhas, gastronomia nordestina e atrações para toda a família em edição de 10 anos do evento.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.ctn.org.br/sao-joao-de-nois-tudim/"
+    },
+    {
       "dia": "26",
       "mes": "Jul",
       "cor_fundo": "#C62828",
@@ -169,6 +224,19 @@
       "url": "https://folhanoroeste.com.br/regional/cine-pirituba-cultural-exibe-mostra-de-curtas-ecofalante-na-av-mutinga/"
     },
     {
+      "dia": "26",
+      "mes": "Jul",
+      "cor_fundo": "#5D4037",
+      "bairro": "Santana",
+      "titulo": "Sarau da Juventude na Biblioteca de São Paulo",
+      "hora": "14h às 16h",
+      "local": "Biblioteca de São Paulo, Av. Cruzeiro do Sul, 2630 – Santana",
+      "descricao": "Espaço semanal de expressão artística para adolescentes e jovens, com microfone aberto para poesia, música autoral e rodas de conversa.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.saopaulo.sp.gov.br/ultimas-noticias/biblioteca-de-sao-paulo-promove-sarau/"
+    },
+    {
       "dia": "28",
       "mes": "Jul",
       "cor_fundo": "#558B2F",
@@ -184,14 +252,14 @@
   ],
   "vagas": [
     {
-      "icone": "💼",
-      "titulo": "Mais de 1.700 vagas de emprego no Cate (diversas áreas)",
-      "empresa": "Cate Pirituba / Cate Freguesia-Brasilândia",
-      "bairro": "Pirituba",
-      "requisitos": "Salários entre R$ 1.069 (aprendiz administrativo) e R$ 28.423 (médico generalista); apresentar RG, CPF e carteira de trabalho no atendimento presencial",
+      "icone": "📋",
+      "titulo": "Escriturário(a) Administrativo",
+      "empresa": "Ótica Indaiá",
+      "bairro": "Perus",
+      "requisitos": "Não especificado pela fonte; salário fixo mais comissões",
       "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas abertas em julho/2026"
+      "fonte": "Catho",
+      "dias_atras": "vaga aberta em julho/2026"
     },
     {
       "icone": "🔧",
@@ -234,20 +302,28 @@
       "fonte": "Folha Noroeste"
     },
     {
-      "orgao": "🔌 CIC Oeste (Secretaria da Justiça e Cidadania) / Enel",
-      "bairro": "Jaraguá",
-      "titulo": "Programa Enel Compartilha Eficiência abre inscrições para troca de geladeiras e lâmpadas",
-      "impacto": "Clientes Enel com baixo consumo de energia podem se cadastrar para substituição gratuita de equipamentos, reduzindo o consumo elétrico de famílias da região.",
-      "status": "Inscrições realizadas em 23 e 24/07",
-      "fonte": "Folha Noroeste"
+      "orgao": "🌳 Governo do Estado de SP / Urbia",
+      "bairro": "Horto Florestal",
+      "titulo": "Concessão do Horto Florestal e do Parque da Cantareira será devolvida ao Estado",
+      "impacto": "A administração dos dois parques estaduais na Zona Norte deve passar por transição até que uma nova licitação ou renegociação de contrato seja definida, o que pode afetar investimentos e serviços oferecidos à população nas áreas verdes.",
+      "status": "Devolução em negociação; nova licitação em estudo",
+      "fonte": "Serra da Cantareira Hoje"
     },
     {
-      "orgao": "🚔 Conseg Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Conselho Comunitário de Segurança convoca reunião com moradores",
-      "impacto": "Encontro permite que moradores apresentem diretamente suas demandas de segurança pública às autoridades locais, subsidiando o planejamento de policiamento na região.",
-      "status": "Reunião agendada para 28/07, 19h30",
-      "fonte": "Folha Noroeste"
+      "orgao": "👶 Conselho Tutelar Casa Verde/Cachoeirinha",
+      "bairro": "Casa Verde",
+      "titulo": "Conselho Tutelar muda para nova sede na Rua Buquira",
+      "impacto": "Mudança de endereço busca melhorar o atendimento a crianças e adolescentes da região; moradores devem atualizar o local de referência para denúncias e atendimentos.",
+      "status": "Nova sede em funcionamento desde 07/07",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Casa Verde"
+    },
+    {
+      "orgao": "🚔 Subprefeitura Casa Verde/Cachoeirinha/Limão",
+      "bairro": "Cachoeirinha",
+      "titulo": "Operação fiscaliza comércio irregular em feira da região",
+      "impacto": "Ação integrada com forças de segurança apreendeu 91 sacas de mercadorias e abordou 101 pessoas e 28 veículos, reforçando o combate ao comércio ambulante irregular na região.",
+      "status": "Operação realizada em 14/07",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Casa Verde"
     }
   ],
   "alertas": [
@@ -266,18 +342,18 @@
       "meta": "Governo do Estado de São Paulo"
     },
     {
-      "tipo": "ok",
-      "emoji": "💼",
-      "titulo": "Capital abre julho com mais de 1.700 vagas de emprego pelo Cate",
-      "desc": "Vagas em saúde, comércio, serviços, construção civil e logística, com salários entre R$ 1.069 e R$ 28.423, incluindo atendimento presencial nos Cates de Pirituba e Freguesia/Brasilândia.",
-      "meta": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho"
+      "tipo": "info",
+      "emoji": "🚨",
+      "titulo": "Polícia reforça atenção a assaltos com abordagem em moto na Zona Norte",
+      "desc": "Casos recentes registrados no Limão, Jaçanã, Freguesia do Ó e Vila Maria Alta mostram criminosos em motocicleta abordando pedestres e famílias para levar celulares, alianças e pertences.",
+      "meta": "BNews São Paulo"
     },
     {
       "tipo": "info",
-      "emoji": "🚨",
-      "titulo": "Polícia reforça atenção a furtos de celular em abordagens de moto na Zona Norte",
-      "desc": "Casos recentes registrados na Av. Otaviano Alves de Lima (Limão) e no Jaçanã mostram dupla em moto abordando vítimas para levar celulares e pertences; um suspeito foi preso em flagrante.",
-      "meta": "BNews São Paulo"
+      "emoji": "🦟",
+      "titulo": "Programa Aedes do Bem amplia combate à dengue em Pirituba",
+      "desc": "Parceria entre a Prefeitura e a empresa Flyttr usa mosquitos estéreis para suprimir a população do Aedes aegypti; especialistas alertam para risco de El Niño moderado a forte no 2º semestre, que pode favorecer a proliferação do mosquito.",
+      "meta": "Jornal do Brás"
     }
   ],
   "fim_de_semana": [
@@ -292,6 +368,11 @@
       "info": "25/07 · 9h às 12h · Rua Beranizia de Paula Oliveira, 251 · Gratuito"
     },
     {
+      "emoji": "🎪",
+      "titulo": "São João de Nóis Tudim - último fim de semana",
+      "info": "25-26/07 · CTN, Rua Jacofer, 615, Limão · Gratuito"
+    },
+    {
       "emoji": "🎨",
       "titulo": "Casarão Arte Livre",
       "info": "26/07 · 11h às 18h · Parque Pinheirinho D'água, Jaraguá · Gratuito"
@@ -300,6 +381,11 @@
       "emoji": "🎬",
       "titulo": "Cine Pirituba Cultural: Mostra de Curtas Ecofalante",
       "info": "26/07 · 15h · Biblioteca Brito Broca, Pirituba · Gratuito"
+    },
+    {
+      "emoji": "🎤",
+      "titulo": "Sarau da Juventude",
+      "info": "26/07 · 14h às 16h · Biblioteca de São Paulo, Santana · Gratuito"
     }
   ]
 }
