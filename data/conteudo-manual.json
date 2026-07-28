@@ -6,84 +6,56 @@
       "pill": "🚨 Segurança",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Jardim Brasil",
-      "bairro": "Jardim Brasil",
-      "titulo": "PM estoura 'casa de bomba' no Jardim Brasil e apreende mais de 4,5 mil porções de droga",
-      "resumo": "Equipes da 3ª Companhia do 5º Batalhão da Polícia Militar localizaram um ponto de armazenamento e fracionamento de entorpecentes no Jardim Brasil, distrito de Vila Medeiros. A ação resultou na apreensão de milhares de porções de drogas prontas para venda.",
-      "fonte": "Semanário Zona Norte",
-      "hora": "julho/2026",
-      "url": "https://www.semanariozonanorte.com.br/noticia/equipes-da-3-cia-do-5-batalhao-estouraram-casa-de-bomba-e-apreendem-mais-de-4-5-mil-porcoes-de-drogas-no-jardim-brasil",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "PM mobiliza mais de 120 policiais em operação contra roubos e a 'gangue do quebra-vidro' na Zona Norte",
+      "resumo": "A Operação Impacto Grande Envergadura, coordenada pelo Comando de Policiamento de Área 3 (CPA/M-3), reforçou o patrulhamento ostensivo em corredores viários da Zona Norte em 22/07, com foco em roubos, furtos e crimes contra veículos, incluindo ações do grupo conhecido como 'gangue do quebra-vidro'. Foram abordadas 302 pessoas e vistoriados 88 veículos.",
+      "fonte": "GuarulhosWeb",
+      "hora": "22/07/2026",
+      "url": "https://guarulhosweb.com.br/operacao-da-policia-militar-mira-gangue-do-quebra-vidro-e-reforca-seguranca-na-zona-norte-de-sp/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Meio Ambiente",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Região da Ponte da Casa Verde ganha quatro novos bosques urbanos com 2.416 árvores",
-      "resumo": "A Prefeitura entregou os bosques Cardeal, Ema, Suindara e Sanhaço no entorno da Ponte da Casa Verde, com espécies nativas da Mata Atlântica e do Cerrado como jequitibá-branco, jerivá e paineira. A cidade chega a 16 bosques urbanos implantados.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "06/07/2026",
-      "url": "https://www.diariozonanorte.com.br/regiao-da-ponte-da-casa-verde-recebe-quatro-novos-bosques-urbanos-serao-2-416-arvores/",
-      "icone": "🌳",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Perus",
-      "bairro": "Perus",
-      "titulo": "Audiência pública debate drenagem dos Ribeirões Perus e Pinheirinhos",
-      "resumo": "A Secretaria Municipal de Infraestrutura Urbana e Obras (SIURB) realizou audiência pública para colher contribuições da população na elaboração do caderno de drenagem da bacia dos Ribeirões Perus e Pinheirinhos, que prevê reservatórios e canalizações contra enchentes.",
-      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus",
-      "hora": "03/07/2026",
-      "url": "https://prefeitura.sp.gov.br/web/perus/w/audi%C3%AAncia-p%C3%BAblica-do-caderno-de-drenagem-dos-ribeir%C3%B5es-perus-e-pinheirinhos",
-      "icone": "🚧",
-      "icone_classe": "ic-edu"
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Linha 6-Laranja do Metrô estreia com estação Freguesia do Ó no primeiro trecho aberto",
+      "resumo": "Em 02/07/2026 entrou em operação o primeiro trecho da Linha 6-Laranja, entre João Paulo I e Perdizes, com seis estações abertas — entre elas Freguesia do Ó. O trecho até a estação Brasilândia tem inauguração prevista para outubro de 2026.",
+      "fonte": "Agência Brasil",
+      "hora": "02/07/2026",
+      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-07/linha-6-laranja-do-metro-de-sp-inicia-operacao-nesta-sexta-feira",
+      "icone": "🚇",
+      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Comunidade",
+      "tag_label": "Saúde",
       "tag_bairro": "📍 Santana",
       "bairro": "Santana",
-      "titulo": "Santana completa 244 anos de desenvolvimento e tradição",
-      "resumo": "O distrito de Santana, um dos mais antigos e tradicionais da Zona Norte, celebrou seu aniversário com reportagem especial sobre sua história, comércio e importância para a região.",
-      "fonte": "Semanário Zona Norte",
-      "hora": "julho/2026",
-      "url": "https://www.semanariozonanorte.com.br/noticia/santana-completa-244-anos-de-desenvolvimento-e-muita-tradicao",
-      "icone": "🎉",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Comunidade",
-      "tag_bairro": "📍 Parada Inglesa",
-      "bairro": "Parada Inglesa",
-      "titulo": "Parada Inglesa comemora aniversário em 25 de julho",
-      "resumo": "O bairro da Parada Inglesa, em Tucuruvi, marcou mais um aniversário, celebrado pela imprensa local com destaque para a formação histórica e o comércio da região.",
-      "fonte": "Semanário Zona Norte",
-      "hora": "25/07/2026",
-      "url": "https://www.semanariozonanorte.com.br/noticia/parada-inglesa-faz-aniversario-no-dia-25-de-julho-7487",
-      "icone": "🎂",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Política",
-      "tag_bairro": "📍 Tremembé",
-      "bairro": "Tremembé",
-      "titulo": "Conselho Participativo do Jaçanã/Tremembé inicia trabalhos com foco em demandas locais",
-      "resumo": "O CPM Jaçanã/Tremembé, coordenado por Gisele de Lima, começou a atuar com 18 conselheiros eleitos, priorizando obras de drenagem e viárias na região, que reúne 89 bairros — a maior entre as subprefeituras da Zona Norte.",
+      "titulo": "Hospital de R$ 600 milhões do grupo Mater Dei/Atlântica reforça rede de saúde em Santana",
+      "resumo": "Em construção em parceria com a Atlântica Hospitais (grupo Bradesco), o novo hospital privado deve ampliar a oferta de atendimento de saúde na Zona Norte e gerar empregos permanentes após a inauguração, em meio ao avanço imobiliário do bairro.",
       "fonte": "DiárioZonaNorte",
-      "hora": "26/07/2026",
-      "url": "https://www.diariozonanorte.com.br/conselho-participativo-do-jacana-tremembe-inicia-trabalhos-com-foco-em-demandas-locais/",
-      "icone": "🏛️",
+      "hora": "julho/2026",
+      "url": "https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/",
+      "icone": "🏥",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Brasilândia",
+      "bairro": "Brasilândia",
+      "titulo": "Armazém Solidário da Brasilândia completa 2 anos e já vendeu mais de 3 milhões de itens",
+      "resumo": "A unidade da Estrada do Sabão, 806, oferece alimentos, produtos de higiene e limpeza com desconto de 30% a 50% para famílias inscritas no CadÚnico, e já recebeu mais de 196 mil pessoas desde a abertura. Funciona de terça a sábado, das 9h às 18h.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "julho/2026",
+      "url": "https://www.diariozonanorte.com.br/armazem-solidario-da-brasilandia-oferece-alimentos-com-ate-50-de-desconto-saiba-quem-pode-comprar-la/",
+      "icone": "🛒",
       "icone_classe": "ic-eco"
     },
     {
@@ -92,26 +64,68 @@
       "tag_label": "Economia",
       "tag_bairro": "📍 Casa Verde",
       "bairro": "Casa Verde",
-      "titulo": "Cate abre mais de 1.700 vagas de emprego, com unidades na Zona Norte",
-      "resumo": "O Centro de Apoio ao Trabalho e Empreendedorismo (Cate) da Prefeitura abriu processos seletivos com salários entre R$ 1.069 e R$ 28.423, com atendimento presencial em unidades de Casa Verde, Santana, Vila Maria/Vila Guilherme, Perus e Jaçanã/Tremembé.",
-      "fonte": "Prefeitura de São Paulo - SMDET",
-      "hora": "29/06/2026",
-      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/julho-come%C3%A7a-com-mais-de-1.700-vagas-de-emprego-na-capital",
+      "titulo": "Cate inicia última semana de julho com mais de 1.700 vagas de emprego",
+      "resumo": "Unidades do Centro de Apoio ao Trabalho e Empreendedorismo (Cate), incluindo a de Casa Verde, oferecem vagas em comércio, serviços, construção civil e logística, com salários de R$ 761 a R$ 5,3 mil. Inscrições até 29/07 às 18h, on-line ou nos postos fixos e móveis.",
+      "fonte": "Folha Noroeste",
+      "hora": "27/07/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/unidades-do-cate-iniciam-ultima-semana-de-julho-com-mais-de-1-700-vagas-de-emprego/",
       "icone": "💼",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-edu",
-      "tag_label": "Cultura",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Sesc Casa Verde recebe 'Férias Espaciais' com planetário e teatro gratuitos",
-      "resumo": "Até 26 de julho, o Sesc Casa Verde promoveu programação sobre o universo e os planetas, incluindo planetário itinerante, teatro, dança e realidade virtual, toda gratuita, para crianças, jovens e adultos.",
-      "fonte": "Universo ZN",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Prefeitura Presente leva R$ 490 milhões em investimentos a Pirituba/Jaraguá",
+      "resumo": "A região recebeu a primeira edição do programa Prefeitura Presente do ano, reunindo serviços públicos e anunciando investimentos que somam R$ 490 milhões para obras e melhorias em Pirituba, Jaraguá e São Domingos.",
+      "fonte": "Prefeitura de São Paulo",
       "hora": "julho/2026",
-      "url": "https://universozn.com.br/ferias-espaciais-sesc-casa-verde",
-      "icone": "🎭",
+      "url": "https://prefeitura.sp.gov.br/w/noticia/primeiro-prefeitura-presente-do-ano-vai-a-pirituba-jaragua-regiao-que-esta-recebendo-r-490-milhoes-de-investimentos",
+      "icone": "🏗️",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 São Domingos",
+      "bairro": "São Domingos",
+      "titulo": "Projeto Praça Viva quer revitalizar as 380 praças de Pirituba, Jaraguá e São Domingos",
+      "resumo": "Iniciativa da subprefeitura reforma bancos, mesas e aparelhos de ginástica, com poda de árvores, capina e mutirões de pintura em praças da região, contando com apoio da CET e da Guarda Civil Metropolitana.",
+      "fonte": "Folha Noroeste",
+      "hora": "julho/2026",
+      "url": "https://folhanoroeste.com.br/regional/subprefeitura-pirituba-jaragua-investe-em-zeladoria-e-quer-revitalizar-todas-as-380-pracas-da-regiao/",
+      "icone": "🌳",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Subprefeitura inaugura décimo EcoEnel na Praça Vila Nova Esperança",
+      "resumo": "O novo ponto de coleta seletiva de resíduos recicláveis, instalado em 03/07/2026 na Praça Vila Nova Esperança, integra o programa EcoEnel, que estimula a reciclagem e oferece descontos na conta de energia para quem participa.",
+      "fonte": "Subprefeitura Pirituba/Jaraguá",
+      "hora": "03/07/2026",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/noticias",
+      "icone": "♻️",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Caderno de drenagem dos Ribeirões Perus e Pinheirinhos segue em elaboração após audiência pública",
+      "resumo": "A SIURB avalia as contribuições colhidas em audiência pública para definir reservatórios e obras de canalização que devem reduzir alagamentos na bacia dos Ribeirões Perus e Pinheirinhos.",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus",
+      "hora": "julho/2026",
+      "url": "https://prefeitura.sp.gov.br/web/perus/w/audi%C3%AAncia-p%C3%BAblica-do-caderno-de-drenagem-dos-ribeir%C3%B5es-perus-e-pinheirinhos",
+      "icone": "🚧",
       "icone_classe": "ic-edu"
     }
   ],
@@ -124,7 +138,7 @@
       "titulo": "Contagem Regressiva: Experiência Espacial",
       "hora": "13h30 às 17h30",
       "local": "Sesc Casa Verde",
-      "descricao": "Oficina sensorial de lançamento de foguete, com recursos de acessibilidade (Libras, tato e narração), parte da programação Férias Espaciais.",
+      "descricao": "Última semana da programação Férias Espaciais, com oficina sensorial de lançamento de foguete e recursos de acessibilidade (Libras, tato e narração).",
       "gratuito": true,
       "preco": null,
       "url": "https://universozn.com.br/ferias-espaciais-sesc-casa-verde"
@@ -138,6 +152,32 @@
       "hora": "10h às 12h e 13h às 15h",
       "local": "CEU Parque Anhanguera - R. Pedro José de Lima, 1020",
       "descricao": "Encontros gratuitos de iniciação artística para bebês e crianças de 0 a 6 anos com suas famílias, promovidos pela Secretaria Municipal de Cultura.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/a-secretaria-municipal-de-cultura-informa-que-o-programa-de-inicia%C3%A7%C3%A3o-art%C3%ADstica-para-primeira-inf%C3%A2ncia-piapi-ter%C3%A1-in%C3%ADcio-no-m%C3%AAs-de-agosto"
+    },
+    {
+      "dia": "01",
+      "mes": "Ago",
+      "cor_fundo": "#F2994A",
+      "bairro": "Tucuruvi",
+      "titulo": "PIAPI na Biblioteca Sylvia Orthof",
+      "hora": "10h-12h e 12h-14h",
+      "local": "Av. Tucuruvi, 808 (Tucuruvi)",
+      "descricao": "Atividades gratuitas de iniciação artística para primeira infância, parte do programa PIAPI da Secretaria Municipal de Cultura.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/a-secretaria-municipal-de-cultura-informa-que-o-programa-de-inicia%C3%A7%C3%A3o-art%C3%ADstica-para-primeira-inf%C3%A2ncia-piapi-ter%C3%A1-in%C3%ADcio-no-m%C3%AAs-de-agosto"
+    },
+    {
+      "dia": "01",
+      "mes": "Ago",
+      "cor_fundo": "#E74C3C",
+      "bairro": "Vila Maria",
+      "titulo": "PIAPI na Biblioteca Álvares de Azevedo",
+      "hora": "10h-12h e 12h-14h",
+      "local": "Praça Joaquim José da Nova (Vila Maria)",
+      "descricao": "Atividades gratuitas de iniciação artística para bebês e crianças, parte do programa PIAPI da Secretaria Municipal de Cultura.",
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/cultura/w/a-secretaria-municipal-de-cultura-informa-que-o-programa-de-inicia%C3%A7%C3%A3o-art%C3%ADstica-para-primeira-inf%C3%A2ncia-piapi-ter%C3%A1-in%C3%ADcio-no-m%C3%AAs-de-agosto"
@@ -163,136 +203,123 @@
       "titulo": "1ª Corrida Promofarma",
       "hora": "Manhã de domingo",
       "local": "Campo de Marte (PAMA)",
-      "descricao": "Corrida de rua com percursos de 5 km e 10 km, esperando 3.200 corredores; parte da arrecadação vai para o Instituto Resgatando Vidas, com oficina de atletismo para crianças e jovens da comunidade.",
+      "descricao": "Corrida de rua com percursos de 5 km e 10 km, esperando 3.200 corredores; parte da arrecadação vai para o Instituto Resgatando Vidas.",
       "gratuito": false,
       "preco": "Inscrição via Ticket Sports",
       "url": "https://institucional.promofarma.com.br/2026/1a-corrida-promofarma-correr-com-proposito-muda-vidas/"
-    },
-    {
-      "dia": "29",
-      "mes": "Ago",
-      "cor_fundo": "#6C63FF",
-      "bairro": "Casa Verde",
-      "titulo": "Expo Favela Innovation SP",
-      "hora": "Dois dias de programação",
-      "local": "Sesc Casa Verde",
-      "descricao": "Quarta edição da feira que reúne empreendedores de favelas de todo o estado, corporações, investidores e poder público em rodadas de negócios, pitches, mentorias e programação cultural.",
-      "gratuito": false,
-      "preco": "Consulte programação no site do Sesc",
-      "url": "https://www.pretajoia.com/2026/07/expo-favela-innovation-chega-ao-sesc.html"
     }
   ],
   "vagas": [
     {
-      "icone": "📦",
-      "titulo": "Auxiliar de Logística",
-      "empresa": "Diversas empresas (Cate)",
-      "bairro": "Casa Verde",
-      "requisitos": "Ensino fundamental a médio; treinamento oferecido pela maioria das empresas",
-      "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo - Cate (Av. Ordem e Progresso, 1001)",
-      "dias_atras": "publicado em 29/06/2026"
-    },
-    {
       "icone": "🧹",
       "titulo": "Auxiliar de Limpeza",
       "empresa": "Diversas empresas (Cate)",
-      "bairro": "Vila Maria",
-      "requisitos": "Vagas temporárias e fixas, salários de até R$ 2.455",
+      "bairro": "Casa Verde",
+      "requisitos": "Cerca de 400 vagas na capital, com salário de até R$ 2.362",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo - Cate Vila Maria/Vila Guilherme (Rua General Mendes, 111)",
-      "dias_atras": "publicado em 29/06/2026"
+      "fonte": "Cate - unidade Casa Verde (Av. Ordem e Progresso, 1001)",
+      "dias_atras": "vagas da semana de 27/07/2026"
     },
     {
-      "icone": "🍳",
-      "titulo": "Auxiliar de Cozinha / Cozinheiro",
-      "empresa": "Restaurantes, padarias e supermercados (Cate)",
-      "bairro": "Santana",
-      "requisitos": "Salários entre R$ 1.804 e R$ 3.300",
+      "icone": "🔧",
+      "titulo": "Leiturista de Rede de Gás/Energia Elétrica",
+      "empresa": "Diversas empresas (Cate)",
+      "bairro": "Vila Maria",
+      "requisitos": "90 vagas na capital, com remuneração de até R$ 2.550",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo - Cate Santana (Av. Tucuruvi, 808)",
-      "dias_atras": "publicado em 29/06/2026"
+      "fonte": "Cate - unidade Vila Maria/Vila Guilherme (Rua General Mendes, 111)",
+      "dias_atras": "vagas da semana de 27/07/2026"
     },
     {
       "icone": "🩺",
       "titulo": "Técnico(a)/Auxiliar de Enfermagem",
       "empresa": "Rede de saúde parceira (Cate)",
       "bairro": "Perus",
-      "requisitos": "Experiência e escolaridade avaliadas no processo seletivo; salário de até R$ 2.320",
+      "requisitos": "Experiência e escolaridade avaliadas no processo seletivo",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo - Cate Perus (Rua Ylídio Figueiredo, 285)",
-      "dias_atras": "publicado em 29/06/2026"
+      "fonte": "Cate - unidade Perus (Rua Ylídio Figueiredo, 285)",
+      "dias_atras": "vagas em aberto - julho/2026"
+    },
+    {
+      "icone": "🧑‍💼",
+      "titulo": "Assistente Administrativo",
+      "empresa": "RH Grandes Talentos",
+      "bairro": "Imirim",
+      "requisitos": "Salário de R$ 2.300,00 + vale-transporte, empresa próxima à Av. Imirim",
+      "tipo": "CLT",
+      "fonte": "Quickin / RH Grandes Talentos",
+      "dias_atras": "publicado em julho/2026"
     }
   ],
   "politica": [
     {
-      "orgao": "🏢 Subprefeitura Perus/Anhanguera",
-      "bairro": "Perus",
-      "titulo": "Audiência pública sobre drenagem dos Ribeirões Perus e Pinheirinhos",
-      "impacto": "Contribuições da população vão orientar o caderno de drenagem que prevê novos reservatórios e canalizações para reduzir enchentes na região",
-      "status": "Realizada em 03/07/2026 - em elaboração o caderno técnico",
+      "orgao": "🏢 Subprefeitura Pirituba/Jaraguá",
+      "bairro": "Pirituba",
+      "titulo": "Prefeitura Presente leva R$ 490 milhões em investimentos à região",
+      "impacto": "Primeira edição do programa no ano reúne serviços públicos e anuncia obras para Pirituba, Jaraguá e São Domingos",
+      "status": "Realizado em julho/2026",
       "fonte": "Prefeitura de São Paulo"
     },
     {
-      "orgao": "👥 Conselho Participativo Municipal",
-      "bairro": "Tremembé",
-      "titulo": "CPM Jaçanã/Tremembé inicia mandato com foco em obras de drenagem e viárias",
-      "impacto": "Conselho de 18 membros vai fiscalizar gastos públicos e priorizar demandas dos 89 bairros da subprefeitura, a maior da Zona Norte",
-      "status": "Início dos trabalhos em julho/2026",
-      "fonte": "DiárioZonaNorte"
+      "orgao": "🌳 Subprefeitura Pirituba/Jaraguá",
+      "bairro": "São Domingos",
+      "titulo": "Projeto Praça Viva prevê revitalizar as 380 praças da região",
+      "impacto": "Reforma de bancos, mesas e aparelhos de ginástica, poda de árvores e mutirões de pintura em praças de Pirituba, Jaraguá, Taipas e São Domingos",
+      "status": "Em andamento - julho/2026",
+      "fonte": "Folha Noroeste"
     },
     {
-      "orgao": "🏛️ Prefeitura de São Paulo",
-      "bairro": "Anhanguera",
-      "titulo": "'Prefeitura Presente' leva mais de R$ 1 bilhão em investimentos a Perus/Anhanguera",
-      "impacto": "Entrega de três piscinões e inauguração de estação de tratamento de esgoto ao lado do governador Tarcísio de Freitas",
-      "status": "Investimentos entregues em 27/05/2026",
-      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
+      "orgao": "🚇 Metrô-SP / Governo do Estado",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Linha 6-Laranja inicia operação parcial entre João Paulo I e Perdizes",
+      "impacto": "Moradores da Freguesia do Ó ganham nova opção de deslocamento; trecho até Brasilândia é esperado para outubro de 2026",
+      "status": "Operação parcial desde 02/07/2026",
+      "fonte": "Agência Brasil"
     },
     {
-      "orgao": "🏢 Subprefeitura Vila Maria/Vila Guilherme",
-      "bairro": "Vila Maria",
-      "titulo": "Orçamento Cidadão 2027 recebe propostas dos moradores",
-      "impacto": "População pôde indicar prioridades de investimento para a subprefeitura no ciclo orçamentário de 2027",
-      "status": "Prazo encerrado em 15/05/2026 - aguarda audiências devolutivas",
-      "fonte": "Prefeitura de São Paulo - Subprefeitura Vila Maria/Vila Guilherme"
+      "orgao": "🚧 Subprefeitura Perus/Anhanguera",
+      "bairro": "Perus",
+      "titulo": "Caderno de drenagem dos Ribeirões Perus e Pinheirinhos segue em elaboração",
+      "impacto": "Estudo técnico da SIURB deve orientar obras de reservatórios e canalização contra enchentes na bacia",
+      "status": "Audiência realizada em 03/07/2026 - caderno em elaboração",
+      "fonte": "Prefeitura de São Paulo"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "🥵",
-      "titulo": "Baixa umidade do ar na Grande São Paulo",
-      "desc": "A Defesa Civil emitiu alertas por SMS após a umidade relativa do ar cair abaixo de 30% na capital e região metropolitana, orientando reforço na hidratação e cautela com atividades físicas ao ar livre.",
-      "meta": "Defesa Civil de SP - 19-20/07/2026"
+      "emoji": "🌧️",
+      "titulo": "Frente fria traz chuva, vento e queda de temperatura em SP",
+      "desc": "A Defesa Civil alertou para chuva forte, ventos de até 70 km/h e queda nas temperaturas entre os dias 23 e 24/07, recomendando atenção redobrada em áreas de risco e vias com histórico de alagamento.",
+      "meta": "Defesa Civil de SP - 23-24/07/2026"
     },
     {
       "tipo": "info",
-      "emoji": "🥶",
-      "titulo": "Recorde de frio no estado de SP",
-      "desc": "São Paulo registrou a menor temperatura do ano em 15/07/2026. A Defesa Civil manteve abrigos solidários e reforçou orientações à população, incluindo moradores em situação de rua.",
-      "meta": "Defesa Civil de SP - 15/07/2026"
-    },
-    {
-      "tipo": "ok",
-      "emoji": "🏕️",
-      "titulo": "Tendas da Operação Baixas Temperaturas ativas em Perus/Anhanguera",
-      "desc": "Com a chegada do frio intenso, a Prefeitura reforçou estruturas de acolhimento para pessoas em situação de vulnerabilidade na região de Perus e Anhanguera.",
-      "meta": "Subprefeitura Perus - desde 15/05/2026"
+      "emoji": "🚔",
+      "titulo": "PM reforça patrulhamento contra roubos e furtos na Zona Norte",
+      "desc": "A Operação Impacto Grande Envergadura mobilizou mais de 120 policiais militares em corredores viários da região para conter roubos, furtos e ações de grupos organizados como a 'gangue do quebra-vidro'.",
+      "meta": "CPA/M-3 - 22/07/2026"
     },
     {
       "tipo": "neutro",
-      "emoji": "🌧️",
-      "titulo": "Plano de drenagem contra enchentes em elaboração em Perus",
-      "desc": "SIURB conduz estudo técnico da bacia dos Ribeirões Perus e Pinheirinhos, incluindo reservatórios e obras de canalização, após audiência pública com moradores.",
-      "meta": "Prefeitura de São Paulo - 03/07/2026"
+      "emoji": "💼",
+      "titulo": "Inscrições no Cate seguem até 29/07 para mais de 1.700 vagas",
+      "desc": "Candidatos podem se inscrever on-line ou em um dos 46 postos fixos e móveis do Cate na capital, incluindo unidades da Zona Norte, até às 18h do dia 29/07.",
+      "meta": "Cate - Prefeitura de São Paulo"
+    },
+    {
+      "tipo": "neutro",
+      "emoji": "🚇",
+      "titulo": "Linha 6-Laranja ainda opera sem integração com outras linhas",
+      "desc": "O primeiro trecho da Linha 6, entre João Paulo I e Perdizes, funciona em operação parcial; a integração completa e o trecho até Brasilândia estão previstos para outubro de 2026.",
+      "meta": "Metrô-SP - julho/2026"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🏃",
-      "titulo": "Circuito de Corridas Parques do Brasil no Horto Florestal",
-      "info": "02/08 · manhã · Horto Florestal (Parque Alberto Löfgren) · Gratuito (inscrição prévia)"
+      "emoji": "🚀",
+      "titulo": "Contagem Regressiva: Experiência Espacial",
+      "info": "31/07 · 13h30-17h30 · Sesc Casa Verde · Gratuito"
     },
     {
       "emoji": "🎨",
@@ -307,12 +334,12 @@
     {
       "emoji": "🎭",
       "titulo": "PIAPI na Biblioteca Álvares de Azevedo",
-      "info": "01/08 · 10h-12h e 12h-14h · Praça Joaquim José da Nova (Vila Maria) · Gratuito"
+      "info": "01/08 · 10h-12h e 12h-14h · Vila Maria · Gratuito"
     },
     {
-      "emoji": "🧸",
-      "titulo": "PIAPI na Biblioteca José Mauro de Vasconcelos",
-      "info": "01/08 · 10h-12h e 12h-14h · Praça Cmte. Eduardo de Oliveira (Parque Edu Chaves) · Gratuito"
+      "emoji": "🏃",
+      "titulo": "Circuito de Corridas Parques do Brasil no Horto Florestal",
+      "info": "02/08 · manhã · Horto Florestal (Parque Alberto Löfgren) · Gratuito (inscrição prévia)"
     }
   ]
 }
