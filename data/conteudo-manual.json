@@ -3,145 +3,158 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚨 Segurança",
+      "pill": "🌬️ Alerta",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "PM mobiliza mais de 120 policiais em operação contra roubos e a 'gangue do quebra-vidro' na Zona Norte",
-      "resumo": "A Operação Impacto Grande Envergadura, coordenada pelo Comando de Policiamento de Área 3 (CPA/M-3), reforçou o patrulhamento ostensivo em corredores viários da Zona Norte em 22/07, com foco em roubos, furtos e crimes contra veículos, incluindo ações do grupo conhecido como 'gangue do quebra-vidro'. Foram abordadas 302 pessoas e vistoriados 88 veículos.",
-      "fonte": "GuarulhosWeb",
-      "hora": "22/07/2026",
-      "url": "https://guarulhosweb.com.br/operacao-da-policia-militar-mira-gangue-do-quebra-vidro-e-reforca-seguranca-na-zona-norte-de-sp/",
-      "icone": "🚨",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Defesa Civil alerta para chuva forte e ventos de até 90 km/h na Zona Norte a partir desta quarta",
+      "resumo": "Uma nova frente fria deve provocar pancadas de chuva moderada a forte, descargas elétricas e rajadas de vento que podem chegar a 90 km/h na Região Metropolitana de São Paulo entre quarta (29) e quinta (30). A Defesa Civil do Estado montou Gabinete de Crise e recomenda evitar áreas arborizadas e fixar objetos soltos em varandas e quintais.",
+      "fonte": "Folha Noroeste",
+      "hora": "29/07/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/defesa-civil-alerta-para-chuva-e-ventos-fortes-a-partir-de-quarta-29-e-monta-gabinete-de-crise/",
+      "icone": "🌬️",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Vila Nova Cachoeirinha",
+      "bairro": "Vila Nova Cachoeirinha",
+      "titulo": "Fiscalização contra comércio irregular na 'Feira do Rolo' aborda 101 pessoas em Vila Nova Cachoeirinha",
+      "resumo": "A Subprefeitura Casa Verde/Limão/Cachoeirinha, com apoio da Guarda Civil Metropolitana, Polícia Militar e agentes de trânsito, fiscalizou o comércio irregular conhecido como 'Feira do Rolo' na Av. Afonso Lopes Vieira, próximo à Av. Inajar de Souza. Foram abordadas 101 pessoas e vistoriados 28 veículos, entre carros, motos e caminhões.",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Casa Verde",
+      "hora": "14/07/2026",
+      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/40024",
+      "icone": "🚔",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Linha 6-Laranja do Metrô estreia com estação Freguesia do Ó no primeiro trecho aberto",
-      "resumo": "Em 02/07/2026 entrou em operação o primeiro trecho da Linha 6-Laranja, entre João Paulo I e Perdizes, com seis estações abertas — entre elas Freguesia do Ó. O trecho até a estação Brasilândia tem inauguração prevista para outubro de 2026.",
-      "fonte": "Agência Brasil",
-      "hora": "02/07/2026",
-      "url": "https://agenciabrasil.ebc.com.br/geral/noticia/2026-07/linha-6-laranja-do-metro-de-sp-inicia-operacao-nesta-sexta-feira",
-      "icone": "🚇",
+      "tag_bairro": "📍 Piqueri",
+      "bairro": "Piqueri",
+      "titulo": "Rua no Piqueri fica parcialmente interditada até outubro para obras de concretagem",
+      "resumo": "A CET vai monitorar o trânsito na Rua Padre Mariano Ronchi, no Piqueri, zona noroeste, que ficará parcialmente interditada entre as ruas Padre Justino Lombardi e Baltazar da Silveira, das 6h às 22h, para estacionamento de betoneiras e bomba de concreto, de 29 de julho até 29 de outubro.",
+      "fonte": "Folha Noroeste",
+      "hora": "29/07/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/rua-no-piqueri-sera-interditada-ate-outubro-parcialmente-para-servicos-de-concretagem/",
+      "icone": "🚧",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Vila Nova Cachoeirinha",
+      "bairro": "Vila Nova Cachoeirinha",
+      "titulo": "Terminal de ônibus de Vila Nova Cachoeirinha é entregue requalificado e modernizado",
+      "resumo": "O Terminal Vila Nova Cachoeirinha passou por obras de requalificação e modernização da estrutura, que atende linhas municipais da região noroeste.",
+      "fonte": "DiárioZonaNorte / SPTrans",
+      "hora": "julho/2026",
+      "url": "https://www.diariozonanorte.com.br/vila-nova-cachoeirinha-recebe-novo-terminal-de-onibus-requalificado-e-com-modernizacao/",
+      "icone": "🚌",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Hospital de R$ 600 milhões do grupo Mater Dei/Atlântica reforça rede de saúde em Santana",
-      "resumo": "Em construção em parceria com a Atlântica Hospitais (grupo Bradesco), o novo hospital privado deve ampliar a oferta de atendimento de saúde na Zona Norte e gerar empregos permanentes após a inauguração, em meio ao avanço imobiliário do bairro.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "julho/2026",
-      "url": "https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/",
-      "icone": "🏥",
+      "tag_bairro": "📍 Vila Aurora",
+      "bairro": "Vila Aurora",
+      "titulo": "Campanha gratuita de vacinação contra o sarampo ocorre na estação Vila Aurora, da Linha 7-Rubi",
+      "resumo": "A TIC Trens promove, de 27 a 31 de julho, das 9h às 15h, uma campanha gratuita de vacinação contra o sarampo no mezanino da estação Vila Aurora, em parceria com a Unidade de Vigilância em Saúde (UVIS) Pirituba. É recomendado apresentar documento com foto.",
+      "fonte": "Folha Noroeste",
+      "hora": "27 a 31/07/2026",
+      "url": "https://folhanoroeste.com.br/regional/campanha-gratuita-de-vacinacao-contra-o-sarampo-ocorre-na-estacao-vila-aurora-da-linha-7-rubi/",
+      "icone": "💉",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "Campus do IFSP no Jaçanã conclui audiências públicas e define cursos técnicos iniciais",
+      "resumo": "O Instituto Federal de São Paulo realizou em 24/07 a terceira e última audiência pública para a implantação do Campus Jaçanã, apresentando os cursos técnicos de Eletrotécnica e de Redes de Computadores como oferta inicial. As primeiras atividades, com cursos de extensão via parcerias, começam em agosto.",
+      "fonte": "IFSP / DiárioZonaNorte",
+      "hora": "24/07/2026",
+      "url": "https://www.diariozonanorte.com.br/campus-do-instituto-federal-no-jacana-tera-ultima-audiencia-publica-no-dia-24-de-julho-atividades-comecam-em-agosto/",
+      "icone": "🎓",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Vila Guilherme",
+      "bairro": "Vila Guilherme",
+      "titulo": "FIPAN 2026 reúne cerca de 59 mil profissionais no Expo Center Norte, em Vila Guilherme",
+      "resumo": "A maior feira de panificação, confeitaria e food service da América Latina ocupou o Expo Center Norte entre 21 e 24 de julho, com cerca de 450 expositores, 1.500 marcas e workshops com chefs, movimentando a economia do bairro durante o evento.",
+      "fonte": "Jornal do Brás / Expo Center Norte",
+      "hora": "21 a 24/07/2026",
+      "url": "https://www.expocenternorte.com.br/en/eventos/fipan-2026",
+      "icone": "🥐",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Armazém Solidário da Brasilândia completa 2 anos e já vendeu mais de 3 milhões de itens",
-      "resumo": "A unidade da Estrada do Sabão, 806, oferece alimentos, produtos de higiene e limpeza com desconto de 30% a 50% para famílias inscritas no CadÚnico, e já recebeu mais de 196 mil pessoas desde a abertura. Funciona de terça a sábado, das 9h às 18h.",
-      "fonte": "DiárioZonaNorte",
+      "tag_bairro": "📍 Jardim Damasceno",
+      "bairro": "Jardim Damasceno",
+      "titulo": "Bom Prato Móvel passa a atender o Jardim Damasceno, na Brasilândia, com refeição a R$ 1",
+      "resumo": "A rotação trimestral dos pontos do Bom Prato Móvel incluiu o Jardim Damasceno, na Av. Deputado Cantídio Sampaio, 4.390, entre as novas localidades atendidas na Zona Norte. O almoço é servido a partir das 11h pelo valor de R$ 1,00.",
+      "fonte": "Folha Noroeste",
       "hora": "julho/2026",
-      "url": "https://www.diariozonanorte.com.br/armazem-solidario-da-brasilandia-oferece-alimentos-com-ate-50-de-desconto-saiba-quem-pode-comprar-la/",
-      "icone": "🛒",
+      "url": "https://folhanoroeste.com.br/regional/bom-prato-movel-passa-a-atender-novos-pontos-a-partir-desta-segunda-27-brasilandia-esta-na-lista/",
+      "icone": "🍽️",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Cate inicia última semana de julho com mais de 1.700 vagas de emprego",
-      "resumo": "Unidades do Centro de Apoio ao Trabalho e Empreendedorismo (Cate), incluindo a de Casa Verde, oferecem vagas em comércio, serviços, construção civil e logística, com salários de R$ 761 a R$ 5,3 mil. Inscrições até 29/07 às 18h, on-line ou nos postos fixos e móveis.",
-      "fonte": "Folha Noroeste",
-      "hora": "27/07/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/unidades-do-cate-iniciam-ultima-semana-de-julho-com-mais-de-1-700-vagas-de-emprego/",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Prefeitura Presente leva R$ 490 milhões em investimentos a Pirituba/Jaraguá",
-      "resumo": "A região recebeu a primeira edição do programa Prefeitura Presente do ano, reunindo serviços públicos e anunciando investimentos que somam R$ 490 milhões para obras e melhorias em Pirituba, Jaraguá e São Domingos.",
-      "fonte": "Prefeitura de São Paulo",
-      "hora": "julho/2026",
-      "url": "https://prefeitura.sp.gov.br/w/noticia/primeiro-prefeitura-presente-do-ano-vai-a-pirituba-jaragua-regiao-que-esta-recebendo-r-490-milhoes-de-investimentos",
-      "icone": "🏗️",
-      "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 São Domingos",
-      "bairro": "São Domingos",
-      "titulo": "Projeto Praça Viva quer revitalizar as 380 praças de Pirituba, Jaraguá e São Domingos",
-      "resumo": "Iniciativa da subprefeitura reforma bancos, mesas e aparelhos de ginástica, com poda de árvores, capina e mutirões de pintura em praças da região, contando com apoio da CET e da Guarda Civil Metropolitana.",
-      "fonte": "Folha Noroeste",
-      "hora": "julho/2026",
-      "url": "https://folhanoroeste.com.br/regional/subprefeitura-pirituba-jaragua-investe-em-zeladoria-e-quer-revitalizar-todas-as-380-pracas-da-regiao/",
-      "icone": "🌳",
-      "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Subprefeitura inaugura décimo EcoEnel na Praça Vila Nova Esperança",
-      "resumo": "O novo ponto de coleta seletiva de resíduos recicláveis, instalado em 03/07/2026 na Praça Vila Nova Esperança, integra o programa EcoEnel, que estimula a reciclagem e oferece descontos na conta de energia para quem participa.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
-      "hora": "03/07/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/noticias",
-      "icone": "♻️",
-      "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Zeladoria",
       "tag_bairro": "📍 Perus",
       "bairro": "Perus",
-      "titulo": "Caderno de drenagem dos Ribeirões Perus e Pinheirinhos segue em elaboração após audiência pública",
-      "resumo": "A SIURB avalia as contribuições colhidas em audiência pública para definir reservatórios e obras de canalização que devem reduzir alagamentos na bacia dos Ribeirões Perus e Pinheirinhos.",
-      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus",
+      "titulo": "Bom Prato Móvel também chega a Perus, na Vila Josefina",
+      "resumo": "Além da Brasilândia, a nova rotação do Bom Prato Móvel passou a atender Perus, com unidade na Rua Apolo, 200, na Vila Josefina, ampliando o acesso a refeições de R$ 1,00 na região.",
+      "fonte": "Folha Noroeste",
       "hora": "julho/2026",
-      "url": "https://prefeitura.sp.gov.br/web/perus/w/audi%C3%AAncia-p%C3%BAblica-do-caderno-de-drenagem-dos-ribeir%C3%B5es-perus-e-pinheirinhos",
-      "icone": "🚧",
-      "icone_classe": "ic-edu"
+      "url": "https://folhanoroeste.com.br/regional/bom-prato-movel-passa-a-atender-novos-pontos-a-partir-desta-segunda-27-brasilandia-esta-na-lista/",
+      "icone": "🍽️",
+      "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
       "dia": "31",
       "mes": "Jul",
-      "cor_fundo": "#6C63FF",
-      "bairro": "Casa Verde",
-      "titulo": "Contagem Regressiva: Experiência Espacial",
-      "hora": "13h30 às 17h30",
-      "local": "Sesc Casa Verde",
-      "descricao": "Última semana da programação Férias Espaciais, com oficina sensorial de lançamento de foguete e recursos de acessibilidade (Libras, tato e narração).",
+      "cor_fundo": "#2E9E6B",
+      "bairro": "Pirituba",
+      "titulo": "Cine Debate exibe o curta 'Recife Frio' no Instituto Federal",
+      "hora": "18h",
+      "local": "Auditório da Av. Mutinga, 951 (Pirituba)",
+      "descricao": "Sessão do curta-metragem premiado 'Recife Frio', de Kleber Mendonça Filho, seguida de debate com a comunidade. Vai ter pipoca.",
       "gratuito": true,
       "preco": null,
-      "url": "https://universozn.com.br/ferias-espaciais-sesc-casa-verde"
+      "url": "https://folhanoroeste.com.br/regional/cine-debate-convida-a-comunidade-para-sessao-de-recife-frio-no-instituto-federal/"
+    },
+    {
+      "dia": "29",
+      "mes": "Jul",
+      "cor_fundo": "#6C63FF",
+      "bairro": "Jardim Mutinga",
+      "titulo": "Sarau do Lado recebe a cantora Mya Akoma na Biblioteca Brito Broca",
+      "hora": "20h",
+      "local": "Av. Mutinga, 1425",
+      "descricao": "Parte da 3ª temporada do Projeto Arte de Subúrbio, o sarau reúne poesia, música e microfone aberto para poetas, MCs e contadores de histórias da região.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/regional/sarau-do-lado-recebe-mya-akoma-na-brito-broca-com-arte-e-poesia/"
     },
     {
       "dia": "01",
@@ -165,19 +178,6 @@
       "hora": "10h-12h e 12h-14h",
       "local": "Av. Tucuruvi, 808 (Tucuruvi)",
       "descricao": "Atividades gratuitas de iniciação artística para primeira infância, parte do programa PIAPI da Secretaria Municipal de Cultura.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/cultura/w/a-secretaria-municipal-de-cultura-informa-que-o-programa-de-inicia%C3%A7%C3%A3o-art%C3%ADstica-para-primeira-inf%C3%A2ncia-piapi-ter%C3%A1-in%C3%ADcio-no-m%C3%AAs-de-agosto"
-    },
-    {
-      "dia": "01",
-      "mes": "Ago",
-      "cor_fundo": "#E74C3C",
-      "bairro": "Vila Maria",
-      "titulo": "PIAPI na Biblioteca Álvares de Azevedo",
-      "hora": "10h-12h e 12h-14h",
-      "local": "Praça Joaquim José da Nova (Vila Maria)",
-      "descricao": "Atividades gratuitas de iniciação artística para bebês e crianças, parte do programa PIAPI da Secretaria Municipal de Cultura.",
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/cultura/w/a-secretaria-municipal-de-cultura-informa-que-o-programa-de-inicia%C3%A7%C3%A3o-art%C3%ADstica-para-primeira-inf%C3%A2ncia-piapi-ter%C3%A1-in%C3%ADcio-no-m%C3%AAs-de-agosto"
@@ -211,130 +211,117 @@
   ],
   "vagas": [
     {
-      "icone": "🧹",
-      "titulo": "Auxiliar de Limpeza",
-      "empresa": "Diversas empresas (Cate)",
-      "bairro": "Casa Verde",
-      "requisitos": "Cerca de 400 vagas na capital, com salário de até R$ 2.362",
-      "tipo": "CLT",
-      "fonte": "Cate - unidade Casa Verde (Av. Ordem e Progresso, 1001)",
-      "dias_atras": "vagas da semana de 27/07/2026"
-    },
-    {
-      "icone": "🔧",
-      "titulo": "Leiturista de Rede de Gás/Energia Elétrica",
-      "empresa": "Diversas empresas (Cate)",
-      "bairro": "Vila Maria",
-      "requisitos": "90 vagas na capital, com remuneração de até R$ 2.550",
-      "tipo": "CLT",
-      "fonte": "Cate - unidade Vila Maria/Vila Guilherme (Rua General Mendes, 111)",
-      "dias_atras": "vagas da semana de 27/07/2026"
-    },
-    {
-      "icone": "🩺",
-      "titulo": "Técnico(a)/Auxiliar de Enfermagem",
-      "empresa": "Rede de saúde parceira (Cate)",
+      "icone": "💼",
+      "titulo": "Vagas diversas - comércio, serviços e construção civil",
+      "empresa": "Cate (rede de empresas parceiras)",
       "bairro": "Perus",
-      "requisitos": "Experiência e escolaridade avaliadas no processo seletivo",
+      "requisitos": "Cate inicia agosto com mais de 650 vagas na capital, com salários de R$ 800 (estágio) a R$ 6 mil; inscrição prévia até quarta-feira pelo portal ou na unidade",
       "tipo": "CLT",
       "fonte": "Cate - unidade Perus (Rua Ylídio Figueiredo, 285)",
-      "dias_atras": "vagas em aberto - julho/2026"
+      "dias_atras": "vagas da 1ª semana de agosto/2026"
     },
     {
-      "icone": "🧑‍💼",
-      "titulo": "Assistente Administrativo",
-      "empresa": "RH Grandes Talentos",
-      "bairro": "Imirim",
-      "requisitos": "Salário de R$ 2.300,00 + vale-transporte, empresa próxima à Av. Imirim",
+      "icone": "💼",
+      "titulo": "Vagas diversas - comércio, serviços e construção civil",
+      "empresa": "Cate (rede de empresas parceiras)",
+      "bairro": "Jaraguá",
+      "requisitos": "Cate inicia agosto com mais de 650 vagas na capital, com salários de R$ 800 (estágio) a R$ 6 mil; inscrição prévia até quarta-feira pelo portal ou na unidade",
       "tipo": "CLT",
-      "fonte": "Quickin / RH Grandes Talentos",
-      "dias_atras": "publicado em julho/2026"
+      "fonte": "Cate - unidade Jaraguá (Estrada de Taipas, 990 - Pq. Nações Unidas)",
+      "dias_atras": "vagas da 1ª semana de agosto/2026"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas - comércio, serviços e construção civil",
+      "empresa": "Cate (rede de empresas parceiras)",
+      "bairro": "Pirituba",
+      "requisitos": "Cate inicia agosto com mais de 650 vagas na capital, com salários de R$ 800 (estágio) a R$ 6 mil; inscrição prévia até quarta-feira pelo portal ou na unidade",
+      "tipo": "CLT",
+      "fonte": "Cate - unidade Pirituba (Rua Paula Ferreira, 1708 - Vila Pirituba)",
+      "dias_atras": "vagas da 1ª semana de agosto/2026"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas - comércio, serviços e construção civil",
+      "empresa": "Cate (rede de empresas parceiras)",
+      "bairro": "Freguesia do Ó",
+      "requisitos": "Cate inicia agosto com mais de 650 vagas na capital, com salários de R$ 800 (estágio) a R$ 6 mil; inscrição prévia até quarta-feira pelo portal ou na unidade",
+      "tipo": "CLT",
+      "fonte": "Cate - unidade Freguesia/Brasilândia (Av. João Marcelino Branco, 95)",
+      "dias_atras": "vagas da 1ª semana de agosto/2026"
     }
   ],
   "politica": [
     {
-      "orgao": "🏢 Subprefeitura Pirituba/Jaraguá",
-      "bairro": "Pirituba",
-      "titulo": "Prefeitura Presente leva R$ 490 milhões em investimentos à região",
-      "impacto": "Primeira edição do programa no ano reúne serviços públicos e anuncia obras para Pirituba, Jaraguá e São Domingos",
-      "status": "Realizado em julho/2026",
-      "fonte": "Prefeitura de São Paulo"
+      "orgao": "🎓 IFSP / Governo do Estado",
+      "bairro": "Jaçanã",
+      "titulo": "Campus do IFSP no Jaçanã tem cursos técnicos definidos após 3ª audiência pública",
+      "impacto": "Primeiro campus federal de ensino técnico e tecnológico da região do Jaçanã/Tremembé, com atividades de extensão a partir de agosto",
+      "status": "3ª e última audiência pública realizada em 24/07/2026",
+      "fonte": "IFSP / DiárioZonaNorte"
     },
     {
-      "orgao": "🌳 Subprefeitura Pirituba/Jaraguá",
-      "bairro": "São Domingos",
-      "titulo": "Projeto Praça Viva prevê revitalizar as 380 praças da região",
-      "impacto": "Reforma de bancos, mesas e aparelhos de ginástica, poda de árvores e mutirões de pintura em praças de Pirituba, Jaraguá, Taipas e São Domingos",
-      "status": "Em andamento - julho/2026",
+      "orgao": "🚧 CET - Companhia de Engenharia de Tráfego",
+      "bairro": "Piqueri",
+      "titulo": "Rua Padre Mariano Ronchi, no Piqueri, tem interdição parcial monitorada pela CET",
+      "impacto": "Obras de concretagem exigem bloqueio parcial da via das 6h às 22h até outubro",
+      "status": "Interdição de 29/07 a 29/10/2026",
       "fonte": "Folha Noroeste"
     },
     {
-      "orgao": "🚇 Metrô-SP / Governo do Estado",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Linha 6-Laranja inicia operação parcial entre João Paulo I e Perdizes",
-      "impacto": "Moradores da Freguesia do Ó ganham nova opção de deslocamento; trecho até Brasilândia é esperado para outubro de 2026",
-      "status": "Operação parcial desde 02/07/2026",
-      "fonte": "Agência Brasil"
-    },
-    {
-      "orgao": "🚧 Subprefeitura Perus/Anhanguera",
-      "bairro": "Perus",
-      "titulo": "Caderno de drenagem dos Ribeirões Perus e Pinheirinhos segue em elaboração",
-      "impacto": "Estudo técnico da SIURB deve orientar obras de reservatórios e canalização contra enchentes na bacia",
-      "status": "Audiência realizada em 03/07/2026 - caderno em elaboração",
-      "fonte": "Prefeitura de São Paulo"
+      "orgao": "💧 SP Águas / Sabesp",
+      "bairro": "Horto Florestal",
+      "titulo": "Sistema Cantareira opera em faixa de alerta com 37,2% da capacidade",
+      "impacto": "Reservatórios que abastecem a Grande São Paulo, incluindo áreas próximas ao Horto Florestal, seguem abaixo dos 40% desde 1º de julho; governo do Estado ainda não fala em racionamento",
+      "status": "Faixa de alerta desde 01/07/2026 - nível de 37,2% em 26/07",
+      "fonte": "DiárioZonaNorte"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "🌧️",
-      "titulo": "Frente fria traz chuva, vento e queda de temperatura em SP",
-      "desc": "A Defesa Civil alertou para chuva forte, ventos de até 70 km/h e queda nas temperaturas entre os dias 23 e 24/07, recomendando atenção redobrada em áreas de risco e vias com histórico de alagamento.",
-      "meta": "Defesa Civil de SP - 23-24/07/2026"
+      "emoji": "🌬️",
+      "titulo": "Defesa Civil alerta para chuva forte e ventos de até 90 km/h",
+      "desc": "Nova frente fria deve provocar chuva moderada a forte, raios e rajadas de vento de até 90 km/h na Grande São Paulo entre quarta (29) e quinta (30). Defesa Civil monta Gabinete de Crise e recomenda evitar áreas arborizadas.",
+      "meta": "Defesa Civil do Estado - 29-30/07/2026"
     },
     {
       "tipo": "info",
-      "emoji": "🚔",
-      "titulo": "PM reforça patrulhamento contra roubos e furtos na Zona Norte",
-      "desc": "A Operação Impacto Grande Envergadura mobilizou mais de 120 policiais militares em corredores viários da região para conter roubos, furtos e ações de grupos organizados como a 'gangue do quebra-vidro'.",
-      "meta": "CPA/M-3 - 22/07/2026"
+      "emoji": "💧",
+      "titulo": "Sistema Cantareira segue em faixa de alerta, com 37,2% da capacidade",
+      "desc": "Os reservatórios que abastecem parte da Grande São Paulo perderam 25 bilhões de litros entre o início e 26 de julho e operam abaixo dos 40% previstos pelas normas da ANA desde 1º de julho.",
+      "meta": "SP Águas - 26/07/2026"
+    },
+    {
+      "tipo": "neutro",
+      "emoji": "💉",
+      "titulo": "Vacinação gratuita contra sarampo na estação Vila Aurora até sexta (31)",
+      "desc": "Campanha da TIC Trens com a UVIS Pirituba oferece vacina contra sarampo das 9h às 15h no mezanino da estação Vila Aurora, Linha 7-Rubi, até 31/07.",
+      "meta": "TIC Trens / UVIS Pirituba"
     },
     {
       "tipo": "neutro",
       "emoji": "💼",
-      "titulo": "Inscrições no Cate seguem até 29/07 para mais de 1.700 vagas",
-      "desc": "Candidatos podem se inscrever on-line ou em um dos 46 postos fixos e móveis do Cate na capital, incluindo unidades da Zona Norte, até às 18h do dia 29/07.",
+      "titulo": "Cate abre agosto com mais de 650 vagas de emprego na capital",
+      "desc": "Inscrições para a 1ª semana de agosto podem ser feitas até quarta-feira pelo portal Cate ou presencialmente nas 26 unidades, incluindo Perus, Jaraguá, Pirituba e Freguesia/Brasilândia, na Zona Norte.",
       "meta": "Cate - Prefeitura de São Paulo"
-    },
-    {
-      "tipo": "neutro",
-      "emoji": "🚇",
-      "titulo": "Linha 6-Laranja ainda opera sem integração com outras linhas",
-      "desc": "O primeiro trecho da Linha 6, entre João Paulo I e Perdizes, funciona em operação parcial; a integração completa e o trecho até Brasilândia estão previstos para outubro de 2026.",
-      "meta": "Metrô-SP - julho/2026"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🚀",
-      "titulo": "Contagem Regressiva: Experiência Espacial",
-      "info": "31/07 · 13h30-17h30 · Sesc Casa Verde · Gratuito"
+      "emoji": "🎬",
+      "titulo": "Cine Debate - 'Recife Frio' no Instituto Federal (Pirituba)",
+      "info": "31/07 · 18h · Av. Mutinga, 951 · Gratuito"
     },
     {
       "emoji": "🎨",
-      "titulo": "PIAPI - Iniciação Artística para bebês e crianças",
+      "titulo": "PIAPI - Iniciação Artística para bebês e crianças (Anhanguera)",
       "info": "01/08 · 10h-12h e 13h-15h · CEU Parque Anhanguera · Gratuito"
     },
     {
       "emoji": "📚",
-      "titulo": "PIAPI na Biblioteca Sylvia Orthof",
-      "info": "01/08 · 10h-12h e 12h-14h · Av. Tucuruvi, 808 (Tucuruvi) · Gratuito"
-    },
-    {
-      "emoji": "🎭",
-      "titulo": "PIAPI na Biblioteca Álvares de Azevedo",
-      "info": "01/08 · 10h-12h e 12h-14h · Vila Maria · Gratuito"
+      "titulo": "PIAPI na Biblioteca Sylvia Orthof (Tucuruvi)",
+      "info": "01/08 · 10h-12h e 12h-14h · Av. Tucuruvi, 808 · Gratuito"
     },
     {
       "emoji": "🏃",
