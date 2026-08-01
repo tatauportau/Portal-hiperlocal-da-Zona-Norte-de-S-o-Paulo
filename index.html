@@ -791,7 +791,7 @@ document.addEventListener('click', (e) => {
         <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
       </div>
       <div style="font-size:9px;color:var(--cinza-m);white-space:nowrap;">
-        <span id="clima-update">01/08/26 01:15</span><span id="clima-hora-live" style="display:none;"></span>
+        <span id="clima-update">01/08/26 16:10</span><span id="clima-hora-live" style="display:none;"></span>
       </div>
     </div>
     <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
@@ -931,7 +931,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="feed">
 
       <!-- NOTÍCIAS -->
-                                                                                                        <div class="secao" id="noticias">
+                                                                                                          <div class="secao" id="noticias">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
       <span class="secao-count">8 hoje</span>
@@ -1090,6 +1090,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
+    <!-- AGENDA -->
   <div class="secao" id="agenda">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
@@ -1151,6 +1152,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </a>
   </div>
 
+    <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
@@ -1318,6 +1320,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- POLITICA -->
     <!-- POLITICA -->
     <!-- POLITICA -->
+    <!-- POLITICA -->
   <div class="secao" id="politica">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
@@ -1365,6 +1368,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </div>
   </div>
 
+    <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
@@ -1513,7 +1517,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 
 <!-- SIDEBAR -->
   
-                                                          <div class="sb-card" id="fim-de-semana-card" data-fds="true">
+                                                            <div class="sb-card" id="fim-de-semana-card" data-fds="true">
     <div class="sb-header">🎉 Este fim de semana</div>
     <div class="sb-item">
       <div style="font-size:20px;">🏭</div>
@@ -3285,7 +3289,7 @@ async function prepararContatoAnuncioVaga() {
 
   const infoEl = document.getElementById('anuncio-vaga-empresa-info');
   infoEl.innerHTML = `
-    <div><strong>Sábado, 1 de agosto de 2026 · Gerado às 01:15</strong> ${escapeHtml(nomeEmpresa)}</div>
+    <div><strong>Sábado, 1 de agosto de 2026 · Gerado às 16:10</strong> ${escapeHtml(nomeEmpresa)}</div>
     <div><strong>E-mail de contato:</strong> ${escapeHtml(email || 'não informado')}</div>
     <div><strong>Celular:</strong> ${escapeHtml(celular ? formatarTelefoneEmpresa(celular) : 'não informado')}</div>
     <div style="margin-top:4px;font-size:11px;">Para alterar esses dados, atualize no seu cadastro.</div>
