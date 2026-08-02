@@ -3,72 +3,100 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚇 Metrô novo",
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Linha 6-Laranja começa a operar e reduz trajeto entre Freguesia do Ó e Perdizes para cerca de 20 minutos",
-      "resumo": "A primeira etapa da Linha 6-Laranja foi inaugurada em 2 de julho, com operação assistida entre as estações João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes, funcionando das 10h às 15h em dias úteis. O trecho até a Brasilândia está previsto para outubro de 2026.",
-      "fonte": "Mobilidade360 / Diário do Transporte",
-      "hora": "02/07/2026",
-      "url": "https://mobilidade360.com.br/2026/07/02/linha-6-laranja-primeira-etapa/",
-      "icone": "🚇",
-      "icone_classe": "ic-mob"
+      "pill": "💉 Sarampo: vacinação geral",
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Vila Medeiros",
+      "bairro": "Vila Medeiros",
+      "titulo": "São Paulo inicia vacinação indiscriminada contra sarampo nesta segunda-feira (3/8), com foco na Zona Norte",
+      "resumo": "Após confirmação de 15 casos de sarampo no estado de SP, 12 deles na capital, concentrados em Vila Medeiros (5 casos) e Vila Maria (2), o Ministério da Saúde recomendou vacinação indiscriminada contra a doença, sem necessidade de comprovar histórico vacinal, para moradores de 6 meses a 59 anos em São Paulo, Guarulhos e São Bernardo do Campo, de 3 de agosto a 1º de setembro.",
+      "fonte": "Ministério da Saúde / Diário Zona Norte",
+      "hora": "01/08/2026",
+      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/julho/ministerio-da-saude-amplia-recomendacao-de-vacinacao-contra-o-sarampo-em-tres-municipios-de-sao-paulo",
+      "icone": "💉",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Homem tem aliança roubada por criminoso em motocicleta na Freguesia do Ó",
-      "resumo": "Um morador foi abordado na Rua Professor Carlos Nobre Rosa por um suspeito que subiu com a moto na calçada e, armado, levou a aliança da vítima. Segundo a Polícia Militar, o mesmo criminoso já havia feito abordagens semelhantes na região.",
-      "fonte": "BNews São Paulo",
-      "hora": "10/07/2026",
-      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/criminoso-invade-calcada-e-rouba-alianca-de-homem-na-zona-norte-de-sp.html",
-      "icone": "🚨",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Fiscalização",
-      "tag_bairro": "📍 Limão",
-      "bairro": "Limão",
-      "titulo": "Operação com 101 agentes combate comércio irregular na Avenida Afonso Lopes Vieira, no Limão",
-      "resumo": "A Subprefeitura de Casa Verde/Limão/Cachoeirinha realizou mega operação de fiscalização com 101 pessoas e 28 veículos envolvidos, resultando na apreensão de 91 sacos com mercadorias diversas do comércio ambulante irregular.",
-      "fonte": "Subprefeitura Casa Verde/Limão/Cachoeirinha",
-      "hora": "14/07/2026",
-      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/40024",
+      "tag_bairro": "📍 Jardim Brasília",
+      "bairro": "Jardim Brasília",
+      "titulo": "Polícia Civil prende condenado por roubo a joalheria na Zona Norte",
+      "resumo": "Um homem condenado por participação em roubo a uma joalheria foi localizado e preso pela Polícia Civil na comunidade do Jardim Brasília, em Taipas (Jaraguá), no dia 2 de agosto.",
+      "fonte": "Agência SP / Polícia Civil",
+      "hora": "02/08/2026",
+      "url": "https://www.agenciasp.sp.gov.br/policia-civil-prende-condenado-por-roubo-a-joalheria-na-zona-norte-da-capital/",
       "icone": "🚔",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Brasilândia",
+      "bairro": "Brasilândia",
+      "titulo": "Obras da Linha 6-Laranja atingem 80% e estações da Zona Norte avançam",
+      "resumo": "As obras da Linha 6-Laranja do Metrô, que vão ligar a Brasilândia ao centro em cerca de 23 minutos, atingiram 80% de execução. As estações Brasilândia e João Paulo I se aproximam de 90%, enquanto Freguesia do Ó, Sesc-Pompeia e PUC-Cardoso de Almeida já ultrapassam 80%.",
+      "fonte": "Diário Zona Norte",
+      "hora": "julho/2026",
+      "url": "https://www.diariozonanorte.com.br/obras-da-linha-6-laranja-chegam-a-80-e-prometem-ligar-brasilandia-ao-centro-em-23-minutos/",
+      "icone": "🚇",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Jardim Taipas",
+      "bairro": "Jardim Taipas",
+      "titulo": "CEU Taipas Professora Maria Beatriz ganha bebeteca em ação do Prefeitura Presente",
+      "resumo": "Durante o encontro Prefeitura Presente em Pirituba/Jaraguá, a gestão municipal inaugurou a bebeteca do CEU Pinheirinho Luís Gama e descerrou placa da nova bebeteca do CEU Taipas Professora Maria Beatriz, ampliando o acesso à leitura para bebês e crianças pequenas da região.",
+      "fonte": "Prefeitura de São Paulo / Subprefeitura Pirituba-Jaraguá",
+      "hora": "julho/2026",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
+      "icone": "📚",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Serviço Público",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Conselho Tutelar de Casa Verde/Cachoeirinha muda para nova sede na Rua Buquira",
-      "resumo": "Desde 7 de julho, o Conselho Tutelar da região passou a atender em novo endereço, na Rua Buquira, 35, Casa Verde, buscando melhorar a estrutura de atendimento a crianças e adolescentes.",
-      "fonte": "Subprefeitura Casa Verde",
-      "hora": "07/07/2026",
-      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/49307",
-      "icone": "🏛️",
+      "tag_label": "Habitação",
+      "tag_bairro": "📍 Conjunto Residencial Elísio Teixeira Leite",
+      "bairro": "Conjunto Residencial Elísio Teixeira Leite",
+      "titulo": "Prefeitura entrega 50 escrituras definitivas a moradores do Conjunto Elísio Teixeira Leite",
+      "resumo": "Mutuários que quitaram o financiamento e aderiram ao Programa de Escrituração da Cohab receberam a documentação definitiva de seus imóveis durante o Prefeitura Presente em Pirituba/Jaraguá, região que recebe R$ 490 milhões em investimentos municipais.",
+      "fonte": "Prefeitura de São Paulo",
+      "hora": "julho/2026",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
+      "icone": "🏠",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "Cata-Bagulho percorre bairros de Jaçanã/Tremembé neste sábado (4/8)",
+      "resumo": "A Subprefeitura Jaçanã/Tremembé realiza mutirão de Cata-Bagulho no dia 4 de agosto, recolhendo móveis e objetos inservíveis descartados irregularmente em vias e margens de córregos da região.",
+      "fonte": "Subprefeitura Jaçanã/Tremembé",
+      "hora": "04/08/2026 (programado)",
+      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/w/noticias/85675",
+      "icone": "🧹",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Imirim",
-      "bairro": "Imirim",
-      "titulo": "Requalificação do Corredor Imirim avança e deve beneficiar 112 mil pessoas por dia",
-      "resumo": "As obras no corredor da Avenida Imirim cobrem 4,6 km entre a Avenida Deputado Emílio Carlos e a Rua Afonso Schmidt, com impacto direto na circulação de ônibus e pedestres na região de Santana.",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Prefeitura retoma obras da ligação viária Pirituba-Lapa, pedido antigo dos moradores",
+      "resumo": "Com investimento municipal de R$ 209,5 milhões e conclusão prevista para dezembro de 2026, a obra vai reduzir o congestionamento entre Pirituba e Lapa, demanda que a população local tinha havia mais de 40 anos.",
       "fonte": "Prefeitura de São Paulo",
       "hora": "julho/2026",
-      "url": "https://prefeitura.sp.gov.br/w/s%C3%A3o-paulo-amplia-mobilidade-urbana-com-mais-de-r-13-bilh%C3%B5es-investidos-em-obras-que-reduzem-o-tempo-de-deslocamento",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
       "icone": "🚧",
       "icone_classe": "ic-mob"
     },
@@ -76,72 +104,32 @@
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Hospital de R$ 600 milhões da rede Mater Dei reforça transformação de Santana",
-      "resumo": "O novo hospital, construído em parceria com a Atlântica Hospitais (Grupo Bradesco), acompanha o avanço imobiliário do bairro em meio às novas regras de altura impostas pela expansão do Aeroporto de Campo de Marte, e deve gerar empregos e atrair comércio e serviços de saúde para a região.",
-      "fonte": "Diário Zona Norte",
-      "hora": "julho/2026",
-      "url": "https://www.diariozonanorte.com.br/hospital-de-r-600-milhoes-reforca-transformacao-de-santana-em-meio-ao-avanco-imobiliario-e-as-novas-regras-do-campo-de-marte/",
-      "icone": "🏥",
+      "tag_bairro": "📍 Vila Guilherme",
+      "bairro": "Vila Guilherme",
+      "titulo": "Mais de 650 vagas de emprego abertas pelo Cate na primeira semana de agosto",
+      "resumo": "A Prefeitura oferece mais de 650 vagas por meio do Cate, com sete unidades na Zona Norte — Santana, Brasilândia, Jaçanã, Vila Maria/Vila Guilherme, Pirituba, Perus e Jaraguá —, com salários de R$ 800 a R$ 6.000 em comércio, serviços e construção civil.",
+      "fonte": "Prefeitura de São Paulo / SMDET",
+      "hora": "01/08/2026",
+      "url": "https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/noticias/?p=351687",
+      "icone": "💼",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Armazém Solidário da Brasilândia completa 2 anos com mais de 3 milhões de itens vendidos",
-      "resumo": "Instalado na Estrada do Sabão, o equipamento oferece alimentos, itens de higiene e hortifrúti com até 50% de desconto para famílias inscritas no CadÚnico. Desde a inauguração, mais de 196 mil pessoas já passaram pela unidade, com limite de compra de R$ 800 por mês por CPF.",
-      "fonte": "Universo ZN",
-      "hora": "julho/2026",
-      "url": "https://universozn.com.br/armazem-solidario-brasilandia",
-      "icone": "🛒",
+      "tag_label": "Serviço Público",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "'Prefeitura no Bairro' leva mais de 150 serviços a Recanto dos Humildes, Jardim do Russo e Jardim da Conquista",
+      "resumo": "Tendas montadas na Praça Inácia Dias, ao lado da estação de trem de Perus, oferecem serviços de emissão de documentos, saúde e assistência social para moradores da região até 22 de agosto.",
+      "fonte": "Subprefeitura Perus",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/web/perus/w/noticias/59855",
+      "icone": "🏛️",
       "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 São Domingos",
-      "bairro": "São Domingos",
-      "titulo": "Operação tapa-buraco percorre diariamente ruas de Pirituba, Jaraguá e São Domingos",
-      "resumo": "A Subprefeitura Pirituba/Jaraguá mantém equipes de tapa-buraco atuando todos os dias na região, consumindo em média 27 toneladas de massa asfáltica por dia para recuperar vias danificadas.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
-      "hora": "julho/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/15856",
-      "icone": "🛣️",
-      "icone_classe": "ic-mob"
     }
   ],
   "agenda": [
-    {
-      "dia": "01",
-      "mes": "Ago",
-      "cor_fundo": "#E74C3C",
-      "bairro": "Perus",
-      "titulo": "Centenário da Fábrica de Cimento Perus",
-      "hora": "10h às 18h",
-      "local": "Praça Inácia Dias, Perus (próximo à estação de trem)",
-      "descricao": "Programação comemorativa com apresentações artísticas e culturais pelos 100 anos da Fábrica de Cimento Perus, patrimônio tombado da cidade desde 1992.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/regional/fabrica-de-cimento-de-perus-completa-100-anos-com-comemoracao-neste-sabado-1o/"
-    },
-    {
-      "dia": "01",
-      "mes": "Ago",
-      "cor_fundo": "#6C63FF",
-      "bairro": "Jaraguá",
-      "titulo": "Estreia do Circuito Cultural Jaraguá é Guarani 2026",
-      "hora": "18h às 23h",
-      "local": "Estrada das Taipas, 3827 - Espaço Fofão Rock'n Bar",
-      "descricao": "Abertura da 11ª edição do circuito, com shows locais, parte da programação gratuita que segue até 30 de agosto passando por espaços culturais do Jaraguá e da Freguesia do Ó.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/cotidiano/11a-edicao-do-circuito-cultural-jaragua-e-guarani-2026-comeca-em-agosto/"
-    },
     {
       "dia": "08",
       "mes": "Ago",
@@ -154,6 +142,19 @@
       "gratuito": true,
       "preco": null,
       "url": "https://folhanoroeste.com.br/regional/vacinacao-antirrabica-para-caes-e-gatos-ocorrera-no-ceu-pera-marmelo-no-jaragua/"
+    },
+    {
+      "dia": "13",
+      "mes": "Ago",
+      "cor_fundo": "#6C63FF",
+      "bairro": "Brasilândia",
+      "titulo": "Roda de conversa 'Entre Capas e Batidas' celebra o Dia Nacional do Hip-Hop",
+      "hora": "a definir (unidade aberta das 9h às 19h)",
+      "local": "Fábrica de Cultura Brasilândia",
+      "descricao": "Conversa sobre discos e capas de álbuns que ajudaram a construir a história do hip-hop, com referências musicais, visuais e culturais do movimento.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.fabricasdecultura.org.br/brasilandia/"
     },
     {
       "dia": "15",
@@ -197,44 +198,44 @@
   ],
   "vagas": [
     {
-      "icone": "🛒",
-      "titulo": "Repositor de mercadorias e atendente de loja",
-      "empresa": "Cate Móvel (rede de empresas parceiras)",
-      "bairro": "Conjunto Jova Rural",
-      "requisitos": "80 vagas com salário de R$ 2.100 mais benefícios (seguro de vida, auxílio-creche, assistência médica); inscrição no local ou pelo portal do Cate",
+      "icone": "💼",
+      "titulo": "Vagas diversas em comércio, serviços e construção civil",
+      "empresa": "Cate - unidade Perus (Rua Ylídio Figueiredo, 349)",
+      "bairro": "Perus",
+      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
       "tipo": "CLT",
-      "fonte": "Cate Móvel - Conjunto Habitacional Jova Rural, Jaçanã",
-      "dias_atras": "vaga divulgada em 21/07/2026"
-    },
-    {
-      "icone": "🧵",
-      "titulo": "Costureira(o)",
-      "empresa": "Confecções parceiras do Cate",
-      "bairro": "Casa Verde",
-      "requisitos": "Vagas para quem atua com costura, com ganhos de até R$ 2.200; preferência para candidatos com fácil acesso à região",
-      "tipo": "CLT",
-      "fonte": "Jornal Notícias da Região",
-      "dias_atras": "vagas divulgadas em julho/2026"
-    },
-    {
-      "icone": "🧵",
-      "titulo": "Costureira(o)",
-      "empresa": "Confecções parceiras do Cate",
-      "bairro": "Freguesia do Ó",
-      "requisitos": "Vagas para quem atua com costura, com ganhos de até R$ 2.200; preferência para candidatos com fácil acesso à região",
-      "tipo": "CLT",
-      "fonte": "Jornal Notícias da Região",
-      "dias_atras": "vagas divulgadas em julho/2026"
+      "fonte": "Prefeitura de São Paulo / SMDET",
+      "dias_atras": "vagas divulgadas em 01/08/2026"
     },
     {
       "icone": "💼",
-      "titulo": "Vagas diversas - comércio, serviços, construção civil e logística",
-      "empresa": "Cate (rede de empresas parceiras)",
-      "bairro": "Perus",
-      "requisitos": "Unidades do Cate seguem com centenas de vagas semanais, com salários de R$ 761 a R$ 5.300, incluindo auxiliar de limpeza, leiturista de rede de gás/energia e atendente de comércio; inscrição pelo portal ou na unidade",
+      "titulo": "Vagas diversas em comércio, serviços e construção civil",
+      "empresa": "Cate - unidade Jaçanã (Rua Luís Stamatis, 300)",
+      "bairro": "Jaçanã",
+      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
       "tipo": "CLT",
-      "fonte": "Cate - unidade Perus (Rua Ylídio Figueiredo, 285)",
-      "dias_atras": "vagas em aberto - julho/2026"
+      "fonte": "Prefeitura de São Paulo / SMDET",
+      "dias_atras": "vagas divulgadas em 01/08/2026"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas em comércio, serviços e construção civil",
+      "empresa": "Cate - unidade Vila Maria/Vila Guilherme (Rua General Mendes, 111)",
+      "bairro": "Vila Guilherme",
+      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
+      "tipo": "CLT",
+      "fonte": "Prefeitura de São Paulo / SMDET",
+      "dias_atras": "vagas divulgadas em 01/08/2026"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas em comércio, serviços e construção civil",
+      "empresa": "Cate - unidade Pirituba (Av. Dr. Felipe Pinel, 12)",
+      "bairro": "Pirituba",
+      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
+      "tipo": "CLT",
+      "fonte": "Prefeitura de São Paulo / SMDET",
+      "dias_atras": "vagas divulgadas em 01/08/2026"
     }
   ],
   "politica": [
@@ -244,54 +245,47 @@
       "titulo": "Urbia devolve concessão do Horto Florestal e do Parque Estadual da Cantareira",
       "impacto": "As duas áreas, cuja concessão foi assinada em 2022, voltam ao Programa de Parcerias em Investimentos do Estado; governo estuda nova licitação, mas a Urbia segue responsável pela administração durante a transição",
       "status": "Anunciado em 02/07/2026; estudos para nova licitação em andamento",
-      "fonte": "Diário Zona Norte / Diário do Grande ABC"
-    },
-    {
-      "orgao": "🏛️ CPM - Conselho Participativo Municipal Casa Verde/Cachoeirinha/Limão",
-      "bairro": "Cachoeirinha",
-      "titulo": "Orçamento Cidadão 2026 prioriza novo ecoponto e recuperação do Córrego Guaraú",
-      "impacto": "Propostas vencedoras da segunda etapa do Orçamento Cidadão seguem para análise técnica, legal e orçamentária da Prefeitura antes da execução",
-      "status": "Segunda etapa do Orçamento Cidadão encerrada em 06/07/2026",
-      "fonte": "Subprefeitura Casa Verde/Cachoeirinha/Limão"
-    },
-    {
-      "orgao": "🚆 TIC Trens - concessionária Linha 7-Rubi",
-      "bairro": "Pirituba",
-      "titulo": "Modernização da Estação Pirituba começa no segundo semestre de 2026",
-      "impacto": "Obras devem trazer acessibilidade universal, nova via permanente, rede aérea e sistemas de sinalização e energia atualizados",
-      "status": "Início das intervenções previsto para o 2º semestre de 2026",
-      "fonte": "Folha Noroeste"
+      "fonte": "Diário Zona Norte"
     },
     {
       "orgao": "🏢 Subprefeituras da Zona Norte",
       "bairro": "Jaçanã",
-      "titulo": "Praças de Atendimento das subprefeituras passam a funcionar das 10h às 16h",
+      "titulo": "Praças de Atendimento das subprefeituras funcionam das 10h às 16h",
       "impacto": "Mudança no horário de atendimento presencial em todas as subprefeituras, incluindo Jaçanã/Tremembé; atendimento deve ser agendado previamente pela Central SP156",
       "status": "Em vigor desde 01/07/2026, conforme Decreto Municipal 60.336",
       "fonte": "Subprefeitura Jaçanã/Tremembé"
+    },
+    {
+      "orgao": "🏗️ Prefeitura de São Paulo",
+      "bairro": "Tremembé",
+      "titulo": "Prazo para regularizar Habite-se sem documentação é prorrogado até 30 de agosto",
+      "impacto": "Famílias e imóveis irregulares na Zona Norte podem obter anistia e regularizar a documentação de construção antes do novo prazo final",
+      "status": "Prorrogado - prazo final 30/08/2026",
+      "fonte": "Subprefeitura Jaçanã/Tremembé"
+    },
+    {
+      "orgao": "🚧 Prefeitura de São Paulo",
+      "bairro": "Pirituba",
+      "titulo": "Obras da ligação viária Pirituba-Lapa são retomadas após 40 anos de espera",
+      "impacto": "R$ 209,5 milhões em investimento municipal; conclusão prevista para dezembro de 2026, deve reduzir o congestionamento entre as duas regiões",
+      "status": "Obras retomadas - julho/2026",
+      "fonte": "Prefeitura de São Paulo"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "💧",
-      "titulo": "Sistema Cantareira segue em Faixa de Alerta",
-      "desc": "O sistema opera em alerta desde 1º de julho, com volume em torno de 37%. Entre o início do mês e 26/07 os reservatórios perderam cerca de 25 bilhões de litros, e a previsão é seguir na faixa de alerta também em agosto.",
-      "meta": "SP Águas - dados de julho/2026"
+      "emoji": "💉",
+      "titulo": "Vacinação contra sarampo começa nesta segunda-feira (3/8) para toda a população de 6 meses a 59 anos",
+      "desc": "Após casos confirmados em Vila Medeiros e Vila Maria, São Paulo passa a vacinar indiscriminadamente contra o sarampo até 1º de setembro, sem necessidade de comprovar histórico vacinal.",
+      "meta": "Ministério da Saúde - 01/08/2026"
     },
     {
       "tipo": "info",
-      "emoji": "🌧️",
-      "titulo": "Julho tem chuva bem abaixo da média em São Paulo",
-      "desc": "Até o dia 31, choveram apenas 11 mm no mês na capital, cerca de 19% da média histórica para julho, o que contribui para a baixa vazão de água que chega aos reservatórios do Cantareira.",
-      "meta": "Dados pluviométricos - julho/2026"
-    },
-    {
-      "tipo": "neutro",
-      "emoji": "🕐",
-      "titulo": "Novo horário de atendimento presencial nas subprefeituras da Zona Norte",
-      "desc": "As Praças de Atendimento voltaram a funcionar das 10h às 16h a partir de 1º de julho. É recomendável agendar o atendimento presencial antes pela Central 156.",
-      "meta": "Decreto Municipal 60.336/2026"
+      "emoji": "💧",
+      "titulo": "Sistema Cantareira segue na faixa de alerta em agosto, com 37,2% do volume",
+      "desc": "Entre 1º e 26 de julho, os reservatórios perderam 25 bilhões de litros; o mês teve apenas 11 mm de chuva, bem abaixo da média histórica de 42 mm para o período.",
+      "meta": "SP Águas / Sabesp - julho/2026"
     },
     {
       "tipo": "neutro",
@@ -301,28 +295,30 @@
       "meta": "CEU Pêra Marmelo - Rua Pêra Marmelo, 226, Jaraguá"
     },
     {
-      "tipo": "ok",
-      "emoji": "🛣️",
-      "titulo": "Tapa-buraco reforçado em Pirituba, Jaraguá e São Domingos",
-      "desc": "Equipes da subprefeitura atuam todos os dias na região, consumindo em média 27 toneladas de massa asfáltica diariamente para recuperar vias.",
-      "meta": "Subprefeitura Pirituba/Jaraguá - julho/2026"
+      "tipo": "neutro",
+      "emoji": "🧹",
+      "titulo": "Cata-Bagulho passa por bairros de Jaçanã/Tremembé no dia 4 de agosto",
+      "desc": "Mutirão recolhe móveis e objetos inservíveis descartados irregularmente em vias e margens de córregos da região.",
+      "meta": "Subprefeitura Jaçanã/Tremembé"
+    },
+    {
+      "tipo": "neutro",
+      "emoji": "🏗️",
+      "titulo": "Prazo para regularizar Habite-se é prorrogado até 30 de agosto",
+      "desc": "Moradores com imóveis sem documentação podem buscar anistia e regularização da construção junto à Prefeitura antes do novo prazo final.",
+      "meta": "Prefeitura de São Paulo - prazo até 30/08/2026"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🏭",
-      "titulo": "Centenário da Fábrica de Cimento Perus",
-      "info": "01/08 · 10h às 18h · Praça Inácia Dias, Perus · Gratuito"
-    },
-    {
-      "emoji": "🎨",
-      "titulo": "Estreia do Circuito Cultural Jaraguá é Guarani",
-      "info": "01/08 · 18h às 23h · Estrada das Taipas, 3827 (Jaraguá) · Gratuito"
+      "emoji": "🐾",
+      "titulo": "Vacinação antirrábica gratuita para cães e gatos",
+      "info": "08 e 09/08 · 9h às 16h · CEU Pêra Marmelo, Jaraguá · Gratuito"
     },
     {
       "emoji": "🎭",
-      "titulo": "Fábricas de Cultura da Zona Norte abertas no fim de semana",
-      "info": "01/08 (9h-17h) e 02/08 (12h-17h) · Brasilândia, Jaçanã, Vila Nova Cachoeirinha e Núcleo Taipas · Gratuito"
+      "titulo": "Fábricas de Cultura da Zona Norte abertas no sábado",
+      "info": "08/08 · 9h às 17h · Brasilândia, Jaçanã, Vila Nova Cachoeirinha e Núcleo Taipas · Gratuito"
     }
   ]
 }
