@@ -8,11 +8,11 @@
       "tag_label": "Saúde",
       "tag_bairro": "📍 Vila Medeiros",
       "bairro": "Vila Medeiros",
-      "titulo": "São Paulo inicia vacinação indiscriminada contra sarampo nesta segunda-feira (3/8), com foco na Zona Norte",
-      "resumo": "Após confirmação de 15 casos de sarampo no estado de SP, 12 deles na capital, concentrados em Vila Medeiros (5 casos) e Vila Maria (2), o Ministério da Saúde recomendou vacinação indiscriminada contra a doença, sem necessidade de comprovar histórico vacinal, para moradores de 6 meses a 59 anos em São Paulo, Guarulhos e São Bernardo do Campo, de 3 de agosto a 1º de setembro.",
-      "fonte": "Ministério da Saúde / Diário Zona Norte",
-      "hora": "01/08/2026",
-      "url": "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/julho/ministerio-da-saude-amplia-recomendacao-de-vacinacao-contra-o-sarampo-em-tres-municipios-de-sao-paulo",
+      "titulo": "Zona Norte registra 8 casos de sarampo e vacinação indiscriminada começa nesta segunda (3/8), mesmo para quem já foi vacinado",
+      "resumo": "Dos 15 casos confirmados no estado de São Paulo, 8 estão na Zona Norte da capital: 6 em Vila Medeiros e 2 em Vila Maria. A partir de segunda-feira (3/8), moradores de São Paulo, Guarulhos e São Bernardo do Campo com idade entre 6 meses e 59 anos devem procurar uma unidade de saúde para tomar a vacina tríplice viral, mesmo quem já tem doses anteriores.",
+      "fonte": "Diário Zona Norte / Agência SP / Ministério da Saúde",
+      "hora": "02/08/2026",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
       "icone": "💉",
       "icone_classe": "ic-eco"
     },
@@ -23,9 +23,9 @@
       "tag_bairro": "📍 Jardim Brasília",
       "bairro": "Jardim Brasília",
       "titulo": "Polícia Civil prende condenado por roubo a joalheria na Zona Norte",
-      "resumo": "Um homem condenado por participação em roubo a uma joalheria foi localizado e preso pela Polícia Civil na comunidade do Jardim Brasília, em Taipas (Jaraguá), no dia 2 de agosto.",
+      "resumo": "Um homem de 35 anos, condenado por roubo a uma joalheria e procurado pela Justiça do Paraná, foi localizado e preso pela Polícia Civil na comunidade do Jardim Brasília, em Taipas (Jaraguá). A operação foi conduzida por equipes do Garra (Grupamento Armado de Repressão a Roubos e Assaltos), do Dope.",
       "fonte": "Agência SP / Polícia Civil",
-      "hora": "02/08/2026",
+      "hora": "02/07/2026",
       "url": "https://www.agenciasp.sp.gov.br/policia-civil-prende-condenado-por-roubo-a-joalheria-na-zona-norte-da-capital/",
       "icone": "🚔",
       "icone_classe": "ic-seg"
@@ -34,14 +34,14 @@
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Obras da Linha 6-Laranja atingem 80% e estações da Zona Norte avançam",
-      "resumo": "As obras da Linha 6-Laranja do Metrô, que vão ligar a Brasilândia ao centro em cerca de 23 minutos, atingiram 80% de execução. As estações Brasilândia e João Paulo I se aproximam de 90%, enquanto Freguesia do Ó, Sesc-Pompeia e PUC-Cardoso de Almeida já ultrapassam 80%.",
-      "fonte": "Diário Zona Norte",
+      "tag_bairro": "📍 Anhanguera",
+      "bairro": "Anhanguera",
+      "titulo": "Recapeamento do Sistema Anhanguera-Bandeirantes atinge 45% e segue até 2026",
+      "resumo": "As obras de recapeamento de 100% do pavimento do Sistema Anhanguera-Bandeirantes, com 14 frentes de trabalho simultâneas, já atingiram 45% de execução, com conclusão prevista para 2026.",
+      "fonte": "Agência SP",
       "hora": "julho/2026",
-      "url": "https://www.diariozonanorte.com.br/obras-da-linha-6-laranja-chegam-a-80-e-prometem-ligar-brasilandia-ao-centro-em-23-minutos/",
-      "icone": "🚇",
+      "url": "https://www.agenciasp.sp.gov.br/sp-pra-toda-obra-recapeamento-do-sistema-anhanguera-bandeirantes-atinge-45-e-segue-ate-2026/",
+      "icone": "🚧",
       "icone_classe": "ic-mob"
     },
     {
@@ -61,57 +61,15 @@
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Habitação",
-      "tag_bairro": "📍 Conjunto Residencial Elísio Teixeira Leite",
-      "bairro": "Conjunto Residencial Elísio Teixeira Leite",
-      "titulo": "Prefeitura entrega 50 escrituras definitivas a moradores do Conjunto Elísio Teixeira Leite",
-      "resumo": "Mutuários que quitaram o financiamento e aderiram ao Programa de Escrituração da Cohab receberam a documentação definitiva de seus imóveis durante o Prefeitura Presente em Pirituba/Jaraguá, região que recebe R$ 490 milhões em investimentos municipais.",
-      "fonte": "Prefeitura de São Paulo",
-      "hora": "julho/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
-      "icone": "🏠",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Jaçanã",
-      "bairro": "Jaçanã",
-      "titulo": "Cata-Bagulho percorre bairros de Jaçanã/Tremembé neste sábado (4/8)",
-      "resumo": "A Subprefeitura Jaçanã/Tremembé realiza mutirão de Cata-Bagulho no dia 4 de agosto, recolhendo móveis e objetos inservíveis descartados irregularmente em vias e margens de córregos da região.",
-      "fonte": "Subprefeitura Jaçanã/Tremembé",
-      "hora": "04/08/2026 (programado)",
-      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/w/noticias/85675",
-      "icone": "🧹",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Prefeitura retoma obras da ligação viária Pirituba-Lapa, pedido antigo dos moradores",
-      "resumo": "Com investimento municipal de R$ 209,5 milhões e conclusão prevista para dezembro de 2026, a obra vai reduzir o congestionamento entre Pirituba e Lapa, demanda que a população local tinha havia mais de 40 anos.",
-      "fonte": "Prefeitura de São Paulo",
-      "hora": "julho/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
-      "icone": "🚧",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
       "tag_label": "Economia",
       "tag_bairro": "📍 Vila Guilherme",
       "bairro": "Vila Guilherme",
-      "titulo": "Mais de 650 vagas de emprego abertas pelo Cate na primeira semana de agosto",
-      "resumo": "A Prefeitura oferece mais de 650 vagas por meio do Cate, com sete unidades na Zona Norte — Santana, Brasilândia, Jaçanã, Vila Maria/Vila Guilherme, Pirituba, Perus e Jaraguá —, com salários de R$ 800 a R$ 6.000 em comércio, serviços e construção civil.",
-      "fonte": "Prefeitura de São Paulo / SMDET",
-      "hora": "01/08/2026",
-      "url": "https://www.prefeitura.sp.gov.br/cidade/secretarias/desenvolvimento/noticias/?p=351687",
-      "icone": "💼",
+      "titulo": "Live Nation e Cidade Center Norte anunciam arena para 21 mil pessoas, com investimento de R$ 1,5 bilhão",
+      "resumo": "A nova Arena São Paulo, erguida em terreno da Cidade Center Norte, terá capacidade para 21 mil pessoas e deve receber mais de 200 shows e eventos esportivos por ano. As obras começam no segundo semestre de 2026, com inauguração prevista para 2028.",
+      "fonte": "Diário Zona Norte / Rolling Stone Brasil",
+      "hora": "julho/2026",
+      "url": "https://www.diariozonanorte.com.br/cidade-center-norte-avanca-com-arena-de-r-15-bilhao-enquanto-zona-norte-discute-os-impactos-do-projeto/",
+      "icone": "🏟️",
       "icone_classe": "ic-eco"
     },
     {
@@ -126,6 +84,34 @@
       "hora": "agosto/2026",
       "url": "https://prefeitura.sp.gov.br/web/perus/w/noticias/59855",
       "icone": "🏛️",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Lauzane Paulista",
+      "bairro": "Lauzane Paulista",
+      "titulo": "AMA/UBS Integradas, incluindo a de Lauzane Paulista, passam a atender das 7h às 19h",
+      "resumo": "A Secretaria Municipal da Saúde atualizou o horário de funcionamento das unidades AMA/UBS Integrada, que agora atendem das 7h às 19h todos os dias, sem data de abertura ou encerramento fixa, incluindo a unidade de Lauzane Paulista, na região do Mandaqui.",
+      "fonte": "Secretaria Municipal da Saúde",
+      "hora": "julho/2026",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/noticias/297940",
+      "icone": "🏥",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Cate abre 900 vagas de emprego na primeira semana de agosto, com unidades na Zona Norte",
+      "resumo": "O Centro de Apoio ao Trabalho e Empreendedorismo (Cate) oferece 900 vagas nesta primeira semana de agosto, com destaque para o setor de serviços. A rede tem unidades na Zona Norte em Casa Verde, Santana, Pirituba, Vila Maria/Vila Guilherme e Perus.",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "hora": "01/08/2026",
+      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/noticias/369906",
+      "icone": "💼",
       "icone_classe": "ic-eco"
     }
   ],
@@ -200,9 +186,9 @@
     {
       "icone": "💼",
       "titulo": "Vagas diversas em comércio, serviços e construção civil",
-      "empresa": "Cate - unidade Perus (Rua Ylídio Figueiredo, 349)",
-      "bairro": "Perus",
-      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
+      "empresa": "Cate - unidade Santana",
+      "bairro": "Santana",
+      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
       "tipo": "CLT",
       "fonte": "Prefeitura de São Paulo / SMDET",
       "dias_atras": "vagas divulgadas em 01/08/2026"
@@ -210,9 +196,9 @@
     {
       "icone": "💼",
       "titulo": "Vagas diversas em comércio, serviços e construção civil",
-      "empresa": "Cate - unidade Jaçanã (Rua Luís Stamatis, 300)",
-      "bairro": "Jaçanã",
-      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
+      "empresa": "Cate - unidade Casa Verde",
+      "bairro": "Casa Verde",
+      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
       "tipo": "CLT",
       "fonte": "Prefeitura de São Paulo / SMDET",
       "dias_atras": "vagas divulgadas em 01/08/2026"
@@ -220,19 +206,29 @@
     {
       "icone": "💼",
       "titulo": "Vagas diversas em comércio, serviços e construção civil",
-      "empresa": "Cate - unidade Vila Maria/Vila Guilherme (Rua General Mendes, 111)",
-      "bairro": "Vila Guilherme",
-      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
-      "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo / SMDET",
-      "dias_atras": "vagas divulgadas em 01/08/2026"
-    },
-    {
-      "icone": "💼",
-      "titulo": "Vagas diversas em comércio, serviços e construção civil",
-      "empresa": "Cate - unidade Pirituba (Av. Dr. Felipe Pinel, 12)",
+      "empresa": "Cate - unidade Pirituba",
       "bairro": "Pirituba",
-      "requisitos": "Salários de R$ 800 a R$ 6.000; inscrição pelo portal do Cate ou presencial na unidade",
+      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
+      "tipo": "CLT",
+      "fonte": "Prefeitura de São Paulo / SMDET",
+      "dias_atras": "vagas divulgadas em 01/08/2026"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas em comércio, serviços e construção civil",
+      "empresa": "Cate - unidade Vila Maria/Vila Guilherme",
+      "bairro": "Vila Guilherme",
+      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
+      "tipo": "CLT",
+      "fonte": "Prefeitura de São Paulo / SMDET",
+      "dias_atras": "vagas divulgadas em 01/08/2026"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas em comércio, serviços e construção civil",
+      "empresa": "Cate - unidade Perus",
+      "bairro": "Perus",
+      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
       "tipo": "CLT",
       "fonte": "Prefeitura de São Paulo / SMDET",
       "dias_atras": "vagas divulgadas em 01/08/2026"
@@ -240,36 +236,36 @@
   ],
   "politica": [
     {
-      "orgao": "🏞️ Secretaria de Parcerias em Investimentos do Estado de SP",
-      "bairro": "Horto Florestal",
-      "titulo": "Urbia devolve concessão do Horto Florestal e do Parque Estadual da Cantareira",
-      "impacto": "As duas áreas, cuja concessão foi assinada em 2022, voltam ao Programa de Parcerias em Investimentos do Estado; governo estuda nova licitação, mas a Urbia segue responsável pela administração durante a transição",
-      "status": "Anunciado em 02/07/2026; estudos para nova licitação em andamento",
-      "fonte": "Diário Zona Norte"
+      "orgao": "🏛️ CPM Santana/Tucuruvi/Mandaqui",
+      "bairro": "Tucuruvi",
+      "titulo": "Conselho Participativo define 15 propostas para o Orçamento Cidadão 2026 na região",
+      "impacto": "De 105 propostas enviadas pela população de Santana, Tucuruvi e Mandaqui, 15 foram priorizadas pelo CPM e seguem para avaliação técnica da Prefeitura antes da votação popular",
+      "status": "Votação popular prevista de 18/08 a 05/09/2026",
+      "fonte": "Diário Zona Norte / Participe Mais"
+    },
+    {
+      "orgao": "🌳 Secretaria Municipal do Verde e do Meio Ambiente",
+      "bairro": "São Domingos",
+      "titulo": "Parques Anhanguera e São Domingos vão receber plano de gestão do programa Viva Verde SP",
+      "impacto": "Os dois parques da região noroeste estão entre os 19 selecionados na segunda fase do Viva Verde SP para receber planos de gestão e projetos de requalificação, após avaliação de mais de 100 parques da cidade entre 2022 e 2025",
+      "status": "Selecionados na 2ª fase do programa",
+      "fonte": "Folha Noroeste"
     },
     {
       "orgao": "🏢 Subprefeituras da Zona Norte",
-      "bairro": "Jaçanã",
+      "bairro": "Casa Verde",
       "titulo": "Praças de Atendimento das subprefeituras funcionam das 10h às 16h",
-      "impacto": "Mudança no horário de atendimento presencial em todas as subprefeituras, incluindo Jaçanã/Tremembé; atendimento deve ser agendado previamente pela Central SP156",
+      "impacto": "Mudança no horário de atendimento presencial em todas as subprefeituras da Zona Norte; atendimento deve ser agendado previamente pela Central SP156",
       "status": "Em vigor desde 01/07/2026, conforme Decreto Municipal 60.336",
-      "fonte": "Subprefeitura Jaçanã/Tremembé"
+      "fonte": "Prefeitura de São Paulo"
     },
     {
       "orgao": "🏗️ Prefeitura de São Paulo",
-      "bairro": "Tremembé",
+      "bairro": "Perus",
       "titulo": "Prazo para regularizar Habite-se sem documentação é prorrogado até 30 de agosto",
       "impacto": "Famílias e imóveis irregulares na Zona Norte podem obter anistia e regularizar a documentação de construção antes do novo prazo final",
       "status": "Prorrogado - prazo final 30/08/2026",
       "fonte": "Subprefeitura Jaçanã/Tremembé"
-    },
-    {
-      "orgao": "🚧 Prefeitura de São Paulo",
-      "bairro": "Pirituba",
-      "titulo": "Obras da ligação viária Pirituba-Lapa são retomadas após 40 anos de espera",
-      "impacto": "R$ 209,5 milhões em investimento municipal; conclusão prevista para dezembro de 2026, deve reduzir o congestionamento entre as duas regiões",
-      "status": "Obras retomadas - julho/2026",
-      "fonte": "Prefeitura de São Paulo"
     }
   ],
   "alertas": [
@@ -277,15 +273,15 @@
       "tipo": "info",
       "emoji": "💉",
       "titulo": "Vacinação contra sarampo começa nesta segunda-feira (3/8) para toda a população de 6 meses a 59 anos",
-      "desc": "Após casos confirmados em Vila Medeiros e Vila Maria, São Paulo passa a vacinar indiscriminadamente contra o sarampo até 1º de setembro, sem necessidade de comprovar histórico vacinal.",
-      "meta": "Ministério da Saúde - 01/08/2026"
+      "desc": "Após 8 casos confirmados na Zona Norte (6 em Vila Medeiros e 2 em Vila Maria), São Paulo passa a vacinar indiscriminadamente contra o sarampo, sem necessidade de comprovar histórico vacinal.",
+      "meta": "Diário Zona Norte / Ministério da Saúde - 02/08/2026"
     },
     {
       "tipo": "info",
       "emoji": "💧",
-      "titulo": "Sistema Cantareira segue na faixa de alerta em agosto, com 37,2% do volume",
-      "desc": "Entre 1º e 26 de julho, os reservatórios perderam 25 bilhões de litros; o mês teve apenas 11 mm de chuva, bem abaixo da média histórica de 42 mm para o período.",
-      "meta": "SP Águas / Sabesp - julho/2026"
+      "titulo": "Sistema Cantareira opera em Faixa de Alerta em agosto, com 36,67% do volume útil",
+      "desc": "O volume registrado em 31/07 caiu frente aos 39,87% de 30/06. Com isso, a Sabesp está autorizada a captar até 27 m³/s do manancial, abaixo dos 33 m³/s da condição normal.",
+      "meta": "Sabesp / Tribuna Hoje - 31/07/2026"
     },
     {
       "tipo": "neutro",
@@ -296,10 +292,10 @@
     },
     {
       "tipo": "neutro",
-      "emoji": "🧹",
-      "titulo": "Cata-Bagulho passa por bairros de Jaçanã/Tremembé no dia 4 de agosto",
-      "desc": "Mutirão recolhe móveis e objetos inservíveis descartados irregularmente em vias e margens de córregos da região.",
-      "meta": "Subprefeitura Jaçanã/Tremembé"
+      "emoji": "🏥",
+      "titulo": "AMA/UBS Integradas passam a atender das 7h às 19h",
+      "desc": "Nova janela de atendimento vale para toda a rede, incluindo a unidade de Lauzane Paulista, na região do Mandaqui.",
+      "meta": "Secretaria Municipal da Saúde"
     },
     {
       "tipo": "neutro",
