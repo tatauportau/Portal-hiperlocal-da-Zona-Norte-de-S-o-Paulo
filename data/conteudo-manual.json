@@ -3,60 +3,32 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "💉 Sarampo: vacinação geral",
+      "pill": "💉 Reforço vacinal Tríplice Viral",
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Medeiros",
-      "bairro": "Vila Medeiros",
-      "titulo": "Vacinação contra sarampo começa hoje em SP, Guarulhos e São Bernardo; Zona Norte concentra a maioria dos casos da capital",
-      "resumo": "O estado de São Paulo soma 15 casos confirmados de sarampo em 2026, 12 deles na capital — 6 em Vila Medeiros e 2 em Vila Maria. A partir desta segunda-feira (3/8), o Ministério da Saúde amplia a vacinação para todas as pessoas de 6 meses a 59 anos que moram ou trabalham em São Paulo, Guarulhos e São Bernardo do Campo, mesmo quem já tem o esquema vacinal completo, até 1º de setembro.",
-      "fonte": "Diário Zona Norte / Ministério da Saúde",
-      "hora": "03/08/2026",
-      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Subprefeitura Freguesia/Brasilândia aplica dose de reforço contra sarampo, caxumba e rubéola até esta sexta-feira (7/8)",
+      "resumo": "Em parceria com a SuVis-CV, a Subprefeitura Freguesia/Brasilândia oferece dose de reforço da Tríplice Viral para moradores de 6 a 59 anos, no estacionamento de motos da sede, na Av. João Marcelino Branco, 95. É necessário levar documento com foto. A campanha reforça a prevenção diante do aumento de casos na região.",
+      "fonte": "Folha Noroeste",
+      "hora": "até 07/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/vacinacao-contra-o-sarampo-caxumba-e-rubeola-e-realizada-na-sub-da-freguesia-brasilandia/",
       "icone": "💉",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Recanto dos Humildes",
-      "bairro": "Conjunto Habitacional Recanto dos Humildes",
-      "titulo": "UBS Recanto dos Humildes, em Perus, tem entrega prevista para agosto após investimento de R$ 13,1 milhões",
-      "resumo": "A nova unidade terá dois pavimentos com atendimento básico e pronto-socorro integrados, com capacidade para cerca de 15 mil atendimentos por mês. A conclusão das obras está prevista para este mês.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/sa%C3%BAde-visita-futuras-novas-instala%C3%A7%C3%B5es-da-ubs-recanto-dos-humildes-durante-prefeitura-presente-perus",
-      "icone": "🏥",
+      "tag_label": "Cidadania",
+      "tag_bairro": "📍 Morro Grande",
+      "bairro": "Vila Morro Grande",
+      "titulo": "Morro Grande celebra aniversário do bairro neste sábado com caminhada e serviços gratuitos, dentro da campanha Agosto Lilás",
+      "resumo": "No dia 8/8, das 8h às 22h, a Av. Tomás Rabelo e Silva recebe a 1ª Caminhada Morro Grande por Elas, atrações musicais e serviços gratuitos à população, incluindo CAT Móvel, atendimento do Grupo Mulheres do Brasil (combate à violência contra a mulher), Van de Atendimento às Mulheres, SP+Rural e o Rotary Club Pirituba.",
+      "fonte": "Folha Noroeste",
+      "hora": "08/08/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/morro-grande-promove-dia-especial-com-caminhada-e-servicos-gratuitos-a-populacao/",
+      "icone": "🚺",
       "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Jardim Rosinha",
-      "bairro": "Jardim Rosinha",
-      "titulo": "UPA/UBS Anhanguera-Residencial das Orquídeas, no Jardim Rosinha, também tem entrega prevista para agosto",
-      "resumo": "Construída na Estrada de Pirapora, a unidade integra pronto-atendimento e UBS em um só prédio, com investimento de R$ 13,1 milhões — mesmo padrão da unidade que está sendo entregue em Perus.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/sa%C3%BAde-visita-futuras-novas-instala%C3%A7%C3%B5es-da-ubs-recanto-dos-humildes-durante-prefeitura-presente-perus",
-      "icone": "🏥",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Vila Penteado",
-      "bairro": "Vila Penteado",
-      "titulo": "Linha de ônibus 938P/10 Vila Penteado–Metrô Barra Funda é ampliada a partir de 13 de agosto",
-      "resumo": "A SPTrans vai estender o itinerário até a Rua Carlos Marighella, ampliando o acesso ao transporte público para moradores de Vila Penteado, na região da Brasilândia.",
-      "fonte": "SPTrans / Secretaria Municipal de Mobilidade e Transportes",
-      "hora": "a partir de 13/08/2026",
-      "url": "https://prefeitura.sp.gov.br/web/mobilidade/w/noticias/31258",
-      "icone": "🚌",
-      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
@@ -64,58 +36,98 @@
       "tag_label": "Mobilidade",
       "tag_bairro": "📍 Jaraguá",
       "bairro": "Jaraguá",
-      "titulo": "Estação Jaraguá da Linha 7-Rubi recebe ações gratuitas de saúde e cidadania nesta quarta (5/8)",
-      "resumo": "Parceria entre a TIC Trens e o SEST SENAT leva orientações sobre saúde, cidadania e qualidade de vida aos passageiros, com atividades culturais e informações preventivas, das 10h às 16h.",
+      "titulo": "Estação Jaraguá da Linha 7-Rubi recebe ação gratuita de massoterapia nesta semana",
+      "resumo": "Dentro da parceria entre a TIC Trens e o SEST SENAT, passageiros da Estação Jaraguá têm acesso a sessões gratuitas de massoterapia, parte de um programa de bem-estar e cidadania realizado em estações da Linha 7-Rubi.",
       "fonte": "Folha Noroeste",
       "hora": "05/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/veja-as-acoes-de-saude-cidadania-e-bem-estar-promovidas-em-tres-estacoes-da-linha-7-rubi/",
-      "icone": "🚉",
+      "url": "https://folhanoroeste.com.br/regional/estacao-jaragua-da-linha-7-rubi-recebe-acao-gratuita-de-massoterapia/",
+      "icone": "💆",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Educação",
-      "tag_bairro": "📍 Jardim Taipas",
-      "bairro": "Jardim Taipas",
-      "titulo": "CEU Taipas abre inscrições para curso gratuito de gastronomia 'Cozinha Escola'",
-      "resumo": "A unidade oferece vagas para o curso no segundo semestre, com aulas práticas voltadas à comunidade do Jaraguá.",
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Linha 6-Laranja transporta mais de 42 mil passageiros no 1º mês de operação; expansão deve chegar à Brasilândia até o fim do ano",
+      "resumo": "Entre 3 e 31 de julho, a Linha 6-Laranja registrou 42.239 embarques nas seis estações já abertas (João Paulo I, Sesc-Pompeia, Água Branca, Freguesia do Ó, Santa Marina e Perdizes), com atendimento de segunda a sexta, das 10h às 15h, em fase de operação assistida. A concessionária prevê ampliar o trecho até o fim do ano com a abertura das estações Brasilândia e Itaberaba–Hospital Vila Penteado.",
       "fonte": "Folha Noroeste",
-      "hora": "03/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/ceu-taipas-abre-inscricoes-para-o-curso-de-gastronomia-cozinha-escola/",
-      "icone": "📚",
-      "icone_classe": "ic-edu"
+      "hora": "04/08/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/estacao-joao-paulo-i-da-linha-6-laranja-concentra-maior-fluxo-de-passageiros/",
+      "icone": "🚇",
+      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Geral",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Cades Pirituba realiza encontro com a comunidade nesta terça (4/8), na Subprefeitura",
-      "resumo": "O Conselho de Meio Ambiente e Desenvolvimento Sustentável (Cades) de Pirituba/Jaraguá promove reunião aberta a moradores para discutir pautas ambientais da região.",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Freguesia do Ó celebra 446 anos com programação especial ao longo de agosto",
+      "resumo": "A Subprefeitura Freguesia/Brasilândia preparou programação semanal ao longo do mês para celebrar os 446 anos de um dos bairros mais tradicionais e históricos de São Paulo. A abertura fica por conta do 1º Festival de K-Pop, nos dias 7, 8 e 9 de agosto, no Largo da Matriz de Nossa Senhora do Ó.",
       "fonte": "Folha Noroeste",
-      "hora": "04/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/cades-pirituba-realiza-encontro-com-a-comunidade-nesta-terca-4-na-subprefeitura/",
-      "icone": "🌱",
+      "hora": "05/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/1o-festival-de-k-pop-na-freguesia-do-o-abre-aniversario-do-bairro-esta-semana/",
+      "icone": "🎉",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "30ª Operação Cata-bagulho do ano atende 22 bairros de Pirituba",
-      "resumo": "A partir de agosto, o serviço passa a atender com menor intervalo — em média a cada dois meses — com a subprefeitura dividida em 12 setores para recolhimento de entulho aos sábados, das 6h às 18h.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
-      "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/59451",
-      "icone": "🧹",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "CIC Jaraguá realiza processo seletivo com 300 vagas para logística em parceria com o Mercado Livre",
+      "resumo": "A Secretaria da Justiça e Cidadania, via CIC Oeste, promoveu seleção para 300 vagas em operações logísticas nas unidades de Perus e Cajamar, com remuneração de R$ 2.025,00 mais R$ 182,00 de bônus, vale-alimentação, transporte fretado e assistência médica/odontológica. Não é exigida experiência prévia e há vagas também para PCDs.",
+      "fonte": "Folha Noroeste",
+      "hora": "04/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/cic-jaragua-realiza-processo-seletivo-com-300-vagas-para-a-area-de-logistica/",
+      "icone": "📦",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Vila Bonilha",
+      "bairro": "Vila Bonilha",
+      "titulo": "ACSP Distrital Noroeste promove 'IN Inovando Networking' para empreendedores nesta quarta (5/8)",
+      "resumo": "Às 19h, na Rua Luís Braille, 8, em Vila Bonilha, o encontro reúne empresários e profissionais da região noroeste com palestras sobre comportamento e saúde no ambiente de trabalho e sobre o mercado de licitações públicas.",
+      "fonte": "Folha Noroeste",
+      "hora": "05/08/2026 às 19h",
+      "url": "https://folhanoroeste.com.br/regional/in-inovando-networking-voltado-para-empreendedores-sera-realizado-na-distrital-noroeste/",
+      "icone": "🤝",
       "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
+    {
+      "dia": "07",
+      "mes": "Ago",
+      "cor_fundo": "#D6336C",
+      "bairro": "Freguesia do Ó",
+      "titulo": "1º Festival de K-Pop na Freguesia do Ó",
+      "hora": "11h às 22h (07 a 09/08)",
+      "local": "Largo da Matriz de Nossa Senhora do Ó - Freguesia do Ó",
+      "descricao": "Três dias de música, dança e cultura coreana abrem a programação especial dos 446 anos da Freguesia do Ó, reunindo fãs de K-Pop e visitantes de todas as idades em evento gratuito.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/regional/1o-festival-de-k-pop-na-freguesia-do-o-abre-aniversario-do-bairro-esta-semana/"
+    },
+    {
+      "dia": "08",
+      "mes": "Ago",
+      "cor_fundo": "#9B59B6",
+      "bairro": "Vila Morro Grande",
+      "titulo": "1ª Caminhada Morro Grande por Elas e Dia de Serviços (Agosto Lilás)",
+      "hora": "8h às 22h",
+      "local": "Av. Tomás Rabelo e Silva - Morro Grande",
+      "descricao": "Aniversário do bairro com caminhada, shows e serviços gratuitos: CAT Móvel, Van de Atendimento às Mulheres, Grupo Mulheres do Brasil, SP+Rural e Rotary Club Pirituba.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/cotidiano/morro-grande-promove-dia-especial-com-caminhada-e-servicos-gratuitos-a-populacao/"
+    },
     {
       "dia": "08",
       "mes": "Ago",
@@ -130,30 +142,17 @@
       "url": "https://folhanoroeste.com.br/regional/vacinacao-antirrabica-para-caes-e-gatos-ocorrera-no-ceu-pera-marmelo-no-jaragua/"
     },
     {
-      "dia": "13",
-      "mes": "Ago",
-      "cor_fundo": "#6C63FF",
-      "bairro": "Brasilândia",
-      "titulo": "Roda de conversa 'Entre Capas e Batidas' celebra o Dia Nacional do Hip-Hop",
-      "hora": "a definir (unidade aberta das 9h às 19h)",
-      "local": "Fábrica de Cultura Brasilândia",
-      "descricao": "Conversa sobre discos e capas de álbuns que ajudaram a construir a história do hip-hop, com referências musicais, visuais e culturais do movimento.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://www.fabricasdecultura.org.br/brasilandia/"
-    },
-    {
-      "dia": "15",
+      "dia": "10",
       "mes": "Ago",
       "cor_fundo": "#E67E22",
       "bairro": "Jaraguá",
-      "titulo": "'Tecendo Memórias no Pico: Os Construtores do Jaraguá' - Festival do Patrimônio",
+      "titulo": "Oficina de Grafismo Guarani - Circuito Jaraguá é Guarani",
       "hora": "10h",
-      "local": "Parque Estadual do Jaraguá - Rua Antônio Cardoso Nogueira, 539, Jaraguá",
-      "descricao": "Roteiro guiado sobre a presença indígena Guarani Mbya e o impacto da mineração de ouro no ciclo bandeirista na história do Pico do Jaraguá. Classificação indicativa: 8 anos. Não é necessária inscrição prévia.",
+      "local": "CEU Pinheirinho D'Água Luis Gama - Jaraguá",
+      "descricao": "Atividade gratuita de arte indígena dentro da 11ª edição do Circuito Cultural Jaraguá é Guarani, que ocorre durante todo o mês de agosto em parceria com aldeias Guarani Mbya do Jaraguá.",
       "gratuito": true,
       "preco": null,
-      "url": "https://folhanoroeste.com.br/cotidiano/festival-do-patrimonio-sp-tera-mais-de-500-atracoes-gratuitas-confira-a-programacao-no-jaragua-e-na-freguesia-do-o/"
+      "url": "https://folhanoroeste.com.br/cotidiano/11a-edicao-do-circuito-cultural-jaragua-e-guarani-2026-comeca-em-agosto/"
     },
     {
       "dia": "15",
@@ -167,19 +166,6 @@
       "gratuito": true,
       "preco": null,
       "url": "https://folhanoroeste.com.br/cotidiano/festival-do-patrimonio-sp-tera-mais-de-500-atracoes-gratuitas-confira-a-programacao-no-jaragua-e-na-freguesia-do-o/"
-    },
-    {
-      "dia": "21",
-      "mes": "Ago",
-      "cor_fundo": "#9B59B6",
-      "bairro": "Jardim Taipas",
-      "titulo": "'Histórias Folclóricas' no Núcleo Taipas da Fábrica de Cultura",
-      "hora": "a definir (unidade aberta das 9h às 19h)",
-      "local": "Núcleo Taipas - Fábrica de Cultura Jaraguá",
-      "descricao": "Atividade voltada ao público infantil sobre tradições e folclore brasileiro, parte da programação gratuita de agosto das Fábricas de Cultura da Zona Norte.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://www.encontrabrasilandia.com.br/sobre/fabricas-de-cultura-da-zona-norte-de-sp-tem-eventos-gratuitos-em-agosto"
     },
     {
       "dia": "29",
@@ -197,11 +183,11 @@
   ],
   "vagas": [
     {
-      "icone": "💼",
+      "icone": "📦",
       "titulo": "Operações logísticas - processo seletivo Mercado Livre",
       "empresa": "CIC Oeste / Secretaria da Justiça e Cidadania",
       "bairro": "Jaraguá",
-      "requisitos": "Maiores de 18 anos, ensino fundamental ou médio completo, sem exigência de experiência prévia; vagas também para PCD. Seleção presencial em 04/08, das 8h às 17h, na Estrada das Taipas, 990",
+      "requisitos": "Maiores de 18 anos, ensino fundamental ou médio completo, sem exigência de experiência prévia; vagas também para PCD. Remuneração de R$ 2.025,00 + R$ 182,00 de bônus, vale-alimentação, transporte fretado e assistência médica/odontológica. Local: Estrada das Taipas, 990, Jaraguá",
       "tipo": "CLT",
       "fonte": "Folha Noroeste / Secretaria da Justiça e Cidadania",
       "dias_atras": "processo seletivo em 04/08/2026"
@@ -211,76 +197,66 @@
       "titulo": "Vagas diversas em comércio, serviços e construção civil",
       "empresa": "Cate - unidade Santana",
       "bairro": "Santana",
-      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
+      "requisitos": "Ensino fundamental incompleto a completo; parte das vagas exige experiência prévia de 6 meses. Cate abriu agosto com mais de 1.700 vagas na rede, com salários de até R$ 3.150,00",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo / SMDET",
-      "dias_atras": "vagas divulgadas em 01/08/2026"
+      "fonte": "Prefeitura de São Paulo / Gazeta de São Paulo",
+      "dias_atras": "vagas divulgadas em agosto/2026"
     },
     {
       "icone": "💼",
       "titulo": "Vagas diversas em comércio, serviços e construção civil",
       "empresa": "Cate - unidade Casa Verde",
       "bairro": "Casa Verde",
-      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
+      "requisitos": "Ensino fundamental incompleto a completo; parte das vagas exige experiência prévia de 6 meses. Cate abriu agosto com mais de 1.700 vagas na rede, com salários de até R$ 3.150,00",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo / SMDET",
-      "dias_atras": "vagas divulgadas em 01/08/2026"
+      "fonte": "Prefeitura de São Paulo / Gazeta de São Paulo",
+      "dias_atras": "vagas divulgadas em agosto/2026"
     },
     {
       "icone": "💼",
       "titulo": "Vagas diversas em comércio, serviços e construção civil",
       "empresa": "Cate - unidade Pirituba",
       "bairro": "Pirituba",
-      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
+      "requisitos": "Ensino fundamental incompleto a completo; parte das vagas exige experiência prévia de 6 meses. Cate abriu agosto com mais de 1.700 vagas na rede, com salários de até R$ 3.150,00",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo / SMDET",
-      "dias_atras": "vagas divulgadas em 01/08/2026"
+      "fonte": "Prefeitura de São Paulo / Gazeta de São Paulo",
+      "dias_atras": "vagas divulgadas em agosto/2026"
     },
     {
       "icone": "💼",
       "titulo": "Vagas diversas em comércio, serviços e construção civil",
       "empresa": "Cate - unidade Perus",
       "bairro": "Perus",
-      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
+      "requisitos": "Ensino fundamental incompleto a completo; parte das vagas exige experiência prévia de 6 meses. Cate abriu agosto com mais de 1.700 vagas na rede, com salários de até R$ 3.150,00",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo / SMDET",
-      "dias_atras": "vagas divulgadas em 01/08/2026"
-    },
-    {
-      "icone": "💼",
-      "titulo": "Vagas diversas em comércio, serviços e construção civil",
-      "empresa": "Cate - unidade Vila Maria/Vila Guilherme",
-      "bairro": "Vila Guilherme",
-      "requisitos": "Ensino fundamental incompleto a completo, algumas vagas com exigência de experiência prévia de 6 meses; inscrição pelo Portal Cate ou presencial na unidade até 07/08",
-      "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo / SMDET",
-      "dias_atras": "vagas divulgadas em 01/08/2026"
+      "fonte": "Prefeitura de São Paulo / Gazeta de São Paulo",
+      "dias_atras": "vagas divulgadas em agosto/2026"
     }
   ],
   "politica": [
     {
       "orgao": "🏛️ CPM Casa Verde/Cachoeirinha/Limão",
       "bairro": "Casa Verde",
-      "titulo": "Conselho Participativo inicia segunda etapa do Orçamento Cidadão 2026 e escolhe propostas prioritárias para a região",
-      "impacto": "As propostas selecionadas pelo CPM seguem para avaliação técnica da Prefeitura antes da votação popular, definindo investimentos locais para 2026",
+      "titulo": "Conselho Participativo entra na segunda etapa do Orçamento Cidadão 2026 e escolhe propostas prioritárias para a região",
+      "impacto": "75 propostas foram direcionadas aos três distritos que compõem a Subprefeitura, que reúne cerca de 300 mil habitantes; as propostas seguem para avaliação técnica da Prefeitura antes da votação popular",
       "status": "Segunda etapa em andamento",
       "fonte": "Diário Zona Norte / Prefeitura de São Paulo"
     },
     {
-      "orgao": "🏗️ Subprefeitura Pirituba/Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Programa Prefeitura Presente leva ações a Pirituba/Jaraguá, região que recebe R$ 490 milhões em investimentos",
-      "impacto": "Primeira edição do ano do programa na região reúne serviços públicos e apresenta obras em andamento financiadas pelo pacote de investimentos",
-      "status": "Investimentos em execução",
-      "fonte": "Prefeitura de São Paulo / Subprefeitura Pirituba-Jaraguá"
+      "orgao": "🏛️ CPM Santana/Tucuruvi/Mandaqui",
+      "bairro": "Santana",
+      "titulo": "Conselho Participativo Municipal define 15 propostas para o Orçamento Cidadão 2026 da subprefeitura",
+      "impacto": "As propostas escolhidas pelo CPM local seguem o mesmo rito de avaliação técnica e votação popular do Orçamento Cidadão, definindo prioridades de investimento para Santana, Tucuruvi e Mandaqui",
+      "status": "Propostas definidas",
+      "fonte": "Diário Zona Norte"
     },
     {
       "orgao": "🏛️ Subprefeitura Perus/Anhanguera",
       "bairro": "Perus",
-      "titulo": "Subprefeitura realiza oficina do Plano de Ação (PAS) 2026-2029 com moradores, de 18 a 21 de agosto",
-      "impacto": "Moradores de Perus e Anhanguera poderão participar da elaboração do documento estratégico que vai orientar o desenvolvimento urbano local pelos próximos anos",
+      "titulo": "Subprefeitura realiza oficina do Plano de Ação (PAS) 2026-2029 no CEU Perus, de 18 a 21 de agosto",
+      "impacto": "Moradores de Perus e Anhanguera poderão participar da elaboração do documento estratégico que vai orientar o desenvolvimento urbano local pelos próximos anos, dentro do ciclo de oficinas que também ocorre em outras subprefeituras das zonas leste, norte e oeste",
       "status": "Oficina agendada para 18 a 21/08/2026",
-      "fonte": "Subprefeitura Perus"
+      "fonte": "Prefeitura de São Paulo / Subprefeitura Perus"
     },
     {
       "orgao": "🏗️ Prefeitura de São Paulo",
@@ -295,23 +271,23 @@
     {
       "tipo": "info",
       "emoji": "💉",
-      "titulo": "Vacinação contra sarampo começa hoje (3/8) e vai até 1º de setembro, sem necessidade de comprovar histórico vacinal",
-      "desc": "Após 8 casos confirmados na Zona Norte (6 em Vila Medeiros e 2 em Vila Maria), a campanha vale para todas as pessoas de 6 meses a 59 anos que moram ou trabalham em São Paulo, Guarulhos e São Bernardo do Campo.",
-      "meta": "Diário Zona Norte / Ministério da Saúde - 03/08/2026"
+      "titulo": "Vacinação de reforço da Tríplice Viral (sarampo, caxumba e rubéola) segue até sexta (7/8) na Sub. Freguesia/Brasilândia",
+      "desc": "Aplicação para moradores de 6 a 59 anos, no estacionamento de motos da sede da Subprefeitura, na Av. João Marcelino Branco, 95. É necessário levar documento com foto.",
+      "meta": "Folha Noroeste - 04/08/2026"
     },
     {
       "tipo": "info",
       "emoji": "💧",
       "titulo": "Sabesp reduz de 10h para 8h o horário diário de redução de pressão da água na Grande SP",
-      "desc": "A partir de agosto, a Gestão de Demanda Noturna passa a ser executada das 22h às 6h, após melhora pontual no Sistema Cantareira, que opera com 36,7% da capacidade útil.",
+      "desc": "Desde agosto, a Gestão de Demanda Noturna passa a ser executada das 22h às 6h, após chuvas acima do previsto no Cantareira. O sistema opera com 36,7% da capacidade útil, o 2º pior índice para a época em uma década.",
       "meta": "Folha Noroeste - 03/08/2026"
     },
     {
-      "tipo": "neutro",
-      "emoji": "💉",
-      "titulo": "Campanha Nacional de Multivacinação começa hoje (3/8) para atualização das cadernetas",
-      "desc": "A ação busca colocar em dia a vacinação de crianças, adolescentes e adultos com doses em atraso do calendário nacional.",
-      "meta": "Ministério da Saúde - 03/08/2026"
+      "tipo": "info",
+      "emoji": "🦟",
+      "titulo": "Estudo aponta que São Paulo deve concentrar mais da metade dos casos de dengue previstos no Brasil em 2026",
+      "desc": "Levantamento da Fiocruz e FGV estima 1,8 milhão de casos de dengue no país em 2026, com cerca de 54% concentrados no estado de São Paulo, favorecidos por temperaturas elevadas e chuvas frequentes que aceleram o ciclo do Aedes aegypti.",
+      "meta": "SBPC/ML - agosto/2026"
     },
     {
       "tipo": "neutro",
@@ -323,12 +299,22 @@
     {
       "tipo": "info",
       "emoji": "🌡️",
-      "titulo": "Alerta amarelo para baixa umidade do ar em agosto na capital",
+      "titulo": "Alerta para baixa umidade do ar em agosto na capital",
       "desc": "A umidade relativa pode cair a níveis próximos de 30% em dias mais críticos do mês, o que pede atenção à hidratação e à proteção das vias respiratórias.",
-      "meta": "Climatempo / Meteoprog - agosto/2026"
+      "meta": "Climatempo - agosto/2026"
     }
   ],
   "fim_de_semana": [
+    {
+      "emoji": "🎤",
+      "titulo": "1º Festival de K-Pop na Freguesia do Ó",
+      "info": "07 a 09/08 · 11h às 22h · Largo da Matriz de Nossa Senhora do Ó, Freguesia do Ó · Gratuito"
+    },
+    {
+      "emoji": "🚺",
+      "titulo": "1ª Caminhada Morro Grande por Elas e Dia de Serviços",
+      "info": "08/08 · 8h às 22h · Av. Tomás Rabelo e Silva, Morro Grande · Gratuito"
+    },
     {
       "emoji": "🐾",
       "titulo": "Vacinação antirrábica gratuita para cães e gatos",
