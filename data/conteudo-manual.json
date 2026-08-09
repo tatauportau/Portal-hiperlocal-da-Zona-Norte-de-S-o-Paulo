@@ -3,31 +3,87 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "💼 100 vagas de emprego",
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Processo seletivo com 100 vagas de emprego para condomínios ocorre nesta sexta-feira, no Jaraguá",
-      "resumo": "Nesta sexta (7), a Secretaria da Justiça e Cidadania (SJC), por meio do CIC Oeste, realiza processo seletivo em parceria com a RS Serviços, com 100 vagas para Auxiliar de Limpeza, Auxiliar de Serviços Gerais e Porteiro, para atuação em condomínios. As oportunidades são para maiores de 18 anos com ensino fundamental completo, sem exigência de experiência, e também abertas a PCDs, imigrantes, refugiados e aposentados. Salários de R$ 1.837,40 a R$ 2.031,57, com vale-transporte, vale-refeição e vale-alimentação. Das 8h30 às 14h30, na Estrada das Taipas, 990.",
+      "pill": "🌉 Obra aguardada há 40 anos",
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Prefeito visita canteiro de obras da Ponte Pirituba-Lapa, que recebeu mais de R$ 370 milhões",
+      "resumo": "Nesta quinta (6), o prefeito Ricardo Nunes vistoriou as obras da ligação viária entre Pirituba e a Lapa, aguardada há mais de 40 anos pelos moradores das duas regiões. A nova conexão vai reduzir em até 36 minutos o trajeto de ônibus entre os terminais Pirituba e Lapa e cerca de 15 minutos para motoristas, além de contar com ciclovia, faixa exclusiva de ônibus e uma nova passagem sob a Linha 8-Diamante da CPTM. No lado de Pirituba já foram concluídas a drenagem, as fundações da futura ponte e os desvios de tráfego que permitem seguir com a obra.",
       "fonte": "Folha Noroeste",
-      "hora": "06/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/processo-seletivo-com-100-vagas-de-emprego-ocorrera-nesta-sexta-no-jaragua/",
-      "icone": "💼",
+      "hora": "07/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/construcao-da-ponte-pirituba-a-lapa-segue-em-ritmo-acelerado-prefeito-visita-canteiro-de-obras-na-regiao/",
+      "icone": "🌉",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Vila Morro Grande",
+      "bairro": "Vila Morro Grande",
+      "titulo": "SPTrans desvia linhas de ônibus na Freguesia do Ó por causa de evento no Morro Grande",
+      "resumo": "No sábado (8), das 10h às 22h, a SPTrans interditou a Av. Tomás Rabelo e Silva, entre a Rua Beraniza de Paula Oliveira e a Rua Tristão Teixeira, para a realização de um evento no bairro. As linhas 1034-10 (Vila Iara–Conexão Vila Iório) e 8542-21 (Brasilândia–Terminal Lapa) tiveram itinerário alterado, com a 8542-21 operando com ponto de controle no Terminal Lapa.",
+      "fonte": "Folha Noroeste",
+      "hora": "07/08/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/sptrans-desvia-itinerario-de-linhas-de-onibus-na-freguesia-do-o/",
+      "icone": "🚌",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Subprefeitura Freguesia do Ó/Brasilândia aplicou reforço da Tríplice Viral até esta sexta-feira",
+      "resumo": "A Subprefeitura Freguesia do Ó/Brasilândia, em parceria com a SuVis-CV, realizou até a última sexta-feira (7) uma campanha de vacinação com dose de reforço da Tríplice Viral (sarampo, caxumba e rubéola) para moradores de 6 a 59 anos, no estacionamento da própria Subprefeitura (Av. João Marcelino Branco, 95). A ação respondeu ao aumento de casos de sarampo registrado na região.",
+      "fonte": "Folha Noroeste",
+      "hora": "04/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/vacinacao-contra-o-sarampo-caxumba-e-rubeola-e-realizada-na-sub-da-freguesia-brasilandia/",
+      "icone": "💉",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Medeiros",
-      "bairro": "Vila Medeiros",
-      "titulo": "Sarampo: Vila Medeiros concentra 6 dos 15 casos confirmados no estado; Vila Maria tem outros 2",
-      "resumo": "Segundo o Centro de Vigilância Epidemiológica (CVE), São Paulo contabiliza 15 casos confirmados de sarampo em 2026, sendo 12 na capital. Na Zona Norte, os registros estão concentrados na Vila Medeiros (6 casos) e na Vila Maria (2 casos). Desde 3/8, moradores da capital de 6 meses a 59 anos podem procurar uma UBS para tomar a vacina tríplice viral, inclusive quem já foi vacinado antes.",
-      "fonte": "Diário Zona Norte",
-      "hora": "02/08/2026",
-      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
-      "icone": "💉",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "CEU Pêra Marmelo realiza vacinação antirrábica gratuita para cães e gatos neste fim de semana",
+      "resumo": "Neste sábado e domingo (8 e 9), das 9h às 16h, o CEU Pêra Marmelo, no Jaraguá, oferece vacinação antirrábica gratuita para cães e gatos, reforçando a proteção contra a doença na região.",
+      "fonte": "Folha Noroeste",
+      "hora": "08 e 09/08/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/ceu-pera-marmelo-realiza-vacinacao-antirrabica-para-caes-e-gatos/",
+      "icone": "🐾",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Estação Jaraguá da Linha 7-Rubi recebeu ação gratuita de massoterapia",
+      "resumo": "Em comemoração ao Dia Nacional da Saúde, passageiros da estação Jaraguá, da Linha 7-Rubi, puderam participar de sessões gratuitas de massoterapia (técnica de Quick Massage) no dia 5 de agosto, das 10h às 16h. A ação foi promovida pela TIC Trens em parceria com a clínica Serenidade do Toque e conduzida por dois massoterapeutas com deficiência visual.",
+      "fonte": "Folha Noroeste",
+      "hora": "05/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/estacao-jaragua-da-linha-7-rubi-recebe-acao-gratuita-de-massoterapia/",
+      "icone": "💆",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Vila Morro Grande",
+      "bairro": "Vila Morro Grande",
+      "titulo": "Cate Móvel esteve no Morro Grande oferecendo serviços de empregabilidade",
+      "resumo": "No último sábado (8), o Cate Móvel (Centro de Apoio ao Trabalho e Empreendedorismo) esteve no Morro Grande, na Freguesia do Ó, oferecendo orientação profissional, cadastro para vagas de emprego e outros serviços gratuitos de empregabilidade à população.",
+      "fonte": "Folha Noroeste",
+      "hora": "08/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/cate-movel-estara-neste-sabado-no-morro-grande-oferecendo-servicos-de-empregabilidade/",
+      "icone": "💼",
       "icone_classe": "ic-eco"
     },
     {
@@ -36,8 +92,8 @@
       "tag_label": "Educação",
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
-      "titulo": "Instituto Federal de Pirituba tem vagas remanescentes abertas para EJA integrado ao ensino médio",
-      "resumo": "O Instituto Federal Campus Pirituba está com edital de fluxo contínuo para preencher vagas remanescentes do curso gratuito de Educação de Jovens e Adultos (EJA) integrado ao ensino médio. As matrículas são presenciais, por ordem de chegada, entre 23/07 e 25/09/2026, com início das aulas em 28/09. Dúvidas pelo e-mail selecaoproeja.ptb@ifsp.edu.br.",
+      "titulo": "Instituto Federal de Pirituba mantém vagas remanescentes para EJA integrado ao ensino médio",
+      "resumo": "O Instituto Federal Campus Pirituba segue com edital de fluxo contínuo para vagas remanescentes do curso gratuito de Educação de Jovens e Adultos (EJA) integrado ao ensino médio. Matrículas presenciais, por ordem de chegada, até 25/09/2026, com início das aulas em 28/09. Dúvidas pelo e-mail selecaoproeja.ptb@ifsp.edu.br.",
       "fonte": "Folha Noroeste",
       "hora": "matrículas até 25/09/2026",
       "url": "https://folhanoroeste.com.br/educacao/instituto-federal-de-pirituba-abre-vagas-remanescentes-para-curso-gratuito-de-eja/",
@@ -47,127 +103,19 @@
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Geral",
-      "tag_bairro": "📍 Vila Nova Cachoeirinha",
-      "bairro": "Vila Nova Cachoeirinha",
-      "titulo": "Vila Nova Cachoeirinha completa 93 anos",
-      "resumo": "O bairro completou 93 anos nesta quarta-feira (5), data que remonta à fundação da Associação Cultural Nipo-Brasileira, em 5 de agosto de 1933. As terras recém-loteadas passaram a ser ocupadas com mais intensidade com a chegada de famílias da colônia japonesa, que trouxeram trabalho, organização e cultura à região.",
-      "fonte": "Diário Zona Norte",
-      "hora": "05/08/2026",
-      "url": "https://www.diariozonanorte.com.br/vila-nova-cachoeirinha-completa-93-anos-contamos-a-historia-do-bairro/",
-      "icone": "🎉",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
       "tag_label": "Cultura",
-      "tag_bairro": "📍 Jardim Taipas",
-      "bairro": "Jardim Taipas",
-      "titulo": "CEU Taipas recebe exibição do documentário 'LECI' com presença de Leci Brandão",
-      "resumo": "Nesta segunda-feira (10), a partir das 18h, o CEU Taipas exibe o documentário 'LECI', dirigido por Anderson Lima, sobre a vida e a obra da sambista Leci Brandão, que estará presente no evento. Entrada gratuita, com ingressos pelo formulário de inscrição.",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "1º Festival de K-Pop abriu programação dos 446 anos da Freguesia do Ó",
+      "resumo": "O bairro mais antigo que preserva em seu nome a antiga denominação de 'freguesia' iniciou neste fim de semana (7 a 9/08) a programação de aniversário com o 1º Festival de K-Pop, três dias de música, dança e cultura coreana no Largo da Matriz de Nossa Senhora do Ó, com entrada gratuita. A Freguesia do Ó completa 446 anos em 29 de agosto.",
       "fonte": "Folha Noroeste",
-      "hora": "10/08/2026 às 18h",
-      "url": "https://folhanoroeste.com.br/regional/ceu-taipas-recebe-exibicao-do-documentario-leci-com-presenca-de-leci-brandao/",
-      "icone": "🎬",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Geral",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Feira de Artesanato ocorre neste sábado (8) na Av. Paula Ferreira, em Pirituba",
-      "resumo": "Das 10h às 17h, ao lado da escadaria da Estação de Trem de Pirituba (Av. Paula Ferreira, 3715), a feira reúne artesanato exclusivo, gastronomia diversificada, música ao vivo e programação para toda a família. Entrada gratuita.",
-      "fonte": "Folha Noroeste",
-      "hora": "08/08/2026, 10h às 17h",
-      "url": "https://folhanoroeste.com.br/cotidiano/feira-de-artesanato-ocorrera-na-av-paula-ferreira-em-pirituba-neste-sabado-8/",
-      "icone": "🎨",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Greve dos ferroviários afeta linhas 11, 12 e 13 da CPTM; Linha 7-Rubi opera normalmente",
-      "resumo": "Na terça-feira (4/8), passageiros das linhas 11-Coral, 12-Safira e 13-Jade da CPTM enfrentaram dificuldades por causa de greve dos ferroviários. Já as linhas 7-Rubi, 8-Diamante, 9-Esmeralda e 10-Turquesa, que atendem a Zona Norte (Jaraguá, Pirituba e Perus), operaram normalmente. A SPTrans reforçou linhas de ônibus para atender parte da demanda.",
-      "fonte": "Diário do Transporte",
-      "hora": "04/08/2026",
-      "url": "https://diariodotransporte.com.br/2026/08/04/confira-as-linhas-de-onibus-da-sptrans-reforcadas-e-como-esta-a-operacao-paese-da-artesp-durante-a-greve-na-cptm-nesta-terca-feira-04/amp/",
-      "icone": "🚆",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Geral",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Santana completa 244 anos",
-      "resumo": "O distrito celebra seu aniversário nesta semana, marcado por obras, novos investimentos e uma trajetória histórica ligada à formação da cidade de São Paulo.",
-      "fonte": "Diário Zona Norte",
-      "hora": "05/08/2026",
-      "url": "https://www.diariozonanorte.com.br/santana-completa-244-anos-entre-obras-novos-investimentos-e-uma-historia-que-ajudou-a-construir-sao-paulo/",
-      "icone": "🎂",
+      "hora": "07 a 09/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/1o-festival-de-k-pop-na-freguesia-do-o-abre-aniversario-do-bairro-esta-semana/",
+      "icone": "🎤",
       "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
-    {
-      "dia": "08",
-      "mes": "Ago",
-      "cor_fundo": "#E67E22",
-      "bairro": "Pirituba",
-      "titulo": "Feira de Artesanato na Av. Paula Ferreira",
-      "hora": "10h às 17h",
-      "local": "Av. Paula Ferreira, 3715 - Pirituba",
-      "descricao": "Feira com artesanato exclusivo, gastronomia diversificada, música ao vivo e espaço para toda a família, ao lado da escadaria da Estação de Trem de Pirituba.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/cotidiano/feira-de-artesanato-ocorrera-na-av-paula-ferreira-em-pirituba-neste-sabado-8/"
-    },
-    {
-      "dia": "07",
-      "mes": "Ago",
-      "cor_fundo": "#D6336C",
-      "bairro": "Freguesia do Ó",
-      "titulo": "1º Festival de K-Pop na Freguesia do Ó",
-      "hora": "11h às 22h (07 a 09/08)",
-      "local": "Largo da Matriz de Nossa Senhora do Ó - Freguesia do Ó",
-      "descricao": "Três dias de música, dança e cultura coreana abrem a programação especial dos 446 anos da Freguesia do Ó, em evento gratuito.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/regional/1o-festival-de-k-pop-na-freguesia-do-o-abre-aniversario-do-bairro-esta-semana/"
-    },
-    {
-      "dia": "08",
-      "mes": "Ago",
-      "cor_fundo": "#9B59B6",
-      "bairro": "Vila Morro Grande",
-      "titulo": "1ª Caminhada Morro Grande por Elas e Dia de Serviços (Agosto Lilás)",
-      "hora": "8h às 22h",
-      "local": "Av. Tomás Rabelo e Silva - Morro Grande",
-      "descricao": "Aniversário do bairro com caminhada, shows e serviços gratuitos: CAT Móvel, Van de Atendimento às Mulheres, Grupo Mulheres do Brasil, SP+Rural e Rotary Club Pirituba.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/cotidiano/morro-grande-promove-dia-especial-com-caminhada-e-servicos-gratuitos-a-populacao/"
-    },
-    {
-      "dia": "08",
-      "mes": "Ago",
-      "cor_fundo": "#2E9E6B",
-      "bairro": "Jaraguá",
-      "titulo": "Vacinação antirrábica gratuita para cães e gatos",
-      "hora": "9h às 16h (08 e 09/08)",
-      "local": "CEU Pêra Marmelo - Rua Pêra Marmelo, 226, Jaraguá",
-      "descricao": "Campanha gratuita de vacinação antirrábica para cães e gatos, reforçando a proteção contra a doença na região.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/cotidiano/ceu-pera-marmelo-realiza-vacinacao-antirrabica-para-caes-e-gatos/"
-    },
     {
       "dia": "10",
       "mes": "Ago",
@@ -180,6 +128,45 @@
       "gratuito": true,
       "preco": null,
       "url": "https://folhanoroeste.com.br/regional/ceu-taipas-recebe-exibicao-do-documentario-leci-com-presenca-de-leci-brandao/"
+    },
+    {
+      "dia": "15",
+      "mes": "Ago",
+      "cor_fundo": "#2E9E6B",
+      "bairro": "Jaraguá",
+      "titulo": "Roteiro 'Tecendo Memórias no Pico': história dos construtores do Jaraguá",
+      "hora": "10h",
+      "local": "Ponto de encontro: Rua Antônio Cardoso Nogueira, 539 - Jaraguá",
+      "descricao": "Roteiro do Festival do Patrimônio pelo Pico do Jaraguá, contando a presença indígena Guarani Mbya e o ciclo bandeirista de Afonso Sardinha na formação da região. Classificação livre a partir de 8 anos, gratuito, sem necessidade de inscrição prévia.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/festival-do-patrim%C3%B4nio-de-8-a-16-de-agosto-s%C3%A3o-paulo-ter%C3%A1-mais-de-500-atra%C3%A7%C3%B5es-gratuitas-entre-roteiros-cursos-e-shows"
+    },
+    {
+      "dia": "15",
+      "mes": "Ago",
+      "cor_fundo": "#D6336C",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Curso 'Carolina: O olhar que atravessa a cidade' na Casa de Cultura da Freguesia do Ó",
+      "hora": "15h",
+      "local": "Casa de Cultura Municipal Freguesia do Ó Salvador Ligabue - Largo da Matriz de Nossa Senhora do Ó, 215",
+      "descricao": "Curso gratuito do Festival do Patrimônio a partir da obra de Carolina Maria de Jesus, com reflexão sobre patrimônio, memória e desigualdade na cidade. Classificação indicativa 12 anos, sem inscrição prévia.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/festival-do-patrim%C3%B4nio-de-8-a-16-de-agosto-s%C3%A3o-paulo-ter%C3%A1-mais-de-500-atra%C3%A7%C3%B5es-gratuitas-entre-roteiros-cursos-e-shows"
+    },
+    {
+      "dia": "18",
+      "mes": "Ago",
+      "cor_fundo": "#E67E22",
+      "bairro": "Perus",
+      "titulo": "Oficina do Plano de Ação da Subprefeitura (PAS) 2026-2029 no CEU Perus",
+      "hora": "a definir (18 a 21/08)",
+      "local": "CEU Perus",
+      "descricao": "Moradores de Perus e Anhanguera podem participar da elaboração do Plano de Ação da Subprefeitura, documento estratégico que vai orientar o desenvolvimento urbano local pelos próximos anos.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/perus/noticias"
     },
     {
       "dia": "29",
@@ -204,7 +191,7 @@
       "requisitos": "Ensino médio completo, sem necessidade de experiência anterior; para algumas posições é exigido comprovante de curso/reciclagem em dia na entrevista. Salários de até R$ 2.115,00. Rua Ylídio Figueiredo, 285, Perus",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas divulgadas em 03/08/2026"
+      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
     },
     {
       "icone": "🧹",
@@ -214,7 +201,7 @@
       "requisitos": "Ensino fundamental a médio completos; conhecimento em setor hospitalar é avaliado para algumas posições, sem exigência de registro prévio em carteira. Salários de até R$ 2.300,00. Rua General Mendes, 111, Vila Maria Alta",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas divulgadas em 03/08/2026"
+      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
     },
     {
       "icone": "🛒",
@@ -224,7 +211,7 @@
       "requisitos": "Vagas distribuídas em comércio e serviços da região. Salários de até R$ 2.150,00. Rua Luis Stamatis, 300, Jaçanã",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas divulgadas em 03/08/2026"
+      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
     },
     {
       "icone": "💻",
@@ -234,7 +221,7 @@
       "requisitos": "Mais de 180 oportunidades na área de tecnologia, com escolaridade entre ensino médio e superior conforme a vaga. Cadastro pelo Portal Cate. Rua Ari da Rocha Miranda, 36, Conjunto Habitacional Jova Rural",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas divulgadas em 03/08/2026"
+      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
     },
     {
       "icone": "💼",
@@ -244,23 +231,23 @@
       "requisitos": "Cadastro pelo Portal Cate ou presencial na unidade. Necessário apresentar RG, CPF e carteira de trabalho (física ou digital). Av. Ernesto Augusto Lopes, 100, Parque Novo Mundo (CEU)",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas divulgadas em 03/08/2026"
+      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
     }
   ],
   "politica": [
     {
-      "orgao": "🏛️ Subprefeitura Perus/Anhanguera",
-      "bairro": "Perus",
-      "titulo": "Subprefeitura realiza oficina do Plano de Ação (PAS) 2026-2029 no CEU Perus, de 18 a 21 de agosto",
-      "impacto": "Moradores de Perus e Anhanguera poderão participar da elaboração do documento estratégico que vai orientar o desenvolvimento urbano local pelos próximos anos, dentro do ciclo de oficinas que também ocorre em outras subprefeituras da cidade",
-      "status": "Oficina agendada para 18 a 21/08/2026",
-      "fonte": "Prefeitura de São Paulo / Subprefeitura Perus"
+      "orgao": "🏗️ Prefeitura de São Paulo / SP Obras",
+      "bairro": "Pirituba",
+      "titulo": "Ponte Pirituba-Lapa recebe investimento de mais de R$ 370 milhões e avança sem interromper a Marginal",
+      "impacto": "A obra, aguardada há mais de 40 anos, vai ligar a Av. Raimundo Pereira de Magalhães (Pirituba) à Rua Campos Vergueiro (Vila Anastácio, Lapa), com quase 900 metros de extensão, mão dupla, ciclovia e faixa exclusiva de ônibus, desafogando as pontes Anhanguera e Piqueri",
+      "status": "Em obras - fundações, drenagem e desvios de tráfego já concluídos no lado Pirituba",
+      "fonte": "Folha Noroeste / Prefeitura de São Paulo"
     },
     {
-      "orgao": "🏗️ Prefeitura de São Paulo",
+      "orgao": "🏛️ Subprefeitura Jaçanã/Tremembé",
       "bairro": "Tremembé",
       "titulo": "Prazo para regularizar Habite-se sem documentação segue prorrogado até 30 de agosto",
-      "impacto": "Famílias e imóveis irregulares na Zona Norte podem obter anistia e regularizar a documentação de construção antes do novo prazo final",
+      "impacto": "Famílias e imóveis irregulares em Tremembé e Jaçanã podem obter anistia e regularizar a documentação de construção antes do novo prazo final",
       "status": "Prorrogado - prazo final 30/08/2026",
       "fonte": "Subprefeitura Jaçanã/Tremembé"
     },
@@ -277,52 +264,42 @@
     {
       "tipo": "info",
       "emoji": "💉",
-      "titulo": "Sarampo: Vila Medeiros e Vila Maria concentram os casos confirmados na Zona Norte; vacinação segue ampliada",
-      "desc": "Desde 3/8, moradores da capital, Guarulhos e São Bernardo do Campo, de 6 meses a 59 anos, podem procurar uma UBS para tomar a vacina tríplice viral, mesmo quem já foi vacinado antes. A medida busca conter o avanço do sarampo na Região Metropolitana.",
-      "meta": "Diário Zona Norte - 02/08/2026"
+      "titulo": "SP recomenda vacinação após 13 casos confirmados de sarampo no estado em 2026",
+      "desc": "A Secretaria de Estado da Saúde recomenda que crianças, adolescentes e adultos verifiquem a caderneta de vacinação e completem o esquema da tríplice viral. Desde junho, bebês de 6 a 11 meses residentes em São Paulo, Guarulhos e São Bernardo do Campo devem receber a dose zero da vacina.",
+      "meta": "Folha Noroeste / SES-SP"
     },
     {
       "tipo": "neutro",
-      "emoji": "🛣️",
-      "titulo": "Programa Asfalto Novo contempla vias da Zona Norte",
-      "desc": "Recapeamento e ajustes de sinalização em vias como Rua Dr. Zuquim, Rua Dr. Fleury Silveira, Rua Dr. Guilherme Cristoffel e Av. Maria Amália Lopes de Azevedo fazem parte do programa municipal de recapeamento coordenado pela Secretaria das Subprefeituras.",
-      "meta": "Diário Zona Norte"
+      "emoji": "🌡️",
+      "titulo": "Defesa Civil decreta estado de atenção para baixas temperaturas a partir das 10h de hoje (9/8)",
+      "desc": "Nesta segunda-feira (10/8), ar frio e úmido predomina em São Paulo, com possibilidade de garoa, mínima de 13°C durante a noite e máxima de apenas 17°C.",
+      "meta": "Defesa Civil de São Paulo - 09/08/2026"
     },
     {
       "tipo": "info",
       "emoji": "🚆",
-      "titulo": "Greve da CPTM afetou linhas 11, 12 e 13 na terça (4/8); Linha 7-Rubi operou normalmente",
-      "desc": "A greve dos ferroviários prejudicou passageiros das linhas 11-Coral, 12-Safira e 13-Jade. As linhas 7-Rubi, 8-Diamante, 9-Esmeralda e 10-Turquesa, que atendem Jaraguá, Pirituba e Perus, seguiram operando normalmente.",
-      "meta": "Diário do Transporte - 04/08/2026"
+      "titulo": "Greve dos ferroviários da CPTM continua nas linhas 11-Coral, 12-Safira e 13-Jade",
+      "desc": "O movimento, que já dura mais de uma semana e afeta quase 1 milhão de passageiros por dia, segue sem acordo. As linhas 7-Rubi, 8-Diamante, 9-Esmeralda e 10-Turquesa, que atendem Jaraguá, Pirituba e Perus, continuam operando normalmente.",
+      "meta": "TV Brasil / Almapreta - agosto de 2026"
     },
     {
-      "tipo": "info",
-      "emoji": "💊",
-      "titulo": "Vacinação contra HPV: jovens de 15 a 19 anos têm até dezembro para se imunizar",
-      "desc": "Adolescentes e jovens dessa faixa etária ainda não vacinados podem procurar uma Unidade Básica de Saúde para atualizar a caderneta e completar o esquema vacinal contra o HPV antes do fim do ano.",
-      "meta": "Diário Zona Norte"
+      "tipo": "ok",
+      "emoji": "👮",
+      "titulo": "Polícia Militar reforça policiamento nas estações da CPTM durante a paralisação dos trens",
+      "desc": "Equipes foram distribuídas em pontos estratégicos das estações afetadas para ampliar a segurança dos passageiros e apoiar a população diante do aumento da circulação de pessoas.",
+      "meta": "Portal de Notícias da PMESP - 04/08/2026"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🎨",
-      "titulo": "Feira de Artesanato na Av. Paula Ferreira",
-      "info": "08/08 · 10h às 17h · Av. Paula Ferreira, 3715, Pirituba · Gratuito"
+      "emoji": "🏔️",
+      "titulo": "Roteiro 'Tecendo Memórias no Pico' no Pico do Jaraguá",
+      "info": "15/08 · 10h · Rua Antônio Cardoso Nogueira, 539, Jaraguá · Gratuito"
     },
     {
-      "emoji": "🎤",
-      "titulo": "1º Festival de K-Pop na Freguesia do Ó",
-      "info": "07 a 09/08 · 11h às 22h · Largo da Matriz de Nossa Senhora do Ó, Freguesia do Ó · Gratuito"
-    },
-    {
-      "emoji": "🚺",
-      "titulo": "1ª Caminhada Morro Grande por Elas e Dia de Serviços",
-      "info": "08/08 · 8h às 22h · Av. Tomás Rabelo e Silva, Morro Grande · Gratuito"
-    },
-    {
-      "emoji": "🐾",
-      "titulo": "Vacinação antirrábica gratuita para cães e gatos",
-      "info": "08 e 09/08 · 9h às 16h · CEU Pêra Marmelo, Jaraguá · Gratuito"
+      "emoji": "📖",
+      "titulo": "Curso 'Carolina: O olhar que atravessa a cidade'",
+      "info": "15/08 · 15h · Casa de Cultura Freguesia do Ó · Gratuito"
     }
   ]
 }
