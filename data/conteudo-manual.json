@@ -3,87 +3,115 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🌉 Obra aguardada há 40 anos",
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Prefeito visita canteiro de obras da Ponte Pirituba-Lapa, que recebeu mais de R$ 370 milhões",
-      "resumo": "Nesta quinta (6), o prefeito Ricardo Nunes vistoriou as obras da ligação viária entre Pirituba e a Lapa, aguardada há mais de 40 anos pelos moradores das duas regiões. A nova conexão vai reduzir em até 36 minutos o trajeto de ônibus entre os terminais Pirituba e Lapa e cerca de 15 minutos para motoristas, além de contar com ciclovia, faixa exclusiva de ônibus e uma nova passagem sob a Linha 8-Diamante da CPTM. No lado de Pirituba já foram concluídas a drenagem, as fundações da futura ponte e os desvios de tráfego que permitem seguir com a obra.",
-      "fonte": "Folha Noroeste",
-      "hora": "07/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/construcao-da-ponte-pirituba-a-lapa-segue-em-ritmo-acelerado-prefeito-visita-canteiro-de-obras-na-regiao/",
-      "icone": "🌉",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Vila Morro Grande",
-      "bairro": "Vila Morro Grande",
-      "titulo": "SPTrans desvia linhas de ônibus na Freguesia do Ó por causa de evento no Morro Grande",
-      "resumo": "No sábado (8), das 10h às 22h, a SPTrans interditou a Av. Tomás Rabelo e Silva, entre a Rua Beraniza de Paula Oliveira e a Rua Tristão Teixeira, para a realização de um evento no bairro. As linhas 1034-10 (Vila Iara–Conexão Vila Iório) e 8542-21 (Brasilândia–Terminal Lapa) tiveram itinerário alterado, com a 8542-21 operando com ponto de controle no Terminal Lapa.",
-      "fonte": "Folha Noroeste",
-      "hora": "07/08/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/sptrans-desvia-itinerario-de-linhas-de-onibus-na-freguesia-do-o/",
-      "icone": "🚌",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
+      "pill": "💉 Alerta de saúde na Zona Norte",
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Subprefeitura Freguesia do Ó/Brasilândia aplicou reforço da Tríplice Viral até esta sexta-feira",
-      "resumo": "A Subprefeitura Freguesia do Ó/Brasilândia, em parceria com a SuVis-CV, realizou até a última sexta-feira (7) uma campanha de vacinação com dose de reforço da Tríplice Viral (sarampo, caxumba e rubéola) para moradores de 6 a 59 anos, no estacionamento da própria Subprefeitura (Av. João Marcelino Branco, 95). A ação respondeu ao aumento de casos de sarampo registrado na região.",
-      "fonte": "Folha Noroeste",
-      "hora": "04/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/vacinacao-contra-o-sarampo-caxumba-e-rubeola-e-realizada-na-sub-da-freguesia-brasilandia/",
+      "tag_bairro": "📍 Vila Medeiros",
+      "bairro": "Vila Medeiros",
+      "titulo": "Zona Norte concentra 8 dos 12 casos de sarampo confirmados na capital; campanha de reforço já começou",
+      "resumo": "Das 15 confirmações de sarampo no estado de São Paulo em 2026 (12 na capital), a Zona Norte concentra o maior número de casos: seis em Vila Medeiros e dois em Vila Maria. Desde a segunda-feira 3/8, moradores de São Paulo, Guarulhos e São Bernardo do Campo entre 6 meses e 59 anos podem tomar uma dose de reforço da tríplice viral nas UBS, independentemente do histórico vacinal. A campanha segue até 1º de setembro, com Dia D em 22/8 reunindo 483 unidades básicas de saúde abertas na capital.",
+      "fonte": "DiárioZonaNorte / Agência SP",
+      "hora": "10/08/2026",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
       "icone": "💉",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "CEU Pêra Marmelo realiza vacinação antirrábica gratuita para cães e gatos neste fim de semana",
-      "resumo": "Neste sábado e domingo (8 e 9), das 9h às 16h, o CEU Pêra Marmelo, no Jaraguá, oferece vacinação antirrábica gratuita para cães e gatos, reforçando a proteção contra a doença na região.",
-      "fonte": "Folha Noroeste",
-      "hora": "08 e 09/08/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/ceu-pera-marmelo-realiza-vacinacao-antirrabica-para-caes-e-gatos/",
-      "icone": "🐾",
+      "tag_label": "Cultura",
+      "tag_bairro": "📍 Tucuruvi",
+      "bairro": "Tucuruvi",
+      "titulo": "Casa Une abre programação do segundo semestre com agenda gratuita de cultura e tecnologia no Tucuruvi",
+      "resumo": "O hub de inovação, tecnologia e cultura Casa Une, no Tucuruvi, iniciou em 7 de agosto a programação do segundo semestre com um show de abertura dedicado à música popular brasileira. Ao longo dos próximos meses o espaço vai oferecer cursos de formação, clubes temáticos, exposições e debates gratuitos sobre nova economia, ESG, capital social e saúde mental, mediante inscrição prévia.",
+      "fonte": "DiárioZonaNorte / Gazeta da Semana",
+      "hora": "07/08/2026",
+      "url": "https://www.diariozonanorte.com.br/casa-une-inicia-programacao-do-segundo-semestre-com-agenda-gratuita-de-cultura-tecnologia-e-formacao-no-tucuruvi/",
+      "icone": "🎨",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Brasilândia",
+      "bairro": "Brasilândia",
+      "titulo": "Linha 6-Laranja avança e promete inauguração parcial em outubro ligando Brasilândia a Perdizes",
+      "resumo": "Maior obra de infraestrutura em andamento na capital, com 15,3 km totalmente subterrâneos, a Linha 6-Laranja (\"Linha das Universidades\") tem a operação parcial do primeiro trecho prevista para outubro, conectando a Brasilândia, na Zona Norte, à estação Perdizes, na Zona Oeste — o principal projeto de mobilidade a ligar diretamente a região ao centro da cidade.",
+      "fonte": "Gazeta de São Paulo",
+      "hora": "agosto/2026",
+      "url": "https://www.gazetasp.com.br/mobilidade/as-5-obras-em-sp-que-prometem-reduzir-o-transito-ate-o-fim-de-2026/",
+      "icone": "🚇",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Vila Penteado",
+      "bairro": "Vila Penteado",
+      "titulo": "SPTrans prolonga itinerário da linha Vila Penteado–Metrô Barra Funda a partir de 13 de agosto",
+      "resumo": "A SPTrans vai estender o percurso da linha 938P/10 (Vila Penteado–Metrô Barra Funda) até a Rua Carlos Marighella a partir de 13 de agosto, ampliando as opções de transporte para moradores do bairro, na Brasilândia.",
+      "fonte": "Secretaria Municipal de Mobilidade e Trânsito",
+      "hora": "a partir de 13/08/2026",
+      "url": "https://www.prefeitura.sp.gov.br/cidade/secretarias/mobilidade/noticias/?p=14064",
+      "icone": "🚌",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Limão",
+      "bairro": "Limão",
+      "titulo": "Prefeitura avança estudos da futura Linha 23-Limão do Metrô, que vai cruzar a Zona Norte",
+      "resumo": "A futura Linha 23-Limão terá 27 estações, partindo do sul de Osasco até o Tatuapé, na Zona Leste, cruzando a Zona Norte da capital. O traçado prevê integração com a Linha 7-Rubi, possivelmente em Perus, e com a futura Linha 19-Celeste. Em 2026, seguem em contratação o anteprojeto e o Estudo e Relatório de Impacto Ambiental (EIA-RIMA) que vão definir o traçado final, as estações e os pátios da linha.",
+      "fonte": "Metrô CPTM",
+      "hora": "agosto/2026",
+      "url": "https://www.metrocptm.com.br/quais-sao-as-estacoes-previstas-na-linha-23-limao-do-metro/",
+      "icone": "🚈",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Geral",
+      "tag_bairro": "📍 Vila Nova Cachoeirinha",
+      "bairro": "Vila Nova Cachoeirinha",
+      "titulo": "Vila Nova Cachoeirinha completa 93 anos",
+      "resumo": "O bairro que integra a subprefeitura Casa Verde/Cachoeirinha completou 93 anos, celebrando sua trajetória e identidade dentro da Zona Norte de São Paulo.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "09/08/2026",
+      "url": "https://www.diariozonanorte.com.br/vila-nova-cachoeirinha-completa-93-anos-contamos-a-historia-do-bairro/",
+      "icone": "🎂",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Estação Jaraguá da Linha 7-Rubi recebeu ação gratuita de massoterapia",
-      "resumo": "Em comemoração ao Dia Nacional da Saúde, passageiros da estação Jaraguá, da Linha 7-Rubi, puderam participar de sessões gratuitas de massoterapia (técnica de Quick Massage) no dia 5 de agosto, das 10h às 16h. A ação foi promovida pela TIC Trens em parceria com a clínica Serenidade do Toque e conduzida por dois massoterapeutas com deficiência visual.",
-      "fonte": "Folha Noroeste",
-      "hora": "05/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/estacao-jaragua-da-linha-7-rubi-recebe-acao-gratuita-de-massoterapia/",
-      "icone": "💆",
+      "tag_label": "Geral",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Casa Verde completa 113 anos e mantém viva a própria identidade na Zona Norte",
+      "resumo": "O bairro, cujo primeiro lote foi vendido em 21 de maio de 1913, celebra 113 anos como um dos berços do samba paulistano, com escolas tradicionais como Império de Casa Verde, Morro da Casa Verde e Unidos do Peruche, além de sediar o Sambódromo há mais de 30 anos.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "agosto/2026",
+      "url": "https://www.diariozonanorte.com.br/casa-verde-completa-113-anos-e-mantem-viva-a-propria-identidade-na-zona-norte/",
+      "icone": "🎭",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Vila Morro Grande",
-      "bairro": "Vila Morro Grande",
-      "titulo": "Cate Móvel esteve no Morro Grande oferecendo serviços de empregabilidade",
-      "resumo": "No último sábado (8), o Cate Móvel (Centro de Apoio ao Trabalho e Empreendedorismo) esteve no Morro Grande, na Freguesia do Ó, oferecendo orientação profissional, cadastro para vagas de emprego e outros serviços gratuitos de empregabilidade à população.",
-      "fonte": "Folha Noroeste",
-      "hora": "08/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/cate-movel-estara-neste-sabado-no-morro-grande-oferecendo-servicos-de-empregabilidade/",
-      "icone": "💼",
+      "tag_bairro": "📍 Vila Guilherme",
+      "bairro": "Vila Guilherme",
+      "titulo": "Cidade Center Norte avança com arena multiuso de R$ 1,5 bilhão na Vila Guilherme",
+      "resumo": "O complexo Cidade Center Norte, na Vila Guilherme, segue com o projeto de expansão que prevê um bairro planejado, hospital e uma arena multiuso para shows e jogos, com aporte de R$ 1,5 bilhão. O empreendimento ocupa o quadrilátero entre as avenidas Zaki Narchi, Otto Baumgart e vias vizinhas, ao lado do Shopping Center Norte, e a Zona Norte discute os impactos do projeto na região.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "agosto/2026",
+      "url": "https://www.diariozonanorte.com.br/cidade-center-norte-avanca-com-arena-de-r-15-bilhao-enquanto-zona-norte-discute-os-impactos-do-projeto/",
+      "icone": "🏟️",
       "icone_classe": "ic-eco"
     },
     {
@@ -99,36 +127,9 @@
       "url": "https://folhanoroeste.com.br/educacao/instituto-federal-de-pirituba-abre-vagas-remanescentes-para-curso-gratuito-de-eja/",
       "icone": "📚",
       "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Cultura",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "1º Festival de K-Pop abriu programação dos 446 anos da Freguesia do Ó",
-      "resumo": "O bairro mais antigo que preserva em seu nome a antiga denominação de 'freguesia' iniciou neste fim de semana (7 a 9/08) a programação de aniversário com o 1º Festival de K-Pop, três dias de música, dança e cultura coreana no Largo da Matriz de Nossa Senhora do Ó, com entrada gratuita. A Freguesia do Ó completa 446 anos em 29 de agosto.",
-      "fonte": "Folha Noroeste",
-      "hora": "07 a 09/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/1o-festival-de-k-pop-na-freguesia-do-o-abre-aniversario-do-bairro-esta-semana/",
-      "icone": "🎤",
-      "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
-    {
-      "dia": "10",
-      "mes": "Ago",
-      "cor_fundo": "#6C5CE7",
-      "bairro": "Jardim Taipas",
-      "titulo": "Exibição do documentário 'LECI' com presença de Leci Brandão",
-      "hora": "a partir das 18h",
-      "local": "CEU Taipas — Rua João Amado Coutinho, 240, Taipas",
-      "descricao": "Documentário sobre a vida e a obra da sambista Leci Brandão, dirigido por Anderson Lima, com participações de Zeca Pagodinho, Alcione, Beth Carvalho e Emicida. Entrada gratuita.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/regional/ceu-taipas-recebe-exibicao-do-documentario-leci-com-presenca-de-leci-brandao/"
-    },
     {
       "dia": "15",
       "mes": "Ago",
@@ -169,6 +170,19 @@
       "url": "https://prefeitura.sp.gov.br/web/perus/noticias"
     },
     {
+      "dia": "21",
+      "mes": "Ago",
+      "cor_fundo": "#16A085",
+      "bairro": "Jardim Taipas",
+      "titulo": "'Histórias Folclóricas' na Fábrica de Cultura Núcleo Taipas",
+      "hora": "a definir",
+      "local": "Fábrica de Cultura Núcleo Taipas - Jardim Taipas",
+      "descricao": "Atividade gratuita voltada principalmente ao público infantil, com narrativas inspiradas em lendas e personagens do folclore brasileiro, estimulando imaginação e criatividade das crianças.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.encontrabrasilandia.com.br/sobre/fabricas-de-cultura-da-zona-norte-de-sp-tem-eventos-gratuitos-em-agosto"
+    },
+    {
       "dia": "29",
       "mes": "Ago",
       "cor_fundo": "#E74C3C",
@@ -180,9 +194,32 @@
       "gratuito": true,
       "preco": null,
       "url": "https://www.encontrabrasilandia.com.br/sobre/fabricas-de-cultura-da-zona-norte-de-sp-tem-eventos-gratuitos-em-agosto"
+    },
+    {
+      "dia": "11",
+      "mes": "Ago",
+      "cor_fundo": "#6C5CE7",
+      "bairro": "Tucuruvi",
+      "titulo": "Casa Une segue com agenda gratuita do segundo semestre",
+      "hora": "a definir",
+      "local": "Casa Une - Tucuruvi",
+      "descricao": "Continuação da programação gratuita do segundo semestre da Casa Une, hub de inovação, tecnologia e cultura no Tucuruvi, com atividades de formação, cultura e tecnologia mediante inscrição prévia.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/casa-une-inicia-programacao-do-segundo-semestre-com-agenda-gratuita-de-cultura-tecnologia-e-formacao-no-tucuruvi/"
     }
   ],
   "vagas": [
+    {
+      "icone": "🔧",
+      "titulo": "Mecânico de caminhões, montador de motor diesel, motorista de caminhão, entregador e movimentador de carga",
+      "empresa": "Cate Casa Verde/Cachoeirinha",
+      "bairro": "Casa Verde",
+      "requisitos": "Mais de 200 vagas exclusivas, com escolaridade de fundamental incompleto a médio completo conforme a vaga. Av. Ordem e Progresso, 1.001, Casa Verde (Descomplica SP)",
+      "tipo": "CLT",
+      "fonte": "Subprefeitura Casa Verde/Cachoeirinha",
+      "dias_atras": "inscrições até 11/08/2026"
+    },
     {
       "icone": "🛡️",
       "titulo": "Agente, fiscal de prevenção de perdas e controlador de acesso",
@@ -191,57 +228,45 @@
       "requisitos": "Ensino médio completo, sem necessidade de experiência anterior; para algumas posições é exigido comprovante de curso/reciclagem em dia na entrevista. Salários de até R$ 2.115,00. Rua Ylídio Figueiredo, 285, Perus",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
-    },
-    {
-      "icone": "🧹",
-      "titulo": "Auxiliar de asseio/limpeza",
-      "empresa": "Cate Vila Maria/Vila Guilherme",
-      "bairro": "Vila Maria Alta",
-      "requisitos": "Ensino fundamental a médio completos; conhecimento em setor hospitalar é avaliado para algumas posições, sem exigência de registro prévio em carteira. Salários de até R$ 2.300,00. Rua General Mendes, 111, Vila Maria Alta",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
-    },
-    {
-      "icone": "🛒",
-      "titulo": "Atendente para mercados, lojas, farmácias e lanchonetes",
-      "empresa": "Cate Jaçanã/Tremembé",
-      "bairro": "Jaçanã",
-      "requisitos": "Vagas distribuídas em comércio e serviços da região. Salários de até R$ 2.150,00. Rua Luis Stamatis, 300, Jaçanã",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
-    },
-    {
-      "icone": "💻",
-      "titulo": "Auxiliar técnico eletrônico, analista e técnico de instalações (AvançaTech)",
-      "empresa": "Cate CIC Norte",
-      "bairro": "Conjunto Jova Rural",
-      "requisitos": "Mais de 180 oportunidades na área de tecnologia, com escolaridade entre ensino médio e superior conforme a vaga. Cadastro pelo Portal Cate. Rua Ari da Rocha Miranda, 36, Conjunto Habitacional Jova Rural",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
+      "dias_atras": "vagas em aberto (agosto/2026)"
     },
     {
       "icone": "💼",
-      "titulo": "Vagas gerais em comércio e serviços",
-      "empresa": "Cate Parque Novo Mundo",
-      "bairro": "Parque Novo Mundo",
-      "requisitos": "Cadastro pelo Portal Cate ou presencial na unidade. Necessário apresentar RG, CPF e carteira de trabalho (física ou digital). Av. Ernesto Augusto Lopes, 100, Parque Novo Mundo (CEU)",
+      "titulo": "Vagas diversas sem exigência de experiência",
+      "empresa": "Cate Freguesia do Ó/Brasilândia",
+      "bairro": "Brasilândia",
+      "requisitos": "Mais de 900 vagas abertas na rede Cate em agosto, em diversos setores. Atendimento na Av. João Marcelino Branco, 95, Freguesia do Ó",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas em aberto (divulgadas em 03/08/2026)"
+      "dias_atras": "vagas em aberto (agosto/2026)"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas na rede Cate",
+      "empresa": "Cate Pirituba",
+      "bairro": "Pirituba",
+      "requisitos": "Rede Cate abriu agosto com mais de 1.700 vagas em diversos setores na capital. Atendimento na Rua Paula Ferreira, 1708, Vila Pirituba",
+      "tipo": "CLT",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "vagas em aberto (agosto/2026)"
     }
   ],
   "politica": [
     {
-      "orgao": "🏗️ Prefeitura de São Paulo / SP Obras",
-      "bairro": "Pirituba",
-      "titulo": "Ponte Pirituba-Lapa recebe investimento de mais de R$ 370 milhões e avança sem interromper a Marginal",
-      "impacto": "A obra, aguardada há mais de 40 anos, vai ligar a Av. Raimundo Pereira de Magalhães (Pirituba) à Rua Campos Vergueiro (Vila Anastácio, Lapa), com quase 900 metros de extensão, mão dupla, ciclovia e faixa exclusiva de ônibus, desafogando as pontes Anhanguera e Piqueri",
-      "status": "Em obras - fundações, drenagem e desvios de tráfego já concluídos no lado Pirituba",
-      "fonte": "Folha Noroeste / Prefeitura de São Paulo"
+      "orgao": "🏛️ Subprefeitura Santana/Tucuruvi/Mandaqui",
+      "bairro": "Santana",
+      "titulo": "Santana vive período de transformação urbana com obras na Praça Heróis da FEB, no Campo de Marte e na Rua Leite de Morais",
+      "impacto": "A revitalização da Praça Heróis da FEB amplia espaço de lazer para a comunidade; o Campo de Marte passou a operar por instrumentos; e as obras do calçadão da Rua Leite de Morais estão na fase final de execução",
+      "status": "Obras em andamento e em fase final",
+      "fonte": "DiárioZonaNorte / Encontra Santana"
+    },
+    {
+      "orgao": "🏛️ Subprefeitura Perus/Anhanguera",
+      "bairro": "Perus",
+      "titulo": "Subprefeitura passa a contar com nova estrutura de serviços de emprego e empreendedorismo (Descomplica SP)",
+      "impacto": "Moradores de Perus e Anhanguera passam a ter atendimento integrado do Cate e da Ade Sampa na própria sede da subprefeitura, mediante agendamento pelo site",
+      "status": "Implementado",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
     },
     {
       "orgao": "🏛️ Subprefeitura Jaçanã/Tremembé",
@@ -250,44 +275,43 @@
       "impacto": "Famílias e imóveis irregulares em Tremembé e Jaçanã podem obter anistia e regularizar a documentação de construção antes do novo prazo final",
       "status": "Prorrogado - prazo final 30/08/2026",
       "fonte": "Subprefeitura Jaçanã/Tremembé"
-    },
-    {
-      "orgao": "🏛️ CPM Casa Verde/Cachoeirinha/Limão",
-      "bairro": "Casa Verde",
-      "titulo": "Conselho Participativo segue na segunda etapa do Orçamento Cidadão 2026, avaliando propostas prioritárias para a região",
-      "impacto": "75 propostas foram direcionadas aos três distritos que compõem a Subprefeitura, que reúne cerca de 300 mil habitantes; as propostas seguem para avaliação técnica da Prefeitura antes da votação popular",
-      "status": "Segunda etapa em andamento",
-      "fonte": "Prefeitura de São Paulo"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
       "emoji": "💉",
-      "titulo": "SP recomenda vacinação após 13 casos confirmados de sarampo no estado em 2026",
-      "desc": "A Secretaria de Estado da Saúde recomenda que crianças, adolescentes e adultos verifiquem a caderneta de vacinação e completem o esquema da tríplice viral. Desde junho, bebês de 6 a 11 meses residentes em São Paulo, Guarulhos e São Bernardo do Campo devem receber a dose zero da vacina.",
-      "meta": "Folha Noroeste / SES-SP"
+      "titulo": "Campanha de reforço contra o sarampo segue até 1º de setembro na capital",
+      "desc": "Após a confirmação de 15 casos de sarampo no estado de São Paulo em 2026 (12 na capital, com maior concentração em Vila Medeiros e Vila Maria), moradores de 6 meses a 59 anos podem tomar uma dose de reforço da tríplice viral nas UBS, mesmo já vacinados. O Dia D de mobilização será em 22 de agosto, com 483 unidades básicas de saúde abertas na capital.",
+      "meta": "Secretaria Municipal da Saúde / DiárioZonaNorte"
     },
     {
       "tipo": "neutro",
       "emoji": "🌡️",
-      "titulo": "Defesa Civil decreta estado de atenção para baixas temperaturas a partir das 10h de hoje (9/8)",
-      "desc": "Nesta segunda-feira (10/8), ar frio e úmido predomina em São Paulo, com possibilidade de garoa, mínima de 13°C durante a noite e máxima de apenas 17°C.",
-      "meta": "Defesa Civil de São Paulo - 09/08/2026"
+      "titulo": "Defesa Civil mantém estado de atenção para baixas temperaturas nesta segunda-feira (10/8)",
+      "desc": "Ar frio e úmido predomina em São Paulo nesta segunda-feira, com possibilidade de garoa fraca, mínima de 13°C e máxima de apenas 17°C.",
+      "meta": "Defesa Civil de São Paulo - 10/08/2026"
+    },
+    {
+      "tipo": "info",
+      "emoji": "🌧️",
+      "titulo": "Agosto segue como um dos meses mais secos do ano em São Paulo",
+      "desc": "Até o momento, a capital acumulou 6,2 mm de chuva em agosto, o equivalente a apenas 20,9% da média histórica do mês (29,7 mm), reforçando o período de baixa umidade típico do inverno paulistano.",
+      "meta": "CGE / Defesa Civil de São Paulo"
     },
     {
       "tipo": "info",
       "emoji": "🚆",
-      "titulo": "Greve dos ferroviários da CPTM continua nas linhas 11-Coral, 12-Safira e 13-Jade",
-      "desc": "O movimento, que já dura mais de uma semana e afeta quase 1 milhão de passageiros por dia, segue sem acordo. As linhas 7-Rubi, 8-Diamante, 9-Esmeralda e 10-Turquesa, que atendem Jaraguá, Pirituba e Perus, continuam operando normalmente.",
-      "meta": "TV Brasil / Almapreta - agosto de 2026"
+      "titulo": "Obras de modernização afetam a Linha 7-Rubi entre Franco da Rocha e Baltazar Fidélis",
+      "desc": "Trens circulam em via única das 20h à meia-noite durante intervenções de modernização entre as estações Franco da Rocha e Baltazar Fidélis, podendo impactar o trajeto de quem embarca nas estações da Zona Norte, como Jaraguá e Perus.",
+      "meta": "Metrô CPTM - agosto/2026"
     },
     {
       "tipo": "ok",
-      "emoji": "👮",
-      "titulo": "Polícia Militar reforça policiamento nas estações da CPTM durante a paralisação dos trens",
-      "desc": "Equipes foram distribuídas em pontos estratégicos das estações afetadas para ampliar a segurança dos passageiros e apoiar a população diante do aumento da circulação de pessoas.",
-      "meta": "Portal de Notícias da PMESP - 04/08/2026"
+      "emoji": "🛠️",
+      "titulo": "App do Poupatempo passa a reunir pedidos de zeladoria urbana",
+      "desc": "O aplicativo do Poupatempo ganhou funcionalidade para solicitar poda de árvore, tapa-buraco, iluminação pública e outros serviços de zeladoria diretamente pelo celular. A ferramenta já recebeu mais de 5 mil solicitações desde o lançamento, em março.",
+      "meta": "Agência SP"
     }
   ],
   "fim_de_semana": [
