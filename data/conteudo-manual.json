@@ -3,157 +3,145 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚨 Prisão na Comunidade SPAMA",
+      "pill": "💉 Alerta de Sarampo",
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Vila Medeiros",
+      "bairro": "Vila Medeiros",
+      "titulo": "Zona Norte concentra 8 dos 15 casos de sarampo da capital; vacinação segue em unidades de saúde e na Estação Tucuruvi",
+      "resumo": "Segundo o Centro de Vigilância Epidemiológica, dos 15 casos confirmados de sarampo em São Paulo, 12 são na capital, com concentração em Vila Medeiros (6 casos) e Vila Maria (2 casos). Moradores de São Paulo entre 6 meses e 59 anos podem se vacinar em qualquer UBS, mesmo quem já tomou a dose antes. A campanha também chegou ao Metrô: a Estação Tucuruvi (Linha 1-Azul) aplica doses das 10h às 16h nos dias 17 a 21 de agosto.",
+      "fonte": "DiárioZonaNorte / Agência Brasil",
+      "hora": "15/08/2026",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
+      "icone": "💉",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Polícia prende foragido por tráfico de drogas na Comunidade SPAMA, em Pirituba",
-      "resumo": "Durante atendimento de uma ocorrência na Comunidade SPAMA, em Pirituba, equipes do 49º Batalhão de Polícia Militar Metropolitano (BPM/M) identificaram um homem que, após consulta ao sistema criminal, constava como foragido da Justiça pelo crime de tráfico de drogas. Ele foi conduzido ao Distrito Policial e depois encaminhado ao sistema prisional, onde ficou à disposição da Justiça para cumprir o mandado de prisão em aberto.",
-      "fonte": "Folha Noroeste",
-      "hora": "13/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/policia-prende-foragido-por-trafico-de-drogas-na-comunidade-spama-em-pirituba/",
+      "tag_bairro": "📍 Jardim Paulistano",
+      "bairro": "Jardim Paulistano",
+      "titulo": "PM prende suspeito de tentativa de feminicídio no Jardim Paulistano",
+      "resumo": "Durante a Operação Lilás — mobilização de prevenção e combate à violência doméstica em referência aos 20 anos da Lei Maria da Penha —, a Polícia Militar prendeu um homem de 49 anos suspeito de atirar contra a ex-companheira no Jardim Paulistano, na Brasilândia. A vítima foi atingida de raspão na cabeça e recebeu atendimento. Um revólver calibre .38 com numeração raspada foi apreendido.",
+      "fonte": "Primeira Edição",
+      "hora": "07/08/2026",
+      "url": "https://pejornal.com.br/suspeito-de-tentativa-de-feminicidio-e-preso-pela-policia-militar-na-zona-norte-de-sao-paulo/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Imirim",
+      "bairro": "Imirim",
+      "titulo": "Corredor da Avenida Imirim recebe requalificação de 4,6 km",
+      "resumo": "As obras vão da Avenida Deputado Emílio Carlos à Avenida Afonso Schmidt e devem beneficiar 112 mil pessoas por dia. O projeto prevê pavimento rígido no corredor de ônibus, paradas modernizadas com superguias, calçadas acessíveis, enterramento de redes aéreas, melhorias na drenagem e semáforos inteligentes.",
+      "fonte": "Prefeitura de São Paulo",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/w/s%C3%A3o-paulo-amplia-mobilidade-urbana-com-mais-de-r-13-bilh%C3%B5es-investidos-em-obras-que-reduzem-o-tempo-de-deslocamento",
+      "icone": "🚧",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
+      "tag_bairro": "📍 Jardim Peri",
+      "bairro": "Jardim Peri",
+      "titulo": "Prefeitura entrega UPA III Jardim Peri, a 27ª UPA da cidade",
+      "resumo": "A nova Unidade de Pronto Atendimento fica na Rua Afonso Lopes Vieira, 35, na Vila Dionísia, e passa a atender moradores de Casa Verde, Limão e Cachoeirinha. A unidade integra o Programa Avança Saúde SP e já iniciou o atendimento ao público.",
+      "fonte": "Secretaria Municipal da Saúde",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/noticias/368272",
+      "icone": "🏥",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
-      "titulo": "Estações Pirituba e Perus da Linha 7-Rubi aplicam vacina contra sarampo até sexta-feira (14)",
-      "resumo": "A TIC Trens, concessionária da Linha 7-Rubi, promove mutirão de vacinação contra o sarampo dentro das estações Pirituba e Perus. Em Pirituba, a aplicação ocorre até sexta (14), das 9h às 15h, no mezanino próximo à plataforma sentido Jundiaí, com oferta inicial de 250 doses por dia. Em Perus, o atendimento segue até sexta em horários alternados, com 200 doses diárias, próximo à linha de bloqueios. Recomenda-se apresentar documento com foto.",
+      "titulo": "Prefeitura entrega CEI Dionísia Gonçalves Pinto – Nísia Floresta, em Pirituba",
+      "resumo": "A nova unidade de educação infantil tem capacidade para atender 200 bebês e crianças de 0 a 3 anos, com infraestrutura totalmente acessível. O investimento na obra foi de R$ 4,3 milhões, entregue durante a edição do Prefeitura Presente na região.",
+      "fonte": "Subprefeitura Pirituba/Jaraguá",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
+      "icone": "🏫",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Geral",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Pico do Jaraguá permanece fechado até 29 de setembro",
+      "resumo": "O acesso às trilhas do Pico do Jaraguá segue interditado, e a previsão de reabertura é somente no fim de setembro. A restrição afeta visitantes que costumam usar o parque para caminhada e observação da paisagem da Zona Norte.",
       "fonte": "Folha Noroeste",
-      "hora": "11/08/2026 (até 14/08)",
-      "url": "https://folhanoroeste.com.br/regional/estacoes-pirituba-e-perus-realizam-vacinacao-contra-sarampo-ate-sexta-14/",
-      "icone": "💉",
+      "hora": "agosto/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/pico-do-jaragua-permanecera-fechado-ate-dia-29-de-setembro/",
+      "icone": "⛰️",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Furto de cabos reduz velocidade da Linha 7-Rubi; obras interrompem trecho no fim de semana",
-      "resumo": "A Linha 7-Rubi opera com velocidade reduzida desde a manhã de quarta-feira (12) após um furto de cabos de sinalização no trecho entre as estações Botujuru e Baltazar Fidelis, afetando o deslocamento de moradores de Jaraguá e Pirituba que utilizam a linha. Neste domingo (16), nova etapa de obras de modernização interditará a via dupla entre Botujuru e Campo Limpo Paulista, com embarque e desembarque na mesma plataforma e sem viagens diretas entre Palmeiras-Barra Funda e Jundiaí — passageiros deverão fazer baldeação em Francisco Morato.",
-      "fonte": "Folha Noroeste",
-      "hora": "13/08/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/linha-7-rubi-tem-operacao-afetada-por-furto-de-cabos-nova-etapa-de-intervencoes-ocorrera-neste-domingo16/",
-      "icone": "🚆",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Parque Morro Doce",
-      "bairro": "Parque Morro Doce",
-      "titulo": "SPTrans cria linha de vans elétricas para atender o Morro Doce, na zona noroeste",
-      "resumo": "Desde terça-feira (11), a linha 1027-10 Term. Jd. Britânia–Itaberaba I passou a operar na região do Morro Doce, no distrito de Anhanguera, utilizando vans elétricas para vencer trechos de forte inclinação e levar transporte público diretamente à Rua Lorena. O serviço funciona todos os dias, das 5h30 às 21h.",
-      "fonte": "Folha Noroeste",
-      "hora": "12/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/sptrans-cria-nova-linha-de-onibus-para-a-zona-noroeste-operada-por-vans-eletricas/",
-      "icone": "🚐",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Prefeito retoma obras que vão ligar Pirituba à Lapa, paradas há 3 anos por decisão judicial",
+      "resumo": "O complexo viário Pirituba-Lapa, fundamental para aliviar o trânsito entre as duas regiões, tem investimento municipal de R$ 209,5 milhões e execução prevista para dezembro de 2026, segundo anúncio feito durante o Prefeitura Presente na região.",
+      "fonte": "Subprefeitura Pirituba/Jaraguá",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137939",
+      "icone": "🚧",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Parque Novo Mundo",
-      "bairro": "Parque Novo Mundo",
-      "titulo": "Subprefeitura Vila Maria/Vila Guilherme reforma praça entre as ruas Eureka e Lidice, no Parque Novo Mundo",
-      "resumo": "A Subprefeitura Vila Maria/Vila Guilherme iniciou em agosto a reforma de uma praça localizada entre a Rua Eureka e a Rua Lidice, no Parque Novo Mundo (distrito de Vila Maria), com reconstrução das calçadas internas, paisagismo e instalação de mesas e bancos. O investimento é de aproximadamente R$ 15 mil, com prazo de execução de 45 dias.",
-      "fonte": "Prefeitura de São Paulo - Subprefeitura Vila Maria/Vila Guilherme",
-      "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/vila_maria_vila_guilherme/noticias",
-      "icone": "🌳",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Tauste Supermercados anuncia chegada a Santana com 700 vagas de emprego",
+      "resumo": "A rede gaúcha de varejo prepara sua primeira unidade na capital paulista, em Santana, com 51 checkouts e mais de 40 operações comerciais complementares. A loja deve abrir no 2º semestre de 2026 e abriu mutirão de contratação para preencher 700 vagas.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "2026",
+      "url": "https://www.diariozonanorte.com.br/gigante-do-varejo-tauste-supermercados-prepara-chegada-ao-bairro-de-santana-e-abre-mutirao-para-preencher-700-vagas/",
+      "icone": "💼",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Perus",
-      "bairro": "Perus",
-      "titulo": "Agosto começa com mais de 900 vagas de emprego no Cate, sem exigência de experiência",
-      "resumo": "A rede de Centros de Apoio ao Trabalho e Empreendedorismo (Cate) da Prefeitura de São Paulo abriu mais de 900 vagas de emprego na primeira semana de agosto, parte delas sem exigência de experiência prévia. A unidade Cate Perus, na Rua Ylídio Figueiredo, 285, integra a rede que atende moradores da região com intermediação gratuita de mão de obra.",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "tag_bairro": "📍 Vila Guilherme",
+      "bairro": "Vila Guilherme",
+      "titulo": "Live Nation e Cidade Center Norte anunciam Arena São Paulo, investimento de R$ 1,5 bilhão",
+      "resumo": "A arena para 21 mil pessoas será erguida dentro do complexo Cidade Center Norte, na Vila Guilherme, com construção prevista para começar no 2º semestre de 2026 e inauguração em 2028. Estudo da Oxford Economics estima cerca de 1.800 empregos gerados por ano durante a operação.",
+      "fonte": "Brasil247",
       "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/agosto-inicia-com-mais-de-4.300-vagas-de-emprego-na-cidade-de-s%C3%A3o-paulo",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Dupla é presa em flagrante após perseguição na Marginal Tietê, na Zona Norte",
-      "resumo": "Uma dupla de assaltantes foi presa em flagrante na Avenida Otaviano Alves de Lima, na Zona Norte, após ser perseguida por uma equipe da Polícia Militar que atendia outra ocorrência na Marginal Tietê. Durante a abordagem, os policiais recuperaram seis celulares — três furtados minutos antes — e constataram que a motocicleta usada pelos suspeitos também era roubada. Os dois foram encaminhados ao 13º Distrito Policial, na Casa Verde.",
-      "fonte": "BNews SP",
-      "hora": "13/07/2026",
-      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/furto-de-celulares-dupla-e-presa-em-flagrante-na-zona-norte.html",
-      "icone": "🚨",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Medeiros",
-      "bairro": "Vila Medeiros",
-      "titulo": "UBS Vila Medeiros amplia vacinação contra o sarampo em ação extramuro",
-      "resumo": "Como parte da Campanha de Multivacinação, a UBS Vila Medeiros realiza aplicação de doses contra o sarampo na Academia Skyfit (Rua Nossa Senhora do Loreto, 989), das 10h às 15h, entre os dias 3 e 17 de agosto. A ação reforça a cobertura vacinal na região após a identificação de casos que indicam cadeia de transmissão do vírus na capital paulista.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "03 a 17/08/2026",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/vacina%C3%A7%C3%A3o-contra-o-sarampo",
-      "icone": "💉",
+      "url": "https://www.brasil247.com/tendencias/2026/08/06/com-investimento-de-r-15-bilhao-nova-arena-para-21-mil-pessoas-promete-mais-de-200-eventos-por-ano-e-impacto-bilionario-na-zona-norte-de-sao-paulo/",
+      "icone": "🎤",
       "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
-      "dia": "15",
+      "dia": "16",
       "mes": "Ago",
       "cor_fundo": "#8E44AD",
-      "bairro": "Parque Morro Grande",
-      "titulo": "\"Histórias e Práticas do Morro\": visita ao Conjunto Arquitetônico da Antiga Pedreira Morro Grande",
-      "hora": "14h",
-      "local": "Morro Grande, Freguesia do Ó (inscrições pelo WhatsApp (11) 98630-3204)",
-      "descricao": "Roteiro interpretativo da Jornada do Patrimônio 2026 pelo Conjunto Arquitetônico e Paisagístico da Antiga Pedreira Morro Grande, com memória oral e patrimônio cultural do bairro. 20 vagas, classificação livre.",
+      "bairro": "Freguesia do Ó",
+      "titulo": "\"Corpo, ritmo e território: o Samba do Cruz\" — Jornada do Patrimônio 2026",
+      "hora": "a confirmar no local",
+      "local": "Casa de Cultura Municipal Freguesia do Ó",
+      "descricao": "Curso gratuito sobre o Espaço Cruz da Esperança (fundado em 1958) que discute samba, corpos negros e território, entendendo a roda de samba como prática coletiva de pertencimento e continuidade histórica.",
       "gratuito": true,
       "preco": null,
-      "url": "https://folhanoroeste.com.br/entretenimento-esportes/a-historia-do-morro-grande-na-jornada-do-patrimonio-2026-ocorrera-neste-sabado-15/"
-    },
-    {
-      "dia": "15",
-      "mes": "Ago",
-      "cor_fundo": "#2980B9",
-      "bairro": "Pirituba",
-      "titulo": "Jornada do Patrimônio 2026 na Biblioteca Brito Broca",
-      "hora": "11h",
-      "local": "Biblioteca Brito Broca - Av. Mutinga, 1425, Pirituba",
-      "descricao": "Visita guiada pela história arquitetônica e social do prédio que abriga a biblioteca, passando por salas, jardins e acervo, com mediação de Daniele Cristina. Classificação livre.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/regional/biblioteca-municipal-brito-broca-entra-no-roteiro-da-jornada-do-patrimonio-2026/"
-    },
-    {
-      "dia": "19",
-      "mes": "Ago",
-      "cor_fundo": "#D6336C",
-      "bairro": "Brasilândia",
-      "titulo": "\"Escrita da Singularidade\", com o escritor Ladislau Sabino",
-      "hora": "14h",
-      "local": "Fábrica de Cultura Brasilândia - Av. General Penha Brasil, 2508",
-      "descricao": "Encontro literário gratuito em que o escritor compartilha seu processo criativo e dialoga com o público sobre literatura contemporânea.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://abcagora.com.br/2026/08/12/fabricas-de-cultura-programacao-agosto/"
+      "url": "https://prefeitura.sp.gov.br/web/cultura/w/confira-a-programa%C3%A7%C3%A3o-dos-parceiros-da-jornada-do-patrim%C3%B4nio-2026"
     },
     {
       "dia": "20",
@@ -172,11 +160,37 @@
       "dia": "21",
       "mes": "Ago",
       "cor_fundo": "#E67E22",
-      "bairro": "Jaraguá",
+      "bairro": "Jardim Taipas",
       "titulo": "\"Histórias Folclóricas\", com Querubina Ruiz",
       "hora": "9h",
       "local": "Núcleo Taipas - Rua Joaquim Pimentel, 200",
       "descricao": "Encontro gratuito em celebração ao Dia do Folclore Brasileiro, com histórias de personagens do imaginário popular e criação artística coletiva para crianças e famílias.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://abcagora.com.br/2026/08/12/fabricas-de-cultura-programacao-agosto/"
+    },
+    {
+      "dia": "23",
+      "mes": "Ago",
+      "cor_fundo": "#D6336C",
+      "bairro": "Freguesia do Ó",
+      "titulo": "\"Seu Nome: Dita\" abre os festejos dos 434 anos da Freguesia do Ó",
+      "hora": "a confirmar",
+      "local": "Casa de Cultura Salvador Ligabue",
+      "descricao": "Espetáculo de dança das alunas da Escola de Bailados Marisol, abrindo a programação especial de aniversário do bairro, que segue até setembro com exposições e shows.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/regional/aniversario-da-freguesia-sera-comemorado-durante-todo-o-mes-de-agosto/"
+    },
+    {
+      "dia": "29",
+      "mes": "Ago",
+      "cor_fundo": "#2980B9",
+      "bairro": "Brasilândia",
+      "titulo": "\"Vivência Jongo: Dança, Ancestralidade e Música\"",
+      "hora": "10h",
+      "local": "Fábrica de Cultura Brasilândia - Av. General Penha Brasil, 2508",
+      "descricao": "Experiência gratuita dedicada a uma das mais importantes manifestações da cultura afro-brasileira, encerrando a programação do mês na unidade.",
       "gratuito": true,
       "preco": null,
       "url": "https://abcagora.com.br/2026/08/12/fabricas-de-cultura-programacao-agosto/"
@@ -189,7 +203,7 @@
       "titulo": "Fábrica de Cultura Jaçanã celebra 13 anos",
       "hora": "a partir das 12h",
       "local": "Rua Raimundo Eduardo da Silva, 138 - Jaçanã",
-      "descricao": "Festa de aniversário com apresentações do grupo circense Tiroliro, do coletivo Baobá, discotecagem com DJ Sophia e show de Torya.",
+      "descricao": "Festa de aniversário gratuita com apresentações do grupo circense Tiroliro, do coletivo Baobá, discotecagem com DJ Sophia e show de Torya.",
       "gratuito": true,
       "preco": null,
       "url": "https://abcagora.com.br/2026/08/12/fabricas-de-cultura-programacao-agosto/"
@@ -197,41 +211,41 @@
   ],
   "vagas": [
     {
+      "icone": "🛒",
+      "titulo": "700 vagas para a nova loja do Tauste Supermercados",
+      "empresa": "Tauste Supermercados",
+      "bairro": "Santana",
+      "requisitos": "Diversas funções para operação de loja (caixas, repositores, açougue, padaria, administrativo); mutirão de contratação para a unidade que abre no 2º semestre de 2026",
+      "tipo": "CLT",
+      "fonte": "DiárioZonaNorte",
+      "dias_atras": "processo seletivo em andamento"
+    },
+    {
       "icone": "📦",
-      "titulo": "Vagas diversas no Cate, sem exigência de experiência para grande parte das oportunidades",
+      "titulo": "Mais de 900 vagas no Cate, sem exigência de experiência",
       "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Perus",
-      "requisitos": "Diversos níveis de escolaridade; parte das vagas dispensa experiência prévia. Atendimento no Cate Perus - Rua Ylídio Figueiredo, 285",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas abertas (agosto/2026)"
-    },
-    {
-      "icone": "🚪",
-      "titulo": "Vagas diversas no Cate Casa Verde",
-      "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Casa Verde",
-      "requisitos": "Oportunidades em diferentes setores, com intermediação gratuita de mão de obra. Atendimento no Cate Casa Verde - Av. Ordem e Progresso, 1.001",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas abertas (agosto/2026)"
-    },
-    {
-      "icone": "💻",
-      "titulo": "Vagas diversas no Cate Jaçanã/Tremembé",
-      "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Tremembé",
-      "requisitos": "Cadastro e encaminhamento gratuitos para vagas da região. Atendimento no Cate Jaçanã/Tremembé - Av. Luís Stamatis, 300",
+      "bairro": "Brasilândia",
+      "requisitos": "Vagas em comércio, serviços e construção civil, com salários de até R$ 3.150; atendimento no Cate Brasilândia - Av. João Marcelino Branco, 95",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
       "dias_atras": "vagas abertas (agosto/2026)"
     },
     {
       "icone": "💼",
-      "titulo": "Vagas diversas no Cate Vila Maria/Vila Guilherme",
+      "titulo": "Vaga CLT com salário de R$ 2.300, fundamental completo",
+      "empresa": "Cate Zona Norte/Santana",
+      "bairro": "Santana",
+      "requisitos": "Escolaridade fundamental completa, sem exigência de experiência prévia; jornada fixa. Atendimento na Rua Voluntários da Pátria, 1553",
+      "tipo": "CLT",
+      "fonte": "Portal Cate",
+      "dias_atras": "publicada em 13/08/2026"
+    },
+    {
+      "icone": "🚪",
+      "titulo": "Vagas diversas na última semana de agosto no Cate Pirituba",
       "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Vila Guilherme",
-      "requisitos": "Atendimento presencial com opções em diversos setores. Cate Vila Maria/Vila Guilherme - Rua General Mendes, 111",
+      "bairro": "Pirituba",
+      "requisitos": "Oportunidades em diferentes setores dentro do total de mais de 1.800 vagas oferecidas pela rede Cate nesta semana; atendimento na Rua Paula Ferreira, 1708 - Vila Pirituba",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
       "dias_atras": "vagas abertas (agosto/2026)"
@@ -239,75 +253,93 @@
   ],
   "politica": [
     {
-      "orgao": "🏛️ Secretaria Municipal do Verde e do Meio Ambiente (SVMA)",
+      "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
       "bairro": "Pirituba",
-      "titulo": "Prefeitura abre consulta pública para revisão dos Planos Diretores dos parques Jacintho Alberto e Jardim Felicidade, em Pirituba",
-      "impacto": "Moradores podem enviar contribuições para atualizar as diretrizes de gestão, acessibilidade e uso dos parques, que passam por revisão a cada cinco anos",
-      "status": "Consulta aberta até 7 de setembro pelo portal Participe+",
-      "fonte": "Folha Noroeste"
+      "titulo": "Prefeitura retoma obras viárias que vão ligar Pirituba à Lapa após 3 anos parada pela Justiça",
+      "impacto": "Obra de R$ 209,5 milhões deve aliviar o trânsito entre as duas regiões; execução prevista para dezembro de 2026",
+      "status": "Obras retomadas",
+      "fonte": "Subprefeitura Pirituba/Jaraguá"
     },
     {
-      "orgao": "🏛️ Subprefeitura Vila Maria/Vila Guilherme",
-      "bairro": "Vila Maria",
-      "titulo": "Moradores cobram solução para acúmulo de terra e entulho na antiga quadra da Portuguesinha, na Vila Maria",
-      "impacto": "Obras de contenção na encosta da Travessa João Rangel usam o espaço da extinta quadra para armazenar solo e material escavado, gerando risco em dias de chuva forte, segundo moradores",
-      "status": "Situação relatada à Subprefeitura Vila Maria/Vila Guilherme/Vila Medeiros",
+      "orgao": "🏛️ Prefeitura de São Paulo",
+      "bairro": "Jardim Peri",
+      "titulo": "Casa Verde/Cachoeirinha é a primeira subprefeitura da nova fase do Prefeitura Presente",
+      "impacto": "Entrega da UPA III Jardim Peri (27ª UPA da cidade), do Centro de Referência Casa da Mulher Cachoeirinha e do 29º Descomplica SP",
+      "status": "Equipamentos inaugurados",
+      "fonte": "Prefeitura de São Paulo"
+    },
+    {
+      "orgao": "🏛️ Prefeitura de São Paulo",
+      "bairro": "Conjunto Habitacional Recanto dos Humildes",
+      "titulo": "Prefeitura Presente leva mais de R$ 1 bilhão em investimentos a Perus/Anhanguera",
+      "impacto": "UBS Recanto dos Humildes recebe R$ 13,4 milhões e amplia capacidade para até 11 mil atendimentos por mês; UPA Anhanguera/Residencial das Orquídeas soma R$ 13,1 milhões; drenagem do Ribeirão Perus recebe R$ 173 milhões e beneficia 88 mil pessoas",
+      "status": "Obras entregues e em andamento",
+      "fonte": "Prefeitura de São Paulo - Secretaria Municipal da Saúde"
+    },
+    {
+      "orgao": "🏛️ Licenciamento Ambiental (SEI 6027.2026/0007302-8)",
+      "bairro": "Vila Guilherme",
+      "titulo": "Audiência pública discute complexo logístico de 39 galpões no terreno do antigo Shopping MartCenter",
+      "impacto": "Complexo Chico Pontes preverá 117 mil m² de área construída na fase final, em terreno entre a Rua Chico Pontes e a Rua São Quirino",
+      "status": "Audiência pública realizada em 11/08; EIA/RIMA em análise",
       "fonte": "DiárioZonaNorte"
-    },
-    {
-      "orgao": "🏛️ Subprefeitura Perus/Anhanguera",
-      "bairro": "Perus",
-      "titulo": "Subprefeitura Perus/Anhanguera passa a contar com unidade do Descomplica SP para emprego e empreendedorismo",
-      "impacto": "Moradores da região ganham atendimento presencial para serviços de emprego e apoio a pequenos negócios diretamente na sede da subprefeitura",
-      "status": "Estrutura já em funcionamento",
-      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "💉",
-      "titulo": "Campanha de Multivacinação contra o sarampo segue até 1º de setembro na capital",
-      "desc": "Após identificação de casos que indicam cadeia de transmissão do sarampo em São Paulo, Guarulhos e São Bernardo do Campo, o Ministério da Saúde recomendou ampliar a vacinação para toda a população de 6 meses a 59 anos, mesmo quem já foi vacinado, nas UBS da capital.",
-      "meta": "Secretaria Municipal da Saúde / Ministério da Saúde"
+      "emoji": "🌧️",
+      "titulo": "Chuva forte gera alerta da Defesa Civil na Zona Norte neste sábado (15)",
+      "desc": "O CGE emitiu comunicado severo pela manhã para a zona norte e o centro da capital; o estado de alerta foi encerrado às 8h55. O tempo deve seguir instável, com possibilidade de chuva fraca e isolada ao longo do dia.",
+      "meta": "CGE - Centro de Gerenciamento de Emergências Climáticas, 15/08/2026"
     },
     {
       "tipo": "neutro",
-      "emoji": "🌡️",
-      "titulo": "Semana segue com tempo firme, manhãs frias e sem previsão de chuva",
-      "desc": "Segundo o CGE, a região tem registrado amanheceres com neblina e sensação de frio, mas predomínio de sol ao longo do dia, com mínimas próximas de 13°C e máximas ao redor de 23°C.",
+      "emoji": "☀️",
+      "titulo": "Veranico chega à capital entre segunda (17) e quinta (20/08)",
+      "desc": "Após o fim de semana chuvoso, simulações do CGE indicam predomínio de sol e tempo seco a partir de domingo (16), que deve ter poucas nuvens.",
       "meta": "CGE - Centro de Gerenciamento de Emergências Climáticas"
     },
     {
-      "tipo": "info",
-      "emoji": "🚆",
-      "titulo": "Linha 7-Rubi tem obras neste fim de semana entre Botujuru e Campo Limpo Paulista",
-      "desc": "Neste sábado (15), a substituição de trilhos perto da estação Palmeiras-Barra Funda deixa a Linha 10-Turquesa sem parar por lá entre 22h30 e meia-noite (alternativa: Linha 11-Coral). No domingo (16), os trens circulam por via única entre Botujuru e Campo Limpo Paulista, sem viagens diretas até Jundiaí — baldeação obrigatória em Francisco Morato.",
-      "meta": "TIC Trens / Folha Noroeste"
+      "tipo": "ok",
+      "emoji": "💉",
+      "titulo": "Vacinação contra sarampo segue na Estação Tucuruvi do Metrô até sexta (21)",
+      "desc": "Doses aplicadas das 10h às 16h nos dias 17 a 21 de agosto, na Linha 1-Azul, sem necessidade de agendamento prévio.",
+      "meta": "Metrô SP / Agência Brasil"
     },
     {
-      "tipo": "ok",
-      "emoji": "🚇",
-      "titulo": "Primeiro trecho da Linha 6-Laranja, entre Brasilândia e Perdizes, é esperado para outubro",
-      "desc": "O trecho inicial da nova linha de metrô deve entregar 8 estações — Brasilândia, Itaberaba-Hospital Vila Penteado, João Paulo I, Freguesia do Ó, Santa Marina, Água Branca, Sesc-Pompeia e Perdizes —, ligando a Zona Norte à Zona Oeste. A estação Washington Luís deve ser liberada cerca de 90 dias após a inauguração.",
-      "meta": "ANPTrilhos / DiárioZonaNorte"
+      "tipo": "neutro",
+      "emoji": "🚗",
+      "titulo": "Não há rodízio de veículos neste fim de semana",
+      "desc": "O rodízio municipal funciona apenas em dias úteis, das 7h às 10h e das 17h às 20h. Na segunda-feira (17), ficam restritas as placas com final 1 e 2.",
+      "meta": "CET - Companhia de Engenharia de Tráfego"
     }
   ],
   "fim_de_semana": [
     {
       "emoji": "🏛️",
-      "titulo": "Jornada do Patrimônio: visita ao Morro Grande",
-      "info": "15/08 · 14h · Morro Grande, Freguesia do Ó · Gratuito"
+      "titulo": "Curso do Festival do Patrimônio: \"Samba do Cruz\"",
+      "info": "16/08 · Casa de Cultura Municipal Freguesia do Ó, Freguesia do Ó · Gratuito"
     },
     {
-      "emoji": "📚",
-      "titulo": "Jornada do Patrimônio na Biblioteca Brito Broca",
-      "info": "15/08 · 11h · Av. Mutinga, 1425, Pirituba · Gratuito"
+      "emoji": "💃",
+      "titulo": "\"Seu Nome: Dita\" abre festejos dos 434 anos da Freguesia do Ó",
+      "info": "23/08 · Casa de Cultura Salvador Ligabue, Freguesia do Ó · Gratuito"
     },
     {
-      "emoji": "🎭",
-      "titulo": "Fábricas de Cultura abertas neste sábado (Brasilândia, Jaçanã, Vila Nova Cachoeirinha, Núcleo Taipas)",
-      "info": "15/08 · 9h às 17h · diversos endereços na Zona Norte · Gratuito"
+      "emoji": "🖼️",
+      "titulo": "Exposição \"Freguesia do Ó – 434 Anos de História e Tradição\"",
+      "info": "19/08 a 01/09 · Casa de Cultura Salvador Ligabue, Freguesia do Ó · Gratuito"
+    },
+    {
+      "emoji": "🎪",
+      "titulo": "\"Vivência Jongo: Dança, Ancestralidade e Música\"",
+      "info": "29/08 · 10h · Fábrica de Cultura Brasilândia · Gratuito"
+    },
+    {
+      "emoji": "🎉",
+      "titulo": "Fábrica de Cultura Jaçanã celebra 13 anos",
+      "info": "29/08 · a partir das 12h · Rua Raimundo Eduardo da Silva, 138, Jaçanã · Gratuito"
     }
   ]
 }
