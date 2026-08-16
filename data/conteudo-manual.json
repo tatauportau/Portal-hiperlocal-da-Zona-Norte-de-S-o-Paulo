@@ -3,59 +3,73 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "💉 Alerta de Sarampo",
-      "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Medeiros",
-      "bairro": "Vila Medeiros",
-      "titulo": "Zona Norte concentra 8 dos 15 casos de sarampo da capital; vacinação segue em unidades de saúde e na Estação Tucuruvi",
-      "resumo": "Segundo o Centro de Vigilância Epidemiológica, dos 15 casos confirmados de sarampo em São Paulo, 12 são na capital, com concentração em Vila Medeiros (6 casos) e Vila Maria (2 casos). Moradores de São Paulo entre 6 meses e 59 anos podem se vacinar em qualquer UBS, mesmo quem já tomou a dose antes. A campanha também chegou ao Metrô: a Estação Tucuruvi (Linha 1-Azul) aplica doses das 10h às 16h nos dias 17 a 21 de agosto.",
-      "fonte": "DiárioZonaNorte / Agência Brasil",
-      "hora": "15/08/2026",
-      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
-      "icone": "💉",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
+      "pill": "🚔 Flagrante na Zona Norte",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Jardim Paulistano",
-      "bairro": "Jardim Paulistano",
-      "titulo": "PM prende suspeito de tentativa de feminicídio no Jardim Paulistano",
-      "resumo": "Durante a Operação Lilás — mobilização de prevenção e combate à violência doméstica em referência aos 20 anos da Lei Maria da Penha —, a Polícia Militar prendeu um homem de 49 anos suspeito de atirar contra a ex-companheira no Jardim Paulistano, na Brasilândia. A vítima foi atingida de raspão na cabeça e recebeu atendimento. Um revólver calibre .38 com numeração raspada foi apreendido.",
-      "fonte": "Primeira Edição",
-      "hora": "07/08/2026",
-      "url": "https://pejornal.com.br/suspeito-de-tentativa-de-feminicidio-e-preso-pela-policia-militar-na-zona-norte-de-sao-paulo/",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Perseguição termina com prisão de dupla em carro roubado na Avenida Braz Leme",
+      "resumo": "Um homem de 37 anos e uma mulher de 27 foram presos após perseguição policial que começou na zona sul e terminou na Avenida Braz Leme, na Casa Verde. A dupla estava em um HB20 roubado com placas adulteradas e, ao notar a presença policial, tentou fugir até o veículo colidir contra um canteiro central. A ação teve apoio do helicóptero Águia da Polícia Militar. O caso foi registrado no 13º DP (Casa Verde) por receptação, roubo e adulteração de sinal identificador de veículo.",
+      "fonte": "SBT News",
+      "hora": "16/08/2026",
+      "url": "https://sbtnews.sbt.com.br/noticia/policia/perseguicao-policial-cinematografica-termina-com-prisao-de-dois-suspeitos-na-zona-norte-de-sp",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Imirim",
-      "bairro": "Imirim",
-      "titulo": "Corredor da Avenida Imirim recebe requalificação de 4,6 km",
-      "resumo": "As obras vão da Avenida Deputado Emílio Carlos à Avenida Afonso Schmidt e devem beneficiar 112 mil pessoas por dia. O projeto prevê pavimento rígido no corredor de ônibus, paradas modernizadas com superguias, calçadas acessíveis, enterramento de redes aéreas, melhorias na drenagem e semáforos inteligentes.",
-      "fonte": "Prefeitura de São Paulo",
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Limão",
+      "bairro": "Limão",
+      "titulo": "Dupla é presa em flagrante por furto de moto na Avenida Otaviano Alves de Lima",
+      "resumo": "Uma equipe da Polícia Militar prendeu dois homens em flagrante durante abordagem na Avenida Otaviano Alves de Lima, região do Limão. Os policiais atendiam a um motorista com o carro quebrado na Marginal Tietê quando os suspeitos passaram em alta velocidade numa moto; a ordem de parada não foi obedecida e, durante a perseguição, o condutor perdeu o controle e caiu. A moto usada pela dupla tinha placa clonada e também era produto de furto.",
+      "fonte": "BNews São Paulo",
+      "hora": "11/08/2026",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/furto-de-celulares-dupla-e-presa-em-flagrante-na-zona-norte.html",
+      "icone": "🚨",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Vila Maria",
+      "bairro": "Vila Maria",
+      "titulo": "Quatro homens são presos por tentativa de furto a residência na Vila Maria",
+      "resumo": "Quatro suspeitos, de 24 a 29 anos, foram presos em flagrante após tentativa de furto a uma residência na Vila Maria, zona norte da capital. O caso foi registrado no 73º Distrito Policial (Jaçanã), que deve seguir com as investigações sobre o grupo.",
+      "fonte": "SBT News",
       "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/w/s%C3%A3o-paulo-amplia-mobilidade-urbana-com-mais-de-r-13-bilh%C3%B5es-investidos-em-obras-que-reduzem-o-tempo-de-deslocamento",
-      "icone": "🚧",
-      "icone_classe": "ic-mob"
+      "url": "https://sbtnews.sbt.com.br/noticia/policia/quatro-suspeitos-sao-presos-por-tentativa-de-furto-a-residencia-na-zona-norte-de-sao-paulo",
+      "icone": "🚨",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Jardim Brasília",
+      "bairro": "Jardim Brasília",
+      "titulo": "Condenado por roubo a joalheria é capturado em operação da Polícia Civil em Taipas",
+      "resumo": "A Polícia Civil prendeu um homem de 35 anos, condenado por roubo a joalheria e procurado pela Justiça do Paraná, durante operação da Garra (Grupamento Armado de Repressão a Roubos e Assaltos) do Dope na comunidade Jardim Brasília, região de Taipas. Havia mandado de prisão em aberto expedido pela 1ª Vara Criminal de Curitiba (PR); ele deve cumprir pena em regime fechado.",
+      "fonte": "Agência SP",
+      "hora": "02/07/2026",
+      "url": "https://www.agenciasp.sp.gov.br/policia-civil-prende-condenado-por-roubo-a-joalheria-na-zona-norte-da-capital/",
+      "icone": "🚨",
+      "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Jardim Peri",
-      "bairro": "Jardim Peri",
-      "titulo": "Prefeitura entrega UPA III Jardim Peri, a 27ª UPA da cidade",
-      "resumo": "A nova Unidade de Pronto Atendimento fica na Rua Afonso Lopes Vieira, 35, na Vila Dionísia, e passa a atender moradores de Casa Verde, Limão e Cachoeirinha. A unidade integra o Programa Avança Saúde SP e já iniciou o atendimento ao público.",
-      "fonte": "Secretaria Municipal da Saúde",
+      "tag_bairro": "📍 Vila Medeiros",
+      "bairro": "Vila Medeiros",
+      "titulo": "Sarampo concentra casos na Zona Norte; vacinação segue na Estação Tucuruvi do Metrô",
+      "resumo": "Dos 15 casos confirmados de sarampo em São Paulo, a maioria está na capital, com concentração em Vila Medeiros e Vila Maria. Moradores de 6 meses a 59 anos podem se vacinar em qualquer UBS, mesmo quem já tomou dose antes. A campanha segue com posto extra na Estação Tucuruvi (Linha 1-Azul), aplicando doses das 10h às 16h até sexta-feira (21/08), sem necessidade de agendamento.",
+      "fonte": "DiárioZonaNorte / Agência Brasil",
       "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/noticias/368272",
-      "icone": "🏥",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
+      "icone": "💉",
       "icone_classe": "ic-eco"
     },
     {
@@ -65,7 +79,7 @@
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
       "titulo": "Prefeitura entrega CEI Dionísia Gonçalves Pinto – Nísia Floresta, em Pirituba",
-      "resumo": "A nova unidade de educação infantil tem capacidade para atender 200 bebês e crianças de 0 a 3 anos, com infraestrutura totalmente acessível. O investimento na obra foi de R$ 4,3 milhões, entregue durante a edição do Prefeitura Presente na região.",
+      "resumo": "A nova unidade de educação infantil tem capacidade para atender 200 bebês e crianças de 0 a 3 anos, com infraestrutura totalmente acessível. O investimento na obra foi de R$ 4,3 milhões, entregue durante edição do Prefeitura Presente na região de Pirituba/Jaraguá.",
       "fonte": "Subprefeitura Pirituba/Jaraguá",
       "hora": "agosto/2026",
       "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
@@ -74,25 +88,11 @@
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Geral",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Pico do Jaraguá permanece fechado até 29 de setembro",
-      "resumo": "O acesso às trilhas do Pico do Jaraguá segue interditado, e a previsão de reabertura é somente no fim de setembro. A restrição afeta visitantes que costumam usar o parque para caminhada e observação da paisagem da Zona Norte.",
-      "fonte": "Folha Noroeste",
-      "hora": "agosto/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/pico-do-jaragua-permanecera-fechado-ate-dia-29-de-setembro/",
-      "icone": "⛰️",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
-      "titulo": "Prefeito retoma obras que vão ligar Pirituba à Lapa, paradas há 3 anos por decisão judicial",
+      "titulo": "Prefeitura retoma obras que vão ligar Pirituba à Lapa, paradas há 3 anos por decisão judicial",
       "resumo": "O complexo viário Pirituba-Lapa, fundamental para aliviar o trânsito entre as duas regiões, tem investimento municipal de R$ 209,5 milhões e execução prevista para dezembro de 2026, segundo anúncio feito durante o Prefeitura Presente na região.",
       "fonte": "Subprefeitura Pirituba/Jaraguá",
       "hora": "agosto/2026",
@@ -102,17 +102,17 @@
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Tauste Supermercados anuncia chegada a Santana com 700 vagas de emprego",
-      "resumo": "A rede gaúcha de varejo prepara sua primeira unidade na capital paulista, em Santana, com 51 checkouts e mais de 40 operações comerciais complementares. A loja deve abrir no 2º semestre de 2026 e abriu mutirão de contratação para preencher 700 vagas.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "2026",
-      "url": "https://www.diariozonanorte.com.br/gigante-do-varejo-tauste-supermercados-prepara-chegada-ao-bairro-de-santana-e-abre-mutirao-para-preencher-700-vagas/",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Imirim",
+      "bairro": "Imirim",
+      "titulo": "Corredor da Avenida Imirim recebe requalificação de 4,6 km",
+      "resumo": "As obras vão da Avenida Deputado Emílio Carlos à Avenida Afonso Schmidt e devem beneficiar 112 mil pessoas por dia. O projeto prevê pavimento rígido no corredor de ônibus, paradas modernizadas, calçadas acessíveis, enterramento de redes aéreas, melhorias na drenagem e semáforos inteligentes.",
+      "fonte": "Prefeitura de São Paulo",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/w/s%C3%A3o-paulo-amplia-mobilidade-urbana-com-mais-de-r-13-bilh%C3%B5es-investidos-em-obras-que-reduzem-o-tempo-de-deslocamento",
+      "icone": "🚧",
+      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
@@ -127,21 +127,48 @@
       "url": "https://www.brasil247.com/tendencias/2026/08/06/com-investimento-de-r-15-bilhao-nova-arena-para-21-mil-pessoas-promete-mais-de-200-eventos-por-ano-e-impacto-bilionario-na-zona-norte-de-sao-paulo/",
       "icone": "🎤",
       "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Tauste Supermercados prepara chegada a Santana com até 700 vagas de emprego",
+      "resumo": "A rede gaúcha de varejo prepara sua primeira loja na capital paulista, na Rua Doutor Zuquim, em Santana, com 51 checkouts e mais de 40 operações comerciais complementares. A unidade deve abrir no 2º semestre de 2026 e o processo seletivo para preencher as cerca de 700 vagas segue em andamento.",
+      "fonte": "SuperHiper / DiárioZonaNorte",
+      "hora": "agosto/2026",
+      "url": "https://www.superhiper.com.br/tauste-realiza-mutirao-de-empregos-para-nova-loja-na-zona-norte-de-sp/",
+      "icone": "💼",
+      "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
-      "dia": "16",
+      "dia": "20",
       "mes": "Ago",
-      "cor_fundo": "#8E44AD",
-      "bairro": "Freguesia do Ó",
-      "titulo": "\"Corpo, ritmo e território: o Samba do Cruz\" — Jornada do Patrimônio 2026",
-      "hora": "a confirmar no local",
-      "local": "Casa de Cultura Municipal Freguesia do Ó",
-      "descricao": "Curso gratuito sobre o Espaço Cruz da Esperança (fundado em 1958) que discute samba, corpos negros e território, entendendo a roda de samba como prática coletiva de pertencimento e continuidade histórica.",
+      "cor_fundo": "#2C3E50",
+      "bairro": "Vila Fanton",
+      "titulo": "Oficina do Plano de Ação da Subprefeitura Perus/Anhanguera",
+      "hora": "19h às 22h",
+      "local": "CEU Perus - Rua Bernardo José de Lorena, s/nº",
+      "descricao": "Encontro participativo aberto à população para debater o Plano de Ação da Subprefeitura Perus/Anhanguera 2026-2029, com apoio de mapas impressos e fichas temáticas sobre meio ambiente, mobilidade, habitação e patrimônio cultural. Pré-inscrição não obrigatória.",
       "gratuito": true,
       "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/cultura/w/confira-a-programa%C3%A7%C3%A3o-dos-parceiros-da-jornada-do-patrim%C3%B4nio-2026"
+      "url": "https://prefeitura.sp.gov.br/web/perus/w/zonas-leste-norte-e-oeste-recebem-oficinas-dos-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-entre-18-e-21-de-agosto"
+    },
+    {
+      "dia": "20",
+      "mes": "Ago",
+      "cor_fundo": "#34495E",
+      "bairro": "Jardim Íris",
+      "titulo": "Oficina do Plano de Ação da Subprefeitura Pirituba/Jaraguá",
+      "hora": "19h às 22h",
+      "local": "Subprefeitura Pirituba/Jaraguá - Rua Dr. Carlos Afrânio da Cunha Matos, 67",
+      "descricao": "Encontro participativo aberto à população para debater o Plano de Ação da Subprefeitura Pirituba/Jaraguá 2026-2029, parte da rodada de oficinas promovida pela SMUL e SMSUB em todas as subprefeituras da cidade.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/perus/w/zonas-leste-norte-e-oeste-recebem-oficinas-dos-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-entre-18-e-21-de-agosto"
     },
     {
       "dia": "20",
@@ -212,20 +239,40 @@
   "vagas": [
     {
       "icone": "🛒",
-      "titulo": "700 vagas para a nova loja do Tauste Supermercados",
+      "titulo": "Até 700 vagas para a nova loja do Tauste Supermercados",
       "empresa": "Tauste Supermercados",
       "bairro": "Santana",
-      "requisitos": "Diversas funções para operação de loja (caixas, repositores, açougue, padaria, administrativo); mutirão de contratação para a unidade que abre no 2º semestre de 2026",
+      "requisitos": "Diversas funções para operação de loja (caixas, repositores, açougue, padaria, administrativo); processo seletivo para a unidade que abre no 2º semestre de 2026",
       "tipo": "CLT",
-      "fonte": "DiárioZonaNorte",
+      "fonte": "SuperHiper",
       "dias_atras": "processo seletivo em andamento"
     },
     {
-      "icone": "📦",
-      "titulo": "Mais de 900 vagas no Cate, sem exigência de experiência",
+      "icone": "🏢",
+      "titulo": "Vagas diversas no Cate Casa Verde",
       "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Brasilândia",
-      "requisitos": "Vagas em comércio, serviços e construção civil, com salários de até R$ 3.150; atendimento no Cate Brasilândia - Av. João Marcelino Branco, 95",
+      "bairro": "Casa Verde",
+      "requisitos": "Vagas em comércio, serviços, construção civil e saúde, com salários entre R$ 800 e R$ 5.304; atendimento na Avenida Ordem e Progresso, 1001",
+      "tipo": "CLT",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "vagas abertas (agosto/2026)"
+    },
+    {
+      "icone": "🏢",
+      "titulo": "Vagas diversas no Cate Perus",
+      "empresa": "Rede Cate - Prefeitura de São Paulo",
+      "bairro": "Perus",
+      "requisitos": "Dentro do total de mais de 1.800 vagas oferecidas pela rede Cate na última semana de agosto; atendimento na Rua Ylídio Figueiredo, 285",
+      "tipo": "CLT",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "vagas abertas (agosto/2026)"
+    },
+    {
+      "icone": "🚪",
+      "titulo": "Vagas diversas no Cate Pirituba",
+      "empresa": "Rede Cate - Prefeitura de São Paulo",
+      "bairro": "Vila Pirituba",
+      "requisitos": "Oportunidades em diferentes setores dentro do total de mais de 1.800 vagas oferecidas pela rede Cate nesta semana; atendimento na Rua Paula Ferreira, 1708",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
       "dias_atras": "vagas abertas (agosto/2026)"
@@ -239,19 +286,17 @@
       "tipo": "CLT",
       "fonte": "Portal Cate",
       "dias_atras": "publicada em 13/08/2026"
-    },
-    {
-      "icone": "🚪",
-      "titulo": "Vagas diversas na última semana de agosto no Cate Pirituba",
-      "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Pirituba",
-      "requisitos": "Oportunidades em diferentes setores dentro do total de mais de 1.800 vagas oferecidas pela rede Cate nesta semana; atendimento na Rua Paula Ferreira, 1708 - Vila Pirituba",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas abertas (agosto/2026)"
     }
   ],
   "politica": [
+    {
+      "orgao": "🏛️ SMUL / SMSUB - Planos de Ação das Subprefeituras",
+      "bairro": "Perus",
+      "titulo": "Perus/Anhanguera e Pirituba/Jaraguá recebem oficinas dos Planos de Ação das Subprefeituras 2026-2029",
+      "impacto": "Moradores podem apresentar sugestões e apontar problemas de infraestrutura, mobilidade, habitação e patrimônio para orientar o desenvolvimento urbano local; consulta pública on-line também disponível no Participe+",
+      "status": "4ª semana de oficinas presenciais, dia 20/08",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
+    },
     {
       "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
       "bairro": "Pirituba",
@@ -261,20 +306,12 @@
       "fonte": "Subprefeitura Pirituba/Jaraguá"
     },
     {
-      "orgao": "🏛️ Prefeitura de São Paulo",
-      "bairro": "Jardim Peri",
-      "titulo": "Casa Verde/Cachoeirinha é a primeira subprefeitura da nova fase do Prefeitura Presente",
-      "impacto": "Entrega da UPA III Jardim Peri (27ª UPA da cidade), do Centro de Referência Casa da Mulher Cachoeirinha e do 29º Descomplica SP",
-      "status": "Equipamentos inaugurados",
-      "fonte": "Prefeitura de São Paulo"
-    },
-    {
-      "orgao": "🏛️ Prefeitura de São Paulo",
-      "bairro": "Conjunto Habitacional Recanto dos Humildes",
-      "titulo": "Prefeitura Presente leva mais de R$ 1 bilhão em investimentos a Perus/Anhanguera",
-      "impacto": "UBS Recanto dos Humildes recebe R$ 13,4 milhões e amplia capacidade para até 11 mil atendimentos por mês; UPA Anhanguera/Residencial das Orquídeas soma R$ 13,1 milhões; drenagem do Ribeirão Perus recebe R$ 173 milhões e beneficia 88 mil pessoas",
-      "status": "Obras entregues e em andamento",
-      "fonte": "Prefeitura de São Paulo - Secretaria Municipal da Saúde"
+      "orgao": "🏛️ Subprefeitura Casa Verde/Cachoeirinha",
+      "bairro": "Casa Verde",
+      "titulo": "Orçamento Cidadão 2026 avança para a 2ª etapa no território Casa Verde/Cachoeirinha/Limão",
+      "impacto": "Das 80 propostas apresentadas por moradores na 1ª etapa (2.571 participantes), o Conselho Participativo Municipal (CPM) deve priorizar 10 e desenvolver mais 5, totalizando 15 propostas para a região",
+      "status": "2ª etapa em andamento",
+      "fonte": "Subprefeitura Casa Verde"
     },
     {
       "orgao": "🏛️ Licenciamento Ambiental (SEI 6027.2026/0007302-8)",
@@ -288,16 +325,16 @@
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "🌧️",
-      "titulo": "Chuva forte gera alerta da Defesa Civil na Zona Norte neste sábado (15)",
-      "desc": "O CGE emitiu comunicado severo pela manhã para a zona norte e o centro da capital; o estado de alerta foi encerrado às 8h55. O tempo deve seguir instável, com possibilidade de chuva fraca e isolada ao longo do dia.",
-      "meta": "CGE - Centro de Gerenciamento de Emergências Climáticas, 15/08/2026"
+      "emoji": "☀️",
+      "titulo": "Veranico chega à capital entre segunda (17) e quinta (20/08)",
+      "desc": "Simulações do CGE indicam máximas acima de 30°C e umidade relativa do ar abaixo de 30% entre segunda e quinta-feira, período seco e quente típico de veranico de inverno.",
+      "meta": "CGE - Centro de Gerenciamento de Emergências Climáticas"
     },
     {
       "tipo": "neutro",
-      "emoji": "☀️",
-      "titulo": "Veranico chega à capital entre segunda (17) e quinta (20/08)",
-      "desc": "Após o fim de semana chuvoso, simulações do CGE indicam predomínio de sol e tempo seco a partir de domingo (16), que deve ter poucas nuvens.",
+      "emoji": "🌥️",
+      "titulo": "Domingo (16) começa nublado antes da chegada do calor seco",
+      "desc": "O dia tem predomínio de sol entre nuvens esparsas, mínima perto de 16°C e máxima prevista de 27°C, com umidade caindo ao longo da tarde.",
       "meta": "CGE - Centro de Gerenciamento de Emergências Climáticas"
     },
     {
@@ -310,17 +347,12 @@
     {
       "tipo": "neutro",
       "emoji": "🚗",
-      "titulo": "Não há rodízio de veículos neste fim de semana",
-      "desc": "O rodízio municipal funciona apenas em dias úteis, das 7h às 10h e das 17h às 20h. Na segunda-feira (17), ficam restritas as placas com final 1 e 2.",
+      "titulo": "Rodízio de veículos volta a valer na segunda-feira (17)",
+      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h. Na segunda-feira (17), ficam restritas as placas com final 1 e 2.",
       "meta": "CET - Companhia de Engenharia de Tráfego"
     }
   ],
   "fim_de_semana": [
-    {
-      "emoji": "🏛️",
-      "titulo": "Curso do Festival do Patrimônio: \"Samba do Cruz\"",
-      "info": "16/08 · Casa de Cultura Municipal Freguesia do Ó, Freguesia do Ó · Gratuito"
-    },
     {
       "emoji": "💃",
       "titulo": "\"Seu Nome: Dita\" abre festejos dos 434 anos da Freguesia do Ó",
@@ -332,14 +364,14 @@
       "info": "19/08 a 01/09 · Casa de Cultura Salvador Ligabue, Freguesia do Ó · Gratuito"
     },
     {
-      "emoji": "🎪",
-      "titulo": "\"Vivência Jongo: Dança, Ancestralidade e Música\"",
-      "info": "29/08 · 10h · Fábrica de Cultura Brasilândia · Gratuito"
+      "emoji": "🏛️",
+      "titulo": "Oficinas dos Planos de Ação das Subprefeituras Perus/Anhanguera e Pirituba/Jaraguá",
+      "info": "20/08 · 19h · CEU Perus e sede da Subprefeitura Pirituba/Jaraguá · Gratuito"
     },
     {
-      "emoji": "🎉",
-      "titulo": "Fábrica de Cultura Jaçanã celebra 13 anos",
-      "info": "29/08 · a partir das 12h · Rua Raimundo Eduardo da Silva, 138, Jaçanã · Gratuito"
+      "emoji": "☀️",
+      "titulo": "Veranico com sol e calor entre segunda e quinta",
+      "info": "17 a 20/08 · máximas acima de 30°C, boa janela para passeios ao ar livre"
     }
   ]
 }
