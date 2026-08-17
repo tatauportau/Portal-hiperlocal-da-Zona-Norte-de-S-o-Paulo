@@ -3,16 +3,16 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚔 Flagrante na Zona Norte",
+      "pill": "🚨 Tragédia na Freguesia do Ó",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Perseguição termina com prisão de dupla em carro roubado na Avenida Braz Leme",
-      "resumo": "Um homem de 37 anos e uma mulher de 27 foram presos após perseguição policial que começou na zona sul e terminou na Avenida Braz Leme, na Casa Verde. A dupla estava em um HB20 roubado com placas adulteradas e, ao notar a presença policial, tentou fugir até o veículo colidir contra um canteiro central. A ação teve apoio do helicóptero Águia da Polícia Militar. O caso foi registrado no 13º DP (Casa Verde) por receptação, roubo e adulteração de sinal identificador de veículo.",
-      "fonte": "SBT News",
-      "hora": "16/08/2026",
-      "url": "https://sbtnews.sbt.com.br/noticia/policia/perseguicao-policial-cinematografica-termina-com-prisao-de-dois-suspeitos-na-zona-norte-de-sp",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Filho de policial civil, de 10 anos, morre baleado durante tentativa de assalto na Freguesia do Ó",
+      "resumo": "Um policial civil e o filho, de 10 anos, foram surpreendidos por um assaltante na Rua Pedro Feliciano Domingues na tarde de domingo (16/8). Durante a reação, houve troca de tiros: o agente foi ferido de raspão, mas a criança foi atingida por ao menos três disparos e não resistiu. O suspeito, baleado durante o confronto, também morreu horas depois no hospital. O menino será velado e sepultado nesta segunda-feira (17), no Memorial Parque Jaraguá.",
+      "fonte": "Folha Noroeste",
+      "hora": "17/08/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/filho-de-policial-civil-morre-baleado-durante-tentativa-de-roubo-de-moto-na-freguesia-do-o/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
     },
@@ -20,83 +20,27 @@
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Limão",
-      "bairro": "Limão",
-      "titulo": "Dupla é presa em flagrante por furto de moto na Avenida Otaviano Alves de Lima",
-      "resumo": "Uma equipe da Polícia Militar prendeu dois homens em flagrante durante abordagem na Avenida Otaviano Alves de Lima, região do Limão. Os policiais atendiam a um motorista com o carro quebrado na Marginal Tietê quando os suspeitos passaram em alta velocidade numa moto; a ordem de parada não foi obedecida e, durante a perseguição, o condutor perdeu o controle e caiu. A moto usada pela dupla tinha placa clonada e também era produto de furto.",
-      "fonte": "BNews São Paulo",
-      "hora": "11/08/2026",
-      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/furto-de-celulares-dupla-e-presa-em-flagrante-na-zona-norte.html",
+      "tag_bairro": "📍 Vila Morro Grande",
+      "bairro": "Vila Morro Grande",
+      "titulo": "Mulher é morta a facadas dentro de supermercado no Morro Grande; companheiro é preso",
+      "resumo": "Uma mulher morreu após ser atacada a golpes de faca dentro de um supermercado próximo à Praça Santa Clara de Assis, no Morro Grande, na tarde de domingo (16/8). O homem apontado como companheiro da vítima foi detido pouco depois do crime, tratado inicialmente como feminicídio. O caso foi registrado no 72º Distrito Policial, em Vila Penteado, que segue com as investigações.",
+      "fonte": "Brasil 247 / g1",
+      "hora": "17/08/2026",
+      "url": "https://www.brasil247.com/geral/mulher-e-morta-a-facadas-pelo-companheiro-em-supermercado-na-zona-norte-de-sp/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Vila Maria",
-      "bairro": "Vila Maria",
-      "titulo": "Quatro homens são presos por tentativa de furto a residência na Vila Maria",
-      "resumo": "Quatro suspeitos, de 24 a 29 anos, foram presos em flagrante após tentativa de furto a uma residência na Vila Maria, zona norte da capital. O caso foi registrado no 73º Distrito Policial (Jaçanã), que deve seguir com as investigações sobre o grupo.",
-      "fonte": "SBT News",
-      "hora": "agosto/2026",
-      "url": "https://sbtnews.sbt.com.br/noticia/policia/quatro-suspeitos-sao-presos-por-tentativa-de-furto-a-residencia-na-zona-norte-de-sao-paulo",
-      "icone": "🚨",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Jardim Brasília",
-      "bairro": "Jardim Brasília",
-      "titulo": "Condenado por roubo a joalheria é capturado em operação da Polícia Civil em Taipas",
-      "resumo": "A Polícia Civil prendeu um homem de 35 anos, condenado por roubo a joalheria e procurado pela Justiça do Paraná, durante operação da Garra (Grupamento Armado de Repressão a Roubos e Assaltos) do Dope na comunidade Jardim Brasília, região de Taipas. Havia mandado de prisão em aberto expedido pela 1ª Vara Criminal de Curitiba (PR); ele deve cumprir pena em regime fechado.",
-      "fonte": "Agência SP",
-      "hora": "02/07/2026",
-      "url": "https://www.agenciasp.sp.gov.br/policia-civil-prende-condenado-por-roubo-a-joalheria-na-zona-norte-da-capital/",
-      "icone": "🚨",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Medeiros",
-      "bairro": "Vila Medeiros",
-      "titulo": "Sarampo concentra casos na Zona Norte; vacinação segue na Estação Tucuruvi do Metrô",
-      "resumo": "Dos 15 casos confirmados de sarampo em São Paulo, a maioria está na capital, com concentração em Vila Medeiros e Vila Maria. Moradores de 6 meses a 59 anos podem se vacinar em qualquer UBS, mesmo quem já tomou dose antes. A campanha segue com posto extra na Estação Tucuruvi (Linha 1-Azul), aplicando doses das 10h às 16h até sexta-feira (21/08), sem necessidade de agendamento.",
-      "fonte": "DiárioZonaNorte / Agência Brasil",
-      "hora": "agosto/2026",
-      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
-      "icone": "💉",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Educação",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Prefeitura entrega CEI Dionísia Gonçalves Pinto – Nísia Floresta, em Pirituba",
-      "resumo": "A nova unidade de educação infantil tem capacidade para atender 200 bebês e crianças de 0 a 3 anos, com infraestrutura totalmente acessível. O investimento na obra foi de R$ 4,3 milhões, entregue durante edição do Prefeitura Presente na região de Pirituba/Jaraguá.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
-      "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137936",
-      "icone": "🏫",
-      "icone_classe": "ic-edu"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Prefeitura retoma obras que vão ligar Pirituba à Lapa, paradas há 3 anos por decisão judicial",
-      "resumo": "O complexo viário Pirituba-Lapa, fundamental para aliviar o trânsito entre as duas regiões, tem investimento municipal de R$ 209,5 milhões e execução prevista para dezembro de 2026, segundo anúncio feito durante o Prefeitura Presente na região.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
-      "hora": "agosto/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/137939",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Jardim Damasceno",
+      "bairro": "Jardim Damasceno",
+      "titulo": "SIURB investe R$ 5,9 milhões em obras contra áreas de risco no Jardim Damasceno",
+      "resumo": "A Prefeitura, por meio da Secretaria Municipal de Infraestrutura e Obras (SIURB), está investindo R$ 5,9 milhões em obras de combate a áreas de risco no Jardim Damasceno, na Brasilândia. Serão mais de 1.500 metros de intervenções na Avenida Hugo Ítalo Merigo, com novas escadas hidráulicas e estruturas de captação e direcionamento das águas, dentro do Plano Municipal de Redução de Riscos. Conclusão prevista até o fim do ano.",
+      "fonte": "Folha Noroeste",
+      "hora": "17/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/siurb-investe-em-obras-de-combate-as-areas-de-risco-no-jardim-damasceno-na-brasilandia/",
       "icone": "🚧",
       "icone_classe": "ic-mob"
     },
@@ -112,6 +56,62 @@
       "hora": "agosto/2026",
       "url": "https://prefeitura.sp.gov.br/w/s%C3%A3o-paulo-amplia-mobilidade-urbana-com-mais-de-r-13-bilh%C3%B5es-investidos-em-obras-que-reduzem-o-tempo-de-deslocamento",
       "icone": "🚧",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Obras de manutenção no CEI Morada do Sol, em Pirituba, devem ser concluídas em agosto",
+      "resumo": "Iniciadas em março, as obras de manutenção no Centro de Educação Infantil Morada do Sol, em Pirituba, estão previstas para terminar ainda em agosto. Os serviços são conduzidos pelo Departamento de Edificações (Edif) da Prefeitura, com investimento de R$ 956 mil.",
+      "fonte": "Folha Noroeste",
+      "hora": "agosto/2026",
+      "url": "https://folhanoroeste.com.br/regional/obras-de-manutencao-no-cei-morada-do-sol-em-pirituba-devem-ser-finalizadas-em-agosto/",
+      "icone": "🏫",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Tucuruvi",
+      "bairro": "Tucuruvi",
+      "titulo": "Sarampo: SP confirma 16º caso e vacinação segue na Estação Tucuruvi até sexta (21)",
+      "resumo": "O estado de São Paulo confirmou o 16º caso de sarampo em 2026, sendo 13 na capital, concentrados sobretudo em Vila Medeiros e Vila Maria. A Campanha de Multivacinação segue até 1º de setembro em todo o estado, e moradores de 6 meses a 59 anos podem se vacinar contra sarampo em qualquer UBS, mesmo quem já tomou dose antes. Um posto extra segue funcionando na Estação Tucuruvi (Linha 1-Azul), das 10h às 16h, até sexta-feira (21/08), sem necessidade de agendamento.",
+      "fonte": "CNN Brasil / Agência Brasil",
+      "hora": "agosto/2026",
+      "url": "https://www.cnnbrasil.com.br/saude/sp-tem-novo-caso-de-sarampo-confirmado-infectados-chegam-a-16/",
+      "icone": "💉",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Jardim Brasil",
+      "bairro": "Jardim Brasil",
+      "titulo": "Subprefeitura inicia reforma da Praça Arlindo Luz, no Jardim Brasil",
+      "resumo": "A Subprefeitura Vila Maria/Vila Guilherme começou, no início de agosto, a reforma da Praça Arlindo Luz, entre a Rua Basílio Alves Morango e a Avenida Ramiz Galvão, no Jardim Brasil (Vila Medeiros). Os serviços incluem reconstrução de calçadas internas, paisagismo e instalação de mesas e bancos. O investimento estimado é de R$ 70 mil, com prazo de execução de cerca de 60 dias.",
+      "fonte": "Subprefeitura Vila Maria/Vila Guilherme",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/web/vila_maria_vila_guilherme/noticias",
+      "icone": "🌳",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Parque Novo Mundo",
+      "bairro": "Parque Novo Mundo",
+      "titulo": "Reforma de praça entre as ruas Eureka e Lídice começa no Parque Novo Mundo",
+      "resumo": "A Subprefeitura Vila Maria/Vila Guilherme também iniciou, no começo de agosto, obras de reforma em uma praça localizada entre as ruas Eureka e Lídice, no Parque Novo Mundo, dentro do programa de zeladoria da região.",
+      "fonte": "Subprefeitura Vila Maria/Vila Guilherme",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/web/vila_maria_vila_guilherme/noticias",
+      "icone": "🌳",
       "icone_classe": "ic-mob"
     },
     {
@@ -248,55 +248,37 @@
       "dias_atras": "processo seletivo em andamento"
     },
     {
-      "icone": "🏢",
-      "titulo": "Vagas diversas no Cate Casa Verde",
-      "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Casa Verde",
-      "requisitos": "Vagas em comércio, serviços, construção civil e saúde, com salários entre R$ 800 e R$ 5.304; atendimento na Avenida Ordem e Progresso, 1001",
+      "icone": "🧹",
+      "titulo": "Mais de 600 vagas no setor de limpeza pelo Cate",
+      "empresa": "Cate - Prefeitura de São Paulo",
+      "bairro": "Vila Guilherme",
+      "requisitos": "Vagas para o setor de limpeza em toda a cidade, com seleção marcada para 28/08/2026; unidade Cate Vila Maria/Vila Guilherme na Rua General Mendes, 111",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas abertas (agosto/2026)"
+      "dias_atras": "seleção em 28/08/2026"
     },
     {
-      "icone": "🏢",
-      "titulo": "Vagas diversas no Cate Perus",
-      "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Perus",
-      "requisitos": "Dentro do total de mais de 1.800 vagas oferecidas pela rede Cate na última semana de agosto; atendimento na Rua Ylídio Figueiredo, 285",
+      "icone": "📦",
+      "titulo": "50 vagas para auxiliar de armazém, sem exigência de experiência",
+      "empresa": "CIC Oeste (Secretaria da Justiça e Cidadania) / Grupo Serbom",
+      "bairro": "Jaraguá",
+      "requisitos": "Atuação próxima à estação CEASA (Linha 9-Esmeralda), início imediato, salário de R$ 2.124,00 + vale-alimentação de R$ 120,00 + refeição no local + vale-transporte. Inscrições no CIC Oeste, Estrada das Taipas, 990, das 9h às 15h",
       "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas abertas (agosto/2026)"
+      "fonte": "Secretaria da Justiça e Cidadania de SP",
+      "dias_atras": "processo seletivo em andamento"
     },
     {
-      "icone": "🚪",
-      "titulo": "Vagas diversas no Cate Pirituba",
-      "empresa": "Rede Cate - Prefeitura de São Paulo",
-      "bairro": "Vila Pirituba",
-      "requisitos": "Oportunidades em diferentes setores dentro do total de mais de 1.800 vagas oferecidas pela rede Cate nesta semana; atendimento na Rua Paula Ferreira, 1708",
+      "icone": "🩺",
+      "titulo": "Processo seletivo para equipe de saúde e assistência, incluindo atuação com TEA",
+      "empresa": "USC Saúde",
+      "bairro": "Pirituba",
+      "requisitos": "Vagas para diferentes áreas de saúde, assistência, gestão e apoio, incluindo profissionais para atuação junto a pessoas com Transtorno do Espectro Autista (TEA); inscrições pelo site da USC Saúde até sexta-feira (21/08)",
       "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "vagas abertas (agosto/2026)"
-    },
-    {
-      "icone": "💼",
-      "titulo": "Vaga CLT com salário de R$ 2.300, fundamental completo",
-      "empresa": "Cate Zona Norte/Santana",
-      "bairro": "Santana",
-      "requisitos": "Escolaridade fundamental completa, sem exigência de experiência prévia; jornada fixa. Atendimento na Rua Voluntários da Pátria, 1553",
-      "tipo": "CLT",
-      "fonte": "Portal Cate",
-      "dias_atras": "publicada em 13/08/2026"
+      "fonte": "Folha Noroeste",
+      "dias_atras": "inscrições até 21/08/2026"
     }
   ],
   "politica": [
-    {
-      "orgao": "🏛️ SMUL / SMSUB - Planos de Ação das Subprefeituras",
-      "bairro": "Perus",
-      "titulo": "Perus/Anhanguera e Pirituba/Jaraguá recebem oficinas dos Planos de Ação das Subprefeituras 2026-2029",
-      "impacto": "Moradores podem apresentar sugestões e apontar problemas de infraestrutura, mobilidade, habitação e patrimônio para orientar o desenvolvimento urbano local; consulta pública on-line também disponível no Participe+",
-      "status": "4ª semana de oficinas presenciais, dia 20/08",
-      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
-    },
     {
       "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
       "bairro": "Pirituba",
@@ -304,6 +286,14 @@
       "impacto": "Obra de R$ 209,5 milhões deve aliviar o trânsito entre as duas regiões; execução prevista para dezembro de 2026",
       "status": "Obras retomadas",
       "fonte": "Subprefeitura Pirituba/Jaraguá"
+    },
+    {
+      "orgao": "🏛️ SMUL / SMSUB - Planos de Ação das Subprefeituras",
+      "bairro": "Perus",
+      "titulo": "Perus/Anhanguera e Pirituba/Jaraguá recebem oficinas dos Planos de Ação das Subprefeituras 2026-2029",
+      "impacto": "Moradores podem apresentar sugestões e apontar problemas de infraestrutura, mobilidade, habitação e patrimônio para orientar o desenvolvimento urbano local; consulta pública on-line também disponível no Participe+",
+      "status": "Oficinas presenciais nesta quinta-feira, 20/08",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
     },
     {
       "orgao": "🏛️ Subprefeitura Casa Verde/Cachoeirinha",
@@ -326,30 +316,30 @@
     {
       "tipo": "info",
       "emoji": "☀️",
-      "titulo": "Veranico chega à capital entre segunda (17) e quinta (20/08)",
+      "titulo": "Veranico segue até quinta-feira (20/08)",
       "desc": "Simulações do CGE indicam máximas acima de 30°C e umidade relativa do ar abaixo de 30% entre segunda e quinta-feira, período seco e quente típico de veranico de inverno.",
       "meta": "CGE - Centro de Gerenciamento de Emergências Climáticas"
     },
     {
       "tipo": "neutro",
-      "emoji": "🌥️",
-      "titulo": "Domingo (16) começa nublado antes da chegada do calor seco",
-      "desc": "O dia tem predomínio de sol entre nuvens esparsas, mínima perto de 16°C e máxima prevista de 27°C, com umidade caindo ao longo da tarde.",
-      "meta": "CGE - Centro de Gerenciamento de Emergências Climáticas"
+      "emoji": "🚗",
+      "titulo": "Rodízio de veículos: hoje (17/08) restringe placas final 1 e 2",
+      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido. Ao longo da semana: terça (18) placas 3 e 4, quarta (19) placas 5 e 6, quinta (20) placas 7 e 8, sexta (21) placas 9 e 0.",
+      "meta": "CET - Companhia de Engenharia de Tráfego"
     },
     {
       "tipo": "ok",
       "emoji": "💉",
       "titulo": "Vacinação contra sarampo segue na Estação Tucuruvi do Metrô até sexta (21)",
-      "desc": "Doses aplicadas das 10h às 16h nos dias 17 a 21 de agosto, na Linha 1-Azul, sem necessidade de agendamento prévio.",
-      "meta": "Metrô SP / Agência Brasil"
+      "desc": "Doses aplicadas das 10h às 16h, na Linha 1-Azul, sem necessidade de agendamento prévio, para pessoas de 6 meses a 59 anos.",
+      "meta": "Metrô SP / Secretaria de Saúde"
     },
     {
-      "tipo": "neutro",
-      "emoji": "🚗",
-      "titulo": "Rodízio de veículos volta a valer na segunda-feira (17)",
-      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h. Na segunda-feira (17), ficam restritas as placas com final 1 e 2.",
-      "meta": "CET - Companhia de Engenharia de Tráfego"
+      "tipo": "info",
+      "emoji": "🦠",
+      "titulo": "SP chega a 16 casos confirmados de sarampo em 2026",
+      "desc": "A capital concentra 13 dos 16 casos do estado, com foco de transmissão na Zona Norte. A Campanha de Multivacinação segue até 1º de setembro, com tríplice viral disponível para toda a população de 6 meses a 59 anos.",
+      "meta": "CNN Brasil / Secretaria de Estado da Saúde"
     }
   ],
   "fim_de_semana": [
@@ -362,16 +352,6 @@
       "emoji": "🖼️",
       "titulo": "Exposição \"Freguesia do Ó – 434 Anos de História e Tradição\"",
       "info": "19/08 a 01/09 · Casa de Cultura Salvador Ligabue, Freguesia do Ó · Gratuito"
-    },
-    {
-      "emoji": "🏛️",
-      "titulo": "Oficinas dos Planos de Ação das Subprefeituras Perus/Anhanguera e Pirituba/Jaraguá",
-      "info": "20/08 · 19h · CEU Perus e sede da Subprefeitura Pirituba/Jaraguá · Gratuito"
-    },
-    {
-      "emoji": "☀️",
-      "titulo": "Veranico com sol e calor entre segunda e quinta",
-      "info": "17 a 20/08 · máximas acima de 30°C, boa janela para passeios ao ar livre"
     }
   ]
 }
