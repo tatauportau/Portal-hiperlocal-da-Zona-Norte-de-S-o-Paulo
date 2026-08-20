@@ -3,86 +3,86 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🏥 Investimento na saúde",
+      "pill": "🏟️ Grande investimento",
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Vila Guilherme",
+      "bairro": "Vila Guilherme",
+      "titulo": "Live Nation e Cidade Center Norte avançam com a Arena São Paulo, investimento de R$ 1,5 bilhão na Vila Guilherme",
+      "resumo": "Após aprovação do Estudo de Impacto Ambiental pela Câmara Técnica Municipal, avança o licenciamento da Arena São Paulo, projeto de R$ 1,5 bilhão da Live Nation em parceria com a Cidade Center Norte. Será a maior arena coberta da América do Sul, com capacidade para 21 mil pessoas, mais de 200 eventos por ano, estacionamento para 2 mil veículos e integração com o transporte público da Zona Norte. As obras devem começar no segundo semestre de 2026, com inauguração prevista para 2028; estudo da Oxford Economics estima geração de cerca de 1.800 empregos por ano durante a operação.",
+      "fonte": "DiárioZonaNorte / Brasil 247",
+      "hora": "20/08/2026",
+      "url": "https://www.diariozonanorte.com.br/cidade-center-norte-avanca-com-arena-de-r-15-bilhao-enquanto-zona-norte-discute-os-impactos-do-projeto/",
+      "icone": "🏟️",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Prefeito e Secretário da Saúde visitam obras de requalificação do Hospital de Pirituba",
-      "resumo": "O prefeito Ricardo Nunes e o secretário municipal da Saúde estiveram nesta terça (18/8) acompanhando as obras do Hospital Municipal Dr. José Soares Hungria, em Pirituba. Está sendo erguido um prédio novo, integrado à UPA e ao hospital antigo, com investimento superior a R$ 46 milhões. O projeto prevê ampliação de 80 para 201 leitos, novas salas de cirurgia e expansão da área construída.",
-      "fonte": "Folha Noroeste",
-      "hora": "19/08/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/requalificacao-do-hospital-de-pirituba-secretario-da-saude-e-prefeito-visitam-as-obras-no-bairro/",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Santana completa 244 anos com obras, novo hospital e investimentos no bairro",
+      "resumo": "Ao completar 244 anos, Santana vive um dos períodos de maior transformação urbana das últimas décadas: revitalização da Praça Heróis da FEB, modernização do Campo de Marte (que passa a operar por instrumentos) e obras do calçadão da Rua Leite de Morais em fase final. Na saúde, chama atenção a construção de um novo hospital Mater Dei em parceria com a Atlântica Hospitais, com investimento da ordem de R$ 600 milhões.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "20/08/2026",
+      "url": "https://www.diariozonanorte.com.br/santana-completa-244-anos-entre-obras-novos-investimentos-e-uma-historia-que-ajudou-a-construir-sao-paulo/",
       "icone": "🏥",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Recanto dos Humildes",
-      "bairro": "Conjunto Habitacional Recanto dos Humildes",
-      "titulo": "Ação 'Prefeitura no Bairro' leva mais de 150 serviços ao Recanto dos Humildes",
-      "resumo": "A ação Prefeitura no Bairro chegou a Perus com tendas montadas na Praça Inácia Dias, ao lado da estação ferroviária, oferecendo mais de 150 serviços municipais até sexta-feira (22/8) para moradores do Recanto dos Humildes, Jardim do Russo e Jardim da Conquista: CET no bairro, mutirão de limpeza e cata-bagulho, manutenção de ruas e praças, CAT Móvel com vagas de emprego, MEI Móvel, orientações de saúde e habitação, entre outros.",
-      "fonte": "Subprefeitura Perus",
-      "hora": "19/08/2026",
-      "url": "https://prefeitura.sp.gov.br/web/perus/w/noticias/59855",
-      "icone": "🛠️",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Jardim do Russo",
-      "bairro": "Jardim do Russo",
-      "titulo": "Jardim do Russo também recebe serviços da ação 'Prefeitura no Bairro' até sexta",
-      "resumo": "Moradores do Jardim do Russo estão entre os beneficiados pela ação Prefeitura no Bairro, com tendas na Praça Inácia Dias (Perus) até 22/8, incluindo melhorias na iluminação pública, atividades culturais e físicas, distribuição de mudas, orientações sobre programas habitacionais e vagas na rede municipal de educação.",
-      "fonte": "Subprefeitura Perus",
-      "hora": "19/08/2026",
-      "url": "https://prefeitura.sp.gov.br/web/perus/w/noticias/59855",
-      "icone": "🛠️",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Jardim da Conquista",
-      "bairro": "Jardim da Conquista",
-      "titulo": "Jardim da Conquista recebe Gabinete Itinerante do Subprefeito e CRAS/CREAS até sexta",
-      "resumo": "A programação da Prefeitura no Bairro em Perus, até 22/8 na Praça Inácia Dias, também atende o Jardim da Conquista com Gabinete Itinerante do Subprefeito, Ouvidoria, Controladoria-Geral do Município, encaminhamento a unidades do CRAS e do CREAS e atendimento a pessoas com deficiência.",
-      "fonte": "Subprefeitura Perus",
-      "hora": "19/08/2026",
-      "url": "https://prefeitura.sp.gov.br/web/perus/w/noticias/59855",
-      "icone": "🛠️",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Educação",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Instituto Federal de Pirituba abre inscrições para cursos de extensão gratuitos",
-      "resumo": "O Campus São Paulo Pirituba do IFSP abriu inscrições, até 27/8, para cursos de extensão gratuitos, entre eles um preparatório para o vestibular com turma iniciando em 3 de setembro: 21 vagas de ampla concorrência, 7 para candidatos autodeclarados pretos, pardos, indígenas e quilombolas, e 1 para pessoa com deficiência.",
-      "fonte": "Folha Noroeste",
-      "hora": "19/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/nstituto-federal-de-pirituba-abre-inscricoes-para-diversos-cursos-de-extensao-gratuitos/",
-      "icone": "🎓",
-      "icone_classe": "ic-edu"
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Tauste Supermercados prepara chegada a Santana e abre mutirão para 700 vagas",
+      "resumo": "A rede varejista Tauste Supermercados confirmou a abertura de uma unidade em Santana, com inauguração prevista para o final de setembro, e já iniciou mutirão de contratação para preencher 700 vagas de emprego na região.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "20/08/2026",
+      "url": "https://www.diariozonanorte.com.br/gigante-do-varejo-tauste-supermercados-prepara-chegada-ao-bairro-de-santana-e-abre-mutirao-para-preencher-700-vagas/",
+      "icone": "🛒",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "CIC Jaraguá promove Feirão de Vagas com cerca de 900 oportunidades de emprego",
-      "resumo": "A Secretaria da Justiça e Cidadania, pelo Centro de Integração da Cidadania (CIC) Oeste, recebe nesta quarta (19/8), das 10h às 16h, um feirão que reúne cerca de 900 oportunidades de empresas como Grupo Souza Lima, Home Care Ferreiras, Home Seniors, Adecco e Grupo Fixonline. Participação a partir de 18 anos, sem exigência de experiência; levar currículo impresso, RG e CPF.",
-      "fonte": "Folha Noroeste",
+      "tag_bairro": "📍 Conjunto Jova Rural",
+      "bairro": "Conjunto Jova Rural",
+      "titulo": "Feirões de emprego na Zona Norte oferecem 1.129 vagas CLT em 20 empresas",
+      "resumo": "A Secretaria de Desenvolvimento Econômico do Estado de São Paulo promove dois feirões de emprego e empreendedorismo na Zona Norte: dia 25/8 no CIC Jova Rural e dia 27/8 no CIC Taipas, das 10h às 15h. São 1.129 vagas com carteira assinada em 20 empresas, salários entre R$ 1.621 e R$ 3.011, com vagas para PCD e orientação sobre microcrédito do Banco do Povo Paulista.",
+      "fonte": "BRA 1 / Secretaria de Desenvolvimento Econômico do Estado de SP",
       "hora": "19/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/cic-jaragua-promove-feirao-de-vagas-com-cerca-de-900-oportunidades-de-emprego/",
+      "url": "https://www.bra1.com.br/geral/id-682047/zona_norte_de_sp_ganha_feiroes_com_mais_de_1.000_vagas_de_emprego",
+      "icone": "💼",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Anhanguera",
+      "bairro": "Anhanguera",
+      "titulo": "Motiva Autoban realiza manutenção em linhas de transmissão na Rodovia Anhanguera",
+      "resumo": "A concessionária Motiva Autoban realizou operação especial na Rodovia Anhanguera para manutenção aérea em linhas de transmissão, com comboios controlados e interrupções pontuais de tráfego na altura do distrito de Anhanguera, na Zona Norte.",
+      "fonte": "Motiva Autoban",
+      "hora": "16/08/2026",
+      "url": "https://rodovias.motiva.com.br/autoban/noticias/2026/agosto/motiva-autoban-realiza-operacao-especial-na-anhanguera-para-manu/",
+      "icone": "🚧",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Vila Maria Alta",
+      "bairro": "Vila Maria Alta",
+      "titulo": "Cate oferece mais de 2 mil vagas de emprego nesta semana, com postos na Zona Norte",
+      "resumo": "Os 46 postos do Cate (Centro de Apoio ao Trabalho e Empreendedorismo) da Prefeitura, entre eles as unidades de Vila Maria/Vila Guilherme, Santana, Pirituba, Perus, Jaraguá e Freguesia/Brasilândia, oferecem mais de 2.000 vagas de emprego, com salários entre R$ 761 e R$ 5.834. O setor de limpeza concentra 600 vagas (R$ 1.805 a R$ 2.676). Inscrições pelo Portal Cate ou presencialmente com RG, CPF e carteira de trabalho.",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "hora": "17/08/2026",
+      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/setor-de-limpeza-far%C3%A1-sele%C3%A7%C3%A3o-para-mais-de-600-vagas-de-emprego-no-cate",
       "icone": "💼",
       "icone_classe": "ic-eco"
     },
@@ -90,28 +90,14 @@
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Vila Bonilha",
-      "bairro": "Vila Bonilha",
-      "titulo": "Distrital Noroeste promove encontro para empreendedores 'INinovando Networking'",
-      "resumo": "A Associação Comercial de São Paulo, via Distrital Noroeste (Rua Luís Braille, 8 – Vila Bonilha), realiza nesta quarta (19/8), às 19h, encontro aberto ao público para empreendedores e profissionais que buscam conexões estratégicas e novos negócios, com palestras sobre planejamento estratégico e telefonia.",
-      "fonte": "Folha Noroeste",
-      "hora": "19/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/distrital-noroeste-realiza-encontro-para-empreendedores-ininovando-networking/",
+      "tag_bairro": "📍 Jardim São Bento",
+      "bairro": "Jardim São Bento",
+      "titulo": "Contrata SP leva mutirão de empregabilidade a Brasilândia e Jardim São Bento",
+      "resumo": "O programa Contrata SP, voltado a beneficiários do Programa Operação Trabalho (POT), passa pela Zona Norte com mutirões de empregabilidade: dia 26/8 no Centro POT Redenção Brasilândia (Rua Olinto Fraga Moreira, 191) e dia 28/8 no Centro POT Norte (Rua Leão XIII, 202, Jardim São Bento), das 10h às 15h, com apoio de equipes de recursos humanos do Cate.",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "hora": "17/08/2026",
+      "url": "https://prefeitura.sp.gov.br/web/desenvolvimento/w/setor-de-limpeza-far%C3%A1-sele%C3%A7%C3%A3o-para-mais-de-600-vagas-de-emprego-no-cate",
       "icone": "🤝",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Encontro 'Fala Mulher' discute violência obstétrica na Biblioteca Brito Broca",
-      "resumo": "Nesta quarta (19/8), às 20h, a Biblioteca Brito Broca (Av. Mutinga, 1425, Pirituba) recebe o encontro Fala Mulher, que vai abordar violência obstétrica, direitos das gestantes e experiências enfrentadas por mulheres no atendimento à gestação e ao parto.",
-      "fonte": "Folha Noroeste",
-      "hora": "19/08/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/encontro-fala-mulher-discute-violencia-obstetrica-com-o-publico-feminino-na-brito-broca/",
-      "icone": "🤱",
       "icone_classe": "ic-eco"
     },
     {
@@ -120,41 +106,28 @@
       "tag_label": "Saúde",
       "tag_bairro": "📍 Vila Medeiros",
       "bairro": "Vila Medeiros",
-      "titulo": "Prefeitura terá Dia D de Multivacinação com 483 UBS abertas no sábado (22/8)",
-      "resumo": "A Campanha de Multivacinação 'De Olho na Carteirinha' segue até 1º de setembro e terá Dia D neste sábado (22/8), com as 483 UBS da capital abertas das 8h às 17h. A ação reforça a vacinação contra o sarampo para toda a população de 6 meses a 59 anos, diante da circulação do vírus na cidade, com casos concentrados sobretudo em bairros da Zona Norte como Vila Medeiros e Vila Maria.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "19/08/2026",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/dia-d-da-multivacina%C3%A7%C3%A3o-ter%C3%A1-483-ubss-abertas-neste-s%C3%A1bado-22-na-capital",
+      "titulo": "Zona Norte registra oito casos de sarampo; vacinação segue reforçada até 1º de setembro",
+      "resumo": "A Zona Norte concentra parte dos oito casos de sarampo registrados na capital, o que levou a Secretaria Municipal da Saúde a manter a campanha de multivacinação 'De Olho na Carteirinha' até 1º de setembro, com reforço da vacina tríplice viral para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado.",
+      "fonte": "DiárioZonaNorte / Secretaria Municipal da Saúde",
+      "hora": "20/08/2026",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
       "icone": "💉",
       "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
-      "dia": "20",
+      "dia": "22",
       "mes": "Ago",
-      "cor_fundo": "#2C3E50",
-      "bairro": "Vila Fanton",
-      "titulo": "Oficina do Plano de Ação da Subprefeitura Perus/Anhanguera",
-      "hora": "19h às 22h",
-      "local": "CEU Perus - Rua Bernardo José de Lorena, s/nº",
-      "descricao": "Encontro participativo aberto à população para debater o Plano de Ação da Subprefeitura Perus/Anhanguera 2026-2029, com mapas impressos e fichas temáticas sobre meio ambiente, mobilidade, habitação e patrimônio cultural.",
+      "cor_fundo": "#E67E22",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Basquete 3x3 e Jiu-Jitsu nos 446 anos da Freguesia do Ó",
+      "hora": "a partir das 9h",
+      "local": "Praça do Cruzeiro - Freguesia do Ó",
+      "descricao": "Atividades esportivas gratuitas de basquete 3x3 e jiu-jitsu integram a programação especial dos 446 anos da Freguesia do Ó, reunindo esporte e lazer para toda a comunidade.",
       "gratuito": true,
       "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/perus/w/zonas-leste-norte-e-oeste-recebem-oficinas-dos-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-entre-18-e-21-de-agosto"
-    },
-    {
-      "dia": "20",
-      "mes": "Ago",
-      "cor_fundo": "#34495E",
-      "bairro": "Jardim Íris",
-      "titulo": "Oficina do Plano de Ação da Subprefeitura Pirituba/Jaraguá",
-      "hora": "19h às 22h",
-      "local": "Subprefeitura Pirituba/Jaraguá - Rua Dr. Carlos Afrânio da Cunha Matos, 67",
-      "descricao": "Encontro participativo para debater o Plano de Ação da Subprefeitura Pirituba/Jaraguá 2026-2029, parte da rodada de oficinas da SMUL e SMSUB em todas as subprefeituras da cidade.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/perus/w/zonas-leste-norte-e-oeste-recebem-oficinas-dos-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-entre-18-e-21-de-agosto"
+      "url": "https://folhanoroeste.com.br/regional/jogo-de-basquete-3x3-e-jiu-jitsu-estarao-presentes-nos-446-anos-da-freguesia-do-o/"
     },
     {
       "dia": "22",
@@ -168,6 +141,19 @@
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/saude/w/dia-d-da-multivacina%C3%A7%C3%A3o-ter%C3%A1-483-ubss-abertas-neste-s%C3%A1bado-22-na-capital"
+    },
+    {
+      "dia": "27",
+      "mes": "Ago",
+      "cor_fundo": "#2980B9",
+      "bairro": "Jaraguá",
+      "titulo": "Feirão de Emprego e Empreendedorismo PAT CIC Taipas",
+      "hora": "10h às 15h",
+      "local": "CIC Oeste - Estrada de Taipas, 990 - Parque Nações Unidas",
+      "descricao": "Feirão com vagas de emprego CLT em 20 empresas, distribuição de senhas a partir das 9h30, orientação sobre microcrédito do Banco do Povo Paulista e oficinas de currículo.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.bra1.com.br/geral/id-682047/zona_norte_de_sp_ganha_feiroes_com_mais_de_1.000_vagas_de_emprego"
     },
     {
       "dia": "29",
@@ -185,7 +171,7 @@
     {
       "dia": "29",
       "mes": "Ago",
-      "cor_fundo": "#2980B9",
+      "cor_fundo": "#2C3E50",
       "bairro": "Brasilândia",
       "titulo": "'Vivência Jongo: Dança, Ancestralidade e Música'",
       "hora": "10h",
@@ -199,99 +185,109 @@
   "vagas": [
     {
       "icone": "💼",
-      "titulo": "Feirão de Vagas do CIC Jaraguá - cerca de 900 oportunidades",
-      "empresa": "CIC Oeste / diversas empresas (Grupo Souza Lima, Home Care Ferreiras, Adecco, Grupo Fixonline, entre outras)",
-      "bairro": "Jaraguá",
-      "requisitos": "A partir de 18 anos, ambos os gêneros, sem exigência de experiência prévia; levar currículo impresso, RG e CPF",
+      "titulo": "Feirão de Emprego e Empreendedorismo PAT CIC Jova Rural",
+      "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
+      "bairro": "Conjunto Jova Rural",
+      "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; vagas para PCD e para maiores de 18 anos; levar RG, CPF, carteira de trabalho e currículo impresso",
       "tipo": "CLT",
-      "fonte": "Folha Noroeste / Secretaria da Justiça e Cidadania",
-      "dias_atras": "hoje, 19/08/2026, das 10h às 16h - Estrada das Taipas, 990"
+      "fonte": "BRA 1 / Secretaria de Desenvolvimento Econômico do Estado de SP",
+      "dias_atras": "dia 25/08/2026, das 10h às 15h - Rua Ari da Rocha Miranda, 36"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Feirão de Emprego e Empreendedorismo PAT CIC Taipas",
+      "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
+      "bairro": "Jaraguá",
+      "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; vagas para PCD e para maiores de 18 anos; levar RG, CPF, carteira de trabalho e currículo impresso",
+      "tipo": "CLT",
+      "fonte": "BRA 1 / Secretaria de Desenvolvimento Econômico do Estado de SP",
+      "dias_atras": "dia 27/08/2026, das 10h às 15h - Estrada de Taipas, 990"
+    },
+    {
+      "icone": "🛒",
+      "titulo": "Tauste Supermercados abre mutirão para 700 vagas em Santana",
+      "empresa": "Tauste Supermercados",
+      "bairro": "Santana",
+      "requisitos": "Mutirão de contratação para nova unidade com inauguração prevista para o final de setembro",
+      "tipo": "CLT",
+      "fonte": "DiárioZonaNorte",
+      "dias_atras": "mutirão em andamento, 20/08/2026"
     },
     {
       "icone": "🧹",
-      "titulo": "Auxiliar de Limpeza - Zona Norte, sem exigência de experiência",
+      "titulo": "Cate seleciona 600 vagas no setor de limpeza/asseio",
       "empresa": "Cate - Centro de Apoio ao Trabalho e Empreendedorismo",
-      "bairro": "Perus",
-      "requisitos": "Sem exigência de experiência prévia; salário de R$ 1.847,00; inscrição pelo Portal Cate ou nas unidades Cate Perus, Cate Jaraguá, Cate Jaçanã/Tremembé e Cate Freguesia/Brasilândia, com RG, CPF e carteira de trabalho",
+      "bairro": "Vila Maria Alta",
+      "requisitos": "Salários entre R$ 1.805 e R$ 2.676; 3 meses de experiência, ensino fundamental e fácil acesso ao local de trabalho; vagas permanentes com treinamento",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "inscrições até hoje, 19/08/2026"
-    },
-    {
-      "icone": "🩺",
-      "titulo": "Processo seletivo para equipe de saúde, assistência e gestão, incluindo atuação com TEA",
-      "empresa": "USC Saúde",
-      "bairro": "Pirituba",
-      "requisitos": "Vagas para diferentes áreas de saúde, assistência, gestão e apoio, incluindo profissionais para atuação junto a pessoas com Transtorno do Espectro Autista (TEA); inscrições pelo site da USC Saúde",
-      "tipo": "CLT",
-      "fonte": "USC Saúde",
-      "dias_atras": "processo seletivo em andamento"
+      "dias_atras": "inscrições pelo Portal Cate ou nas unidades da Zona Norte (Vila Maria/Vila Guilherme, Santana, Pirituba, Perus, Jaraguá, Freguesia/Brasilândia)"
     },
     {
       "icone": "🤝",
-      "titulo": "Contrata SP: mutirão de empregabilidade passa pelas unidades da região norte",
-      "empresa": "Prefeitura de São Paulo - Contrata SP",
-      "bairro": "Casa Verde",
-      "requisitos": "Oportunidades nos setores de comércio, serviços e outras áreas; atendimento nas unidades Descomplica SP da Zona Norte, entre elas Casa Verde (Av. Ordem e Progresso, 1001)",
+      "titulo": "Contrata SP - mutirão de empregabilidade do POT em Brasilândia e Jardim São Bento",
+      "empresa": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho / Cate",
+      "bairro": "Jardim São Bento",
+      "requisitos": "Voltado a beneficiários do Programa Operação Trabalho (POT); apoio de equipes de recursos humanos para inserção no mercado de trabalho",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "de 24 a 28/08/2026"
+      "dias_atras": "26/08 (Brasilândia) e 28/08 (Jardim São Bento), das 10h às 15h"
     }
   ],
   "politica": [
     {
-      "orgao": "🏛️ CPM Freguesia/Brasilândia",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Reunião Ordinária do Conselho Participativo Municipal ocorre hoje na Subprefeitura",
-      "impacto": "Espaço aberto a todos os cidadãos, com atenção especial a moradores e trabalhadores da Freguesia do Ó e Brasilândia, para apresentar demandas e debater temas relevantes para a região",
-      "status": "Reunião hoje, 19/08, às 19h - Av. João Marcelino Branco, 95",
-      "fonte": "Folha Noroeste"
-    },
-    {
       "orgao": "🏛️ SMUL / SMSUB - Planos de Ação das Subprefeituras",
-      "bairro": "Perus",
-      "titulo": "Perus/Anhanguera e Pirituba/Jaraguá recebem oficinas dos Planos de Ação das Subprefeituras 2026-2029",
-      "impacto": "Moradores podem apresentar sugestões e apontar problemas de infraestrutura, mobilidade, habitação e patrimônio para orientar o desenvolvimento urbano local; consulta pública também disponível no Participe+",
-      "status": "Oficinas presenciais nesta quinta-feira, 20/08",
+      "bairro": "Vila Fanton",
+      "titulo": "Perus/Anhanguera recebe hoje oficina do Plano de Ação da Subprefeitura 2026-2029",
+      "impacto": "Moradores podem apresentar sugestões sobre meio ambiente, mobilidade, habitação e patrimônio cultural para orientar o desenvolvimento urbano local; consulta também disponível no Participe+",
+      "status": "Oficina hoje, 20/08, das 19h às 22h - CEU Perus",
       "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
     },
     {
-      "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
-      "bairro": "Pirituba",
-      "titulo": "Prefeitura retoma obras viárias que vão ligar Pirituba à Lapa após anos parada pela Justiça",
-      "impacto": "Obra de R$ 209,5 milhões deve aliviar o trânsito entre as duas regiões, beneficiando quem se desloca diariamente entre Pirituba e a Zona Oeste",
-      "status": "Obras em andamento, execução prevista para dezembro de 2026",
-      "fonte": "Subprefeitura Pirituba/Jaraguá"
+      "orgao": "🏛️ SMUL / SMSUB - Planos de Ação das Subprefeituras",
+      "bairro": "Jardim Íris",
+      "titulo": "Pirituba/Jaraguá recebe hoje oficina do Plano de Ação da Subprefeitura 2026-2029",
+      "impacto": "Encontro participativo para debater o Plano de Ação da Subprefeitura Pirituba/Jaraguá, parte da rodada de oficinas da SMUL e SMSUB nas 32 subprefeituras da cidade",
+      "status": "Oficina hoje, 20/08, das 19h às 22h - Subprefeitura Pirituba/Jaraguá",
+      "fonte": "Prefeitura de São Paulo - Subprefeitura Perus"
+    },
+    {
+      "orgao": "🏛️ Governo do Estado de SP / Secretaria de Parcerias em Investimentos",
+      "bairro": "Itaberaba",
+      "titulo": "Linha 6-Laranja recebe crédito suplementar de R$ 295,78 milhões para obras",
+      "impacto": "Recursos destinados ao acompanhamento da PPP da Linha 6-Laranja; a concessionária Linha Uni prevê abrir ainda em 2026 as estações Brasilândia e Itaberaba, hoje em construção",
+      "status": "Decreto nº 70.792 publicado em 12/08/2026, execução prevista para agosto",
+      "fonte": "Folha Noroeste"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "☀️",
-      "titulo": "Tempo seco e quente segue nesta semana",
-      "desc": "A previsão indica céu claro, temperaturas podendo passar dos 30°C e umidade relativa do ar baixa, entre 20% e 30%, típico do período de estiagem de inverno em São Paulo.",
-      "meta": "CGE / Climatempo"
+      "emoji": "🦠",
+      "titulo": "Zona Norte registra oito casos de sarampo",
+      "desc": "A campanha de multivacinação 'De Olho na Carteirinha' segue até 1º de setembro, com reforço da vacina tríplice viral para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado.",
+      "meta": "Secretaria Municipal da Saúde"
     },
     {
       "tipo": "neutro",
       "emoji": "🚗",
-      "titulo": "Rodízio de veículos: hoje (19/08) restringe placas final 5 e 6",
-      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido. Amanhã (20), quinta-feira, a restrição é para placas final 7 e 8.",
+      "titulo": "Rodízio de veículos: hoje (20/08) restringe placas final 7 e 8",
+      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido. Amanhã (21), sexta-feira, a restrição é para placas final 9 e 0.",
       "meta": "CET - Companhia de Engenharia de Tráfego"
     },
     {
-      "tipo": "ok",
-      "emoji": "💉",
-      "titulo": "Dia D de Multivacinação neste sábado (22/8), com 483 UBS abertas",
-      "desc": "Das 8h às 17h, todas as UBS da capital vão oferecer atualização da carteira de vacinação e reforço contra o sarampo para pessoas de 6 meses a 59 anos, sem necessidade de agendamento.",
-      "meta": "Secretaria Municipal da Saúde"
+      "tipo": "info",
+      "emoji": "☀️",
+      "titulo": "Tempo seco e quente segue nesta semana",
+      "desc": "A previsão indica céu claro, temperaturas podendo passar dos 30°C e umidade relativa do ar baixa, típico do período de estiagem de inverno em São Paulo.",
+      "meta": "CGE / Climatempo"
     },
     {
-      "tipo": "info",
-      "emoji": "🦠",
-      "titulo": "Campanha 'De Olho na Carteirinha' segue até 1º de setembro",
-      "desc": "A campanha de multivacinação reforça a proteção contra o sarampo diante da circulação do vírus na cidade, com casos concentrados também em bairros da Zona Norte.",
-      "meta": "Secretaria Municipal da Saúde"
+      "tipo": "neutro",
+      "emoji": "🚇",
+      "titulo": "Linha 6-Laranja opera em horário reduzido, das 10h às 15h",
+      "desc": "A linha funciona em caráter assistido entre as estações João Paulo I e Perdizes, com seis estações abertas ao público. Brasilândia e Itaberaba devem ser as próximas a abrir, ainda em 2026.",
+      "meta": "Concessionária Linha Uni"
     }
   ],
   "fim_de_semana": [
@@ -301,14 +297,9 @@
       "info": "22/08 · 8h às 17h · UBS de toda a cidade · Gratuito"
     },
     {
-      "emoji": "💃",
-      "titulo": "'Seu Nome: Dita' abre festejos dos 434 anos da Freguesia do Ó",
-      "info": "23/08 · Casa de Cultura Salvador Ligabue, Freguesia do Ó · Gratuito"
-    },
-    {
-      "emoji": "🖼️",
-      "titulo": "Exposição 'Freguesia do Ó – 434 Anos de História e Tradição'",
-      "info": "19/08 a 01/09 · Casa de Cultura Salvador Ligabue, Freguesia do Ó · Gratuito"
+      "emoji": "🏀",
+      "titulo": "Basquete 3x3 e Jiu-Jitsu na Praça do Cruzeiro",
+      "info": "22/08 · a partir das 9h · Freguesia do Ó · Gratuito"
     }
   ]
 }
