@@ -3,62 +3,119 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🎓 Cursos gratuitos",
+      "pill": "💰 Investimento bilionário",
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Anhanguera",
+      "bairro": "Anhanguera",
+      "titulo": "Prefeitura Presente leva mais de R$ 1 bilhão em investimentos a Perus/Anhanguera, com obra de UBS/UPA integrada iniciando em agosto",
+      "resumo": "A ação Prefeitura Presente voltou à região de Perus/Anhanguera, que já recebeu mais de R$ 1 bilhão em investimentos em infraestrutura, drenagem e habitação nos últimos anos. Entre as obras estão três piscinões na bacia do Ribeirão Perus, a primeira etapa da ETE Perus e mais de R$ 130 milhões para prevenção e combate a enchentes com recursos federais. Também foi anunciada a construção de uma UBS/UPA integrada no Anhanguera, com investimento de R$ 14,5 milhões e início das obras previsto para agosto, além da entrega de 44 viaturas novas para a Defesa Civil e mais de 25 mil escrituras via 'Escritura na Mão' entre 2025 e 2026.",
+      "fonte": "Prefeitura de São Paulo",
+      "hora": "20/08/2026",
+      "url": "https://prefeitura.sp.gov.br/w/prefeitura-presente-volta-%C3%A0-regi%C3%A3o-de-perus/anhanguera-que-recebe-mais-de-r-1-bilh%C3%A3o-em-investimentos",
+      "icone": "💰",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Jardim Paulistano",
+      "bairro": "Jardim Paulistano",
+      "titulo": "PM prende suspeito de tentativa de feminicídio no Jardim Paulistano durante Operação Lilás",
+      "resumo": "Um homem de 49 anos foi preso pela Polícia Militar suspeito de tentar matar a ex-companheira com um tiro na cabeça, na manhã de uma sexta-feira, no Jardim Paulistano, zona norte da capital. A vítima foi atingida de raspão e socorrida. Um revólver calibre .38 com numeração raspada foi apreendido. A prisão ocorreu durante a Operação Lilás, ação de prevenção e enfrentamento à violência doméstica realizada pela PM em referência aos 20 anos da Lei Maria da Penha. O caso foi registrado na 4ª Delegacia de Defesa da Mulher como tentativa de feminicídio e posse ilegal de arma de fogo de uso restrito.",
+      "fonte": "Primeira Edição",
+      "hora": "07/08/2026",
+      "url": "https://pejornal.com.br/suspeito-de-tentativa-de-feminicidio-e-preso-pela-policia-militar-na-zona-norte-de-sao-paulo/",
+      "icone": "🚨",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Dupla é presa em flagrante por furto de celulares na Zona Norte",
+      "resumo": "Dois suspeitos foram presos em flagrante após abordarem motoristas parados no trânsito na Avenida Otaviano Alves de Lima e subtraírem celulares presos aos suportes dos veículos, usando uma motocicleta com placa clonada e também furtada. A dupla foi levada ao 13º Distrito Policial, na Casa Verde. Segundo a Secretaria de Segurança Pública, são furtados em média 46 celulares por dia apenas no transporte público da capital.",
+      "fonte": "BNews São Paulo",
+      "hora": "11/08/2026",
+      "url": "https://www.bnewssaopaulo.com.br/noticias/policia/furto-de-celulares-dupla-e-presa-em-flagrante-na-zona-norte.html",
+      "icone": "📱",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-edu",
       "tag_label": "Educação",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "DRE Jaçanã/Tremembé reforça ações de combate à dengue nas escolas da região",
+      "resumo": "A Diretoria Regional de Educação Jaçanã/Tremembé intensificou ações de combate ao mosquito Aedes aegypti nas unidades escolares, com mutirões de eliminação de criadouros e orientação a alunos e famílias. A subprefeitura também tem utilizado drones para monitorar áreas de mata e vegetação densa na região, ampliando a vigilância contra possíveis focos do mosquito.",
+      "fonte": "Secretaria Municipal de Educação",
+      "hora": "Agosto/2026",
+      "url": "https://educacao.sme.prefeitura.sp.gov.br/noticias/combate-a-dengue-na-dre-jacanatremembe/",
+      "icone": "🦟",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
-      "titulo": "Instituto Federal de Pirituba abre inscrições para 12 cursos de extensão gratuitos, com início em setembro",
-      "resumo": "O Campus São Paulo Pirituba do IFSP abriu inscrições, até 27 de agosto, para o processo seletivo de cursos de extensão totalmente gratuitos, com aulas a partir de 2 de setembro. Entre as opções estão Técnicas de Vendas e Negociação, Matemática Básica, Analista de Marketing, Básico em Jardinagem, Operação e Manutenção de Drones, Informática Básica, Empreendedorismo, Refrigeração e Climatização, Teatro e um preparatório para o vestibular. Há vagas reservadas para pessoas autodeclaradas pretas, pardas, indígenas e quilombolas (PPIQ) e para pessoas com deficiência.",
-      "fonte": "Folha Noroeste",
-      "hora": "18/08/2026",
-      "url": "https://folhanoroeste.com.br/educacao/nstituto-federal-de-pirituba-abre-inscricoes-para-diversos-cursos-de-extensao-gratuitos/",
-      "icone": "🎓",
-      "icone_classe": "ic-edu"
+      "titulo": "Prefeitura retoma obras da ligação viária Pirituba-Lapa após três anos parada pela Justiça",
+      "resumo": "O prefeito Ricardo Nunes anunciou a retomada das obras do complexo viário que ligará Pirituba à Lapa, com uma ponte sobre o Rio Tietê interligando os dois lados da Avenida Raimundo Pereira de Magalhães. O contrato estava suspenso desde abril de 2020 por decisão judicial e as obras estavam apenas 14% concluídas quando pararam. O investimento municipal previsto é de R$ 209,5 milhões, com prazo de execução até dezembro de 2026, beneficiando cerca de 78 mil pessoas que devem usar o acesso diariamente.",
+      "fonte": "Prefeitura de São Paulo",
+      "hora": "Agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/w/noticia/prefeito-anuncia-retomada-das-obras-viarias-que-ligarao-pirituba-a-lapa-apos-3-anos-de-paralisacao-pela-justica",
+      "icone": "🌉",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Recanto dos Humildes",
+      "bairro": "Conjunto Habitacional Recanto dos Humildes",
+      "titulo": "Prefeitura no Bairro leva serviços de zeladoria a Recanto dos Humildes, Jardim do Russo e Jardim da Conquista, em Perus",
+      "resumo": "Tendas do programa 'Prefeitura no Bairro' ficaram montadas na Praça Inácia Dias, ao lado da estação de trem de Perus, até o dia 22 de agosto, oferecendo serviços como melhorias da CET, reforço de iluminação pública, operações de limpeza, manutenção de vias e calçadas, programação cultural, ônibus-biblioteca, atividades físicas e ações de saúde para moradores de Recanto dos Humildes, Jardim do Russo e Jardim da Conquista.",
+      "fonte": "Subprefeitura Perus",
+      "hora": "até 22/08/2026",
+      "url": "https://prefeitura.sp.gov.br/web/perus/w/noticias/59855",
+      "icone": "🧰",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Vila Bonilha",
-      "bairro": "Vila Bonilha",
-      "titulo": "Distrital Noroeste promove encontro de networking para empreendedores na Vila Bonilha",
-      "resumo": "A Associação Comercial de São Paulo, via Distrital Noroeste, realizou em sua sede (Rua Luís Braille, 08, Vila Bonilha, Pirituba) o evento 'INinovando Networking', voltado a empreendedores, profissionais e líderes em busca de conexões estratégicas e novos negócios. A programação teve palestras sobre planejamento estratégico e sobre telefonia empresarial, com entrada aberta ao público.",
-      "fonte": "Folha Noroeste",
+      "tag_bairro": "📍 Conjunto Jova Rural",
+      "bairro": "Conjunto Jova Rural",
+      "titulo": "Feirões de Emprego reúnem 1.129 vagas com carteira assinada na Zona Norte",
+      "resumo": "Dois feirões de emprego e empreendedorismo, organizados pela Secretaria de Desenvolvimento Econômico do Estado de SP com 20 empresas, vão oferecer 1.129 vagas CLT na Zona Norte: no dia 25/08 no CIC Jova Rural e no dia 27/08 no CIC Taipas, ambos das 10h às 15h. Os salários variam entre R$ 1.621 e R$ 3.011, com uma empresa de marketplace concentrando 700 vagas para contratação imediata, além de oportunidades para pessoas com deficiência.",
+      "fonte": "DiárioZonaNorte",
       "hora": "19/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/distrital-noroeste-realiza-encontro-para-empreendedores-ininovando-networking/",
-      "icone": "🤝",
+      "url": "https://www.diariozonanorte.com.br/feiroes-na-zona-norte-reunem-1-129-vagas-de-emprego-com-salarios-que-variam-de-r-1-621-a-r-3-011/",
+      "icone": "💼",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Geral",
-      "tag_bairro": "📍 Jaçanã",
-      "bairro": "Jaçanã",
-      "titulo": "Fábricas de Cultura da Zona Norte têm programação gratuita em agosto, com festa de aniversário em Jaçanã",
-      "resumo": "As unidades Brasilândia, Jaçanã, Vila Nova Cachoeirinha e o Núcleo Taipas das Fábricas de Cultura oferecem em agosto uma programação gratuita de oficinas, contações de histórias, cinema e shows, aberta a todas as idades, de terça a sexta (9h às 19h) e aos sábados (9h às 17h). O destaque do mês é a festa de aniversário de 13 anos da Fábrica de Cultura Jaçanã, no dia 29, com apresentações do grupo circense Tiroliro e artistas locais a partir do meio-dia.",
-      "fonte": "Encontra Brasilândia",
-      "hora": "30/07/2026",
-      "url": "https://www.encontrabrasilandia.com.br/sobre/fabricas-de-cultura-da-zona-norte-de-sp-tem-eventos-gratuitos-em-agosto/",
-      "icone": "🎭",
+      "tag_bairro": "📍 Vila Nova Cachoeirinha",
+      "bairro": "Vila Nova Cachoeirinha",
+      "titulo": "Subprefeitura amplia Feira de Artesanato no Largo do Japonês, em Vila Nova Cachoeirinha",
+      "resumo": "A Subprefeitura Casa Verde/Cachoeirinha/Limão ampliou a Feira de Artesanato realizada no Largo do Japonês, reunindo artesãos da região especializados em marcenaria, bijuterias e outros produtos feitos à mão, como parte de ações para fortalecer a economia criativa e a geração de renda local.",
+      "fonte": "Subprefeitura Casa Verde/Cachoeirinha/Limão",
+      "hora": "Agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/noticias/57243",
+      "icone": "🎨",
       "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
-    {
-      "dia": "23",
-      "mes": "Ago",
-      "cor_fundo": "#8E44AD",
-      "bairro": "Tremembé",
-      "titulo": "Mostra Jobim-açu, exposição gratuita em homenagem a Tom Jobim",
-      "hora": "10h às 17h (último dia)",
-      "local": "Horto Florestal - Rua do Horto, 931 - Tremembé",
-      "descricao": "Caminhão temático com tecidos suspensos, fotografias, registros biográficos e trechos de canções em homenagem ao centenário de Tom Jobim (1927-1994).",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://universozn.com.br/horto-florestal-programacao-agosto/"
-    },
     {
       "dia": "28",
       "mes": "Ago",
@@ -110,104 +167,123 @@
       "gratuito": false,
       "preco": "a partir de R$ 75",
       "url": "https://universozn.com.br/horto-florestal-programacao-agosto/"
+    },
+    {
+      "dia": "07",
+      "mes": "Set",
+      "cor_fundo": "#C0392B",
+      "bairro": "Parque Anhanguera",
+      "titulo": "Perus comemora 71 anos com programação cultural e de lazer",
+      "hora": "atividades ao longo de setembro",
+      "local": "Parque Anhangüera, CEU Perus, Biblioteca Padre José de Anchieta, Calçadão e Praça do Samba",
+      "descricao": "Programação de aniversário do bairro de Perus, com atividades de lazer, jogos e cultura em diversos equipamentos públicos da região, com apoio da Subprefeitura, associações de bairro e comércio local.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://capital.sp.gov.br/web/comunicacao/w/noticias/138655"
+    },
+    {
+      "dia": "01",
+      "mes": "Set",
+      "cor_fundo": "#8E44AD",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Últimos dias da exposição 'Freguesia do Ó – Anos de História e Tradição'",
+      "hora": "10h às 17h (até 01/09)",
+      "local": "Casa de Cultura Salvador Ligabue - Freguesia do Ó",
+      "descricao": "Mostra com fotografias históricas do acervo do espaço cultural, dentro da programação de aniversário do bairro da Freguesia do Ó, um dos mais antigos e tradicionais de São Paulo.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/freguesia_brasilandia/w/noticias/49360"
     }
   ],
   "vagas": [
     {
       "icone": "💼",
-      "titulo": "Feirão de Emprego e Empreendedorismo PAT CIC Jova Rural",
+      "titulo": "Feirão de Emprego e Empreendedorismo - CIC Jova Rural",
       "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
       "bairro": "Conjunto Jova Rural",
       "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; vagas para PCD e para maiores de 18 anos; levar RG, CPF, carteira de trabalho e currículo impresso",
       "tipo": "CLT",
-      "fonte": "BRA 1 / Secretaria de Desenvolvimento Econômico do Estado de SP",
+      "fonte": "DiárioZonaNorte / Secretaria de Desenvolvimento Econômico do Estado de SP",
       "dias_atras": "dia 25/08/2026, das 10h às 15h - Rua Ari da Rocha Miranda, 36"
     },
     {
       "icone": "💼",
-      "titulo": "Feirão de Emprego e Empreendedorismo PAT CIC Taipas",
+      "titulo": "Feirão de Emprego e Empreendedorismo - CIC Taipas/Oeste",
       "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
-      "bairro": "Jaraguá",
+      "bairro": "Parque Nações Unidas",
       "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; vagas para PCD e para maiores de 18 anos; levar RG, CPF, carteira de trabalho e currículo impresso",
       "tipo": "CLT",
-      "fonte": "BRA 1 / Secretaria de Desenvolvimento Econômico do Estado de SP",
+      "fonte": "DiárioZonaNorte / Secretaria de Desenvolvimento Econômico do Estado de SP",
       "dias_atras": "dia 27/08/2026, das 10h às 15h - Estrada de Taipas, 990"
     },
     {
       "icone": "🧹",
       "titulo": "Cate seleciona 600 vagas no setor de limpeza/asseio",
       "empresa": "Cate - Centro de Apoio ao Trabalho e Empreendedorismo",
-      "bairro": "Vila Maria Alta",
+      "bairro": "Perus",
       "requisitos": "Salários entre R$ 1.805 e R$ 2.676; 3 meses de experiência, ensino fundamental e fácil acesso ao local de trabalho; vagas permanentes com treinamento",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "inscrições pelo Portal Cate ou nas unidades da Zona Norte (Vila Maria/Vila Guilherme, Santana, Pirituba, Perus, Jaraguá, Freguesia/Brasilândia)"
+      "dias_atras": "inscrições pelo Portal Cate ou na unidade Cate de Perus"
     },
     {
       "icone": "🤝",
-      "titulo": "Contrata SP - mutirão de empregabilidade do POT em Brasilândia e Jardim São Bento",
-      "empresa": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho / Cate",
-      "bairro": "Jardim São Bento",
-      "requisitos": "Voltado a beneficiários do Programa Operação Trabalho (POT); apoio de equipes de recursos humanos para inserção no mercado de trabalho",
+      "titulo": "Cate oferece atendimento para vagas de emprego na unidade Freguesia/Brasilândia",
+      "empresa": "Cate - Centro de Apoio ao Trabalho e Empreendedorismo",
+      "bairro": "Vila dos Andrades",
+      "requisitos": "Vagas variadas disponíveis no Portal Cate; atendimento presencial para orientação profissional e encaminhamento a vagas CLT",
       "tipo": "CLT",
       "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "26/08 (Brasilândia) e 28/08 (Jardim São Bento), das 10h às 15h"
+      "dias_atras": "unidade permanente - Av. João Marcelino Branco, 95, Vila dos Andrades"
     }
   ],
   "politica": [
     {
-      "orgao": "🏛️ CPM - Conselho Participativo Municipal Pirituba/Jaraguá",
-      "bairro": "Jardim Taipas",
-      "titulo": "CPM Pirituba/Jaraguá discutiu recursos para novo Centro de Convivência Intergeracional em Taipas",
-      "impacto": "O plano original previa um Centro para Crianças e Adolescentes (CCA) e um Centro Dia para Idosos (CDI) na Estrada do Corredor, mas a SMADS identificou inviabilidade técnica e orçamentária no terreno original. A alternativa é reformar o prédio desativado da antiga Fundação CASA, na Rua Ilha da Juventude, 518, em Taipas, para implantar um Centro Dia para Idosos e um Centro de Convivência Intergeracional (CCInter).",
-      "status": "Reunião extraordinária realizada em 21/08 na sede da Subprefeitura Pirituba; CPM aguarda definição final sobre a viabilidade do prédio da antiga Fundação CASA",
-      "fonte": "Folha Noroeste"
+      "orgao": "🏛️ CPM - Conselho Participativo Municipal Santana/Tucuruvi/Mandaqui",
+      "bairro": "Mandaqui",
+      "titulo": "CPM Santana/Tucuruvi/Mandaqui define 15 propostas para o Orçamento Cidadão 2026",
+      "impacto": "O Conselho Participativo Municipal da subprefeitura definiu 15 propostas prioritárias, incluindo intervenções de infraestrutura e revitalização, que seguem para as próximas etapas do processo do Orçamento Cidadão 2026.",
+      "status": "Propostas definidas pelo CPM; aguardam votação popular nas próximas etapas do Orçamento Cidadão 2026",
+      "fonte": "DiárioZonaNorte"
     },
     {
-      "orgao": "🏛️ Prefeitura de São Paulo - Programa Prefeitura Presente",
-      "bairro": "Jardim Jaraguá",
-      "titulo": "Prefeitura anuncia construção de UPA 24 horas no Jardim Jaraguá",
-      "impacto": "Investimento previsto de R$ 14,5 milhões para uma nova Unidade de Pronto Atendimento no Jardim Jaraguá, anunciada durante visita do prefeito à região de Perus/Anhanguera, que recebe R$ 400 milhões em investimentos totais em asfalto, obras e equipamentos de saúde e educação.",
-      "status": "Obras previstas para começar em setembro",
-      "fonte": "Prefeitura de São Paulo"
+      "orgao": "🏛️ Secretaria Especial de Comunicação - Prefeitura de São Paulo",
+      "bairro": "Conjunto City Jaraguá",
+      "titulo": "Jaraguá vai ganhar nova UBS, rua asfaltada e feiras de hortifruti (sacolões)",
+      "impacto": "A nova UBS City Jaraguá, com previsão de entrega em outubro e orçamento de R$ 14 milhões, terá 8 consultórios médicos, 1 consultório odontológico e 6 salas de procedimentos de enfermagem, atendendo uma região com cerca de 15 mil moradores próxima ao CDHU/Jaraguá.",
+      "status": "Obra em andamento, com entrega prevista para outubro de 2026",
+      "fonte": "Secretaria Especial de Comunicação da Prefeitura de São Paulo"
     },
     {
-      "orgao": "🏛️ CPM - Conselho Participativo Municipal Freguesia/Brasilândia",
-      "bairro": "Freguesia do Ó",
-      "titulo": "CPM Freguesia/Brasilândia realizou reunião ordinária na Subprefeitura",
-      "impacto": "Encontro do Conselho Participativo Municipal para tratar de pautas locais da subprefeitura Freguesia/Brasilândia, dentro da programação que também marcou as comemorações dos 446 anos da Freguesia do Ó.",
-      "status": "Reunião ordinária realizada em 19/08, no auditório da Subprefeitura - Av. João Marcelino Branco, 95",
-      "fonte": "Folha Noroeste"
+      "orgao": "🏛️ CPM - Conselho Participativo Municipal Casa Verde/Cachoeirinha/Limão",
+      "bairro": "Jardim Peri Alto",
+      "titulo": "Orçamento Cidadão 2026 entra na segunda etapa e CPM escolhe propostas para a subprefeitura",
+      "impacto": "Entre as propostas escolhidas pelo CPM estão uma UPA para Casa Verde atender as regiões do Limão e Parque Peruche, calçada para o Parque Linear do Córrego do Bispo, criação de um ecoponto, recuperação das margens do Córrego Guaraú e uma nova UBS no Jardim Peri Alto.",
+      "status": "Propostas escolhidas pelo CPM; seguem para as próximas fases do Orçamento Cidadão 2026",
+      "fonte": "Subprefeitura Casa Verde/Cachoeirinha/Limão"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
       "emoji": "💉",
-      "titulo": "Dia D da Campanha de Multivacinação mobiliza 483 UBS neste sábado (22)",
-      "desc": "A campanha de multivacinação segue até 1º de setembro, com reforço da vacina tríplice viral (SRC) para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado. Neste sábado, o Dia D mobiliza 483 UBS em toda a capital, sem necessidade de agendamento.",
+      "titulo": "Campanha de Multivacinação segue até 1º de setembro, com reforço contra o sarampo",
+      "desc": "A campanha de multivacinação 2026 segue até 1º de setembro, reforçando a vacina tríplice viral (SRC) para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado antes, nas UBS de toda a capital.",
       "meta": "Secretaria Municipal da Saúde"
     },
     {
       "tipo": "neutro",
       "emoji": "🚗",
-      "titulo": "Não há rodízio de veículos no fim de semana; volta na segunda (24) para placas final 1 e 2",
-      "desc": "O rodízio municipal funciona apenas em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido. Neste sábado (22) e domingo (23) não há restrição de circulação.",
+      "titulo": "Rodízio restringe veículos com placas final 1 e 2 nesta segunda-feira (24)",
+      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido. Nesta segunda-feira, a restrição é para veículos com placas de final 1 e 2.",
       "meta": "CET - Companhia de Engenharia de Tráfego"
     },
     {
       "tipo": "info",
       "emoji": "🌡️",
-      "titulo": "Sábado começa com friagem e máxima de 23°C na Zona Norte",
-      "desc": "O dia começa com céu nublado e sensação de frio pela manhã, com mínima próxima de 12°C, e nebulosidade variável ao longo do sábado. Ventos de sudeste devem conter a subida da temperatura, que deve chegar a 23°C à tarde.",
+      "titulo": "Semana começa fria e termina mais quente em São Paulo",
+      "desc": "A segunda-feira (24) tem mínima perto de 13°C e máxima perto de 19°C, com céu nublado. A previsão indica chance de chuva na quarta-feira (26) e aquecimento gradual ao longo da semana, com máxima podendo chegar a 31°C na quinta-feira (27).",
       "meta": "Previsão do tempo"
-    },
-    {
-      "tipo": "info",
-      "emoji": "🦠",
-      "titulo": "SES-SP recomenda vacinação após 13 casos de sarampo confirmados no estado em 2026",
-      "desc": "Os casos envolvem bebês de até 1 ano e adultos de 20 a 50 anos. Desde junho, a SES-SP recomenda a dose zero da tríplice viral para bebês de 6 a 11 meses e 29 dias residentes em São Paulo, Guarulhos e São Bernardo do Campo, além do esquema vacinal de rotina aos 12 e 15 meses.",
-      "meta": "Secretaria de Estado da Saúde de SP"
     },
     {
       "tipo": "neutro",
@@ -220,23 +296,28 @@
   "fim_de_semana": [
     {
       "emoji": "💉",
-      "titulo": "Dia D da Campanha de Multivacinação, com 483 UBS abertas",
-      "info": "22/08 · 8h às 17h · UBS de toda a cidade · Gratuito"
+      "titulo": "Vacinação gratuita contra o sarampo no Tietê Plaza",
+      "info": "28/08 · 10h às 15h · Pirituba · Gratuito"
     },
     {
-      "emoji": "🏀",
-      "titulo": "Basquete 3x3 e Jiu-Jitsu na Praça do Cruzeiro",
-      "info": "22/08 · a partir das 9h · Freguesia do Ó · Gratuito"
+      "emoji": "🎓",
+      "titulo": "Casa Aberta Senac Santana, com oficinas e workshops",
+      "info": "28/08 · 8h às 21h · Santana · Gratuito"
+    },
+    {
+      "emoji": "🎪",
+      "titulo": "Festa de aniversário de 13 anos da Fábrica de Cultura Jaçanã",
+      "info": "29/08 · a partir do meio-dia · Jaçanã · Gratuito"
     },
     {
       "emoji": "🌳",
-      "titulo": "Banho de Floresta no Horto Florestal",
-      "info": "22/08 · 7h às 11h30 · Tremembé · a partir de R$ 70"
+      "titulo": "Caminhada Noturna no Parque Estadual da Cantareira",
+      "info": "29/08 · 16h às 21h · Tremembé · a partir de R$ 75"
     },
     {
-      "emoji": "🎶",
-      "titulo": "Mostra Jobim-açu, exposição gratuita sobre Tom Jobim",
-      "info": "até 23/08 · 10h às 17h · Horto Florestal, Tremembé · Gratuito"
+      "emoji": "🖼️",
+      "titulo": "Últimos dias da exposição sobre a história da Freguesia do Ó",
+      "info": "até 01/09 · 10h às 17h · Freguesia do Ó · Gratuito"
     }
   ]
 }
