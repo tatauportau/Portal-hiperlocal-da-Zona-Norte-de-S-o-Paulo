@@ -3,196 +3,61 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "💄 Grande evento",
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Vila Guilherme",
-      "bairro": "Vila Guilherme",
-      "titulo": "Beauty Fair 2026 chega ao Expo Center Norte, na Vila Guilherme, com a maior plataforma de negócios de beleza das Américas",
-      "resumo": "O Expo Center Norte, na Vila Guilherme, recebe entre os dias 5 e 8 de setembro a Beauty Fair 2026, considerada a maior feira profissional de beleza das Américas, reunindo marcas, distribuidores e milhares de profissionais do setor. No dia 5 (sábado) o evento funciona das 12h às 20h, e de domingo (6) a terça (8) das 10h às 20h. Profissionais têm entrada gratuita mediante comprovação de atuação (CNPJ ou certificado de curso na área de beleza); para o público em geral, ingressos antecipados serão vendidos por lotes.",
-      "fonte": "Universo ZN / Beauty Fair",
-      "hora": "05 a 08/09/2026",
-      "url": "https://universozn.com.br/beauty-fair-2026-expo-center-norte",
-      "icone": "💄",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Vila Maria",
-      "bairro": "Vila Maria",
-      "titulo": "Furtos e roubos a residências caem 25% na capital após polícia desarticular quadrilha que também atuava na Vila Maria",
-      "resumo": "Após uma operação policial que resultou na prisão de suspeitos em tentativas de furto e roubo a residências nos bairros de Pinheiros e Vila Maria, a Secretaria de Segurança Pública registrou uma queda de 25% nesse tipo de crime na capital. A ação fez parte de um trabalho de monitoramento e desarticulação de quadrilhas especializadas em invasões residenciais.",
-      "fonte": "Agência SP",
-      "hora": "17/06/2026",
-      "url": "https://www.agenciasp.sp.gov.br/furtos-e-roubos-a-residencias-capital/",
-      "icone": "🚨",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Estações Brasilândia e Itaberaba da Linha 6-Laranja devem abrir até o fim de 2026",
-      "resumo": "Depois da inauguração do trecho entre João Paulo I e Perdizes, em julho, a Linha 6-Laranja do Metrô segue com obras para abrir mais duas estações até o fim de 2026: Brasilândia e Itaberaba-Hospital Vila Penteado, no Jardim Iracema. Esta última terá mais de 65 metros de profundidade, o que deve torná-la a estação de metrô mais profunda da América Latina.",
-      "fonte": "Agência SP / Metrópoles",
-      "hora": "Agosto/2026",
-      "url": "https://www.agenciasp.sp.gov.br/linha-6-laranja-curiosidades/",
-      "icone": "🚇",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
+      "pill": "💼 1.129 vagas",
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
       "tag_bairro": "📍 Conjunto Jova Rural",
       "bairro": "Conjunto Jova Rural",
-      "titulo": "Feirões de Emprego reúnem 1.129 vagas com carteira assinada na Zona Norte",
-      "resumo": "Dois feirões de emprego e empreendedorismo, organizados pela Secretaria de Desenvolvimento Econômico do Estado de SP com 20 empresas, oferecem 1.129 vagas CLT na Zona Norte: no dia 25/08 no CIC Jova Rural e no dia 27/08 no CIC Taipas, ambos das 10h às 15h. Os salários variam entre R$ 1.621 e R$ 3.011, com uma empresa de marketplace concentrando 700 vagas para contratação imediata, além de oportunidades para pessoas com deficiência.",
+      "titulo": "Feirões de emprego reúnem 1.129 vagas CLT na Zona Norte nesta semana",
+      "resumo": "A Secretaria de Desenvolvimento Econômico do Estado de São Paulo (SDE) realiza dois Feirões de Emprego e Empreendedorismo na Zona Norte: nesta terça-feira (25/08), das 10h às 15h, no CIC Jova Rural (Rua Ari da Rocha Miranda, 36), e na quinta-feira (27/08), no mesmo horário, no CIC Taipas (Estrada de Taipas, 990). Ao todo são 1.129 vagas com carteira assinada, com salários entre R$ 1.621 e R$ 3.011 e distribuição de senhas a partir das 9h30 em cada local.",
       "fonte": "DiárioZonaNorte",
-      "hora": "19/08/2026",
+      "hora": "25 e 27/08/2026",
       "url": "https://www.diariozonanorte.com.br/feiroes-na-zona-norte-reunem-1-129-vagas-de-emprego-com-salarios-que-variam-de-r-1-621-a-r-3-011/",
       "icone": "💼",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Educação",
-      "tag_bairro": "📍 Jaçanã",
-      "bairro": "Jaçanã",
-      "titulo": "DRE Jaçanã/Tremembé reforça ações de combate à dengue nas escolas da região",
-      "resumo": "A Diretoria Regional de Educação Jaçanã/Tremembé intensificou ações de combate ao mosquito Aedes aegypti nas unidades escolares, com mutirões de eliminação de criadouros e orientação a alunos e famílias. A subprefeitura também tem utilizado drones para monitorar áreas de mata e vegetação densa na região, ampliando a vigilância contra possíveis focos do mosquito.",
-      "fonte": "Secretaria Municipal de Educação",
-      "hora": "Agosto/2026",
-      "url": "https://educacao.sme.prefeitura.sp.gov.br/noticias/combate-a-dengue-na-dre-jacanatremembe/",
-      "icone": "🦟",
-      "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Serviços",
-      "tag_bairro": "📍 Vila Maria",
-      "bairro": "Vila Maria",
-      "titulo": "Descomplica SP oferece mais de 350 serviços à população na unidade Vila Maria/Vila Guilherme",
-      "resumo": "A unidade do Descomplica SP na Subprefeitura Vila Maria/Vila Guilherme reúne mais de 350 serviços públicos municipais, estaduais e federais em um só lugar, facilitando o acesso da população a documentos, cadastros e atendimentos diversos sem precisar se deslocar a vários órgãos diferentes.",
-      "fonte": "Prefeitura de São Paulo",
-      "hora": "unidade permanente",
-      "url": "https://prefeitura.sp.gov.br/web/vila_maria_vila_guilherme/w/noticias/112675",
-      "icone": "🧾",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Zeladoria",
-      "tag_bairro": "📍 Vila Guilherme",
-      "bairro": "Vila Guilherme",
-      "titulo": "Subprefeitura Vila Maria/Vila Guilherme mantém três Ecopontos para descarte correto de entulho e resíduos",
-      "resumo": "A Subprefeitura Vila Maria/Vila Guilherme disponibiliza três Ecopontos na região para que moradores descartem gratuitamente entulho de pequenas reformas, móveis, restos de poda e outros resíduos que não podem ir para a coleta comum de lixo, evitando descarte irregular em vias e córregos.",
-      "fonte": "Subprefeitura Vila Maria/Vila Guilherme",
-      "hora": "serviço permanente",
-      "url": "https://prefeitura.sp.gov.br/web/vila_maria_vila_guilherme/w/noticias/123322",
-      "icone": "♻️",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Jardim Paulistano",
-      "bairro": "Jardim Paulistano",
-      "titulo": "PM prende suspeito de tentativa de feminicídio no Jardim Paulistano durante Operação Lilás",
-      "resumo": "Um homem de 49 anos foi preso pela Polícia Militar suspeito de tentar matar a ex-companheira com um tiro na cabeça, no Jardim Paulistano, zona norte da capital. A vítima foi atingida de raspão e socorrida. Um revólver calibre .38 com numeração raspada foi apreendido. A prisão ocorreu durante a Operação Lilás, ação de prevenção e enfrentamento à violência doméstica realizada pela PM em referência à Lei Maria da Penha. O caso foi registrado na 4ª Delegacia de Defesa da Mulher como tentativa de feminicídio e posse ilegal de arma de fogo de uso restrito.",
-      "fonte": "Primeira Edição",
-      "hora": "07/08/2026",
-      "url": "https://pejornal.com.br/suspeito-de-tentativa-de-feminicidio-e-preso-pela-policia-militar-na-zona-norte-de-sao-paulo/",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Mulher é morta a facadas dentro de mercado no Morro Grande; suspeito é preso",
+      "resumo": "Angelita Manoela Rodrigues, de 40 anos, morreu no domingo (16/08) após ser atacada a facadas pelo companheiro dentro de um mercado no bairro do Morro Grande, zona norte de São Paulo. Ela foi socorrida e levada ao Hospital Municipal de Brasilândia, mas não resistiu aos ferimentos. O suspeito, Lafayete Gonzaga da Silva, também de 40 anos, chegou a fugir mas foi detido em seguida. O caso foi registrado na 4ª Delegacia de Defesa da Mulher, na Freguesia do Ó, como feminicídio, violência doméstica e maus-tratos a animal.",
+      "fonte": "CartaCapital",
+      "hora": "16/08/2026",
+      "url": "https://www.cartacapital.com.br/sociedade/mulher-morre-apos-ser-atacada-pelo-companheiro-a-faca-dentro-de-um-mercado-em-sp/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "SP confirma 15 casos de sarampo em 2026; Zona Norte concentra 8 deles",
+      "resumo": "O Centro de Vigilância Epidemiológica do Estado de São Paulo confirmou 15 casos de sarampo em 2026, sendo 8 registrados na Zona Norte da capital. Uma campanha especial de revacinação com a tríplice viral (SCR) começou em agosto para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado antes. Nesta semana, o Sesc Santana recebe a equipe da UVIS Santana/Tucuruvi para aplicar doses de terça a sábado (25 a 29/08), das 10h às 16h.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "até 29/08/2026",
+      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-campanha-de-vacinacao-contra-o-sarampo-para-pessoas-de-6-a-59-anos/",
+      "icone": "💉",
+      "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
-      "dia": "05",
-      "mes": "Set",
-      "cor_fundo": "#D6336C",
-      "bairro": "Vila Guilherme",
-      "titulo": "Beauty Fair 2026 no Expo Center Norte",
-      "hora": "12h às 20h (sáb.) e 10h às 20h (dom. a ter.)",
-      "local": "Expo Center Norte - Rua José Bernardo Pinto, 333 - Vila Guilherme",
-      "descricao": "Maior feira profissional de beleza das Américas, com marcas, distribuidores e milhares de profissionais do setor. Entrada gratuita para profissionais com CNPJ ou certificado de curso na área.",
-      "gratuito": false,
-      "preco": "gratuito para profissionais credenciados; público geral por lotes",
-      "url": "https://universozn.com.br/beauty-fair-2026-expo-center-norte"
-    },
-    {
-      "dia": "28",
+      "dia": "25",
       "mes": "Ago",
       "cor_fundo": "#2980B9",
-      "bairro": "Pirituba",
-      "titulo": "Vacinação gratuita contra o sarampo no Tietê Plaza",
-      "hora": "10h às 15h",
-      "local": "Tietê Plaza Shopping, piso térreo (ao lado da loja Marisa) - Av. Raimundo Pereira de Magalhães, 1465 - Pirituba",
-      "descricao": "Ação de intensificação da vacinação contra o sarampo (vacina SRC), para pessoas de 6 meses a 59 anos, em parceria com a Supervisão Técnica de Saúde e a UVIS de Pirituba.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://universozn.com.br/vacina-sarampo-tiete-plaza-pirituba/"
-    },
-    {
-      "dia": "28",
-      "mes": "Ago",
-      "cor_fundo": "#E67E22",
       "bairro": "Santana",
-      "titulo": "Casa Aberta Senac Santana com oficinas e workshops gratuitos",
-      "hora": "8h às 21h",
-      "local": "Senac Santana",
-      "descricao": "Programação gratuita com oficinas, workshops e palestras, incluindo a Oficina PodGravar, produção de vídeos com celular e o workshop Maquiagem Express, dentro do evento estadual Casa Aberta Senac.",
+      "titulo": "Campanha de vacinação contra o sarampo no Sesc Santana",
+      "hora": "10h às 16h, de terça (25) a sábado (29/08)",
+      "local": "Sesc Santana",
+      "descricao": "A equipe da UVIS Santana/Tucuruvi aplica a vacina tríplice viral (SCR), que protege contra sarampo, caxumba e rubéola, para pessoas de 6 meses a 59 anos, mesmo quem já foi vacinado antes.",
       "gratuito": true,
       "preco": null,
-      "url": "https://universozn.com.br/casa-aberta-senac-santana/"
-    },
-    {
-      "dia": "29",
-      "mes": "Ago",
-      "cor_fundo": "#F39C12",
-      "bairro": "Jaçanã",
-      "titulo": "Festa de aniversário de 13 anos da Fábrica de Cultura Jaçanã",
-      "hora": "a partir do meio-dia",
-      "local": "Fábrica de Cultura Jaçanã",
-      "descricao": "Celebração com apresentações do grupo circense Tiroliro e artistas locais, dentro da programação gratuita de agosto das Fábricas de Cultura da Zona Norte.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://www.encontrabrasilandia.com.br/sobre/fabricas-de-cultura-da-zona-norte-de-sp-tem-eventos-gratuitos-em-agosto/"
-    },
-    {
-      "dia": "29",
-      "mes": "Ago",
-      "cor_fundo": "#2C3E50",
-      "bairro": "Tremembé",
-      "titulo": "Caminhada Noturna no Parque Estadual da Cantareira",
-      "hora": "16h às 21h",
-      "local": "Museu Florestal Octávio Vecchi - Horto Florestal - Tremembé",
-      "descricao": "Trilha guiada de cerca de 8 km até o mirante da Pedra Grande, com possibilidade de observar o pôr do sol e a vida animal noturna do parque.",
-      "gratuito": false,
-      "preco": "a partir de R$ 75",
-      "url": "https://universozn.com.br/horto-florestal-programacao-agosto/"
-    },
-    {
-      "dia": "01",
-      "mes": "Set",
-      "cor_fundo": "#8E44AD",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Últimos dias da exposição 'Freguesia do Ó – Anos de História e Tradição'",
-      "hora": "10h às 17h (até 01/09)",
-      "local": "Casa de Cultura Salvador Ligabue - Freguesia do Ó",
-      "descricao": "Mostra com fotografias históricas do acervo do espaço cultural, dentro da programação de aniversário do bairro da Freguesia do Ó, um dos mais antigos e tradicionais de São Paulo.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/freguesia_brasilandia/w/noticias/49360"
+      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-campanha-de-vacinacao-contra-o-sarampo-para-pessoas-de-6-a-59-anos/"
     }
   ],
   "vagas": [
@@ -201,131 +66,44 @@
       "titulo": "Feirão de Emprego e Empreendedorismo - CIC Jova Rural",
       "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
       "bairro": "Conjunto Jova Rural",
-      "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; vagas para PCD e para maiores de 18 anos; levar RG, CPF, carteira de trabalho e currículo impresso",
+      "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; distribuição de senhas a partir das 9h30; levar RG, CPF, carteira de trabalho e currículo",
       "tipo": "CLT",
-      "fonte": "DiárioZonaNorte / Secretaria de Desenvolvimento Econômico do Estado de SP",
-      "dias_atras": "dia 25/08/2026, das 10h às 15h - Rua Ari da Rocha Miranda, 36"
+      "fonte": "DiárioZonaNorte",
+      "dias_atras": "terça-feira, 25/08/2026, das 10h às 15h - Rua Ari da Rocha Miranda, 36"
     },
     {
       "icone": "💼",
-      "titulo": "Feirão de Emprego e Empreendedorismo - CIC Taipas/Oeste",
+      "titulo": "Feirão de Emprego e Empreendedorismo - CIC Taipas",
       "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
       "bairro": "Parque Nações Unidas",
-      "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; vagas para PCD e para maiores de 18 anos; levar RG, CPF, carteira de trabalho e currículo impresso",
+      "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; distribuição de senhas a partir das 9h30; levar RG, CPF, carteira de trabalho e currículo",
       "tipo": "CLT",
-      "fonte": "DiárioZonaNorte / Secretaria de Desenvolvimento Econômico do Estado de SP",
-      "dias_atras": "dia 27/08/2026, das 10h às 15h - Estrada de Taipas, 990"
-    },
-    {
-      "icone": "🧹",
-      "titulo": "Cate seleciona 600 vagas no setor de limpeza/asseio",
-      "empresa": "Cate - Centro de Apoio ao Trabalho e Empreendedorismo",
-      "bairro": "Perus",
-      "requisitos": "Salários entre R$ 1.805 e R$ 2.676; 3 meses de experiência, ensino fundamental e fácil acesso ao local de trabalho; vagas permanentes com treinamento",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "inscrições pelo Portal Cate ou na unidade Cate de Perus"
-    },
-    {
-      "icone": "🤝",
-      "titulo": "Cate oferece atendimento para vagas de emprego na unidade Freguesia/Brasilândia",
-      "empresa": "Cate - Centro de Apoio ao Trabalho e Empreendedorismo",
-      "bairro": "Vila dos Andrades",
-      "requisitos": "Vagas variadas disponíveis no Portal Cate; atendimento presencial para orientação profissional e encaminhamento a vagas CLT",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "unidade permanente - Av. João Marcelino Branco, 95, Vila dos Andrades"
+      "fonte": "DiárioZonaNorte",
+      "dias_atras": "quinta-feira, 27/08/2026, das 10h às 15h - Estrada de Taipas, 990"
     }
   ],
-  "politica": [
-    {
-      "orgao": "🏛️ CPM - Conselho Participativo Municipal Santana/Tucuruvi/Mandaqui",
-      "bairro": "Mandaqui",
-      "titulo": "CPM Santana/Tucuruvi/Mandaqui define 15 propostas para o Orçamento Cidadão 2026",
-      "impacto": "O Conselho Participativo Municipal da subprefeitura definiu 15 propostas prioritárias, incluindo intervenções de infraestrutura e revitalização, que seguem para as próximas etapas do processo do Orçamento Cidadão 2026.",
-      "status": "Propostas definidas pelo CPM; aguardam votação popular nas próximas etapas do Orçamento Cidadão 2026",
-      "fonte": "DiárioZonaNorte"
-    },
-    {
-      "orgao": "🏛️ Secretaria Especial de Comunicação - Prefeitura de São Paulo",
-      "bairro": "Conjunto City Jaraguá",
-      "titulo": "Jaraguá vai ganhar nova UBS, rua asfaltada e feiras de hortifruti (sacolões)",
-      "impacto": "A nova UBS City Jaraguá, com previsão de entrega em outubro e orçamento de R$ 14 milhões, terá 8 consultórios médicos, 1 consultório odontológico e 6 salas de procedimentos de enfermagem, atendendo uma região com cerca de 15 mil moradores próxima ao CDHU/Jaraguá.",
-      "status": "Obra em andamento, com entrega prevista para outubro de 2026",
-      "fonte": "Secretaria Especial de Comunicação da Prefeitura de São Paulo"
-    },
-    {
-      "orgao": "🏛️ Subprefeitura Vila Maria/Vila Guilherme",
-      "bairro": "Vila Medeiros",
-      "titulo": "Orçamento Cidadão 2027: subprefeitura Vila Maria/Vila Guilherme/Vila Medeiros encerrou prazo de propostas em 15 de maio",
-      "impacto": "Moradores dos três distritos da subprefeitura - Vila Maria, Vila Guilherme e Vila Medeiros - puderam enviar propostas para o Orçamento Cidadão 2027 até 15 de maio de 2026. As sugestões seguem agora para as próximas fases de análise técnica e priorização do processo participativo.",
-      "status": "Fase de coleta de propostas encerrada; aguarda análise técnica e votação",
-      "fonte": "Subprefeitura Vila Maria/Vila Guilherme"
-    },
-    {
-      "orgao": "🏛️ Secretaria Municipal de Infraestrutura Urbana e Obras",
-      "bairro": "Vila Guilherme",
-      "titulo": "Maior Programa de Recapeamento da Prefeitura passa por vias de grande fluxo na região de Vila Maria/Vila Guilherme",
-      "impacto": "O programa de recapeamento da Prefeitura de São Paulo inclui, a princípio, três locais de vias com maior passagem de veículos na região da Subprefeitura Vila Maria/Vila Guilherme, visando melhorar a qualidade do asfalto e reduzir buracos nas principais vias de acesso ao bairro.",
-      "status": "Obras em andamento na região",
-      "fonte": "Subprefeitura Vila Maria/Vila Guilherme"
-    }
-  ],
+  "politica": [],
   "alertas": [
     {
       "tipo": "neutro",
       "emoji": "🚗",
-      "titulo": "Rodízio restringe veículos com placas final 1 e 2 nesta segunda-feira (24)",
-      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido. Nesta segunda-feira, a restrição é para veículos com placas de final 1 e 2.",
+      "titulo": "Rodízio restringe veículos com placas final 3 e 4 nesta terça-feira (25)",
+      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido.",
       "meta": "CET - Companhia de Engenharia de Tráfego"
     },
     {
       "tipo": "info",
       "emoji": "💉",
-      "titulo": "Campanha de Multivacinação segue até 1º de setembro, com reforço contra o sarampo",
-      "desc": "A campanha de multivacinação 2026 segue até 1º de setembro, reforçando a vacina tríplice viral (SRC) para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado antes, nas UBS de toda a capital.",
-      "meta": "Secretaria Municipal da Saúde"
-    },
-    {
-      "tipo": "info",
-      "emoji": "🌡️",
-      "titulo": "Semana começa fria e termina mais quente em São Paulo",
-      "desc": "A segunda-feira (24) tem mínima perto de 13°C e máxima perto de 19°C, com céu nublado. A previsão indica aquecimento gradual ao longo da semana, com máxima podendo chegar perto de 30°C na quinta-feira (27).",
-      "meta": "Previsão do tempo"
-    },
-    {
-      "tipo": "neutro",
-      "emoji": "🚇",
-      "titulo": "Linha 6-Laranja segue com abertura gradual de estações",
-      "desc": "Após a inauguração do trecho entre João Paulo I e Perdizes em julho, as estações Brasilândia e Itaberaba-Hospital Vila Penteado devem ser as próximas a abrir, ainda em 2026.",
-      "meta": "Concessionária Linha Uni"
+      "titulo": "SP confirma 15 casos de sarampo em 2026; campanha de revacinação segue nas UBS",
+      "desc": "A Zona Norte concentra 8 dos 15 casos confirmados no estado. A vacina tríplice viral (SCR) está disponível para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado antes.",
+      "meta": "Secretaria Municipal da Saúde / CVE-SP"
     }
   ],
   "fim_de_semana": [
     {
       "emoji": "💉",
-      "titulo": "Vacinação gratuita contra o sarampo no Tietê Plaza",
-      "info": "28/08 · 10h às 15h · Pirituba · Gratuito"
-    },
-    {
-      "emoji": "🎓",
-      "titulo": "Casa Aberta Senac Santana, com oficinas e workshops",
-      "info": "28/08 · 8h às 21h · Santana · Gratuito"
-    },
-    {
-      "emoji": "🎪",
-      "titulo": "Festa de aniversário de 13 anos da Fábrica de Cultura Jaçanã",
-      "info": "29/08 · a partir do meio-dia · Jaçanã · Gratuito"
-    },
-    {
-      "emoji": "🌳",
-      "titulo": "Caminhada Noturna no Parque Estadual da Cantareira",
-      "info": "29/08 · 16h às 21h · Tremembé · a partir de R$ 75"
-    },
-    {
-      "emoji": "🖼️",
-      "titulo": "Últimos dias da exposição sobre a história da Freguesia do Ó",
-      "info": "até 01/09 · 10h às 17h · Freguesia do Ó · Gratuito"
+      "titulo": "Último dia de vacinação contra o sarampo no Sesc Santana",
+      "info": "29/08 · 10h às 16h · Santana · Gratuito"
     }
   ]
 }
