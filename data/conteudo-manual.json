@@ -3,31 +3,31 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "💼 1.129 vagas",
+      "pill": "🍽️ Reforma concluída",
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Conjunto Jova Rural",
-      "bairro": "Conjunto Jova Rural",
-      "titulo": "Feirões de emprego reúnem 1.129 vagas CLT na Zona Norte nesta semana",
-      "resumo": "A Secretaria de Desenvolvimento Econômico do Estado de São Paulo (SDE) realiza dois Feirões de Emprego e Empreendedorismo na Zona Norte: nesta terça-feira (25/08), das 10h às 15h, no CIC Jova Rural (Rua Ari da Rocha Miranda, 36), e na quinta-feira (27/08), no mesmo horário, no CIC Taipas (Estrada de Taipas, 990). Ao todo são 1.129 vagas com carteira assinada, com salários entre R$ 1.621 e R$ 3.011 e distribuição de senhas a partir das 9h30 em cada local.",
+      "tag_bairro": "📍 Vila Maria",
+      "bairro": "Vila Maria",
+      "titulo": "Banco de Alimentos da Vila Maria ganha câmara fria e dobra capacidade após reforma",
+      "resumo": "A Prefeitura de São Paulo entregou na segunda-feira (24/08) a reforma de revitalização do Banco de Alimentos da Vila Maria, na Zona Norte. A unidade ganhou câmara fria para ampliar a capacidade de armazenamento, novas salas para manuseio de alimentos secos e para a administração, além de um auditório reformado com capacidade para mais de 80 pessoas. As obras começaram em dezembro de 2025 e o equipamento manteve o atendimento durante o período. O Banco de Alimentos atende hoje 409 entidades socioassistenciais cadastradas e distribuiu 4,468 milhões de quilos de alimentos entre 2021 e julho de 2026.",
       "fonte": "DiárioZonaNorte",
-      "hora": "25 e 27/08/2026",
-      "url": "https://www.diariozonanorte.com.br/feiroes-na-zona-norte-reunem-1-129-vagas-de-emprego-com-salarios-que-variam-de-r-1-621-a-r-3-011/",
-      "icone": "💼",
+      "hora": "24/08/2026",
+      "url": "https://www.diariozonanorte.com.br/banco-de-alimentos-da-vila-maria-ganha-camara-fria-e-novas-areas-apos-reforma/",
+      "icone": "🍽️",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Mulher é morta a facadas dentro de mercado no Morro Grande; suspeito é preso",
-      "resumo": "Angelita Manoela Rodrigues, de 40 anos, morreu no domingo (16/08) após ser atacada a facadas pelo companheiro dentro de um mercado no bairro do Morro Grande, zona norte de São Paulo. Ela foi socorrida e levada ao Hospital Municipal de Brasilândia, mas não resistiu aos ferimentos. O suspeito, Lafayete Gonzaga da Silva, também de 40 anos, chegou a fugir mas foi detido em seguida. O caso foi registrado na 4ª Delegacia de Defesa da Mulher, na Freguesia do Ó, como feminicídio, violência doméstica e maus-tratos a animal.",
-      "fonte": "CartaCapital",
-      "hora": "16/08/2026",
-      "url": "https://www.cartacapital.com.br/sociedade/mulher-morre-apos-ser-atacada-pelo-companheiro-a-faca-dentro-de-um-mercado-em-sp/",
-      "icone": "🚨",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Ônibus fretado com funcionários do Mercado Livre tomba na Rua Rio Jundiaí, em Perus, e deixa feridos",
+      "resumo": "Um ônibus fretado que transportava funcionários do Mercado Livre bateu em um poste e tombou na noite de segunda-feira (24/08), na Rua Rio Jundiaí, região de Perus, próximo à Rodovia dos Bandeirantes, na Zona Norte. Cerca de 10 pessoas ficaram feridas, e parte da região chegou a ficar sem energia elétrica após a colisão. Segundo a Secretaria de Segurança Pública, o motorista relatou falha nos freios ao descer uma ladeira; o teste do bafômetro deu negativo para álcool e a causa do acidente segue sob investigação.",
+      "fonte": "Metrópoles / Diário do Transporte",
+      "hora": "24/08/2026 (noite)",
+      "url": "https://www.metropoles.com/sao-paulo/onibus-bate-poste-deixa-feridos-zona-norte",
+      "icone": "🚌",
       "icone_classe": "ic-seg"
     },
     {
@@ -36,41 +36,166 @@
       "tag_label": "Saúde",
       "tag_bairro": "📍 Santana",
       "bairro": "Santana",
-      "titulo": "SP confirma 15 casos de sarampo em 2026; Zona Norte concentra 8 deles",
-      "resumo": "O Centro de Vigilância Epidemiológica do Estado de São Paulo confirmou 15 casos de sarampo em 2026, sendo 8 registrados na Zona Norte da capital. Uma campanha especial de revacinação com a tríplice viral (SCR) começou em agosto para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado antes. Nesta semana, o Sesc Santana recebe a equipe da UVIS Santana/Tucuruvi para aplicar doses de terça a sábado (25 a 29/08), das 10h às 16h.",
+      "titulo": "Campanha de vacinação contra o sarampo segue no Sesc Santana até sábado (29/08)",
+      "resumo": "O Sesc Santana segue recebendo a equipe da UVIS Santana/Tucuruvi para aplicar a vacina tríplice viral (SCR), que protege contra sarampo, caxumba e rubéola, para pessoas de 6 meses a 59 anos, mesmo quem já foi vacinado antes. O atendimento vai de terça a sábado (25 a 29/08), das 10h às 16h. A campanha faz parte do reforço de vacinação da cidade após a confirmação de novos casos de sarampo em São Paulo.",
       "fonte": "DiárioZonaNorte",
       "hora": "até 29/08/2026",
       "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-campanha-de-vacinacao-contra-o-sarampo-para-pessoas-de-6-a-59-anos/",
       "icone": "💉",
       "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Imirim",
+      "bairro": "Imirim",
+      "titulo": "Requalificação da Avenida Imirim vai beneficiar 112 mil pessoas por dia",
+      "resumo": "A Prefeitura de São Paulo avança com a requalificação do corredor da Avenida Imirim, na Zona Norte, ao longo de 4,6 km entre as avenidas Deputado Emílio Carlos e Afonso Schmidt. O projeto prevê pavimento rígido no corredor de ônibus, paradas modernizadas com superguias, calçadas acessíveis, enterramento das redes aéreas, melhorias no sistema de drenagem, semáforos inteligentes e sinalização inclusiva, com impacto direto para 112 mil pessoas que circulam pela via diariamente.",
+      "fonte": "Prefeitura de São Paulo",
+      "hora": "agosto/2026",
+      "url": "https://prefeitura.sp.gov.br/w/s%C3%A3o-paulo-amplia-mobilidade-urbana-com-mais-de-r-13-bilh%C3%B5es-investidos-em-obras-que-reduzem-o-tempo-de-deslocamento",
+      "icone": "🚧",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Parque Nações Unidas",
+      "bairro": "Parque Nações Unidas",
+      "titulo": "Feirão de Emprego no CIC Taipas oferece vagas CLT nesta quinta-feira (27/08)",
+      "resumo": "A Secretaria de Desenvolvimento Econômico do Estado de São Paulo (SDE) realiza nesta quinta-feira (27/08), das 10h às 15h, o Feirão de Emprego e Empreendedorismo no CIC Taipas (Estrada de Taipas, 990, Parque Nações Unidas), com distribuição de senhas a partir das 9h30. O evento faz parte de uma ação que reuniu 1.129 vagas com carteira assinada na Zona Norte, com salários entre R$ 1.621 e R$ 3.011, além de orientação sobre microcrédito do Banco do Povo Paulista e cursos gratuitos do Qualifica SP.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "27/08/2026, 10h às 15h",
+      "url": "https://www.diariozonanorte.com.br/feiroes-na-zona-norte-reunem-1-129-vagas-de-emprego-com-salarios-que-variam-de-r-1-621-a-r-3-011/",
+      "icone": "💼",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Tucuruvi",
+      "bairro": "Tucuruvi",
+      "titulo": "Casa Une abre programação gratuita de cultura, tecnologia e formação no Tucuruvi",
+      "resumo": "A Casa Une, espaço criado pelo Grupo Unite no Tucuruvi, iniciou a programação do segundo semestre com agenda gratuita voltada a cultura, tecnologia, educação e inovação. Os próximos meses terão cursos de formação, clubes temáticos, exposições, encontros culturais e debates sobre os desafios da sociedade contemporânea, com atividades sujeitas a inscrição prévia.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "agosto/2026",
+      "url": "https://www.diariozonanorte.com.br/casa-une-inicia-programacao-do-segundo-semestre-com-agenda-gratuita-de-cultura-tecnologia-e-formacao-no-tucuruvi/",
+      "icone": "🎓",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Campo de Marte vai ganhar um dos primeiros vertiportos urbanos do Brasil para eVTOLs",
+      "resumo": "Uma parceria entre o Aeroporto de Campo de Marte, a PAX Aeroportos e a UrbanV vai transformar o terminal, na Zona Norte, em um dos primeiros grandes polos de vertiportos do país, dedicados a pouso, decolagem e recarga de eVTOLs (veículos elétricos de decolagem vertical). A iniciativa integra um sandbox regulatório da Anac, que vai usar Campo de Marte como laboratório para definir normas desse novo modal, com potencial de reduzir o tempo de deslocamento até pontos como Faria Lima, Alphaville, Congonhas e Guarulhos.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "agosto/2026",
+      "url": "https://www.diariozonanorte.com.br/do-campo-de-marte-aos-evtols-a-zona-norte-acompanha-a-transformacao-da-aviacao/",
+      "icone": "🚁",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Política",
+      "tag_bairro": "📍 Limão",
+      "bairro": "Limão",
+      "titulo": "CPM da Casa Verde/Cachoeirinha/Limão define prioridades do Orçamento Cidadão 2026",
+      "resumo": "O Conselho Participativo Municipal (CPM) da Subprefeitura Casa Verde/Cachoeirinha/Limão avançou na segunda etapa do Orçamento Cidadão 2026, elegendo as propostas prioritárias para o território. Entre os itens mais votados estão uma UPA na região do Limão/Parque Peruche, calçadas para o Parque Linear do Córrego do Bispo, um ecoponto para a subprefeitura, recuperação das margens do Córrego Guaraú e uma UBS para o Jardim Peri Alto.",
+      "fonte": "Prefeitura de São Paulo / DiárioZonaNorte",
+      "hora": "agosto/2026",
+      "url": "https://www.diariozonanorte.com.br/cpm-da-casa-verde-cachoeirinha-limao-divulga-prioridades-do-orcamento-cidadao/",
+      "icone": "🗳️",
+      "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
+      "dia": "09",
+      "mes": "Set",
+      "cor_fundo": "#8E44AD",
+      "bairro": "Vila Maria",
+      "titulo": "1º Fórum Itinerante de Cuidadores de Pessoas Idosas",
+      "hora": "9h às 16h30",
+      "local": "Biblioteca Álvares de Azevedo, Vila Maria",
+      "descricao": "Promovido pela Bunkyo em parceria com a Secretaria Municipal de Direitos Humanos e Cidadania, o fórum reúne cuidadores familiares e profissionais para debater os desafios do cuidado com pessoas idosas. Inscrição prévia obrigatória, vagas limitadas.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/forum-de-cuidadores-de-pessoas-idosas-acontecera-na-vila-maria-em-9-de-setembro/"
+    },
+    {
+      "dia": "12",
+      "mes": "Set",
+      "cor_fundo": "#D35400",
+      "bairro": "São Domingos",
+      "titulo": "Feira de Arte e Artesanato do Parque São Domingos",
+      "hora": "9h às 18h",
+      "local": "Calçada do Parque São Domingos (Rua Rumi de Ranieri x Rua Luís Elias Attiê)",
+      "descricao": "Feira mensal, realizada todo segundo sábado do mês, reúne cerca de 50 artesãos da região em uma celebração da cultura e do artesanato local, promovida pela Subprefeitura Pirituba/Jaraguá.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/39077"
+    },
+    {
       "dia": "25",
-      "mes": "Ago",
+      "mes": "Set",
       "cor_fundo": "#2980B9",
       "bairro": "Santana",
-      "titulo": "Campanha de vacinação contra o sarampo no Sesc Santana",
-      "hora": "10h às 16h, de terça (25) a sábado (29/08)",
+      "titulo": "\"Ficções\", com Vera Holtz, no Teatro Alfredo Mesquita",
+      "hora": "20h (também dia 26/09)",
+      "local": "Teatro Alfredo Mesquita, Santana",
+      "descricao": "Espetáculo gratuito com Vera Holtz integra o projeto \"Palcos: SP\", que leva 20 apresentações a seis teatros públicos da capital entre setembro e outubro, com realização do Instituto Arlequim e patrocínio via Lei Rouanet.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/vera-holtz-e-marcelo-medici-levam-espetaculos-gratuitos-ao-teatro-alfredo-mesquita-em-santana/"
+    },
+    {
+      "dia": "27",
+      "mes": "Set",
+      "cor_fundo": "#2980B9",
+      "bairro": "Santana",
+      "titulo": "\"Dona Lola\", com Marcelo Médici, encerra o projeto Palcos: SP em Santana",
+      "hora": "16h e 19h",
+      "local": "Teatro Alfredo Mesquita, Santana",
+      "descricao": "Marcelo Médici encerra a programação gratuita do projeto \"Palcos: SP\" no Teatro Alfredo Mesquita com duas sessões de \"Dona Lola\".",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/vera-holtz-e-marcelo-medici-levam-espetaculos-gratuitos-ao-teatro-alfredo-mesquita-em-santana/"
+    },
+    {
+      "dia": "12",
+      "mes": "Nov",
+      "cor_fundo": "#C0392B",
+      "bairro": "Vila Guilherme",
+      "titulo": "Revelando SP retorna ao Parque do Trote após sete anos",
+      "hora": "12 a 15/11/2026",
+      "local": "Parque do Trote, Vila Guilherme",
+      "descricao": "O festival Revelando SP, organizado pela Secretaria de Estado da Cultura com gestão da APAA, muda de data (de setembro para novembro) e volta ao Parque do Trote, reunindo manifestações da cultura tradicional paulista, gastronomia e artesanato de todo o estado. A expectativa é receber mais de 250 mil pessoas nos quatro dias.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/revelando-sp-muda-de-data-e-sera-realizado-em-novembro-no-parque-do-trote/"
+    },
+    {
+      "dia": "29",
+      "mes": "Ago",
+      "cor_fundo": "#27AE60",
+      "bairro": "Santana",
+      "titulo": "Último dia de vacinação contra o sarampo no Sesc Santana",
+      "hora": "10h às 16h",
       "local": "Sesc Santana",
-      "descricao": "A equipe da UVIS Santana/Tucuruvi aplica a vacina tríplice viral (SCR), que protege contra sarampo, caxumba e rubéola, para pessoas de 6 meses a 59 anos, mesmo quem já foi vacinado antes.",
+      "descricao": "Encerra-se no sábado a campanha especial de vacinação contra o sarampo (tríplice viral) para pessoas de 6 meses a 59 anos, realizada pela UVIS Santana/Tucuruvi.",
       "gratuito": true,
       "preco": null,
       "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-campanha-de-vacinacao-contra-o-sarampo-para-pessoas-de-6-a-59-anos/"
     }
   ],
   "vagas": [
-    {
-      "icone": "💼",
-      "titulo": "Feirão de Emprego e Empreendedorismo - CIC Jova Rural",
-      "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
-      "bairro": "Conjunto Jova Rural",
-      "requisitos": "CLT, salários entre R$ 1.621 e R$ 3.011; distribuição de senhas a partir das 9h30; levar RG, CPF, carteira de trabalho e currículo",
-      "tipo": "CLT",
-      "fonte": "DiárioZonaNorte",
-      "dias_atras": "terça-feira, 25/08/2026, das 10h às 15h - Rua Ari da Rocha Miranda, 36"
-    },
     {
       "icone": "💼",
       "titulo": "Feirão de Emprego e Empreendedorismo - CIC Taipas",
@@ -80,23 +205,92 @@
       "tipo": "CLT",
       "fonte": "DiárioZonaNorte",
       "dias_atras": "quinta-feira, 27/08/2026, das 10h às 15h - Estrada de Taipas, 990"
+    },
+    {
+      "icone": "🧹",
+      "titulo": "Mutirão de Empregos do Cate - Centro POT Norte",
+      "empresa": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "bairro": "Jardim São Bento",
+      "requisitos": "Mais de 1.700 vagas em comércio, serviços, construção civil, logística e saúde; salários de R$ 800 a R$ 4.880; levar RG, CPF e carteira de trabalho",
+      "tipo": "CLT",
+      "fonte": "Prefeitura de São Paulo",
+      "dias_atras": "sexta-feira, 28/08/2026, das 10h às 15h - Rua Leão XIII, 202"
+    },
+    {
+      "icone": "📦",
+      "titulo": "Ajudante Operacional - CD Coca-Cola",
+      "empresa": "Coca-Cola (Centro de Distribuição)",
+      "bairro": "Parque Novo Mundo",
+      "requisitos": "CLT, salário de R$ 2.700,00",
+      "tipo": "CLT",
+      "fonte": "Infojobs",
+      "dias_atras": "vaga aberta em agosto/2026"
+    },
+    {
+      "icone": "🛒",
+      "titulo": "Promotor(a) de Vendas - Atacadão Vila Maria",
+      "empresa": "Atacadão",
+      "bairro": "Vila Maria",
+      "requisitos": "CLT, responsável pela exposição correta dos produtos na loja",
+      "tipo": "CLT",
+      "fonte": "Infojobs",
+      "dias_atras": "vaga aberta em agosto/2026"
     }
   ],
-  "politica": [],
+  "politica": [
+    {
+      "orgao": "🌳 Secretaria Municipal do Verde e do Meio Ambiente (SVMA)",
+      "bairro": "Vila Guilherme",
+      "titulo": "Audiência pública discute Complexo Logístico Chico Pontes na área do antigo MartCenter",
+      "impacto": "Empreendimento de 39 galpões e 117 mil m² de área construída, entre a Rua Chico Pontes e a Rua São Quirino, próximo ao Parque do Trote, levanta questões sobre trânsito e meio ambiente na região.",
+      "status": "Em licenciamento ambiental (EIA/RIMA em análise)",
+      "fonte": "DiárioZonaNorte"
+    },
+    {
+      "orgao": "🏛️ Conselho Participativo Municipal (CPM) Casa Verde/Cachoeirinha/Limão",
+      "bairro": "Limão",
+      "titulo": "CPM elege prioridades do Orçamento Cidadão 2026 para a região",
+      "impacto": "Propostas priorizadas incluem UPA para Limão/Parque Peruche, UBS para o Jardim Peri Alto, ecoponto regional e recuperação das margens do Córrego Guaraú.",
+      "status": "Segunda etapa concluída, propostas seguem para execução orçamentária",
+      "fonte": "DiárioZonaNorte"
+    },
+    {
+      "orgao": "🏢 Subprefeitura Pirituba/Jaraguá",
+      "bairro": "Pirituba",
+      "titulo": "Subprefeitura Pirituba/Jaraguá tem nova subprefeita",
+      "impacto": "Luciana Torralles assume o comando da Subprefeitura Pirituba/Jaraguá, vindo da Subprefeitura Perus/Anhanguera, em meio a investimentos de R$ 490 milhões anunciados para a região via Prefeitura Presente.",
+      "status": "Mudança de comando efetivada em 25/08/2026",
+      "fonte": "Folha Noroeste"
+    }
+  ],
   "alertas": [
+    {
+      "tipo": "info",
+      "emoji": "💉",
+      "titulo": "SP confirma 15 casos de sarampo em 2026; Zona Norte concentra 8 deles",
+      "desc": "A campanha de revacinação com a tríplice viral (SCR) segue nas UBS e em pontos especiais como o Sesc Santana, disponível para pessoas de 6 meses a 59 anos, mesmo quem já foi vacinado antes.",
+      "meta": "Secretaria Municipal da Saúde / CVE-SP"
+    },
+    {
+      "tipo": "ok",
+      "emoji": "📱",
+      "titulo": "Prefeitura amplia teleconsultas 24 horas pelo app e-saúdeSP",
+      "desc": "Moradores da capital, incluindo a Zona Norte, já podem acessar atendimento médico por teleconsulta a qualquer hora do dia pelo aplicativo e-saúdeSP, sem necessidade de deslocamento até uma unidade de saúde.",
+      "meta": "Secretaria Municipal da Saúde"
+    },
     {
       "tipo": "neutro",
       "emoji": "🚗",
-      "titulo": "Rodízio restringe veículos com placas final 3 e 4 nesta terça-feira (25)",
+      "titulo": "Rodízio restringe veículos com placas final 7 e 8 nesta quinta-feira (27/08)",
       "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido.",
       "meta": "CET - Companhia de Engenharia de Tráfego"
     },
     {
-      "tipo": "info",
-      "emoji": "💉",
-      "titulo": "SP confirma 15 casos de sarampo em 2026; campanha de revacinação segue nas UBS",
-      "desc": "A Zona Norte concentra 8 dos 15 casos confirmados no estado. A vacina tríplice viral (SCR) está disponível para pessoas de 6 meses a 59 anos, mesmo para quem já foi vacinado antes.",
-      "meta": "Secretaria Municipal da Saúde / CVE-SP"
+      "tipo": "neutro",
+      "emoji": "🌡️",
+      "titulo": "Tempo esquenta nesta quinta-feira após dias mais frios",
+      "desc": "A nebulosidade diminui ao longo do dia desta quinta (27/08), com predomínio de sol à tarde e possibilidade de chuva isolada na madrugada. Aquecimento se intensifica no fim de semana.",
+      "meta": "Climatempo"
     }
   ],
   "fim_de_semana": [
