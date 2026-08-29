@@ -3,74 +3,18 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🎭 Estreia hoje",
+      "pill": "🎉 Encerramento hoje e amanhã",
       "tag_categoria": "tag-not",
       "tag_label": "Cultura",
-      "tag_bairro": "📍 Vila Fanton",
-      "bairro": "Vila Fanton",
-      "titulo": "Espetáculo 'Manifesto de Concreto' estreia hoje no CEU Perus com entrada gratuita",
-      "resumo": "O Coletivo Noroest apresenta hoje (28/08), às 20h, no CEU Perus, o espetáculo gratuito 'Manifesto de Concreto', que une dança, teatro e circo para investigar as relações entre corpo, território e memória. A obra é inspirada na Greve dos Queixadas, considerada a greve mais longa da história do Brasil, e resgata histórias de trabalho e organização coletiva de Perus. Uma segunda temporada de apresentações acontece em 4 de setembro, às 10h e 14h. A iniciativa integra o projeto 'Manifesto de Concreto – Território de Saberes', contemplado pela 9ª edição do Programa de Fomento à Cultura da Periferia da Secretaria Municipal de Cultura e Economia Criativa.",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Feira das Nações encerra neste fim de semana os 446 anos da Freguesia do Ó",
+      "resumo": "A Subprefeitura da Freguesia do Ó encerra neste sábado e domingo (29 e 30/08) a programação especial de aniversário do bairro, com shows musicais gratuitos no Largo da Matriz de Nossa Senhora do Ó. No sábado se apresentam Alma Livre (15h), Banda 51 (17h15), Salgadinho (19h) e Trio Virgulino (21h). No domingo sobem ao palco André Guimarães (14h), DJ Maravilha (15h), Fê Braga (17h), Sampa Crew (19h) e Fundo de Quintal (21h).",
       "fonte": "Folha Noroeste",
-      "hora": "28/08/2026, 20h (e 04/09, 10h e 14h)",
-      "url": "https://folhanoroeste.com.br/entretenimento-esportes/coletivo-noroest-apresenta-manifesto-de-concreto-no-ceu-perus/",
-      "icone": "🎭",
+      "hora": "29 e 30/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/ultima-semana-de-comemoracoes-dos-446-anos-da-freguesia-do-o-traz-feira-das-nacoes/",
+      "icone": "🎉",
       "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Política",
-      "tag_bairro": "📍 Zona Norte",
-      "bairro": "Zona Norte",
-      "titulo": "Inscrições para os Conselhos Participativos Municipais (2027-2028) começam hoje",
-      "resumo": "A partir desta sexta-feira (28), moradores de todas as subprefeituras, incluindo a Zona Norte, podem se inscrever gratuitamente e pela internet para concorrer a uma vaga nos Conselhos Participativos Municipais (CPMs) para o biênio 2027-2028. Ao todo são 608 vagas de titulares distribuídas entre os 96 distritos e as 32 subprefeituras da cidade, sendo 38 destinadas a imigrantes. Os conselheiros eleitos ajudam a definir prioridades do Orçamento Cidadão, que destina R$ 10 milhões por subprefeitura (R$ 320 milhões na cidade). As inscrições vão até 16 de setembro e a votação ocorre de 11 a 14 de novembro de 2026.",
-      "fonte": "Folha Noroeste",
-      "hora": "28/08/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/inscricoes-para-eleicao-dos-conselhos-participativos-municipais-comecam-nesta-sexta-28/",
-      "icone": "🗳️",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Zona Norte",
-      "bairro": "Zona Norte",
-      "titulo": "Novas regras para patinetes e bicicletas elétricas passam a valer hoje em SP",
-      "resumo": "Entram em vigor nesta sexta-feira (28) as novas regras municipais para circulação de patinetes, bicicletas elétricas e outros equipamentos elétricos individuais. Patinetes elétricos ficam proibidos de circular em calçadas e só podem trafegar em ruas com velocidade máxima de 40 km/h; bicicletas elétricas podem ir a até 50 km/h em vias sem ciclovia e 20 km/h em ciclovias e ciclofaixas. Por enquanto a Prefeitura fará apenas campanhas educativas: a fiscalização só começa em 12 de outubro.",
-      "fonte": "Folha Noroeste / SMT",
-      "hora": "28/08/2026",
-      "url": "https://folhanoroeste.com.br/cotidiano/novas-regras-para-patinetes-e-bicicletas-eletricas-comecam-a-valer-hoje-em-sp/",
-      "icone": "🛴",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Coworking TEIA no Jaraguá promove palestra gratuita sobre crescimento sustentável nos negócios",
-      "resumo": "O TEIA Pinheirinho promove hoje (28/08), das 14h às 16h, a palestra 'Escalar sem colapsar', com Susane Cardoso, voltada a empreendedores, autônomos e responsáveis por pequenos negócios do Jaraguá. O encontro aborda saúde mental no empreendedorismo e estratégias para crescer sem excesso de trabalho e desgaste emocional. O evento acontece na Rua Camillo Zanotti, 92, com inscrição pelo site ou aplicativo da Ade Sampa.",
-      "fonte": "Folha Noroeste",
-      "hora": "28/08/2026, 14h às 16h",
-      "url": "https://folhanoroeste.com.br/regional/coworking-teia-no-jaragua-promove-palestra-sobre-crescimento-sustentavel-nos-negocios/",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "CET interdita duas vias no Jaraguá para obras de sarjeta e poda de árvore",
-      "resumo": "A CET vai monitorar o trânsito no cruzamento da Rua Petia com a Rua Perobinha, no Jaraguá, interditado desde quarta-feira (26) para obras de construção de sarjetas pela Subprefeitura Pirituba/Jaraguá, com duração prevista de 20 dias. Também será interditada a Rua Domingos Antônio Gomes, entre as ruas Félix Bogado e Jean Coralli, para serviço de poda de árvore.",
-      "fonte": "Folha Noroeste",
-      "hora": "26/08/2026 (obras em andamento)",
-      "url": "https://folhanoroeste.com.br/regional/cet-interdita-duas-vias-no-jaragua-para-obras-confira-quais-ruas-serao-fechadas/",
-      "icone": "🚧",
-      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
@@ -79,7 +23,7 @@
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
       "titulo": "Mutirão 'Menos Lixo, Mais Clima' faz limpeza em Pirituba neste sábado",
-      "resumo": "A Subprefeitura Pirituba/Jaraguá promove neste sábado (29/08), a partir das 9h, um mutirão de limpeza do projeto 'Menos Lixo, Mais Clima', na Rua Doutor Odon Carlos de Figueiredo Ferraz, com ponto de encontro na Praça Ave Maria Casali Denti. A ação convida moradores a ajudar a manter a região mais limpa e organizada, com inscrição pelo site eucuidodomeuquadrado.org/eventos.",
+      "resumo": "A Subprefeitura Pirituba/Jaraguá promove neste sábado (29/08), a partir das 9h, um mutirão de limpeza do projeto 'Menos Lixo, Mais Clima', na Rua Doutor Odon Carlos de Figueiredo Ferraz, com ponto de encontro na Praça Ave Maria Casali Denti. A ação convida moradores a ajudar a manter a região mais limpa e organizada.",
       "fonte": "Folha Noroeste",
       "hora": "29/08/2026, 9h",
       "url": "https://folhanoroeste.com.br/regional/menos-lixo-mais-clima-promove-mutirao-de-limpeza-em-pirituba-neste-sabado/",
@@ -89,11 +33,67 @@
     {
       "destaque": false,
       "tag_categoria": "tag-not",
+      "tag_label": "Zeladoria",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Subprefeitura Freguesia do Ó/Brasilândia participa do Mutirão da Limpeza deste sábado",
+      "resumo": "Dentro do Movimento SP, que promove ações de limpeza, educação ambiental e conscientização sobre descarte correto de resíduos, a Subprefeitura Freguesia do Ó/Brasilândia participa neste sábado (29/08) do mutirão de limpeza realizado simultaneamente em todas as subprefeituras da cidade. O ponto de encontro é na Rua Itálico Ancona Lopez, às 9h.",
+      "fonte": "Folha Noroeste",
+      "hora": "29/08/2026, 9h",
+      "url": "https://folhanoroeste.com.br/cotidiano/sub-freguesia-realizara-mais-um-mutirao-de-limpeza-no-bairro-veja-como-participar/",
+      "icone": "🧹",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Cultura",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Encerramento do 11º Circuito Jaraguá é Guarani 2026 ocorre neste domingo no Parque Pinheirinho D'água",
+      "resumo": "Depois de um mês de encontros e celebrações, a 11ª edição do Circuito Clandestino Jaraguá é Guarani chega ao fim neste domingo (30/08), das 11h às 18h, no parque municipal Pinheirinho D'água, na avenida Amador Aguiar, 701, no Jaraguá. A programação gratuita reúne atrações como Espaço do Brincar, Irmandade Old Car, Batucada do Canivete, painel cultural indígena com Jera Poty e Para Poty, massoterapia, Coral Guarani e shows de Willian Poty e Maria Preta.",
+      "fonte": "Folha Noroeste",
+      "hora": "30/08/2026, 11h às 18h",
+      "url": "https://folhanoroeste.com.br/cotidiano/encerramento-do-11a-circuito-jaragua-e-guarani-2026-ocorrera-no-parque-pinheirinho-dagua/",
+      "icone": "🎪",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Zona Norte",
+      "bairro": "Zona Norte",
+      "titulo": "SME abre 2 mil vagas de especialização em Educação Especial com foco em TEA",
+      "resumo": "A Secretaria Municipal de Educação de São Paulo abriu inscrições para o Curso de Especialização em Educação Especial com Ênfase em Transtorno do Espectro Autista (TEA), em EAD e executado pelo Instituto Presbiteriano Mackenzie. São 2 mil vagas em três entradas, voltadas a professores efetivos e coordenadores pedagógicos da Rede Municipal de Ensino. As inscrições da primeira entrada vão até 11 de setembro, com matrícula entre 14 e 21 de setembro e início das aulas em fevereiro de 2027.",
+      "fonte": "Folha Noroeste",
+      "hora": "Inscrições até 11/09/2026",
+      "url": "https://folhanoroeste.com.br/educacao/sme-oferece-2-mil-vagas-de-especializacao-em-educacao-especial-com-foco-em-tea/",
+      "icone": "🎓",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Jardim Taipas",
+      "bairro": "Jardim Taipas",
+      "titulo": "TEIA Taipas promove curso gratuito de chaveiro nesta segunda-feira",
+      "resumo": "O TEIA Taipas promove na segunda-feira (31/08), das 10h às 16h, um curso gratuito de técnicas de criação de chaveiros com os instrutores Ruth e Arteval. A proposta é ensinar uma habilidade manual com potencial de geração de renda, voltada a empreendedores, autônomos e interessados em artesanato. O curso acontece na Rua Diógenes Dourado, 101, na Cohab Taipas.",
+      "fonte": "Folha Noroeste",
+      "hora": "31/08/2026, 10h às 16h",
+      "url": "https://folhanoroeste.com.br/cotidiano/coworking-em-taipas-promove-curso-gratuito-com-potencial-para-gerar-renda/",
+      "icone": "🔑",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
       "tag_label": "Política",
       "tag_bairro": "📍 Jardim Taipas",
       "bairro": "Jardim Taipas",
-      "titulo": "CPM Pirituba/Jaraguá delibera sobre novo endereço para Centro Dia do Idoso e Centro de Convivência",
-      "resumo": "O Conselho Participativo Municipal (CPM) de Pirituba/Jaraguá se reuniu em caráter extraordinário para deliberar sobre a destinação de recursos do Orçamento Cidadão para um Centro Dia para Idosos (CDI) e um Centro de Convivência Intergeracional (CCInter). Como o terreno inicialmente previsto na Estrada do Corredor se mostrou inviável, a SMADS propôs usar o imóvel da antiga Fundação CASA, na Rua Ilha da Juventude, 518, em Taipas, atualmente desativado, para abrigar os dois equipamentos.",
+      "titulo": "CPM Pirituba/Jaraguá define imóvel da antiga Fundação CASA em Taipas para Centro Dia do Idoso",
+      "resumo": "O Conselho Participativo Municipal (CPM) de Pirituba/Jaraguá se reuniu em caráter extraordinário para deliberar sobre recursos do Orçamento Cidadão destinados a um Centro Dia para Idosos (CDI) e um Centro de Convivência Intergeracional (CCInter). Como o terreno previsto na Estrada do Corredor se mostrou inviável, a SMADS propôs usar o imóvel desativado da antiga Fundação CASA, na Rua Ilha da Juventude, 518, em Taipas, para abrigar os dois equipamentos.",
       "fonte": "Folha Noroeste",
       "hora": "27/08/2026",
       "url": "https://folhanoroeste.com.br/cotidiano/cpm-pirituba-jaragua-promove-reuniao-extraordinaria-para-deliberar-destinacao-de-recursos/",
@@ -103,16 +103,30 @@
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Cultura",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Freguesia do Ó encerra comemorações de 446 anos com Feira das Nações no Largo da Matriz",
-      "resumo": "A Subprefeitura da Freguesia do Ó encerra neste fim de semana (29 e 30/08) a programação especial de aniversário do bairro, com shows musicais no Largo da Matriz de Nossa Senhora do Ó. No sábado, se apresentam Alma Livre (15h), Banda 51 (17h15), Salgadinho (19h) e Trio Virgulino (21h). No domingo, sobem ao palco André Guimarães (14h), DJ Maravilha (15h), Fê Braga (17h), Sampa Crew (19h) e Fundo de Quintal (21h).",
+      "tag_label": "Política",
+      "tag_bairro": "📍 Zona Norte",
+      "bairro": "Zona Norte",
+      "titulo": "Seguem abertas as inscrições para os Conselhos Participativos Municipais (2027-2028)",
+      "resumo": "Moradores de todas as subprefeituras, incluindo a Zona Norte, podem se inscrever gratuitamente pela internet para concorrer a uma vaga nos Conselhos Participativos Municipais (CPMs) para o biênio 2027-2028. Ao todo são 608 vagas de titulares em 96 distritos e 32 subprefeituras. Os conselheiros eleitos ajudam a definir prioridades do Orçamento Cidadão, que destina R$ 10 milhões por subprefeitura. As inscrições vão até 16 de setembro e a votação ocorre de 11 a 14 de novembro.",
       "fonte": "Folha Noroeste",
-      "hora": "29 e 30/08/2026",
-      "url": "https://folhanoroeste.com.br/regional/ultima-semana-de-comemoracoes-dos-446-anos-da-freguesia-do-o-traz-feira-das-nacoes/",
-      "icone": "🎉",
-      "icone_classe": "ic-edu"
+      "hora": "Inscrições até 16/09/2026",
+      "url": "https://folhanoroeste.com.br/cotidiano/inscricoes-para-eleicao-dos-conselhos-participativos-municipais-comecam-nesta-sexta-28/",
+      "icone": "🗳️",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "CET mantém interdição de duas vias no Jaraguá para obras de sarjeta e poda de árvore",
+      "resumo": "Segue interditado o cruzamento da Rua Petia com a Rua Perobinha, no Jaraguá, fechado desde 26/08 para obras de construção de sarjetas pela Subprefeitura Pirituba/Jaraguá, com previsão de 20 dias de duração. Também está interditada a Rua Domingos Antônio Gomes, entre as ruas Félix Bogado e Jean Coralli, para serviço de poda de árvore.",
+      "fonte": "Folha Noroeste",
+      "hora": "Obras em andamento desde 26/08/2026",
+      "url": "https://folhanoroeste.com.br/regional/cet-interdita-duas-vias-no-jaragua-para-obras-confira-quais-ruas-serao-fechadas/",
+      "icone": "🚧",
+      "icone_classe": "ic-mob"
     }
   ],
   "agenda": [
@@ -137,36 +151,49 @@
       "titulo": "Mutirão de limpeza 'Menos Lixo, Mais Clima'",
       "hora": "9h",
       "local": "Rua Doutor Odon Carlos de Figueiredo Ferraz (encontro na Praça Ave Maria Casali Denti)",
-      "descricao": "Mutirão de limpeza promovido pela Subprefeitura Pirituba/Jaraguá, aberto à participação de moradores mediante inscrição prévia.",
+      "descricao": "Mutirão de limpeza promovido pela Subprefeitura Pirituba/Jaraguá, aberto à participação de moradores.",
       "gratuito": true,
       "preco": null,
       "url": "https://folhanoroeste.com.br/regional/menos-lixo-mais-clima-promove-mutirao-de-limpeza-em-pirituba-neste-sabado/"
     },
     {
-      "dia": "04",
-      "mes": "Set",
-      "cor_fundo": "#8E44AD",
-      "bairro": "Vila Fanton",
-      "titulo": "'Manifesto de Concreto' - segunda temporada no CEU Perus",
-      "hora": "10h e 14h",
-      "local": "CEU Perus, Vila Fanton",
-      "descricao": "Nova sessão do espetáculo gratuito de dança, teatro e circo inspirado na Greve dos Queixadas, apresentado pelo Coletivo Noroest.",
+      "dia": "29",
+      "mes": "Ago",
+      "cor_fundo": "#27AE60",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Mutirão da Limpeza - Freguesia do Ó/Brasilândia",
+      "hora": "9h",
+      "local": "Rua Itálico Ancona Lopez",
+      "descricao": "Ação de limpeza e educação ambiental do Movimento SP, realizada simultaneamente em todas as subprefeituras da cidade.",
       "gratuito": true,
       "preco": null,
-      "url": "https://folhanoroeste.com.br/entretenimento-esportes/coletivo-noroest-apresenta-manifesto-de-concreto-no-ceu-perus/"
+      "url": "https://folhanoroeste.com.br/cotidiano/sub-freguesia-realizara-mais-um-mutirao-de-limpeza-no-bairro-veja-como-participar/"
     },
     {
-      "dia": "09",
-      "mes": "Set",
+      "dia": "30",
+      "mes": "Ago",
       "cor_fundo": "#8E44AD",
-      "bairro": "Vila Maria",
-      "titulo": "1º Fórum Itinerante de Cuidadores de Pessoas Idosas",
-      "hora": "9h às 16h30",
-      "local": "Biblioteca Álvares de Azevedo, Vila Maria",
-      "descricao": "Promovido pela Bunkyo em parceria com a Secretaria Municipal de Direitos Humanos e Cidadania, o fórum reúne cuidadores familiares e profissionais para debater os desafios do cuidado com pessoas idosas. Inscrição prévia obrigatória, vagas limitadas.",
+      "bairro": "Jaraguá",
+      "titulo": "Encerramento do 11º Circuito Jaraguá é Guarani 2026",
+      "hora": "11h às 18h",
+      "local": "Parque municipal Pinheirinho D'água, av. Amador Aguiar, 701, Jaraguá",
+      "descricao": "Programação gratuita de encerramento com atrações culturais, musicais e indígenas, incluindo Coral Guarani, Willian Poty e Maria Preta.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.diariozonanorte.com.br/forum-de-cuidadores-de-pessoas-idosas-acontecera-na-vila-maria-em-9-de-setembro/"
+      "url": "https://folhanoroeste.com.br/cotidiano/encerramento-do-11a-circuito-jaragua-e-guarani-2026-ocorrera-no-parque-pinheirinho-dagua/"
+    },
+    {
+      "dia": "31",
+      "mes": "Ago",
+      "cor_fundo": "#D35400",
+      "bairro": "Jardim Taipas",
+      "titulo": "Curso gratuito de chaveiro no TEIA Taipas",
+      "hora": "10h às 16h",
+      "local": "TEIA Taipas - Rua Diógenes Dourado, 101, Cohab Taipas",
+      "descricao": "Curso gratuito de técnicas de criação de chaveiros com Ruth e Arteval, voltado a quem quer desenvolver uma habilidade manual com potencial de geração de renda.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/cotidiano/coworking-em-taipas-promove-curso-gratuito-com-potencial-para-gerar-renda/"
     },
     {
       "dia": "12",
@@ -180,6 +207,19 @@
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/noticias/39077"
+    },
+    {
+      "dia": "25",
+      "mes": "Set",
+      "cor_fundo": "#8E44AD",
+      "bairro": "Santana",
+      "titulo": "Vera Holtz e Marcelo Médici em espetáculos gratuitos no Teatro Alfredo Mesquita",
+      "hora": "25 e 26/09 (Vera Holtz) e 27/09 (Marcelo Médici)",
+      "local": "Teatro Alfredo Mesquita, Santana",
+      "descricao": "Apresentações teatrais gratuitas no equipamento cultural de Santana, com a atriz Vera Holtz nos dias 25 e 26 de setembro e o ator Marcelo Médici no dia 27.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/vera-holtz-e-marcelo-medici-levam-espetaculos-gratuitos-ao-teatro-alfredo-mesquita-em-santana/"
     },
     {
       "dia": "12",
@@ -197,24 +237,24 @@
   ],
   "vagas": [
     {
-      "icone": "🧹",
-      "titulo": "Mutirão de Empregos do Cate - Jardim São Bento",
-      "empresa": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "bairro": "Jardim São Bento",
-      "requisitos": "Mais de 1.700 vagas em comércio, serviços, construção civil, logística e saúde; salários de R$ 800 a R$ 4.880; levar RG, CPF e carteira de trabalho",
+      "icone": "💼",
+      "titulo": "Vagas permanentes no Cate CIC Norte (Jova Rural)",
+      "empresa": "Cate - Centro de Apoio ao Trabalho e Empreendedorismo / Prefeitura de SP",
+      "bairro": "Conjunto Jova Rural",
+      "requisitos": "Atendente de loja, repositor de mercadorias, fiscal de prevenção de perdas, conferente de mercadorias, auxiliar administrativo, eletricista, entre outras funções; cadastro pelo Portal do Cate ou presencial",
       "tipo": "CLT",
-      "fonte": "Prefeitura de São Paulo",
-      "dias_atras": "sexta-feira, 28/08/2026, das 10h às 15h - Rua Leão XIII, 202"
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "unidade fixa, na Rua Ari da Rocha Miranda, 36 - vagas atualizadas continuamente"
     },
     {
       "icone": "💼",
-      "titulo": "Feirão de Emprego e Empreendedorismo - CIC Taipas",
-      "empresa": "Secretaria de Desenvolvimento Econômico do Estado de SP / 20 empresas",
-      "bairro": "Parque Nações Unidas",
-      "requisitos": "1.129 vagas CLT com carteira assinada, salários entre R$ 1.621 e R$ 3.011; uma empresa de marketplace ofereceu 700 vagas para contratação imediata; vaga PCD disponível",
+      "titulo": "Vagas permanentes no Cate Parque Novo Mundo (CEU)",
+      "empresa": "Cate - Centro de Apoio ao Trabalho e Empreendedorismo / Prefeitura de SP",
+      "bairro": "Parque Novo Mundo",
+      "requisitos": "Atendente de telemarketing, empacotador, vendedor de serviços, porteiro, auxiliar de almoxarifado, cozinheiro, recepcionista, entre outras funções; cadastro pelo Portal do Cate ou presencial",
       "tipo": "CLT",
-      "fonte": "ABC Agora / DiárioZonaNorte",
-      "dias_atras": "realizado em 27/08/2026, das 10h às 15h - Estrada de Taipas, 990"
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "unidade fixa, na Avenida Ernesto Augusto Lopes, 100 (CEU) - vagas atualizadas continuamente"
     },
     {
       "icone": "📦",
@@ -249,7 +289,7 @@
     {
       "orgao": "🗳️ Secretaria Municipal das Subprefeituras (SMSUB)",
       "bairro": "Zona Norte",
-      "titulo": "Abertas as inscrições para os Conselhos Participativos Municipais (2027-2028)",
+      "titulo": "Seguem abertas as inscrições para os Conselhos Participativos Municipais (2027-2028)",
       "impacto": "608 vagas de titulares (mais suplentes) em 96 distritos e 32 subprefeituras; conselheiros eleitos ajudam a definir o Orçamento Cidadão de R$ 10 milhões por subprefeitura.",
       "status": "Inscrições até 16/09/2026; votação de 11 a 14/11/2026",
       "fonte": "Folha Noroeste"
@@ -257,9 +297,17 @@
     {
       "orgao": "🚧 CET / Subprefeitura Pirituba-Jaraguá",
       "bairro": "Jaraguá",
-      "titulo": "Obras de infraestrutura interditam vias no Jaraguá",
+      "titulo": "Obras de infraestrutura seguem interditando vias no Jaraguá",
       "impacto": "Interdição no cruzamento da Rua Petia com a Rua Perobinha para construção de sarjetas, com 20 dias de duração, e na Rua Domingos Antônio Gomes para poda de árvore.",
       "status": "Obras em andamento desde 26/08/2026",
+      "fonte": "Folha Noroeste"
+    },
+    {
+      "orgao": "🛴 Secretaria Municipal de Mobilidade e Trânsito (SMT)",
+      "bairro": "Zona Norte",
+      "titulo": "Novas regras para patinetes e bicicletas elétricas seguem em vigor na cidade",
+      "impacto": "Patinetes elétricos não podem circular em calçadas e ficam limitados a 40 km/h nas ruas; bicicletas elétricas podem ir a até 50 km/h em vias sem ciclovia. A fiscalização efetiva só começa em 12 de outubro.",
+      "status": "Regras em vigor desde 28/08/2026",
       "fonte": "Folha Noroeste"
     }
   ],
@@ -268,29 +316,29 @@
       "tipo": "info",
       "emoji": "💉",
       "titulo": "Estado de SP acumula 26 casos de sarampo em 2026",
-      "desc": "A cobertura vacinal está em 89,35% (1ª dose) e 74,64% (2ª dose), abaixo da meta de 95%. A vacinação indiscriminada com a tríplice viral (SCR), incluindo dose zero para bebês de 6 a 11 meses, segue até 1º de setembro em São Paulo, São Bernardo do Campo e Guarulhos.",
-      "meta": "O Tempo / Secretaria de Estado da Saúde de SP"
-    },
-    {
-      "tipo": "neutro",
-      "emoji": "🚗",
-      "titulo": "Rodízio restringe veículos com placas final 9 e 0 nesta sexta-feira (28/08)",
-      "desc": "O rodízio municipal funciona em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido.",
-      "meta": "CET - Companhia de Engenharia de Tráfego"
-    },
-    {
-      "tipo": "neutro",
-      "emoji": "🌡️",
-      "titulo": "Fim de semana deve ser quente e seco em São Paulo",
-      "desc": "As temperaturas devem passar de 32°C entre sexta e o início da próxima semana, com umidade relativa do ar baixa, podendo chegar perto de 20% à tarde, segundo modelos meteorológicos.",
-      "meta": "Climatempo / INMET"
+      "desc": "A cobertura vacinal segue abaixo da meta de 95%. A campanha de vacinação indiscriminada com a tríplice viral (SCR), incluindo dose zero para bebês de 6 a 11 meses, segue até 1º de setembro em São Paulo, São Bernardo do Campo e Guarulhos.",
+      "meta": "Secretaria de Estado da Saúde de SP"
     },
     {
       "tipo": "info",
       "emoji": "🛴",
       "titulo": "Novas regras para patinetes e bicicletas elétricas já valem, mas fiscalização começa só em outubro",
-      "desc": "A partir de hoje (28/08), patinetes elétricos não podem circular em calçadas e ficam limitados a 40 km/h nas ruas; bicicletas elétricas podem ir a até 50 km/h em vias sem ciclovia. Até 12 de outubro a Prefeitura fará apenas campanhas educativas.",
+      "desc": "Desde 28/08, patinetes elétricos não podem circular em calçadas e ficam limitados a 40 km/h nas ruas; bicicletas elétricas podem ir a até 50 km/h em vias sem ciclovia. Até 12 de outubro a Prefeitura fará apenas campanhas educativas.",
       "meta": "Secretaria Municipal de Mobilidade e Trânsito (SMT)"
+    },
+    {
+      "tipo": "neutro",
+      "emoji": "🌡️",
+      "titulo": "Fim de semana deve ser quente e seco em São Paulo",
+      "desc": "Sábado com máxima perto de 33°C e domingo entre 34°C e 35°C, com umidade relativa do ar podendo cair perto de 20% à tarde. Recomenda-se boa hidratação e evitar exposição prolongada ao sol nos horários mais quentes.",
+      "meta": "Climatempo"
+    },
+    {
+      "tipo": "neutro",
+      "emoji": "🚗",
+      "titulo": "Não há rodízio de veículos neste sábado e domingo",
+      "desc": "O rodízio municipal de veículos funciona apenas em dias úteis, das 7h às 10h e das 17h às 20h, na área do Centro Expandido. Neste fim de semana não há restrição de circulação por final de placa.",
+      "meta": "CET - Companhia de Engenharia de Tráfego"
     }
   ],
   "fim_de_semana": [
@@ -302,7 +350,17 @@
     {
       "emoji": "🧹",
       "titulo": "Mutirão de limpeza 'Menos Lixo, Mais Clima' em Pirituba",
-      "info": "29/08 · 9h · Praça Ave Maria Casali Denti, Pirituba · Gratuito (inscrição prévia)"
+      "info": "29/08 · 9h · Praça Ave Maria Casali Denti, Pirituba · Gratuito"
+    },
+    {
+      "emoji": "🧹",
+      "titulo": "Mutirão da Limpeza na Freguesia do Ó/Brasilândia",
+      "info": "29/08 · 9h · Rua Itálico Ancona Lopez · Gratuito"
+    },
+    {
+      "emoji": "🎪",
+      "titulo": "Encerramento do 11º Circuito Jaraguá é Guarani",
+      "info": "30/08 · 11h às 18h · Parque Pinheirinho D'água, Jaraguá · Gratuito"
     }
   ]
 }
