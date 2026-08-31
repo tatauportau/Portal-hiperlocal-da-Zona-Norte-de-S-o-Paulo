@@ -37,7 +37,7 @@
  "bairros_por_distrito": {
   "SANTANA": {
    "Água Fria": null,
-   "Vila Anhembi": null,
+   "Vila Anhembi": "2026-08-31",
    "Vila Bianca": null,
    "Jardim Carmen Verônica": null,
    "Chora Menino": null,
@@ -53,8 +53,8 @@
    "Vila Santa Luzia": null,
    "Santa Terezinha": null,
    "Vila Santana": null,
-   "Santana": "2026-08-29",
-   "Jardim São Paulo": null,
+   "Santana": "2026-08-31",
+   "Jardim São Paulo": "2026-08-31",
    "Vila Siciliano": null,
    "Vila Zélia": null
   },
@@ -86,7 +86,7 @@
    "Chácara do Encosto": null,
    "Vila Guaca": null,
    "Jardim Itatinga": null,
-   "Lauzane Paulista": "2026-08-02",
+   "Lauzane Paulista": "2026-08-31",
    "Jardim Malba": null,
    "Parque Mandaqui": null,
    "Mandaqui": "2026-08-24",
@@ -115,7 +115,7 @@
    "Vila Constança": null,
    "Parque Edu Chaves": "2026-07-14",
    "Guapira": null,
-   "Jaçanã": "2026-08-24",
+   "Jaçanã": "2026-08-31",
    "Conjunto Jova Rural": "2026-08-29",
    "Jardim Modelo": null,
    "Jardim Nelson": null,
@@ -345,7 +345,7 @@
   "VILA MARIA": {
    "Andaraí": null,
    "Jardim Japão": null,
-   "Vila Maria": "2026-08-29",
+   "Vila Maria": "2026-08-31",
    "Vila Maria Alta": "2026-08-22",
    "Vila Maria Baixa": "2026-07-14",
    "Parque Novo Mundo": "2026-08-29",
@@ -358,7 +358,7 @@
    "Carandiru": null,
    "Jardim da Coroa": null,
    "Chácara Cuoco": null,
-   "Vila Guilherme": "2026-08-29",
+   "Vila Guilherme": "2026-08-31",
    "Vila Isolina": null,
    "Vila Isolina Mazzei": null,
    "Vila Leonor": null,
@@ -409,7 +409,7 @@
    "Jardim dos Pinheiros": null,
    "Piqueri": "2026-07-29",
    "Vila Pirituba": "2026-08-16",
-   "Pirituba": "2026-08-29",
+   "Pirituba": "2026-08-31",
    "Vila Portugal": null,
    "Vila Regina": null,
    "Vila Renato": null,
@@ -510,7 +510,7 @@
    "Loteamento Vitória Régia": null
   },
   "ANHANGUERA": {
-   "Anhanguera": "2026-08-24",
+   "Anhanguera": "2026-08-31",
    "Jardim Anhanguera": null,
    "Parque Anhanguera": "2026-08-24",
    "Jardim Britânia": null,
