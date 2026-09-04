@@ -3,141 +3,128 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🏟️ Grande investimento",
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Vila Guilherme",
-      "bairro": "Vila Guilherme",
-      "titulo": "CADES aprova estudo de impacto e libera avanço do licenciamento da Arena São Paulo, projeto de R$ 1,5 bilhão na Vila Guilherme",
-      "resumo": "A Câmara Técnica do Conselho Municipal do Meio Ambiente (CADES) aprovou, em 28 de agosto, o Estudo de Impacto de Vizinhança (EIV/RIV) da futura Arena São Paulo, parceria entre o Cidade Center Norte e a Live Nation. O projeto prevê arena coberta multiuso para até 21 mil pessoas, estacionamento para 2 mil veículos e investimento de R$ 1,5 bilhão, com obras previstas para o segundo semestre de 2026 e abertura estimada para 2028. Moradores da Vila Guilherme e do Carandiru já se manifestaram sobre os impactos do empreendimento em audiência pública realizada em fevereiro.",
-      "fonte": "DiárioZonaNorte / Billboard Brasil",
-      "hora": "Aprovação em 28/08/2026",
-      "url": "https://www.diariozonanorte.com.br/cidade-center-norte-avanca-com-arena-de-r-15-bilhao-enquanto-zona-norte-discute-os-impactos-do-projeto/",
-      "icone": "🏟️",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Menino de 10 anos, filho de policial civil, morre baleado durante tentativa de assalto na Freguesia do Ó",
-      "resumo": "Um menino de 10 anos morreu após ser baleado durante uma troca de tiros entre seu pai, um policial civil à paisana, e um assaltante em moto, na noite de domingo (16/8), na Freguesia do Ó, Zona Norte de São Paulo. O suspeito, atingido na perna e no rosto durante a reação do policial, foi socorrido ao Hospital Brasilândia, onde morreu dias depois em decorrência dos ferimentos.",
-      "fonte": "SBT News / Metrópoles",
-      "hora": "Ocorrido em 16/08/2026",
-      "url": "https://sbtnews.sbt.com.br/noticia/brasil/filho-de-policial-morre-baleado-durante-tiroteio-em-sp",
-      "icone": "🚨",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
+      "pill": "🏥 Grande investimento",
       "tag_categoria": "tag-seg",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Maria",
-      "bairro": "Vila Maria",
-      "titulo": "Vacinação contra o sarampo segue disponível em Vila Maria, Vila Guilherme e Vila Medeiros",
-      "resumo": "Por causa da situação epidemiológica da região, a Secretaria Municipal da Saúde mantém a vacinação contra o sarampo disponível nas Unidades Básicas de Saúde dos distritos de Vila Maria, Vila Guilherme e Vila Medeiros para pessoas de 6 meses a 59 anos, mesmo após o fim do período oficial da Campanha de Multivacinação, que foi de 3 de agosto a 1º de setembro.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "Ação em andamento",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/campanha-multivacinacao-2026",
-      "icone": "💉",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Perus",
-      "bairro": "Perus",
-      "titulo": "Nova UBS Recanto dos Humildes, em Perus, deve ficar pronta em outubro",
-      "resumo": "As obras das novas instalações da UBS Recanto dos Humildes, em Perus, somam investimento de R$ 13,4 milhões e têm conclusão prevista para outubro de 2026. O novo prédio terá 1.196,87 m² em dois pavimentos — três vezes o tamanho da unidade atual — com capacidade para 11 mil atendimentos mensais, seis consultórios médicos, sala da saúde da mulher e sala do idoso.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "Obras em andamento, conclusão prevista para outubro",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/sa%C3%BAde-visita-futuras-novas-instala%C3%A7%C3%B5es-da-ubs-recanto-dos-humildes-durante-prefeitura-presente-perus",
+      "tag_bairro": "📍 Jardim Peri",
+      "bairro": "Jardim Peri",
+      "titulo": "UPA III Jardim Peri é entregue e amplia emergência para Casa Verde, Limão e Cachoeirinha",
+      "resumo": "A Prefeitura entregou a UPA III Jardim Peri, a 27ª Unidade de Pronto Atendimento da capital, com investimento de R$ 22,4 milhões e custo mensal de operação de R$ 5,6 milhões, dentro do Programa Avança Saúde SP. Na mesma ocasião, foi anunciada a construção do Centro Especializado em Reabilitação (CER) IV Casa Verde/Cachoeirinha e assinado o decreto de utilidade pública do CEU Cachoeirinha.",
+      "fonte": "Prefeitura de São Paulo / Secretaria Municipal da Saúde",
+      "hora": "Inaugurada em 21/08/2026",
+      "url": "https://prefeitura.sp.gov.br/w/prefeitura-entrega-no-jardim-peri-27%C2%AA-upa-da-cidade-e-anuncia-constru%C3%A7%C3%A3o-de-centro-de-reabilita%C3%A7%C3%A3o-f%C3%ADsica-na-zona-norte",
       "icone": "🏥",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Nova Ponte Pirituba-Lapa sobre o Rio Tietê promete reduzir em até 36 minutos o trajeto entre os terminais",
-      "resumo": "Com 900 metros de extensão, a nova Ponte Pirituba-Lapa forma um complexo viário que liga diretamente a região de Pirituba à Lapa sobre o Rio Tietê. Segundo a Prefeitura, a nova conexão pode reduzir em até 36 minutos o trajeto entre os terminais de ônibus Pirituba e Lapa, beneficiando quem depende do transporte coletivo na região.",
-      "fonte": "Subprefeitura Pirituba/Jaraguá",
-      "hora": "Inaugurada em 11/08/2026",
-      "url": "https://prefeitura.sp.gov.br/web/pirituba_jaragua/w/ponte-pirituba-lapa-nova-conex%C3%A3o-sobre-o-rio-tiet%C3%AA-vai-melhorar-mobilidade-na-regi%C3%A3o",
-      "icone": "🌉",
-      "icone_classe": "ic-mob"
+      "tag_categoria": "tag-not",
+      "tag_label": "Geral",
+      "tag_bairro": "📍 Limão",
+      "bairro": "Limão",
+      "titulo": "Bairro do Limão completa 104 anos entre história de pioneirismo e desafios de infraestrutura",
+      "resumo": "Constituído a partir de antigas fazendas e olarias, com primeira subdivisão em 1921 e urbanização a partir dos anos 1930, o Limão sediou o jornal O Estado de S. Paulo e a fábrica de instrumentos Rozini, além do prédio assinado por Oscar Niemeyer que abrigou a Rede Manchete. Moradores relatam que a região segue esquecida em partes, com maiores desafios de saneamento e habitação nas bordas próximas a Brasilândia e Cachoeirinha.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Publicada recentemente",
+      "url": "https://www.diariozonanorte.com.br/bairro-do-limao-completa-104-anos-com-historia-de-pioneirismo-e-novos-desafios/",
+      "icone": "🎉",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Mandaqui",
+      "bairro": "Mandaqui",
+      "titulo": "Fundação do ABC assume gestão de 230 leitos no Conjunto Hospitalar do Mandaqui",
+      "resumo": "A Fundação do ABC ampliou sua atuação no Conjunto Hospitalar do Mandaqui, assumindo a gestão de 230 dos cerca de 450 leitos do hospital, referência terciária em politraumatismo na Zona Norte, por meio de contrato de R$ 100,7 milhões por ano. A mudança ocorre após pedidos de vistoria no pronto-socorro em razão de superlotação.",
+      "fonte": "Fundação do ABC",
+      "hora": "Anúncio recente",
+      "url": "https://fuabc.org.br/noticias/fundacao-do-abc-amplia-atuacao-no-conjunto-hospitalar-do-mandaqui-na-capital/",
+      "icone": "🏥",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Vila Medeiros",
+      "bairro": "Vila Medeiros",
+      "titulo": "Zona Norte concentra maioria dos casos de sarampo da cidade, com 6 em Vila Medeiros e 2 em Vila Maria",
+      "resumo": "Dos 15 casos de sarampo confirmados na capital, 8 estão na Zona Norte, concentrados em Vila Medeiros (6) e Vila Maria (2). A campanha de vacinação segue disponível nas Unidades Básicas de Saúde para pessoas de 6 meses a 59 anos, inclusive para quem já foi vacinado, com aplicação da tríplice viral.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Situação em monitoramento",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-registra-oito-casos-de-sarampo-e-campanha-de-vacinacao-comeca-2a-feira-mesmo-para-quem-ja-foi-vacinado/",
+      "icone": "💉",
+      "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 São Domingos",
-      "bairro": "São Domingos",
-      "titulo": "CET revitaliza sinalização de trânsito no entorno de 80 UBS da Zona Norte e Noroeste, incluindo São Domingos",
-      "resumo": "A Companhia de Engenharia de Tráfego (CET) revitalizou a sinalização viária no entorno de 80 Unidades Básicas de Saúde nas regiões Norte e Noroeste da cidade, incluindo unidades em São Domingos, Perus, Pirituba, Jaraguá, Freguesia do Ó e Brasilândia. O trabalho reforça faixas de pedestre, vagas exclusivas para ambulâncias e para idosos e pessoas com mobilidade reduzida, além de áreas de embarque e desembarque.",
-      "fonte": "DiárioZonaNorte / CET",
-      "hora": "Ação concluída recentemente",
-      "url": "https://www.diariozonanorte.com.br/prefeitura-sp-revitalizou-sinalizacao-de-transito-no-entorno-de-80-ubs-da-zn/",
-      "icone": "🚸",
+      "tag_bairro": "📍 Brasilândia",
+      "bairro": "Brasilândia",
+      "titulo": "Obras da Linha 6-Laranja chegam a 77% e trecho até a Brasilândia é esperado para outubro",
+      "resumo": "A Linha 6-Laranja terá 15,3 km e 15 estações subterrâneas entre a Brasilândia e São Joaquim. O trecho João Paulo I–Perdizes já opera desde julho de 2026; a ligação até a Brasilândia tem inauguração prevista para outubro de 2026, enquanto o trecho Perdizes–São Joaquim fica para 2027.",
+      "fonte": "Metrô CPTM / Gazeta de São Paulo",
+      "hora": "Obras em andamento",
+      "url": "https://www.gazetasp.com.br/cotidiano/com-obras-24h-linha-6-laranja-do-metro-sera-inaugurada-em-2026/",
+      "icone": "🚇",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Economia",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Tucuruvi",
+      "bairro": "Tucuruvi",
+      "titulo": "Casa Une abre segundo semestre em Tucuruvi com agenda gratuita de cultura e tecnologia",
+      "resumo": "O espaço Casa Une, no Tucuruvi, iniciou a programação do segundo semestre com atividades gratuitas de cultura, tecnologia e formação, incluindo clube de música, treinamento em Inteligência Artificial, fórum de empregabilidade, clube do livro e exposições, mediante inscrição prévia pelo site ou WhatsApp.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Inscrições abertas",
+      "url": "https://www.diariozonanorte.com.br/casa-une-inicia-programacao-do-segundo-semestre-com-agenda-gratuita-de-cultura-tecnologia-e-formacao-no-tucuruvi/",
+      "icone": "🎓",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
       "tag_bairro": "📍 Santana",
       "bairro": "Santana",
-      "titulo": "Cate inicia setembro com mais de 1.600 vagas de emprego; inscrições vão até esta quarta-feira",
-      "resumo": "As unidades do Cate (Centro de Apoio ao Trabalho e Empreendedorismo) da Prefeitura de São Paulo oferecem mais de 1.600 vagas de emprego na primeira semana de setembro, com salários de R$ 850 (aprendiz) a R$ 4.082 (motorista de ônibus). Os interessados podem se cadastrar pelo Portal Cate ou comparecer a uma das 46 unidades fixas e móveis, entre elas a de Santana, até esta quarta-feira (3), levando RG, CPF e carteira de trabalho.",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "hora": "Inscrições até 03/09/2026, 18h",
-      "url": "https://prefeitura.sp.gov.br/web/se/w/cate-inicia-setembro-com-mais-de-1.600-vagas-de-emprego",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
+      "titulo": "Campo de Marte é selecionado pela Anac para testar operações de vertiporto e eVTOLs",
+      "resumo": "O Aeroporto Campo de Marte, em Santana, foi selecionado pela Anac para integrar um ambiente experimental de testes de vertiportos urbanos. As empresas selecionadas terão até 24 meses para desenvolver e testar soluções de pouso e decolagem vertical, consolidando a região como um dos polos de inovação em aviação urbana do país.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Seleção recente",
+      "url": "https://www.diariozonanorte.com.br/admiravel-mundo-novo-campo-de-marte-tera-um-dos-primeiros-vertiportos-urbanos-do-brasil-e-coloca-sao-paulo-na-rota-dos-carros-voadores/",
+      "icone": "✈️",
+      "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Prefeitura lança Agência de Desenvolvimento da Casa Verde, Limão e Cachoeirinha",
-      "resumo": "A Prefeitura lançou a AgenDe CVLC, Agência de Desenvolvimento da Casa Verde, Limão e Cachoeirinha, com o objetivo de articular programas e discussões voltadas ao desenvolvimento econômico da região na Zona Norte. A iniciativa integra as ações da Subprefeitura Casa Verde/Cachoeirinha com secretarias municipais.",
-      "fonte": "Prefeitura de São Paulo",
-      "hora": "Lançamento recente",
-      "url": "https://prefeitura.sp.gov.br/web/comunicacao/w/noticias/126109",
-      "icone": "🏢",
-      "icone_classe": "ic-eco"
+      "tag_label": "Geral",
+      "tag_bairro": "📍 Vila Nova Cachoeirinha",
+      "bairro": "Vila Nova Cachoeirinha",
+      "titulo": "Vila Nova Cachoeirinha completa 93 anos celebrando herança nipo-brasileira",
+      "resumo": "O aniversário do bairro remete a 5 de agosto de 1933, data da fundação da Associação Nipo-Brasileira, primeira organização popular local criada por antigos proprietários de chácaras de origem japonesa. O nome do bairro vem de uma cachoeira soterrada para dar lugar à Avenida Inajar de Souza, hoje via central da região.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Publicada recentemente",
+      "url": "https://www.diariozonanorte.com.br/vila-nova-cachoeirinha-completa-93-anos-contamos-a-historia-do-bairro/",
+      "icone": "🎏",
+      "icone_classe": "ic-edu"
     }
   ],
   "agenda": [
-    {
-      "dia": "04",
-      "mes": "Set",
-      "cor_fundo": "#2E86C1",
-      "bairro": "Santana",
-      "titulo": "28ª Bienal Internacional do Livro de São Paulo",
-      "hora": "04/09 a 13/09, das 9h às 21h",
-      "local": "São Paulo Expo / região do Anhembi, Santana",
-      "descricao": "Programação literária com editoras, lançamentos, encontros com autores e atividades infantis, movimentando a região do Anhembi durante dez dias.",
-      "gratuito": false,
-      "preco": "Ingressos a partir de R$ 20 (meia-entrada e gratuidades para grupos específicos)",
-      "url": "https://www.diariozonanorte.com.br/zona-norte-esta-na-rota-dos-livros-veja-a-programacao-da-matrix-na-bienal/"
-    },
     {
       "dia": "05",
       "mes": "Set",
       "cor_fundo": "#C0392B",
       "bairro": "Santana",
       "titulo": "Circo Vox apresenta \"Arruaça\" no Sesc Santana",
-      "hora": "sáb. 05/09",
+      "hora": "sáb. 05/09, 12h",
       "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo de palhaçaria que constrói a apresentação a partir da relação entre artistas e plateia, combinando acrobacias e comédia. Parte da programação gratuita do Circo Vox em setembro no Sesc Santana.",
+      "descricao": "Espetáculo de palhaçaria que constrói a apresentação a partir da relação entre artistas e plateia, combinando acrobacias e comédia, com 60 minutos de duração.",
       "gratuito": true,
       "preco": null,
       "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
@@ -147,10 +134,10 @@
       "mes": "Set",
       "cor_fundo": "#8E44AD",
       "bairro": "Freguesia do Ó",
-      "titulo": "10º Encontro de Artistas Plásticos marca os 434 anos da Freguesia do Ó",
+      "titulo": "Últimos dias do 10º Encontro de Artistas Plásticos, dos 434 anos da Freguesia do Ó",
       "hora": "até dom. 06/09",
       "local": "Casa de Cultura Salvador Ligabue, Freguesia do Ó",
-      "descricao": "Exposição com obras de artistas plásticos da região, parte da programação comemorativa dos 434 anos da Freguesia do Ó, que também incluiu exibição de fotos históricas do bairro.",
+      "descricao": "Exposição com obras de artistas plásticos da região, parte da programação comemorativa dos 434 anos da Freguesia do Ó.",
       "gratuito": true,
       "preco": null,
       "url": "https://prefeitura.sp.gov.br/web/freguesia_brasilandia/w/noticias/49360"
@@ -161,7 +148,7 @@
       "cor_fundo": "#E67E22",
       "bairro": "Santana",
       "titulo": "Circo Vox apresenta \"Se Chove, Não Molha!\" no Sesc Santana",
-      "hora": "seg. 07/09 (feriado)",
+      "hora": "seg. 07/09 (feriado), 12h",
       "local": "Sesc Santana, Jardim São Paulo",
       "descricao": "Espetáculo gratuito de circo no feriado de 7 de Setembro, com nova sessão marcada também para o dia 19/09.",
       "gratuito": true,
@@ -174,9 +161,35 @@
       "cor_fundo": "#16A085",
       "bairro": "Santana",
       "titulo": "Circo Vox apresenta \"Clássicos: uma homenagem ao que fica\" no Sesc Santana",
-      "hora": "sáb. 12/09",
+      "hora": "sáb. 12/09, 12h",
       "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo gratuito reúne número tradicionais de circo, palhaçaria e improviso, com nova sessão também no dia 26/09.",
+      "descricao": "Espetáculo gratuito reúne números tradicionais de circo, palhaçaria e improviso, com nova sessão também no dia 26/09.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+    },
+    {
+      "dia": "13",
+      "mes": "Set",
+      "cor_fundo": "#2E86C1",
+      "bairro": "Santana",
+      "titulo": "Últimos dias da 28ª Bienal Internacional do Livro de São Paulo",
+      "hora": "até 13/09, das 9h às 21h",
+      "local": "São Paulo Expo, região do Anhembi, Santana",
+      "descricao": "Programação literária com editoras, lançamentos, encontros com autores e atividades infantis, movimentando a região do Anhembi.",
+      "gratuito": false,
+      "preco": "Ingressos a partir de R$ 20 (meia-entrada e gratuidades para grupos específicos)",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-esta-na-rota-dos-livros-veja-a-programacao-da-matrix-na-bienal/"
+    },
+    {
+      "dia": "19",
+      "mes": "Set",
+      "cor_fundo": "#E67E22",
+      "bairro": "Santana",
+      "titulo": "Nova sessão de \"Se Chove, Não Molha!\" no Sesc Santana",
+      "hora": "sáb. 19/09, 12h",
+      "local": "Sesc Santana, Jardim São Paulo",
+      "descricao": "Reprise do espetáculo do Circo Vox, gratuito, dentro da programação de setembro do Sesc Santana.",
       "gratuito": true,
       "preco": null,
       "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
@@ -184,117 +197,127 @@
   ],
   "vagas": [
     {
+      "icone": "🖥️",
+      "titulo": "Auxiliar Administrativo / Recepção e Assistência Técnica",
+      "empresa": "Empresa da região",
+      "bairro": "Casa Verde",
+      "requisitos": "Vaga CLT efetiva em Casa Verde; salário de R$ 2.000,00",
+      "tipo": "CLT",
+      "fonte": "ConsulteVagas",
+      "dias_atras": "publicada em 02/09/2026"
+    },
+    {
+      "icone": "🔧",
+      "titulo": "Serralheiro",
+      "empresa": "Cate",
+      "bairro": "Vila Maria",
+      "requisitos": "CLT efetivo, escala 5x2, segunda a sexta das 8h às 18h; salário de R$ 4.000,00/mês",
+      "tipo": "CLT",
+      "fonte": "Cate / Empregos São Paulo",
+      "dias_atras": "vaga aberta"
+    },
+    {
       "icone": "💼",
-      "titulo": "Vagas diversas do Cate, incluindo limpeza (R$ 1.518 a R$ 2.395), atendente (R$ 1.200 a R$ 2.200) e segurança (até R$ 2.021)",
-      "empresa": "Cate/CAT - unidade Perus/Anhanguera",
+      "titulo": "Mais de 3.900 vagas na rede Cate, com salários de R$ 800 a R$ 4.528",
+      "empresa": "Cate/CAT - unidade CIC Norte",
+      "bairro": "Conjunto Jova Rural",
+      "requisitos": "Unidade na Rua Ari da Rocha Miranda, 36, Conjunto Habitacional Jova Rural; vagas em comércio, serviços e construção civil; cadastro pelo Portal Cate ou presencial, com RG, CPF e carteira de trabalho",
+      "tipo": "CLT",
+      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
+      "dias_atras": "cadastro até 15/10/2026"
+    },
+    {
+      "icone": "📦",
+      "titulo": "Vagas de Aprendiz na Zona Noroeste",
+      "empresa": "Empresas parceiras do Cate",
       "bairro": "Perus",
-      "requisitos": "Sede da Subprefeitura Perus/Anhanguera, Rua Ylídio Figueiredo, 349, Perus; cadastro pelo Portal Cate ou presencial, com RG, CPF e carteira de trabalho, até 03/09",
+      "requisitos": "Vagas para região de Perus, Pirituba, Morro Doce e Jaraguá; salário a combinar, contratação como aprendiz CLT",
       "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "inscrições até 03/09/2026"
-    },
-    {
-      "icone": "🚌",
-      "titulo": "118 vagas para motorista de ônibus, entregas e caminhão, com salários de R$ 2.000 a R$ 4.000",
-      "empresa": "Cate/CAT - unidade Pirituba/Jaraguá",
-      "bairro": "Vila Pirituba",
-      "requisitos": "Praça de Atendimento Descomplica SP, Av. Paula Ferreira, 1708, Vila Pirituba; algumas vagas não exigem experiência anterior e oferecem treinamento",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "inscrições até 03/09/2026"
-    },
-    {
-      "icone": "🧹",
-      "titulo": "Mais de 200 vagas permanentes na área de limpeza, com salários de R$ 1.518 a R$ 2.395",
-      "empresa": "Cate/CAT - unidade Freguesia do Ó/Brasilândia",
-      "bairro": "Brasilândia",
-      "requisitos": "Unidade na Av. João Marcelino Branco, 95, sede da Subprefeitura; maioria das vagas exige experiência prévia e ensino fundamental completo",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "inscrições até 03/09/2026"
-    },
-    {
-      "icone": "🛡️",
-      "titulo": "233 vagas para vigilante e segurança, com salários de até R$ 2.021, parte exclusiva para pessoas com deficiência",
-      "empresa": "Cate/CAT - unidade Santana",
-      "bairro": "Santana",
-      "requisitos": "Unidade na Rua Voluntários da Pátria, 1553, Santana; algumas posições exigem disponibilidade para escala diurna e noturna",
-      "tipo": "CLT",
-      "fonte": "Secretaria Municipal de Desenvolvimento Econômico e Trabalho",
-      "dias_atras": "inscrições até 03/09/2026"
+      "fonte": "Cate / Indeed",
+      "dias_atras": "vaga aberta"
     }
   ],
   "politica": [
     {
-      "orgao": "🌳 CADES - Conselho Municipal do Meio Ambiente",
-      "bairro": "Vila Guilherme",
-      "titulo": "Licenciamento da Arena São Paulo avança na Vila Guilherme após aprovação do estudo de impacto de vizinhança",
-      "impacto": "Projeto de R$ 1,5 bilhão do Cidade Center Norte com a Live Nation prevê arena para 21 mil pessoas e estacionamento para 2 mil veículos. Moradores da Vila Guilherme e do Carandiru levantaram preocupações sobre trânsito e infraestrutura na audiência pública realizada em fevereiro.",
-      "status": "EIV/RIV aprovado pela Câmara Técnica do CADES em 28/08/2026; obras previstas para o 2º semestre de 2026",
-      "fonte": "DiárioZonaNorte"
+      "orgao": "🏥 Fundação do ABC / Governo do Estado de SP",
+      "bairro": "Mandaqui",
+      "titulo": "Gestão de 230 leitos do Hospital Mandaqui passa à Fundação do ABC",
+      "impacto": "Contrato de R$ 100,7 milhões por ano busca reforçar o atendimento de emergência e de politraumatismo na Zona Norte, depois de pedidos de vistoria no pronto-socorro por superlotação.",
+      "status": "Assumido recentemente",
+      "fonte": "Fundação do ABC"
     },
     {
-      "orgao": "🏥 Secretaria Municipal da Saúde",
-      "bairro": "Perus",
-      "titulo": "Rede de saúde de Perus recebe cerca de R$ 32 milhões em investimentos desde 2021",
-      "impacto": "O território conta hoje com 15 equipamentos de saúde; desde 2021 foram entregues 6 unidades novas ou reformadas. A nova UBS Recanto dos Humildes, com conclusão prevista para outubro de 2026, vai triplicar a capacidade de atendimento da unidade atual.",
-      "status": "Obras em andamento",
-      "fonte": "Secretaria Municipal da Saúde"
+      "orgao": "🚇 Metrô SP / SIURB",
+      "bairro": "Brasilândia",
+      "titulo": "Trecho da Linha 6-Laranja até a Brasilândia deve abrir em outubro",
+      "impacto": "Com as obras em 77% de conclusão, a expectativa é de conexão direta entre a Brasilândia e o centro da cidade, beneficiando também moradores da Freguesia do Ó e região.",
+      "status": "Obras em andamento, inauguração prevista para outubro de 2026",
+      "fonte": "Metrô CPTM / Gazeta de São Paulo"
     },
     {
-      "orgao": "🛣️ SIURB / Subprefeitura Pirituba-Jaraguá",
-      "bairro": "Pirituba",
-      "titulo": "Nova Ponte Pirituba-Lapa entra em operação e reduz trajeto entre terminais",
-      "impacto": "A nova conexão viária sobre o Rio Tietê liga Pirituba à Lapa e pode reduzir em até 36 minutos o trajeto entre os terminais de ônibus das duas regiões, beneficiando usuários do transporte público.",
-      "status": "Concluída e em operação desde 11/08/2026",
-      "fonte": "Subprefeitura Pirituba/Jaraguá"
+      "orgao": "🏛️ Subprefeitura Pirituba/Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Pirituba/Jaraguá recebe o primeiro Prefeitura Presente do ano, com R$ 490 milhões em investimentos",
+      "impacto": "Programa reúne ações de zeladoria, entregas de equipamentos públicos e vistorias de obras na região, que soma um dos maiores volumes de investimento entre as subprefeituras da Zona Norte.",
+      "status": "Realizado",
+      "fonte": "Prefeitura de São Paulo"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "☀️",
-      "titulo": "Quinta-feira com sol e temperatura em elevação, sem previsão de chuva",
-      "desc": "Nesta quinta-feira (3/9), o dia começa com sol e poucas nuvens, mantendo-se claro ao longo da tarde e da noite. Temperatura entre 12°C e 26°C, sem chuva prevista, com ventos fracos a moderados.",
-      "meta": "Climatempo"
-    },
-    {
-      "tipo": "info",
       "emoji": "🚗",
-      "titulo": "Rodízio municipal restringe hoje veículos com placas final 5 e 6",
-      "desc": "Dentro do Minianel Viário (limite norte na Marginal Tietê), o rodízio de veículos funciona das 7h às 10h e das 17h às 20h, de segunda a sexta-feira.",
+      "titulo": "Rodízio restringe hoje veículos com placas final 9 e 0",
+      "desc": "Dentro do Minianel Viário, o rodízio municipal funciona das 7h às 10h e das 17h às 20h nesta sexta-feira (4/9).",
       "meta": "CET / Prefeitura de São Paulo"
     },
     {
       "tipo": "info",
+      "emoji": "🌧️",
+      "titulo": "Fim de semana deve ter chuva forte e risco de alagamento na Grande São Paulo",
+      "desc": "A previsão indica acumulados entre 70 e 100 mm neste sábado e domingo, com atenção redobrada para pontos de alagamento na região metropolitana.",
+      "meta": "Climatempo / Defesa Civil"
+    },
+    {
+      "tipo": "info",
       "emoji": "💉",
-      "titulo": "Vacinação contra sarampo segue reforçada em Vila Maria, Vila Guilherme e Vila Medeiros",
-      "desc": "Por causa da situação epidemiológica local, a rede municipal de saúde mantém a aplicação de doses contra o sarampo nas UBS desses três distritos para pessoas de 6 meses a 59 anos, mesmo após o fim da Campanha de Multivacinação (que foi de 3/8 a 1/9).",
+      "titulo": "Vacinação contra sarampo segue reforçada nas UBS da Zona Norte",
+      "desc": "Por causa da concentração de casos em Vila Medeiros e Vila Maria, a rede municipal mantém a aplicação da tríplice viral para pessoas de 6 meses a 59 anos, mesmo fora do período oficial da campanha.",
       "meta": "Secretaria Municipal da Saúde"
     },
     {
       "tipo": "ok",
-      "emoji": "🚸",
-      "titulo": "CET revitaliza sinalização viária no entorno de 80 UBS da Zona Norte e Noroeste",
-      "desc": "As melhorias incluem reforço de faixas de pedestres, vagas exclusivas para ambulâncias, embarque e desembarque, e vagas para idosos e pessoas com mobilidade reduzida, em unidades de saúde de Perus, Pirituba, Jaraguá, São Domingos, Freguesia do Ó e Brasilândia, entre outras regiões.",
-      "meta": "CET / DiárioZonaNorte"
+      "emoji": "🏥",
+      "titulo": "Nova UPA amplia emergência 24h para Casa Verde, Limão e Cachoeirinha",
+      "desc": "A UPA III Jardim Peri passa a atender a região com investimento de R$ 22,4 milhões, reforçando a rede de pronto-atendimento na subprefeitura.",
+      "meta": "Secretaria Municipal da Saúde"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "📚",
-      "titulo": "Abertura da 28ª Bienal Internacional do Livro de São Paulo",
-      "info": "04/09 · a partir das 9h · Anhembi, Santana · Ingressos a partir de R$ 20"
-    },
-    {
       "emoji": "🤡",
       "titulo": "Circo Vox apresenta \"Arruaça\" no Sesc Santana",
-      "info": "05/09 · sábado · Jardim São Paulo · Gratuito"
+      "info": "05/09 · sábado, 12h · Jardim São Paulo · Gratuito"
     },
     {
       "emoji": "🎨",
       "titulo": "Última chance para o Encontro de Artistas Plásticos na Freguesia do Ó",
       "info": "até 06/09 · domingo · Casa de Cultura Salvador Ligabue · Gratuito"
+    },
+    {
+      "emoji": "🎪",
+      "titulo": "Circo Vox no feriado com \"Se Chove, Não Molha!\"",
+      "info": "07/09 · feriado, 12h · Sesc Santana, Jardim São Paulo · Gratuito"
+    },
+    {
+      "emoji": "📚",
+      "titulo": "Bienal Internacional do Livro segue aberta no Anhembi",
+      "info": "até 13/09 · diariamente das 9h às 21h · Santana · a partir de R$ 20"
+    },
+    {
+      "emoji": "🌧️",
+      "titulo": "Fim de semana chuvoso: leve guarda-chuva e evite áreas de alagamento",
+      "info": "06 e 07/09 · previsão de 70-100 mm de chuva na Grande São Paulo"
     }
   ]
 }
