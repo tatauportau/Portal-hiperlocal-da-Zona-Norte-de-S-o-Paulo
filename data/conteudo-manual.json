@@ -1,1 +1,323 @@
-PLACEHOLDER
+{
+  "_instrucoes": "Edite este arquivo com o conteudo do dia e faca commit na branch principal. Depois va em Actions > Portau Diario > Run workflow para publicar. Cada 'bairro' deve ser um bairro ou distrito oficial da Zona Norte (veja data/bairros-por-distrito.json). Se deixar um array vazio ([]), a secao correspondente do site NAO sera alterada (mantem o que ja esta publicado). Duplique os exemplos para incluir mais itens.",
+  "noticias": [
+    {
+      "destaque": true,
+      "pill": "🏥 Obras avançam",
+      "tag_categoria": "tag-seg",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Recanto dos Humildes",
+      "bairro": "Conjunto Habitacional Recanto dos Humildes",
+      "titulo": "Novas instalações da UBS Recanto dos Humildes avançam em Perus com investimento de R$ 13,4 milhões",
+      "resumo": "A Secretaria Municipal da Saúde acompanhou as obras da futura UBS Recanto dos Humildes, que será três vezes maior que a atual (1.196 m²), com 11 mil atendimentos mensais previstos. A unidade fica na esquina da rua Aurora Boreal com a rua Codorna e tem conclusão prevista para outubro de 2026.",
+      "fonte": "Secretaria Municipal da Saúde",
+      "hora": "Vistoria recente",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/sa%C3%BAde-visita-futuras-novas-instala%C3%A7%C3%B5es-da-ubs-recanto-dos-humildes-durante-prefeitura-presente-perus",
+      "icone": "🏥",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Jardim Rosinha",
+      "bairro": "Jardim Rosinha",
+      "titulo": "Obras da UPA-UBS integrada Anhanguera/Residencial das Orquídeas avançam no Jardim Rosinha",
+      "resumo": "Com investimento de R$ 13,1 milhões, o novo equipamento vai reunir atenção básica e pronto atendimento em uma estrutura de 1.377 m², com cerca de 15 mil atendimentos por mês. A conclusão das obras, na Estrada de Pirapora, está prevista para agosto de 2026.",
+      "fonte": "Secretaria Municipal da Saúde",
+      "hora": "Obras em andamento",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/sa%C3%BAde-visita-futuras-novas-instala%C3%A7%C3%B5es-da-ubs-recanto-dos-humildes-durante-prefeitura-presente-perus",
+      "icone": "🏥",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Vila Nova Galvão",
+      "bairro": "Vila Nova Galvão",
+      "titulo": "Uvis Jaçanã realiza Dia D de combate ao Aedes aegypti na Vila Nova Galvão",
+      "resumo": "Após registro de vários casos de dengue na região, agentes da Vigilância em Saúde e da Subprefeitura Jaçanã/Tremembé percorreram a Vila Nova Galvão visitando residências em busca de focos do mosquito e recolhendo pontos de descarte irregular de lixo, identificado como fator de risco na área.",
+      "fonte": "Subprefeitura Jaçanã/Tremembé",
+      "hora": "Ação recente",
+      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/w/noticias/94531",
+      "icone": "🦟",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Vila Medeiros",
+      "bairro": "Vila Medeiros",
+      "titulo": "São Paulo chega a 28 casos de sarampo em 2026; imunização livre segue mantida em Vila Medeiros",
+      "resumo": "A capital concentra 25 dos 28 casos confirmados no estado (90% do total). Por causa da situação epidemiológica local, a vacinação sem restrição de faixa etária, para pessoas de 6 meses a 59 anos, continua disponível nas UBS de Vila Medeiros, Vila Guilherme e Vila Maria, mesmo após o fim da campanha de multivacinação em 1º de setembro.",
+      "fonte": "Agência Brasil",
+      "hora": "Atualização de setembro",
+      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/casos-confirmados-de-sarampo-chegam-28-em-sao-paulo",
+      "icone": "💉",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Estação Freguesia do Ó da Linha 6-Laranja opera desde julho; trecho até a Brasilândia é esperado para outubro",
+      "resumo": "As estações Freguesia do Ó e Sesc-Pompeia da Linha 6-Laranja já estão em operação desde 2 de julho de 2026. A ligação até a estação Brasilândia, encerrando o primeiro trecho da linha, tem inauguração prevista para outubro de 2026.",
+      "fonte": "Metrô CPTM / Gazeta de São Paulo",
+      "hora": "Obras em andamento",
+      "url": "https://www.gazetasp.com.br/cotidiano/com-obras-24h-linha-6-laranja-do-metro-sera-inaugurada-em-2026/",
+      "icone": "🚇",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Vila Maria Alta",
+      "bairro": "Vila Maria Alta",
+      "titulo": "Cate Vila Maria/Vila Guilherme reúne cerca de 710 vagas de emprego para a Zona Norte",
+      "resumo": "A unidade do Centro de Apoio ao Trabalho e Empreendedorismo (Cate) na Rua General Mendes, 111, na Vila Maria Alta, está com vagas abertas em diversas áreas para moradores da Zona Norte. Interessados podem se cadastrar no Portal Cate ou comparecer presencialmente com RG, CPF e carteira de trabalho.",
+      "fonte": "Subprefeitura Vila Maria/Vila Guilherme",
+      "hora": "Vagas abertas",
+      "url": "https://prefeitura.sp.gov.br/web/vila_maria_vila_guilherme/w/noticias/34288",
+      "icone": "💼",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Conjunto Jova Rural",
+      "bairro": "Conjunto Jova Rural",
+      "titulo": "Feirões do Trampolim oferecem 1.129 vagas de emprego no CIC Jova Rural e no CIC Taipas",
+      "resumo": "A Secretaria de Desenvolvimento Econômico do Estado promoveu feirões de emprego e empreendedorismo com 1.129 vagas em 20 empresas, com contratação CLT e salários de R$ 1.621 a R$ 3.011. As ações também ofereceram orientação sobre microcrédito do Banco do Povo Paulista e cursos gratuitos do Qualifica SP.",
+      "fonte": "Agência SP",
+      "hora": "Ação recente",
+      "url": "https://www.agenciasp.sp.gov.br/feiroes-de-emprego-do-trampolim-tem-mais-de-1-mil-vagas-a-moradores-da-zona-norte-de-sao-paulo/",
+      "icone": "💼",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Geral",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Encontro no Colégio Wellington vai debater melhorias no espaço público da Freguesia do Ó",
+      "resumo": "A Subprefeitura Freguesia do Ó/Brasilândia programou um encontro para o dia 25 de setembro, às 19h, no Colégio Wellington, reunindo moradores, autoridades e técnicos para discutir propostas de melhorias em praças e espaços públicos da região.",
+      "fonte": "Subprefeitura Freguesia do Ó/Brasilândia",
+      "hora": "Encontro marcado para 25/09",
+      "url": "https://prefeitura.sp.gov.br/web/freguesia_brasilandia/noticias/",
+      "icone": "🏛️",
+      "icone_classe": "ic-edu"
+    }
+  ],
+  "agenda": [
+    {
+      "dia": "07",
+      "mes": "Set",
+      "cor_fundo": "#E67E22",
+      "bairro": "Santana",
+      "titulo": "Circo Vox apresenta \"Se Chove, Não Molha!\" no Sesc Santana",
+      "hora": "seg. 07/09 (feriado), 12h",
+      "local": "Sesc Santana, Jardim São Paulo",
+      "descricao": "Espetáculo gratuito de circo no feriado de 7 de Setembro, com palhaçaria e números tradicionais, 60 minutos de duração.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+    },
+    {
+      "dia": "10",
+      "mes": "Set",
+      "cor_fundo": "#8E44AD",
+      "bairro": "Vila Pirituba",
+      "titulo": "Feira de artesanato movimenta a Avenida Paula Ferreira em Pirituba",
+      "hora": "qui. 10/09 e sex. 11/09, a partir das 9h",
+      "local": "Comunidade Mensagem de Paz, Av. Paula Ferreira, Vila Pirituba",
+      "descricao": "Feira de artesanato com entrada gratuita, reunindo expositores locais na Avenida Paula Ferreira.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/entretenimento-esportes/feira-de-artesanato-vai-movimentar-a-avenida-paula-ferreira-em-pirituba-nos-dias-10-e-11-de-setembro/"
+    },
+    {
+      "dia": "12",
+      "mes": "Set",
+      "cor_fundo": "#16A085",
+      "bairro": "Santana",
+      "titulo": "Circo Vox apresenta \"Clássicos: uma homenagem ao que fica\" no Sesc Santana",
+      "hora": "sáb. 12/09, 12h",
+      "local": "Sesc Santana, Jardim São Paulo",
+      "descricao": "Espetáculo gratuito reúne números tradicionais de circo, palhaçaria e improviso, com nova sessão também no dia 26/09.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+    },
+    {
+      "dia": "13",
+      "mes": "Set",
+      "cor_fundo": "#2E86C1",
+      "bairro": "Santana",
+      "titulo": "Últimos dias da 28ª Bienal Internacional do Livro de São Paulo",
+      "hora": "até 13/09, das 9h às 21h",
+      "local": "São Paulo Expo, região do Anhembi, Santana",
+      "descricao": "Programação literária com editoras, lançamentos, encontros com autores e atividades infantis, movimentando a região do Anhembi.",
+      "gratuito": false,
+      "preco": "Ingressos a partir de R$ 20 (meia-entrada e gratuidades para grupos específicos)",
+      "url": "https://www.diariozonanorte.com.br/zona-norte-esta-na-rota-dos-livros-veja-a-programacao-da-matrix-na-bienal/"
+    },
+    {
+      "dia": "19",
+      "mes": "Set",
+      "cor_fundo": "#E67E22",
+      "bairro": "Santana",
+      "titulo": "Nova sessão de \"Se Chove, Não Molha!\" no Sesc Santana",
+      "hora": "sáb. 19/09, 12h",
+      "local": "Sesc Santana, Jardim São Paulo",
+      "descricao": "Reprise do espetáculo do Circo Vox, gratuito, dentro da programação de setembro do Sesc Santana.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+    },
+    {
+      "dia": "25",
+      "mes": "Set",
+      "cor_fundo": "#C0392B",
+      "bairro": "Freguesia do Ó",
+      "titulo": "Encontro comunitário debate melhorias no espaço público da Freguesia do Ó",
+      "hora": "sex. 25/09, 19h",
+      "local": "Colégio Wellington, Freguesia do Ó",
+      "descricao": "Reunião aberta a moradores, autoridades e técnicos da Subprefeitura para discutir propostas de melhoria em praças e espaços públicos da região.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://prefeitura.sp.gov.br/web/freguesia_brasilandia/noticias/"
+    }
+  ],
+  "vagas": [
+    {
+      "icone": "🧹",
+      "titulo": "Auxiliar de Limpeza II",
+      "empresa": "Empresa da região",
+      "bairro": "Vila Maria",
+      "requisitos": "CLT, escala 6x1, horários variados; salário de R$ 1.837,40 + vale-refeição, cesta básica, bônus de assiduidade, PLR e vale-transporte",
+      "tipo": "CLT",
+      "fonte": "Portal Cate",
+      "dias_atras": "vaga aberta"
+    },
+    {
+      "icone": "📦",
+      "titulo": "Aprendiz",
+      "empresa": "Empresas parceiras do Cate",
+      "bairro": "Perus",
+      "requisitos": "Vagas para a região de Perus, Pirituba, Morro Doce e Jaraguá; contratação como aprendiz CLT, salário a combinar",
+      "tipo": "CLT",
+      "fonte": "Portal Cate",
+      "dias_atras": "vaga aberta"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas em comércio e serviços",
+      "empresa": "Cate Vila Maria/Vila Guilherme",
+      "bairro": "Vila Maria Alta",
+      "requisitos": "Cerca de 710 vagas para moradores da Zona Norte; cadastro no Portal Cate ou presencial na Rua General Mendes, 111, com RG, CPF e carteira de trabalho",
+      "tipo": "CLT",
+      "fonte": "Subprefeitura Vila Maria/Vila Guilherme",
+      "dias_atras": "vagas abertas"
+    },
+    {
+      "icone": "🛍️",
+      "titulo": "Mais de 1.100 vagas nos Feirões do Trampolim",
+      "empresa": "20 empresas parceiras",
+      "bairro": "Conjunto Jova Rural",
+      "requisitos": "1.129 vagas CLT com salários de R$ 1.621 a R$ 3.011; ação realizada no CIC Jova Rural, com orientação sobre microcrédito e cursos gratuitos do Qualifica SP",
+      "tipo": "CLT",
+      "fonte": "Agência SP",
+      "dias_atras": "ação recente"
+    }
+  ],
+  "politica": [
+    {
+      "orgao": "🏥 Fundação do ABC / Governo do Estado de SP",
+      "bairro": "Mandaqui",
+      "titulo": "Gestão de 230 leitos do Hospital Mandaqui segue com a Fundação do ABC",
+      "impacto": "Contrato de R$ 100,7 milhões por ano busca reforçar o atendimento de emergência e de politraumatismo na Zona Norte, referência terciária na região.",
+      "status": "Em vigor",
+      "fonte": "Fundação do ABC"
+    },
+    {
+      "orgao": "🚇 Metrô SP / SIURB",
+      "bairro": "Brasilândia",
+      "titulo": "Trecho da Linha 6-Laranja até a Brasilândia deve abrir em outubro",
+      "impacto": "Com as estações Freguesia do Ó e Sesc-Pompeia já operando desde julho, a chegada da linha à Brasilândia vai conectar a região diretamente ao centro da cidade.",
+      "status": "Obras em andamento, inauguração prevista para outubro de 2026",
+      "fonte": "Metrô CPTM / Gazeta de São Paulo"
+    },
+    {
+      "orgao": "🏥 Secretaria Municipal da Saúde",
+      "bairro": "Conjunto Habitacional Recanto dos Humildes",
+      "titulo": "Perus e Anhanguera recebem R$ 26,5 milhões em obras de saúde",
+      "impacto": "Investimentos somados na UBS Recanto dos Humildes (R$ 13,4 mi) e na UPA-UBS Anhanguera/Residencial das Orquídeas (R$ 13,1 mi) devem ampliar a capacidade de atendimento dos dois distritos até outubro de 2026.",
+      "status": "Obras em andamento",
+      "fonte": "Secretaria Municipal da Saúde"
+    }
+  ],
+  "alertas": [
+    {
+      "tipo": "info",
+      "emoji": "🚗",
+      "titulo": "Rodízio restringe hoje veículos com placas final 9 e 0",
+      "desc": "Dentro do Minianel Viário, o rodízio municipal funciona das 7h às 10h e das 17h às 20h nesta sexta-feira (5/9). Não há rodízio no feriado de 7 de setembro.",
+      "meta": "CET / Prefeitura de São Paulo"
+    },
+    {
+      "tipo": "info",
+      "emoji": "🌧️",
+      "titulo": "Frente fria traz chuva forte e queda de temperatura no feriado de 7 de setembro",
+      "desc": "A previsão da Defesa Civil aponta acumulados entre 70 e 100 mm entre sábado e o feriado, com maior incidência na Região Metropolitana de São Paulo.",
+      "meta": "Climatempo / Defesa Civil"
+    },
+    {
+      "tipo": "info",
+      "emoji": "💉",
+      "titulo": "Vacinação contra sarampo segue liberada para todas as idades em Vila Medeiros, Vila Guilherme e Vila Maria",
+      "desc": "Com 28 casos confirmados em São Paulo (25 na capital), a rede municipal mantém a aplicação da tríplice viral para pessoas de 6 meses a 59 anos, mesmo após o fim da campanha oficial de multivacinação.",
+      "meta": "Secretaria Municipal da Saúde / Agência Brasil"
+    },
+    {
+      "tipo": "ok",
+      "emoji": "🏥",
+      "titulo": "Obras de saúde avançam em Perus e Anhanguera",
+      "desc": "Novas instalações da UBS Recanto dos Humildes e da UPA-UBS Anhanguera/Residencial das Orquídeas devem ficar prontas ainda em 2026, ampliando o atendimento na região.",
+      "meta": "Secretaria Municipal da Saúde"
+    }
+  ],
+  "fim_de_semana": [
+    {
+      "emoji": "🤡",
+      "titulo": "Circo Vox apresenta \"Arruaça\" no Sesc Santana",
+      "info": "05/09 · sábado, 12h · Jardim São Paulo · Gratuito"
+    },
+    {
+      "emoji": "🌧️",
+      "titulo": "Feriado de 7/9 deve ter chuva forte: leve guarda-chuva e evite áreas de alagamento",
+      "info": "06 e 07/09 · previsão de 70-100 mm de chuva na Grande São Paulo"
+    },
+    {
+      "emoji": "🎪",
+      "titulo": "Circo Vox no feriado com \"Se Chove, Não Molha!\"",
+      "info": "07/09 · feriado, 12h · Sesc Santana, Jardim São Paulo · Gratuito"
+    },
+    {
+      "emoji": "📚",
+      "titulo": "Bienal Internacional do Livro segue aberta no Anhembi",
+      "info": "até 13/09 · diariamente das 9h às 21h · Santana · a partir de R$ 20"
+    },
+    {
+      "emoji": "🚗",
+      "titulo": "Sem rodízio de veículos no feriado de 7 de setembro",
+      "info": "07/09 · feriado · circulação livre no Minianel Viário"
+    }
+  ]
+}
