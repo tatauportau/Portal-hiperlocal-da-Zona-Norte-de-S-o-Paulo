@@ -3,124 +3,151 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🏥 Obras avançam",
+      "pill": "🚨 Caso grave",
       "tag_categoria": "tag-seg",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Recanto dos Humildes",
-      "bairro": "Conjunto Habitacional Recanto dos Humildes",
-      "titulo": "Novas instalações da UBS Recanto dos Humildes avançam em Perus com investimento de R$ 13,4 milhões",
-      "resumo": "A Secretaria Municipal da Saúde acompanhou as obras da futura UBS Recanto dos Humildes, que será três vezes maior que a atual (1.196 m²), com 11 mil atendimentos mensais previstos. A unidade fica na esquina da rua Aurora Boreal com a rua Codorna e tem conclusão prevista para outubro de 2026.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "Vistoria recente",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/sa%C3%BAde-visita-futuras-novas-instala%C3%A7%C3%B5es-da-ubs-recanto-dos-humildes-durante-prefeitura-presente-perus",
-      "icone": "🏥",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Padrasto é preso em Pirituba após confessar agressões que mataram criança de 1 ano",
+      "resumo": "Um rapaz de 20 anos foi preso em flagrante por homicídio depois que uma criança de 1 ano, sob seus cuidados, deu entrada na UPA de Pirituba com sinais de violência e não resistiu. A Polícia Civil apura o caso no 33º Distrito Policial de Pirituba; a mãe, que estava trabalhando no momento das agressões, é investigada por omissão.",
+      "fonte": "Folha Noroeste / G1",
+      "hora": "Caso registrado em 1º/09",
+      "url": "https://folhanoroeste.com.br/regional/padrasto-e-preso-em-pirituba-apos-confessar-agressoes-contra-crianca-de-1-ano/",
+      "icone": "🚨",
       "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Jardim Rosinha",
-      "bairro": "Jardim Rosinha",
-      "titulo": "Obras da UPA-UBS integrada Anhanguera/Residencial das Orquídeas avançam no Jardim Rosinha",
-      "resumo": "Com investimento de R$ 13,1 milhões, o novo equipamento vai reunir atenção básica e pronto atendimento em uma estrutura de 1.377 m², com cerca de 15 mil atendimentos por mês. A conclusão das obras, na Estrada de Pirapora, está prevista para agosto de 2026.",
-      "fonte": "Secretaria Municipal da Saúde",
-      "hora": "Obras em andamento",
-      "url": "https://prefeitura.sp.gov.br/web/saude/w/sa%C3%BAde-visita-futuras-novas-instala%C3%A7%C3%B5es-da-ubs-recanto-dos-humildes-durante-prefeitura-presente-perus",
-      "icone": "🏥",
-      "icone_classe": "ic-seg"
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "IFSP campus Pirituba abre nesta terça (8/9) edital para cursos técnicos integrados ao ensino médio",
+      "resumo": "O Instituto Federal de São Paulo publica no dia 8 de setembro o edital do processo seletivo para os cursos técnicos integrados ao ensino médio com ingresso em 2027. As inscrições, também a partir do dia 8, vão até 5 de outubro, com taxa de R$ 60 e prova prevista para 22 de novembro.",
+      "fonte": "Folha Noroeste",
+      "hora": "Edital sai em 8/09",
+      "url": "https://folhanoroeste.com.br/educacao/if-campus-pirituba-abre-processo-seletivo-para-cursos-tecnicos-integrados-ao-ensino-medio/",
+      "icone": "🎓",
+      "icone_classe": "ic-edu"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Nova Galvão",
-      "bairro": "Vila Nova Galvão",
-      "titulo": "Uvis Jaçanã realiza Dia D de combate ao Aedes aegypti na Vila Nova Galvão",
-      "resumo": "Após registro de vários casos de dengue na região, agentes da Vigilância em Saúde e da Subprefeitura Jaçanã/Tremembé percorreram a Vila Nova Galvão visitando residências em busca de focos do mosquito e recolhendo pontos de descarte irregular de lixo, identificado como fator de risco na área.",
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Mercado Livre abre 300 vagas para Perus e Cajamar em processo seletivo no CIC Jaraguá",
+      "resumo": "A Secretaria da Justiça e Cidadania, por meio do CIC Oeste, realizou processo seletivo com o Mercado Livre oferecendo 300 vagas para candidatos com ensino fundamental ou médio completo, sem exigência de experiência, incluindo vagas para PCD. O salário é de R$ 2.025 mais R$ 182, com benefícios como vale-alimentação, transporte fretado e assistência médica.",
+      "fonte": "Folha Noroeste",
+      "hora": "Ação realizada em 2/09",
+      "url": "https://folhanoroeste.com.br/regional/cic-jaragua-recebe-processo-seletivo-do-mercado-livre-com-300-vagas/",
+      "icone": "💼",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Meio Ambiente",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Pirituba ganhará parque de 700 mil m² dedicado à conservação ambiental, o Parque Sete Sóis",
+      "resumo": "A nova Área de Preservação Sete Sóis vai reunir Parque Linear, Parque Urbano e uma área de Cerrado, com campo multiuso, quadra poliesportiva, playground, horta e pomar, beneficiando mais de 400 mil moradores da região. O prefeito Ricardo Nunes visitou o local durante o Prefeitura Presente Pirituba/Jaraguá.",
+      "fonte": "Folha Noroeste",
+      "hora": "Anúncio em 3/09",
+      "url": "https://folhanoroeste.com.br/regional/pirituba-ganhara-um-novo-espaco-dedicado-a-conservacao-ambiental-parque-sete-sois/",
+      "icone": "🌳",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Moradia",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Prefeitura entrega 650 moradias do Residencial Amizade e 403 títulos de propriedade em Pirituba",
+      "resumo": "Durante o Prefeitura Presente, foram entregues 650 apartamentos do Residencial Amizade, com investimento de R$ 188,2 milhões, além de 403 títulos de regularização fundiária para moradores do Piqueri, Jardim Paquetá e Vila Anastácio. A região soma mais de 2,8 mil unidades habitacionais em construção.",
+      "fonte": "Folha Noroeste",
+      "hora": "Entrega em 3/09",
+      "url": "https://folhanoroeste.com.br/regional/prefeitura-entrega-650-moradias-e-403-titulos-de-propriedade-em-pirituba/",
+      "icone": "🏠",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Participação Social",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Está aberto até 16/09 o processo eleitoral do Conselho Participativo Municipal 2027/2028",
+      "resumo": "Moradores da Subprefeitura Casa Verde/Cachoeirinha e das demais regiões da cidade podem se inscrever para concorrer a uma vaga no Conselho Participativo Municipal, com inscrições abertas de 28 de agosto a 16 de setembro.",
+      "fonte": "Subprefeitura Casa Verde",
+      "hora": "Inscrições até 16/09",
+      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/prefeitura-de-s%C3%A3o-paulo-inicia-processo-eleitoral-do-conselho-participativo-municipal-para-o-bi%C3%AAnio-2027/2028",
+      "icone": "🗳️",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Política",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "Prefeitura prorroga até 12/09 consulta pública dos Planos de Ação das Subprefeituras, incluindo Jaçanã/Tremembé",
+      "resumo": "A Prefeitura de São Paulo estendeu até 12 de setembro o prazo da consulta pública on-line dos Planos de Ação das Subprefeituras (PAS) 2026-2029, disponível na plataforma Participe+, na qual moradores podem indicar demandas por região, bairro ou avenida.",
       "fonte": "Subprefeitura Jaçanã/Tremembé",
-      "hora": "Ação recente",
-      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/w/noticias/94531",
-      "icone": "🦟",
-      "icone_classe": "ic-seg"
+      "hora": "Prazo até 12/09",
+      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/w/prefeitura-prorroga-at%C3%A9-12-de-setembro-o-prazo-da-consulta-p%C3%BAblica-online-dos-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-2026-2029",
+      "icone": "🏛️",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Medeiros",
-      "bairro": "Vila Medeiros",
-      "titulo": "São Paulo chega a 28 casos de sarampo em 2026; imunização livre segue mantida em Vila Medeiros",
-      "resumo": "A capital concentra 25 dos 28 casos confirmados no estado (90% do total). Por causa da situação epidemiológica local, a vacinação sem restrição de faixa etária, para pessoas de 6 meses a 59 anos, continua disponível nas UBS de Vila Medeiros, Vila Guilherme e Vila Maria, mesmo após o fim da campanha de multivacinação em 1º de setembro.",
-      "fonte": "Agência Brasil",
-      "hora": "Atualização de setembro",
-      "url": "https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/casos-confirmados-de-sarampo-chegam-28-em-sao-paulo",
-      "icone": "💉",
-      "icone_classe": "ic-seg"
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Vila Pirituba",
+      "bairro": "Vila Pirituba",
+      "titulo": "Cate abre mais de 1.700 vagas em Perus, Pirituba, Jaraguá e Freguesia/Brasilândia até quarta (11/09)",
+      "resumo": "As unidades do Cate na zona noroeste — Perus, Pirituba, Jaraguá e Freguesia/Brasilândia — participam da oferta semanal de mais de 1.700 vagas de emprego da Prefeitura. As inscrições prévias vão até quarta-feira (11), às 18h, pelo portal cate.prefeitura.sp.gov.br ou nas unidades físicas.",
+      "fonte": "Folha Noroeste",
+      "hora": "Inscrições até 11/09",
+      "url": "https://folhanoroeste.com.br/regional/inscricoes-para-vagas-de-emprego-no-cate-pirituba-jaragua-freguesia-vao-ate-quarta-11/",
+      "icone": "💼",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Estação Freguesia do Ó da Linha 6-Laranja opera desde julho; trecho até a Brasilândia é esperado para outubro",
-      "resumo": "As estações Freguesia do Ó e Sesc-Pompeia da Linha 6-Laranja já estão em operação desde 2 de julho de 2026. A ligação até a estação Brasilândia, encerrando o primeiro trecho da linha, tem inauguração prevista para outubro de 2026.",
-      "fonte": "Metrô CPTM / Gazeta de São Paulo",
-      "hora": "Obras em andamento",
-      "url": "https://www.gazetasp.com.br/cotidiano/com-obras-24h-linha-6-laranja-do-metro-sera-inaugurada-em-2026/",
+      "tag_bairro": "📍 Brasilândia",
+      "bairro": "Brasilândia",
+      "titulo": "Linha 6-Laranja avança e trecho até a Brasilândia deve abrir em outubro",
+      "resumo": "Com o trecho João Paulo I-Perdizes já em operação desde julho, a extensão até a estação Brasilândia é esperada para outubro de 2026, reduzindo para cerca de 23 minutos o trajeto até a região central, hoje de aproximadamente 1h30 de ônibus.",
+      "fonte": "Terra / Gazeta de São Paulo",
+      "hora": "Previsão para outubro",
+      "url": "https://www.terra.com.br/noticias/brasil/cidades/linha-6-laranja-do-metro-como-estao-as-obras-de-cada-estacao-a-6-meses-da-entrega-da-1-etapa,2774120c42669882a02de8f845862ef254p4gufl.html",
       "icone": "🚇",
       "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Vila Maria Alta",
-      "bairro": "Vila Maria Alta",
-      "titulo": "Cate Vila Maria/Vila Guilherme reúne cerca de 710 vagas de emprego para a Zona Norte",
-      "resumo": "A unidade do Centro de Apoio ao Trabalho e Empreendedorismo (Cate) na Rua General Mendes, 111, na Vila Maria Alta, está com vagas abertas em diversas áreas para moradores da Zona Norte. Interessados podem se cadastrar no Portal Cate ou comparecer presencialmente com RG, CPF e carteira de trabalho.",
-      "fonte": "Subprefeitura Vila Maria/Vila Guilherme",
-      "hora": "Vagas abertas",
-      "url": "https://prefeitura.sp.gov.br/web/vila_maria_vila_guilherme/w/noticias/34288",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Conjunto Jova Rural",
-      "bairro": "Conjunto Jova Rural",
-      "titulo": "Feirões do Trampolim oferecem 1.129 vagas de emprego no CIC Jova Rural e no CIC Taipas",
-      "resumo": "A Secretaria de Desenvolvimento Econômico do Estado promoveu feirões de emprego e empreendedorismo com 1.129 vagas em 20 empresas, com contratação CLT e salários de R$ 1.621 a R$ 3.011. As ações também ofereceram orientação sobre microcrédito do Banco do Povo Paulista e cursos gratuitos do Qualifica SP.",
-      "fonte": "Agência SP",
-      "hora": "Ação recente",
-      "url": "https://www.agenciasp.sp.gov.br/feiroes-de-emprego-do-trampolim-tem-mais-de-1-mil-vagas-a-moradores-da-zona-norte-de-sao-paulo/",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Geral",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Encontro no Colégio Wellington vai debater melhorias no espaço público da Freguesia do Ó",
-      "resumo": "A Subprefeitura Freguesia do Ó/Brasilândia programou um encontro para o dia 25 de setembro, às 19h, no Colégio Wellington, reunindo moradores, autoridades e técnicos para discutir propostas de melhorias em praças e espaços públicos da região.",
-      "fonte": "Subprefeitura Freguesia do Ó/Brasilândia",
-      "hora": "Encontro marcado para 25/09",
-      "url": "https://prefeitura.sp.gov.br/web/freguesia_brasilandia/noticias/",
-      "icone": "🏛️",
-      "icone_classe": "ic-edu"
     }
   ],
   "agenda": [
     {
       "dia": "07",
       "mes": "Set",
+      "cor_fundo": "#27AE60",
+      "bairro": "City América",
+      "titulo": "Feira de artesanato \"Mãos e Mentes Paulistanas\" no Parque Cidade de Toronto",
+      "hora": "seg. 07/09 (feriado), 10h às 17h",
+      "local": "Parque Cidade de Toronto, Av. Cardeal Motta, 84 – City América",
+      "descricao": "Feira com produtos autorais de cerâmica, marcenaria, bordado, crochê e outras técnicas artesanais, também nos dias 13, 20 e 27 de setembro.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/regional/parque-toronto-recebe-feira-de-artesanato-durante-feriado-de-7-de-setembro/"
+    },
+    {
+      "dia": "07",
+      "mes": "Set",
       "cor_fundo": "#E67E22",
-      "bairro": "Santana",
+      "bairro": "Jardim São Paulo",
       "titulo": "Circo Vox apresenta \"Se Chove, Não Molha!\" no Sesc Santana",
       "hora": "seg. 07/09 (feriado), 12h",
       "local": "Sesc Santana, Jardim São Paulo",
@@ -146,11 +173,11 @@
       "dia": "12",
       "mes": "Set",
       "cor_fundo": "#16A085",
-      "bairro": "Santana",
+      "bairro": "Jardim São Paulo",
       "titulo": "Circo Vox apresenta \"Clássicos: uma homenagem ao que fica\" no Sesc Santana",
       "hora": "sáb. 12/09, 12h",
       "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo gratuito reúne números tradicionais de circo, palhaçaria e improviso, com nova sessão também no dia 26/09.",
+      "descricao": "Espetáculo gratuito reúne números tradicionais de circo, palhaçaria e improviso, com nova sessão também no dia 19/09.",
       "gratuito": true,
       "preco": null,
       "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
@@ -172,7 +199,7 @@
       "dia": "19",
       "mes": "Set",
       "cor_fundo": "#E67E22",
-      "bairro": "Santana",
+      "bairro": "Jardim São Paulo",
       "titulo": "Nova sessão de \"Se Chove, Não Molha!\" no Sesc Santana",
       "hora": "sáb. 19/09, 12h",
       "local": "Sesc Santana, Jardim São Paulo",
@@ -180,134 +207,134 @@
       "gratuito": true,
       "preco": null,
       "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
-    },
-    {
-      "dia": "25",
-      "mes": "Set",
-      "cor_fundo": "#C0392B",
-      "bairro": "Freguesia do Ó",
-      "titulo": "Encontro comunitário debate melhorias no espaço público da Freguesia do Ó",
-      "hora": "sex. 25/09, 19h",
-      "local": "Colégio Wellington, Freguesia do Ó",
-      "descricao": "Reunião aberta a moradores, autoridades e técnicos da Subprefeitura para discutir propostas de melhoria em praças e espaços públicos da região.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/freguesia_brasilandia/noticias/"
     }
   ],
   "vagas": [
     {
-      "icone": "🧹",
-      "titulo": "Auxiliar de Limpeza II",
-      "empresa": "Empresa da região",
-      "bairro": "Vila Maria",
-      "requisitos": "CLT, escala 6x1, horários variados; salário de R$ 1.837,40 + vale-refeição, cesta básica, bônus de assiduidade, PLR e vale-transporte",
+      "icone": "💼",
+      "titulo": "Vagas diversas – Cate Freguesia/Brasilândia",
+      "empresa": "Diversas empresas parceiras do Cate",
+      "bairro": "Vila dos Andrades",
+      "requisitos": "Mais de 1.700 vagas na semana entre as unidades da zona noroeste; inscrição prévia até quarta (11/09), às 18h, pelo portal cate.prefeitura.sp.gov.br",
       "tipo": "CLT",
-      "fonte": "Portal Cate",
-      "dias_atras": "vaga aberta"
-    },
-    {
-      "icone": "📦",
-      "titulo": "Aprendiz",
-      "empresa": "Empresas parceiras do Cate",
-      "bairro": "Perus",
-      "requisitos": "Vagas para a região de Perus, Pirituba, Morro Doce e Jaraguá; contratação como aprendiz CLT, salário a combinar",
-      "tipo": "CLT",
-      "fonte": "Portal Cate",
-      "dias_atras": "vaga aberta"
+      "fonte": "Folha Noroeste / Cate",
+      "dias_atras": "inscrições até 11/09"
     },
     {
       "icone": "💼",
-      "titulo": "Vagas diversas em comércio e serviços",
-      "empresa": "Cate Vila Maria/Vila Guilherme",
-      "bairro": "Vila Maria Alta",
-      "requisitos": "Cerca de 710 vagas para moradores da Zona Norte; cadastro no Portal Cate ou presencial na Rua General Mendes, 111, com RG, CPF e carteira de trabalho",
+      "titulo": "Vagas diversas – Cate Jaraguá",
+      "empresa": "Diversas empresas parceiras do Cate",
+      "bairro": "Parque Nações Unidas",
+      "requisitos": "Unidade do Cate na Estrada de Taipas, 990; inscrição prévia até quarta (11/09), às 18h, pelo portal cate.prefeitura.sp.gov.br",
       "tipo": "CLT",
-      "fonte": "Subprefeitura Vila Maria/Vila Guilherme",
-      "dias_atras": "vagas abertas"
+      "fonte": "Folha Noroeste / Cate",
+      "dias_atras": "inscrições até 11/09"
     },
     {
-      "icone": "🛍️",
-      "titulo": "Mais de 1.100 vagas nos Feirões do Trampolim",
-      "empresa": "20 empresas parceiras",
-      "bairro": "Conjunto Jova Rural",
-      "requisitos": "1.129 vagas CLT com salários de R$ 1.621 a R$ 3.011; ação realizada no CIC Jova Rural, com orientação sobre microcrédito e cursos gratuitos do Qualifica SP",
+      "icone": "💼",
+      "titulo": "Vagas diversas – Cate Perus",
+      "empresa": "Diversas empresas parceiras do Cate",
+      "bairro": "Perus",
+      "requisitos": "Unidade do Cate na Rua Ylídio Figueiredo, 285; inscrição prévia até quarta (11/09), às 18h, pelo portal cate.prefeitura.sp.gov.br",
       "tipo": "CLT",
-      "fonte": "Agência SP",
-      "dias_atras": "ação recente"
+      "fonte": "Folha Noroeste / Cate",
+      "dias_atras": "inscrições até 11/09"
+    },
+    {
+      "icone": "💼",
+      "titulo": "Vagas diversas – Cate Pirituba",
+      "empresa": "Diversas empresas parceiras do Cate",
+      "bairro": "Vila Pirituba",
+      "requisitos": "Unidade do Cate na Rua Paula Ferreira, 1708; inscrição prévia até quarta (11/09), às 18h, pelo portal cate.prefeitura.sp.gov.br",
+      "tipo": "CLT",
+      "fonte": "Folha Noroeste / Cate",
+      "dias_atras": "inscrições até 11/09"
     }
   ],
   "politica": [
     {
-      "orgao": "🏥 Fundação do ABC / Governo do Estado de SP",
-      "bairro": "Mandaqui",
-      "titulo": "Gestão de 230 leitos do Hospital Mandaqui segue com a Fundação do ABC",
-      "impacto": "Contrato de R$ 100,7 milhões por ano busca reforçar o atendimento de emergência e de politraumatismo na Zona Norte, referência terciária na região.",
-      "status": "Em vigor",
-      "fonte": "Fundação do ABC"
+      "orgao": "🗳️ Conselho Participativo Municipal",
+      "bairro": "Casa Verde",
+      "titulo": "Inscrições abertas até 16/09 para o Conselho Participativo Municipal 2027/2028",
+      "impacto": "Moradores de todas as subprefeituras, incluindo Casa Verde/Cachoeirinha, podem se candidatar para atuar como conselheiros e fiscalizar políticas públicas locais no próximo biênio.",
+      "status": "Inscrições até 16/09",
+      "fonte": "Subprefeitura Casa Verde"
     },
     {
-      "orgao": "🚇 Metrô SP / SIURB",
+      "orgao": "🏛️ Secretaria Municipal de Urbanismo e Licenciamento",
+      "bairro": "Jaçanã",
+      "titulo": "Prazo da consulta pública dos Planos de Ação das Subprefeituras (PAS) 2026-2029 é prorrogado até 12/09",
+      "impacto": "A consulta, feita pela plataforma Participe+, recebe propostas de moradores de Jaçanã/Tremembé e das demais subprefeituras para orientar investimentos e prioridades territoriais até 2029.",
+      "status": "Consulta pública até 12/09",
+      "fonte": "Subprefeitura Jaçanã/Tremembé"
+    },
+    {
+      "orgao": "🏠 Secretaria Municipal de Habitação (SEHAB/COHAB-SP)",
+      "bairro": "Pirituba",
+      "titulo": "Pode Entrar entrega 650 moradias e Escritura na Mão regulariza 403 imóveis em Pirituba",
+      "impacto": "A região de Pirituba/Jaraguá soma mais de 2,8 mil unidades habitacionais em construção e já ultrapassa 11 mil títulos de regularização fundiária emitidos desde 2021.",
+      "status": "Entregas realizadas em 3/09",
+      "fonte": "Folha Noroeste"
+    },
+    {
+      "orgao": "🚇 Metrô SP / Secretaria de Infraestrutura Urbana",
       "bairro": "Brasilândia",
-      "titulo": "Trecho da Linha 6-Laranja até a Brasilândia deve abrir em outubro",
-      "impacto": "Com as estações Freguesia do Ó e Sesc-Pompeia já operando desde julho, a chegada da linha à Brasilândia vai conectar a região diretamente ao centro da cidade.",
-      "status": "Obras em andamento, inauguração prevista para outubro de 2026",
-      "fonte": "Metrô CPTM / Gazeta de São Paulo"
-    },
-    {
-      "orgao": "🏥 Secretaria Municipal da Saúde",
-      "bairro": "Conjunto Habitacional Recanto dos Humildes",
-      "titulo": "Perus e Anhanguera recebem R$ 26,5 milhões em obras de saúde",
-      "impacto": "Investimentos somados na UBS Recanto dos Humildes (R$ 13,4 mi) e na UPA-UBS Anhanguera/Residencial das Orquídeas (R$ 13,1 mi) devem ampliar a capacidade de atendimento dos dois distritos até outubro de 2026.",
+      "titulo": "Linha 6-Laranja: trecho até a Brasilândia é esperado para outubro",
+      "impacto": "A chegada da linha à Brasilândia vai completar o primeiro trecho do metrô, ligando a região diretamente ao centro em cerca de 23 minutos.",
       "status": "Obras em andamento",
-      "fonte": "Secretaria Municipal da Saúde"
+      "fonte": "Terra / Gazeta de São Paulo"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "🚗",
-      "titulo": "Rodízio restringe hoje veículos com placas final 9 e 0",
-      "desc": "Dentro do Minianel Viário, o rodízio municipal funciona das 7h às 10h e das 17h às 20h nesta sexta-feira (5/9). Não há rodízio no feriado de 7 de setembro.",
-      "meta": "CET / Prefeitura de São Paulo"
+      "emoji": "🚌",
+      "titulo": "Feriado prolongado (5 a 7/09): rodízio suspenso na segunda e ônibus grátis no domingo",
+      "desc": "O Rodízio Municipal de Veículos não vigora na segunda-feira (7), feriado da Independência. Neste domingo (6), vale o Domingão Tarifa Zero, com gratuidade nos ônibus municipais; na segunda, há operação especial de transporte para o Desfile Cívico-Militar no Anhembi.",
+      "meta": "Folha Noroeste / SPTrans"
+    },
+    {
+      "tipo": "info",
+      "emoji": "💊",
+      "titulo": "Assaltos a farmácias seguem em alta na capital; Zona Norte soma 8 casos em 2026",
+      "desc": "Um levantamento da TV Globo aponta ao menos 75 farmácias assaltadas em São Paulo neste ano, com foco dos criminosos em medicamentos de alto custo, como canetas emagrecedoras. A Zona Sul lidera com 27 casos, seguida pela Zona Leste (26), Zona Oeste (14) e Zona Norte (8).",
+      "meta": "G1/TV Globo via Folha Noroeste"
     },
     {
       "tipo": "info",
       "emoji": "🌧️",
-      "titulo": "Frente fria traz chuva forte e queda de temperatura no feriado de 7 de setembro",
-      "desc": "A previsão da Defesa Civil aponta acumulados entre 70 e 100 mm entre sábado e o feriado, com maior incidência na Região Metropolitana de São Paulo.",
-      "meta": "Climatempo / Defesa Civil"
+      "titulo": "Chuva de setembro já soma 61% da média mensal em São Paulo",
+      "desc": "Até o dia 5 de setembro, a capital já havia registrado 57 mm de chuva no mês, o equivalente a 61% da média histórica para todo o período.",
+      "meta": "Climatempo"
     },
     {
       "tipo": "info",
-      "emoji": "💉",
-      "titulo": "Vacinação contra sarampo segue liberada para todas as idades em Vila Medeiros, Vila Guilherme e Vila Maria",
-      "desc": "Com 28 casos confirmados em São Paulo (25 na capital), a rede municipal mantém a aplicação da tríplice viral para pessoas de 6 meses a 59 anos, mesmo após o fim da campanha oficial de multivacinação.",
-      "meta": "Secretaria Municipal da Saúde / Agência Brasil"
-    },
-    {
-      "tipo": "ok",
-      "emoji": "🏥",
-      "titulo": "Obras de saúde avançam em Perus e Anhanguera",
-      "desc": "Novas instalações da UBS Recanto dos Humildes e da UPA-UBS Anhanguera/Residencial das Orquídeas devem ficar prontas ainda em 2026, ampliando o atendimento na região.",
-      "meta": "Secretaria Municipal da Saúde"
+      "emoji": "🎓",
+      "titulo": "IFSP publica em 8/09 edital para cursos técnicos integrados, com inscrições até 5/10",
+      "desc": "O Instituto Federal de São Paulo, com campus em Pirituba, abre no dia 8 de setembro as inscrições para os cursos técnicos integrados ao ensino médio com ingresso em 2027. A taxa é de R$ 60 e a prova está marcada para 22 de novembro.",
+      "meta": "Folha Noroeste / IFSP"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🤡",
-      "titulo": "Circo Vox apresenta \"Arruaça\" no Sesc Santana",
-      "info": "05/09 · sábado, 12h · Jardim São Paulo · Gratuito"
-    },
-    {
-      "emoji": "🌧️",
-      "titulo": "Feriado de 7/9 deve ter chuva forte: leve guarda-chuva e evite áreas de alagamento",
-      "info": "06 e 07/09 · previsão de 70-100 mm de chuva na Grande São Paulo"
+      "emoji": "🚌",
+      "titulo": "Domingão Tarifa Zero: ônibus municipais gratuitos hoje",
+      "info": "06/09 · domingo · toda a rede municipal de ônibus"
     },
     {
       "emoji": "🎪",
-      "titulo": "Circo Vox no feriado com \"Se Chove, Não Molha!\"",
-      "info": "07/09 · feriado, 12h · Sesc Santana, Jardim São Paulo · Gratuito"
+      "titulo": "Feriado com Circo Vox: \"Se Chove, Não Molha!\" no Sesc Santana",
+      "info": "07/09 · feriado, 12h · Jardim São Paulo · Gratuito"
+    },
+    {
+      "emoji": "🖐️",
+      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas no Parque Cidade de Toronto",
+      "info": "07/09 · feriado, 10h às 17h · City América · Gratuito"
+    },
+    {
+      "emoji": "🎖️",
+      "titulo": "Desfile Cívico-Militar de 7 de Setembro no Anhembi",
+      "info": "07/09 · feriado · Santana · Gratuito, com ônibus especial"
     },
     {
       "emoji": "📚",
@@ -316,7 +343,7 @@
     },
     {
       "emoji": "🚗",
-      "titulo": "Sem rodízio de veículos no feriado de 7 de setembro",
+      "titulo": "Rodízio de veículos suspenso na segunda-feira, feriado de 7 de setembro",
       "info": "07/09 · feriado · circulação livre no Minianel Viário"
     }
   ]
