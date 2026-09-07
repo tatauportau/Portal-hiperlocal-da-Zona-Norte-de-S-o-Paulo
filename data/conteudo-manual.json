@@ -3,18 +3,60 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🚨 Caso grave",
+      "pill": "🚨 Incêndio",
       "tag_categoria": "tag-seg",
       "tag_label": "Segurança",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Padrasto é preso em Pirituba após confessar agressões que mataram criança de 1 ano",
-      "resumo": "Um rapaz de 20 anos foi preso em flagrante por homicídio depois que uma criança de 1 ano, sob seus cuidados, deu entrada na UPA de Pirituba com sinais de violência e não resistiu. A Polícia Civil apura o caso no 33º Distrito Policial de Pirituba; a mãe, que estava trabalhando no momento das agressões, é investigada por omissão.",
-      "fonte": "Folha Noroeste / G1",
-      "hora": "Caso registrado em 1º/09",
-      "url": "https://folhanoroeste.com.br/regional/padrasto-e-preso-em-pirituba-apos-confessar-agressoes-contra-crianca-de-1-ano/",
+      "tag_bairro": "📍 Parque Novo Mundo",
+      "bairro": "Parque Novo Mundo",
+      "titulo": "Incêndio destrói até 30 moradias em comunidade no Parque Novo Mundo, na Vila Maria",
+      "resumo": "Um incêndio atingiu a Comunidade Verde, no Parque Novo Mundo, na manhã de domingo (6/9), por volta das 9h35, na Rua Giuseppe Marino. Segundo o Corpo de Bombeiros, as chamas alcançaram entre 25 e 30 moradias em uma área onde vivem cerca de 400 famílias; dez viaturas foram mobilizadas e o fogo foi controlado por volta das 12h30. Não há vítimas e a causa ainda é apurada.",
+      "fonte": "NC News / Corpo de Bombeiros",
+      "hora": "Ocorrência em 6/09",
+      "url": "https://ncnews.com.br/2026/09/06/incendio-destroi-quase-30-moradias-em-comunidade-na-zona-norte-de-sp/",
       "icone": "🚨",
       "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Cultura",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "CEU Freguesia do Ó comemora aniversário com apresentação especial do Circoral",
+      "resumo": "O CEU Freguesia do Ó celebrou seu aniversário com o espetáculo \"Circoral – Um Show de Brasilidades\", que uniu canto coral, beatbox e artes circenses em apresentação gratuita, para todas as idades, no teatro da unidade.",
+      "fonte": "Folha Noroeste",
+      "hora": "Apresentação em 5/09",
+      "url": "https://folhanoroeste.com.br/entretenimento-esportes/ceu-freguesia-do-o-comemora-seu-aniversario-com-apresentacao-do-circoral/",
+      "icone": "🎪",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Cultura",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Coletivo Noroest encerra temporada gratuita de \"Manifesto de Concreto\" no CEU Perus",
+      "resumo": "O espetáculo de dança, teatro e circo \"Manifesto de Concreto\", que revisita a Greve dos Queixadas e a memória do território de Perus, encerrou sua temporada gratuita no CEU Perus (Rua Bernardo José de Lorena, Vila Fanton) com sessões em 4 de setembro, após apresentações também no Teatro Cacilda Becker, Teatro João Caetano e Centro Cultural da Penha.",
+      "fonte": "Folha Noroeste",
+      "hora": "Última sessão em 4/09",
+      "url": "https://folhanoroeste.com.br/entretenimento-esportes/coletivo-noroest-apresenta-manifesto-de-concreto-no-ceu-perus/",
+      "icone": "🎭",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Política",
+      "tag_bairro": "📍 Jaçanã",
+      "bairro": "Jaçanã",
+      "titulo": "Prefeitura prorroga até 12/09 consulta pública dos Planos de Ação das Subprefeituras, incluindo Jaçanã/Tremembé",
+      "resumo": "A Prefeitura de São Paulo estendeu até 12 de setembro o prazo da consulta pública on-line dos Planos de Ação das Subprefeituras (PAS) 2026-2029, disponível na plataforma Participe+, na qual moradores de Jaçanã/Tremembé e das demais subprefeituras podem indicar demandas por região, bairro ou avenida.",
+      "fonte": "Subprefeitura Jaçanã/Tremembé",
+      "hora": "Prazo até 12/09",
+      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/w/prefeitura-prorroga-at%C3%A9-12-de-setembro-o-prazo-da-consulta-p%C3%BAblica-online-dos-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-2026-2029",
+      "icone": "🏛️",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
@@ -29,76 +71,6 @@
       "url": "https://folhanoroeste.com.br/educacao/if-campus-pirituba-abre-processo-seletivo-para-cursos-tecnicos-integrados-ao-ensino-medio/",
       "icone": "🎓",
       "icone_classe": "ic-edu"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Mercado Livre abre 300 vagas para Perus e Cajamar em processo seletivo no CIC Jaraguá",
-      "resumo": "A Secretaria da Justiça e Cidadania, por meio do CIC Oeste, realizou processo seletivo com o Mercado Livre oferecendo 300 vagas para candidatos com ensino fundamental ou médio completo, sem exigência de experiência, incluindo vagas para PCD. O salário é de R$ 2.025 mais R$ 182, com benefícios como vale-alimentação, transporte fretado e assistência médica.",
-      "fonte": "Folha Noroeste",
-      "hora": "Ação realizada em 2/09",
-      "url": "https://folhanoroeste.com.br/regional/cic-jaragua-recebe-processo-seletivo-do-mercado-livre-com-300-vagas/",
-      "icone": "💼",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Meio Ambiente",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Pirituba ganhará parque de 700 mil m² dedicado à conservação ambiental, o Parque Sete Sóis",
-      "resumo": "A nova Área de Preservação Sete Sóis vai reunir Parque Linear, Parque Urbano e uma área de Cerrado, com campo multiuso, quadra poliesportiva, playground, horta e pomar, beneficiando mais de 400 mil moradores da região. O prefeito Ricardo Nunes visitou o local durante o Prefeitura Presente Pirituba/Jaraguá.",
-      "fonte": "Folha Noroeste",
-      "hora": "Anúncio em 3/09",
-      "url": "https://folhanoroeste.com.br/regional/pirituba-ganhara-um-novo-espaco-dedicado-a-conservacao-ambiental-parque-sete-sois/",
-      "icone": "🌳",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Moradia",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Prefeitura entrega 650 moradias do Residencial Amizade e 403 títulos de propriedade em Pirituba",
-      "resumo": "Durante o Prefeitura Presente, foram entregues 650 apartamentos do Residencial Amizade, com investimento de R$ 188,2 milhões, além de 403 títulos de regularização fundiária para moradores do Piqueri, Jardim Paquetá e Vila Anastácio. A região soma mais de 2,8 mil unidades habitacionais em construção.",
-      "fonte": "Folha Noroeste",
-      "hora": "Entrega em 3/09",
-      "url": "https://folhanoroeste.com.br/regional/prefeitura-entrega-650-moradias-e-403-titulos-de-propriedade-em-pirituba/",
-      "icone": "🏠",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Participação Social",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Está aberto até 16/09 o processo eleitoral do Conselho Participativo Municipal 2027/2028",
-      "resumo": "Moradores da Subprefeitura Casa Verde/Cachoeirinha e das demais regiões da cidade podem se inscrever para concorrer a uma vaga no Conselho Participativo Municipal, com inscrições abertas de 28 de agosto a 16 de setembro.",
-      "fonte": "Subprefeitura Casa Verde",
-      "hora": "Inscrições até 16/09",
-      "url": "https://prefeitura.sp.gov.br/web/casa_verde/w/prefeitura-de-s%C3%A3o-paulo-inicia-processo-eleitoral-do-conselho-participativo-municipal-para-o-bi%C3%AAnio-2027/2028",
-      "icone": "🗳️",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Política",
-      "tag_bairro": "📍 Jaçanã",
-      "bairro": "Jaçanã",
-      "titulo": "Prefeitura prorroga até 12/09 consulta pública dos Planos de Ação das Subprefeituras, incluindo Jaçanã/Tremembé",
-      "resumo": "A Prefeitura de São Paulo estendeu até 12 de setembro o prazo da consulta pública on-line dos Planos de Ação das Subprefeituras (PAS) 2026-2029, disponível na plataforma Participe+, na qual moradores podem indicar demandas por região, bairro ou avenida.",
-      "fonte": "Subprefeitura Jaçanã/Tremembé",
-      "hora": "Prazo até 12/09",
-      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/w/prefeitura-prorroga-at%C3%A9-12-de-setembro-o-prazo-da-consulta-p%C3%BAblica-online-dos-planos-de-a%C3%A7%C3%A3o-das-subprefeituras-2026-2029",
-      "icone": "🏛️",
-      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
@@ -127,34 +99,49 @@
       "url": "https://www.terra.com.br/noticias/brasil/cidades/linha-6-laranja-do-metro-como-estao-as-obras-de-cada-estacao-a-6-meses-da-entrega-da-1-etapa,2774120c42669882a02de8f845862ef254p4gufl.html",
       "icone": "🚇",
       "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Moradia",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Prefeitura entrega 650 moradias do Residencial Amizade e 403 títulos de propriedade em Pirituba",
+      "resumo": "Durante o Prefeitura Presente, foram entregues 650 apartamentos do Residencial Amizade, com investimento de R$ 188,2 milhões, além de 403 títulos de regularização fundiária para moradores do Piqueri, Jardim Paquetá e Vila Anastácio. A região soma mais de 2,8 mil unidades habitacionais em construção.",
+      "fonte": "Folha Noroeste",
+      "hora": "Entrega em 3/09",
+      "url": "https://folhanoroeste.com.br/regional/prefeitura-entrega-650-moradias-e-403-titulos-de-propriedade-em-pirituba/",
+      "icone": "🏠",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "CET monta \"Operação Estrada\" até terça (8) para o retorno do feriado da Independência",
+      "resumo": "A CET realiza a Operação Estrada de sexta (4) a terça (8) de setembro, com previsão de 2,5 milhões de veículos nas estradas. Entre os pontos monitorados está a Avenida Raimundo Pereira de Magalhães, que corta a região de Pirituba/Jaraguá; a recomendação é evitar deslocamentos nos horários de pico de saída e retorno.",
+      "fonte": "Folha Noroeste",
+      "hora": "Operação até 8/09",
+      "url": "https://folhanoroeste.com.br/cotidiano/cet-monta-operacao-estrada-para-o-feriado-da-independencia-do-brasil/",
+      "icone": "🚗",
+      "icone_classe": "ic-mob"
     }
   ],
   "agenda": [
     {
-      "dia": "07",
+      "dia": "09",
       "mes": "Set",
-      "cor_fundo": "#27AE60",
-      "bairro": "City América",
-      "titulo": "Feira de artesanato \"Mãos e Mentes Paulistanas\" no Parque Cidade de Toronto",
-      "hora": "seg. 07/09 (feriado), 10h às 17h",
-      "local": "Parque Cidade de Toronto, Av. Cardeal Motta, 84 – City América",
-      "descricao": "Feira com produtos autorais de cerâmica, marcenaria, bordado, crochê e outras técnicas artesanais, também nos dias 13, 20 e 27 de setembro.",
+      "cor_fundo": "#2E86C1",
+      "bairro": "Vila Maria",
+      "titulo": "Fórum de Cuidadores de Pessoas Idosas",
+      "hora": "qua. 09/09, 9h às 16h30",
+      "local": "Biblioteca Álvares de Azevedo, Vila Maria",
+      "descricao": "Encontro gratuito voltado a cuidadores de pessoas idosas, com programação sobre cuidado, saúde e apoio à terceira idade.",
       "gratuito": true,
       "preco": null,
-      "url": "https://folhanoroeste.com.br/regional/parque-toronto-recebe-feira-de-artesanato-durante-feriado-de-7-de-setembro/"
-    },
-    {
-      "dia": "07",
-      "mes": "Set",
-      "cor_fundo": "#E67E22",
-      "bairro": "Jardim São Paulo",
-      "titulo": "Circo Vox apresenta \"Se Chove, Não Molha!\" no Sesc Santana",
-      "hora": "seg. 07/09 (feriado), 12h",
-      "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo gratuito de circo no feriado de 7 de Setembro, com palhaçaria e números tradicionais, 60 minutos de duração.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+      "url": "https://www.diariozonanorte.com.br/forum-de-cuidadores-de-pessoas-idosas-acontecera-na-vila-maria-em-9-de-setembro/"
     },
     {
       "dia": "10",
@@ -172,12 +159,12 @@
     {
       "dia": "12",
       "mes": "Set",
-      "cor_fundo": "#16A085",
+      "cor_fundo": "#E67E22",
       "bairro": "Jardim São Paulo",
-      "titulo": "Circo Vox apresenta \"Clássicos: uma homenagem ao que fica\" no Sesc Santana",
+      "titulo": "Circo Vox apresenta \"Se Chove, Não Molha!\" no Sesc Santana",
       "hora": "sáb. 12/09, 12h",
       "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo gratuito reúne números tradicionais de circo, palhaçaria e improviso, com nova sessão também no dia 19/09.",
+      "descricao": "Espetáculo gratuito de circo, com palhaçaria e números tradicionais, 60 minutos de duração, dentro da programação de setembro do Sesc Santana.",
       "gratuito": true,
       "preco": null,
       "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
@@ -193,20 +180,20 @@
       "descricao": "Programação literária com editoras, lançamentos, encontros com autores e atividades infantis, movimentando a região do Anhembi.",
       "gratuito": false,
       "preco": "Ingressos a partir de R$ 20 (meia-entrada e gratuidades para grupos específicos)",
-      "url": "https://www.diariozonanorte.com.br/zona-norte-esta-na-rota-dos-livros-veja-a-programacao-da-matrix-na-bienal/"
+      "url": "https://www.diariozonanorte.com.br/bienal-do-livro-2026-intrinseca-leva-lynn-painter-senlinyu-miriam-leitao-e-grandes-autores-a-zona-norte-de-sao-paulo/"
     },
     {
-      "dia": "19",
+      "dia": "24",
       "mes": "Set",
-      "cor_fundo": "#E67E22",
-      "bairro": "Jardim São Paulo",
-      "titulo": "Nova sessão de \"Se Chove, Não Molha!\" no Sesc Santana",
-      "hora": "sáb. 19/09, 12h",
-      "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Reprise do espetáculo do Circo Vox, gratuito, dentro da programação de setembro do Sesc Santana.",
+      "cor_fundo": "#27AE60",
+      "bairro": "Vila Guilherme",
+      "titulo": "Festival Revelando SP chega ao Parque do Trote, na Vila Guilherme",
+      "hora": "24 a 27/09",
+      "local": "Parque do Trote, Vila Guilherme",
+      "descricao": "Festival gratuito com programação de artesanato, culinária e cultura popular paulista, reunindo produtores e artistas de todo o estado.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+      "url": "https://www.diariozonanorte.com.br/revelando-sp-confirma-data-na-vila-guilherme-e-abre-edital-com-vagas-para-artesanato-culinaria-e-cultura/"
     }
   ],
   "vagas": [
@@ -215,7 +202,7 @@
       "titulo": "Vagas diversas – Cate Freguesia/Brasilândia",
       "empresa": "Diversas empresas parceiras do Cate",
       "bairro": "Vila dos Andrades",
-      "requisitos": "Mais de 1.700 vagas na semana entre as unidades da zona noroeste; inscrição prévia até quarta (11/09), às 18h, pelo portal cate.prefeitura.sp.gov.br",
+      "requisitos": "Unidade na Av. João Marcelino Branco, 95; inscrição prévia até quarta (11/09), às 18h, pelo portal cate.prefeitura.sp.gov.br",
       "tipo": "CLT",
       "fonte": "Folha Noroeste / Cate",
       "dias_atras": "inscrições até 11/09"
@@ -269,29 +256,29 @@
       "fonte": "Subprefeitura Jaçanã/Tremembé"
     },
     {
-      "orgao": "🏠 Secretaria Municipal de Habitação (SEHAB/COHAB-SP)",
-      "bairro": "Pirituba",
-      "titulo": "Pode Entrar entrega 650 moradias e Escritura na Mão regulariza 403 imóveis em Pirituba",
-      "impacto": "A região de Pirituba/Jaraguá soma mais de 2,8 mil unidades habitacionais em construção e já ultrapassa 11 mil títulos de regularização fundiária emitidos desde 2021.",
-      "status": "Entregas realizadas em 3/09",
-      "fonte": "Folha Noroeste"
-    },
-    {
       "orgao": "🚇 Metrô SP / Secretaria de Infraestrutura Urbana",
       "bairro": "Brasilândia",
       "titulo": "Linha 6-Laranja: trecho até a Brasilândia é esperado para outubro",
       "impacto": "A chegada da linha à Brasilândia vai completar o primeiro trecho do metrô, ligando a região diretamente ao centro em cerca de 23 minutos.",
       "status": "Obras em andamento",
       "fonte": "Terra / Gazeta de São Paulo"
+    },
+    {
+      "orgao": "🏠 Secretaria Municipal de Habitação (SEHAB/COHAB-SP)",
+      "bairro": "Pirituba",
+      "titulo": "Pode Entrar entrega 650 moradias e Escritura na Mão regulariza 403 imóveis em Pirituba",
+      "impacto": "A região de Pirituba/Jaraguá soma mais de 2,8 mil unidades habitacionais em construção e já ultrapassa 11 mil títulos de regularização fundiária emitidos desde 2021.",
+      "status": "Entregas realizadas em 3/09",
+      "fonte": "Folha Noroeste"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "🚌",
-      "titulo": "Feriado prolongado (5 a 7/09): rodízio suspenso na segunda e ônibus grátis no domingo",
-      "desc": "O Rodízio Municipal de Veículos não vigora na segunda-feira (7), feriado da Independência. Neste domingo (6), vale o Domingão Tarifa Zero, com gratuidade nos ônibus municipais; na segunda, há operação especial de transporte para o Desfile Cívico-Militar no Anhembi.",
-      "meta": "Folha Noroeste / SPTrans"
+      "emoji": "🚗",
+      "titulo": "CET mantém Operação Estrada até terça (8) para o retorno do feriado da Independência",
+      "desc": "A previsão das concessionárias é de 2,5 milhões de veículos nas estradas rumo à capital. A CET recomenda evitar deslocamentos entre 14h e 22h e monitora pontos como a Avenida Raimundo Pereira de Magalhães, na região de Pirituba/Jaraguá.",
+      "meta": "Folha Noroeste / CET"
     },
     {
       "tipo": "info",
@@ -302,10 +289,10 @@
     },
     {
       "tipo": "info",
-      "emoji": "🌧️",
-      "titulo": "Chuva de setembro já soma 61% da média mensal em São Paulo",
-      "desc": "Até o dia 5 de setembro, a capital já havia registrado 57 mm de chuva no mês, o equivalente a 61% da média histórica para todo o período.",
-      "meta": "Climatempo"
+      "emoji": "🌦️",
+      "titulo": "Tempo fica mais firme nesta segunda (7), mas novas chuvas voltam a partir de quarta (9)",
+      "desc": "Após um fim de semana de chuva em todo o estado, a previsão é de tempo mais estável nesta segunda-feira (7) na capital, com novas instabilidades esperadas a partir de quarta-feira (9).",
+      "meta": "Agência SP / Defesa Civil"
     },
     {
       "tipo": "info",
@@ -317,34 +304,19 @@
   ],
   "fim_de_semana": [
     {
-      "emoji": "🚌",
-      "titulo": "Domingão Tarifa Zero: ônibus municipais gratuitos hoje",
-      "info": "06/09 · domingo · toda a rede municipal de ônibus"
-    },
-    {
       "emoji": "🎪",
-      "titulo": "Feriado com Circo Vox: \"Se Chove, Não Molha!\" no Sesc Santana",
-      "info": "07/09 · feriado, 12h · Jardim São Paulo · Gratuito"
+      "titulo": "Circo Vox: \"Se Chove, Não Molha!\" no Sesc Santana",
+      "info": "12/09 · sábado, 12h · Jardim São Paulo · Gratuito"
     },
     {
-      "emoji": "🖐️",
-      "titulo": "Feira de artesanato Mãos e Mentes Paulistanas no Parque Cidade de Toronto",
-      "info": "07/09 · feriado, 10h às 17h · City América · Gratuito"
-    },
-    {
-      "emoji": "🎖️",
-      "titulo": "Desfile Cívico-Militar de 7 de Setembro no Anhembi",
-      "info": "07/09 · feriado · Santana · Gratuito, com ônibus especial"
+      "emoji": "🎭",
+      "titulo": "Peça infantojuvenil \"E se fosse uma bomba?\" no Sesc Santana",
+      "info": "13/09 · domingo, 12h · Jardim São Paulo · Gratuito"
     },
     {
       "emoji": "📚",
-      "titulo": "Bienal Internacional do Livro segue aberta no Anhembi",
+      "titulo": "Últimos dias da Bienal Internacional do Livro no Anhembi",
       "info": "até 13/09 · diariamente das 9h às 21h · Santana · a partir de R$ 20"
-    },
-    {
-      "emoji": "🚗",
-      "titulo": "Rodízio de veículos suspenso na segunda-feira, feriado de 7 de setembro",
-      "info": "07/09 · feriado · circulação livre no Minianel Viário"
     }
   ]
 }
