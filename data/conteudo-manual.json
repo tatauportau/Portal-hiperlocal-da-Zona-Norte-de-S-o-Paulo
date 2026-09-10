@@ -3,128 +3,141 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "🏠 Moradia",
+      "pill": "💰 Investimento",
       "tag_categoria": "tag-not",
-      "tag_label": "Habitação",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Jaraguá",
+      "bairro": "Jaraguá",
+      "titulo": "Prefeitura confirma R$ 490 milhões em investimentos para Pirituba, Jaraguá, São Domingos e Taipas",
+      "resumo": "O primeiro Prefeitura Presente do ano na região trouxe um pacote de R$ 490 milhões em investimentos, incluindo a retomada da ligação viária Pirituba-Lapa (R$ 209,5 milhões, com prazo de execução até dezembro de 2026), novas unidades educacionais (cerca de R$ 29 milhões) e a revitalização ambiental do Parque Cidade Toronto.",
+      "fonte": "Prefeitura de São Paulo / Jornal SP Norte",
+      "hora": "Investimentos em execução",
+      "url": "https://prefeitura.sp.gov.br/w/noticia/primeiro-prefeitura-presente-do-ano-vai-a-pirituba-jaragua-regiao-que-esta-recebendo-r-490-milhoes-de-investimentos",
+      "icone": "💰",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
       "tag_bairro": "📍 Pirituba",
       "bairro": "Pirituba",
-      "titulo": "Prefeitura entrega 650 apartamentos e regulariza 403 imóveis em Pirituba",
-      "resumo": "A região de Pirituba e Jaraguá recebeu na 5ª feira (3/9) a entrega de 650 apartamentos do Residencial Amizade, viabilizado pelo Programa Pode Entrar com investimento de R$ 118,2 milhões, e 403 títulos de regularização fundiária pelo Programa Escritura na Mão, distribuídos entre os núcleos Piqueri (247), Jardim Paquetá (135) e Vila Anastácio (21).",
-      "fonte": "DiárioZonaNorte / SEHAB",
-      "hora": "Entrega em 3/09, divulgada em 8/09",
-      "url": "https://www.diariozonanorte.com.br/prefeitura-entrega-650-apartamentos-e-regulariza-403-imoveis-em-pirituba/",
-      "icone": "🏠",
+      "titulo": "Conselho de Segurança Vila Pereira Barreto reúne moradores de Pirituba",
+      "resumo": "O Conselho Comunitário de Segurança Vila Pereira Barreto realizou sua 7ª reunião mensal na Av. Menotti Laudisio, 177, em frente ao Hospital Municipal de Pirituba, para receber demandas dos moradores sobre segurança e outros órgãos públicos da região.",
+      "fonte": "Folha Noroeste",
+      "hora": "Reunião em 8/09",
+      "url": "https://folhanoroeste.com.br/regional/conseg-vila-pereira-barreto-reune-a-comunidade-hoje-em-pirituba/",
+      "icone": "👮",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Vila Pirituba",
+      "bairro": "Vila Pirituba",
+      "titulo": "SPTrans desvia itinerário de linha de ônibus em Pirituba neste sábado",
+      "resumo": "Neste sábado (12/9), das 14h às 22h, a SPTrans vai desviar o itinerário da linha 1023-10 Vl. Pirituba–CPTM Pirituba por causa de interdição na Rua Brigadeiro Godinho dos Santos, entre a Rua Luis Cunha e a Rua Irmã Maria Amélia, para realização de um evento.",
+      "fonte": "Folha Noroeste",
+      "hora": "Válido no sábado, 12/09, das 14h às 22h",
+      "url": "https://folhanoroeste.com.br/regional/sptrans-desvia-itinerario-da-linha-1023-10-vl-pirituba-cptm-pirituba/",
+      "icone": "🚌",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Cultura",
+      "tag_bairro": "📍 Jardim Mutinga",
+      "bairro": "Jardim Mutinga",
+      "titulo": "Biblioteca Brito Broca promove roda de conversa sobre 'Funk é Cultura'",
+      "resumo": "A Biblioteca Brito Broca (Av. Mutinga, 1425) recebe nesta quinta (10/9), às 15h, uma conversa sobre teoria e vivência do funk, com Correrua, Layne Gabrielle, MC Ktrine e Vinaum.",
+      "fonte": "Folha Noroeste",
+      "hora": "Hoje, 10/09, às 15h",
+      "url": "https://folhanoroeste.com.br/regional/79746/",
+      "icone": "🎤",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Jardim Damasceno",
-      "bairro": "Jardim Damasceno",
-      "titulo": "Freguesia do Ó/Brasilândia ganha duas novas UBSs, UPA e Armazém Solidário",
-      "resumo": "Durante o Prefeitura Presente na região, o prefeito Ricardo Nunes entregou as UBSs Jardim Damasceno (Rua Grumixá, 71) e Santo Dias, além da UPA 21 de Junho, um Armazém Solidário e o CEI Ziraldo Alves Pinto. A UBS Jardim Damasceno funciona no modelo de Estratégia Saúde da Família, com equipe multidisciplinar de 71 profissionais, incluindo nutricionista, psicólogo e fisioterapeuta.",
-      "fonte": "Prefeitura de São Paulo",
-      "hora": "Entrega em 3/09",
-      "url": "https://prefeitura.sp.gov.br/w/regi%C3%A3o-da-freguesia-do-%C3%B3/brasil%C3%A2ndia-recebe-duas-ubss-durante-o-programa-prefeitura-presente",
-      "icone": "🏥",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Lazer",
-      "tag_bairro": "📍 Santana",
-      "bairro": "Santana",
-      "titulo": "Parque Campo de Marte ganha novo projeto com piscina de ondas, skate park e Museu do Surfe",
-      "resumo": "A concessionária responsável pelo futuro Parque Municipal Campo de Marte apresentou um projeto ampliado com piscina pública de ondas, pista de BMX, skate park, parede de escalada, centro de tênis e um Museu do Surfe, além dos cinco campos de futebol já previstos. O parque terá cerca de 406 mil m², concessão de 35 anos e acesso gratuito às áreas abertas; conclusão estimada para 2030.",
-      "fonte": "DiárioZonaNorte / O Estado de S. Paulo",
-      "hora": "Projeto divulgado em 31/08",
-      "url": "https://www.diariozonanorte.com.br/parque-campo-de-marte-ganha-novo-projeto-com-piscina-de-ondas-skate-park-centro-de-tenis-escalada-bmx-e-museu-do-surfe/",
-      "icone": "🏗️",
+      "tag_label": "Meio Ambiente",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Pirituba vai ganhar o Parque Sete Sóis, com 700 mil m² de área verde",
+      "resumo": "A região de Pirituba receberá o Parque Sete Sóis, com campo de uso múltiplo, quadra poliesportiva, playground, horta e pomar, além de uma área de preservação de cerca de 19.530 m² de Cerrado e uma Academia da Terceira Idade, beneficiando mais de 400 mil moradores da região.",
+      "fonte": "Folha Noroeste",
+      "hora": "Projeto anunciado esta semana",
+      "url": "https://folhanoroeste.com.br/regional/pirituba-ganhara-um-novo-espaco-dedicado-a-conservacao-ambiental-parque-sete-sois/",
+      "icone": "🌳",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Linha 6-Laranja tem operação parcial prevista para outubro, ligando Brasilândia a Perdizes",
-      "resumo": "Após anos de atrasos, a Linha 6-Laranja do Metrô começa a operar parcialmente no segundo semestre de 2026. O primeiro trecho vai ligar o bairro da Brasilândia, na Zona Norte, à estação Perdizes, na Zona Oeste, com inauguração prevista para outubro.",
-      "fonte": "Cobertura de mobilidade urbana de SP",
-      "hora": "Previsão para outubro",
-      "url": "https://blog.blablacar.com.br/novidades/mudancas-mobilidade-urbana-em-sao-paulo",
-      "icone": "🚇",
+      "tag_bairro": "📍 Anhanguera",
+      "bairro": "Anhanguera",
+      "titulo": "Trecho 2 do Rodoanel Norte chega a 68% de execução, com entrega prevista para setembro",
+      "resumo": "O Trecho 2 do Rodoanel Norte, que liga a Rodovia Fernão Dias à Avenida Raimundo Pereira de Magalhães, na zona noroeste, atingiu 68% de execução em junho e o Governo do Estado mantém a promessa de entrega ainda em 2026. A obra deve gerar cerca de 10 mil empregos diretos e indiretos.",
+      "fonte": "DiárioZonaNorte / Governo de SP",
+      "hora": "Obra em andamento",
+      "url": "https://www.diariozonanorte.com.br/trecho-norte-do-rodoanel-tem-68-da-obra-concluida-e-deve-ser-entregue-ainda-este-ano/",
+      "icone": "🛣️",
       "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Tremembé",
-      "bairro": "Tremembé",
-      "titulo": "Inscrições para o Conselho de Segurança Estadual de Jaçanã/Tremembé seguem abertas até 16/09",
-      "resumo": "A Subprefeitura Jaçanã/Tremembé mantém abertas até 16 de setembro as inscrições para o Conselho de Segurança Estadual (Conseg), que reúne moradores e forças de segurança para discutir prioridades de policiamento nos dois distritos.",
-      "fonte": "Subprefeitura Jaçanã/Tremembé",
-      "hora": "Inscrições até 16/09",
-      "url": "https://prefeitura.sp.gov.br/web/jacana_tremembe/noticias",
-      "icone": "👮",
-      "icone_classe": "ic-seg"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Assistência Social",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Prefeitura Presente visita Serviço de Cuidados Prolongados Álcool e Drogas de Pirituba",
-      "resumo": "Como parte da programação do Prefeitura Presente em Pirituba e Jaraguá, o prefeito visitou o Serviço de Cuidados Prolongados (SCP) Álcool e Drogas (AD) Pirituba, unidade que funciona 24 horas e atende pessoas em situação de vulnerabilidade social ligada ao uso de substâncias psicoativas, integrante do Programa Redenção.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "Visita em 3/09",
-      "url": "https://www.diariozonanorte.com.br/prefeitura-entrega-650-apartamentos-e-regulariza-403-imoveis-em-pirituba/",
-      "icone": "🤝",
-      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Cultura",
-      "tag_bairro": "📍 Vila Guilherme",
-      "bairro": "Vila Guilherme",
-      "titulo": "Revelando SP muda de data e será realizado de 12 a 15 de novembro no Parque do Trote",
-      "resumo": "A edição paulistana do festival Revelando SP, antes prevista para setembro, foi remarcada para 12 a 15 de novembro de 2026, no Parque do Trote, na Vila Guilherme. Será a sexta e última etapa do circuito estadual de 2026, com expectativa de mais de 250 mil visitantes e entrada gratuita.",
-      "fonte": "DiárioZonaNorte / APAA",
-      "hora": "Mudança anunciada em 25/08",
-      "url": "https://www.diariozonanorte.com.br/revelando-sp-muda-de-data-e-sera-realizado-em-novembro-no-parque-do-trote/",
+      "tag_bairro": "📍 Freguesia do Ó",
+      "bairro": "Freguesia do Ó",
+      "titulo": "CEU Freguesia do Ó celebra aniversário com espetáculo Circoral",
+      "resumo": "O CEU Freguesia do Ó comemorou seu aniversário com a apresentação \"Circoral - Um Show de Brasilidades\", que une canto coral, beatbox e artes circenses em uma celebração da música popular brasileira.",
+      "fonte": "Folha Noroeste",
+      "hora": "Apresentação nesta semana",
+      "url": "https://folhanoroeste.com.br/entretenimento-esportes/ceu-freguesia-do-o-comemora-seu-aniversario-com-apresentacao-do-circoral/",
       "icone": "🎪",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Cultura",
-      "tag_bairro": "📍 Perus",
-      "bairro": "Perus",
-      "titulo": "Festa dos 89 anos de Perus é remarcada para 29 de outubro",
-      "resumo": "A celebração dos 89 anos do distrito de Perus, que havia sido adiada no início de setembro, ganhou nova data: domingo, 29 de outubro, a partir das 12h, na Avenida Doutor Sylvio de Campos. A Subprefeitura Perus/Anhanguera preparou programação com música, gastronomia e empreendedores do território.",
-      "fonte": "Subprefeitura Perus/Anhanguera",
-      "hora": "Nova data: 29/10",
-      "url": "https://prefeitura.sp.gov.br/web/perus/noticias/",
-      "icone": "🎉",
+      "tag_label": "Comunidade",
+      "tag_bairro": "📍 Casa Verde",
+      "bairro": "Casa Verde",
+      "titulo": "Associação Okinawa de Casa Verde celebra 66 anos com o festival Engekai",
+      "resumo": "A Associação Okinawa de Casa Verde (AOCV), uma das entidades mais tradicionais da comunidade nikkei da zona norte, realizou o festival Engekai em sua sede social, celebrando 66 anos com apresentações artísticas da cultura japonesa, em especial da província de Okinawa.",
+      "fonte": "Fato Paulista",
+      "hora": "Evento em 7/09",
+      "url": "https://fatopaulista.com.br/associacao-okinawa-de-casa-verde-comemora-o-sucesso-do-engekai-2026/",
+      "icone": "🎌",
       "icone_classe": "ic-eco"
     }
   ],
   "agenda": [
     {
-      "dia": "10",
+      "dia": "11",
+      "mes": "Set",
+      "cor_fundo": "#16A085",
+      "bairro": "Jardim Taipas",
+      "titulo": "Workshop gratuito sobre captação de clientes no TEIA Taipas",
+      "hora": "sex. 11/09, das 14h às 16h",
+      "local": "Biblioteca Pública Erico Veríssimo, Rua Diógenes Dourado, 101, Cohab Taipas",
+      "descricao": "Palestra com Jaqueline sobre como atrair e fidelizar clientes de forma estratégica, voltada a empreendedores, MEIs, autônomos e pequenos negócios da região.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/cotidiano/teia-taipas-apresenta-workshop-sobre-captacao-de-clientes-na-biblioteca-erico-verissimo/"
+    },
+    {
+      "dia": "11",
       "mes": "Set",
       "cor_fundo": "#8E44AD",
-      "bairro": "Pirituba",
-      "titulo": "Feira de artesanato movimenta a Avenida Paula Ferreira em Pirituba",
-      "hora": "qui. 10/09 e sex. 11/09, a partir das 9h",
+      "bairro": "Vila Pirituba",
+      "titulo": "Feira de artesanato na Avenida Paula Ferreira, em Pirituba",
+      "hora": "sex. 11/09, a partir das 9h",
       "local": "Comunidade Mensagem de Paz, Av. Paula Ferreira, Vila Pirituba",
-      "descricao": "Feira de artesanato com entrada gratuita, reunindo expositores locais na Avenida Paula Ferreira.",
+      "descricao": "Feira de artesanato com entrada gratuita, reunindo expositores locais.",
       "gratuito": true,
       "preco": null,
       "url": "https://folhanoroeste.com.br/entretenimento-esportes/feira-de-artesanato-vai-movimentar-a-avenida-paula-ferreira-em-pirituba-nos-dias-10-e-11-de-setembro/"
@@ -150,10 +163,10 @@
       "titulo": "Peça infantojuvenil \"E se fosse uma bomba?\" no Sesc Santana",
       "hora": "dom. 13/09, 12h",
       "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo teatral gratuito voltado ao público infantojuvenil, parte da programação de setembro do Sesc Santana.",
+      "descricao": "Espetáculo teatral gratuito sobre a história da primeira aviadora brasileira, parte da programação de setembro do Sesc Santana.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+      "url": "https://www.diariozonanorte.com.br/idealizada-por-luiza-moreira-salles-peca-infantojuvenil-e-se-fosse-uma-bomba-conta-a-historia-da-primeira-aviadora-brasileira/"
     },
     {
       "dia": "13",
@@ -166,7 +179,7 @@
       "descricao": "Programação literária com editoras, lançamentos, encontros com autores e atividades infantis, movimentando a região do Anhembi.",
       "gratuito": false,
       "preco": "Ingressos a partir de R$ 20 (meia-entrada e gratuidades para grupos específicos)",
-      "url": "https://www.diariozonanorte.com.br/zona-norte-esta-na-rota-dos-livros-veja-a-programacao-da-matrix-na-bienal/"
+      "url": "https://www.diariozonanorte.com.br/sesc-e-senac-celebram-80-anos-com-estande-compartilhado-na-28a-bienal-internacional-do-livro-de-sao-paulo/"
     },
     {
       "dia": "29",
@@ -192,108 +205,125 @@
       "descricao": "Festival gratuito com manifestações da cultura tradicional paulista, gastronomia, artesanato e apresentações artísticas, encerrando o circuito estadual de 2026.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.diariozonanorte.com.br/revelando-sp-muda-de-data-e-sera-realizado-em-novembro-no-parque-do-trote/"
+      "url": "https://www.diariozonanorte.com.br/revelando-sp-confirma-data-na-vila-guilherme-e-abre-edital-com-vagas-para-artesanato-culinaria-e-cultura/"
     }
   ],
   "vagas": [
     {
-      "icone": "💼",
-      "titulo": "Feira de Empregabilidade oferece mais de 2.400 vagas em Santana",
-      "empresa": "Mercado Livre, Panco, Giga Atacado, Andorinha Hiper e outras",
+      "icone": "🛍️",
+      "titulo": "Atendente de Lojas, Mercados e Lanchonetes – mais de 300 vagas",
+      "empresa": "Diversas empresas (via Cate)",
       "bairro": "Santana",
-      "requisitos": "Comparecer presencialmente com currículo impresso e documento com foto; sem inscrição prévia. Cate Móvel também estará no local.",
+      "requisitos": "Ensino fundamental ou médio completo; várias vagas sem exigência de experiência prévia",
       "tipo": "CLT",
-      "fonte": "Faculdade Anhanguera / Universo ZN",
-      "dias_atras": "Hoje (9/09), das 9h às 20h, Campus Marte/Santana, Av. Braz Leme, 3029"
+      "fonte": "Folha Noroeste / Cate",
+      "dias_atras": "Salário de R$ 1.630 a R$ 2.413; inscrições pelo Portal Cate ou em uma das 46 unidades da capital"
     },
     {
-      "icone": "🛒",
-      "titulo": "Atendente de Lojas e Mercados – 30 vagas",
-      "empresa": "Comércio varejista (via Cate)",
-      "bairro": "Casa Verde",
-      "requisitos": "Ensino médio incompleto, 18 a 65 anos, sem experiência prévia. Escala 6x1. Salário inicial R$ 1.908 (R$ 2.120 após 3 meses), VT, VR, seguro de vida e assistência médica.",
+      "icone": "📦",
+      "titulo": "Vagas de Logística – mais de 90 oportunidades",
+      "empresa": "Diversas empresas (via Cate)",
+      "bairro": "Jardim Taipas",
+      "requisitos": "Ensino fundamental ou médio completo; algumas vagas exigem ao menos 6 meses de experiência",
       "tipo": "CLT",
-      "fonte": "Cate SP",
-      "dias_atras": "Vagas abertas também em Santana, Tucuruvi, Limão e Mandaqui"
+      "fonte": "Folha Noroeste / Cate",
+      "dias_atras": "Salário de R$ 2.100 a R$ 2.396"
     },
     {
-      "icone": "💼",
-      "titulo": "Vagas diversas – Cate Perus",
-      "empresa": "Diversas empresas parceiras do Cate",
+      "icone": "🍳",
+      "titulo": "Vagas de Gastronomia – mais de 60 oportunidades, inclusive cozinheiro geral",
+      "empresa": "Diversas empresas (via Cate)",
       "bairro": "Perus",
-      "requisitos": "Unidade do Cate na Rua Ylídio Figueiredo, 349; inscrição prévia até sexta (11/09) pelo portal cate.prefeitura.sp.gov.br",
+      "requisitos": "Do ensino fundamental ao médio completo; oportunidades para quem está começando na carreira",
       "tipo": "CLT",
       "fonte": "Folha Noroeste / Cate",
-      "dias_atras": "inscrições até 11/09"
+      "dias_atras": "Salário de até R$ 3.000 para cozinheiro geral"
     },
     {
-      "icone": "💼",
-      "titulo": "Vagas diversas – Cate Jaraguá",
-      "empresa": "Diversas empresas parceiras do Cate",
-      "bairro": "Jaraguá",
-      "requisitos": "Unidade do Cate na Estrada de Taipas, 990; inscrição prévia até sexta (11/09) pelo portal cate.prefeitura.sp.gov.br",
+      "icone": "🔧",
+      "titulo": "Mecânico Montador e outras vagas técnicas – salários de até R$ 6.000",
+      "empresa": "Diversas empresas (via Cate)",
+      "bairro": "Pirituba",
+      "requisitos": "Requisitos variam por vaga; consultar detalhes no Portal Cate",
       "tipo": "CLT",
       "fonte": "Folha Noroeste / Cate",
-      "dias_atras": "inscrições até 11/09"
+      "dias_atras": "Unidades do Cate abriram mais de 2 mil vagas nesta semana na capital"
     }
   ],
   "politica": [
     {
-      "orgao": "🏛️ Subprefeitura Freguesia do Ó/Brasilândia",
-      "bairro": "Brasilândia",
-      "titulo": "Audiência pública vai discutir requalificação da Praça Amália Solitari",
-      "impacto": "Encontro reunirá moradores, autoridades e técnicos para debater propostas de melhorias no espaço público na região da Freguesia do Ó/Brasilândia.",
-      "status": "Audiência marcada para 25/09, 19h, no Colégio Wellington",
-      "fonte": "Subprefeitura Freguesia do Ó/Brasilândia"
+      "orgao": "🏛️ Prefeitura de São Paulo",
+      "bairro": "Jaraguá",
+      "titulo": "R$ 490 milhões em investimentos confirmados para Pirituba, Jaraguá, São Domingos e Taipas",
+      "impacto": "Pacote inclui a retomada da ligação viária Pirituba-Lapa (R$ 209,5 milhões, prazo até dezembro de 2026), novas unidades educacionais (cerca de R$ 29 milhões) e revitalização do Parque Cidade Toronto.",
+      "status": "Investimentos em execução",
+      "fonte": "Prefeitura de São Paulo / Jornal SP Norte"
+    },
+    {
+      "orgao": "🏗️ Governo do Estado de São Paulo",
+      "bairro": "Anhanguera",
+      "titulo": "Rodoanel Norte, Trecho 2, chega a 68% de execução",
+      "impacto": "O trecho de 20 km liga a Rodovia Fernão Dias à Av. Raimundo Pereira de Magalhães, na zona noroeste, e deve gerar cerca de 10 mil empregos diretos e indiretos ao longo da obra.",
+      "status": "Obras em andamento, entrega prevista para 2026",
+      "fonte": "DiárioZonaNorte / Governo de SP"
     },
     {
       "orgao": "🏛️ Secretaria Municipal de Urbanismo e Licenciamento",
       "bairro": "Tremembé",
-      "titulo": "Consulta pública dos Planos de Ação das Subprefeituras (PAS) 2026-2029 segue aberta até 12/09",
+      "titulo": "Consulta pública dos Planos de Ação das Subprefeituras (PAS) 2026-2029 é prorrogada até 12 de setembro",
       "impacto": "Moradores de Jaçanã/Tremembé e das demais subprefeituras podem enviar propostas pela plataforma Participe+ para orientar investimentos e prioridades territoriais até 2029.",
-      "status": "Consulta pública até 12/09",
+      "status": "Consulta pública prorrogada até 12/09",
       "fonte": "Subprefeitura Jaçanã/Tremembé"
-    },
-    {
-      "orgao": "🏛️ Prefeitura de São Paulo",
-      "bairro": "Jaraguá",
-      "titulo": "Prefeitura Presente confirma mais de R$ 850 milhões em investimentos para Pirituba e Jaraguá",
-      "impacto": "O pacote reúne entrega de moradias, regularização fundiária, unidades de saúde e assistência social e obras viárias anunciadas durante a passagem do programa pela região.",
-      "status": "Investimentos em execução",
-      "fonte": "DiárioZonaNorte / Prefeitura de São Paulo"
     }
   ],
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "🌩️",
-      "titulo": "INMET mantém alerta de tempestade com granizo em São Paulo até 13/9",
-      "desc": "Uma combinação de fatores atmosféricos deve manter grandes áreas de chuva sobre o estado entre 9 e 13 de setembro, com ventos de até 60 km/h, granizo e volumes que podem superar a média histórica de chuva para o mês inteiro. Há risco de queda de árvores, alagamentos e falta de energia.",
-      "meta": "INMET"
+      "emoji": "🩺",
+      "titulo": "SP confirma mais dois casos de sarampo em crianças e chega a 30 registros em 2026",
+      "desc": "Os dois novos casos, notificados em agosto e confirmados nesta semana, são de crianças menores de 2 anos moradoras da capital. Do total de 30 casos no estado (27 na capital), 22 ocorreram em pessoas sem vacinação completa. Crianças de 6 a 11 meses continuam podendo receber a dose zero da tríplice viral.",
+      "meta": "Secretaria de Estado da Saúde / Folha Noroeste"
     },
     {
       "tipo": "info",
-      "emoji": "🦟",
-      "titulo": "Grande São Paulo soma 12.919 casos de dengue em 2026, mas segue fora do índice epidêmico",
-      "desc": "O estado de São Paulo já confirmou mais de 58,6 mil casos de dengue em 2026. A Grande São Paulo lidera em número absoluto de casos, mas mantém um dos menores coeficientes por 100 mil habitantes do estado.",
-      "meta": "Agência Brasil / NIES-SP"
+      "emoji": "⛈️",
+      "titulo": "Defesa Civil alerta para risco de tempestades severas em São Paulo entre 11 e 12 de setembro",
+      "desc": "A Defesa Civil do Estado emitiu aviso de risco meteorológico para o período entre a tarde de sexta (11) e a madrugada/manhã de sábado (12), com possibilidade de chuva forte, descargas elétricas, rajadas de vento e queda de granizo.",
+      "meta": "Defesa Civil do Estado de SP"
+    },
+    {
+      "tipo": "ok",
+      "emoji": "🧥",
+      "titulo": "Campanha do Agasalho 2026 entra na reta final e recebe doações até 22 de setembro",
+      "desc": "A campanha já arrecadou mais de R$ 1,54 milhão, além de 83.119 peças de roupas e 1.555 cobertores, que serão distribuídos a famílias em situação de vulnerabilidade na capital.",
+      "meta": "Folha Noroeste / Fundo Social de SP"
     },
     {
       "tipo": "info",
       "emoji": "🏫",
       "titulo": "Escolas estaduais abrem matrícula para 2027 até 18 de setembro",
-      "desc": "A rede estadual de São Paulo recebe até 18/9 a pré-matrícula de novos alunos para o ano letivo de 2027, voltada a quem está fora da rede estadual ou interrompeu os estudos. A inscrição pode ser feita on-line na Secretaria Escolar Digital ou presencialmente em escolas e postos do Poupatempo.",
+      "desc": "A rede estadual de São Paulo recebe até 18/9 a pré-matrícula de novos alunos para o ano letivo de 2027, voltada a quem está fora da rede estadual ou interrompeu os estudos. Inscrição on-line na Secretaria Escolar Digital ou presencial em escolas e postos do Poupatempo.",
       "meta": "Secretaria de Educação do Estado de SP"
     },
     {
-      "tipo": "info",
-      "emoji": "💛",
-      "titulo": "37 UBS da zona norte seguem vacinando de forma preventiva contra febre amarela",
-      "desc": "A Secretaria Municipal da Saúde mantém 37 Unidades Básicas de Saúde da zona norte aplicando a vacina contra febre amarela de forma preventiva, após mais de 500 mil pessoas vacinadas na região.",
-      "meta": "Secretaria Municipal da Saúde"
+      "tipo": "neutro",
+      "emoji": "🦟",
+      "titulo": "Grande São Paulo já soma mais de 58 mil casos de dengue em 2026",
+      "desc": "O estado de São Paulo confirmou mais de 58,6 mil casos de dengue em 2026. A Grande São Paulo lidera em número absoluto de casos, mas mantém um dos menores coeficientes por 100 mil habitantes do estado.",
+      "meta": "Agência Brasil / NIES-SP"
     }
   ],
   "fim_de_semana": [
+    {
+      "emoji": "🧵",
+      "titulo": "Workshop gratuito de captação de clientes no TEIA Taipas",
+      "info": "11/09 · sexta, 14h às 16h · Jardim Taipas · Gratuito"
+    },
+    {
+      "emoji": "🖐️",
+      "titulo": "Feira de artesanato na Avenida Paula Ferreira, em Pirituba",
+      "info": "11/09 · sexta, a partir das 9h · Vila Pirituba · Gratuito"
+    },
     {
       "emoji": "🎪",
       "titulo": "Circo Vox: \"Se Chove, Não Molha!\" no Sesc Santana",
