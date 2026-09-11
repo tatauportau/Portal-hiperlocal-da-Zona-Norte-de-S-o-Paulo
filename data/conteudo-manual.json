@@ -3,144 +3,131 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "💰 Investimento",
+      "pill": "📜 Regularização Fundiária",
       "tag_categoria": "tag-not",
       "tag_label": "Economia",
-      "tag_bairro": "📍 Jaraguá",
-      "bairro": "Jaraguá",
-      "titulo": "Prefeitura confirma R$ 490 milhões em investimentos para Pirituba, Jaraguá, São Domingos e Taipas",
-      "resumo": "O primeiro Prefeitura Presente do ano na região trouxe um pacote de R$ 490 milhões em investimentos, incluindo a retomada da ligação viária Pirituba-Lapa (R$ 209,5 milhões, com prazo de execução até dezembro de 2026), novas unidades educacionais (cerca de R$ 29 milhões) e a revitalização ambiental do Parque Cidade Toronto.",
-      "fonte": "Prefeitura de São Paulo / Jornal SP Norte",
-      "hora": "Investimentos em execução",
-      "url": "https://prefeitura.sp.gov.br/w/noticia/primeiro-prefeitura-presente-do-ano-vai-a-pirituba-jaragua-regiao-que-esta-recebendo-r-490-milhoes-de-investimentos",
-      "icone": "💰",
+      "tag_bairro": "📍 Jardim Corisco",
+      "bairro": "Jardim Corisco",
+      "titulo": "2.846 imóveis do Jaçanã e Tremembé recebem regularização fundiária pelo programa Escritura na Mão",
+      "resumo": "A Prefeitura entregou nesta quinta (10/9) documentos de regularização de 2.846 imóveis em nove núcleos habitacionais do Jaçanã e Tremembé. O Jardim Flor de Maio concentrou o maior número (1.661), seguido por Jardim Estrela Dalva (433) e Jardim Corisco (251). O programa Escritura na Mão já soma 100.234 imóveis regularizados na capital desde 2021, e a Prefeitura assinou novo contrato de R$ 681,8 milhões para regularizar mais 363 mil famílias nos próximos 60 meses.",
+      "fonte": "DiárioZonaNorte / Prefeitura de São Paulo",
+      "hora": "Entrega em 10/09",
+      "url": "https://www.diariozonanorte.com.br/2-846-imoveis-da-zona-norte-recebem-regularizacao-fundiaria-pelo-programa-escritura-na-mao/",
+      "icone": "📜",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
-      "tag_categoria": "tag-seg",
-      "tag_label": "Segurança",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Conselho de Segurança Vila Pereira Barreto reúne moradores de Pirituba",
-      "resumo": "O Conselho Comunitário de Segurança Vila Pereira Barreto realizou sua 7ª reunião mensal na Av. Menotti Laudisio, 177, em frente ao Hospital Municipal de Pirituba, para receber demandas dos moradores sobre segurança e outros órgãos públicos da região.",
-      "fonte": "Folha Noroeste",
-      "hora": "Reunião em 8/09",
-      "url": "https://folhanoroeste.com.br/regional/conseg-vila-pereira-barreto-reune-a-comunidade-hoje-em-pirituba/",
-      "icone": "👮",
-      "icone_classe": "ic-seg"
+      "tag_categoria": "tag-not",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Jardim Joana D'Arc",
+      "bairro": "Jardim Joana D'Arc",
+      "titulo": "Nova UBS Jardim Joana D'Arc é inaugurada no Parque Casa de Pedra, com capacidade para 5.800 atendimentos por mês",
+      "resumo": "A UBS Jardim Joana D'Arc foi inaugurada nesta quinta (10/9) no Parque Casa de Pedra, com investimento de R$ 13,9 milhões e 1.196 m² de área construída. A unidade tem nove consultórios, consultório odontológico, farmácia e salas de vacinação e curativos, com oito equipes de Saúde da Família. É a 19ª UBS inaugurada na cidade desde 2021, levando o total para 484 unidades em São Paulo.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Inaugurada em 10/09",
+      "url": "https://www.diariozonanorte.com.br/ubs-jardim-joana-darc-e-inaugurada-no-jacana-na-zona-norte-com-capacidade-para-5-800-atendimentos-por-mes/",
+      "icone": "🏥",
+      "icone_classe": "ic-eco"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-not",
+      "tag_label": "Economia",
+      "tag_bairro": "📍 Parque Edu Chaves",
+      "bairro": "Parque Edu Chaves",
+      "titulo": "Prefeitura finaliza obras de 180 moradias do Residencial Sonda B, no Parque Edu Chaves",
+      "resumo": "As 13 torres do Residencial Sonda B, no Parque Edu Chaves, estão na fase final de acabamento e infraestrutura. O empreendimento recebeu R$ 35,8 milhões via Programa Pode Entrar e fundos municipais, com apartamentos de 60 a 64 m², parte adaptados para pessoas com deficiência. A construção começou em julho de 2024 e a entrega está prevista para o primeiro semestre de 2027.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Obras em fase final",
+      "url": "https://www.diariozonanorte.com.br/prefeitura-finaliza-obras-de-180-moradias-do-residencial-sonda-b-no-parque-edu-chaves/",
+      "icone": "🏗️",
+      "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Vila Pirituba",
-      "bairro": "Vila Pirituba",
-      "titulo": "SPTrans desvia itinerário de linha de ônibus em Pirituba neste sábado",
-      "resumo": "Neste sábado (12/9), das 14h às 22h, a SPTrans vai desviar o itinerário da linha 1023-10 Vl. Pirituba–CPTM Pirituba por causa de interdição na Rua Brigadeiro Godinho dos Santos, entre a Rua Luis Cunha e a Rua Irmã Maria Amélia, para realização de um evento.",
+      "tag_bairro": "📍 Vila Constança",
+      "bairro": "Vila Constança",
+      "titulo": "Córrego Paciência terá mais 1,4 km de canalização, com obras de R$ 45 milhões",
+      "resumo": "A Prefeitura anunciou nova etapa de drenagem no Córrego Paciência, com canalização de cerca de 1.400 metros entre a Rua Flávia e a Rodovia Fernão Dias, além de microdrenagem em ruas próximas às avenidas Mendes da Rocha, Edu Chaves e Julio Buono. O investimento estimado é de R$ 45 milhões e deve beneficiar cerca de 87 mil moradores; o edital de contratação deve ser publicado até o final de setembro.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Edital previsto para o fim de setembro",
+      "url": "https://www.diariozonanorte.com.br/corrego-paciencia-tera-mais-14-km-de-canalizacao-na-zona-norte/",
+      "icone": "🌊",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-edu",
+      "tag_label": "Educação",
+      "tag_bairro": "📍 Jardim Santo Elias",
+      "bairro": "Jardim Santo Elias",
+      "titulo": "IFSP Pirituba abre inscrições para pós-graduação gratuita em Humanidades",
+      "resumo": "O IFSP Campus São Paulo Pirituba (Avenida Mutinga, 951, Jardim Santo Elias) abriu inscrições para a Especialização em Humanidades – Educação, Política e Sociedade, com 40 vagas gratuitas para pessoas graduadas em qualquer área. O curso é presencial, no período noturno, com ingresso previsto para o 1º semestre de 2027. As inscrições vão até 18 de setembro de 2026.",
       "fonte": "Folha Noroeste",
-      "hora": "Válido no sábado, 12/09, das 14h às 22h",
-      "url": "https://folhanoroeste.com.br/regional/sptrans-desvia-itinerario-da-linha-1023-10-vl-pirituba-cptm-pirituba/",
-      "icone": "🚌",
+      "hora": "Inscrições até 18/09",
+      "url": "https://folhanoroeste.com.br/regional/if-pirituba-abre-inscricoes-para-pos-graduacao-gratuita-em-humanidades/",
+      "icone": "🎓",
+      "icone_classe": "ic-edu"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Perus",
+      "bairro": "Perus",
+      "titulo": "Linha 7-Rubi terá operação diferenciada neste domingo, 13, por obras de modernização",
+      "resumo": "Neste domingo (13/9), das 4h à meia-noite, a Linha 7-Rubi opera por via única entre Botujuru e Campo Limpo Paulista, sem viagens diretas entre Palmeiras-Barra Funda e Jundiaí — passageiros devem baldear em Francisco Morato. Os intervalos programados são de 12,5 minutos entre Palmeiras-Barra Funda e Francisco Morato e de 30 minutos entre Francisco Morato e Jundiaí, dentro do cronograma de modernização do TIC Eixo Norte.",
+      "fonte": "Folha Noroeste",
+      "hora": "Válido domingo, 13/09, das 4h à meia-noite",
+      "url": "https://folhanoroeste.com.br/cotidiano/linha-7-rubi-tera-operacao-diferenciada-neste-domingo-13-devido-as-obras-de-modernizacao/",
+      "icone": "🚆",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Cultura",
-      "tag_bairro": "📍 Jardim Mutinga",
-      "bairro": "Jardim Mutinga",
-      "titulo": "Biblioteca Brito Broca promove roda de conversa sobre 'Funk é Cultura'",
-      "resumo": "A Biblioteca Brito Broca (Av. Mutinga, 1425) recebe nesta quinta (10/9), às 15h, uma conversa sobre teoria e vivência do funk, com Correrua, Layne Gabrielle, MC Ktrine e Vinaum.",
-      "fonte": "Folha Noroeste",
-      "hora": "Hoje, 10/09, às 15h",
-      "url": "https://folhanoroeste.com.br/regional/79746/",
-      "icone": "🎤",
+      "tag_label": "Saúde",
+      "tag_bairro": "📍 Vila Medeiros",
+      "bairro": "Vila Medeiros",
+      "titulo": "SP confirma mais dois casos de sarampo em crianças e chega a 30 registros em 2026",
+      "resumo": "O estado confirmou mais dois casos de sarampo em crianças menores de 2 anos moradoras da capital, chegando a 30 registros em 2026 (27 na capital); 22 ocorreram em pessoas sem vacinação completa. Levantamentos anteriores da Secretaria de Saúde mostraram que os casos na Zona Norte se concentraram em Vila Medeiros e Vila Maria. Crianças de 6 a 11 meses continuam podendo receber a dose zero da tríplice viral.",
+      "fonte": "Folha Noroeste / Secretaria de Estado da Saúde",
+      "hora": "Atualizado nesta semana",
+      "url": "https://folhanoroeste.com.br/cotidiano/sp-confirma-mais-dois-casos-de-sarampo-em-criancas-e-chega-a-30-registros-em-2026/",
+      "icone": "🩺",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Meio Ambiente",
-      "tag_bairro": "📍 Pirituba",
-      "bairro": "Pirituba",
-      "titulo": "Pirituba vai ganhar o Parque Sete Sóis, com 700 mil m² de área verde",
-      "resumo": "A região de Pirituba receberá o Parque Sete Sóis, com campo de uso múltiplo, quadra poliesportiva, playground, horta e pomar, além de uma área de preservação de cerca de 19.530 m² de Cerrado e uma Academia da Terceira Idade, beneficiando mais de 400 mil moradores da região.",
-      "fonte": "Folha Noroeste",
-      "hora": "Projeto anunciado esta semana",
-      "url": "https://folhanoroeste.com.br/regional/pirituba-ganhara-um-novo-espaco-dedicado-a-conservacao-ambiental-parque-sete-sois/",
-      "icone": "🌳",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-mob",
-      "tag_label": "Mobilidade",
+      "tag_label": "Geral",
       "tag_bairro": "📍 Anhanguera",
       "bairro": "Anhanguera",
-      "titulo": "Trecho 2 do Rodoanel Norte chega a 68% de execução, com entrega prevista para setembro",
-      "resumo": "O Trecho 2 do Rodoanel Norte, que liga a Rodovia Fernão Dias à Avenida Raimundo Pereira de Magalhães, na zona noroeste, atingiu 68% de execução em junho e o Governo do Estado mantém a promessa de entrega ainda em 2026. A obra deve gerar cerca de 10 mil empregos diretos e indiretos.",
-      "fonte": "DiárioZonaNorte / Governo de SP",
-      "hora": "Obra em andamento",
-      "url": "https://www.diariozonanorte.com.br/trecho-norte-do-rodoanel-tem-68-da-obra-concluida-e-deve-ser-entregue-ainda-este-ano/",
-      "icone": "🛣️",
-      "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Cultura",
-      "tag_bairro": "📍 Freguesia do Ó",
-      "bairro": "Freguesia do Ó",
-      "titulo": "CEU Freguesia do Ó celebra aniversário com espetáculo Circoral",
-      "resumo": "O CEU Freguesia do Ó comemorou seu aniversário com a apresentação \"Circoral - Um Show de Brasilidades\", que une canto coral, beatbox e artes circenses em uma celebração da música popular brasileira.",
-      "fonte": "Folha Noroeste",
-      "hora": "Apresentação nesta semana",
-      "url": "https://folhanoroeste.com.br/entretenimento-esportes/ceu-freguesia-do-o-comemora-seu-aniversario-com-apresentacao-do-circoral/",
-      "icone": "🎪",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Comunidade",
-      "tag_bairro": "📍 Casa Verde",
-      "bairro": "Casa Verde",
-      "titulo": "Associação Okinawa de Casa Verde celebra 66 anos com o festival Engekai",
-      "resumo": "A Associação Okinawa de Casa Verde (AOCV), uma das entidades mais tradicionais da comunidade nikkei da zona norte, realizou o festival Engekai em sua sede social, celebrando 66 anos com apresentações artísticas da cultura japonesa, em especial da província de Okinawa.",
-      "fonte": "Fato Paulista",
-      "hora": "Evento em 7/09",
-      "url": "https://fatopaulista.com.br/associacao-okinawa-de-casa-verde-comemora-o-sucesso-do-engekai-2026/",
-      "icone": "🎌",
-      "icone_classe": "ic-eco"
+      "titulo": "Defesa Civil instala gabinete de crise para acompanhar risco de tempestades severas",
+      "resumo": "A Defesa Civil do Estado montou gabinete de crise para monitorar o risco de tempestades severas em São Paulo entre a tarde desta sexta (11/9) e a madrugada de sábado (12/9), com possibilidade de chuva forte, raios, rajadas de vento e granizo em toda a Grande São Paulo, incluindo a Zona Norte.",
+      "fonte": "Folha Noroeste / Defesa Civil do Estado de SP",
+      "hora": "Alerta válido até a manhã de sábado, 12/09",
+      "url": "https://folhanoroeste.com.br/cotidiano/defesa-civil-instala-gabinete-de-crise-para-acompanhar-risco-de-tempestades-severas/",
+      "icone": "⛈️",
+      "icone_classe": "ic-seg"
     }
   ],
   "agenda": [
     {
-      "dia": "11",
+      "dia": "12",
       "mes": "Set",
-      "cor_fundo": "#16A085",
-      "bairro": "Jardim Taipas",
-      "titulo": "Workshop gratuito sobre captação de clientes no TEIA Taipas",
-      "hora": "sex. 11/09, das 14h às 16h",
-      "local": "Biblioteca Pública Erico Veríssimo, Rua Diógenes Dourado, 101, Cohab Taipas",
-      "descricao": "Palestra com Jaqueline sobre como atrair e fidelizar clientes de forma estratégica, voltada a empreendedores, MEIs, autônomos e pequenos negócios da região.",
+      "cor_fundo": "#27AE60",
+      "bairro": "Freguesia do Ó",
+      "titulo": "EMEI Bombeiro oferece serviços gratuitos para a comunidade",
+      "hora": "sáb. 12/09, das 9h às 13h30",
+      "local": "EMEI Bombeiro, Rua Monsenhor Paulo Fernandes de Barros, s/n, Freguesia do Ó",
+      "descricao": "Ação com serviços gratuitos da Enel, Cate, Umapaz, Sabesp, SP Urbano, Cohab e A.N.A: troca de lâmpadas LED, vagas de emprego, atendimento comercial, palestra, cadastro de demanda habitacional e projetos para Jovem Aprendiz.",
       "gratuito": true,
       "preco": null,
-      "url": "https://folhanoroeste.com.br/cotidiano/teia-taipas-apresenta-workshop-sobre-captacao-de-clientes-na-biblioteca-erico-verissimo/"
-    },
-    {
-      "dia": "11",
-      "mes": "Set",
-      "cor_fundo": "#8E44AD",
-      "bairro": "Vila Pirituba",
-      "titulo": "Feira de artesanato na Avenida Paula Ferreira, em Pirituba",
-      "hora": "sex. 11/09, a partir das 9h",
-      "local": "Comunidade Mensagem de Paz, Av. Paula Ferreira, Vila Pirituba",
-      "descricao": "Feira de artesanato com entrada gratuita, reunindo expositores locais.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/entretenimento-esportes/feira-de-artesanato-vai-movimentar-a-avenida-paula-ferreira-em-pirituba-nos-dias-10-e-11-de-setembro/"
+      "url": "https://folhanoroeste.com.br/regional/emei-na-freguesia-disponibiliza-neste-sabado-12-servicos-gratuitos-para-a-comunidade/"
     },
     {
       "dia": "12",
@@ -247,25 +234,25 @@
       "requisitos": "Requisitos variam por vaga; consultar detalhes no Portal Cate",
       "tipo": "CLT",
       "fonte": "Folha Noroeste / Cate",
-      "dias_atras": "Unidades do Cate abriram mais de 2 mil vagas nesta semana na capital"
+      "dias_atras": "Unidades do Cate seguem com mais de 2 mil vagas abertas na capital"
     }
   ],
   "politica": [
     {
+      "orgao": "🏛️ SEHAB / COHAB-SP",
+      "bairro": "Jardim Corisco",
+      "titulo": "Programa Escritura na Mão assina novo contrato de R$ 681,8 milhões",
+      "impacto": "O contrato vai ampliar por 60 meses as ações de regularização fundiária na cidade, com previsão de atender mais de 363 mil famílias, dando continuidade à regularização de núcleos do Jaçanã e Tremembé, entre outras regiões.",
+      "status": "Contrato assinado; execução nos próximos 60 meses",
+      "fonte": "DiárioZonaNorte / Prefeitura de São Paulo"
+    },
+    {
       "orgao": "🏛️ Prefeitura de São Paulo",
       "bairro": "Jaraguá",
-      "titulo": "R$ 490 milhões em investimentos confirmados para Pirituba, Jaraguá, São Domingos e Taipas",
+      "titulo": "R$ 490 milhões em investimentos seguem em execução para Pirituba, Jaraguá, São Domingos e Taipas",
       "impacto": "Pacote inclui a retomada da ligação viária Pirituba-Lapa (R$ 209,5 milhões, prazo até dezembro de 2026), novas unidades educacionais (cerca de R$ 29 milhões) e revitalização do Parque Cidade Toronto.",
       "status": "Investimentos em execução",
       "fonte": "Prefeitura de São Paulo / Jornal SP Norte"
-    },
-    {
-      "orgao": "🏗️ Governo do Estado de São Paulo",
-      "bairro": "Anhanguera",
-      "titulo": "Rodoanel Norte, Trecho 2, chega a 68% de execução",
-      "impacto": "O trecho de 20 km liga a Rodovia Fernão Dias à Av. Raimundo Pereira de Magalhães, na zona noroeste, e deve gerar cerca de 10 mil empregos diretos e indiretos ao longo da obra.",
-      "status": "Obras em andamento, entrega prevista para 2026",
-      "fonte": "DiárioZonaNorte / Governo de SP"
     },
     {
       "orgao": "🏛️ Secretaria Municipal de Urbanismo e Licenciamento",
@@ -279,17 +266,17 @@
   "alertas": [
     {
       "tipo": "info",
-      "emoji": "🩺",
-      "titulo": "SP confirma mais dois casos de sarampo em crianças e chega a 30 registros em 2026",
-      "desc": "Os dois novos casos, notificados em agosto e confirmados nesta semana, são de crianças menores de 2 anos moradoras da capital. Do total de 30 casos no estado (27 na capital), 22 ocorreram em pessoas sem vacinação completa. Crianças de 6 a 11 meses continuam podendo receber a dose zero da tríplice viral.",
-      "meta": "Secretaria de Estado da Saúde / Folha Noroeste"
+      "emoji": "⛈️",
+      "titulo": "Defesa Civil monta gabinete de crise para tempestades entre sexta e sábado",
+      "desc": "Risco de chuva forte, descargas elétricas, rajadas de vento e granizo em São Paulo entre a tarde de sexta (11/9) e a madrugada/manhã de sábado (12/9), segundo a Defesa Civil do Estado.",
+      "meta": "Defesa Civil do Estado de SP / Folha Noroeste"
     },
     {
       "tipo": "info",
-      "emoji": "⛈️",
-      "titulo": "Defesa Civil alerta para risco de tempestades severas em São Paulo entre 11 e 12 de setembro",
-      "desc": "A Defesa Civil do Estado emitiu aviso de risco meteorológico para o período entre a tarde de sexta (11) e a madrugada/manhã de sábado (12), com possibilidade de chuva forte, descargas elétricas, rajadas de vento e queda de granizo.",
-      "meta": "Defesa Civil do Estado de SP"
+      "emoji": "🩺",
+      "titulo": "SP confirma mais dois casos de sarampo e chega a 30 registros em 2026",
+      "desc": "Os dois novos casos são de crianças menores de 2 anos moradoras da capital. Do total de 30 casos no estado (27 na capital), 22 ocorreram em pessoas sem vacinação completa. Crianças de 6 a 11 meses continuam podendo receber a dose zero da tríplice viral.",
+      "meta": "Secretaria de Estado da Saúde / Folha Noroeste"
     },
     {
       "tipo": "ok",
@@ -300,29 +287,17 @@
     },
     {
       "tipo": "info",
-      "emoji": "🏫",
-      "titulo": "Escolas estaduais abrem matrícula para 2027 até 18 de setembro",
-      "desc": "A rede estadual de São Paulo recebe até 18/9 a pré-matrícula de novos alunos para o ano letivo de 2027, voltada a quem está fora da rede estadual ou interrompeu os estudos. Inscrição on-line na Secretaria Escolar Digital ou presencial em escolas e postos do Poupatempo.",
-      "meta": "Secretaria de Educação do Estado de SP"
-    },
-    {
-      "tipo": "neutro",
-      "emoji": "🦟",
-      "titulo": "Grande São Paulo já soma mais de 58 mil casos de dengue em 2026",
-      "desc": "O estado de São Paulo confirmou mais de 58,6 mil casos de dengue em 2026. A Grande São Paulo lidera em número absoluto de casos, mas mantém um dos menores coeficientes por 100 mil habitantes do estado.",
-      "meta": "Agência Brasil / NIES-SP"
+      "emoji": "💻",
+      "titulo": "Prefeitura começa a oferecer teleconsultas 24 horas pelo e-saúdeSP",
+      "desc": "O novo serviço de Saúde Digital permite consultas médicas por teleatendimento a qualquer hora, ampliando o acesso da população às unidades de saúde da rede municipal, incluindo moradores da Zona Norte.",
+      "meta": "Prefeitura de São Paulo / DiárioZonaNorte"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🧵",
-      "titulo": "Workshop gratuito de captação de clientes no TEIA Taipas",
-      "info": "11/09 · sexta, 14h às 16h · Jardim Taipas · Gratuito"
-    },
-    {
-      "emoji": "🖐️",
-      "titulo": "Feira de artesanato na Avenida Paula Ferreira, em Pirituba",
-      "info": "11/09 · sexta, a partir das 9h · Vila Pirituba · Gratuito"
+      "emoji": "🧰",
+      "titulo": "EMEI Bombeiro oferece serviços gratuitos para a comunidade, na Freguesia do Ó",
+      "info": "12/09 · sábado, das 9h às 13h30 · Freguesia do Ó · Gratuito"
     },
     {
       "emoji": "🎪",
