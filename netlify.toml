@@ -6,4 +6,4 @@
   node_bundler = "esbuild"
 
 [functions."disparar-portau"]
-  schedule = "30 21 * * *"
+  schedule = "17 00 * * *"
