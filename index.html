@@ -1525,7 +1525,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   <!-- Ranking dos vereadores: fica fora da div #politica de propósito, pra sobreviver à regeneração
        automática. Os dados (script#dados-vereadores-zn) são reescritos por gerar-portau.js a partir
        de data/vereadores-zona-norte.json a cada build; a lógica de render/expand/modal abaixo é fixa. -->
-  <div class="secao" id="ranking-vereadores-secao">
+  <div class="secao" id="ranking-vereadores-secao" data-grupo-secao="politica">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-pol"></span>Ranking Zona Norte: quem os votos elegeram</div>
     </div>
@@ -2897,7 +2897,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   </div>
 
   <!-- Fora da div #politica de propósito: sobrevive à regeneração automática do gerar-portau.js -->
-  <div class="mapa-pol-card">
+  <div class="mapa-pol-card" data-grupo-secao="politica">
     <div class="mapa-pol-texto"><b>🗺️ Mapa eleitoral da Zona Norte</b><br>Veja os bairros e as zonas eleitorais de cada distrito.</div>
     <button class="mapa-pol-btn" onclick="abrirBairros();return false;">Ver mapa</button>
   </div>
@@ -6009,7 +6009,12 @@ function acessarComunidade() {
   alert('Comunidade em breve! Estamos preparando essa novidade para você. 🎉');
 }
 const secaoBotoes = document.querySelectorAll('.ancora-btn[data-secao]');
-const todasSecoes = document.querySelectorAll('.secao');
+// [data-grupo-secao] cobre blocos que pertencem visualmente a uma aba mas não
+// são a própria <div class="secao" id="..."> regenerada pelo gerar-portau.js
+// -- caso do ranking de vereadores e do card do mapa eleitoral, que ficam fora
+// da <div id="politica"> de propósito (pra sobreviver à regeneração diária)
+// mas devem aparecer/sumir junto com ela.
+const todasSecoes = document.querySelectorAll('.secao, [data-grupo-secao]');
 secaoBotoes.forEach(btn => {
   btn.addEventListener('click', function(e) {
     const alvo = btn.dataset.secao;
@@ -6024,9 +6029,10 @@ secaoBotoes.forEach(btn => {
       todasSecoes.forEach(s => { s.style.display = ''; });
     } else {
       e.preventDefault();
-      todasSecoes.forEach(s => { s.style.display = (s.id === alvo) ? '' : 'none'; });
+      todasSecoes.forEach(s => { s.style.display = (s.id === alvo || s.dataset.grupoSecao === alvo) ? '' : 'none'; });
       requestAnimationFrame(() => {
-        document.getElementById(alvo).scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const alvoEl = document.querySelector(`[data-grupo-secao="${alvo}"]`) || document.getElementById(alvo);
+        if (alvoEl) alvoEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     }
   });
