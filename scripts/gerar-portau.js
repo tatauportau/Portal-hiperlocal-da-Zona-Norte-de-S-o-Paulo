@@ -10,6 +10,13 @@ const path = require('path');
 const INDEX_PATH = path.resolve(__dirname, '..', 'index.html');
 let html = fs.readFileSync(INDEX_PATH, 'utf8');
 
+// ─── Ranking de vereadores da Zona Norte ─────────────────────────────────────
+// Dado persistente (eleição 2024 + atividades legislativas incrementais do
+// Cowork) -- não é gerado pela IA/edição manual aqui, só re-embutido no HTML a
+// cada build pra refletir o estado atual do arquivo. Ver criterio_inclusao
+// dentro do próprio JSON para a regra de quem entra no ranking.
+const VEREADORES_PATH = path.resolve(__dirname, '..', 'data', 'vereadores-zona-norte.json');
+
 // ─── Bairros por distrito (462 bairros, 18 distritos) ─────────────────────────
 const BAIRROS_PATH = path.resolve(__dirname, '..', 'data', 'bairros-por-distrito.json');
 const BAIRROS_POR_DISTRITO = JSON.parse(fs.readFileSync(BAIRROS_PATH, 'utf8'));
@@ -246,6 +253,17 @@ function buildFimDeSemana(items) {
   return html;
 }
 
+// Substitui o conteúdo de um <script type="application/json" id="...">, usado
+// pelo blob de dados do ranking de vereadores (ver comentário no topo do arquivo).
+function replaceScriptJson(html, id, jsonContent) {
+  const re = new RegExp(`(<script type="application/json" id="${id}">)[\\s\\S]*?(</script>)`);
+  if (!re.test(html)) {
+    console.warn(`[Portau] script#${id} não encontrado no HTML — pulando.`);
+    return html;
+  }
+  return html.replace(re, `$1${jsonContent}$2`);
+}
+
 // ─── Substituicao cirurgica usando regex por secao ──────────────────────────
 function replaceSection(html, id, newContent) {
   const open = `<div class="secao" id="${id}">`;
@@ -391,6 +409,21 @@ async function main() {
       'id="fim-de-semana-card"',
       'id="fim-de-semana-card" data-fds="true"'
     );
+  }
+
+  // Ranking de vereadores da Zona Norte: reflete o estado atual do arquivo
+  // persistente a cada build (não depende do conteúdo editorial manual).
+  if (fs.existsSync(VEREADORES_PATH)) {
+    const vereadoresJson = fs.readFileSync(VEREADORES_PATH, 'utf8').trim();
+    try {
+      const parsed = JSON.parse(vereadoresJson);
+      html = replaceScriptJson(html, 'dados-vereadores-zn', vereadoresJson);
+      console.log(`[Portau] Ranking de vereadores atualizado (${parsed.vereadores?.length || 0} vereadores).`);
+    } catch (e) {
+      console.warn(`[Portau] data/vereadores-zona-norte.json inválido, ranking não atualizado: ${e.message}`);
+    }
+  } else {
+    console.warn('[Portau] data/vereadores-zona-norte.json não encontrado — ranking não atualizado.');
   }
 
   fs.writeFileSync(INDEX_PATH, html, 'utf8');

@@ -1,0 +1,1324 @@
+{
+  "atualizado_em": "2026-09-14T22:04:56.469Z",
+  "criterio_inclusao": {
+    "regra": "percentual_da_votacao_total >= 20% e vereador efetivamente eleito (ELEITO POR QP ou ELEITO POR MÉDIA)",
+    "percentual_minimo_da_votacao_total": 20,
+    "justificativa": "20% é a participação real da Zona Norte no total de votos a vereador em São Paulo nas eleições de 2024 (1.022.920 de 5.120.914 votos). O corte marca vereadores com concentração de votos na Zona Norte igual ou acima da média da cidade -- abaixo disso a região está sub-representada na base do vereador. Fonte: TSE votacao_secao_2024_SP + eleitorado_local_votacao_2024, cruzado com a consulta oficial de zonas eleitorais da TRE-SP."
+  },
+  "vereadores": [
+    {
+      "id": "ver_001",
+      "nome": "Danilo do Posto de Saúde",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 58676,
+        "votos_zona_norte": 52967,
+        "percentual_da_votacao_total": 90.3,
+        "secoes_eleitorais_zn": 2803,
+        "bairros_de_forca": [
+          "Jardim Japão",
+          "Jardim Brasil",
+          "Vila Maria Baixa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 44357,
+            "percentual_do_total_zn": 83.7
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 4652,
+            "percentual_do_total_zn": 8.8
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 2594,
+            "percentual_do_total_zn": 4.9
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 287,
+            "percentual_do_total_zn": 0.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 276,
+            "percentual_do_total_zn": 0.5
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 171,
+            "percentual_do_total_zn": 0.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 35,
+            "percentual_do_total_zn": 0.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 880,
+          "percentual": 1.5
+        },
+        "Sul": {
+          "votos": 671,
+          "percentual": 1.14
+        },
+        "Leste": {
+          "votos": 3874,
+          "percentual": 6.6
+        },
+        "Oeste": {
+          "votos": 284,
+          "percentual": 0.48
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_002",
+      "nome": "Fabio Riva",
+      "partido": "MDB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 44627,
+        "votos_zona_norte": 38382,
+        "percentual_da_votacao_total": 86,
+        "secoes_eleitorais_zn": 3340,
+        "bairros_de_forca": [
+          "Parque Anhanguera",
+          "Vila Perus",
+          "Jaragua"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 14039,
+            "percentual_do_total_zn": 36.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 11742,
+            "percentual_do_total_zn": 30.6
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 3746,
+            "percentual_do_total_zn": 9.8
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 713,
+            "percentual_do_total_zn": 1.9
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 361,
+            "percentual_do_total_zn": 0.9
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 223,
+            "percentual_do_total_zn": 0.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 127,
+            "percentual_do_total_zn": 0.3
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 299,
+          "percentual": 0.67
+        },
+        "Sul": {
+          "votos": 1048,
+          "percentual": 2.35
+        },
+        "Leste": {
+          "votos": 1400,
+          "percentual": 3.14
+        },
+        "Oeste": {
+          "votos": 3498,
+          "percentual": 7.84
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_003",
+      "nome": "Ana Carolina Oliveira",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 129563,
+        "votos_zona_norte": 37490,
+        "percentual_da_votacao_total": 28.9,
+        "secoes_eleitorais_zn": 5274,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Vila Medeiros",
+          "Santana"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 8605,
+            "percentual_do_total_zn": 23
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 7860,
+            "percentual_do_total_zn": 21
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 4981,
+            "percentual_do_total_zn": 13.3
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 4547,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 3611,
+            "percentual_do_total_zn": 9.6
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 3586,
+            "percentual_do_total_zn": 9.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 913,
+            "percentual_do_total_zn": 2.4
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 4142,
+          "percentual": 3.2
+        },
+        "Sul": {
+          "votos": 33214,
+          "percentual": 25.64
+        },
+        "Leste": {
+          "votos": 42617,
+          "percentual": 32.89
+        },
+        "Oeste": {
+          "votos": 12100,
+          "percentual": 9.34
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_004",
+      "nome": "Lucas Pavanato",
+      "partido": "PL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 161386,
+        "votos_zona_norte": 34759,
+        "percentual_da_votacao_total": 21.5,
+        "secoes_eleitorais_zn": 5302,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim Brasil",
+          "Vila Maria Baixa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 5978,
+            "percentual_do_total_zn": 17.2
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 5810,
+            "percentual_do_total_zn": 16.7
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 5768,
+            "percentual_do_total_zn": 16.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 4221,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 3792,
+            "percentual_do_total_zn": 10.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 3756,
+            "percentual_do_total_zn": 10.8
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 1638,
+            "percentual_do_total_zn": 4.7
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 4270,
+          "percentual": 2.65
+        },
+        "Sul": {
+          "votos": 45398,
+          "percentual": 28.13
+        },
+        "Leste": {
+          "votos": 58705,
+          "percentual": 36.38
+        },
+        "Oeste": {
+          "votos": 18254,
+          "percentual": 11.31
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_005",
+      "nome": "Sandra Santana",
+      "partido": "MDB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 38326,
+        "votos_zona_norte": 34245,
+        "percentual_da_votacao_total": 89.4,
+        "secoes_eleitorais_zn": 3844,
+        "bairros_de_forca": [
+          "Jardim Vista Alegre",
+          "Jardim Maristela",
+          "Vila Penteado"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 16953,
+            "percentual_do_total_zn": 49.5
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 5225,
+            "percentual_do_total_zn": 15.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 3381,
+            "percentual_do_total_zn": 9.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1659,
+            "percentual_do_total_zn": 4.8
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 963,
+            "percentual_do_total_zn": 2.8
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 861,
+            "percentual_do_total_zn": 2.5
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 175,
+            "percentual_do_total_zn": 0.5
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 339,
+          "percentual": 0.88
+        },
+        "Sul": {
+          "votos": 980,
+          "percentual": 2.56
+        },
+        "Leste": {
+          "votos": 1283,
+          "percentual": 3.35
+        },
+        "Oeste": {
+          "votos": 1479,
+          "percentual": 3.86
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_006",
+      "nome": "Dr. Murillo Lima",
+      "partido": "PP",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 113820,
+        "votos_zona_norte": 28723,
+        "percentual_da_votacao_total": 25.2,
+        "secoes_eleitorais_zn": 5231,
+        "bairros_de_forca": [
+          "Santana",
+          "Imirim",
+          "Santa Teresinha"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 5924,
+            "percentual_do_total_zn": 20.6
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 4759,
+            "percentual_do_total_zn": 16.6
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 3882,
+            "percentual_do_total_zn": 13.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 3770,
+            "percentual_do_total_zn": 13.1
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 3525,
+            "percentual_do_total_zn": 12.3
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 3083,
+            "percentual_do_total_zn": 10.7
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 769,
+            "percentual_do_total_zn": 2.7
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 3240,
+          "percentual": 2.85
+        },
+        "Sul": {
+          "votos": 30487,
+          "percentual": 26.79
+        },
+        "Leste": {
+          "votos": 40826,
+          "percentual": 35.87
+        },
+        "Oeste": {
+          "votos": 10544,
+          "percentual": 9.26
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_007",
+      "nome": "Sargento Nantes",
+      "partido": "PP",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 112484,
+        "votos_zona_norte": 23077,
+        "percentual_da_votacao_total": 20.5,
+        "secoes_eleitorais_zn": 5232,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Santana",
+          "Vila Maria Baixa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 4038,
+            "percentual_do_total_zn": 17.5
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 3939,
+            "percentual_do_total_zn": 17.1
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 3143,
+            "percentual_do_total_zn": 13.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 2937,
+            "percentual_do_total_zn": 12.7
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 2701,
+            "percentual_do_total_zn": 11.7
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 2284,
+            "percentual_do_total_zn": 9.9
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 1391,
+            "percentual_do_total_zn": 6
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 2286,
+          "percentual": 2.03
+        },
+        "Sul": {
+          "votos": 31886,
+          "percentual": 28.35
+        },
+        "Leste": {
+          "votos": 46623,
+          "percentual": 41.45
+        },
+        "Oeste": {
+          "votos": 8612,
+          "percentual": 7.66
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_008",
+      "nome": "Eliseu Gabriel",
+      "partido": "PSB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 30706,
+        "votos_zona_norte": 20713,
+        "percentual_da_votacao_total": 67.5,
+        "secoes_eleitorais_zn": 2927,
+        "bairros_de_forca": [
+          "Jardim Cidade Pirituba",
+          "Parque Sao Domingos",
+          "Chacara Inglesa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 15170,
+            "percentual_do_total_zn": 73.2
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1859,
+            "percentual_do_total_zn": 9
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 544,
+            "percentual_do_total_zn": 2.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 515,
+            "percentual_do_total_zn": 2.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 365,
+            "percentual_do_total_zn": 1.8
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 237,
+            "percentual_do_total_zn": 1.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 225,
+            "percentual_do_total_zn": 1.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 413,
+          "percentual": 1.35
+        },
+        "Sul": {
+          "votos": 2407,
+          "percentual": 7.84
+        },
+        "Leste": {
+          "votos": 1519,
+          "percentual": 4.95
+        },
+        "Oeste": {
+          "votos": 5654,
+          "percentual": 18.41
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_009",
+      "nome": "André Santos",
+      "partido": "REPUBLICANOS",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 41379,
+        "votos_zona_norte": 16688,
+        "percentual_da_votacao_total": 40.3,
+        "secoes_eleitorais_zn": 4787,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Vila Perus",
+          "Jardim Guarani"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 3611,
+            "percentual_do_total_zn": 21.6
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 2525,
+            "percentual_do_total_zn": 15.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 2155,
+            "percentual_do_total_zn": 12.9
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 2153,
+            "percentual_do_total_zn": 12.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1840,
+            "percentual_do_total_zn": 11
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1394,
+            "percentual_do_total_zn": 8.4
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 1137,
+            "percentual_do_total_zn": 6.8
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 3498,
+          "percentual": 8.45
+        },
+        "Sul": {
+          "votos": 6567,
+          "percentual": 15.87
+        },
+        "Leste": {
+          "votos": 9812,
+          "percentual": 23.71
+        },
+        "Oeste": {
+          "votos": 4814,
+          "percentual": 11.63
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_010",
+      "nome": "Gabriel Abreu",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 58581,
+        "votos_zona_norte": 16631,
+        "percentual_da_votacao_total": 28.4,
+        "secoes_eleitorais_zn": 4764,
+        "bairros_de_forca": [
+          "Vila Perus",
+          "Jardim Adelfiore",
+          "Vila Gustavo"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 3210,
+            "percentual_do_total_zn": 19.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 2336,
+            "percentual_do_total_zn": 14
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 2316,
+            "percentual_do_total_zn": 13.9
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 2312,
+            "percentual_do_total_zn": 13.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1711,
+            "percentual_do_total_zn": 10.3
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 1641,
+            "percentual_do_total_zn": 9.9
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1253,
+            "percentual_do_total_zn": 7.5
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1220,
+          "percentual": 2.08
+        },
+        "Sul": {
+          "votos": 16106,
+          "percentual": 27.49
+        },
+        "Leste": {
+          "votos": 19022,
+          "percentual": 32.47
+        },
+        "Oeste": {
+          "votos": 5602,
+          "percentual": 9.56
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_011",
+      "nome": "Major Palumbo",
+      "partido": "PP",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 43455,
+        "votos_zona_norte": 10784,
+        "percentual_da_votacao_total": 24.8,
+        "secoes_eleitorais_zn": 4172,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim São Paulo (zona Norte)",
+          "Santa Teresinha"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 2777,
+            "percentual_do_total_zn": 25.8
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1477,
+            "percentual_do_total_zn": 13.7
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 1444,
+            "percentual_do_total_zn": 13.4
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1424,
+            "percentual_do_total_zn": 13.2
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1228,
+            "percentual_do_total_zn": 11.4
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1025,
+            "percentual_do_total_zn": 9.5
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 211,
+            "percentual_do_total_zn": 2
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1308,
+          "percentual": 3.01
+        },
+        "Sul": {
+          "votos": 10192,
+          "percentual": 23.45
+        },
+        "Leste": {
+          "votos": 16573,
+          "percentual": 38.14
+        },
+        "Oeste": {
+          "votos": 4598,
+          "percentual": 10.58
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_012",
+      "nome": "Sonaira Fernandes",
+      "partido": "PL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 33957,
+        "votos_zona_norte": 8515,
+        "percentual_da_votacao_total": 25.1,
+        "secoes_eleitorais_zn": 3892,
+        "bairros_de_forca": [
+          "Parque Sao Domingos",
+          "Jardim Cidade Pirituba",
+          "Santana"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 2382,
+            "percentual_do_total_zn": 28
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1505,
+            "percentual_do_total_zn": 17.7
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1033,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 781,
+            "percentual_do_total_zn": 9.2
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 726,
+            "percentual_do_total_zn": 8.5
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 606,
+            "percentual_do_total_zn": 7.1
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 539,
+            "percentual_do_total_zn": 6.3
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 939,
+          "percentual": 2.77
+        },
+        "Sul": {
+          "votos": 9710,
+          "percentual": 28.59
+        },
+        "Leste": {
+          "votos": 11110,
+          "percentual": 32.72
+        },
+        "Oeste": {
+          "votos": 3683,
+          "percentual": 10.85
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_013",
+      "nome": "Ely Teruel",
+      "partido": "MDB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 35622,
+        "votos_zona_norte": 8309,
+        "percentual_da_votacao_total": 23.3,
+        "secoes_eleitorais_zn": 3896,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim Guarani",
+          "Jardim Paulistano (zona Norte)"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1750,
+            "percentual_do_total_zn": 21.1
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1636,
+            "percentual_do_total_zn": 19.7
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 942,
+            "percentual_do_total_zn": 11.3
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 903,
+            "percentual_do_total_zn": 10.9
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 688,
+            "percentual_do_total_zn": 8.3
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 673,
+            "percentual_do_total_zn": 8.1
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 633,
+            "percentual_do_total_zn": 7.6
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 768,
+          "percentual": 2.16
+        },
+        "Sul": {
+          "votos": 13379,
+          "percentual": 37.56
+        },
+        "Leste": {
+          "votos": 8150,
+          "percentual": 22.88
+        },
+        "Oeste": {
+          "votos": 5016,
+          "percentual": 14.08
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_014",
+      "nome": "Tripoli",
+      "partido": "PV",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 39039,
+        "votos_zona_norte": 8150,
+        "percentual_da_votacao_total": 20.9,
+        "secoes_eleitorais_zn": 3847,
+        "bairros_de_forca": [
+          "Santana",
+          "Vila Maria Baixa",
+          "Tucuruvi"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1775,
+            "percentual_do_total_zn": 21.8
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1278,
+            "percentual_do_total_zn": 15.7
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1177,
+            "percentual_do_total_zn": 14.4
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1081,
+            "percentual_do_total_zn": 13.3
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 974,
+            "percentual_do_total_zn": 12
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 828,
+            "percentual_do_total_zn": 10.2
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 233,
+            "percentual_do_total_zn": 2.9
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1571,
+          "percentual": 4.02
+        },
+        "Sul": {
+          "votos": 9186,
+          "percentual": 23.53
+        },
+        "Leste": {
+          "votos": 15125,
+          "percentual": 38.74
+        },
+        "Oeste": {
+          "votos": 5007,
+          "percentual": 12.83
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_015",
+      "nome": "Simone Ganem",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 38540,
+        "votos_zona_norte": 8107,
+        "percentual_da_votacao_total": 21,
+        "secoes_eleitorais_zn": 3978,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim Brasil",
+          "Vila Medeiros"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1380,
+            "percentual_do_total_zn": 17
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1380,
+            "percentual_do_total_zn": 17
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1256,
+            "percentual_do_total_zn": 15.5
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1012,
+            "percentual_do_total_zn": 12.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 979,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 864,
+            "percentual_do_total_zn": 10.7
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 330,
+            "percentual_do_total_zn": 4.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1085,
+          "percentual": 2.82
+        },
+        "Sul": {
+          "votos": 11782,
+          "percentual": 30.57
+        },
+        "Leste": {
+          "votos": 13010,
+          "percentual": 33.76
+        },
+        "Oeste": {
+          "votos": 4556,
+          "percentual": 11.82
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_016",
+      "nome": "Kenji Palumbo",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 32495,
+        "votos_zona_norte": 7141,
+        "percentual_da_votacao_total": 22,
+        "secoes_eleitorais_zn": 3676,
+        "bairros_de_forca": [
+          "Chacara Inglesa",
+          "Santana",
+          "Jardim Cidade Pirituba"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1515,
+            "percentual_do_total_zn": 21.2
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1444,
+            "percentual_do_total_zn": 20.2
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1069,
+            "percentual_do_total_zn": 15
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 829,
+            "percentual_do_total_zn": 11.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 656,
+            "percentual_do_total_zn": 9.2
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 536,
+            "percentual_do_total_zn": 7.5
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 307,
+            "percentual_do_total_zn": 4.3
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1153,
+          "percentual": 3.55
+        },
+        "Sul": {
+          "votos": 8617,
+          "percentual": 26.52
+        },
+        "Leste": {
+          "votos": 10641,
+          "percentual": 32.75
+        },
+        "Oeste": {
+          "votos": 4943,
+          "percentual": 15.21
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_017",
+      "nome": "Keit Lima",
+      "partido": "PSOL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 27769,
+        "votos_zona_norte": 6550,
+        "percentual_da_votacao_total": 23.6,
+        "secoes_eleitorais_zn": 3325,
+        "bairros_de_forca": [
+          "Santana",
+          "Casa Verde",
+          "Jardim Guarani"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1851,
+            "percentual_do_total_zn": 28.3
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1076,
+            "percentual_do_total_zn": 16.4
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1046,
+            "percentual_do_total_zn": 16
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 747,
+            "percentual_do_total_zn": 11.4
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 489,
+            "percentual_do_total_zn": 7.5
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 415,
+            "percentual_do_total_zn": 6.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 147,
+            "percentual_do_total_zn": 2.2
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1500,
+          "percentual": 5.4
+        },
+        "Sul": {
+          "votos": 8312,
+          "percentual": 29.93
+        },
+        "Leste": {
+          "votos": 5565,
+          "percentual": 20.04
+        },
+        "Oeste": {
+          "votos": 5842,
+          "percentual": 21.04
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_018",
+      "nome": "Gilberto Nascimento",
+      "partido": "PL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 22306,
+        "votos_zona_norte": 6543,
+        "percentual_da_votacao_total": 29.3,
+        "secoes_eleitorais_zn": 3076,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Vila Medeiros",
+          "Vila Sabrina"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 2396,
+            "percentual_do_total_zn": 36.6
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1058,
+            "percentual_do_total_zn": 16.2
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 1015,
+            "percentual_do_total_zn": 15.5
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 693,
+            "percentual_do_total_zn": 10.6
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 418,
+            "percentual_do_total_zn": 6.4
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 364,
+            "percentual_do_total_zn": 5.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 75,
+            "percentual_do_total_zn": 1.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 595,
+          "percentual": 2.67
+        },
+        "Sul": {
+          "votos": 5812,
+          "percentual": 26.06
+        },
+        "Leste": {
+          "votos": 7329,
+          "percentual": 32.86
+        },
+        "Oeste": {
+          "votos": 2027,
+          "percentual": 9.09
+        }
+      },
+      "atividades": []
+    }
+  ]
+}

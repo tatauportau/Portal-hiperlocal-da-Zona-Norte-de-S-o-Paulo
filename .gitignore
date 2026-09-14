@@ -1,3 +1,7 @@
 node_modules/
 subabase.txt
 *senha*.txt
+data/tse-raw/
+data/tse-work/
+.claude/settings.local.json
+.claude/scheduled_tasks.lock

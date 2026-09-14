@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portau — Edicao do Dia · 13/09/2026</title>
+<title>Portau — Edicao do Dia · 14/09/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0051A8">
@@ -138,6 +138,81 @@
   .pol-titulo{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;margin-bottom:8px;}
   .pol-impacto{font-size:13px;color:var(--cinza-m);line-height:1.55;margin-bottom:10px;}
   .pol-status{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;background:#FFF8E1;color:#E65100;}
+  .mapa-pol-card{background:var(--branco);border:1px solid var(--cinza-l);border-left:4px solid var(--marrom);border-radius:14px;padding:18px 20px;margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+  .mapa-pol-texto{font-size:13px;color:var(--cinza-m);line-height:1.5;}
+  .mapa-pol-texto b{color:var(--cinza-q);font-family:'Syne',sans-serif;font-size:15px;}
+  .mapa-pol-btn{background:var(--marrom);color:#fff;border:none;border-radius:20px;padding:10px 18px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+  .mapa-pol-btn:hover{opacity:0.88;}
+
+  /* RANKING DE VEREADORES */
+  .ranking-vereadores{background:var(--branco);border:1px solid var(--cinza-l);border-radius:14px;padding:20px 22px 8px;margin-bottom:10px;}
+  .ranking-vereadores-sub{font-size:12px;color:var(--cinza-m);margin:-4px 0 14px;max-width:60ch;}
+  .rank-row{border-bottom:1px solid var(--cinza-l);padding:14px 0;cursor:pointer;}
+  .rank-row:last-child{border-bottom:none;}
+  .rank-linha-topo{display:grid;grid-template-columns:30px 38px 1fr auto;gap:12px;align-items:center;}
+  .rank-num{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:var(--cinza-q);}
+  .rank-row.fora-top3 .rank-num{color:#B9AD98;}
+  .rank-avatar{width:38px;height:38px;border-radius:50%;background:var(--cinza-q);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;flex-shrink:0;}
+  .rank-row.top3 .rank-avatar{width:44px;height:44px;font-size:14px;background:var(--marrom);}
+  .rank-info-nome{font-family:'Syne',sans-serif;font-size:14px;font-weight:800;}
+  .rank-info-partido{font-size:11px;color:var(--cinza-m);}
+  .rank-numeros{text-align:right;white-space:nowrap;}
+  .rank-votos{font-size:13px;font-weight:800;font-family:'Syne',sans-serif;font-variant-numeric:tabular-nums;}
+  .rank-pct{font-size:11px;color:var(--cinza-m);}
+  .rank-seta{font-size:10px;color:var(--cinza-m);transition:transform .2s;display:inline-block;margin-left:4px;}
+  .rank-row.aberto .rank-seta{transform:rotate(180deg);}
+  .rank-bar-wrap{margin-top:9px;margin-left:50px;height:6px;background:var(--cinza-l);border-radius:4px;overflow:hidden;}
+  .rank-bar-fill{height:100%;background:var(--marrom);border-radius:4px;width:0%;transition:width 1.1s cubic-bezier(.22,.9,.3,1);}
+  .rank-expand{max-height:0;overflow:hidden;transition:max-height .25s ease;margin-left:50px;}
+  .rank-row.aberto .rank-expand{max-height:260px;}
+  .expand-conteudo{padding-top:12px;}
+  .expand-linha{font-size:12px;color:var(--cinza-m);margin-bottom:6px;}
+  .expand-linha b{color:var(--cinza-q);}
+  .expand-recente{background:var(--creme);border-radius:10px;padding:10px 12px;font-size:12px;margin:8px 0 10px;}
+  .expand-recente b{font-family:'Syne',sans-serif;font-size:12.5px;}
+  .btn-perfil{font-size:12px;font-weight:700;color:var(--verde);background:none;border:none;cursor:pointer;font-family:inherit;padding:0;}
+  .btn-perfil:hover{text-decoration:underline;}
+
+  .regioes-titulo{font-size:11px;color:var(--cinza-m);text-transform:uppercase;letter-spacing:0.06em;font-weight:700;margin-bottom:7px;}
+  .regiao-linha{display:flex;align-items:center;gap:8px;font-size:11.5px;margin-bottom:5px;}
+  .regiao-nome{width:170px;flex-shrink:0;color:var(--cinza-m);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .regiao-bar-wrap{flex:1;height:6px;background:var(--cinza-l);border-radius:3px;overflow:hidden;}
+  .regiao-bar-fill{height:100%;background:var(--marrom);border-radius:3px;width:0%;transition:width .8s ease;}
+  .regiao-votos{width:52px;text-align:right;font-weight:700;flex-shrink:0;font-variant-numeric:tabular-nums;}
+
+  /* modal de perfil (reaproveita .bairros-overlay/.bairros-painel/.bairros-fechar/.bairros-titulo/.bairros-sub existentes) */
+  .perfil-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+  .perfil-avatar{width:52px;height:52px;border-radius:50%;background:var(--cinza-q);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:18px;flex-shrink:0;}
+  .perfil-stats{background:var(--creme);border-radius:12px;padding:14px 16px;margin-bottom:16px;}
+  .stat-linha{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;}
+  .stat-linha b{font-family:'Syne',sans-serif;font-variant-numeric:tabular-nums;}
+
+  /* acordeão das outras regiões da cidade, fechado por padrão */
+  .outras-regioes-titulo{font-size:11px;color:var(--cinza-m);text-transform:uppercase;letter-spacing:0.08em;font-weight:700;margin:18px 0 8px;}
+  .regiao-acordeao{border:1px solid var(--cinza-l);border-radius:10px;margin-bottom:6px;overflow:hidden;}
+  .regiao-acordeao-cabeca{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;cursor:pointer;font-size:12.5px;font-weight:700;background:var(--branco);}
+  .regiao-acordeao-cabeca .ac-pct{color:var(--cinza-m);font-weight:700;font-variant-numeric:tabular-nums;}
+  .regiao-acordeao-cabeca .ac-seta{font-size:10px;color:var(--cinza-m);transition:transform .2s;margin-left:8px;}
+  .regiao-acordeao.aberto .ac-seta{transform:rotate(180deg);}
+  .regiao-acordeao-corpo{max-height:0;overflow:hidden;transition:max-height .2s ease;}
+  .regiao-acordeao.aberto .regiao-acordeao-corpo{max-height:80px;}
+  .regiao-acordeao-corpo-in{padding:0 12px 12px;}
+
+  .historico-titulo{font-family:'Syne',sans-serif;font-size:14px;font-weight:800;margin:18px 0 10px;}
+  .atividade{border:1px solid var(--cinza-l);border-radius:10px;padding:12px 14px;margin-bottom:8px;}
+  .atividade-topo{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;gap:8px;}
+  .atividade-titulo{font-size:13px;font-weight:700;line-height:1.4;}
+  .atividade-meta{font-size:11px;color:var(--cinza-m);display:flex;gap:8px;flex-wrap:wrap;}
+  .status-pill{font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;text-transform:uppercase;flex-shrink:0;}
+  .status-aprovado{background:#E8F5E9;color:#2E7D32;}
+  .status-em_tramitacao{background:#FFF3DE;color:#B25E09;}
+  .status-apresentada{background:#EEE;color:var(--cinza-m);}
+  .status-arquivado{background:#EEE;color:#999;}
+  .status-vetado{background:#FFEBEE;color:#C62828;}
+  .status-atendida{background:#E8F5E9;color:#2E7D32;}
+  .atividade-fonte a{color:var(--verde);text-decoration:none;font-size:11px;}
+  .sem-atividades{font-size:12px;color:var(--cinza-m);font-style:italic;}
+
   .alerta{border-radius:12px;padding:16px 18px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;}
   .alerta.ok{background:#E8F5E9;border:1px solid #C8E6C9;}
   .alerta.info{background:#E3F2FD;border:1px solid #BBDEFB;}
@@ -598,6 +673,8 @@
   .bairros-pill { font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; background: #fff; border: 1px solid var(--cinza-l); color: var(--cinza-q); text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; transition: background .15s, border-color .15s, color .15s; }
   .bairros-pill:hover { background: var(--amarelo); border-color: var(--amarelo); color: var(--cinza-q); }
   .bairros-vazio { font-size: 12px; color: var(--cinza-m); display: none; }
+  .bairros-zonas-titulo { font-size: 11px; color: var(--cinza-m); margin: 14px 0 8px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+  .bairros-pill-zona { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: var(--marrom); color: #fff; }
 
   /* AUTH (topbar) */
   .auth-chip { display: flex; align-items: center; gap: 8px; flex-shrink: 0; position: relative; }
@@ -791,7 +868,7 @@ document.addEventListener('click', (e) => {
         <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
       </div>
       <div style="font-size:9px;color:var(--cinza-m);white-space:nowrap;">
-        <span id="clima-update">13/09/26 21:17</span><span id="clima-hora-live" style="display:none;"></span>
+        <span id="clima-update">14/09/26 19:29</span><span id="clima-hora-live" style="display:none;"></span>
       </div>
     </div>
     <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
@@ -931,7 +1008,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="feed">
 
       <!-- NOTÍCIAS -->
-                                                                                                                                                                                            <div class="secao" id="noticias">
+                                                                                                                                                                                              <div class="secao" id="noticias">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
       <span class="secao-count">8 hoje</span>
@@ -1132,6 +1209,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
+    <!-- AGENDA -->
   <div class="secao" id="agenda">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
@@ -1193,6 +1271,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </a>
   </div>
 
+    <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
@@ -1443,6 +1522,1343 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- POLITICA -->
     <!-- POLITICA -->
     <!-- POLITICA -->
+  <!-- Ranking dos vereadores: fica fora da div #politica de propósito, pra sobreviver à regeneração
+       automática. Os dados (script#dados-vereadores-zn) são reescritos por gerar-portau.js a partir
+       de data/vereadores-zona-norte.json a cada build; a lógica de render/expand/modal abaixo é fixa. -->
+  <div class="secao" id="ranking-vereadores-secao">
+    <div class="secao-header">
+      <div class="secao-titulo"><span class="barra barra-pol"></span>Ranking Zona Norte: quem os votos elegeram</div>
+    </div>
+    <p class="ranking-vereadores-sub">Vereadores com pelo menos 20% dos votos vindos da Zona Norte nas eleições de 2024 — a participação média da região no total de votos a vereador em São Paulo. Clique num nome pra ver onde ele foi mais votado.</p>
+    <div class="ranking-vereadores" id="ranking-vereadores"></div>
+  </div>
+
+  <script type="application/json" id="dados-vereadores-zn">{
+  "atualizado_em": "2026-09-14T22:04:56.469Z",
+  "criterio_inclusao": {
+    "regra": "percentual_da_votacao_total >= 20% e vereador efetivamente eleito (ELEITO POR QP ou ELEITO POR MÉDIA)",
+    "percentual_minimo_da_votacao_total": 20,
+    "justificativa": "20% é a participação real da Zona Norte no total de votos a vereador em São Paulo nas eleições de 2024 (1.022.920 de 5.120.914 votos). O corte marca vereadores com concentração de votos na Zona Norte igual ou acima da média da cidade -- abaixo disso a região está sub-representada na base do vereador. Fonte: TSE votacao_secao_2024_SP + eleitorado_local_votacao_2024, cruzado com a consulta oficial de zonas eleitorais da TRE-SP."
+  },
+  "vereadores": [
+    {
+      "id": "ver_001",
+      "nome": "Danilo do Posto de Saúde",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 58676,
+        "votos_zona_norte": 52967,
+        "percentual_da_votacao_total": 90.3,
+        "secoes_eleitorais_zn": 2803,
+        "bairros_de_forca": [
+          "Jardim Japão",
+          "Jardim Brasil",
+          "Vila Maria Baixa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 44357,
+            "percentual_do_total_zn": 83.7
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 4652,
+            "percentual_do_total_zn": 8.8
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 2594,
+            "percentual_do_total_zn": 4.9
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 287,
+            "percentual_do_total_zn": 0.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 276,
+            "percentual_do_total_zn": 0.5
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 171,
+            "percentual_do_total_zn": 0.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 35,
+            "percentual_do_total_zn": 0.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 880,
+          "percentual": 1.5
+        },
+        "Sul": {
+          "votos": 671,
+          "percentual": 1.14
+        },
+        "Leste": {
+          "votos": 3874,
+          "percentual": 6.6
+        },
+        "Oeste": {
+          "votos": 284,
+          "percentual": 0.48
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_002",
+      "nome": "Fabio Riva",
+      "partido": "MDB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 44627,
+        "votos_zona_norte": 38382,
+        "percentual_da_votacao_total": 86,
+        "secoes_eleitorais_zn": 3340,
+        "bairros_de_forca": [
+          "Parque Anhanguera",
+          "Vila Perus",
+          "Jaragua"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 14039,
+            "percentual_do_total_zn": 36.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 11742,
+            "percentual_do_total_zn": 30.6
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 3746,
+            "percentual_do_total_zn": 9.8
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 713,
+            "percentual_do_total_zn": 1.9
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 361,
+            "percentual_do_total_zn": 0.9
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 223,
+            "percentual_do_total_zn": 0.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 127,
+            "percentual_do_total_zn": 0.3
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 299,
+          "percentual": 0.67
+        },
+        "Sul": {
+          "votos": 1048,
+          "percentual": 2.35
+        },
+        "Leste": {
+          "votos": 1400,
+          "percentual": 3.14
+        },
+        "Oeste": {
+          "votos": 3498,
+          "percentual": 7.84
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_003",
+      "nome": "Ana Carolina Oliveira",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 129563,
+        "votos_zona_norte": 37490,
+        "percentual_da_votacao_total": 28.9,
+        "secoes_eleitorais_zn": 5274,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Vila Medeiros",
+          "Santana"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 8605,
+            "percentual_do_total_zn": 23
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 7860,
+            "percentual_do_total_zn": 21
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 4981,
+            "percentual_do_total_zn": 13.3
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 4547,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 3611,
+            "percentual_do_total_zn": 9.6
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 3586,
+            "percentual_do_total_zn": 9.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 913,
+            "percentual_do_total_zn": 2.4
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 4142,
+          "percentual": 3.2
+        },
+        "Sul": {
+          "votos": 33214,
+          "percentual": 25.64
+        },
+        "Leste": {
+          "votos": 42617,
+          "percentual": 32.89
+        },
+        "Oeste": {
+          "votos": 12100,
+          "percentual": 9.34
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_004",
+      "nome": "Lucas Pavanato",
+      "partido": "PL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 161386,
+        "votos_zona_norte": 34759,
+        "percentual_da_votacao_total": 21.5,
+        "secoes_eleitorais_zn": 5302,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim Brasil",
+          "Vila Maria Baixa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 5978,
+            "percentual_do_total_zn": 17.2
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 5810,
+            "percentual_do_total_zn": 16.7
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 5768,
+            "percentual_do_total_zn": 16.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 4221,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 3792,
+            "percentual_do_total_zn": 10.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 3756,
+            "percentual_do_total_zn": 10.8
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 1638,
+            "percentual_do_total_zn": 4.7
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 4270,
+          "percentual": 2.65
+        },
+        "Sul": {
+          "votos": 45398,
+          "percentual": 28.13
+        },
+        "Leste": {
+          "votos": 58705,
+          "percentual": 36.38
+        },
+        "Oeste": {
+          "votos": 18254,
+          "percentual": 11.31
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_005",
+      "nome": "Sandra Santana",
+      "partido": "MDB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 38326,
+        "votos_zona_norte": 34245,
+        "percentual_da_votacao_total": 89.4,
+        "secoes_eleitorais_zn": 3844,
+        "bairros_de_forca": [
+          "Jardim Vista Alegre",
+          "Jardim Maristela",
+          "Vila Penteado"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 16953,
+            "percentual_do_total_zn": 49.5
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 5225,
+            "percentual_do_total_zn": 15.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 3381,
+            "percentual_do_total_zn": 9.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1659,
+            "percentual_do_total_zn": 4.8
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 963,
+            "percentual_do_total_zn": 2.8
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 861,
+            "percentual_do_total_zn": 2.5
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 175,
+            "percentual_do_total_zn": 0.5
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 339,
+          "percentual": 0.88
+        },
+        "Sul": {
+          "votos": 980,
+          "percentual": 2.56
+        },
+        "Leste": {
+          "votos": 1283,
+          "percentual": 3.35
+        },
+        "Oeste": {
+          "votos": 1479,
+          "percentual": 3.86
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_006",
+      "nome": "Dr. Murillo Lima",
+      "partido": "PP",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 113820,
+        "votos_zona_norte": 28723,
+        "percentual_da_votacao_total": 25.2,
+        "secoes_eleitorais_zn": 5231,
+        "bairros_de_forca": [
+          "Santana",
+          "Imirim",
+          "Santa Teresinha"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 5924,
+            "percentual_do_total_zn": 20.6
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 4759,
+            "percentual_do_total_zn": 16.6
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 3882,
+            "percentual_do_total_zn": 13.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 3770,
+            "percentual_do_total_zn": 13.1
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 3525,
+            "percentual_do_total_zn": 12.3
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 3083,
+            "percentual_do_total_zn": 10.7
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 769,
+            "percentual_do_total_zn": 2.7
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 3240,
+          "percentual": 2.85
+        },
+        "Sul": {
+          "votos": 30487,
+          "percentual": 26.79
+        },
+        "Leste": {
+          "votos": 40826,
+          "percentual": 35.87
+        },
+        "Oeste": {
+          "votos": 10544,
+          "percentual": 9.26
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_007",
+      "nome": "Sargento Nantes",
+      "partido": "PP",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 112484,
+        "votos_zona_norte": 23077,
+        "percentual_da_votacao_total": 20.5,
+        "secoes_eleitorais_zn": 5232,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Santana",
+          "Vila Maria Baixa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 4038,
+            "percentual_do_total_zn": 17.5
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 3939,
+            "percentual_do_total_zn": 17.1
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 3143,
+            "percentual_do_total_zn": 13.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 2937,
+            "percentual_do_total_zn": 12.7
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 2701,
+            "percentual_do_total_zn": 11.7
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 2284,
+            "percentual_do_total_zn": 9.9
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 1391,
+            "percentual_do_total_zn": 6
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 2286,
+          "percentual": 2.03
+        },
+        "Sul": {
+          "votos": 31886,
+          "percentual": 28.35
+        },
+        "Leste": {
+          "votos": 46623,
+          "percentual": 41.45
+        },
+        "Oeste": {
+          "votos": 8612,
+          "percentual": 7.66
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_008",
+      "nome": "Eliseu Gabriel",
+      "partido": "PSB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 30706,
+        "votos_zona_norte": 20713,
+        "percentual_da_votacao_total": 67.5,
+        "secoes_eleitorais_zn": 2927,
+        "bairros_de_forca": [
+          "Jardim Cidade Pirituba",
+          "Parque Sao Domingos",
+          "Chacara Inglesa"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 15170,
+            "percentual_do_total_zn": 73.2
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1859,
+            "percentual_do_total_zn": 9
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 544,
+            "percentual_do_total_zn": 2.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 515,
+            "percentual_do_total_zn": 2.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 365,
+            "percentual_do_total_zn": 1.8
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 237,
+            "percentual_do_total_zn": 1.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 225,
+            "percentual_do_total_zn": 1.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 413,
+          "percentual": 1.35
+        },
+        "Sul": {
+          "votos": 2407,
+          "percentual": 7.84
+        },
+        "Leste": {
+          "votos": 1519,
+          "percentual": 4.95
+        },
+        "Oeste": {
+          "votos": 5654,
+          "percentual": 18.41
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_009",
+      "nome": "André Santos",
+      "partido": "REPUBLICANOS",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 41379,
+        "votos_zona_norte": 16688,
+        "percentual_da_votacao_total": 40.3,
+        "secoes_eleitorais_zn": 4787,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Vila Perus",
+          "Jardim Guarani"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 3611,
+            "percentual_do_total_zn": 21.6
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 2525,
+            "percentual_do_total_zn": 15.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 2155,
+            "percentual_do_total_zn": 12.9
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 2153,
+            "percentual_do_total_zn": 12.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1840,
+            "percentual_do_total_zn": 11
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1394,
+            "percentual_do_total_zn": 8.4
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 1137,
+            "percentual_do_total_zn": 6.8
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 3498,
+          "percentual": 8.45
+        },
+        "Sul": {
+          "votos": 6567,
+          "percentual": 15.87
+        },
+        "Leste": {
+          "votos": 9812,
+          "percentual": 23.71
+        },
+        "Oeste": {
+          "votos": 4814,
+          "percentual": 11.63
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_010",
+      "nome": "Gabriel Abreu",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 58581,
+        "votos_zona_norte": 16631,
+        "percentual_da_votacao_total": 28.4,
+        "secoes_eleitorais_zn": 4764,
+        "bairros_de_forca": [
+          "Vila Perus",
+          "Jardim Adelfiore",
+          "Vila Gustavo"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 3210,
+            "percentual_do_total_zn": 19.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 2336,
+            "percentual_do_total_zn": 14
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 2316,
+            "percentual_do_total_zn": 13.9
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 2312,
+            "percentual_do_total_zn": 13.9
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1711,
+            "percentual_do_total_zn": 10.3
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 1641,
+            "percentual_do_total_zn": 9.9
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1253,
+            "percentual_do_total_zn": 7.5
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1220,
+          "percentual": 2.08
+        },
+        "Sul": {
+          "votos": 16106,
+          "percentual": 27.49
+        },
+        "Leste": {
+          "votos": 19022,
+          "percentual": 32.47
+        },
+        "Oeste": {
+          "votos": 5602,
+          "percentual": 9.56
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_011",
+      "nome": "Major Palumbo",
+      "partido": "PP",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 43455,
+        "votos_zona_norte": 10784,
+        "percentual_da_votacao_total": 24.8,
+        "secoes_eleitorais_zn": 4172,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim São Paulo (zona Norte)",
+          "Santa Teresinha"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 2777,
+            "percentual_do_total_zn": 25.8
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1477,
+            "percentual_do_total_zn": 13.7
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 1444,
+            "percentual_do_total_zn": 13.4
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1424,
+            "percentual_do_total_zn": 13.2
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1228,
+            "percentual_do_total_zn": 11.4
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1025,
+            "percentual_do_total_zn": 9.5
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 211,
+            "percentual_do_total_zn": 2
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1308,
+          "percentual": 3.01
+        },
+        "Sul": {
+          "votos": 10192,
+          "percentual": 23.45
+        },
+        "Leste": {
+          "votos": 16573,
+          "percentual": 38.14
+        },
+        "Oeste": {
+          "votos": 4598,
+          "percentual": 10.58
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_012",
+      "nome": "Sonaira Fernandes",
+      "partido": "PL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 33957,
+        "votos_zona_norte": 8515,
+        "percentual_da_votacao_total": 25.1,
+        "secoes_eleitorais_zn": 3892,
+        "bairros_de_forca": [
+          "Parque Sao Domingos",
+          "Jardim Cidade Pirituba",
+          "Santana"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 2382,
+            "percentual_do_total_zn": 28
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1505,
+            "percentual_do_total_zn": 17.7
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1033,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 781,
+            "percentual_do_total_zn": 9.2
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 726,
+            "percentual_do_total_zn": 8.5
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 606,
+            "percentual_do_total_zn": 7.1
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 539,
+            "percentual_do_total_zn": 6.3
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 939,
+          "percentual": 2.77
+        },
+        "Sul": {
+          "votos": 9710,
+          "percentual": 28.59
+        },
+        "Leste": {
+          "votos": 11110,
+          "percentual": 32.72
+        },
+        "Oeste": {
+          "votos": 3683,
+          "percentual": 10.85
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_013",
+      "nome": "Ely Teruel",
+      "partido": "MDB",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 35622,
+        "votos_zona_norte": 8309,
+        "percentual_da_votacao_total": 23.3,
+        "secoes_eleitorais_zn": 3896,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim Guarani",
+          "Jardim Paulistano (zona Norte)"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1750,
+            "percentual_do_total_zn": 21.1
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1636,
+            "percentual_do_total_zn": 19.7
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 942,
+            "percentual_do_total_zn": 11.3
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 903,
+            "percentual_do_total_zn": 10.9
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 688,
+            "percentual_do_total_zn": 8.3
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 673,
+            "percentual_do_total_zn": 8.1
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 633,
+            "percentual_do_total_zn": 7.6
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 768,
+          "percentual": 2.16
+        },
+        "Sul": {
+          "votos": 13379,
+          "percentual": 37.56
+        },
+        "Leste": {
+          "votos": 8150,
+          "percentual": 22.88
+        },
+        "Oeste": {
+          "votos": 5016,
+          "percentual": 14.08
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_014",
+      "nome": "Tripoli",
+      "partido": "PV",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 39039,
+        "votos_zona_norte": 8150,
+        "percentual_da_votacao_total": 20.9,
+        "secoes_eleitorais_zn": 3847,
+        "bairros_de_forca": [
+          "Santana",
+          "Vila Maria Baixa",
+          "Tucuruvi"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1775,
+            "percentual_do_total_zn": 21.8
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1278,
+            "percentual_do_total_zn": 15.7
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1177,
+            "percentual_do_total_zn": 14.4
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1081,
+            "percentual_do_total_zn": 13.3
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 974,
+            "percentual_do_total_zn": 12
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 828,
+            "percentual_do_total_zn": 10.2
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 233,
+            "percentual_do_total_zn": 2.9
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1571,
+          "percentual": 4.02
+        },
+        "Sul": {
+          "votos": 9186,
+          "percentual": 23.53
+        },
+        "Leste": {
+          "votos": 15125,
+          "percentual": 38.74
+        },
+        "Oeste": {
+          "votos": 5007,
+          "percentual": 12.83
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_015",
+      "nome": "Simone Ganem",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 38540,
+        "votos_zona_norte": 8107,
+        "percentual_da_votacao_total": 21,
+        "secoes_eleitorais_zn": 3978,
+        "bairros_de_forca": [
+          "Santana",
+          "Jardim Brasil",
+          "Vila Medeiros"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1380,
+            "percentual_do_total_zn": 17
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1380,
+            "percentual_do_total_zn": 17
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1256,
+            "percentual_do_total_zn": 15.5
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 1012,
+            "percentual_do_total_zn": 12.5
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 979,
+            "percentual_do_total_zn": 12.1
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 864,
+            "percentual_do_total_zn": 10.7
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 330,
+            "percentual_do_total_zn": 4.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1085,
+          "percentual": 2.82
+        },
+        "Sul": {
+          "votos": 11782,
+          "percentual": 30.57
+        },
+        "Leste": {
+          "votos": 13010,
+          "percentual": 33.76
+        },
+        "Oeste": {
+          "votos": 4556,
+          "percentual": 11.82
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_016",
+      "nome": "Kenji Palumbo",
+      "partido": "PODE",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 32495,
+        "votos_zona_norte": 7141,
+        "percentual_da_votacao_total": 22,
+        "secoes_eleitorais_zn": 3676,
+        "bairros_de_forca": [
+          "Chacara Inglesa",
+          "Santana",
+          "Jardim Cidade Pirituba"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 1515,
+            "percentual_do_total_zn": 21.2
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1444,
+            "percentual_do_total_zn": 20.2
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1069,
+            "percentual_do_total_zn": 15
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 829,
+            "percentual_do_total_zn": 11.6
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 656,
+            "percentual_do_total_zn": 9.2
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 536,
+            "percentual_do_total_zn": 7.5
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 307,
+            "percentual_do_total_zn": 4.3
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1153,
+          "percentual": 3.55
+        },
+        "Sul": {
+          "votos": 8617,
+          "percentual": 26.52
+        },
+        "Leste": {
+          "votos": 10641,
+          "percentual": 32.75
+        },
+        "Oeste": {
+          "votos": 4943,
+          "percentual": 15.21
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_017",
+      "nome": "Keit Lima",
+      "partido": "PSOL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 27769,
+        "votos_zona_norte": 6550,
+        "percentual_da_votacao_total": 23.6,
+        "secoes_eleitorais_zn": 3325,
+        "bairros_de_forca": [
+          "Santana",
+          "Casa Verde",
+          "Jardim Guarani"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 1851,
+            "percentual_do_total_zn": 28.3
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1076,
+            "percentual_do_total_zn": 16.4
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 1046,
+            "percentual_do_total_zn": 16
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 747,
+            "percentual_do_total_zn": 11.4
+          },
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 489,
+            "percentual_do_total_zn": 7.5
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 415,
+            "percentual_do_total_zn": 6.3
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 147,
+            "percentual_do_total_zn": 2.2
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 1500,
+          "percentual": 5.4
+        },
+        "Sul": {
+          "votos": 8312,
+          "percentual": 29.93
+        },
+        "Leste": {
+          "votos": 5565,
+          "percentual": 20.04
+        },
+        "Oeste": {
+          "votos": 5842,
+          "percentual": 21.04
+        }
+      },
+      "atividades": []
+    },
+    {
+      "id": "ver_018",
+      "nome": "Gilberto Nascimento",
+      "partido": "PL",
+      "perfil_camara_url": null,
+      "votacao_zona_norte": {
+        "votos_totais_2024": 22306,
+        "votos_zona_norte": 6543,
+        "percentual_da_votacao_total": 29.3,
+        "secoes_eleitorais_zn": 3076,
+        "bairros_de_forca": [
+          "Jardim Brasil",
+          "Vila Medeiros",
+          "Vila Sabrina"
+        ],
+        "subprefeituras": [
+          {
+            "nome": "Vila Maria/Vila Guilherme",
+            "votos": 2396,
+            "percentual_do_total_zn": 36.6
+          },
+          {
+            "nome": "Santana/Tucuruvi",
+            "votos": 1058,
+            "percentual_do_total_zn": 16.2
+          },
+          {
+            "nome": "Jaçanã/Tremembé",
+            "votos": 1015,
+            "percentual_do_total_zn": 15.5
+          },
+          {
+            "nome": "Freguesia/Brasilândia",
+            "votos": 693,
+            "percentual_do_total_zn": 10.6
+          },
+          {
+            "nome": "Casa Verde/Cachoeirinha",
+            "votos": 418,
+            "percentual_do_total_zn": 6.4
+          },
+          {
+            "nome": "Pirituba/Jaraguá",
+            "votos": 364,
+            "percentual_do_total_zn": 5.6
+          },
+          {
+            "nome": "Perus/Anhanguera",
+            "votos": 75,
+            "percentual_do_total_zn": 1.1
+          }
+        ]
+      },
+      "votacao_outras_regioes_sp": {
+        "Centro": {
+          "votos": 595,
+          "percentual": 2.67
+        },
+        "Sul": {
+          "votos": 5812,
+          "percentual": 26.06
+        },
+        "Leste": {
+          "votos": 7329,
+          "percentual": 32.86
+        },
+        "Oeste": {
+          "votos": 2027,
+          "percentual": 9.09
+        }
+      },
+      "atividades": []
+    }
+  ]
+}</script>
+
+    <!-- POLITICA -->
   <div class="secao" id="politica">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
@@ -1480,6 +2896,13 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </div>
   </div>
 
+  <!-- Fora da div #politica de propósito: sobrevive à regeneração automática do gerar-portau.js -->
+  <div class="mapa-pol-card">
+    <div class="mapa-pol-texto"><b>🗺️ Mapa eleitoral da Zona Norte</b><br>Veja os bairros e as zonas eleitorais de cada distrito.</div>
+    <button class="mapa-pol-btn" onclick="abrirBairros();return false;">Ver mapa</button>
+  </div>
+
+    <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
@@ -1661,7 +3084,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 
 <!-- SIDEBAR -->
   
-                                                                                                                                              <div class="sb-card" id="fim-de-semana-card" data-fds="true">
+                                                                                                                                                <div class="sb-card" id="fim-de-semana-card">
     <div class="sb-header">🎉 Este fim de semana</div>
     <div class="sb-item">
       <div style="font-size:20px;">🧰</div>
@@ -1973,8 +3396,8 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
 <div class="bairros-overlay" id="bairros-overlay" onclick="if(event.target===this)fecharBairros()">
   <div class="bairros-painel">
     <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
-    <div class="bairros-titulo">🗺️ Bairros da Zona Norte</div>
-    <div class="bairros-sub">Clique num distrito para ver os bairros</div>
+    <div class="bairros-titulo">🗺️ Bairros e Zonas Eleitorais da Zona Norte</div>
+    <div class="bairros-sub">Clique num distrito para ver os bairros e a zona eleitoral</div>
     <div class="bairros-corpo">
       <div id="bairros-svg-wrap"></div>
       <div class="bairros-info" id="bairros-info">
@@ -1983,9 +3406,40 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
         <input class="bairros-search" id="bairros-search" type="text" placeholder="Buscar bairro..." oninput="filtrarBairros()">
         <div class="bairros-pills" id="bairros-pills"></div>
         <div class="bairros-vazio" id="bairros-vazio">Nenhum bairro encontrado</div>
+        <div class="bairros-zonas-titulo" id="bairros-zonas-titulo"></div>
+        <div class="bairros-pills" id="bairros-zonas-pills"></div>
       </div>
     </div>
     <div class="bairros-tooltip" id="bairros-tooltip"></div>
+  </div>
+</div>
+
+<!-- MODAL PERFIL DO VEREADOR (reaproveita as classes .bairros-* do modal de bairros) -->
+<div class="bairros-overlay" id="perfil-overlay" onclick="if(event.target===this)fecharPerfil()">
+  <div class="bairros-painel" style="width:560px;">
+    <button class="bairros-fechar" onclick="fecharPerfil()">✕</button>
+    <div class="perfil-header">
+      <div class="perfil-avatar" id="perfil-avatar"></div>
+      <div>
+        <div class="bairros-titulo" id="perfil-nome"></div>
+        <div class="bairros-sub" id="perfil-partido"></div>
+      </div>
+    </div>
+    <div class="perfil-stats">
+      <div class="bairros-info-sub">Votação na Zona Norte — Eleições 2024</div>
+      <div class="stat-linha"><span>Votos na Zona Norte</span><b id="perfil-votos"></b></div>
+      <div class="stat-linha"><span>Votos totais do vereador</span><b id="perfil-votos-total"></b></div>
+      <div class="stat-linha"><span>% da votação total dele</span><b id="perfil-pct"></b></div>
+      <div class="stat-linha"><span>Seções eleitorais na ZN</span><b id="perfil-secoes"></b></div>
+      <div class="regioes-titulo" style="margin-top:12px;">Votos por subprefeitura na Zona Norte</div>
+      <div id="perfil-regioes"></div>
+    </div>
+
+    <div class="outras-regioes-titulo">Votação nas outras regiões de São Paulo</div>
+    <div id="perfil-outras-regioes"></div>
+
+    <div class="historico-titulo">Histórico completo de atividades</div>
+    <div id="perfil-historico"></div>
   </div>
 </div>
 
@@ -2010,12 +3464,33 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
   "PERUS": ["Jardim Adelfiore", "Sítio Areião", "Sítio Botuquara", "Vila Caiúba", "Jardim da Conquista", "Vila Fanton", "Vila Hungaresa", "Vila Inácio", "Vila Malvina", "Jardim Manacás", "Chácara Maria Trindade", "Vila Nova Perus", "Recanto Paraíso", "Jardim Perus", "Vila Perus", "Perus", "Vila Rancho Alegre", "Conjunto Habitacional Recanto dos Humildes", "Jardim do Russo", "Jardim Russo", "Vila Santa Cruz", "Loteamento Vitória Régia"],
   "ANHANGUERA": ["Anhanguera", "Jardim Anhanguera", "Parque Anhanguera", "Jardim Britânia", "Conjunto Residencial Canaã", "Vila Chica Luiza", "Jardim Clei", "Jardim Escócia", "Parque Esperança", "Chácara Jaraguá", "Vila Jaraguá", "Jardim Jaraguá", "Morada do Sol", "Parque Morro Doce", "Vila dos Palmares", "Conjunto Residencial Paraíso", "Jardim Rosinha", "Residencial Sol Nascente 1", "Residencial Sol Nascente 2", "Residencial Sol Nascente 3", "Residencial Sol Nascente 4", "Vila Sulina"]
 }</script>
+<script type="application/json" id="bairros-zonas-embutido">{
+  "SANTANA": ["249", "256", "422"],
+  "TUCURUVI": ["256", "349", "420"],
+  "MANDAQUI": ["249", "256", "422"],
+  "JAÇANÃ": ["349", "420"],
+  "TREMEMBÉ": ["256", "349"],
+  "CASA VERDE": ["255"],
+  "LIMÃO": ["255"],
+  "CACHOEIRINHA": ["255", "422"],
+  "FREGUESIA DO Ó": ["327", "376"],
+  "BRASILÂNDIA": ["376"],
+  "VILA MARIA": ["254"],
+  "VILA GUILHERME": ["254"],
+  "VILA MEDEIROS": ["420"],
+  "PIRITUBA": ["325"],
+  "JARAGUÁ": ["249", "389", "403"],
+  "SÃO DOMINGOS": ["403"],
+  "PERUS": ["389"],
+  "ANHANGUERA": ["389"]
+}</script>
 <script src="./vendor/d3.min.js"></script>
 <script src="./vendor/supabase.min.js"></script>
 <script>
 let _bairrosCarregado = false;
 let _geoDistritosZN = null;
 let _bairrosPorDistrito = null;
+let _zonasPorDistrito = null;
 
 function abrirBairros(){
   document.getElementById('bairros-overlay').classList.add('aberto');
@@ -2023,6 +3498,8 @@ function abrirBairros(){
   document.getElementById('bairros-info-sub').textContent = 'Clique no mapa ao lado';
   document.getElementById('bairros-pills').innerHTML = '';
   document.getElementById('bairros-info').style.borderLeft = '';
+  document.getElementById('bairros-zonas-titulo').textContent = '';
+  document.getElementById('bairros-zonas-pills').innerHTML = '';
   if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
 }
 function fecharBairros(){
@@ -2030,17 +3507,20 @@ function fecharBairros(){
 }
 
 async function garantirDadosMapaBairros(){
-  if (_geoDistritosZN && _bairrosPorDistrito) return;
+  if (_geoDistritosZN && _bairrosPorDistrito && _zonasPorDistrito) return;
   const geoEmbutido = document.getElementById('bairros-geo-embutido');
   const dadosEmbutido = document.getElementById('bairros-dados-embutido');
-  const [geo, bairros] = (geoEmbutido && dadosEmbutido)
-    ? [JSON.parse(geoEmbutido.textContent), JSON.parse(dadosEmbutido.textContent)]
+  const zonasEmbutido = document.getElementById('bairros-zonas-embutido');
+  const [geo, bairros, zonas] = (geoEmbutido && dadosEmbutido && zonasEmbutido)
+    ? [JSON.parse(geoEmbutido.textContent), JSON.parse(dadosEmbutido.textContent), JSON.parse(zonasEmbutido.textContent)]
     : await Promise.all([
         fetch('./data/distritos-zona-norte.geojson').then(r => r.json()),
-        fetch('./data/bairros-por-distrito.json').then(r => r.json())
+        fetch('./data/bairros-por-distrito.json').then(r => r.json()),
+        fetch('./data/zonas-eleitorais-por-distrito.json').then(r => r.json())
       ]);
   _geoDistritosZN = geo;
   _bairrosPorDistrito = bairros;
+  _zonasPorDistrito = zonas;
 }
 
 async function carregarMapaBairros(){
@@ -2048,7 +3528,7 @@ async function carregarMapaBairros(){
   wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#999;font-size:13px;">Carregando mapa...</div>';
   try {
     await garantirDadosMapaBairros();
-    desenharMapaBairros(_geoDistritosZN, _bairrosPorDistrito);
+    desenharMapaBairros(_geoDistritosZN, _bairrosPorDistrito, _zonasPorDistrito);
   } catch (e) {
     wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#c0392b;font-size:13px;">Não foi possível carregar o mapa dos bairros.</div>';
     console.error('Erro ao carregar mapa de bairros:', e);
@@ -2065,7 +3545,7 @@ const CORES_SUBPREF_ZN = {
   'PERUS':'#023047', 'ANHANGUERA':'#023047'
 };
 
-function desenharMapaBairros(geo, bairrosPorDistrito){
+function desenharMapaBairros(geo, bairrosPorDistrito, zonasPorDistrito){
   const wrap = document.getElementById('bairros-svg-wrap');
   wrap.innerHTML = '';
   const width  = wrap.clientWidth || 660;
@@ -2086,7 +3566,7 @@ function desenharMapaBairros(geo, bairrosPorDistrito){
     }
     pathSelecionado = elemento;
     d3.select(elemento).attr('stroke-width', 3).attr('stroke', '#222').attr('fill-opacity', 1);
-    mostrarInfoDistrito(props, bairrosPorDistrito);
+    mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito);
   }
 
   svg.selectAll('path')
@@ -2150,12 +3630,14 @@ function filtrarBairros() {
   document.getElementById('bairros-vazio').style.display = (q && visiveis === 0) ? 'block' : 'none';
 }
 
-function mostrarInfoDistrito(props, bairrosPorDistrito){
+function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   const titulo = document.getElementById('bairros-info-titulo');
   const sub    = document.getElementById('bairros-info-sub');
   const pills  = document.getElementById('bairros-pills');
   const search = document.getElementById('bairros-search');
   const vazio  = document.getElementById('bairros-vazio');
+  const zonasTitulo = document.getElementById('bairros-zonas-titulo');
+  const zonasPills  = document.getElementById('bairros-zonas-pills');
 
   const lista = (bairrosPorDistrito[props.id] || []).slice().sort((a, b) => a.localeCompare(b, 'pt-BR'));
   titulo.textContent = props.nome;
@@ -2163,8 +3645,201 @@ function mostrarInfoDistrito(props, bairrosPorDistrito){
   pills.innerHTML = lista.map(b => `<a class="bairros-pill" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth">📍 ${b}</a>`).join('');
   search.value = '';
   vazio.style.display = 'none';
+
+  const zonas = (zonasPorDistrito && zonasPorDistrito[props.id]) || [];
+  if (zonas.length) {
+    zonasTitulo.textContent = `Zona${zonas.length > 1 ? 's' : ''} eleitoral${zonas.length > 1 ? 'is' : ''} (TRE-SP)`;
+    zonasPills.innerHTML = zonas.map(z => `<span class="bairros-pill-zona">${z}ª ZE</span>`).join('');
+  } else {
+    zonasTitulo.textContent = '';
+    zonasPills.innerHTML = '';
+  }
+}
+</script>
+
+<script>
+// ── RANKING DE VEREADORES DA ZONA NORTE ──
+// Os dados vêm do script#dados-vereadores-zn (reescrito por gerar-portau.js a
+// partir de data/vereadores-zona-norte.json a cada geração diária). Essa lógica
+// de render/expand/modal em si não muda com os dados.
+const REGIOES_ORDEM = ['Centro', 'Sul', 'Leste', 'Oeste'];
+
+function lerDadosVereadores(){
+  const el = document.getElementById('dados-vereadores-zn');
+  if (!el || !el.textContent.trim() || el.textContent.includes('__DADOS_VEREADORES_ZN__')) return null;
+  try { return JSON.parse(el.textContent); } catch (e) { console.error('Erro ao ler dados de vereadores:', e); return null; }
 }
 
+function iniciaisNome(nome){
+  const PARTICULAS = new Set(['da','de','do','das','dos','e']);
+  const partes = nome.split(' ').filter(p => p && !PARTICULAS.has(p.toLowerCase()));
+  if (partes.length === 0) return '?';
+  if (partes.length === 1) return partes[0][0].toUpperCase();
+  return (partes[0][0] + partes[partes.length - 1][0]).toUpperCase();
+}
+
+function renderMiniRegioes(subprefeituras, limit, idPrefix){
+  const lista = limit ? subprefeituras.slice(0, limit) : subprefeituras;
+  const max = Math.max(...subprefeituras.map(r => r.votos), 1);
+  return lista.map((r, i) => `
+    <div class="regiao-linha">
+      <span class="regiao-nome">${r.nome}</span>
+      <span class="regiao-bar-wrap"><span class="regiao-bar-fill" id="${idPrefix}-${i}" data-w="${Math.round(r.votos / max * 100)}"></span></span>
+      <span class="regiao-votos">${r.votos.toLocaleString('pt-BR')}</span>
+    </div>`).join('');
+}
+
+function montarRankingVereadores(){
+  const dados = lerDadosVereadores();
+  const el = document.getElementById('ranking-vereadores');
+  if (!el) return;
+  if (!dados || !dados.vereadores || !dados.vereadores.length) {
+    el.innerHTML = '<p style="font-size:13px;color:var(--cinza-m);">Ranking ainda não disponível.</p>';
+    return;
+  }
+  const vereadores = dados.vereadores;
+  const maxVotos = Math.max(...vereadores.map(v => v.votacao_zona_norte.votos_zona_norte));
+
+  el.innerHTML = vereadores.map((v, i) => {
+    const rank = i + 1;
+    const zn = v.votacao_zona_norte;
+    const recente = v.atividades && v.atividades.length ? v.atividades[0] : null;
+    return `
+    <div class="rank-row ${rank<=3?'top3':'fora-top3'}" id="row-${v.id}" onclick="toggleExpandVereador('${v.id}')">
+      <div class="rank-linha-topo">
+        <div class="rank-num">${rank}</div>
+        <div class="rank-avatar">${iniciaisNome(v.nome)}</div>
+        <div>
+          <div class="rank-info-nome">${v.nome}</div>
+          <div class="rank-info-partido">${v.partido}</div>
+        </div>
+        <div class="rank-numeros">
+          <div class="rank-votos">${zn.votos_zona_norte.toLocaleString('pt-BR')}<span class="rank-seta">⌄</span></div>
+          <div class="rank-pct">${zn.percentual_da_votacao_total.toFixed(1).replace('.', ',')}% dos votos dele</div>
+        </div>
+      </div>
+      <div class="rank-bar-wrap"><div class="rank-bar-fill" id="bar-${v.id}" style="width:0%"></div></div>
+      <div class="rank-expand">
+        <div class="expand-conteudo">
+          <div class="regioes-titulo">Onde mais recebeu votos na Zona Norte</div>
+          ${renderMiniRegioes(zn.subprefeituras, 3, 'mini-' + v.id)}
+          <div class="expand-linha" style="margin-top:8px;"><b>${v.atividades.length}</b> atividade(s) registrada(s) na Zona Norte</div>
+          ${recente
+            ? `<div class="expand-recente"><b>Mais recente:</b> ${recente.titulo} <span style="color:var(--cinza-m);">(${recente.data_apresentacao ? new Date(recente.data_apresentacao).toLocaleDateString('pt-BR') : ''})</span></div>`
+            : `<div class="expand-recente sem-atividades">Ainda sem atividades legislativas registradas.</div>`}
+          <button class="btn-perfil" onclick="event.stopPropagation();abrirPerfil('${v.id}')">Ver histórico completo →</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      vereadores.forEach(v => {
+        const larguraBarra = Math.round(v.votacao_zona_norte.votos_zona_norte / maxVotos * 100);
+        const barEl = document.getElementById('bar-' + v.id);
+        if (barEl) barEl.style.width = larguraBarra + '%';
+      });
+    }, 80);
+  });
+}
+
+function toggleExpandVereador(id){
+  const row = document.getElementById('row-' + id);
+  const abrindo = !row.classList.contains('aberto');
+  row.classList.toggle('aberto');
+  if (abrindo) {
+    row.querySelectorAll('.regiao-bar-fill').forEach(elBar => {
+      requestAnimationFrame(() => { elBar.style.width = elBar.dataset.w + '%'; });
+    });
+  }
+}
+
+const STATUS_LABEL = {
+  apresentada: 'Apresentada', em_tramitacao: 'Em tramitação', aprovado: 'Aprovado',
+  arquivado: 'Arquivado', vetado: 'Vetado', atendida: 'Atendida',
+};
+const TIPO_LABEL = {
+  indicacao: 'Indicação', projeto_de_lei: 'Projeto de Lei',
+  requerimento: 'Requerimento', emenda_orcamentaria: 'Emenda orçamentária',
+};
+
+function abrirPerfil(id){
+  const dados = lerDadosVereadores();
+  const v = dados.vereadores.find(x => x.id === id);
+  if (!v) return;
+  const zn = v.votacao_zona_norte;
+
+  document.getElementById('perfil-avatar').textContent = iniciaisNome(v.nome);
+  document.getElementById('perfil-nome').textContent = v.nome;
+  document.getElementById('perfil-partido').textContent = v.partido + ' — Câmara Municipal de São Paulo';
+  document.getElementById('perfil-votos').textContent = zn.votos_zona_norte.toLocaleString('pt-BR');
+  document.getElementById('perfil-votos-total').textContent = zn.votos_totais_2024.toLocaleString('pt-BR');
+  document.getElementById('perfil-pct').textContent = zn.percentual_da_votacao_total.toFixed(1).replace('.', ',') + '%';
+  document.getElementById('perfil-secoes').textContent = zn.secoes_eleitorais_zn.toLocaleString('pt-BR');
+
+  document.getElementById('perfil-regioes').innerHTML = renderMiniRegioes(zn.subprefeituras, null, 'modal-' + v.id);
+  requestAnimationFrame(() => {
+    document.querySelectorAll('#perfil-regioes .regiao-bar-fill').forEach(elBar => {
+      requestAnimationFrame(() => { elBar.style.width = elBar.dataset.w + '%'; });
+    });
+  });
+
+  // Outras regiões da cidade: acordeão fechado por padrão (drill-down sob demanda)
+  const outras = v.votacao_outras_regioes_sp || {};
+  document.getElementById('perfil-outras-regioes').innerHTML = REGIOES_ORDEM.map(reg => {
+    const info = outras[reg] || { votos: 0, percentual: 0 };
+    return `
+    <div class="regiao-acordeao" id="acordeao-${v.id}-${reg}">
+      <div class="regiao-acordeao-cabeca" onclick="toggleAcordeaoRegiao('${v.id}','${reg}')">
+        <span>${reg}</span>
+        <span><span class="ac-pct">${info.percentual.toFixed(1).replace('.', ',')}%</span><span class="ac-seta">⌄</span></span>
+      </div>
+      <div class="regiao-acordeao-corpo">
+        <div class="regiao-acordeao-corpo-in">
+          <div class="regiao-linha" style="margin-top:8px;">
+            <span class="regiao-nome">Votos em ${reg}</span>
+            <span class="regiao-bar-wrap"><span class="regiao-bar-fill" style="width:${Math.min(100, info.percentual)}%"></span></span>
+            <span class="regiao-votos">${info.votos.toLocaleString('pt-BR')}</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  const historico = document.getElementById('perfil-historico');
+  if (!v.atividades || !v.atividades.length) {
+    historico.innerHTML = '<p class="sem-atividades">Ainda sem atividades legislativas registradas na Zona Norte.</p>';
+  } else {
+    historico.innerHTML = v.atividades.map(a => `
+      <div class="atividade">
+        <div class="atividade-topo">
+          <span class="atividade-titulo">${a.titulo}</span>
+          <span class="status-pill status-${a.status}">${STATUS_LABEL[a.status] || a.status}</span>
+        </div>
+        <div class="atividade-meta">
+          <span>${TIPO_LABEL[a.tipo] || a.tipo}</span>
+          ${a.bairro ? '<span>· ' + a.bairro + '</span>' : ''}
+          ${a.data_apresentacao ? '<span>· ' + new Date(a.data_apresentacao).toLocaleDateString('pt-BR') + '</span>' : ''}
+          ${a.fonte_url ? `<span class="atividade-fonte">· <a href="${a.fonte_url}" target="_blank" rel="noopener">fonte oficial</a></span>` : ''}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  document.getElementById('perfil-overlay').classList.add('aberto');
+}
+function fecharPerfil(){
+  document.getElementById('perfil-overlay').classList.remove('aberto');
+}
+function toggleAcordeaoRegiao(vid, reg){
+  document.getElementById(`acordeao-${vid}-${reg}`).classList.toggle('aberto');
+}
+
+document.addEventListener('DOMContentLoaded', montarRankingVereadores);
+</script>
+
+<script>
 // --- SELECAO MULTIPLA DE LOCAL (mesmo padrao do modal Bairros, para o formulario "Anuncie sua vaga") ---
 let _selecaoLocalVaga = { distritosCompletos: new Set(), bairrosParciais: {} };
 let _distritoAtivoLocalVaga = null;
@@ -3437,7 +5112,7 @@ async function prepararContatoAnuncioVaga() {
 
   const infoEl = document.getElementById('anuncio-vaga-empresa-info');
   infoEl.innerHTML = `
-    <div><strong>Domingo, 13 de setembro de 2026 · Gerado às 21:17</strong> ${escapeHtml(nomeEmpresa)}</div>
+    <div><strong>Segunda-feira, 14 de setembro de 2026 · Gerado às 19:29</strong> ${escapeHtml(nomeEmpresa)}</div>
     <div><strong>E-mail de contato:</strong> ${escapeHtml(email || 'não informado')}</div>
     <div><strong>Celular:</strong> ${escapeHtml(celular ? formatarTelefoneEmpresa(celular) : 'não informado')}</div>
     <div style="margin-top:4px;font-size:11px;">Para alterar esses dados, atualize no seu cadastro.</div>
