@@ -347,5 +347,21 @@
       "titulo": "Últimos dias da Bienal Internacional do Livro no Anhembi",
       "info": "até 13/09 · diariamente das 9h às 21h · Santana · a partir de R$ 20"
     }
-  ]
+  ],
+  "agenda_camara_semana": {
+    "nota": "Agenda geral da Câmara Municipal (não específica de vereador) — a agenda pessoal de cada um dos 18 vereadores monitorados está, na prática, quase sempre vazia no perfil oficial (\"não há eventos programados\"), então essa seção cobre o plenário como um todo e é atualizada a cada rodada, não é um histórico acumulado.",
+    "itens": [
+      {
+        "data": "2026-09-15",
+        "evento": "149ª Sessão Ordinária, 15h — Pequeno Expediente: vereadora Keit Lima (PSOL); Grande Expediente: vereador João Ananias (PT)",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/sessao-plenaria/pautas-das-sessoes/"
+      },
+      {
+        "data": "2026-09-16",
+        "evento": "5 Sessões Extraordinárias (93ª a 97ª) na sequência da sessão ordinária",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/atividade-legislativa/sessao-plenaria/pautas-das-sessoes/"
+      }
+    ],
+    "atualizado_em": "2026-09-15"
+  }
 }

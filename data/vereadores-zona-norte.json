@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-15T12:00:00.000Z",
+  "atualizado_em": "2026-09-15T02:30:00.000Z",
   "criterio_inclusao": {
     "regra": "percentual_da_votacao_total >= 20% e vereador efetivamente eleito (ELEITO POR QP ou ELEITO POR MÉDIA)",
     "percentual_minimo_da_votacao_total": 20,
@@ -162,7 +162,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 115/2022"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_001.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 99.58,
+        "dias_presente": 476,
+        "faltas_justificadas": 0,
+        "faltas_nao_justificadas": 2,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/danilo-do-posto-de-saude/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_002",
@@ -332,7 +343,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 405/2025"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_002.png",
+      "atuacao_camara": {
+        "percentual_presenca": 98.36,
+        "dias_presente": 479,
+        "faltas_justificadas": 8,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/fabio-riva/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_003",
@@ -502,7 +524,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 198/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_003.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 99.32,
+        "dias_presente": 147,
+        "faltas_justificadas": 0,
+        "faltas_nao_justificadas": 1,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/ana-carolina-oliveira/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_004",
@@ -636,7 +669,18 @@
           "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0149-2026.pdf",
           "rotulo_oficial": "PL 149/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_004.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 98.65,
+        "dias_presente": 146,
+        "faltas_justificadas": 2,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/lucas-pavanato/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_005",
@@ -794,7 +838,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 54/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_005.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 97.54,
+        "dias_presente": 475,
+        "faltas_justificadas": 12,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/sandra-santana/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_006",
@@ -952,7 +1007,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 80/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_006.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 98.59,
+        "dias_presente": 140,
+        "faltas_justificadas": 2,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/dr-murillo-lima/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_007",
@@ -1110,7 +1176,20 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 441/2025"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_007.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 96.32,
+        "dias_presente": 131,
+        "faltas_justificadas": 5,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [
+          "Múltiplas comendas e medalhas de forças de segurança e do Exército, conforme perfil oficial na Câmara"
+        ],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/sargento-nantes/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_008",
@@ -1280,7 +1359,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 462/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_008.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 94.05,
+        "dias_presente": 458,
+        "faltas_justificadas": 29,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/eliseu-gabriel/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_009",
@@ -1450,7 +1540,22 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 463/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_009.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 92.45,
+        "dias_presente": 441,
+        "faltas_justificadas": 35,
+        "faltas_nao_justificadas": 1,
+        "reconhecimentos": [
+          "Título de Comendador pela Câmara Brasileira de Cultura de São Paulo",
+          "Doutor Honoris Causa em Gestão Pública",
+          "Título Honoris Causa em Missões Urbanas e Trabalho Transcultural"
+        ],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/andre-santos/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_010",
@@ -1584,7 +1689,18 @@
           "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0657-2026.pdf",
           "rotulo_oficial": "PL 657/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_010.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 92.59,
+        "dias_presente": 125,
+        "faltas_justificadas": 10,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/gabriel-abreu/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_011",
@@ -1742,7 +1858,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 90/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_011.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 99.12,
+        "dias_presente": 337,
+        "faltas_justificadas": 3,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/major-palumbo/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_012",
@@ -1900,7 +2027,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 404/2025"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_012.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 93.26,
+        "dias_presente": 360,
+        "faltas_justificadas": 26,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/sonaira-fernandes/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_013",
@@ -2058,7 +2196,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 744/2025"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_013.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 99.79,
+        "dias_presente": 471,
+        "faltas_justificadas": 1,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/ely-teruel/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_014",
@@ -2192,7 +2341,18 @@
           "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0539-2025.pdf",
           "rotulo_oficial": "PL 539/2025"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_014.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 95.79,
+        "dias_presente": 455,
+        "faltas_justificadas": 19,
+        "faltas_nao_justificadas": 1,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/roberto-tripoli/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_015",
@@ -2326,7 +2486,18 @@
           "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0260-2026.pdf",
           "rotulo_oficial": "PL 260/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_015.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 100.0,
+        "dias_presente": 148,
+        "faltas_justificadas": 0,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/simone-ganem/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_016",
@@ -2484,7 +2655,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 405/2025"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_016.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 92.57,
+        "dias_presente": 137,
+        "faltas_justificadas": 11,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/kenji-palumbo/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_017",
@@ -2642,7 +2824,18 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 425/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_017.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 98.59,
+        "dias_presente": 140,
+        "faltas_justificadas": 2,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/keit-lima/",
+        "atualizado_em": "2026-09-15"
+      }
     },
     {
       "id": "ver_018",
@@ -2788,7 +2981,20 @@
           "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
           "rotulo_oficial": "IND 404/2026"
         }
-      ]
+      ],
+      "foto_url": "assets/vereadores/ver_018.jpg",
+      "atuacao_camara": {
+        "percentual_presenca": 89.15,
+        "dias_presente": 345,
+        "faltas_justificadas": 42,
+        "faltas_nao_justificadas": 0,
+        "reconhecimentos": [
+          "Eleito Corregedor Geral da Câmara Municipal de São Paulo (2021 e 2022, mandato anterior)"
+        ],
+        "nota": "Presença/faltas conforme contador do perfil oficial na Câmara; período do contador não é especificado pela própria Câmara, por isso comparamos por percentual (não por dias absolutos) para não penalizar quem assumiu o mandato há menos tempo (ex: suplentes).",
+        "fonte_url": "https://www.saopaulo.sp.leg.br/vereador/gilberto-nascimento/",
+        "atualizado_em": "2026-09-15"
+      }
     }
   ]
 }
