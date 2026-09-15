@@ -261,6 +261,39 @@
       "impacto": "Moradores de Jaçanã/Tremembé e das demais subprefeituras podem enviar propostas pela plataforma Participe+ para orientar investimentos e prioridades territoriais até 2029.",
       "status": "Consulta pública prorrogada até 12/09",
       "fonte": "Subprefeitura Jaçanã/Tremembé"
+    },
+    {
+      "tipo": "destaque_vereador",
+      "vereador_id": "ver_007",
+      "vereador_nome": "Sargento Nantes",
+      "partido": "PP",
+      "atividade_id": "ver_007_a001",
+      "atividade_tipo": "Projeto de Lei",
+      "titulo": "Denomina CEU Maria Rogéria de Lima o Centro Educacional Unificado na Avenida João Paulo I, Parque Monteiro Soares, distrito da Brasilândia.",
+      "bairro": "Parque Monteiro Soares",
+      "status": "apresentada"
+    },
+    {
+      "tipo": "destaque_vereador",
+      "vereador_id": "ver_010",
+      "vereador_nome": "Gabriel Abreu",
+      "partido": "PODE",
+      "atividade_id": "ver_010_a002",
+      "atividade_tipo": "Projeto de Lei",
+      "titulo": "Denomina Praça Moizes Pires dos Santos o logradouro público inominado delimitado pela Avenida Inajar de Souza, no bairro de Vila Carbone.",
+      "bairro": "Vila Carbone",
+      "status": "apresentada"
+    },
+    {
+      "tipo": "destaque_vereador",
+      "vereador_id": "ver_005",
+      "vereador_nome": "Sandra Santana",
+      "partido": "MDB",
+      "atividade_id": "ver_005_a004",
+      "atividade_tipo": "Projeto de Lei",
+      "titulo": "Denomina ‘Escadão Francisco Araújo dos Santos Pinto’ o espaço público inominado na Rua José Niccolini, bairro Vila Cavaton, distrito da Freguesia do Ó.",
+      "bairro": "Freguesia do Ó",
+      "status": "apresentada"
     }
   ],
   "alertas": [
