@@ -868,7 +868,7 @@ document.addEventListener('click', (e) => {
         <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
       </div>
       <div style="font-size:9px;color:var(--cinza-m);white-space:nowrap;">
-        <span id="clima-update">14/09/26 19:29</span><span id="clima-hora-live" style="display:none;"></span>
+        <span id="clima-update">14/09/26 23:12</span><span id="clima-hora-live" style="display:none;"></span>
       </div>
     </div>
     <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
@@ -1008,7 +1008,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="feed">
 
       <!-- NOTÍCIAS -->
-                                                                                                                                                                                              <div class="secao" id="noticias">
+                                                                                                                                                                                                <div class="secao" id="noticias">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
       <span class="secao-count">8 hoje</span>
@@ -1210,6 +1210,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
+    <!-- AGENDA -->
   <div class="secao" id="agenda">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
@@ -1271,6 +1272,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </a>
   </div>
 
+    <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
@@ -1534,7 +1536,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   </div>
 
   <script type="application/json" id="dados-vereadores-zn">{
-  "atualizado_em": "2026-09-14T22:04:56.469Z",
+  "atualizado_em": "2026-09-15T12:00:00.000Z",
   "criterio_inclusao": {
     "regra": "percentual_da_votacao_total >= 20% e vereador efetivamente eleito (ELEITO POR QP ou ELEITO POR MÉDIA)",
     "percentual_minimo_da_votacao_total": 20,
@@ -1545,7 +1547,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
       "id": "ver_001",
       "nome": "Danilo do Posto de Saúde",
       "partido": "PODE",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/danilo-do-posto-de-saude/",
       "votacao_zona_norte": {
         "votos_totais_2024": 58676,
         "votos_zona_norte": 52967,
@@ -1612,13 +1614,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 0.48
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_001_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Autoriza o Poder Executivo a implantar o Programa Municipal de Educação Humanitária e Proteção Animal “Esta Escola é o Bicho” na rede municipal de ensino de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Autoriza o Poder Executivo a implantar o Programa Municipal de Educação Humanitária e Proteção Animal “Esta Escola é o Bicho” na rede municipal de ensino de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0152-2026.pdf",
+          "rotulo_oficial": "PL 152/2026"
+        },
+        {
+          "id": "ver_001_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui a Campanha \"Janeiro Vermelho - Cão Orelha\" no Município de São Paulo, dedicada à conscientização sobre a proteção animal, prevenção contra a crueldade e promoção da conviv",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui a Campanha \"Janeiro Vermelho - Cão Orelha\" no Município de São Paulo, dedicada à conscientização sobre a proteção animal, prevenção contra a crueldade e promoção da convivência ética multiespécie.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0151-2026.pdf",
+          "rotulo_oficial": "PL 151/2026"
+        },
+        {
+          "id": "ver_001_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Plano Municipal de Justiça Climática e de Cidade Verde do Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Plano Municipal de Justiça Climática e de Cidade Verde do Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0887-2025.pdf",
+          "rotulo_oficial": "PL 887/2025"
+        },
+        {
+          "id": "ver_001_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Fica denominado \"Praça Natália Hipólito\" o espaço público inominado existente entre a Av. Mal. Eurico Gaspar Dutra e Rua Tomé Portes, situado no distrito de Santana/Tucuruvi.",
+          "bairro": "Tucuruvi",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Fica denominado \"Praça Natália Hipólito\" o espaço público inominado existente entre a Av. Mal. Eurico Gaspar Dutra e Rua Tomé Portes, situado no distrito de Santana/Tucuruvi.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0738-2025.pdf",
+          "rotulo_oficial": "PL 738/2025"
+        },
+        {
+          "id": "ver_001_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera o nome da Rua Dos Camarés, localizada no município de São Paulo, para Rua Dos Camarés Silvio Santos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera o nome da Rua Dos Camarés, localizada no município de São Paulo, para Rua Dos Camarés Silvio Santos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0600-2024.pdf",
+          "rotulo_oficial": "PL 600/2024"
+        },
+        {
+          "id": "ver_001_a006",
+          "tipo": "Indicação",
+          "titulo": "Implantação de um NCI - Núcleo de Convivência do Idoso no distrito de Vila Medeiros.",
+          "bairro": "Vila Medeiros",
+          "status": "apresentada",
+          "data_apresentacao": "2022-09-15",
+          "data_ultima_atualizacao": "2022-09-15",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Implantação de um NCI - Núcleo de Convivência do Idoso no distrito de Vila Medeiros.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 112/2022"
+        },
+        {
+          "id": "ver_001_a007",
+          "tipo": "Indicação",
+          "titulo": "Implantação de um Centro Dia para o Idoso (CDI) no distrito de Vila Medeiros.",
+          "bairro": "Vila Medeiros",
+          "status": "apresentada",
+          "data_apresentacao": "2022-09-19",
+          "data_ultima_atualizacao": "2022-09-19",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Implantação de um Centro Dia para o Idoso (CDI) no distrito de Vila Medeiros.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 115/2022"
+        }
+      ]
     },
     {
       "id": "ver_002",
       "nome": "Fabio Riva",
       "partido": "MDB",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/fabio-riva/",
       "votacao_zona_norte": {
         "votos_totais_2024": 44627,
         "votos_zona_norte": 38382,
@@ -1685,13 +1772,110 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 7.84
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_002_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a denominação da Rua Jules Rimet, no trecho compreendido entre os números 1 e 315, para Rua Telê Santana.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a denominação da Rua Jules Rimet, no trecho compreendido entre os números 1 e 315, para Rua Telê Santana.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0715-2026.pdf",
+          "rotulo_oficial": "PL 715/2026"
+        },
+        {
+          "id": "ver_002_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Declara a Sociedade Esportiva Palmeiras patrimônio imaterial do Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Declara a Sociedade Esportiva Palmeiras patrimônio imaterial do Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0686-2026.pdf",
+          "rotulo_oficial": "PL 686/2026"
+        },
+        {
+          "id": "ver_002_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Denomina como “Viela Jurandir Alves de Queiroz” a via localizada entre a rua Custódio Guimarães e a rua Benvenutto Franci, no Jardim Cidade Pirituba.",
+          "bairro": "Jardim Cidade Pirituba",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Denomina como “Viela Jurandir Alves de Queiroz” a via localizada entre a rua Custódio Guimarães e a rua Benvenutto Franci, no Jardim Cidade Pirituba.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0685-2026.pdf",
+          "rotulo_oficial": "PL 685/2026"
+        },
+        {
+          "id": "ver_002_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o Dia das Diretoras e Diretores de Harmonia das Escolas de Samba, em 25 de novembro, no calendário de eventos do município.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o Dia das Diretoras e Diretores de Harmonia das Escolas de Samba, em 25 de novembro, no calendário de eventos do município.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0651-2026.pdf",
+          "rotulo_oficial": "PL 651/2026"
+        },
+        {
+          "id": "ver_002_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a denominação da Rua Águas Claras do Sul para Rua Alayde Eulalia dos Santos Ribeiro, na Subprefeitura de Perus/Anhanguera.",
+          "bairro": "Anhanguera",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a denominação da Rua Águas Claras do Sul para Rua Alayde Eulalia dos Santos Ribeiro, na Subprefeitura de Perus/Anhanguera.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0586-2026.pdf",
+          "rotulo_oficial": "PL 586/2026"
+        },
+        {
+          "id": "ver_002_a006",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Saúde: hospital, hospital veterinário, CAPS adulto e infantil, UPA, UBS, clínica odontológica.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-07-14",
+          "data_ultima_atualizacao": "2025-07-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Saúde: hospital, hospital veterinário, CAPS adulto e infantil, UPA, UBS, clínica odontológica.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 400/2025"
+        },
+        {
+          "id": "ver_002_a007",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Segurança Pública Municipal: patrulhamento, Delegacia da Mulher, câmeras de segurança, poluição sonora.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-07-14",
+          "data_ultima_atualizacao": "2025-07-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Segurança Pública Municipal: patrulhamento, Delegacia da Mulher, câmeras de segurança, poluição sonora.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 401/2025"
+        },
+        {
+          "id": "ver_002_a008",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Zeladoria: tapa-buraco, limpeza de córrego, entulho, lixeiras, calçadas.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-07-14",
+          "data_ultima_atualizacao": "2025-07-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Zeladoria: tapa-buraco, limpeza de córrego, entulho, lixeiras, calçadas.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 405/2025"
+        }
+      ]
     },
     {
       "id": "ver_003",
       "nome": "Ana Carolina Oliveira",
       "partido": "PODE",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/ana-carolina-oliveira/",
       "votacao_zona_norte": {
         "votos_totais_2024": 129563,
         "votos_zona_norte": 37490,
@@ -1758,13 +1942,110 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 9.34
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_003_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a exclusão de benefícios financeiros ou isenções de taxas ou impostos municipais a pessoas condenadas por crimes de violência sexual, psicológica ou tortura.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a exclusão de benefícios financeiros ou isenções de taxas ou impostos municipais a pessoas condenadas por crimes de violência sexual, psicológica ou tortura.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0349-2026.pdf",
+          "rotulo_oficial": "PL 349/2026"
+        },
+        {
+          "id": "ver_003_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 17.910/2023, que veda a nomeação de pessoa condenada com base na Lei Maria da Penha para cargos públicos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 17.910/2023, que veda a nomeação de pessoa condenada com base na Lei Maria da Penha para cargos públicos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0348-2026.pdf",
+          "rotulo_oficial": "PL 348/2026"
+        },
+        {
+          "id": "ver_003_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa Municipal de Proteção Digital de Crianças e Adolescentes.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa Municipal de Proteção Digital de Crianças e Adolescentes.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0224-2026.pdf",
+          "rotulo_oficial": "PL 224/2026"
+        },
+        {
+          "id": "ver_003_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei 17.851/2022 para ampliar os benefícios para os “Filhos do Feminicídio”.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei 17.851/2022 para ampliar os benefícios para os “Filhos do Feminicídio”.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0223-2026.pdf",
+          "rotulo_oficial": "PL 223/2026"
+        },
+        {
+          "id": "ver_003_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a instituição da “Logística da Saúde” no Município de São Paulo, para garantir acesso logístico subsidiado a pacientes.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a instituição da “Logística da Saúde” no Município de São Paulo, para garantir acesso logístico subsidiado a pacientes.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0133-2026.pdf",
+          "rotulo_oficial": "PL 133/2026"
+        },
+        {
+          "id": "ver_003_a006",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Saúde.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-04-14",
+          "data_ultima_atualizacao": "2026-04-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Saúde.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 194/2026"
+        },
+        {
+          "id": "ver_003_a007",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Segurança.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-04-14",
+          "data_ultima_atualizacao": "2026-04-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Segurança.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 195/2026"
+        },
+        {
+          "id": "ver_003_a008",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Zeladoria.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-04-14",
+          "data_ultima_atualizacao": "2026-04-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Zeladoria.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 198/2026"
+        }
+      ]
     },
     {
       "id": "ver_004",
       "nome": "Lucas Pavanato",
       "partido": "PL",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/lucas-pavanato/",
       "votacao_zona_norte": {
         "votos_totais_2024": 161386,
         "votos_zona_norte": 34759,
@@ -1831,13 +2112,74 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 11.31
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_004_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa Municipal de Desenvolvimento da Leitura, da Escrita e da Argumentação na Rede Municipal de Ensino e cria a Semana Municipal da Leitura e da Escrita.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa Municipal de Desenvolvimento da Leitura, da Escrita e da Argumentação na Rede Municipal de Ensino e cria a Semana Municipal da Leitura e da Escrita.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0604-2026.pdf",
+          "rotulo_oficial": "PL 604/2026"
+        },
+        {
+          "id": "ver_004_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o \"Dia Municipal de Combate à Obesidade e Conscientização sobre os Malefícios da Obesidade\" no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o \"Dia Municipal de Combate à Obesidade e Conscientização sobre os Malefícios da Obesidade\" no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0565-2026.pdf",
+          "rotulo_oficial": "PL 565/2026"
+        },
+        {
+          "id": "ver_004_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 17.572/2021 sobre a permissão de uso das faixas exclusivas e corredores de ônibus por táxis.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 17.572/2021 sobre a permissão de uso das faixas exclusivas e corredores de ônibus por táxis.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0564-2026.pdf",
+          "rotulo_oficial": "PL 564/2026"
+        },
+        {
+          "id": "ver_004_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a denominação da Rua Carlos Marighella para Rua Cleriston Pereira da Cunha.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a denominação da Rua Carlos Marighella para Rua Cleriston Pereira da Cunha.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0227-2026.pdf",
+          "rotulo_oficial": "PL 227/2026"
+        },
+        {
+          "id": "ver_004_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Revoga as Leis nº 13.791/2004 e 15.939/2013 e institui sistema de cotas sociais para concursos públicos municipais.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Revoga as Leis nº 13.791/2004 e 15.939/2013 e institui sistema de cotas sociais para concursos públicos municipais.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0149-2026.pdf",
+          "rotulo_oficial": "PL 149/2026"
+        }
+      ]
     },
     {
       "id": "ver_005",
       "nome": "Sandra Santana",
       "partido": "MDB",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/sandra-santana/",
       "votacao_zona_norte": {
         "votos_totais_2024": 38326,
         "votos_zona_norte": 34245,
@@ -1904,13 +2246,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 3.86
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_005_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir no calendário de eventos a “Agosto Lilás – Caminhada Morro Grande por Elas”.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir no calendário de eventos a “Agosto Lilás – Caminhada Morro Grande por Elas”.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0674-2026.pdf",
+          "rotulo_oficial": "PL 674/2026"
+        },
+        {
+          "id": "ver_005_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir a Semana Comemorativa de início do evento “Casa Cor” no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir a Semana Comemorativa de início do evento “Casa Cor” no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0645-2026.pdf",
+          "rotulo_oficial": "PL 645/2026"
+        },
+        {
+          "id": "ver_005_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir a Copa do Brasil de Futebol 7 – Society no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir a Copa do Brasil de Futebol 7 – Society no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0592-2026.pdf",
+          "rotulo_oficial": "PL 592/2026"
+        },
+        {
+          "id": "ver_005_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Denomina ‘Escadão Francisco Araújo dos Santos Pinto’ o espaço público inominado na Rua José Niccolini, bairro Vila Cavaton, distrito da Freguesia do Ó.",
+          "bairro": "Freguesia do Ó",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Denomina ‘Escadão Francisco Araújo dos Santos Pinto’ o espaço público inominado na Rua José Niccolini, bairro Vila Cavaton, distrito da Freguesia do Ó.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0558-2026.pdf",
+          "rotulo_oficial": "PL 558/2026"
+        },
+        {
+          "id": "ver_005_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o “Dia do K-pop” no calendário de eventos, valorizando a cultura coreana.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o “Dia do K-pop” no calendário de eventos, valorizando a cultura coreana.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0523-2026.pdf",
+          "rotulo_oficial": "PL 523/2026"
+        },
+        {
+          "id": "ver_005_a006",
+          "tipo": "Indicação",
+          "titulo": "Centro Municipal de Capacitação e Treinamento.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-02-04",
+          "data_ultima_atualizacao": "2026-02-04",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Centro Municipal de Capacitação e Treinamento.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 25/2026"
+        },
+        {
+          "id": "ver_005_a007",
+          "tipo": "Indicação",
+          "titulo": "Catadores, reciclagem e Programa Operação Trabalho (POT).",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-02-12",
+          "data_ultima_atualizacao": "2026-02-12",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Catadores, reciclagem e Programa Operação Trabalho (POT).",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 54/2026"
+        }
+      ]
     },
     {
       "id": "ver_006",
       "nome": "Dr. Murillo Lima",
       "partido": "PP",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/dr-murillo-lima/",
       "votacao_zona_norte": {
         "votos_totais_2024": 113820,
         "votos_zona_norte": 28723,
@@ -1977,13 +2404,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 9.26
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_006_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.761/2008 para incluir notificação obrigatória aos órgãos de segurança pública em casos de maus-tratos a animais em estabelecimentos comerciais.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.761/2008 para incluir notificação obrigatória aos órgãos de segurança pública em casos de maus-tratos a animais em estabelecimentos comerciais.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0368-2026.pdf",
+          "rotulo_oficial": "PL 368/2026"
+        },
+        {
+          "id": "ver_006_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a ampliação e descentralização, via credenciamento de clínicas e hospitais veterinários privados, do atendimento médico veterinário público a cães e gatos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a ampliação e descentralização, via credenciamento de clínicas e hospitais veterinários privados, do atendimento médico veterinário público a cães e gatos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0183-2026.pdf",
+          "rotulo_oficial": "PL 183/2026"
+        },
+        {
+          "id": "ver_006_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre o sepultamento de cães e gatos em campas e jazigos nos cemitérios do Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre o sepultamento de cães e gatos em campas e jazigos nos cemitérios do Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0080-2026.pdf",
+          "rotulo_oficial": "PL 80/2026"
+        },
+        {
+          "id": "ver_006_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 13.131/2001, que disciplina a criação, posse e transporte de cães e gatos, para dispor sobre responsabilidade adicional.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 13.131/2001, que disciplina a criação, posse e transporte de cães e gatos, para dispor sobre responsabilidade adicional.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0063-2026.pdf",
+          "rotulo_oficial": "PL 63/2026"
+        },
+        {
+          "id": "ver_006_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir a “JaneirOrelha – Mês de Conscientização sobre maus-tratos a animais” no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir a “JaneirOrelha – Mês de Conscientização sobre maus-tratos a animais” no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0047-2026.pdf",
+          "rotulo_oficial": "PL 47/2026"
+        },
+        {
+          "id": "ver_006_a006",
+          "tipo": "Indicação",
+          "titulo": "Distribuição gratuita de medicamentos para esporotricose animal.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-03-06",
+          "data_ultima_atualizacao": "2026-03-06",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Distribuição gratuita de medicamentos para esporotricose animal.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 78/2026"
+        },
+        {
+          "id": "ver_006_a007",
+          "tipo": "Indicação",
+          "titulo": "Linha Rosa do transporte coletivo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-03-06",
+          "data_ultima_atualizacao": "2026-03-06",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Linha Rosa do transporte coletivo.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 80/2026"
+        }
+      ]
     },
     {
       "id": "ver_007",
       "nome": "Sargento Nantes",
       "partido": "PP",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/sargento-nantes/",
       "votacao_zona_norte": {
         "votos_totais_2024": 112484,
         "votos_zona_norte": 23077,
@@ -2050,13 +2562,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 7.66
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_007_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Denomina CEU Maria Rogéria de Lima o Centro Educacional Unificado na Avenida João Paulo I, Parque Monteiro Soares, distrito da Brasilândia.",
+          "bairro": "Parque Monteiro Soares",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Denomina CEU Maria Rogéria de Lima o Centro Educacional Unificado na Avenida João Paulo I, Parque Monteiro Soares, distrito da Brasilândia.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0711-2026.pdf",
+          "rotulo_oficial": "PL 711/2026"
+        },
+        {
+          "id": "ver_007_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a suspensão de decisão final em processo administrativo disciplinar contra integrante da Guarda Civil Metropolitana quando os mesmos fatos forem objeto de processo cri",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a suspensão de decisão final em processo administrativo disciplinar contra integrante da Guarda Civil Metropolitana quando os mesmos fatos forem objeto de processo criminal.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0703-2026.pdf",
+          "rotulo_oficial": "PL 703/2026"
+        },
+        {
+          "id": "ver_007_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre transporte gratuito ou ressarcimento de despesas de locomoção a Agentes Comunitários de Saúde e Agentes de Combate às Endemias.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre transporte gratuito ou ressarcimento de despesas de locomoção a Agentes Comunitários de Saúde e Agentes de Combate às Endemias.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0568-2026.pdf",
+          "rotulo_oficial": "PL 568/2026"
+        },
+        {
+          "id": "ver_007_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa Municipal de Educação e Proteção Animal Assistida por Cães Institucionais na rede de ensino municipal.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa Municipal de Educação e Proteção Animal Assistida por Cães Institucionais na rede de ensino municipal.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0399-2026.pdf",
+          "rotulo_oficial": "PL 399/2026"
+        },
+        {
+          "id": "ver_007_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre ressarcimento ao Município das despesas com saúde, socorro, trânsito e infraestrutura decorrentes de acidentes de trânsito.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre ressarcimento ao Município das despesas com saúde, socorro, trânsito e infraestrutura decorrentes de acidentes de trânsito.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0387-2026.pdf",
+          "rotulo_oficial": "PL 387/2026"
+        },
+        {
+          "id": "ver_007_a006",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Cultura: atividades e produtores culturais.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-08-07",
+          "data_ultima_atualizacao": "2025-08-07",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Cultura: atividades e produtores culturais.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 440/2025"
+        },
+        {
+          "id": "ver_007_a007",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Assistência Social: ONGs e casas para idosos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-08-07",
+          "data_ultima_atualizacao": "2025-08-07",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Assistência Social: ONGs e casas para idosos.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 441/2025"
+        }
+      ]
     },
     {
       "id": "ver_008",
       "nome": "Eliseu Gabriel",
       "partido": "PSB",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/eliseu-gabriel/",
       "votacao_zona_norte": {
         "votos_totais_2024": 30706,
         "votos_zona_norte": 20713,
@@ -2123,13 +2720,110 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 18.41
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_008_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para inserir a Virada Indígena no Calendário de Eventos da Cidade de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para inserir a Virada Indígena no Calendário de Eventos da Cidade de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0708-2026.pdf",
+          "rotulo_oficial": "PL 708/2026"
+        },
+        {
+          "id": "ver_008_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o programa paulistano de atenção e prevenção à saúde do adolescente.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o programa paulistano de atenção e prevenção à saúde do adolescente.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0692-2026.pdf",
+          "rotulo_oficial": "PL 692/2026"
+        },
+        {
+          "id": "ver_008_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a individualização, para fins de denominação oficial, da área integrante da Praça São João da Cruz, atribuindo-lhe o nome de Praça Dr. Azzo Widman.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a individualização, para fins de denominação oficial, da área integrante da Praça São João da Cruz, atribuindo-lhe o nome de Praça Dr. Azzo Widman.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0665-2026.pdf",
+          "rotulo_oficial": "PL 665/2026"
+        },
+        {
+          "id": "ver_008_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a instalação, na Praça da República, de monumentos em homenagem a Mestre Ananias e Mestre Joel.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a instalação, na Praça da República, de monumentos em homenagem a Mestre Ananias e Mestre Joel.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0620-2026.pdf",
+          "rotulo_oficial": "PL 620/2026"
+        },
+        {
+          "id": "ver_008_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a vedação da veiculação de publicidade de plataformas de apostas de quota fixa (bets) em bens e espaços públicos do Município.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a vedação da veiculação de publicidade de plataformas de apostas de quota fixa (bets) em bens e espaços públicos do Município.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0605-2026.pdf",
+          "rotulo_oficial": "PL 605/2026"
+        },
+        {
+          "id": "ver_008_a006",
+          "tipo": "Indicação",
+          "titulo": "Ampliação de área escolar na EMEF Josué de Castro.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-03-03",
+          "data_ultima_atualizacao": "2026-03-03",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Ampliação de área escolar na EMEF Josué de Castro.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 76/2026"
+        },
+        {
+          "id": "ver_008_a007",
+          "tipo": "Indicação",
+          "titulo": "Passarela coberta.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-09-01",
+          "data_ultima_atualizacao": "2026-09-01",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Passarela coberta.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 459/2026"
+        },
+        {
+          "id": "ver_008_a008",
+          "tipo": "Indicação",
+          "titulo": "Melhorias de asfalto.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-09-10",
+          "data_ultima_atualizacao": "2026-09-10",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Melhorias de asfalto.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 462/2026"
+        }
+      ]
     },
     {
       "id": "ver_009",
       "nome": "André Santos",
       "partido": "REPUBLICANOS",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/andre-santos/",
       "votacao_zona_norte": {
         "votos_totais_2024": 41379,
         "votos_zona_norte": 16688,
@@ -2196,13 +2890,110 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 11.63
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_009_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Denomina Praça Maria José Leandro da Cruz o logradouro público inominado situado no Distrito do Itaim Paulista.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Denomina Praça Maria José Leandro da Cruz o logradouro público inominado situado no Distrito do Itaim Paulista.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0254-2026.pdf",
+          "rotulo_oficial": "PL 254/2026"
+        },
+        {
+          "id": "ver_009_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Denomina Praça José Roberto de Souza o logradouro público inominado situado no Distrito da Freguesia do Ó, Subprefeitura Freguesia/Brasilândia.",
+          "bairro": "Freguesia do Ó",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Denomina Praça José Roberto de Souza o logradouro público inominado situado no Distrito da Freguesia do Ó, Subprefeitura Freguesia/Brasilândia.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0253-2026.pdf",
+          "rotulo_oficial": "PL 253/2026"
+        },
+        {
+          "id": "ver_009_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o “Espaço Sensorial Valentina Salmeron Barbosa dos Santos” nos CEUs do Município, para acolhimento e regulação sensorial de pessoas com deficiência.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o “Espaço Sensorial Valentina Salmeron Barbosa dos Santos” nos CEUs do Município, para acolhimento e regulação sensorial de pessoas com deficiência.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0220-2026.pdf",
+          "rotulo_oficial": "PL 220/2026"
+        },
+        {
+          "id": "ver_009_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa Municipal de Triagem Digital em Saúde no âmbito do Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa Municipal de Triagem Digital em Saúde no âmbito do Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0188-2026.pdf",
+          "rotulo_oficial": "PL 188/2026"
+        },
+        {
+          "id": "ver_009_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa Municipal de Incentivo à Permanência Escolar e Combate à Evasão, Bolsa Equidade Jovem.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa Municipal de Incentivo à Permanência Escolar e Combate à Evasão, Bolsa Equidade Jovem.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0127-2026.pdf",
+          "rotulo_oficial": "PL 127/2026"
+        },
+        {
+          "id": "ver_009_a006",
+          "tipo": "Indicação",
+          "titulo": "Pavimentação e passagem de pedestres.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-08-19",
+          "data_ultima_atualizacao": "2026-08-19",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Pavimentação e passagem de pedestres.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 443/2026"
+        },
+        {
+          "id": "ver_009_a007",
+          "tipo": "Indicação",
+          "titulo": "Ponto de ônibus.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-09-01",
+          "data_ultima_atualizacao": "2026-09-01",
+          "resumo": "Indicação encaminhada a SÃO PAULO TRANSPORTE S.A. - SPTrans. Ponto de ônibus.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 458/2026"
+        },
+        {
+          "id": "ver_009_a008",
+          "tipo": "Indicação",
+          "titulo": "Poda/manejo de árvore.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-09-11",
+          "data_ultima_atualizacao": "2026-09-11",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Poda/manejo de árvore.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 463/2026"
+        }
+      ]
     },
     {
       "id": "ver_010",
       "nome": "Gabriel Abreu",
       "partido": "PODE",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/gabriel-abreu/",
       "votacao_zona_norte": {
         "votos_totais_2024": 58581,
         "votos_zona_norte": 16631,
@@ -2269,13 +3060,74 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 9.56
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_010_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa de Cooperação no âmbito do Município e estabelece incentivo fiscal mediante crédito tributário compensatório a pessoas jurídicas cooperantes.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa de Cooperação no âmbito do Município e estabelece incentivo fiscal mediante crédito tributário compensatório a pessoas jurídicas cooperantes.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0722-2026.pdf",
+          "rotulo_oficial": "PL 722/2026"
+        },
+        {
+          "id": "ver_010_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Denomina Praça Moizes Pires dos Santos o logradouro público inominado delimitado pela Avenida Inajar de Souza, no bairro de Vila Carbone.",
+          "bairro": "Vila Carbone",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Denomina Praça Moizes Pires dos Santos o logradouro público inominado delimitado pela Avenida Inajar de Souza, no bairro de Vila Carbone.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0721-2026.pdf",
+          "rotulo_oficial": "PL 721/2026"
+        },
+        {
+          "id": "ver_010_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 13.767/2004 para inserir objetivos voltados ao fomento de bancos de sangue veterinários e à doação voluntária de sangue animal.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 13.767/2004 para inserir objetivos voltados ao fomento de bancos de sangue veterinários e à doação voluntária de sangue animal.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0707-2026.pdf",
+          "rotulo_oficial": "PL 707/2026"
+        },
+        {
+          "id": "ver_010_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a permissão de uso das faixas exclusivas e corredores de ônibus por veículos de transporte fúnebre.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a permissão de uso das faixas exclusivas e corredores de ônibus por veículos de transporte fúnebre.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0658-2026.pdf",
+          "rotulo_oficial": "PL 658/2026"
+        },
+        {
+          "id": "ver_010_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Autoriza o Poder Executivo a instituir Programa de Incentivo Fiscal de Apoio aos Bancos de Sangue Veterinários no Município.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Autoriza o Poder Executivo a instituir Programa de Incentivo Fiscal de Apoio aos Bancos de Sangue Veterinários no Município.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0657-2026.pdf",
+          "rotulo_oficial": "PL 657/2026"
+        }
+      ]
     },
     {
       "id": "ver_011",
       "nome": "Major Palumbo",
       "partido": "PP",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/major-palumbo/",
       "votacao_zona_norte": {
         "votos_totais_2024": 43455,
         "votos_zona_norte": 10784,
@@ -2342,13 +3194,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 10.58
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_011_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Estabelece treinamento de Primeiros Socorros e de Prevenção a Acidentes Domésticos em estabelecimentos de ensino.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Estabelece treinamento de Primeiros Socorros e de Prevenção a Acidentes Domésticos em estabelecimentos de ensino.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0671-2026.pdf",
+          "rotulo_oficial": "PL 671/2026"
+        },
+        {
+          "id": "ver_011_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o Dia do Evento Motociclístico “Meu Trenó é Diferente” no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o Dia do Evento Motociclístico “Meu Trenó é Diferente” no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0574-2026.pdf",
+          "rotulo_oficial": "PL 574/2026"
+        },
+        {
+          "id": "ver_011_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a denominação da “Rua Verde” para “Rua Verde Dr. Antônio José Haddad”.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a denominação da “Rua Verde” para “Rua Verde Dr. Antônio José Haddad”.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0543-2026.pdf",
+          "rotulo_oficial": "PL 543/2026"
+        },
+        {
+          "id": "ver_011_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Autoriza o Poder Executivo a instituir prioridade no atendimento psicológico da rede pública municipal a crianças e adolescentes vítimas de abuso ou exploração sexual.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Autoriza o Poder Executivo a instituir prioridade no atendimento psicológico da rede pública municipal a crianças e adolescentes vítimas de abuso ou exploração sexual.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0414-2026.pdf",
+          "rotulo_oficial": "PL 414/2026"
+        },
+        {
+          "id": "ver_011_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o Dia “D” Escola Segura – Treinamento Prático de Segurança no Ambiente Escolar.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o Dia “D” Escola Segura – Treinamento Prático de Segurança no Ambiente Escolar.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0343-2026.pdf",
+          "rotulo_oficial": "PL 343/2026"
+        },
+        {
+          "id": "ver_011_a006",
+          "tipo": "Indicação",
+          "titulo": "Atualização da Lei Municipal nº 10.348/1987, sobre instalação e manutenção de elevadores.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-03-03",
+          "data_ultima_atualizacao": "2026-03-03",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Atualização da Lei Municipal nº 10.348/1987, sobre instalação e manutenção de elevadores.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 77/2026"
+        },
+        {
+          "id": "ver_011_a007",
+          "tipo": "Indicação",
+          "titulo": "Fiscalização de elevadores.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-03-11",
+          "data_ultima_atualizacao": "2026-03-11",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Fiscalização de elevadores.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 90/2026"
+        }
+      ]
     },
     {
       "id": "ver_012",
       "nome": "Sonaira Fernandes",
       "partido": "PL",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/sonaira-fernandes/",
       "votacao_zona_norte": {
         "votos_totais_2024": 33957,
         "votos_zona_norte": 8515,
@@ -2415,13 +3352,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 10.85
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_012_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o Dia Municipal do Samba Gospel, em 2 de dezembro, no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o Dia Municipal do Samba Gospel, em 2 de dezembro, no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0501-2026.pdf",
+          "rotulo_oficial": "PL 501/2026"
+        },
+        {
+          "id": "ver_012_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir a Semana Municipal dos Cantores e Artistas Itinerantes no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir a Semana Municipal dos Cantores e Artistas Itinerantes no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0500-2026.pdf",
+          "rotulo_oficial": "PL 500/2026"
+        },
+        {
+          "id": "ver_012_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir a Semana Municipal de Valorização da Música Gospel no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir a Semana Municipal de Valorização da Música Gospel no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0499-2026.pdf",
+          "rotulo_oficial": "PL 499/2026"
+        },
+        {
+          "id": "ver_012_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o Dia Municipal das Mulheres do Agro no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o Dia Municipal das Mulheres do Agro no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0379-2026.pdf",
+          "rotulo_oficial": "PL 379/2026"
+        },
+        {
+          "id": "ver_012_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre diretrizes para avaliação periódica e substituição de sonda gástrica de longa permanência, gastrostomia ou dispositivo equivalente na rede pública de saúde.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre diretrizes para avaliação periódica e substituição de sonda gástrica de longa permanência, gastrostomia ou dispositivo equivalente na rede pública de saúde.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0319-2026.pdf",
+          "rotulo_oficial": "PL 319/2026"
+        },
+        {
+          "id": "ver_012_a006",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Serviço Funerário / SP Regula.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-07-14",
+          "data_ultima_atualizacao": "2025-07-14",
+          "resumo": "Indicação encaminhada a SP-Regula - Agência Reguladora de Serviços Públicos. Câmara na Rua - Serviço Funerário / SP Regula.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 403/2025"
+        },
+        {
+          "id": "ver_012_a007",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Meio Ambiente: educação ambiental, plástico e microplástico.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-07-14",
+          "data_ultima_atualizacao": "2025-07-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Meio Ambiente: educação ambiental, plástico e microplástico.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 404/2025"
+        }
+      ]
     },
     {
       "id": "ver_013",
       "nome": "Ely Teruel",
       "partido": "MDB",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/ely-teruel/",
       "votacao_zona_norte": {
         "votos_totais_2024": 35622,
         "votos_zona_norte": 8309,
@@ -2488,13 +3510,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 14.08
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_013_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Autoriza o Poder Executivo a fornecer óculos inteligentes com tecnologia de assistência visual a pessoas com deficiência visual.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Autoriza o Poder Executivo a fornecer óculos inteligentes com tecnologia de assistência visual a pessoas com deficiência visual.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0670-2026.pdf",
+          "rotulo_oficial": "PL 670/2026"
+        },
+        {
+          "id": "ver_013_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre medidas preventivas de segurança em obras e intervenções que envolvam escavações e infraestruturas subterrâneas.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre medidas preventivas de segurança em obras e intervenções que envolvam escavações e infraestruturas subterrâneas.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0459-2026.pdf",
+          "rotulo_oficial": "PL 459/2026"
+        },
+        {
+          "id": "ver_013_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui programa permanente de capacitação da Guarda Civil Metropolitana para atendimento humanizado a pessoas com transtorno do espectro autista (TEA).",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui programa permanente de capacitação da Guarda Civil Metropolitana para atendimento humanizado a pessoas com transtorno do espectro autista (TEA).",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0451-2026.pdf",
+          "rotulo_oficial": "PL 451/2026"
+        },
+        {
+          "id": "ver_013_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa Municipal de Coleta, Controle, Descaracterização e Destinação de Vasilhames Vazios de Bebidas Alcoólicas Destiladas, contra a adulteração de bebidas.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa Municipal de Coleta, Controle, Descaracterização e Destinação de Vasilhames Vazios de Bebidas Alcoólicas Destiladas, contra a adulteração de bebidas.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0449-2026.pdf",
+          "rotulo_oficial": "PL 449/2026"
+        },
+        {
+          "id": "ver_013_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei n° 14.485/2007 para incluir a Semana Municipal da Prevenção Combinada das IST's, HIV/Aids, Hepatites Virais e Tuberculose no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei n° 14.485/2007 para incluir a Semana Municipal da Prevenção Combinada das IST's, HIV/Aids, Hepatites Virais e Tuberculose no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL1485-2025.pdf",
+          "rotulo_oficial": "PL 1485/2025"
+        },
+        {
+          "id": "ver_013_a006",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Desenvolvimento econômico e trabalho.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-12-08",
+          "data_ultima_atualizacao": "2025-12-08",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Desenvolvimento econômico e trabalho.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 743/2025"
+        },
+        {
+          "id": "ver_013_a007",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Cultura.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-12-08",
+          "data_ultima_atualizacao": "2025-12-08",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Cultura.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 744/2025"
+        }
+      ]
     },
     {
       "id": "ver_014",
       "nome": "Tripoli",
       "partido": "PV",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/roberto-tripoli/",
       "votacao_zona_norte": {
         "votos_totais_2024": 39039,
         "votos_zona_norte": 8150,
@@ -2561,13 +3668,74 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 12.83
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_014_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a denominação do logradouro público conhecido como Praça Skal para Praça Padre Afonso Maria Rubsamen.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a denominação do logradouro público conhecido como Praça Skal para Praça Padre Afonso Maria Rubsamen.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0353-2026.pdf",
+          "rotulo_oficial": "PL 353/2026"
+        },
+        {
+          "id": "ver_014_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera o art. 3º da Lei nº 16.897/2018, que proíbe o manuseio, uso, queima e soltura de fogos de estampido e artifícios.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera o art. 3º da Lei nº 16.897/2018, que proíbe o manuseio, uso, queima e soltura de fogos de estampido e artifícios.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0235-2026.pdf",
+          "rotulo_oficial": "PL 235/2026"
+        },
+        {
+          "id": "ver_014_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre o sistema de gerenciamento da arborização urbana do Município e altera a Lei nº 17.794/2022.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre o sistema de gerenciamento da arborização urbana do Município e altera a Lei nº 17.794/2022.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0184-2026.pdf",
+          "rotulo_oficial": "PL 184/2026"
+        },
+        {
+          "id": "ver_014_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a ampliação e descentralização, via credenciamento de clínicas e hospitais veterinários privados, do atendimento médico veterinário público a cães e gatos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a ampliação e descentralização, via credenciamento de clínicas e hospitais veterinários privados, do atendimento médico veterinário público a cães e gatos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0183-2026.pdf",
+          "rotulo_oficial": "PL 183/2026"
+        },
+        {
+          "id": "ver_014_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a Política de Transparência de Dados e Informações relativas às Emendas Orçamentárias no âmbito do Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a Política de Transparência de Dados e Informações relativas às Emendas Orçamentárias no âmbito do Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0539-2025.pdf",
+          "rotulo_oficial": "PL 539/2025"
+        }
+      ]
     },
     {
       "id": "ver_015",
       "nome": "Simone Ganem",
       "partido": "PODE",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/simone-ganem/",
       "votacao_zona_norte": {
         "votos_totais_2024": 38540,
         "votos_zona_norte": 8107,
@@ -2634,13 +3802,74 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 11.82
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_015_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa “Praça Inclusiva” no Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa “Praça Inclusiva” no Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0396-2026.pdf",
+          "rotulo_oficial": "PL 396/2026"
+        },
+        {
+          "id": "ver_015_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a circulação de animais domésticos nas áreas comuns de condomínios de casas ou apartamentos no Município.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a circulação de animais domésticos nas áreas comuns de condomínios de casas ou apartamentos no Município.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0365-2026.pdf",
+          "rotulo_oficial": "PL 365/2026"
+        },
+        {
+          "id": "ver_015_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 13.131/2001, que disciplina a criação, posse, guarda, uso e transporte de cães e gatos no Município.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 13.131/2001, que disciplina a criação, posse, guarda, uso e transporte de cães e gatos no Município.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0364-2026.pdf",
+          "rotulo_oficial": "PL 364/2026"
+        },
+        {
+          "id": "ver_015_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a concessão de gratuidade no transporte coletivo municipal a munícipes em situação de baixa renda.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a concessão de gratuidade no transporte coletivo municipal a munícipes em situação de baixa renda.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0363-2026.pdf",
+          "rotulo_oficial": "PL 363/2026"
+        },
+        {
+          "id": "ver_015_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre isenção da tarifa de estacionamento rotativo (Zona Azul) por duas horas nas vagas no entorno de equipamentos de saúde e assistência social.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre isenção da tarifa de estacionamento rotativo (Zona Azul) por duas horas nas vagas no entorno de equipamentos de saúde e assistência social.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0260-2026.pdf",
+          "rotulo_oficial": "PL 260/2026"
+        }
+      ]
     },
     {
       "id": "ver_016",
       "nome": "Kenji Palumbo",
       "partido": "PODE",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/kenji-palumbo/",
       "votacao_zona_norte": {
         "votos_totais_2024": 32495,
         "votos_zona_norte": 7141,
@@ -2707,13 +3936,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 15.21
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_016_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui política de prevenção e combate à violência contra profissionais da saúde.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui política de prevenção e combate à violência contra profissionais da saúde.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0672-2026.pdf",
+          "rotulo_oficial": "PL 672/2026"
+        },
+        {
+          "id": "ver_016_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o “Dia do Mandarim” no calendário de eventos do Município.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o “Dia do Mandarim” no calendário de eventos do Município.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0361-2026.pdf",
+          "rotulo_oficial": "PL 361/2026"
+        },
+        {
+          "id": "ver_016_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera artigos da Lei nº 16.816/2018 para estabelecer como ilícito administrativo a coação exercida por guardadores de carros (“flanelinhas”).",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera artigos da Lei nº 16.816/2018 para estabelecer como ilícito administrativo a coação exercida por guardadores de carros (“flanelinhas”).",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0116-2026.pdf",
+          "rotulo_oficial": "PL 116/2026"
+        },
+        {
+          "id": "ver_016_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Autoriza a compra e uso de spray de extratos vegetais para autodefesa de mulheres no Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Autoriza a compra e uso de spray de extratos vegetais para autodefesa de mulheres no Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0066-2026.pdf",
+          "rotulo_oficial": "PL 66/2026"
+        },
+        {
+          "id": "ver_016_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a escolta de autoridades e ex-autoridades no Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a escolta de autoridades e ex-autoridades no Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL1560-2025.pdf",
+          "rotulo_oficial": "PL 1560/2025"
+        },
+        {
+          "id": "ver_016_a006",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Segurança Pública Estadual.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-07-14",
+          "data_ultima_atualizacao": "2025-07-14",
+          "resumo": "Indicação encaminhada a GOVERNO DO ESTADO DE SÃO PAULO. Câmara na Rua - Segurança Pública Estadual.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 402/2025"
+        },
+        {
+          "id": "ver_016_a007",
+          "tipo": "Indicação",
+          "titulo": "Câmara na Rua - Zeladoria.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2025-07-14",
+          "data_ultima_atualizacao": "2025-07-14",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Câmara na Rua - Zeladoria.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 405/2025"
+        }
+      ]
     },
     {
       "id": "ver_017",
       "nome": "Keit Lima",
       "partido": "PSOL",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/keit-lima/",
       "votacao_zona_norte": {
         "votos_totais_2024": 27769,
         "votos_zona_norte": 6550,
@@ -2780,13 +4094,98 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 21.04
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_017_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Centro Municipal de Atenção Integral à População Indígena em Contexto Urbano.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Centro Municipal de Atenção Integral à População Indígena em Contexto Urbano.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0700-2026.pdf",
+          "rotulo_oficial": "PL 700/2026"
+        },
+        {
+          "id": "ver_017_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui diretrizes para a inclusão da Educação Financeira no currículo da Rede Municipal de Ensino.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui diretrizes para a inclusão da Educação Financeira no currículo da Rede Municipal de Ensino.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0679-2026.pdf",
+          "rotulo_oficial": "PL 679/2026"
+        },
+        {
+          "id": "ver_017_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a Política Municipal de Fortalecimento da Cultura, Educação Antirracista e Promoção dos Direitos das Comunidades Tradicionais de Matriz Africana.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a Política Municipal de Fortalecimento da Cultura, Educação Antirracista e Promoção dos Direitos das Comunidades Tradicionais de Matriz Africana.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0660-2026.pdf",
+          "rotulo_oficial": "PL 660/2026"
+        },
+        {
+          "id": "ver_017_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Dispõe sobre a concessão de abono de horas a servidores públicos municipais em situações de emergência em saúde pública, calamidade e desastres.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Dispõe sobre a concessão de abono de horas a servidores públicos municipais em situações de emergência em saúde pública, calamidade e desastres.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0656-2026.pdf",
+          "rotulo_oficial": "PL 656/2026"
+        },
+        {
+          "id": "ver_017_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Institui o Programa Municipal Rolê Cultural no âmbito do Município de São Paulo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Institui o Programa Municipal Rolê Cultural no âmbito do Município de São Paulo.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0647-2026.pdf",
+          "rotulo_oficial": "PL 647/2026"
+        },
+        {
+          "id": "ver_017_a006",
+          "tipo": "Indicação",
+          "titulo": "Escala 5x2 para contratações vigentes.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-04-28",
+          "data_ultima_atualizacao": "2026-04-28",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Escala 5x2 para contratações vigentes.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 224/2026"
+        },
+        {
+          "id": "ver_017_a007",
+          "tipo": "Indicação",
+          "titulo": "Ações de prevenção contra o sarampo.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-08-12",
+          "data_ultima_atualizacao": "2026-08-12",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Ações de prevenção contra o sarampo.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 425/2026"
+        }
+      ]
     },
     {
       "id": "ver_018",
       "nome": "Gilberto Nascimento",
       "partido": "PL",
-      "perfil_camara_url": null,
+      "perfil_camara_url": "https://www.saopaulo.sp.leg.br/vereador/gilberto-nascimento/",
       "votacao_zona_norte": {
         "votos_totais_2024": 22306,
         "votos_zona_norte": 6543,
@@ -2853,16 +4252,90 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
           "percentual": 9.09
         }
       },
-      "atividades": []
+      "atividades": [
+        {
+          "id": "ver_018_a001",
+          "tipo": "Projeto de Lei",
+          "titulo": "Acrescenta o nome Dr. Márcio Luiz da Silva ao CEU Paz.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Acrescenta o nome Dr. Márcio Luiz da Silva ao CEU Paz.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0601-2026.pdf",
+          "rotulo_oficial": "PL 601/2026"
+        },
+        {
+          "id": "ver_018_a002",
+          "tipo": "Projeto de Lei",
+          "titulo": "Denomina Praça Herval Tavares de Campos o logradouro público inominado localizado no bairro de Santana.",
+          "bairro": "Santana",
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Denomina Praça Herval Tavares de Campos o logradouro público inominado localizado no bairro de Santana.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0600-2026.pdf",
+          "rotulo_oficial": "PL 600/2026"
+        },
+        {
+          "id": "ver_018_a003",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o ‘Dia da Congregação Cristã no Brasil’ no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o ‘Dia da Congregação Cristã no Brasil’ no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0581-2026.pdf",
+          "rotulo_oficial": "PL 581/2026"
+        },
+        {
+          "id": "ver_018_a004",
+          "tipo": "Projeto de Lei",
+          "titulo": "Altera a Lei nº 14.485/2007 para incluir o ‘Dia do Sorvete’ no calendário de eventos.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Altera a Lei nº 14.485/2007 para incluir o ‘Dia do Sorvete’ no calendário de eventos.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0579-2026.pdf",
+          "rotulo_oficial": "PL 579/2026"
+        },
+        {
+          "id": "ver_018_a005",
+          "tipo": "Projeto de Lei",
+          "titulo": "Revoga o Inciso LXXX do artigo 36 da Lei Municipal n° 18.062/2023.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": null,
+          "data_ultima_atualizacao": null,
+          "resumo": "Revoga o Inciso LXXX do artigo 36 da Lei Municipal n° 18.062/2023.",
+          "fonte_url": "https://www.saopaulo.sp.leg.br/iah/fulltext/projeto/PL0562-2026.pdf",
+          "rotulo_oficial": "PL 562/2026"
+        },
+        {
+          "id": "ver_018_a006",
+          "tipo": "Indicação",
+          "titulo": "Oficialização de via de pedestres inominada.",
+          "bairro": null,
+          "status": "apresentada",
+          "data_apresentacao": "2026-07-22",
+          "data_ultima_atualizacao": "2026-07-22",
+          "resumo": "Indicação encaminhada a PREFEITURA DO MUNICÍPIO DE SÃO PAULO. Oficialização de via de pedestres inominada.",
+          "fonte_url": "https://splegisconsulta.saopaulo.sp.leg.br/Pesquisa/IndexIndicacao",
+          "rotulo_oficial": "IND 404/2026"
+        }
+      ]
     }
   ]
 }</script>
 
     <!-- POLITICA -->
+    <!-- POLITICA -->
   <div class="secao" id="politica">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
-      <span class="secao-count">3 itens</span>
+      <span class="secao-count">6 itens</span>
     </div>
 
     <div class="card-pol" data-bairro="Jardim Corisco" data-distrito="TREMEMBÉ">
@@ -2894,6 +4367,36 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
         <span style="font-size:12px;color:var(--cinza-m);">Subprefeitura Jaçanã/Tremembé</span>
       </div>
     </div>
+
+    <div class="card-pol" data-bairro="Parque Monteiro Soares" data-distrito="FREGUESIA DO Ó">
+      <div class="pol-orgao">undefined</div>
+      <div class="pol-titulo">Denomina CEU Maria Rogéria de Lima o Centro Educacional Unificado na Avenida João Paulo I, Parque Monteiro Soares, distrito da Brasilândia.</div>
+      <div class="pol-impacto">undefined</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">apresentada</span>
+        <span style="font-size:12px;color:var(--cinza-m);">undefined</span>
+      </div>
+    </div>
+
+    <div class="card-pol" data-bairro="Vila Carbone" data-distrito="LIMÃO">
+      <div class="pol-orgao">undefined</div>
+      <div class="pol-titulo">Denomina Praça Moizes Pires dos Santos o logradouro público inominado delimitado pela Avenida Inajar de Souza, no bairro de Vila Carbone.</div>
+      <div class="pol-impacto">undefined</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">apresentada</span>
+        <span style="font-size:12px;color:var(--cinza-m);">undefined</span>
+      </div>
+    </div>
+
+    <div class="card-pol" data-bairro="Freguesia do Ó" data-distrito="FREGUESIA DO Ó">
+      <div class="pol-orgao">undefined</div>
+      <div class="pol-titulo">Denomina ‘Escadão Francisco Araújo dos Santos Pinto’ o espaço público inominado na Rua José Niccolini, bairro Vila Cavaton, distrito da Freguesia do Ó.</div>
+      <div class="pol-impacto">undefined</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <span class="pol-status">apresentada</span>
+        <span style="font-size:12px;color:var(--cinza-m);">undefined</span>
+      </div>
+    </div>
   </div>
 
   <!-- Fora da div #politica de propósito: sobrevive à regeneração automática do gerar-portau.js -->
@@ -2902,6 +4405,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <button class="mapa-pol-btn" onclick="abrirBairros();return false;">Ver mapa</button>
   </div>
 
+    <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
@@ -3084,7 +4588,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 
 <!-- SIDEBAR -->
   
-                                                                                                                                                <div class="sb-card" id="fim-de-semana-card">
+                                                                                                                                                  <div class="sb-card" id="fim-de-semana-card">
     <div class="sb-header">🎉 Este fim de semana</div>
     <div class="sb-item">
       <div style="font-size:20px;">🧰</div>
@@ -5112,7 +6616,7 @@ async function prepararContatoAnuncioVaga() {
 
   const infoEl = document.getElementById('anuncio-vaga-empresa-info');
   infoEl.innerHTML = `
-    <div><strong>Segunda-feira, 14 de setembro de 2026 · Gerado às 19:29</strong> ${escapeHtml(nomeEmpresa)}</div>
+    <div><strong>Segunda-feira, 14 de setembro de 2026 · Gerado às 23:12</strong> ${escapeHtml(nomeEmpresa)}</div>
     <div><strong>E-mail de contato:</strong> ${escapeHtml(email || 'não informado')}</div>
     <div><strong>Celular:</strong> ${escapeHtml(celular ? formatarTelefoneEmpresa(celular) : 'não informado')}</div>
     <div style="margin-top:4px;font-size:11px;">Para alterar esses dados, atualize no seu cadastro.</div>
