@@ -1,0 +1,3784 @@
+{
+  "atualizado_em": "2026-09-17",
+  "fonte": "TSE - eleitorado_local_votacao_2024 (base gerada 29/10/2024, eleições municipais 2024)",
+  "nota": "zona eleitoral confirmada por bairro = há pelo menos um local de votação cadastrado com endereço dentro dele; bairros sem essa confirmação direta devem usar a lista de zonas do distrito (data/zonas-eleitorais-por-distrito.json), que é mais abrangente porém menos precisa",
+  "zonas": {
+    "249": {
+      "eleitores": 110992,
+      "secoes": 341,
+      "locais": 28
+    },
+    "327": {
+      "eleitores": 177946,
+      "secoes": 532,
+      "locais": 49
+    },
+    "325": {
+      "eleitores": 152031,
+      "secoes": 440,
+      "locais": 38
+    },
+    "256": {
+      "eleitores": 180133,
+      "secoes": 486,
+      "locais": 41
+    },
+    "254": {
+      "eleitores": 154783,
+      "secoes": 469,
+      "locais": 42
+    },
+    "403": {
+      "eleitores": 149429,
+      "secoes": 424,
+      "locais": 40
+    },
+    "376": {
+      "eleitores": 187009,
+      "secoes": 525,
+      "locais": 44
+    },
+    "349": {
+      "eleitores": 132363,
+      "secoes": 389,
+      "locais": 31
+    },
+    "255": {
+      "eleitores": 188435,
+      "secoes": 535,
+      "locais": 39
+    },
+    "422": {
+      "eleitores": 149600,
+      "secoes": 414,
+      "locais": 39
+    },
+    "389": {
+      "eleitores": 153633,
+      "secoes": 420,
+      "locais": 38
+    },
+    "420": {
+      "eleitores": 120124,
+      "secoes": 366,
+      "locais": 29
+    }
+  },
+  "bairros": {
+    "Jardim São Paulo": {
+      "distrito": "SANTANA",
+      "zonas": {
+        "249": 13275
+      },
+      "locais": [
+        {
+          "zona": "249",
+          "nome": "Colégio Jardim São Paulo",
+          "endereco": "Av. Leôncio De Magalhães, 326",
+          "eleitores": 5494
+        },
+        {
+          "zona": "249",
+          "nome": "Ee. Prof. Antonio Lisboa",
+          "endereco": "Rua Prof. Fábio Fanucchi, 425",
+          "eleitores": 4745
+        },
+        {
+          "zona": "249",
+          "nome": "Ee. República Da Bolívia",
+          "endereco": "Rua Outeiro Da Cruz, 571",
+          "eleitores": 3036
+        }
+      ]
+    },
+    "Vila Morro Grande": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 1861
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Professor José Barbosa De Almeida",
+          "endereco": "Avenida Elísio Teixeira Leite, 3000",
+          "eleitores": 1861
+        }
+      ]
+    },
+    "Parque São Domingos": {
+      "distrito": "SÃO DOMINGOS",
+      "zonas": {
+        "325": 19960
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Colégio Miranda",
+          "endereco": "Rua Coronel Jose Rufino Freire, 193",
+          "eleitores": 6587
+        },
+        {
+          "zona": "325",
+          "nome": "Emef. Amadeu Mendes",
+          "endereco": "Rua Tomas Lopes Ferreira, 110",
+          "eleitores": 4365
+        },
+        {
+          "zona": "325",
+          "nome": "Emef Des. Euclides Custódio Da Silveira",
+          "endereco": "Rua José De Morais, 191",
+          "eleitores": 3451
+        },
+        {
+          "zona": "325",
+          "nome": "Ee. Antonio Carlos Ferreira Nobre",
+          "endereco": "Rua Agostinho Dos Santos, 235",
+          "eleitores": 2272
+        }
+      ]
+    },
+    "Tucuruvi": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "256": 13587,
+        "349": 7641
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Jardim Escola Paulista Ltda.",
+          "endereco": "Av. General Ataliba Leonel, 4129",
+          "eleitores": 7641
+        },
+        {
+          "zona": "256",
+          "nome": "Ee. Silva Jardim",
+          "endereco": "Av. Tucuruvi, 724",
+          "eleitores": 5278
+        },
+        {
+          "zona": "256",
+          "nome": "Colégio Passionista São Paulo Da Cruz",
+          "endereco": "Av. Tucuruvi, 470",
+          "eleitores": 4344
+        },
+        {
+          "zona": "256",
+          "nome": "Colégio Univip Escolas Associadas",
+          "endereco": "Av. Cel. Sezefredo Fagundes, 2805",
+          "eleitores": 3965
+        }
+      ]
+    },
+    "Vila Guilherme": {
+      "distrito": "VILA GUILHERME",
+      "zonas": {
+        "254": 19381
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ee. Afrânio Peixoto",
+          "endereco": "Rua Maria Cândida, 1936",
+          "eleitores": 5821
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Profª. Anésia Sincorá",
+          "endereco": "Rua José Bernardo Pinto, 758",
+          "eleitores": 3496
+        },
+        {
+          "zona": "254",
+          "nome": "Colégio Amorim - Santa Teresa",
+          "endereco": "Rua Lagoa Panema, 466",
+          "eleitores": 3212
+        },
+        {
+          "zona": "254",
+          "nome": "Emef. Oliva Irene Bayerlein Silva",
+          "endereco": "Rua Amazonas Da Silva, 893",
+          "eleitores": 2863
+        }
+      ]
+    },
+    "Jardim Paulistano": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "403": 3080,
+        "327": 7893,
+        "376": 5781
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emef Jardim Paulistano - Ceu Jd. Paulistano",
+          "endereco": "Rua Aparecida Do Taboado, S/N",
+          "eleitores": 6672
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Professor Crispim De Oliveira",
+          "endereco": "Rua Joaquim De Sousa Brito, 122",
+          "eleitores": 5781
+        },
+        {
+          "zona": "403",
+          "nome": "Emef. Mário Lago",
+          "endereco": "Rua Dourada, S/N",
+          "eleitores": 2073
+        },
+        {
+          "zona": "327",
+          "nome": "Emef. Professora Lilian Maso",
+          "endereco": "Rua Encruzilhada Do Sul, 1005",
+          "eleitores": 1221
+        }
+      ]
+    },
+    "Jardim Elisa Maria": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 5867
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. Castro Alves",
+          "endereco": "Rua Agenor Alves Meira, 285",
+          "eleitores": 5651
+        },
+        {
+          "zona": "376",
+          "nome": "Emef Coronel Pm José Hermínio Rodrigues",
+          "endereco": "Rua Pedro Pomar, Sn",
+          "eleitores": 216
+        }
+      ]
+    },
+    "Parada Inglesa": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "349": 3795
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Colégio Iapi",
+          "endereco": "Av. General Ataliba Leonel, 2936",
+          "eleitores": 3795
+        }
+      ]
+    },
+    "Vila Teresinha": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 12222
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. Professor André Rodrigues De Alckmin",
+          "endereco": "Rua Marcelino José De Freitas, 619",
+          "eleitores": 7013
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Deputado Luiz Sérgio Claudino Dos Santos",
+          "endereco": "Rua Pedro Antonio Conceição, 255",
+          "eleitores": 5209
+        }
+      ]
+    },
+    "Jardim Mariliza": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 2080
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emei. Vinte E Cinco De Janeiro",
+          "endereco": "Rua Padre Feliciano Domingues, 182",
+          "eleitores": 2080
+        }
+      ]
+    },
+    "Santana": {
+      "distrito": "SANTANA",
+      "zonas": {
+        "249": 49675
+      },
+      "locais": [
+        {
+          "zona": "249",
+          "nome": "Colégio Imperatriz Leopoldina",
+          "endereco": "Rua Pedro Dóll, 240",
+          "eleitores": 5488
+        },
+        {
+          "zona": "249",
+          "nome": "Ee. Dr. Octávio Mendes",
+          "endereco": "Rua Voluntários Da Pátria, 3422",
+          "eleitores": 5275
+        },
+        {
+          "zona": "249",
+          "nome": "Anhanguera Educacional Ltda - (Uniban)",
+          "endereco": "Av. Brás Leme, 3029",
+          "eleitores": 5157
+        },
+        {
+          "zona": "249",
+          "nome": "Ee. Buenos Aires",
+          "endereco": "Rua Olavo Egídio, 1008",
+          "eleitores": 4636
+        }
+      ]
+    },
+    "Jardim Ataliba Leonel": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 7492
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Dr. Pedro De Moraes Victor",
+          "endereco": "Rua Boaventura Coletti, S/N",
+          "eleitores": 5547
+        },
+        {
+          "zona": "256",
+          "nome": "E.E. Leovergilio Moreira",
+          "endereco": "Rua Carlos Martel, 11",
+          "eleitores": 1945
+        }
+      ]
+    },
+    "Jardim Cidade Pirituba": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 24135
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Colégio Canello Marques",
+          "endereco": "Av. Menotti Laudísio, 221",
+          "eleitores": 5510
+        },
+        {
+          "zona": "325",
+          "nome": "Emef. Imperatriz Leopoldina",
+          "endereco": "Av. Comendador Feiz Zarzur, S/N",
+          "eleitores": 5075
+        },
+        {
+          "zona": "325",
+          "nome": "Ee. Prof. Cândido Gonçalves Gomide",
+          "endereco": "Rua Avelino Zanetti, 50",
+          "eleitores": 4827
+        },
+        {
+          "zona": "325",
+          "nome": "Ee. Prof. Alípio De Barros",
+          "endereco": "Av. Comendador Feiz Zarzur, S/N",
+          "eleitores": 4010
+        }
+      ]
+    },
+    "Vila Nova Cachoeirinha": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "255": 10043,
+        "422": 7065
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Prof. Antônio José Leite",
+          "endereco": "Rua Dez De Maio, 271",
+          "eleitores": 6938
+        },
+        {
+          "zona": "422",
+          "nome": "E.E. Profª Raquel Assis Barreiros",
+          "endereco": "Avenida General Penha Brasil, 1255",
+          "eleitores": 3951
+        },
+        {
+          "zona": "422",
+          "nome": "E.E. Marly Diva Bonfanti",
+          "endereco": "Rua Pedro Osório Filho, 996",
+          "eleitores": 3114
+        },
+        {
+          "zona": "255",
+          "nome": "Emef. Prof. Roberto Patrício",
+          "endereco": "Rua Antônio Domingues Freitas, 147",
+          "eleitores": 3105
+        }
+      ]
+    },
+    "Jardim Pícolo": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 11258
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "Colégio Cermac",
+          "endereco": "Avenida Guaca, 764",
+          "eleitores": 5939
+        },
+        {
+          "zona": "422",
+          "nome": "E.E. Alm. Visconde De Inhauma",
+          "endereco": "Avenida Guacá, 1382",
+          "eleitores": 5319
+        }
+      ]
+    },
+    "Jardim Adelfiore": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 7554
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Ee. Prof. Miguel Oliva Feitosa",
+          "endereco": "Rua Tarcon, 479",
+          "eleitores": 4414
+        },
+        {
+          "zona": "389",
+          "nome": "Ee. Professora Regiane Do Carmo Monteiro",
+          "endereco": "Rua Tarcon, 313",
+          "eleitores": 3140
+        }
+      ]
+    },
+    "Jardim Taipas": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "389": 9558
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Profª Eliane Benute Lessa Ayres Gonçalves",
+          "endereco": "Avenida Raimundo Pereira De Magalhães, 12298",
+          "eleitores": 5026
+        },
+        {
+          "zona": "389",
+          "nome": "Ee. Prof. Carlos Borba",
+          "endereco": "Rua Joana Pedroso Dos Santos, 101",
+          "eleitores": 4532
+        }
+      ]
+    },
+    "Vila Baruel": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 9485
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Etec Albert Einstein",
+          "endereco": "Rua Nova Granada, 35",
+          "eleitores": 4008
+        },
+        {
+          "zona": "255",
+          "nome": "Emef. Prof. José Carlos Dias",
+          "endereco": "Rua Vichy, 488",
+          "eleitores": 3111
+        },
+        {
+          "zona": "255",
+          "nome": "Colégio Centenário",
+          "endereco": "Rua João Rudge, 577",
+          "eleitores": 2366
+        }
+      ]
+    },
+    "Conjunto Residencial Elísio Teixeira Leite": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 8945
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Ee. Conjunto Habitacional Brigadeiro Eduardo Gomes",
+          "endereco": "Rua João Amado Coutinho, 1010",
+          "eleitores": 6502
+        },
+        {
+          "zona": "403",
+          "nome": "Emei. Conjunto Residencial Elisio Teixeira Leite",
+          "endereco": "Rua Egidio Felini, 81",
+          "eleitores": 2443
+        }
+      ]
+    },
+    "Vila Penteado": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 19569
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Chiquinha Rodrigues",
+          "endereco": "Rua Caiapé, S/N",
+          "eleitores": 6382
+        },
+        {
+          "zona": "376",
+          "nome": "Emef. Théo Dutra",
+          "endereco": "Avenida Guilherme De Almeida, 110",
+          "eleitores": 4803
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Professora Elizabeth Aparecida Simões Mesquita",
+          "endereco": "Avenida Jose Da Natividade Saldanha, S/N",
+          "eleitores": 4315
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Professora Olinda Leite Sinisgali",
+          "endereco": "Rua Emílio Kemp, 126",
+          "eleitores": 4069
+        }
+      ]
+    },
+    "Brasilândia": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 16019
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. Geraldo Sesso Júnior",
+          "endereco": "Rua José Siqueira Brito, S/N",
+          "eleitores": 6794
+        },
+        {
+          "zona": "376",
+          "nome": "Emef. Embaixador Raul Fernandes",
+          "endereco": "Rua Nair Ramos Schuring, 2515",
+          "eleitores": 5264
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Martin Egídio Damy",
+          "endereco": "Rua Paulo Garcia Aquiline, 406",
+          "eleitores": 3961
+        }
+      ]
+    },
+    "Jardim Peri": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "422": 10110
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "E.E. Profª Rita Bicudo Pereira",
+          "endereco": "Avenida Peri Ronchetti, 494",
+          "eleitores": 7224
+        },
+        {
+          "zona": "422",
+          "nome": "Colégio Suely Bertolazzi Folli",
+          "endereco": "Rua Joaquim Dias Pinto, 08",
+          "eleitores": 2652
+        },
+        {
+          "zona": "422",
+          "nome": "Cei Inácio De Lima Oliveira",
+          "endereco": "Rua Caetano Nogueira Da Costa, 571",
+          "eleitores": 234
+        }
+      ]
+    },
+    "Parque Novo Mundo": {
+      "distrito": "VILA MARIA",
+      "zonas": {
+        "254": 23025
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ee. Heróis Da Feb",
+          "endereco": "Rua Soldado Benedito Eliseu Dos Santos, 1817",
+          "eleitores": 7597
+        },
+        {
+          "zona": "254",
+          "nome": "Emef. Cel. Romão Gomes",
+          "endereco": "Rua Soldado José Vicente De Paula, 140",
+          "eleitores": 6038
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Prof. Máximo Ribeiro Nunes",
+          "endereco": "Rua Soldado Antônio Romano De Oliveira, 174",
+          "eleitores": 4296
+        },
+        {
+          "zona": "254",
+          "nome": "Emef. Profª. Celia Regina Lekevicius Consolin",
+          "endereco": "Rua Giuseppe Marino, S/N",
+          "eleitores": 2063
+        }
+      ]
+    },
+    "Jardim Japão": {
+      "distrito": "VILA MARIA",
+      "zonas": {
+        "254": 20005
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ee. Imperatriz Leopoldina",
+          "endereco": "Rua Togo, 571",
+          "eleitores": 6386
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Francisco Da Costa Guedes",
+          "endereco": "Avenida Das Cerejeiras, 2435",
+          "eleitores": 5168
+        },
+        {
+          "zona": "254",
+          "nome": "Emef. Dom Pedro I",
+          "endereco": "Praça Pres. Jânio Da Silva Quadros, 420",
+          "eleitores": 4042
+        },
+        {
+          "zona": "254",
+          "nome": "Cei. Jardim Japão",
+          "endereco": "Praça Pres. Jânio Da Silva Quadros, 270",
+          "eleitores": 1874
+        }
+      ]
+    },
+    "Imirim": {
+      "distrito": "SANTANA",
+      "zonas": {
+        "422": 2296,
+        "249": 12472,
+        "255": 6808
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Prof. Augusto Meirelles Reis Filho",
+          "endereco": "Rua Padre João Gualberto, 311",
+          "eleitores": 6808
+        },
+        {
+          "zona": "249",
+          "nome": "Ee. Prof. Orlando Horácio Vita",
+          "endereco": "Rua Diogo Cabrera, 424",
+          "eleitores": 5928
+        },
+        {
+          "zona": "249",
+          "nome": "Colégio Nossa Senhora Consolata",
+          "endereco": "Av. Imirím, 1424",
+          "eleitores": 3845
+        },
+        {
+          "zona": "249",
+          "nome": "Colégio Pioneiro",
+          "endereco": "Av. Engenheiro Caetano Álvares, 4936",
+          "eleitores": 2699
+        }
+      ]
+    },
+    "Jardim Franco": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 9145
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Professor Flamínio Favero",
+          "endereco": "Avenida General Penha Brasil, 3001",
+          "eleitores": 5423
+        },
+        {
+          "zona": "376",
+          "nome": "Emef. Professor Primo Pascoli Melare",
+          "endereco": "Avenida Inajar De Souza, 6975",
+          "eleitores": 3722
+        }
+      ]
+    },
+    "Parque Edu Chaves": {
+      "distrito": "JAÇANÃ",
+      "zonas": {
+        "420": 18862
+      },
+      "locais": [
+        {
+          "zona": "420",
+          "nome": "Escola Municipal De Ensino Fundamental General Júlio Marcondes Salgado",
+          "endereco": "Avenida Edu Chaves, 1289",
+          "eleitores": 6477
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual  Johann Gutenberg",
+          "endereco": "Rua Capitão Busse, 391",
+          "eleitores": 5003
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Gabriela Mistral",
+          "endereco": "Rua Major Baracca, 584",
+          "eleitores": 4354
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professora Dirce Pastore Donato",
+          "endereco": "Rua Bom Jesus Da Cachoeira, 456",
+          "eleitores": 2051
+        }
+      ]
+    },
+    "Parque Taipas": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "389": 4405
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Raul Pompeia",
+          "endereco": "Avenida Elias Antonio Lopes, 165",
+          "eleitores": 4405
+        }
+      ]
+    },
+    "Água Fria": {
+      "distrito": "SANTANA",
+      "zonas": {
+        "256": 10303,
+        "249": 3529
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Expedicionário Brasileiro",
+          "endereco": "Rua Altinópolis, 501",
+          "eleitores": 5948
+        },
+        {
+          "zona": "256",
+          "nome": "Colégio Objetivo Cantareira",
+          "endereco": "Av. Água Fria, 1913",
+          "eleitores": 4355
+        },
+        {
+          "zona": "249",
+          "nome": "Emef Prof. Adolpho Ótto De Laet",
+          "endereco": "Rua Isidóro De Laet, 165",
+          "eleitores": 3529
+        }
+      ]
+    },
+    "Vila Mazzei": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "256": 9477
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Albino César",
+          "endereco": "Rua Cajamar, 5",
+          "eleitores": 6329
+        },
+        {
+          "zona": "256",
+          "nome": "Ee. Luzia Godoy",
+          "endereco": "Rua Ausônia, 143",
+          "eleitores": 3148
+        }
+      ]
+    },
+    "Vila Irmãos Arnoni": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 5928
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. Prof. Noé Azevedo",
+          "endereco": "Rua São Cleto, 165",
+          "eleitores": 5928
+        }
+      ]
+    },
+    "Pirituba": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 10568
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Faculdades Anhanguera",
+          "endereco": "Av. Raimundo Pereira De Magalhães, 3305",
+          "eleitores": 7530
+        },
+        {
+          "zona": "325",
+          "nome": "Colegio Padre Giordano Comercial E Educacional Ltda",
+          "endereco": "Rua Baltazar Da Silveira, 385",
+          "eleitores": 2998
+        },
+        {
+          "zona": "325",
+          "nome": "Internato Pirituba",
+          "endereco": "Rua Stefano Mauser, 651",
+          "eleitores": 40
+        }
+      ]
+    },
+    "Vila Mirante": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "327": 4909
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Prof. Geraldo Homero De França Ottoni",
+          "endereco": "Rua Bernardo Rolim De Moura, 129",
+          "eleitores": 3598
+        },
+        {
+          "zona": "327",
+          "nome": "Emei. Antonio Munhoz Bonilha",
+          "endereco": "Rua Vicente Antonio De Oliveira, 74",
+          "eleitores": 1311
+        }
+      ]
+    },
+    "Conjunto Habitacional Turística": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 3507
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emei. Estrada Turística Do Jaraguá",
+          "endereco": "Rua Agnes Fontoura, 75",
+          "eleitores": 3507
+        }
+      ]
+    },
+    "Vila Aurora": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 5337,
+        "249": 4601
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emef. Antonio Alves Veríssimo",
+          "endereco": "Rua Martino Arósio, 81",
+          "eleitores": 5337
+        },
+        {
+          "zona": "249",
+          "nome": "Ee. Prof. Carlos De Laet",
+          "endereco": "Rua Albertina Vieira Da Silva Gordo, 147",
+          "eleitores": 4601
+        }
+      ]
+    },
+    "Sítio do Piqueri": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 11465
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Profa. Eunice Terezinha De Oliveira Frágoas",
+          "endereco": "Av. Antonelo Da Messina, 222",
+          "eleitores": 5966
+        },
+        {
+          "zona": "256",
+          "nome": "Ee. Prof. João Baptista Alves Da Silva",
+          "endereco": "Rua Manuel Vieira Da Luz, 384",
+          "eleitores": 5499
+        }
+      ]
+    },
+    "Jaçanã": {
+      "distrito": "JAÇANÃ",
+      "zonas": {
+        "349": 23632
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Emef. Octávio Pereira Lopes",
+          "endereco": "Rua Alcy Borges Dos Santos, 242",
+          "eleitores": 5944
+        },
+        {
+          "zona": "349",
+          "nome": "Ee. Júlio Pestana",
+          "endereco": "Av. Guapira, 2862",
+          "eleitores": 5885
+        },
+        {
+          "zona": "349",
+          "nome": "Faculdades Santa Rita De Cássia",
+          "endereco": "Av. Jaçanã, 648",
+          "eleitores": 5153
+        },
+        {
+          "zona": "349",
+          "nome": "Ee. Prof. Eurico Figueiredo",
+          "endereco": "Rua Ministro Fonseca Filho, 75",
+          "eleitores": 4951
+        }
+      ]
+    },
+    "Vila Maria Baixa": {
+      "distrito": "VILA MARIA",
+      "zonas": {
+        "254": 32477
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ee. Sen. Paulo Egydio De O. Carvalho",
+          "endereco": "Rua Araritaguaba, 1330",
+          "eleitores": 8529
+        },
+        {
+          "zona": "254",
+          "nome": "Uninove - Campus Vila Maria",
+          "endereco": "Rua Guaranésia, 425",
+          "eleitores": 6633
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. João Vieira De Almeida",
+          "endereco": "Avenida Guilherme Cotching, 1272",
+          "eleitores": 6000
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Ministro Horácio Lafer",
+          "endereco": "Rua Dias Da Silva, 1464",
+          "eleitores": 4320
+        }
+      ]
+    },
+    "Jardim Brasil": {
+      "distrito": "VILA MEDEIROS",
+      "zonas": {
+        "420": 39877
+      },
+      "locais": [
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professora Veridiana Camacho Carvalho Gomes",
+          "endereco": "Rua Carlos Dos Santos, 781",
+          "eleitores": 7108
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Municipal De Ensino Fundamental Profa. Maria Helena Faria Lima",
+          "endereco": "Avenida Roland Garros, 573",
+          "eleitores": 5779
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professora Carmosina Monteiro Vianna",
+          "endereco": "Rua Antônio Palmieri, 377",
+          "eleitores": 5593
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Eurípedes De Castro",
+          "endereco": "Avenida Edgar Ruzzant, 456",
+          "eleitores": 5568
+        }
+      ]
+    },
+    "Chácara Inglesa": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 13336
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Ee. Ermano Marchetti",
+          "endereco": "Rua Pedro Marigliani, 192",
+          "eleitores": 5967
+        },
+        {
+          "zona": "325",
+          "nome": "Colegio Sao Joao Gualberto",
+          "endereco": "Rua Dr. Argemiro Couto De Barros, 194",
+          "eleitores": 3960
+        },
+        {
+          "zona": "325",
+          "nome": "Emef. Prof. Gabriel Prestes",
+          "endereco": "Rua Carlos Alberto Da Cunha Mattos, 134",
+          "eleitores": 3409
+        }
+      ]
+    },
+    "Jardim da Conquista": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 3909
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef Recanto Dos Humildes",
+          "endereco": "Rua Argélia, S/N.",
+          "eleitores": 3909
+        }
+      ]
+    },
+    "Perus": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 5360
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Candido Portinari",
+          "endereco": "Rua Guilherme Correia De Melo, 408",
+          "eleitores": 5360
+        }
+      ]
+    },
+    "Jardim Modelo": {
+      "distrito": "JAÇANÃ",
+      "zonas": {
+        "349": 5974
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Ee. Profa. Maria Angelita Sayago De Laet",
+          "endereco": "Rua Freire Bastos, 226",
+          "eleitores": 5974
+        }
+      ]
+    },
+    "Vila Palmeira": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 6136
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emef. Doutor Elias De Siqueira Cavalcanti",
+          "endereco": "Rua Santa Ângela, 50",
+          "eleitores": 4477
+        },
+        {
+          "zona": "327",
+          "nome": "Emei. Nair Correa Buarque",
+          "endereco": "R. Santa Ângela, 50",
+          "eleitores": 1659
+        }
+      ]
+    },
+    "Vila Sabrina": {
+      "distrito": "VILA MEDEIROS",
+      "zonas": {
+        "420": 17262
+      },
+      "locais": [
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professor Victor Dos Santos Cunha",
+          "endereco": "Avenida João Simão De Castro, 280",
+          "eleitores": 6332
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Municipal De Ensino Fundamental Eneas Carvalho De Aguiar",
+          "endereco": "Rua Francisco Franco Machado, 74",
+          "eleitores": 5176
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professor Lael De Moura Prado",
+          "endereco": "Avenida Professor Castro Junior, 609",
+          "eleitores": 3160
+        },
+        {
+          "zona": "420",
+          "nome": "Emei. Professora Maria Isabel Pacheco De Almeida Ribeiro",
+          "endereco": "Rua Francisco Franco Machado, 160",
+          "eleitores": 1818
+        }
+      ]
+    },
+    "Jardim Leonor Mendes de Barros": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "256": 12633
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Dr. Alberto Cardoso De Mello Neto",
+          "endereco": "Av. Profa. Virgília Rodrigues Alves De Carvalho Pinto, 633",
+          "eleitores": 7097
+        },
+        {
+          "zona": "256",
+          "nome": "Ee. Prof. Rafael De Moraes Lima",
+          "endereco": "Rua Lavínia Pacheco E Silva, S/N",
+          "eleitores": 5536
+        }
+      ]
+    },
+    "Jardim Damasceno": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 7577
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Doutor Genésio De Almeida Moura",
+          "endereco": "Rua Domingos Arevalo, 862",
+          "eleitores": 7577
+        }
+      ]
+    },
+    "Jardim Ibéria": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 6209
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Prof. Colombo De Almeida",
+          "endereco": "Rua Graciano Altieri, 114",
+          "eleitores": 6209
+        }
+      ]
+    },
+    "Vila Albertina": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 3283,
+        "327": 9691
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Prof. Antonio Emílio De Souza Penna",
+          "endereco": "Rua Carolina Maria Do Carmo, S/N",
+          "eleitores": 3614
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Regente Feijó",
+          "endereco": "Praça Itálico Ancona Lopes, 257",
+          "eleitores": 3360
+        },
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. Maria Paula Marcondes Domingues",
+          "endereco": "Rua Manuel Morais Pontes, 395",
+          "eleitores": 3238
+        },
+        {
+          "zona": "327",
+          "nome": "Emei. Manoel Preto",
+          "endereco": "Rua Bonifácio Cubas, 356",
+          "eleitores": 1833
+        }
+      ]
+    },
+    "Vila Barbosa": {
+      "distrito": "LIMÃO",
+      "zonas": {
+        "255": 4290
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Emef. Prof. Aroldo De Azevedo",
+          "endereco": "Rua Francisco Augusto Lopes, 223",
+          "eleitores": 4290
+        }
+      ]
+    },
+    "Jaraguá": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 20912
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "E.E. Prof. Otto De Barros Vidal",
+          "endereco": "Rua Manuel Joaquim De Góis, 70",
+          "eleitores": 4285
+        },
+        {
+          "zona": "403",
+          "nome": "E.E. Ministro Oscar Dias Correa",
+          "endereco": "Avenida Alexios Jafet, 1933",
+          "eleitores": 4196
+        },
+        {
+          "zona": "403",
+          "nome": "Emef. Brigadeiro Henrique Raymundo Dyott Fontenelle",
+          "endereco": "Rua Nossa Senhora Da Conceição, 384",
+          "eleitores": 3987
+        },
+        {
+          "zona": "403",
+          "nome": "E.E. Profa. Isabel Vieira De Serpa E Paiva",
+          "endereco": "Av. Jerimanduba, 561",
+          "eleitores": 3491
+        }
+      ]
+    },
+    "Vila Paiva": {
+      "distrito": "VILA GUILHERME",
+      "zonas": {
+        "254": 19380
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ee. Casimiro De Abreu",
+          "endereco": "Rua Coronel Jordão, 144",
+          "eleitores": 5975
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Maria Montessori",
+          "endereco": "Avenida Conceição, 2288",
+          "eleitores": 5448
+        },
+        {
+          "zona": "254",
+          "nome": "Emef. Ruy Barbosa",
+          "endereco": "Av. Conceição, 1385",
+          "eleitores": 4692
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Prof. Narbal Fontes",
+          "endereco": "Avenida Conceição, 806",
+          "eleitores": 3265
+        }
+      ]
+    },
+    "Vila Isolina Mazzei": {
+      "distrito": "VILA GUILHERME",
+      "zonas": {
+        "254": 7984,
+        "420": 4606
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ee. Gonçalves Dias",
+          "endereco": "Rua Nilo Luis Mazzei, S/N",
+          "eleitores": 5477
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Municipal De Ensino Fundamental Professora Shirley Guio",
+          "endereco": "Rua Cristóvão Lins, 611",
+          "eleitores": 4606
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Deputado Pedro Costa",
+          "endereco": "Rua Nilo Luis Mazzei, 378",
+          "eleitores": 2507
+        }
+      ]
+    },
+    "Vila Nossa Senhora do Retiro": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "327": 3776
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Nossa Senhora Do Retiro",
+          "endereco": "Rua Margarida Ramalho (Dr. Pedro De Mustre Portugal, 265)",
+          "eleitores": 3776
+        }
+      ]
+    },
+    "Jardim Antártica": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "422": 15336
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "E.E. Profª Elza Saraiva Monteiro",
+          "endereco": "Avenida Dona Mariana Caligiori Ronchetti, 1200",
+          "eleitores": 6908
+        },
+        {
+          "zona": "422",
+          "nome": "Emef. Zilka Salaberry De Carvalho",
+          "endereco": "Rua Antonio De Franca E Horta, 35",
+          "eleitores": 6572
+        },
+        {
+          "zona": "422",
+          "nome": "Emei. Profª Maria Lucia Petit Da Silva",
+          "endereco": "Rua Solar, 303",
+          "eleitores": 1856
+        }
+      ]
+    },
+    "Itaberaba": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 8880
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Prof. Joaquim Luiz De Brito",
+          "endereco": "Rua Santa Lúcia Filippini, 65",
+          "eleitores": 4545
+        },
+        {
+          "zona": "327",
+          "nome": "Colégio Santa Lúcia Filippini",
+          "endereco": "Rua Santa Lúcia Filippini, 104",
+          "eleitores": 4335
+        }
+      ]
+    },
+    "Freguesia do Ó": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 15868
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Prof. Jácomo Stavale",
+          "endereco": "Rua Manuel Madruga, 205",
+          "eleitores": 6195
+        },
+        {
+          "zona": "327",
+          "nome": "Colégio B.A.L.",
+          "endereco": "Rua Antonieta Leitão, 156",
+          "eleitores": 3225
+        },
+        {
+          "zona": "327",
+          "nome": "Colegio Beka Sc Ltda",
+          "endereco": "Avenida Itaberaba , 669",
+          "eleitores": 2895
+        },
+        {
+          "zona": "327",
+          "nome": "Colégio Orlando Garcia Da Silveira S/C Ltda",
+          "endereco": "Rua Manoel Madruga, 104",
+          "eleitores": 2198
+        }
+      ]
+    },
+    "Jardim São Miguel": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 4776
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Emef. Comandante Garcia D'Ávila",
+          "endereco": "Rua Armando Coelho Da Silva, 859",
+          "eleitores": 4776
+        }
+      ]
+    },
+    "Vila Siqueira": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "255": 15270,
+        "376": 2259
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Tarcísio Alvares Lobo",
+          "endereco": "Rua Dona Estela Borges Morato, 500",
+          "eleitores": 9953
+        },
+        {
+          "zona": "255",
+          "nome": "Ee. Profa. Angelina Madureira",
+          "endereco": "Rua Vicente Ferreira Leite, 489",
+          "eleitores": 5317
+        },
+        {
+          "zona": "376",
+          "nome": "Emei. Porto Nacional",
+          "endereco": "Rua Porto Nacional, 260",
+          "eleitores": 2259
+        }
+      ]
+    },
+    "Vila Nina": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 8584
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Professor Edgard Pimentel Rezende",
+          "endereco": "Rua Jerônimo Souto Maior, 120",
+          "eleitores": 7185
+        },
+        {
+          "zona": "376",
+          "nome": "Emei. Professor Tito Lívio Ferreira",
+          "endereco": "Rua Jerônimo Souto Maior, 300",
+          "eleitores": 1399
+        }
+      ]
+    },
+    "Jardim Guarani": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 27203
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Professor Walfredo Arantes Caldas",
+          "endereco": "Avenida Deputado Cantídio Sampaio, 1701",
+          "eleitores": 7765
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Doutor Ubaldo Costa Leite",
+          "endereco": "Rua José Da Costa Pereira, 70",
+          "eleitores": 6480
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Professora Luiza Salette Juncá De Almeida",
+          "endereco": "Avenida Deputado Cantídio Sampaio, 1701",
+          "eleitores": 4927
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Padre Noé Rodrigues",
+          "endereco": "R. Santa Cruz Da Conceição, 151",
+          "eleitores": 2868
+        }
+      ]
+    },
+    "Vila Maria Alta": {
+      "distrito": "VILA MARIA",
+      "zonas": {
+        "254": 14370
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Emef. Almirante Tamandaré",
+          "endereco": "Rua General Mendes, 46",
+          "eleitores": 5330
+        },
+        {
+          "zona": "254",
+          "nome": "Emef. João Domingues Sampaio",
+          "endereco": "Rua Gastão Madeira, 386",
+          "eleitores": 4392
+        },
+        {
+          "zona": "254",
+          "nome": "Ee. Júlio Maia",
+          "endereco": "Rua Sobral Júnior, 234",
+          "eleitores": 2816
+        },
+        {
+          "zona": "254",
+          "nome": "Emei. Eduardo Carlos Pereira",
+          "endereco": "Rua André Da Fonseca, 40",
+          "eleitores": 985
+        }
+      ]
+    },
+    "Casa Verde Alta": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 15009
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Joaquim Nabuco",
+          "endereco": "Rua Joaquim Afonso De Souza, 355",
+          "eleitores": 6942
+        },
+        {
+          "zona": "255",
+          "nome": "Emef. Humberto Dantas",
+          "endereco": "Rua Manoel Dias Do Campo, 464",
+          "eleitores": 5002
+        },
+        {
+          "zona": "255",
+          "nome": "Emei Vicente Paulo Da Silva",
+          "endereco": "Rua Doutor Fleury Silveira, 295",
+          "eleitores": 3065
+        }
+      ]
+    },
+    "Vila Clarice": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 5119
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Ee. Dr. Agenor Couto De Magalhães",
+          "endereco": "Av. Guilherme Mankel, 99",
+          "eleitores": 5119
+        }
+      ]
+    },
+    "Vila Marina": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 13866
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Almirante Marquês De Tamandaré",
+          "endereco": "Rua Jacaré Copaíba, 33",
+          "eleitores": 6025
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Prof. Paulo Trajano Da Silveira Santos",
+          "endereco": "Rua Praia Do Tumiarú, 320",
+          "eleitores": 3771
+        },
+        {
+          "zona": "327",
+          "nome": "Emef. Érico Veríssimo",
+          "endereco": "Rua Rafael Alves, 295",
+          "eleitores": 3760
+        },
+        {
+          "zona": "327",
+          "nome": "Emef Maria Aparecida Rodrigues Cintra",
+          "endereco": "Rua Arauazinho S/N",
+          "eleitores": 310
+        }
+      ]
+    },
+    "Cachoeirinha": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "255": 5514
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Emef. Tenente Aviador Frederico Gustavo Dos Santos",
+          "endereco": "Avenida General Penha Brasil, 139",
+          "eleitores": 5514
+        }
+      ]
+    },
+    "Parque Anhanguera": {
+      "distrito": "ANHANGUERA",
+      "zonas": {
+        "389": 11191,
+        "403": 3989
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "E.E. Profa. Marilena Piumbato Chaparro",
+          "endereco": "Rua Boaventura Pereira, 235",
+          "eleitores": 3989
+        },
+        {
+          "zona": "389",
+          "nome": "Ee. Prof. Sebastião De Oliveira Gusmão",
+          "endereco": "Rua Francisco Giron, Sem Número",
+          "eleitores": 3907
+        },
+        {
+          "zona": "389",
+          "nome": "Emef Virginia Valeria Aparecida De Almeida Freitas",
+          "endereco": "Rua São Paulo, 6",
+          "eleitores": 3343
+        },
+        {
+          "zona": "389",
+          "nome": "Ee. Jardim Canaã",
+          "endereco": "Rua Coronel José Gladiador, S/N.",
+          "eleitores": 2697
+        }
+      ]
+    },
+    "Sítio do Mandaqui": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 6972
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Colégio Piaget",
+          "endereco": "Rua Epaminondas Melo Do Amaral, 156",
+          "eleitores": 6972
+        }
+      ]
+    },
+    "Santa Terezinha": {
+      "distrito": "SANTANA",
+      "zonas": {
+        "249": 19788
+      },
+      "locais": [
+        {
+          "zona": "249",
+          "nome": "Colégio Salesiano Santa Teresinha",
+          "endereco": "Rua Manoel De Matos, 75",
+          "eleitores": 8808
+        },
+        {
+          "zona": "249",
+          "nome": "Instituto Madre Mazzarello",
+          "endereco": "Praça Domingos Correia Da Cruz , 14",
+          "eleitores": 5861
+        },
+        {
+          "zona": "249",
+          "nome": "Ee. Prof. Rômulo Pero",
+          "endereco": "Rua Copacabana, 243",
+          "eleitores": 5119
+        }
+      ]
+    },
+    "Jardim Fontalis": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 6721
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. Hipólito José Da Costa",
+          "endereco": "Rua Augusto Rodrigues, S/N",
+          "eleitores": 4755
+        },
+        {
+          "zona": "256",
+          "nome": "E.M.E.I. Margareth De Fátima Marques De Azevedo",
+          "endereco": "Rua Augusto Rodrigues, 272",
+          "eleitores": 1966
+        }
+      ]
+    },
+    "Nossa Senhora do Ó": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 10624
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Prof. Augusto Ribeiro De Carvalho (Piqueri - Arc)",
+          "endereco": "Rua Prof. João Machado, 511",
+          "eleitores": 6506
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Padre Manoel De Nóbrega",
+          "endereco": "Avenida Itaberaba, 145",
+          "eleitores": 4118
+        }
+      ]
+    },
+    "Parque São Luís": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 13016
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emef. Professora Joaninha Grassi Fagundes",
+          "endereco": "Rua Alberto Andalo, 36",
+          "eleitores": 5575
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Cacilda Becker",
+          "endereco": "Rua Capitão Jose Amaral, 44",
+          "eleitores": 4583
+        },
+        {
+          "zona": "327",
+          "nome": "Emei Felipe Mestre Jou",
+          "endereco": "Avenida Joao Paulo I, 1347",
+          "eleitores": 2858
+        }
+      ]
+    },
+    "Vila Perus": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 25768
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Ee. Brigadeiro Gavião Peixoto",
+          "endereco": "Rua Mogeiro, 710",
+          "eleitores": 12295
+        },
+        {
+          "zona": "389",
+          "nome": "Ee. Manuel Bandeira",
+          "endereco": "Rua Júlio César Leal, 15",
+          "eleitores": 5927
+        },
+        {
+          "zona": "389",
+          "nome": "Ee. Dona Suzana De Campos",
+          "endereco": "Rua Antonio Maia, 691",
+          "eleitores": 5066
+        },
+        {
+          "zona": "389",
+          "nome": "Emei. Oliveira Lima",
+          "endereco": "Rua Antonio Maia, 476",
+          "eleitores": 2480
+        }
+      ]
+    },
+    "Jardim Yara": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 4676
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. Profa. Esmeralda Salles Pereira Ramos",
+          "endereco": "Rua Maria Amália Lopes Azevedo, 2167",
+          "eleitores": 4676
+        }
+      ]
+    },
+    "Jardim São José": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "327": 5577
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emef. General Liberato Bittencourt (Quinze)",
+          "endereco": "Rua Arnaldo Alvernaz Nunes, 320",
+          "eleitores": 5577
+        }
+      ]
+    },
+    "Parque Mandi": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 5132
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Professor Plínio Damasco Penna",
+          "endereco": "Rua General Ulhoa Cintra, 37",
+          "eleitores": 5132
+        }
+      ]
+    },
+    "Parque Monteiro Soares": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 4866
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emef. Plínio Ayrosa",
+          "endereco": "Rua Tomás Ramos Jordão, 259",
+          "eleitores": 4866
+        }
+      ]
+    },
+    "Vila Nivi": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "349": 8417
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Ee. Alfredo Inácio Trindade",
+          "endereco": "Rua João Rosa, 86",
+          "eleitores": 5682
+        },
+        {
+          "zona": "349",
+          "nome": "Colégio Sigmund Freud",
+          "endereco": "Rua Canedos, 202",
+          "eleitores": 2032
+        },
+        {
+          "zona": "349",
+          "nome": "Emei. Profa. Vera Arnoni Scalquette",
+          "endereco": "Rua Tanque Velho, 2277",
+          "eleitores": 703
+        }
+      ]
+    },
+    "Parque Nações Unidas": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 19291
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "E.E. Ítalo Betarello",
+          "endereco": "Rua Andressa, 120",
+          "eleitores": 5072
+        },
+        {
+          "zona": "403",
+          "nome": "E.E. República Argentina",
+          "endereco": "Rua Philonilia Gonçalves Dos Santos, S/ N",
+          "eleitores": 4951
+        },
+        {
+          "zona": "403",
+          "nome": "E.E.Profa. Thayane Luzimara Costa Valcacer",
+          "endereco": "Rua Jair Da Rosa Pinto, 11",
+          "eleitores": 4835
+        },
+        {
+          "zona": "403",
+          "nome": "E.E. Friedrich Von Voith",
+          "endereco": "Rua Antonio De Cabezón, 398",
+          "eleitores": 4433
+        }
+      ]
+    },
+    "Jardim Guapira": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "349": 13194
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Emef. Ceu. Jaçanã",
+          "endereco": "Rua Francisca Espósito Tonetti,105",
+          "eleitores": 6954
+        },
+        {
+          "zona": "349",
+          "nome": "Cei Ceu Jaçanã",
+          "endereco": "Rua Francisca Espósito Tonetti, 105",
+          "eleitores": 3123
+        },
+        {
+          "zona": "349",
+          "nome": "Ceu.Emei. Jaçanã",
+          "endereco": "Rua Francisca Espósito Tonetti, 105",
+          "eleitores": 3117
+        }
+      ]
+    },
+    "Parque Peruche": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 2674
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Colégio Ouro Grosso",
+          "endereco": "Rua Ouro Grosso, 933",
+          "eleitores": 2674
+        }
+      ]
+    },
+    "Parque Casa de Pedra": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 12776
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Bibliotecária Terezine Arantes Ferraz",
+          "endereco": "Rua Ushikichi Kamiya, 1300",
+          "eleitores": 6869
+        },
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. Marechal Rondon",
+          "endereco": "Rua Do Burui, 120",
+          "eleitores": 4720
+        },
+        {
+          "zona": "256",
+          "nome": "E.M.E.I. Profa. Eudóxia De Barros",
+          "endereco": "Rua Sônia Margy, 246",
+          "eleitores": 1187
+        }
+      ]
+    },
+    "Jardim Santo Elias": {
+      "distrito": "SÃO DOMINGOS",
+      "zonas": {
+        "325": 7676
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Emef. Rui Bloem",
+          "endereco": "Rua Armando Flamarion Coelho, 241",
+          "eleitores": 4922
+        },
+        {
+          "zona": "325",
+          "nome": "Emei. Afonso Sardinha",
+          "endereco": "Av. Mutinga, 1406",
+          "eleitores": 2754
+        }
+      ]
+    },
+    "Jardim Cabuçu": {
+      "distrito": "JAÇANÃ",
+      "zonas": {
+        "349": 3179
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Emef. Frei Antonio Sant'Ana Galvão",
+          "endereco": "Rua General Jerônimo Furtado, 715",
+          "eleitores": 3179
+        }
+      ]
+    },
+    "Vila Rica": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 4853
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. Desembargador Sebastião Nogueira De Lima",
+          "endereco": "Rua Joaquina Maria Dos Santos, 177",
+          "eleitores": 4853
+        }
+      ]
+    },
+    "Vila Gustavo": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "349": 15556
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Colégio Sir Isaac Newton",
+          "endereco": "Av. Júlio Buono, 2407",
+          "eleitores": 5564
+        },
+        {
+          "zona": "349",
+          "nome": "Ee. Cônego João Ligabue",
+          "endereco": "Rua Da Grota, 483",
+          "eleitores": 5144
+        },
+        {
+          "zona": "349",
+          "nome": "Emef. Prof. Franklin Augusto De Moura Campos",
+          "endereco": "Rua Major Dantas Cortez, 1001",
+          "eleitores": 3065
+        },
+        {
+          "zona": "349",
+          "nome": "Colégio Pietra",
+          "endereco": "Rua Rio Doce, 407/409",
+          "eleitores": 1783
+        }
+      ]
+    },
+    "Bortolândia": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 12919
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Ângelo Bortolo",
+          "endereco": "Rua Antônio Gonçalves Silva, 91",
+          "eleitores": 8077
+        },
+        {
+          "zona": "256",
+          "nome": "Ee. Profa. Judith Guimarães Dos Santos",
+          "endereco": "Rua Manuel Pereira Sampaio, 66",
+          "eleitores": 4842
+        }
+      ]
+    },
+    "Jardim do Tiro": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 6492
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Professor Jair Toledo Xavier",
+          "endereco": "Rua Joaquim De Almeida Morais, S/N",
+          "eleitores": 6492
+        }
+      ]
+    },
+    "Vila Amália": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "422": 7717
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "E.E. Guilherme De Almeida",
+          "endereco": "Avenida Parada Pinto, 2355",
+          "eleitores": 7717
+        }
+      ]
+    },
+    "Jardim Sydney": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "403": 9693
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emef. Renato Antonio Checchia",
+          "endereco": "Rua Conde Monterone, 101",
+          "eleitores": 5160
+        },
+        {
+          "zona": "403",
+          "nome": "Ee. Prof. Francisco Faria Neto",
+          "endereco": "Rua Silvério De Castro E Sousa, 102",
+          "eleitores": 4533
+        }
+      ]
+    },
+    "Vila Constança": {
+      "distrito": "JAÇANÃ",
+      "zonas": {
+        "349": 11632
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Emef. Lourenço Filho",
+          "endereco": "Rua São Geraldino, 212",
+          "eleitores": 4179
+        },
+        {
+          "zona": "349",
+          "nome": "Emef. Edson Rodrigues",
+          "endereco": "Rua Filadelfo Gouveia Neto, 131",
+          "eleitores": 4090
+        },
+        {
+          "zona": "349",
+          "nome": "Ee. Prof. Luiz Amaral Wagner",
+          "endereco": "Rua Dr. Nicolino Morena, 541",
+          "eleitores": 3363
+        }
+      ]
+    },
+    "Vila Hebe": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "255": 3210
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Emef. Prof. Gilberto Dupas",
+          "endereco": "Avenida Deputado Emílio Carlos, 3641",
+          "eleitores": 3210
+        }
+      ]
+    },
+    "Vila Nova Mazzei": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 7854
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Pedro Alexandrino",
+          "endereco": "Rua Dos Imbiras, 49",
+          "eleitores": 5887
+        },
+        {
+          "zona": "256",
+          "nome": "E.M.E.I. Prof. Taufik Daud Kurban",
+          "endereco": "Rua Manuel Gaya, 500",
+          "eleitores": 1967
+        }
+      ]
+    },
+    "Vila Paulicéia": {
+      "distrito": "SANTANA",
+      "zonas": {
+        "249": 3428
+      },
+      "locais": [
+        {
+          "zona": "249",
+          "nome": "Emef Prof. Máximo De Moura Santos",
+          "endereco": "Rua Prof. Alfredo Brésser, 50",
+          "eleitores": 3428
+        }
+      ]
+    },
+    "Jardim Líbano": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 6115
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Emef. Desembargador Sílvio Portugal",
+          "endereco": "Rua Francisco Saverio Orlandi, 141",
+          "eleitores": 4221
+        },
+        {
+          "zona": "325",
+          "nome": "Em. Profa. Vera Lúcia Aparecida Ribeiro",
+          "endereco": "Rua Benedito Pereira, 206",
+          "eleitores": 1894
+        }
+      ]
+    },
+    "Jardim do Russo": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 5347
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Fernando Gracioso",
+          "endereco": "Rua Silveirânia, S/N.",
+          "eleitores": 5347
+        }
+      ]
+    },
+    "Conjunto Habitacional Recanto dos Humildes": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 9531
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Prof. Jairo De Almeida",
+          "endereco": "Rua Recanto Dos Humildes, S/N.",
+          "eleitores": 4583
+        },
+        {
+          "zona": "389",
+          "nome": "Emei. Recanto Dos Humildes I",
+          "endereco": "Rua Recanto Dos Humildes, S/N.",
+          "eleitores": 2735
+        },
+        {
+          "zona": "389",
+          "nome": "Emef. Jardim Da Conquista",
+          "endereco": "Rua Recanto Dos Humildes, S/N.",
+          "eleitores": 2213
+        }
+      ]
+    },
+    "Tremembé": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 8368
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Arnaldo Barreto",
+          "endereco": "Rua Antônio Pestana, 58",
+          "eleitores": 4404
+        },
+        {
+          "zona": "256",
+          "nome": "Colégio Passionista Santa Gema",
+          "endereco": "Rua Antônio Pestana, 155",
+          "eleitores": 3964
+        }
+      ]
+    },
+    "Vila Medeiros": {
+      "distrito": "VILA MEDEIROS",
+      "zonas": {
+        "420": 28553
+      },
+      "locais": [
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professor David Eugênio Dos Santos",
+          "endereco": "Rua José De Almeida, 1377",
+          "eleitores": 6175
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professor Sebastião De Souza Bueno",
+          "endereco": "Rua Francisco De Medeiros Jordão, 579",
+          "eleitores": 5289
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Doutor Luiz Lázaro Zamenhof",
+          "endereco": "Rua Eurico Sodré, 944",
+          "eleitores": 4971
+        },
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Doutor Justino Cardoso",
+          "endereco": "Rua João Souto Maior, 465",
+          "eleitores": 4287
+        }
+      ]
+    },
+    "Jardim Maristela": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 17005
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. João Solimeo",
+          "endereco": "Estrada Do Sabão, 1497",
+          "eleitores": 8638
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Professor Galdino Lopes Chagas",
+          "endereco": "Estrada Do Sabão, 1547",
+          "eleitores": 5779
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Professor Osmar Bastos Conceição",
+          "endereco": "Rua Doutor Pinheiro De Faria, 40",
+          "eleitores": 2588
+        }
+      ]
+    },
+    "Casa Verde": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 6586
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Ary Barroso",
+          "endereco": "Rua Santa Eudóxia, 630",
+          "eleitores": 6586
+        }
+      ]
+    },
+    "Jardim Britânia": {
+      "distrito": "ANHANGUERA",
+      "zonas": {
+        "389": 6640
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef Prof Milena Benedicto (Antigo Emef. Jardim Britânia)",
+          "endereco": "Rua Felippo Sturba, 38",
+          "eleitores": 4566
+        },
+        {
+          "zona": "389",
+          "nome": "Emef. Edgard Carone",
+          "endereco": "Rua Elisa Dina, 293 A",
+          "eleitores": 2074
+        }
+      ]
+    },
+    "Vila Pirituba": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 12287
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Ee Prof Julio Cesar De Oliveira",
+          "endereco": "R Alberto Veiga, 99",
+          "eleitores": 6882
+        },
+        {
+          "zona": "325",
+          "nome": "Emef. Monteiro Lobato",
+          "endereco": "Av. Paula Ferreira, 2653",
+          "eleitores": 5405
+        }
+      ]
+    },
+    "Jardim Martins Silva": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 5117
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Prof. Sérgio Da Costa",
+          "endereco": "Rua Presidente Bartolomé Mitre, 298",
+          "eleitores": 5117
+        }
+      ]
+    },
+    "Jardim Virginia Bianca": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 10388
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. João Ramos Pernambuco-Abolicionista",
+          "endereco": "Rua João Nicolau Chamma, 253",
+          "eleitores": 4580
+        },
+        {
+          "zona": "256",
+          "nome": "Ee. Prof. Izac Silvério",
+          "endereco": "Rua Bitencourt Da Silva, 218",
+          "eleitores": 3492
+        },
+        {
+          "zona": "256",
+          "nome": "Cei. Profa. Célia Regina Kuhl",
+          "endereco": "Rua Caetano Teixeira, 291",
+          "eleitores": 2316
+        }
+      ]
+    },
+    "Jardim Peri Novo": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "422": 7687
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "E.E. Assis José Ambrósio",
+          "endereco": "Rua Alfarrobeiras, 68",
+          "eleitores": 7687
+        }
+      ]
+    },
+    "Jardim Maninos": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 1561
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "Cei. Profº Wilson D'Angelo Braz",
+          "endereco": "Avenida Direitos Humanos, 717",
+          "eleitores": 1561
+        }
+      ]
+    },
+    "Vila Santista": {
+      "distrito": "LIMÃO",
+      "zonas": {
+        "255": 4695
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Matilde Macedo Soares",
+          "endereco": "Rua José Soriano De Sousa, 30",
+          "eleitores": 4695
+        }
+      ]
+    },
+    "Núcleo do Engordador": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 6019
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Ee. Profa. Philomena Baylao",
+          "endereco": "Av. Cel. Sezefredo Fagundes, 14666",
+          "eleitores": 6019
+        }
+      ]
+    },
+    "Vila Mangalot": {
+      "distrito": "SÃO DOMINGOS",
+      "zonas": {
+        "325": 10184
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Ee. Antonio Francisco Redondo",
+          "endereco": "Rua Evandro Danton Ferreira Gandra, S/N",
+          "eleitores": 5058
+        },
+        {
+          "zona": "325",
+          "nome": "Ee. Octávio Monteiro De Castro",
+          "endereco": "Praça Itaquirai, S/N",
+          "eleitores": 4136
+        },
+        {
+          "zona": "325",
+          "nome": "Emei. Paulo Vi",
+          "endereco": "Rua Carlo Perinello, S/N",
+          "eleitores": 990
+        }
+      ]
+    },
+    "Casa Verde Baixa": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 8804
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Prof. Benedito Tolosa",
+          "endereco": "Praça Dirceu De Lima, 617",
+          "eleitores": 6619
+        },
+        {
+          "zona": "255",
+          "nome": "Emef. Paulo Nogueira Filho",
+          "endereco": "Rua Brazeliza Alves Carvalho, 356",
+          "eleitores": 2185
+        }
+      ]
+    },
+    "Vila Catupia": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 4790
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Emef. Mário Kosel Filho",
+          "endereco": "Rua Urutinga, 144",
+          "eleitores": 4790
+        }
+      ]
+    },
+    "Jardim Jaraguá": {
+      "distrito": "ANHANGUERA",
+      "zonas": {
+        "403": 3629,
+        "389": 2456
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emef. General Henrique Geisel",
+          "endereco": "Rua Miguel Pereira Landim, 253",
+          "eleitores": 3629
+        },
+        {
+          "zona": "389",
+          "nome": "Ee. Professora Zoraide De Campos Helu",
+          "endereco": "Rua Giovanni Paladino, 76",
+          "eleitores": 2456
+        }
+      ]
+    },
+    "Vila Moinho Velho": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 10237
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Prof. Milton Da Silva Rodrigues",
+          "endereco": "Rua João Cordeiro, 929",
+          "eleitores": 4232
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Mathias Aires",
+          "endereco": "Rua Moinho Velho, 355",
+          "eleitores": 3683
+        },
+        {
+          "zona": "327",
+          "nome": "Centro De Ensino Integrado Wellington",
+          "endereco": "Avenida Ministro Petrônio Portela, 11",
+          "eleitores": 2322
+        }
+      ]
+    },
+    "Vila Zat": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "327": 9210
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Doutor Joaquim Silvado",
+          "endereco": "Rua Monsenhor Manoel Gomes, 306",
+          "eleitores": 4799
+        },
+        {
+          "zona": "327",
+          "nome": "Ee. Jornalista Carlos Frederico Werneck Lacerda",
+          "endereco": "Rua Conceição Do Norte, 906",
+          "eleitores": 4411
+        }
+      ]
+    },
+    "Vila Arcádia": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 2549
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emef. Presidente Nilo Peçanha",
+          "endereco": "Rua Enéias Luís Carlos Barbanti, 660",
+          "eleitores": 2549
+        }
+      ]
+    },
+    "Sítio Morro Grande": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "403": 4150,
+        "327": 7147
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Clodomiro Carneiro",
+          "endereco": "Rua Manoel De Souza Azevedo, 364",
+          "eleitores": 5898
+        },
+        {
+          "zona": "403",
+          "nome": "Ee. Elisio Teixeira Leite Iii",
+          "endereco": "Avenida Elisio Teixeira Leite, 6700 A",
+          "eleitores": 4150
+        },
+        {
+          "zona": "327",
+          "nome": "Emef. Professora Caira Alayde Alvarenga Medea",
+          "endereco": "Rua Xavier Da Silva Ferrão, 217",
+          "eleitores": 1249
+        }
+      ]
+    },
+    "Vila Fanton": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 5432
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Julio De Oliveira",
+          "endereco": "Rua Julio De Oliveira, 9",
+          "eleitores": 5432
+        }
+      ]
+    },
+    "Parque Vila Maria": {
+      "distrito": "VILA MARIA",
+      "zonas": {
+        "254": 4286
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ceu. Parque Novo Mundo",
+          "endereco": "Avenida Ernesto Augusto Lopes, 100",
+          "eleitores": 4286
+        }
+      ]
+    },
+    "Jardim Brasília": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "389": 5035
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Ee. Profª  Eulice Silvio Mendonça Da Silva",
+          "endereco": "Avenida Deputado Cantidio Sampaio, 5647",
+          "eleitores": 5035
+        }
+      ]
+    },
+    "Vila Cruz das Almas": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 5327
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Pei. Doutor Augusto De Macedo Costa",
+          "endereco": "Rua Conceição De Jacareí, 8",
+          "eleitores": 5327
+        }
+      ]
+    },
+    "Vila Dionísia": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "422": 5105,
+        "255": 4792
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Emef. Prof. Oswaldo Quirino Simões",
+          "endereco": "Rua Camilo Peçanha, 10",
+          "eleitores": 4792
+        },
+        {
+          "zona": "422",
+          "nome": "Emei. Rosa Carolina Agazzi",
+          "endereco": "Rua Doutor Araújo Castro, S/N",
+          "eleitores": 2701
+        },
+        {
+          "zona": "422",
+          "nome": "Cei. Jardim Peri",
+          "endereco": "Rua Afonso Lopes Vieira, 57",
+          "eleitores": 2287
+        },
+        {
+          "zona": "422",
+          "nome": "Emef Prof Neir Augusto Lopes",
+          "endereco": "Rua Jornalista Octávio Ribeiro Pena Branca, 20",
+          "eleitores": 117
+        }
+      ]
+    },
+    "Vila Souza": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "389": 11913
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Ee. General Humberto De Souza Melo",
+          "endereco": "Avenida Deputado Cantidio Sampaio, 6803",
+          "eleitores": 7876
+        },
+        {
+          "zona": "389",
+          "nome": "Emef. General Vicente De Paulo Dale Coutinho",
+          "endereco": "Avenida Deputado Cantidio Sampaio, 6813",
+          "eleitores": 4037
+        }
+      ]
+    },
+    "Parque Souza Aranha": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 6925
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Padre Manoel Da Nobrega",
+          "endereco": "Rua Santa Prisca, 122",
+          "eleitores": 6925
+        }
+      ]
+    },
+    "Parque Belém": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 1275
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emei. Anita Garibaldi",
+          "endereco": "Rua Otelo Zeloni, 60",
+          "eleitores": 1275
+        }
+      ]
+    },
+    "Jardim Vivan": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 6866
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emef. Prof. Luiz David Sobrinho",
+          "endereco": "Rua Barra Da Forquilha, 576",
+          "eleitores": 4886
+        },
+        {
+          "zona": "403",
+          "nome": "Emei. Fernando De Azevedo",
+          "endereco": "Rua Barra Da Forquilha, 510",
+          "eleitores": 1980
+        }
+      ]
+    },
+    "Jardim Mangalot": {
+      "distrito": "SÃO DOMINGOS",
+      "zonas": {
+        "325": 4893
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Emef. Jairo Ramos",
+          "endereco": "Rua General Lauro Cavalcanti De Farias, 438",
+          "eleitores": 4893
+        }
+      ]
+    },
+    "Jardim São Bento": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 6834
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Capitão Pedro Monteiro Do Amaral",
+          "endereco": "Rua Núrsia, 412",
+          "eleitores": 6834
+        }
+      ]
+    },
+    "Jardim Ondina": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 10859
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Professor Hélios Heber Lino",
+          "endereco": "Rua Montes Pirineus, 600",
+          "eleitores": 5725
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Professor João Boemer Jardim",
+          "endereco": "Rua Cristovão Santiago, 50",
+          "eleitores": 5134
+        }
+      ]
+    },
+    "Carandiru": {
+      "distrito": "VILA GUILHERME",
+      "zonas": {
+        "254": 7056
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Ee. Toledo Barbosa",
+          "endereco": "Rua Maria Cândida, 293",
+          "eleitores": 5075
+        },
+        {
+          "zona": "254",
+          "nome": "Etec Parque Da Juventude",
+          "endereco": "Av. Cruzeiro Do Sul, 2630",
+          "eleitores": 1981
+        }
+      ]
+    },
+    "Vila Nilo": {
+      "distrito": "JAÇANÃ",
+      "zonas": {
+        "349": 5207
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Ee. Dona Cyrene De Oliveira Laet",
+          "endereco": "Rua Ester Elisa, 227",
+          "eleitores": 3373
+        },
+        {
+          "zona": "349",
+          "nome": "Emei. Flávio Império",
+          "endereco": "Rua José Figliolini, 735",
+          "eleitores": 1834
+        }
+      ]
+    },
+    "Cidade D'Abril": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 7703
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "E.E. Ana Siqueira Da Silva",
+          "endereco": "Rua Mauro De Araújo Ribeiro, 678",
+          "eleitores": 6133
+        },
+        {
+          "zona": "403",
+          "nome": "Emei. Júlio Alves Pereira",
+          "endereco": "Rua Carolina Carvalho, 67",
+          "eleitores": 1570
+        }
+      ]
+    },
+    "Vila Nova Galvão": {
+      "distrito": "JAÇANÃ",
+      "zonas": {
+        "349": 8626
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Ee. Prof. José Do Amaral Mello",
+          "endereco": "Rua Alpheu Luiz Gasparino, 84",
+          "eleitores": 8626
+        }
+      ]
+    },
+    "Jardim das Laranjeiras": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 4579
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Colégio Nossa Senhora Das Dores",
+          "endereco": "Rua Iatai, 7",
+          "eleitores": 4579
+        }
+      ]
+    },
+    "Vila Isabel": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 5784
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. Senador Milton Campos",
+          "endereco": "Rua Pérsio De Souza Queiroz Filho, 155",
+          "eleitores": 5784
+        }
+      ]
+    },
+    "Vila Carbone": {
+      "distrito": "LIMÃO",
+      "zonas": {
+        "255": 11791
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Antoine De Saint Exupery",
+          "endereco": "Rua Antônio Ribeiro De Morais, 184",
+          "eleitores": 5945
+        },
+        {
+          "zona": "255",
+          "nome": "Ee. Prof. Luiz Gonzaga Righini",
+          "endereco": "Avenida Deputado Emílio Carlos, 900",
+          "eleitores": 5846
+        }
+      ]
+    },
+    "Parque Panamericano": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 7981
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "E.E. Oscar Blóis",
+          "endereco": "Rua Ângelo Da Silva, 20",
+          "eleitores": 4123
+        },
+        {
+          "zona": "403",
+          "nome": "Emef. Deputado Rogê Ferreira",
+          "endereco": "Rua Philonilia Gonçalves Dos Santos, S/ N",
+          "eleitores": 3858
+        }
+      ]
+    },
+    "Conjunto Promorar Estrada da Parada": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 6236
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. Professora Cecília Moraes De Vasconcelos",
+          "endereco": "Rua Romulo Naldi, 147",
+          "eleitores": 5963
+        },
+        {
+          "zona": "376",
+          "nome": "Emei. Bertha Lutz",
+          "endereco": "Rua Rômulo Naldi, 117",
+          "eleitores": 273
+        }
+      ]
+    },
+    "Jardim Rincão": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 12185
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emef. José Kauffmann",
+          "endereco": "Rua Samuel Bovy, 23",
+          "eleitores": 6477
+        },
+        {
+          "zona": "403",
+          "nome": "Emef. Padre Leonel Franca",
+          "endereco": "Rua Xavier Dos Pássaros, 39",
+          "eleitores": 3372
+        },
+        {
+          "zona": "403",
+          "nome": "E.E. Profa. Eliana Passuelo",
+          "endereco": "Estrada Das Taipas, 1370",
+          "eleitores": 2336
+        }
+      ]
+    },
+    "Parque Vitória": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "349": 4340
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Ee. Prof. Ademar Hiroshi Suda",
+          "endereco": "Rua Agafita, 50",
+          "eleitores": 4340
+        }
+      ]
+    },
+    "Vila Bela Vista": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "255": 3694
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Prof. Alfredo Gomes",
+          "endereco": "Rua Maria De São José Cunha, 108",
+          "eleitores": 3694
+        }
+      ]
+    },
+    "Jardim Corisco": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 3945
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. Coronel Hélio Franco Chaves",
+          "endereco": "Rua Kotinda, 1343",
+          "eleitores": 3945
+        }
+      ]
+    },
+    "Vila Cachoeira": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "256": 4597
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.M.E.F. Martin Francisco Ribeiro De Andrada",
+          "endereco": "Rua Paulo César, 126",
+          "eleitores": 4597
+        }
+      ]
+    },
+    "Lauzane Paulista": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 14292
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "Emef. Marcos Mélega",
+          "endereco": "Rua Mont Blanc, 98",
+          "eleitores": 5725
+        },
+        {
+          "zona": "422",
+          "nome": "Emef. Profª Nilce Cruz Figueiredo",
+          "endereco": "Avenida Coronel Manuel Py, 168",
+          "eleitores": 5031
+        },
+        {
+          "zona": "422",
+          "nome": "Emei. Profº Ênio Correa",
+          "endereco": "Avenida Basileia, 80",
+          "eleitores": 2020
+        },
+        {
+          "zona": "422",
+          "nome": "Emei. Sava Popovic",
+          "endereco": "Rua Friburgo, 12",
+          "eleitores": 1516
+        }
+      ]
+    },
+    "Vila Pedra Branca": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 5039
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "Emef. Raul De Leoni",
+          "endereco": "Avenida José Da Rocha Viana, 44",
+          "eleitores": 4927
+        },
+        {
+          "zona": "422",
+          "nome": "Colégio Cantareira",
+          "endereco": "Av. José Da Rocha Viana, 488",
+          "eleitores": 112
+        }
+      ]
+    },
+    "Vila Munhoz": {
+      "distrito": "VILA GUILHERME",
+      "zonas": {
+        "420": 6052
+      },
+      "locais": [
+        {
+          "zona": "420",
+          "nome": "Escola Estadual José Maria Reys",
+          "endereco": "Avenida Conceicão, 3027",
+          "eleitores": 6052
+        }
+      ]
+    },
+    "Jardim França": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "256": 3175
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "Acre Clube",
+          "endereco": "Rua Água Comprida 257",
+          "eleitores": 3175
+        }
+      ]
+    },
+    "Jardim Almanara": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 4366
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. Professor Antonio Prudente",
+          "endereco": "Rua Manuel Inácio Alvarenga, 50",
+          "eleitores": 4366
+        }
+      ]
+    },
+    "Vila Vitório Mazzei": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "249": 2042
+      },
+      "locais": [
+        {
+          "zona": "249",
+          "nome": "Cei Madre Cristina",
+          "endereco": "Rua Inácio Mammana, 363",
+          "eleitores": 2042
+        }
+      ]
+    },
+    "Vila Francos": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 1736
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Pei. Ee. Professor Júlio De Faria E Souza",
+          "endereco": "Rua Pompeu Pequeno Souza Brasil, 89",
+          "eleitores": 1736
+        }
+      ]
+    },
+    "Jardim Maracanã": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 2166
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Cieja. Professora Rose Mary Frasson",
+          "endereco": "Rua Jitaúna, 30",
+          "eleitores": 2166
+        }
+      ]
+    },
+    "Jardim Monjolo": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 4485
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Ee. Pasquale Peccicacco",
+          "endereco": "Rua Nazário Pagano, 225",
+          "eleitores": 4485
+        }
+      ]
+    },
+    "Vila Ede": {
+      "distrito": "VILA MEDEIROS",
+      "zonas": {
+        "420": 1613
+      },
+      "locais": [
+        {
+          "zona": "420",
+          "nome": "Centro De Educação Infantil Vila Medeiros",
+          "endereco": "Rua Simão Pedroso, 303, Vila Ede, São Paulo-Sp",
+          "eleitores": 1613
+        }
+      ]
+    },
+    "Jardim Julieta": {
+      "distrito": "VILA MEDEIROS",
+      "zonas": {
+        "420": 3299
+      },
+      "locais": [
+        {
+          "zona": "420",
+          "nome": "Escola Estadual Professora Maria Antonietta De Castro",
+          "endereco": "Rua Inácio Firmo, 65",
+          "eleitores": 3299
+        }
+      ]
+    },
+    "Piqueri": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 6543
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Ee. Prof. Sílvio Xavier Antunes",
+          "endereco": "Rua José Da Silva Martha, 150",
+          "eleitores": 4312
+        },
+        {
+          "zona": "325",
+          "nome": "Ee. Pio Xii",
+          "endereco": "Rua Otávio Dominguito, 50",
+          "eleitores": 2231
+        }
+      ]
+    },
+    "Vila Ester": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "249": 2182
+      },
+      "locais": [
+        {
+          "zona": "249",
+          "nome": "Ee. Prof. Daily Resende França",
+          "endereco": "Rua Maria Curupaiti, 706",
+          "eleitores": 2182
+        }
+      ]
+    },
+    "Jardim Vista Alegre": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 10308
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Emef. João Amós Comenius",
+          "endereco": "Rua Ibiraiaras, 400",
+          "eleitores": 6825
+        },
+        {
+          "zona": "376",
+          "nome": "Emei. Ministro Bilac Pinto",
+          "endereco": "Rua Ibiraiaras, 19",
+          "eleitores": 2503
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. República Da Colômbia",
+          "endereco": "Rua Rendeira,926",
+          "eleitores": 980
+        }
+      ]
+    },
+    "Jardim Santo Alberto": {
+      "distrito": "TREMEMBÉ",
+      "zonas": {
+        "256": 1547
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.M.E.I. Dina Kutner De Souza - Dina Sfat",
+          "endereco": "Rua Manuel Araújo Aragão, 317",
+          "eleitores": 1547
+        }
+      ]
+    },
+    "Vila Bandeirante": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 4399
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Emef. Dona Angelina Maffei Vita",
+          "endereco": "Rua Zilda, 193",
+          "eleitores": 4399
+        }
+      ]
+    },
+    "Vila Dom Pedro II": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "349": 5642
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Emef. Rodrigues Alves",
+          "endereco": "Rua Ricardo, 81",
+          "eleitores": 5642
+        }
+      ]
+    },
+    "Vila Pereira Barreto": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 6537
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Ee. Prof. Mariano De Oliveira",
+          "endereco": "Rua Almirante Isaías Noronha, 13",
+          "eleitores": 6537
+        }
+      ]
+    },
+    "Parque Rodrigues Alves": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "349": 893
+      },
+      "locais": [
+        {
+          "zona": "349",
+          "nome": "Emei. Profa. Laura Funfas Le Sueur",
+          "endereco": "Av Júlio Buono, 915",
+          "eleitores": 893
+        }
+      ]
+    },
+    "Jardim Vieira de Carvalho": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 3622
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "E.E. Major José Marcelino Da Fonseca",
+          "endereco": "Rua Soldado Bentinho, 87",
+          "eleitores": 3622
+        }
+      ]
+    },
+    "Jardim Carombé": {
+      "distrito": "BRASILÂNDIA",
+      "zonas": {
+        "376": 11556
+      },
+      "locais": [
+        {
+          "zona": "376",
+          "nome": "Ee. Professor Renato De Arruda Penteado",
+          "endereco": "Rua Floriano Da Costa Barroso, 10",
+          "eleitores": 6727
+        },
+        {
+          "zona": "376",
+          "nome": "Ee. Jornalista Ruy Mesquita",
+          "endereco": "Rua Rosalvo José Da Silva, S/N",
+          "eleitores": 3487
+        },
+        {
+          "zona": "376",
+          "nome": "Emei. Coronel José Canavó Filho",
+          "endereco": "Rua Euvaldo Augusto Freire, 02",
+          "eleitores": 1342
+        }
+      ]
+    },
+    "Mandaqui": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 6981
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "Centro Educacional Monteiro Lobato",
+          "endereco": "Avenida Zumkeller, 400",
+          "eleitores": 3844
+        },
+        {
+          "zona": "422",
+          "nome": "Colégio Dom Bosco - Sede Santa Inês 1",
+          "endereco": "Av Santa Inês, 2031",
+          "eleitores": 2852
+        },
+        {
+          "zona": "422",
+          "nome": "Colégio Dom Bosco - Sede Direitos Humanos",
+          "endereco": "Avenida Direitos Humanos, 2781",
+          "eleitores": 285
+        }
+      ]
+    },
+    "Casa Verde Média": {
+      "distrito": "CASA VERDE",
+      "zonas": {
+        "255": 2811
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Liceu Carvalho Pinto",
+          "endereco": "Rua Guarizinho, 587",
+          "eleitores": 2811
+        }
+      ]
+    },
+    "Vila Bancária Munhoz": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 3504
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emef. Pedro Américo",
+          "endereco": "Rua Vicente Jorge, 100",
+          "eleitores": 3504
+        }
+      ]
+    },
+    "Jardim Shangrilá": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "389": 3634
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Prof. Antonio Rodrigues De Campos",
+          "endereco": "Rua Príncipe, 38",
+          "eleitores": 3634
+        }
+      ]
+    },
+    "Vila Caiúba": {
+      "distrito": "PERUS",
+      "zonas": {
+        "389": 2247
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Etec. Gildo Marçal Bezerra Brandão",
+          "endereco": "Rua Presidente Vargas,  S/N.",
+          "eleitores": 2247
+        }
+      ]
+    },
+    "Jardim Itatinga": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 3558
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "E.E. Francisco Voccio",
+          "endereco": "Rua Ita, S/N",
+          "eleitores": 3558
+        }
+      ]
+    },
+    "Vila dos Andrades": {
+      "distrito": "CACHOEIRINHA",
+      "zonas": {
+        "255": 7389
+      },
+      "locais": [
+        {
+          "zona": "255",
+          "nome": "Ee. Tito Prates Da Fonseca",
+          "endereco": "Rua Mendonça Júnior, 611",
+          "eleitores": 7389
+        }
+      ]
+    },
+    "Vila dos Palmares": {
+      "distrito": "ANHANGUERA",
+      "zonas": {
+        "389": 2455
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Emef. Marili Dias",
+          "endereco": "Rua Antonio Conselheiro, 01",
+          "eleitores": 2455
+        }
+      ]
+    },
+    "Vila Santo Antônio": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 3560
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "Colégio Caetano Alvares",
+          "endereco": "Rua Ramal Dos Menezes, 23",
+          "eleitores": 3560
+        }
+      ]
+    },
+    "Jardim Santa Mônica": {
+      "distrito": "PIRITUBA",
+      "zonas": {
+        "325": 4699
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Ee. Prof. João Nogueira Lotufo",
+          "endereco": "Rua José Marcos De Albuquerque, 1-B",
+          "eleitores": 4699
+        }
+      ]
+    },
+    "Vila Guedes": {
+      "distrito": "SÃO DOMINGOS",
+      "zonas": {
+        "325": 942
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Emei. Padre Charbonneau",
+          "endereco": "Rua Fábio De Almeida Magalhães, 95",
+          "eleitores": 942
+        }
+      ]
+    },
+    "Vila Miriam": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 2732
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Colegio Santa Barbara",
+          "endereco": "Rua Domingos Giglio, 141",
+          "eleitores": 1646
+        },
+        {
+          "zona": "327",
+          "nome": "Emei. Eurípides Simões De Paula",
+          "endereco": "Rua Barra Do Jacaré, 73",
+          "eleitores": 1086
+        }
+      ]
+    },
+    "Jardim Anhanguera": {
+      "distrito": "ANHANGUERA",
+      "zonas": {
+        "389": 4359
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Ee. Professor Milton Santos",
+          "endereco": "Rua Fancisco Giron, S/N",
+          "eleitores": 4359
+        }
+      ]
+    },
+    "Parque Maria Domitila": {
+      "distrito": "SÃO DOMINGOS",
+      "zonas": {
+        "325": 3038
+      },
+      "locais": [
+        {
+          "zona": "325",
+          "nome": "Emef. Gabriel Sylvestre Teixeira De Carvalho",
+          "endereco": "Rua Coronel Albino Rego, 132",
+          "eleitores": 3038
+        }
+      ]
+    },
+    "Jardim Bandeirantes": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 2431
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emef. Estação Jaraguá",
+          "endereco": "Rua João Aires, 109",
+          "eleitores": 2431
+        }
+      ]
+    },
+    "Parque Mandaqui": {
+      "distrito": "MANDAQUI",
+      "zonas": {
+        "422": 1543
+      },
+      "locais": [
+        {
+          "zona": "422",
+          "nome": "Emei. Marina Nogueira De Souza Martins",
+          "endereco": "Avenida Direitos Humanos, 2767",
+          "eleitores": 1543
+        }
+      ]
+    },
+    "Jardim Pirituba": {
+      "distrito": "JARAGUÁ",
+      "zonas": {
+        "403": 1150
+      },
+      "locais": [
+        {
+          "zona": "403",
+          "nome": "Emef. Prof. Enzo Antonio Silvestrin",
+          "endereco": "Estrada Do Congo, 204",
+          "eleitores": 1150
+        }
+      ]
+    },
+    "Barro Branco": {
+      "distrito": "TUCURUVI",
+      "zonas": {
+        "256": 3269
+      },
+      "locais": [
+        {
+          "zona": "256",
+          "nome": "E.E Prof. Leônidas Paiva",
+          "endereco": "Rua Dos Mártires Armênios, 645",
+          "eleitores": 3269
+        }
+      ]
+    },
+    "Vila Leonor": {
+      "distrito": "VILA GUILHERME",
+      "zonas": {
+        "254": 1516
+      },
+      "locais": [
+        {
+          "zona": "254",
+          "nome": "Emef. Profª. Helena Lombardi Braga",
+          "endereco": "Rua Dirce, 106",
+          "eleitores": 1516
+        }
+      ]
+    },
+    "Jardim Monte Alegre": {
+      "distrito": "FREGUESIA DO Ó",
+      "zonas": {
+        "327": 1575
+      },
+      "locais": [
+        {
+          "zona": "327",
+          "nome": "Emei Manuel Bandeira",
+          "endereco": "Rua Antonio Genelle, 151",
+          "eleitores": 1575
+        }
+      ]
+    },
+    "Vila Sulina": {
+      "distrito": "ANHANGUERA",
+      "zonas": {
+        "389": 1156
+      },
+      "locais": [
+        {
+          "zona": "389",
+          "nome": "Ee. José Oscar Abreu Sampaio",
+          "endereco": "Rua Luisa Maria Rosa, 11",
+          "eleitores": 1156
+        }
+      ]
+    }
+  }
+}
