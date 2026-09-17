@@ -18,6 +18,13 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-09-17 — Cowork (4)
+
+- **Separação do mapa: Bairros volta a ser simples, o mapa avançado passa a ser exclusivo da aba Política.** As 5 novidades da rodada anterior (tooltip com eleitores/vereador, ranking de bairros em barras, vereador mais votado por distrito, seletor de métrica de cor, bolhas de locais de votação) tinham sido aplicadas por engano ao mesmo modal que o menu "📍 Bairros" abre — o pedido original era só pro mapa acessado pela aba Política.
+- `index.html` agora tem dois modais totalmente independentes: `#bairros-overlay` (menu "Bairros", revertido para a versão simples — zona eleitoral por bairro com badge e painel inline, sem Google Earth, sem as 5 novidades) e `#politica-mapa-overlay` (novo, aberto só pelo card "🗺️ Mapa eleitoral da Zona Norte" dentro da aba Política, com todas as 5 novidades). Cada um com seus próprios ids de elemento e funções JS (`abrirBairros`/`abrirMapaPolitica`, `mostrarInfoDistrito`/`mostrarInfoDistritoPolitica`, etc.) — só o carregamento dos dados geográficos base (geojson dos distritos, bairros por distrito, zona eleitoral por bairro) é compartilhado entre os dois, os dados exclusivos da Política (vereador mais votado, locais de votação) só carregam quando o mapa da Política é aberto.
+- Essa separação significa manutenção duplicada dali pra frente: qualquer ajuste visual comum (cores de distrito, tamanho do modal) precisa ser replicado nos dois lugares. Foi a opção escolhida deliberadamente em vez de manter um único mapa compartilhado.
+- Validado com `node --check` nos 20 blocos de script e uma checagem cruzada automática de que todo id referenciado no JS existe no HTML.
+
 ## 2026-09-17 — Cowork (3)
 
 - **Bolhas de locais de votação no mapa.** Novo `data/locais-votacao-mapa.json`: reprocessei o CSV completo do TSE (`eleitorado_local_votacao_2024`, ~245MB, o mesmo já usado antes) desta vez extraindo também `NR_LATITUDE`/`NR_LONGITUDE` de cada local de votação nas 12 zonas eleitorais da Zona Norte (458 locais no total). Reconciliei o bairro de cada local com a lista canônica do Portau usando a mesma lógica de exclusão de homônimos entre regiões já validada antes; 390 dos 458 locais bateram com um bairro/distrito da Zona Norte com confiança (os 68 restantes ficaram de fora — nomes de bairro que não casaram, incluindo alguns fora da Zona Norte cuja zona eleitoral cruza a fronteira administrativa — para não plotar um ponto no lugar errado).
