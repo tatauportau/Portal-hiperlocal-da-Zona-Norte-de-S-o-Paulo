@@ -5153,8 +5153,8 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
 <div class="bairros-overlay" id="bairros-overlay" onclick="if(event.target===this)fecharBairros()">
   <div class="bairros-painel">
     <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
-    <div class="bairros-titulo">🗺️ Bairros e Zonas Eleitorais da Zona Norte</div>
-    <div class="bairros-sub">Clique num distrito para ver os bairros e a zona eleitoral</div>
+    <div class="bairros-titulo">🗺️ Bairros da Zona Norte</div>
+    <div class="bairros-sub">Clique num distrito para ver os bairros</div>
     <div class="bairros-corpo">
       <div id="bairros-svg-wrap"></div>
       <div class="bairros-info" id="bairros-info">
@@ -5163,8 +5163,6 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
         <input class="bairros-search" id="bairros-search" type="text" placeholder="Buscar bairro..." oninput="filtrarBairros()">
         <div class="bairros-pills" id="bairros-pills"></div>
         <div class="bairros-vazio" id="bairros-vazio">Nenhum bairro encontrado</div>
-        <div class="bairros-zonas-titulo" id="bairros-zonas-titulo"></div>
-        <div class="bairros-pills" id="bairros-zonas-pills"></div>
       </div>
     </div>
     <div class="bairros-tooltip" id="bairros-tooltip"></div>
@@ -5288,8 +5286,6 @@ function abrirBairros(){
   document.getElementById('bairros-info-sub').textContent = 'Clique no mapa ao lado';
   document.getElementById('bairros-pills').innerHTML = '';
   document.getElementById('bairros-info').style.borderLeft = '';
-  document.getElementById('bairros-zonas-titulo').textContent = '';
-  document.getElementById('bairros-zonas-pills').innerHTML = '';
   if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
 }
 function fecharBairros(){
@@ -5429,61 +5425,13 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   const pills  = document.getElementById('bairros-pills');
   const search = document.getElementById('bairros-search');
   const vazio  = document.getElementById('bairros-vazio');
-  const zonasTitulo = document.getElementById('bairros-zonas-titulo');
-  const zonasPills  = document.getElementById('bairros-zonas-pills');
 
-  const detalheBairros = (_detalheZE && _detalheZE.bairros) || {};
-  const lista = (bairrosPorDistrito[props.id] || []).slice().sort((a, b) => {
-    const zA = !!detalheBairros[a], zB = !!detalheBairros[b];
-    if (zA !== zB) return zA ? -1 : 1;
-    return a.localeCompare(b, 'pt-BR');
-  });
+  const lista = (bairrosPorDistrito[props.id] || []).slice().sort((a, b) => a.localeCompare(b, 'pt-BR'));
   titulo.textContent = props.nome;
   sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
-  pills.innerHTML = lista.map(b => {
-    const confirmado = detalheBairros[b];
-    const badge = confirmado ? Object.keys(confirmado.zonas).map(z => `<span class="bairros-pill-ze-badge">${z}ª</span>`).join('') : '';
-    const bEsc = b.replace(/"/g, '&quot;');
-    return `<a class="bairros-pill" data-bairro="${bEsc}" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth" onclick="mostrarDetalheBairro(this)">${badge}📍 ${b}</a>`;
-  }).join('');
+  pills.innerHTML = lista.map(b => `<a class="bairros-pill" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth">📍 ${b}</a>`).join('');
   search.value = '';
   vazio.style.display = 'none';
-
-  const zonas = (zonasPorDistrito && zonasPorDistrito[props.id]) || [];
-  if (zonas.length) {
-    zonasTitulo.textContent = `Zona${zonas.length > 1 ? 's' : ''} eleitoral${zonas.length > 1 ? 'is' : ''} do distrito (TRE-SP)`;
-    zonasPills.innerHTML = zonas.map(z => `<span class="bairros-pill-zona">${z}ª ZE</span>`).join('');
-  } else {
-    zonasTitulo.textContent = '';
-    zonasPills.innerHTML = '';
-  }
-}
-
-function mostrarDetalheBairro(btn){
-  const nomeBairro = btn.getAttribute('data-bairro');
-  const pills = document.getElementById('bairros-pills');
-  const existente = pills.querySelector('.bairro-detalhe-inline');
-  const jaAberto = btn.classList.contains('aberto');
-  if (existente) existente.remove();
-  pills.querySelectorAll('.bairros-pill.aberto').forEach(p => p.classList.remove('aberto'));
-  if (jaAberto) return; // clicou de novo no mesmo bairro: só fecha
-
-  btn.classList.add('aberto');
-  const dados = _detalheZE && _detalheZE.bairros && _detalheZE.bairros[nomeBairro];
-  const det = document.createElement('div');
-  det.className = 'bairro-detalhe-inline';
-  if (!dados) {
-    det.innerHTML = `<div class="bairro-detalhe-vazio">Nenhum local de votação cadastrado dentro de ${nomeBairro} — use a zona eleitoral do distrito acima como referência.</div>`;
-  } else {
-    const totalEleitores = Object.values(dados.zonas).reduce((a, b) => a + b, 0);
-    const zonasHtml = Object.entries(dados.zonas).map(([z, e]) => `<span class="bairros-pill-zona">${z}ª ZE — ${e.toLocaleString('pt-BR')} eleitores</span>`).join(' ');
-    const locaisHtml = dados.locais.map(l => `<div class="bairro-detalhe-local"><b>${l.nome}</b> <span style="color:var(--cinza-m);">(${l.zona}ª ZE)</span><div class="end">${l.endereco} · ${l.eleitores.toLocaleString('pt-BR')} eleitores</div></div>`).join('');
-    det.innerHTML = `
-      <div class="bairro-detalhe-stat">${totalEleitores.toLocaleString('pt-BR')} eleitores em locais de votação confirmados dentro do bairro — ${zonasHtml}</div>
-      ${locaisHtml}
-    `;
-  }
-  btn.insertAdjacentElement('afterend', det);
 }
 
 let _politicaMapaCarregado = false;

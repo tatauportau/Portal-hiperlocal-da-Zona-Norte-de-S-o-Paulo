@@ -18,6 +18,11 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-09-17 — Cowork (6)
+
+- **Menu Bairros: removida toda informação de zona eleitoral.** A pedido de Carlos, o modal "📍 Bairros" voltou a ser só um mapa de bairros com link pro Google Earth — sem badge de ZE no bairro, sem ordenação por confirmação de ZE, sem painel inline de detalhe (locais de votação), e sem a lista "Zona(s) eleitoral(is) do distrito" que aparecia abaixo dos bairros. Título do modal voltou a "🗺️ Bairros da Zona Norte" (era "Bairros e Zonas Eleitorais"). `mostrarInfoDistrito()` simplificada de volta pro formato mais antigo (pill simples, ordem alfabética); `mostrarDetalheBairro()` removida (não tinha mais chamador). O mapa da aba Política (`#politica-mapa-overlay`) não foi tocado — continua mostrando zona eleitoral, vereador mais votado, bolhas de votação etc. normalmente.
+- Validado com `node --check` nos 20 blocos de script.
+
 ## 2026-09-17 — Cowork (5)
 
 - **Menu Bairros: Google Earth de volta, junto com a zona eleitoral.** Na rodada anterior o clique num bairro do modal "📍 Bairros" tinha ficado só mostrando a zona eleitoral inline (o Google Earth tinha sido removido a pedido, numa rodada anterior a essa). O pedido agora foi trazer o Google Earth de volta sem perder a informação de zona eleitoral — voltou ao comportamento original: cada bairro é um link que abre o Google Earth numa aba nova (`target="_blank"`) e, ao mesmo tempo, abre o painel inline com a zona eleitoral/locais de votação do bairro, exatamente como era antes da rodada "sem Google Earth". Mudança isolada em `mostrarInfoDistrito()` (só no `#bairros-overlay`; o mapa da Política não foi tocado).
