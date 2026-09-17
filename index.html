@@ -658,8 +658,8 @@
   .bairros-fechar:hover { background: #ddd; }
   .bairros-titulo { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: var(--cinza-q); margin-bottom: 2px; }
   .bairros-sub { font-size: 12px; color: var(--cinza-m); margin-bottom: 1rem; }
-  #bairros-svg-wrap { width: 100%; border-radius: 10px; overflow: hidden; background: #f5f5f0; }
-  #bairros-svg-wrap svg { display: block; width: 100%; height: auto; }
+  #bairros-svg-wrap, #polmapa-svg-wrap { width: 100%; border-radius: 10px; overflow: hidden; background: #f5f5f0; }
+  #bairros-svg-wrap svg, #polmapa-svg-wrap svg { display: block; width: 100%; height: auto; }
   .bairros-tooltip {
     position: fixed; background: var(--cinza-q); color: #fff;
     font-size: 11px; font-weight: 700; padding: 5px 10px; border-radius: 8px;
@@ -4652,7 +4652,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
   <!-- Fora da div #politica de propósito: sobrevive à regeneração automática do gerar-portau.js -->
   <div class="mapa-pol-card" data-grupo-secao="politica">
     <div class="mapa-pol-texto"><b>🗺️ Mapa eleitoral da Zona Norte</b><br>Veja os bairros e as zonas eleitorais de cada distrito.</div>
-    <button class="mapa-pol-btn" onclick="abrirBairros();return false;">Ver mapa</button>
+    <button class="mapa-pol-btn" onclick="abrirMapaPolitica();return false;">Ver mapa</button>
   </div>
 
     <!-- ALERTAS -->
@@ -5149,27 +5149,17 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
 </div>
 
 
-<!-- MODAL BAIRROS -->
+<!-- MODAL BAIRROS (versão simples, aberta pelo menu "Bairros") -->
 <div class="bairros-overlay" id="bairros-overlay" onclick="if(event.target===this)fecharBairros()">
   <div class="bairros-painel">
     <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
     <div class="bairros-titulo">🗺️ Bairros e Zonas Eleitorais da Zona Norte</div>
     <div class="bairros-sub">Clique num distrito para ver os bairros e a zona eleitoral</div>
-    <div class="mapa-metrica-seletor" id="mapa-metrica-seletor">
-      <button type="button" class="mapa-metrica-btn ativo" data-metrica="subprefeitura" onclick="mudarMetricaMapa('subprefeitura')">Subprefeitura</button>
-      <button type="button" class="mapa-metrica-btn" data-metrica="eleitores" onclick="mudarMetricaMapa('eleitores')">Nº de eleitores</button>
-      <button type="button" class="mapa-metrica-btn" data-metrica="vereador" onclick="mudarMetricaMapa('vereador')">Vereador mais votado</button>
-      <label class="mapa-bolhas-toggle"><input type="checkbox" onchange="toggleBolhasVotacao(this)"> Locais de votação</label>
-    </div>
     <div class="bairros-corpo">
-      <div>
-        <div id="bairros-svg-wrap"></div>
-        <div class="mapa-legenda" id="mapa-legenda"></div>
-      </div>
+      <div id="bairros-svg-wrap"></div>
       <div class="bairros-info" id="bairros-info">
         <div class="bairros-info-titulo" id="bairros-info-titulo">Selecione um distrito</div>
         <div class="bairros-info-sub" id="bairros-info-sub">Clique no mapa ao lado</div>
-        <div class="bairros-info-vereador" id="bairros-info-vereador"></div>
         <input class="bairros-search" id="bairros-search" type="text" placeholder="Buscar bairro..." oninput="filtrarBairros()">
         <div class="bairros-pills" id="bairros-pills"></div>
         <div class="bairros-vazio" id="bairros-vazio">Nenhum bairro encontrado</div>
@@ -5178,6 +5168,38 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
       </div>
     </div>
     <div class="bairros-tooltip" id="bairros-tooltip"></div>
+  </div>
+</div>
+
+<!-- MODAL MAPA POLÍTICO (versão avançada, aberta só pelo card "Ver mapa" da aba Política) -->
+<div class="bairros-overlay" id="politica-mapa-overlay" onclick="if(event.target===this)fecharMapaPolitica()">
+  <div class="bairros-painel">
+    <button class="bairros-fechar" onclick="fecharMapaPolitica()">✕</button>
+    <div class="bairros-titulo">🗺️ Mapa Eleitoral da Zona Norte</div>
+    <div class="bairros-sub">Clique num distrito para ver bairros, zonas eleitorais e o vereador mais votado</div>
+    <div class="mapa-metrica-seletor" id="polmapa-metrica-seletor">
+      <button type="button" class="mapa-metrica-btn ativo" data-metrica="subprefeitura" onclick="mudarMetricaMapaPolitica('subprefeitura')">Subprefeitura</button>
+      <button type="button" class="mapa-metrica-btn" data-metrica="eleitores" onclick="mudarMetricaMapaPolitica('eleitores')">Nº de eleitores</button>
+      <button type="button" class="mapa-metrica-btn" data-metrica="vereador" onclick="mudarMetricaMapaPolitica('vereador')">Vereador mais votado</button>
+      <label class="mapa-bolhas-toggle"><input type="checkbox" onchange="toggleBolhasVotacaoPolitica(this)"> Locais de votação</label>
+    </div>
+    <div class="bairros-corpo">
+      <div>
+        <div id="polmapa-svg-wrap"></div>
+        <div class="mapa-legenda" id="polmapa-legenda"></div>
+      </div>
+      <div class="bairros-info" id="polmapa-info">
+        <div class="bairros-info-titulo" id="polmapa-info-titulo">Selecione um distrito</div>
+        <div class="bairros-info-sub" id="polmapa-info-sub">Clique no mapa ao lado</div>
+        <div class="bairros-info-vereador" id="polmapa-info-vereador"></div>
+        <input class="bairros-search" id="polmapa-search" type="text" placeholder="Buscar bairro..." oninput="filtrarMapaPolitica()">
+        <div class="bairros-pills" id="polmapa-pills"></div>
+        <div class="bairros-vazio" id="polmapa-vazio">Nenhum bairro encontrado</div>
+        <div class="bairros-zonas-titulo" id="polmapa-zonas-titulo"></div>
+        <div class="bairros-pills" id="polmapa-zonas-pills"></div>
+      </div>
+    </div>
+    <div class="bairros-tooltip" id="polmapa-tooltip"></div>
   </div>
 </div>
 
@@ -5259,13 +5281,6 @@ let _geoDistritosZN = null;
 let _bairrosPorDistrito = null;
 let _zonasPorDistrito = null;
 let _detalheZE = null;
-let _mapaExtra = null;
-let _mapaExtraPromise = null;
-let _metricaMapa = 'subprefeitura';
-let _locaisVotacao = null;
-let _locaisVotacaoPromise = null;
-let _projecaoMapaBairros = null;
-let _mostrarBolhasVotacao = false;
 
 function abrirBairros(){
   document.getElementById('bairros-overlay').classList.add('aberto');
@@ -5275,9 +5290,6 @@ function abrirBairros(){
   document.getElementById('bairros-info').style.borderLeft = '';
   document.getElementById('bairros-zonas-titulo').textContent = '';
   document.getElementById('bairros-zonas-pills').innerHTML = '';
-  const vBox = document.getElementById('bairros-info-vereador');
-  vBox.classList.remove('visivel');
-  vBox.innerHTML = '';
   if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
 }
 function fecharBairros(){
@@ -5287,12 +5299,6 @@ function fecharBairros(){
 async function garantirDadosMapaBairros(){
   if (!_detalheZE) {
     fetch('./data/zonas-eleitorais-detalhe.json').then(r => r.ok ? r.json() : null).then(d => { _detalheZE = d || {}; }).catch(() => { _detalheZE = {}; });
-  }
-  if (!_mapaExtra && !_mapaExtraPromise) {
-    _mapaExtraPromise = fetch('./data/mapa-distritos-extra.json').then(r => r.ok ? r.json() : null).then(d => { _mapaExtra = d || {}; }).catch(() => { _mapaExtra = {}; });
-  }
-  if (!_locaisVotacao && !_locaisVotacaoPromise) {
-    _locaisVotacaoPromise = fetch('./data/locais-votacao-mapa.json').then(r => r.ok ? r.json() : null).then(d => { _locaisVotacao = (d && d.locais) || []; }).catch(() => { _locaisVotacao = []; });
   }
   if (_geoDistritosZN && _bairrosPorDistrito && _zonasPorDistrito) return;
   const geoEmbutido = document.getElementById('bairros-geo-embutido');
@@ -5332,71 +5338,6 @@ const CORES_SUBPREF_ZN = {
   'PERUS':'#023047', 'ANHANGUERA':'#023047'
 };
 
-const CORES_VEREADOR_ZN = ['#D62828','#F77F00','#FCBF49','#06A77D','#3D5A80','#7B2CBF','#023047','#8B5E3C','#C9184A','#4361EE','#2A9D8F','#E76F51','#588157','#9B5DE5','#00B4D8','#B5838D','#6A4C93','#E63946'];
-let _corVereadorCache = null;
-
-function corPorVereador(id){
-  if (!_corVereadorCache) {
-    const ids = [...new Set(Object.values(_mapaExtra.distritos).map(d => d.vereador_mais_votado && d.vereador_mais_votado.id).filter(Boolean))].sort();
-    _corVereadorCache = {};
-    ids.forEach((vid, i) => { _corVereadorCache[vid] = CORES_VEREADOR_ZN[i % CORES_VEREADOR_ZN.length]; });
-  }
-  return _corVereadorCache[id] || '#ccc';
-}
-
-function corDistrito(id){
-  if (_metricaMapa === 'eleitores' && _mapaExtra && _mapaExtra.distritos) {
-    const valores = Object.values(_mapaExtra.distritos).map(d => d.eleitores_confirmados);
-    const min = Math.min(...valores), max = Math.max(...valores);
-    const v = (_mapaExtra.distritos[id] || {}).eleitores_confirmados || 0;
-    const t = max > min ? (v - min) / (max - min) : 0;
-    const escala = d3.interpolateRgb('#fde8d8', '#9c2a1f');
-    return escala(t);
-  }
-  if (_metricaMapa === 'vereador' && _mapaExtra && _mapaExtra.distritos) {
-    const info = _mapaExtra.distritos[id];
-    const vid = info && info.vereador_mais_votado && info.vereador_mais_votado.id;
-    return vid ? corPorVereador(vid) : '#ccc';
-  }
-  return CORES_SUBPREF_ZN[id] || '#ccc';
-}
-
-function atualizarLegendaMapa(){
-  const el = document.getElementById('mapa-legenda');
-  if (!el) return;
-  if (_metricaMapa === 'subprefeitura') {
-    el.innerHTML = '';
-    return;
-  }
-  if (_metricaMapa === 'eleitores') {
-    if (!_mapaExtra || !_mapaExtra.distritos) { el.innerHTML = ''; return; }
-    const valores = Object.values(_mapaExtra.distritos).map(d => d.eleitores_confirmados);
-    const min = Math.min(...valores), max = Math.max(...valores);
-    const escala = d3.interpolateRgb('#fde8d8', '#9c2a1f');
-    el.innerHTML = `<span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${escala(0)}"></span>${min.toLocaleString('pt-BR')}</span>
-      <span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${escala(1)}"></span>${max.toLocaleString('pt-BR')} eleitores confirmados</span>`;
-    return;
-  }
-  if (_metricaMapa === 'vereador' && _mapaExtra && _mapaExtra.distritos) {
-    const vistos = new Map();
-    Object.values(_mapaExtra.distritos).forEach(d => {
-      const vv = d.vereador_mais_votado;
-      if (vv && !vistos.has(vv.id)) vistos.set(vv.id, vv.nome);
-    });
-    el.innerHTML = [...vistos.entries()].map(([id, nome]) =>
-      `<span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${corPorVereador(id)}"></span>${nome}</span>`
-    ).join('');
-  }
-}
-
-async function mudarMetricaMapa(metrica){
-  _metricaMapa = metrica;
-  document.querySelectorAll('.mapa-metrica-btn').forEach(b => b.classList.toggle('ativo', b.dataset.metrica === metrica));
-  if (!_mapaExtra && _mapaExtraPromise) await _mapaExtraPromise;
-  d3.selectAll('#bairros-svg-wrap path').attr('fill', d => corDistrito(d.properties.id));
-  atualizarLegendaMapa();
-}
-
 function desenharMapaBairros(geo, bairrosPorDistrito, zonasPorDistrito){
   const wrap = document.getElementById('bairros-svg-wrap');
   wrap.innerHTML = '';
@@ -5425,7 +5366,269 @@ function desenharMapaBairros(geo, bairrosPorDistrito, zonasPorDistrito){
     .data(geo.features)
     .join('path')
       .attr('d', geoPathGen)
-      .attr('fill', d => corDistrito(d.properties.id))
+      .attr('fill', d => CORES_SUBPREF_ZN[d.properties.id] || '#ccc')
+      .attr('fill-opacity', 0.72)
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 1.2)
+      .style('cursor', 'pointer')
+      .style('pointer-events', 'auto')
+      .on('mousemove', function(event, d){
+        tooltip.textContent = d.properties.nome;
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY + 10) + 'px';
+        tooltip.style.opacity = 1;
+        if (this !== pathSelecionado) d3.select(this).attr('fill-opacity', 1);
+      })
+      .on('mouseleave', function(){
+        tooltip.style.opacity = 0;
+        if (this !== pathSelecionado) d3.select(this).attr('fill-opacity', 0.72);
+      })
+      .on('click', function(event, d){
+        selecionarDistrito(this, d.properties);
+      });
+
+  svg.selectAll('text.distrito-label')
+    .data(geo.features)
+    .join('text')
+      .attr('class', 'distrito-label')
+      .attr('x', d => geoPathGen.centroid(d)[0])
+      .attr('y', d => geoPathGen.centroid(d)[1])
+      .attr('text-anchor', 'middle')
+      .attr('dominant-baseline', 'middle')
+      .attr('font-size', fontSize)
+      .attr('font-weight', 600)
+      .attr('fill', '#fff')
+      .style('pointer-events', 'none')
+      .text(d => d.properties.nome);
+}
+
+function earthUrl(bairro, distrito){
+  const partes = [bairro, distrito, 'São Paulo, SP'].filter(Boolean);
+  return 'https://earth.google.com/web/search/' + encodeURIComponent(partes.join(', '));
+}
+
+function semAcento(s) {
+  return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+}
+
+function filtrarBairros() {
+  const q = semAcento(document.getElementById('bairros-search').value);
+  const pills = document.querySelectorAll('#bairros-pills .bairros-pill');
+  let visiveis = 0;
+  pills.forEach(p => {
+    const match = !q || semAcento(p.textContent).includes(q);
+    p.style.display = match ? '' : 'none';
+    if (match) visiveis++;
+  });
+  document.getElementById('bairros-vazio').style.display = (q && visiveis === 0) ? 'block' : 'none';
+}
+
+function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
+  const titulo = document.getElementById('bairros-info-titulo');
+  const sub    = document.getElementById('bairros-info-sub');
+  const pills  = document.getElementById('bairros-pills');
+  const search = document.getElementById('bairros-search');
+  const vazio  = document.getElementById('bairros-vazio');
+  const zonasTitulo = document.getElementById('bairros-zonas-titulo');
+  const zonasPills  = document.getElementById('bairros-zonas-pills');
+
+  const detalheBairros = (_detalheZE && _detalheZE.bairros) || {};
+  const lista = (bairrosPorDistrito[props.id] || []).slice().sort((a, b) => {
+    const zA = !!detalheBairros[a], zB = !!detalheBairros[b];
+    if (zA !== zB) return zA ? -1 : 1;
+    return a.localeCompare(b, 'pt-BR');
+  });
+  titulo.textContent = props.nome;
+  sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
+  pills.innerHTML = lista.map(b => {
+    const confirmado = detalheBairros[b];
+    const badge = confirmado ? Object.keys(confirmado.zonas).map(z => `<span class="bairros-pill-ze-badge">${z}ª</span>`).join('') : '';
+    const bEsc = b.replace(/"/g, '&quot;');
+    return `<button type="button" class="bairros-pill" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairro(this)">${badge}📍 ${b}</button>`;
+  }).join('');
+  search.value = '';
+  vazio.style.display = 'none';
+
+  const zonas = (zonasPorDistrito && zonasPorDistrito[props.id]) || [];
+  if (zonas.length) {
+    zonasTitulo.textContent = `Zona${zonas.length > 1 ? 's' : ''} eleitoral${zonas.length > 1 ? 'is' : ''} do distrito (TRE-SP)`;
+    zonasPills.innerHTML = zonas.map(z => `<span class="bairros-pill-zona">${z}ª ZE</span>`).join('');
+  } else {
+    zonasTitulo.textContent = '';
+    zonasPills.innerHTML = '';
+  }
+}
+
+function mostrarDetalheBairro(btn){
+  const nomeBairro = btn.getAttribute('data-bairro');
+  const pills = document.getElementById('bairros-pills');
+  const existente = pills.querySelector('.bairro-detalhe-inline');
+  const jaAberto = btn.classList.contains('aberto');
+  if (existente) existente.remove();
+  pills.querySelectorAll('.bairros-pill.aberto').forEach(p => p.classList.remove('aberto'));
+  if (jaAberto) return; // clicou de novo no mesmo bairro: só fecha
+
+  btn.classList.add('aberto');
+  const dados = _detalheZE && _detalheZE.bairros && _detalheZE.bairros[nomeBairro];
+  const det = document.createElement('div');
+  det.className = 'bairro-detalhe-inline';
+  if (!dados) {
+    det.innerHTML = `<div class="bairro-detalhe-vazio">Nenhum local de votação cadastrado dentro de ${nomeBairro} — use a zona eleitoral do distrito acima como referência.</div>`;
+  } else {
+    const totalEleitores = Object.values(dados.zonas).reduce((a, b) => a + b, 0);
+    const zonasHtml = Object.entries(dados.zonas).map(([z, e]) => `<span class="bairros-pill-zona">${z}ª ZE — ${e.toLocaleString('pt-BR')} eleitores</span>`).join(' ');
+    const locaisHtml = dados.locais.map(l => `<div class="bairro-detalhe-local"><b>${l.nome}</b> <span style="color:var(--cinza-m);">(${l.zona}ª ZE)</span><div class="end">${l.endereco} · ${l.eleitores.toLocaleString('pt-BR')} eleitores</div></div>`).join('');
+    det.innerHTML = `
+      <div class="bairro-detalhe-stat">${totalEleitores.toLocaleString('pt-BR')} eleitores em locais de votação confirmados dentro do bairro — ${zonasHtml}</div>
+      ${locaisHtml}
+    `;
+  }
+  btn.insertAdjacentElement('afterend', det);
+}
+
+let _politicaMapaCarregado = false;
+let _mapaExtra = null;
+let _mapaExtraPromise = null;
+let _metricaMapa = 'subprefeitura';
+let _locaisVotacao = null;
+let _locaisVotacaoPromise = null;
+let _projecaoMapaPolitica = null;
+let _mostrarBolhasVotacao = false;
+
+function abrirMapaPolitica(){
+  document.getElementById('politica-mapa-overlay').classList.add('aberto');
+  document.getElementById('polmapa-info-titulo').textContent = 'Selecione um distrito';
+  document.getElementById('polmapa-info-sub').textContent = 'Clique no mapa ao lado';
+  document.getElementById('polmapa-pills').innerHTML = '';
+  document.getElementById('polmapa-info').style.borderLeft = '';
+  document.getElementById('polmapa-zonas-titulo').textContent = '';
+  document.getElementById('polmapa-zonas-pills').innerHTML = '';
+  const vBox = document.getElementById('polmapa-info-vereador');
+  vBox.classList.remove('visivel');
+  vBox.innerHTML = '';
+  if (!_politicaMapaCarregado) { _politicaMapaCarregado = true; carregarMapaPolitica(); }
+}
+function fecharMapaPolitica(){
+  document.getElementById('politica-mapa-overlay').classList.remove('aberto');
+}
+
+async function garantirDadosMapaPolitica(){
+  await garantirDadosMapaBairros();
+  if (!_mapaExtra && !_mapaExtraPromise) {
+    _mapaExtraPromise = fetch('./data/mapa-distritos-extra.json').then(r => r.ok ? r.json() : null).then(d => { _mapaExtra = d || {}; }).catch(() => { _mapaExtra = {}; });
+  }
+  if (!_locaisVotacao && !_locaisVotacaoPromise) {
+    _locaisVotacaoPromise = fetch('./data/locais-votacao-mapa.json').then(r => r.ok ? r.json() : null).then(d => { _locaisVotacao = (d && d.locais) || []; }).catch(() => { _locaisVotacao = []; });
+  }
+  await Promise.all([_mapaExtraPromise, _locaisVotacaoPromise].filter(Boolean));
+}
+
+async function carregarMapaPolitica(){
+  const wrap = document.getElementById('polmapa-svg-wrap');
+  wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#999;font-size:13px;">Carregando mapa...</div>';
+  try {
+    await garantirDadosMapaPolitica();
+    desenharMapaPolitica(_geoDistritosZN, _bairrosPorDistrito, _zonasPorDistrito);
+  } catch (e) {
+    wrap.innerHTML = '<div style="padding:2.5rem;text-align:center;color:#c0392b;font-size:13px;">Não foi possível carregar o mapa.</div>';
+    console.error('Erro ao carregar mapa político:', e);
+  }
+}
+
+const CORES_VEREADOR_ZN = ['#D62828','#F77F00','#FCBF49','#06A77D','#3D5A80','#7B2CBF','#023047','#8B5E3C','#C9184A','#4361EE','#2A9D8F','#E76F51','#588157','#9B5DE5','#00B4D8','#B5838D','#6A4C93','#E63946'];
+let _corVereadorCache = null;
+
+function corPorVereador(id){
+  if (!_corVereadorCache) {
+    const ids = [...new Set(Object.values(_mapaExtra.distritos).map(d => d.vereador_mais_votado && d.vereador_mais_votado.id).filter(Boolean))].sort();
+    _corVereadorCache = {};
+    ids.forEach((vid, i) => { _corVereadorCache[vid] = CORES_VEREADOR_ZN[i % CORES_VEREADOR_ZN.length]; });
+  }
+  return _corVereadorCache[id] || '#ccc';
+}
+
+function corDistritoPolitica(id){
+  if (_metricaMapa === 'eleitores' && _mapaExtra && _mapaExtra.distritos) {
+    const valores = Object.values(_mapaExtra.distritos).map(d => d.eleitores_confirmados);
+    const min = Math.min(...valores), max = Math.max(...valores);
+    const v = (_mapaExtra.distritos[id] || {}).eleitores_confirmados || 0;
+    const t = max > min ? (v - min) / (max - min) : 0;
+    const escala = d3.interpolateRgb('#fde8d8', '#9c2a1f');
+    return escala(t);
+  }
+  if (_metricaMapa === 'vereador' && _mapaExtra && _mapaExtra.distritos) {
+    const info = _mapaExtra.distritos[id];
+    const vid = info && info.vereador_mais_votado && info.vereador_mais_votado.id;
+    return vid ? corPorVereador(vid) : '#ccc';
+  }
+  return CORES_SUBPREF_ZN[id] || '#ccc';
+}
+
+function atualizarLegendaMapaPolitica(){
+  const el = document.getElementById('polmapa-legenda');
+  if (!el) return;
+  if (_metricaMapa === 'subprefeitura') {
+    el.innerHTML = '';
+    return;
+  }
+  if (_metricaMapa === 'eleitores') {
+    if (!_mapaExtra || !_mapaExtra.distritos) { el.innerHTML = ''; return; }
+    const valores = Object.values(_mapaExtra.distritos).map(d => d.eleitores_confirmados);
+    const min = Math.min(...valores), max = Math.max(...valores);
+    const escala = d3.interpolateRgb('#fde8d8', '#9c2a1f');
+    el.innerHTML = `<span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${escala(0)}"></span>${min.toLocaleString('pt-BR')}</span>
+      <span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${escala(1)}"></span>${max.toLocaleString('pt-BR')} eleitores confirmados</span>`;
+    return;
+  }
+  if (_metricaMapa === 'vereador' && _mapaExtra && _mapaExtra.distritos) {
+    const vistos = new Map();
+    Object.values(_mapaExtra.distritos).forEach(d => {
+      const vv = d.vereador_mais_votado;
+      if (vv && !vistos.has(vv.id)) vistos.set(vv.id, vv.nome);
+    });
+    el.innerHTML = [...vistos.entries()].map(([id, nome]) =>
+      `<span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${corPorVereador(id)}"></span>${nome}</span>`
+    ).join('');
+  }
+}
+
+async function mudarMetricaMapaPolitica(metrica){
+  _metricaMapa = metrica;
+  document.querySelectorAll('.mapa-metrica-btn').forEach(b => b.classList.toggle('ativo', b.dataset.metrica === metrica));
+  if (!_mapaExtra && _mapaExtraPromise) await _mapaExtraPromise;
+  d3.selectAll('#polmapa-svg-wrap path').attr('fill', d => corDistritoPolitica(d.properties.id));
+  atualizarLegendaMapaPolitica();
+}
+
+function desenharMapaPolitica(geo, bairrosPorDistrito, zonasPorDistrito){
+  const wrap = document.getElementById('polmapa-svg-wrap');
+  wrap.innerHTML = '';
+  const width  = wrap.clientWidth || 660;
+  const height = Math.round(width * 0.95);
+
+  const projection = d3.geoMercator().fitExtent([[8,8],[width-8,height-8]], geo);
+  const geoPathGen = d3.geoPath(projection);
+  const fontSize = Math.max(8, Math.min(13, width / 50));
+
+  const svg = d3.select(wrap).append('svg').attr('viewBox', `0 0 ${width} ${height}`);
+  const tooltip = document.getElementById('polmapa-tooltip');
+
+  let pathSelecionado = null;
+
+  function selecionarDistrito(elemento, props){
+    if (pathSelecionado && pathSelecionado !== elemento) {
+      d3.select(pathSelecionado).attr('stroke-width', 1.2).attr('stroke', '#fff').attr('fill-opacity', 0.72);
+    }
+    pathSelecionado = elemento;
+    d3.select(elemento).attr('stroke-width', 3).attr('stroke', '#222').attr('fill-opacity', 1);
+    mostrarInfoDistritoPolitica(props, bairrosPorDistrito, zonasPorDistrito);
+  }
+
+  svg.selectAll('path')
+    .data(geo.features)
+    .join('path')
+      .attr('d', geoPathGen)
+      .attr('fill', d => corDistritoPolitica(d.properties.id))
       .attr('fill-opacity', 0.72)
       .attr('stroke', '#fff')
       .attr('stroke-width', 1.2)
@@ -5466,32 +5669,32 @@ function desenharMapaBairros(geo, bairrosPorDistrito, zonasPorDistrito){
       .style('pointer-events', 'none')
       .text(d => d.properties.nome);
 
-  svg.append('g').attr('id', 'bairros-bolhas-votacao');
-  _projecaoMapaBairros = projection;
-  if (_mostrarBolhasVotacao) atualizarBolhasVotacao();
+  svg.append('g').attr('id', 'polmapa-bolhas-votacao');
+  _projecaoMapaPolitica = projection;
+  if (_mostrarBolhasVotacao) atualizarBolhasVotacaoPolitica();
 }
 
-async function toggleBolhasVotacao(checkbox){
+async function toggleBolhasVotacaoPolitica(checkbox){
   _mostrarBolhasVotacao = checkbox.checked;
   if (_mostrarBolhasVotacao && !_locaisVotacao && _locaisVotacaoPromise) await _locaisVotacaoPromise;
-  atualizarBolhasVotacao();
+  atualizarBolhasVotacaoPolitica();
 }
 
-function atualizarBolhasVotacao(){
-  const g = d3.select('#bairros-bolhas-votacao');
-  if (g.empty() || !_projecaoMapaBairros) return;
+function atualizarBolhasVotacaoPolitica(){
+  const g = d3.select('#polmapa-bolhas-votacao');
+  if (g.empty() || !_projecaoMapaPolitica) return;
   g.selectAll('*').remove();
   if (!_mostrarBolhasVotacao || !_locaisVotacao || !_locaisVotacao.length) return;
 
-  const tooltip = document.getElementById('bairros-tooltip');
+  const tooltip = document.getElementById('polmapa-tooltip');
   const maxEleitores = Math.max(...( _locaisVotacao.map(l => l.eleitores)));
   const raio = d3.scaleSqrt().domain([0, maxEleitores]).range([2, 11]);
 
   g.selectAll('circle')
     .data(_locaisVotacao)
     .join('circle')
-      .attr('cx', d => _projecaoMapaBairros([d.lon, d.lat])[0])
-      .attr('cy', d => _projecaoMapaBairros([d.lon, d.lat])[1])
+      .attr('cx', d => _projecaoMapaPolitica([d.lon, d.lat])[0])
+      .attr('cy', d => _projecaoMapaPolitica([d.lon, d.lat])[1])
       .attr('r', d => raio(d.eleitores))
       .attr('fill', '#222')
       .attr('fill-opacity', 0.45)
@@ -5512,36 +5715,27 @@ function atualizarBolhasVotacao(){
       });
 }
 
-function earthUrl(bairro, distrito){
-  const partes = [bairro, distrito, 'São Paulo, SP'].filter(Boolean);
-  return 'https://earth.google.com/web/search/' + encodeURIComponent(partes.join(', '));
-}
-
-function semAcento(s) {
-  return (s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-}
-
-function filtrarBairros() {
-  const q = semAcento(document.getElementById('bairros-search').value);
-  const pills = document.querySelectorAll('#bairros-pills .bairros-pill, #bairros-pills .bairro-bar-row');
+function filtrarMapaPolitica() {
+  const q = semAcento(document.getElementById('polmapa-search').value);
+  const pills = document.querySelectorAll('#polmapa-pills .bairros-pill, #polmapa-pills .bairro-bar-row');
   let visiveis = 0;
   pills.forEach(p => {
     const match = !q || semAcento(p.textContent).includes(q);
     p.style.display = match ? '' : 'none';
     if (match) visiveis++;
   });
-  document.getElementById('bairros-vazio').style.display = (q && visiveis === 0) ? 'block' : 'none';
+  document.getElementById('polmapa-vazio').style.display = (q && visiveis === 0) ? 'block' : 'none';
 }
 
-function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
-  const titulo = document.getElementById('bairros-info-titulo');
-  const sub    = document.getElementById('bairros-info-sub');
-  const pills  = document.getElementById('bairros-pills');
-  const search = document.getElementById('bairros-search');
-  const vazio  = document.getElementById('bairros-vazio');
-  const zonasTitulo = document.getElementById('bairros-zonas-titulo');
-  const zonasPills  = document.getElementById('bairros-zonas-pills');
-  const vereadorBox = document.getElementById('bairros-info-vereador');
+function mostrarInfoDistritoPolitica(props, bairrosPorDistrito, zonasPorDistrito){
+  const titulo = document.getElementById('polmapa-info-titulo');
+  const sub    = document.getElementById('polmapa-info-sub');
+  const pills  = document.getElementById('polmapa-pills');
+  const search = document.getElementById('polmapa-search');
+  const vazio  = document.getElementById('polmapa-vazio');
+  const zonasTitulo = document.getElementById('polmapa-zonas-titulo');
+  const zonasPills  = document.getElementById('polmapa-zonas-pills');
+  const vereadorBox = document.getElementById('polmapa-info-vereador');
 
   const detalheBairros = (_detalheZE && _detalheZE.bairros) || {};
   const todosBairros = bairrosPorDistrito[props.id] || [];
@@ -5558,7 +5752,7 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   const vv = extra && extra.vereador_mais_votado;
   if (vv) {
     vereadorBox.classList.add('visivel');
-    vereadorBox.innerHTML = `🏛️ Vereador mais votado aqui (entre os do Painel Política): <b>${vv.nome}</b> (${vv.partido}) — ${vv.votos.toLocaleString('pt-BR')} votos<br><button onclick="verVereadorNoMapa('${vv.id}')">Ver no Painel Política →</button>`;
+    vereadorBox.innerHTML = `🏛️ Vereador mais votado aqui (entre os do Painel Política): <b>${vv.nome}</b> (${vv.partido}) — ${vv.votos.toLocaleString('pt-BR')} votos<br><button onclick="verVereadorNoMapaPolitica('${vv.id}')">Ver no Painel Política →</button>`;
   } else {
     vereadorBox.classList.remove('visivel');
     vereadorBox.innerHTML = '';
@@ -5569,7 +5763,7 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
     const badge = Object.keys(detalheBairros[b].zonas).map(z => `<span class="bairros-pill-ze-badge">${z}ª</span>`).join('');
     const bEsc = b.replace(/"/g, '&quot;');
     const largura = Math.max(6, Math.round(eleitores / maxEleitores * 100));
-    return `<button type="button" class="bairro-bar-row" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairro(this)">
+    return `<button type="button" class="bairro-bar-row" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairroPolitica(this)">
       <div class="bairro-bar-fill" style="width:${largura}%"></div>
       <div class="bairro-bar-conteudo"><span class="bairro-bar-nome">${badge}📍 ${b}</span><span class="bairro-bar-eleitores">${eleitores.toLocaleString('pt-BR')} eleitores</span></div>
     </button>`;
@@ -5577,7 +5771,7 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   const outrosHtml = outros.length
     ? `<div class="bairros-outros-titulo">Sem zona eleitoral confirmada</div>` + outros.map(b => {
         const bEsc = b.replace(/"/g, '&quot;');
-        return `<button type="button" class="bairros-pill" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairro(this)">📍 ${b}</button>`;
+        return `<button type="button" class="bairros-pill" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairroPolitica(this)">📍 ${b}</button>`;
       }).join('')
     : '';
   pills.innerHTML = barrasHtml + outrosHtml;
@@ -5594,17 +5788,17 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   }
 }
 
-function verVereadorNoMapa(id){
-  fecharBairros();
+function verVereadorNoMapaPolitica(id){
+  fecharMapaPolitica();
   const row = document.getElementById('row-' + id);
   if (!row) return;
   if (!row.classList.contains('aberto')) toggleExpandVereador(id);
   setTimeout(() => row.scrollIntoView({ behavior: 'smooth', block: 'center' }), 250);
 }
 
-function mostrarDetalheBairro(btn){
+function mostrarDetalheBairroPolitica(btn){
   const nomeBairro = btn.getAttribute('data-bairro');
-  const pills = document.getElementById('bairros-pills');
+  const pills = document.getElementById('polmapa-pills');
   const existente = pills.querySelector('.bairro-detalhe-inline');
   const jaAberto = btn.classList.contains('aberto');
   if (existente) existente.remove();
