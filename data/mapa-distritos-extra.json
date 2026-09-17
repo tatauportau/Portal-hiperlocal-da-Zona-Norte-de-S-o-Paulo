@@ -1,0 +1,186 @@
+{
+  "atualizado_em": "2026-09-17T04:00:00.000Z",
+  "nota": "eleitores_confirmados = soma dos eleitores em locais de votação já confirmados dentro dos bairros do distrito (parcial, cobre só bairros com local de votação identificado — ver zonas-eleitorais-detalhe.json). vereador_mais_votado = entre os 18 vereadores acompanhados no Painel Política, quem teve mais votos no distrito em 2024 (dado oficial do TSE por distrito, cruzado com ranking-vereadores-zona-norte-2024.json); não é necessariamente o vereador mais votado da cidade inteira no distrito, só entre os monitorados aqui.",
+  "distritos": {
+    "SANTANA": {
+      "eleitores_confirmados": 121574,
+      "bairros_confirmados": 6,
+      "vereador_mais_votado": {
+        "id": "ver_003",
+        "nome": "Ana Carolina Oliveira",
+        "partido": "PODE",
+        "votos": 2566
+      }
+    },
+    "TUCURUVI": {
+      "eleitores_confirmados": 93022,
+      "bairros_confirmados": 12,
+      "vereador_mais_votado": {
+        "id": "ver_003",
+        "nome": "Ana Carolina Oliveira",
+        "partido": "PODE",
+        "votos": 3346
+      }
+    },
+    "MANDAQUI": {
+      "eleitores_confirmados": 53456,
+      "bairros_confirmados": 10,
+      "vereador_mais_votado": {
+        "id": "ver_003",
+        "nome": "Ana Carolina Oliveira",
+        "partido": "PODE",
+        "votos": 1948
+      }
+    },
+    "JAÇANÃ": {
+      "eleitores_confirmados": 77112,
+      "bairros_confirmados": 7,
+      "vereador_mais_votado": {
+        "id": "ver_001",
+        "nome": "Danilo do Posto de Saúde",
+        "partido": "PODE",
+        "votos": 2899
+      }
+    },
+    "TREMEMBÉ": {
+      "eleitores_confirmados": 131383,
+      "bairros_confirmados": 16,
+      "vereador_mais_votado": {
+        "id": "ver_003",
+        "nome": "Ana Carolina Oliveira",
+        "partido": "PODE",
+        "votos": 2751
+      }
+    },
+    "CASA VERDE": {
+      "eleitores_confirmados": 88245,
+      "bairros_confirmados": 14,
+      "vereador_mais_votado": {
+        "id": "ver_006",
+        "nome": "Dr. Murillo Lima",
+        "partido": "PP",
+        "votos": 1959
+      }
+    },
+    "LIMÃO": {
+      "eleitores_confirmados": 20776,
+      "bairros_confirmados": 3,
+      "vereador_mais_votado": {
+        "id": "ver_006",
+        "nome": "Dr. Murillo Lima",
+        "partido": "PP",
+        "votos": 767
+      }
+    },
+    "CACHOEIRINHA": {
+      "eleitores_confirmados": 84452,
+      "bairros_confirmados": 9,
+      "vereador_mais_votado": {
+        "id": "ver_004",
+        "nome": "Lucas Pavanato",
+        "partido": "PL",
+        "votos": 1223
+      }
+    },
+    "FREGUESIA DO Ó": {
+      "eleitores_confirmados": 161779,
+      "bairros_confirmados": 21,
+      "vereador_mais_votado": {
+        "id": "ver_005",
+        "nome": "Sandra Santana",
+        "partido": "MDB",
+        "votos": 7662
+      }
+    },
+    "BRASILÂNDIA": {
+      "eleitores_confirmados": 200484,
+      "bairros_confirmados": 21,
+      "vereador_mais_votado": {
+        "id": "ver_005",
+        "nome": "Sandra Santana",
+        "partido": "MDB",
+        "votos": 9291
+      }
+    },
+    "VILA MARIA": {
+      "eleitores_confirmados": 94163,
+      "bairros_confirmados": 5,
+      "vereador_mais_votado": {
+        "id": "ver_001",
+        "nome": "Danilo do Posto de Saúde",
+        "partido": "PODE",
+        "votos": 21649
+      }
+    },
+    "VILA GUILHERME": {
+      "eleitores_confirmados": 65975,
+      "bairros_confirmados": 6,
+      "vereador_mais_votado": {
+        "id": "ver_001",
+        "nome": "Danilo do Posto de Saúde",
+        "partido": "PODE",
+        "votos": 7893
+      }
+    },
+    "VILA MEDEIROS": {
+      "eleitores_confirmados": 90604,
+      "bairros_confirmados": 5,
+      "vereador_mais_votado": {
+        "id": "ver_001",
+        "nome": "Danilo do Posto de Saúde",
+        "partido": "PODE",
+        "votos": 14815
+      }
+    },
+    "PIRITUBA": {
+      "eleitores_confirmados": 127294,
+      "bairros_confirmados": 15,
+      "vereador_mais_votado": {
+        "id": "ver_008",
+        "nome": "Eliseu Gabriel",
+        "partido": "PSB",
+        "votos": 9397
+      }
+    },
+    "JARAGUÁ": {
+      "eleitores_confirmados": 123541,
+      "bairros_confirmados": 15,
+      "vereador_mais_votado": {
+        "id": "ver_002",
+        "nome": "Fabio Riva",
+        "partido": "MDB",
+        "votos": 7955
+      }
+    },
+    "SÃO DOMINGOS": {
+      "eleitores_confirmados": 46693,
+      "bairros_confirmados": 6,
+      "vereador_mais_votado": {
+        "id": "ver_008",
+        "nome": "Eliseu Gabriel",
+        "partido": "PSB",
+        "votos": 3674
+      }
+    },
+    "PERUS": {
+      "eleitores_confirmados": 65148,
+      "bairros_confirmados": 8,
+      "vereador_mais_votado": {
+        "id": "ver_002",
+        "nome": "Fabio Riva",
+        "partido": "MDB",
+        "votos": 6377
+      }
+    },
+    "ANHANGUERA": {
+      "eleitores_confirmados": 35875,
+      "bairros_confirmados": 6,
+      "vereador_mais_votado": {
+        "id": "ver_002",
+        "nome": "Fabio Riva",
+        "partido": "MDB",
+        "votos": 5365
+      }
+    }
+  }
+}
