@@ -5444,7 +5444,7 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
     const confirmado = detalheBairros[b];
     const badge = confirmado ? Object.keys(confirmado.zonas).map(z => `<span class="bairros-pill-ze-badge">${z}ª</span>`).join('') : '';
     const bEsc = b.replace(/"/g, '&quot;');
-    return `<button type="button" class="bairros-pill" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairro(this)">${badge}📍 ${b}</button>`;
+    return `<a class="bairros-pill" data-bairro="${bEsc}" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth" onclick="mostrarDetalheBairro(this)">${badge}📍 ${b}</a>`;
   }).join('');
   search.value = '';
   vazio.style.display = 'none';

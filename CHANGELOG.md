@@ -18,6 +18,11 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-09-17 — Cowork (5)
+
+- **Menu Bairros: Google Earth de volta, junto com a zona eleitoral.** Na rodada anterior o clique num bairro do modal "📍 Bairros" tinha ficado só mostrando a zona eleitoral inline (o Google Earth tinha sido removido a pedido, numa rodada anterior a essa). O pedido agora foi trazer o Google Earth de volta sem perder a informação de zona eleitoral — voltou ao comportamento original: cada bairro é um link que abre o Google Earth numa aba nova (`target="_blank"`) e, ao mesmo tempo, abre o painel inline com a zona eleitoral/locais de votação do bairro, exatamente como era antes da rodada "sem Google Earth". Mudança isolada em `mostrarInfoDistrito()` (só no `#bairros-overlay`; o mapa da Política não foi tocado).
+- A escrita teve que ser repetida uma vez por causa do bug intermitente de escrita silenciosa do `device_commit_files` (mesmo de sempre) — confirmado via stage-back que o tamanho do arquivo batia antes de pedir pra você commitar.
+
 ## 2026-09-17 — Cowork (4)
 
 - **Separação do mapa: Bairros volta a ser simples, o mapa avançado passa a ser exclusivo da aba Política.** As 5 novidades da rodada anterior (tooltip com eleitores/vereador, ranking de bairros em barras, vereador mais votado por distrito, seletor de métrica de cor, bolhas de locais de votação) tinham sido aplicadas por engano ao mesmo modal que o menu "📍 Bairros" abre — o pedido original era só pro mapa acessado pela aba Política.
