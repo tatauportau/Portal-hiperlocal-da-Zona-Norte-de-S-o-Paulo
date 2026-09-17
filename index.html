@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portau — Edicao do Dia · 17/09/2026</title>
+<title>Portau — Edicao do Dia · 16/09/2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0051A8">
@@ -680,14 +680,34 @@
   .bairros-vazio { font-size: 12px; color: var(--cinza-m); display: none; }
   .bairros-zonas-titulo { font-size: 11px; color: var(--cinza-m); margin: 14px 0 8px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
   .bairros-pill-zona { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: var(--marrom); color: #fff; }
-  .bairros-pill-ze-badge { font-size: 10px; font-weight: 800; padding: 1px 6px; border-radius: 10px; background: var(--marrom); color: #fff; margin-right: 2px; }
-  .bairro-detalhe { display: none; margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--cinza-l); }
-  .bairro-detalhe.aberto { display: block; }
-  .bairro-detalhe-titulo { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 800; margin-bottom: 4px; }
-  .bairro-detalhe-stat { font-size: 12px; color: var(--cinza-m); margin-bottom: 8px; }
-  .bairro-detalhe-local { font-size: 12px; margin-top: 8px; padding: 8px 10px; background: #fff; border-radius: 8px; border: 1px solid var(--cinza-l); }
-  .bairro-detalhe-local .end { color: var(--cinza-m); font-size: 11px; margin-top: 2px; }
-  .bairro-detalhe-vazio { font-size: 12px; color: var(--cinza-m); font-style: italic; }
+  .bairros-pill-ze-badge { font-size: 9.5px; font-weight: 800; background: var(--marrom); color: #fff; border-radius: 8px; padding: 1px 5px; margin-right: 2px; }
+  .bairros-pill { font-family: 'Inter', sans-serif; }
+  .bairros-pill.aberto { background: var(--marrom); border-color: var(--marrom); color: #fff; }
+  .bairro-detalhe-inline { flex-basis: 100%; width: 100%; margin-top: 4px; padding: 10px 12px; background: var(--creme); border-radius: 10px; font-size: 12px; }
+  .bairro-detalhe-titulo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 13px; margin-bottom: 6px; }
+  .bairro-detalhe-stat { color: var(--cinza-m); margin-bottom: 8px; }
+  .bairro-detalhe-local { background: #fff; border-radius: 10px; padding: 8px 10px; margin-bottom: 6px; }
+  .bairro-detalhe-local b { font-family: 'Syne', sans-serif; font-size: 12px; }
+  .bairro-detalhe-local .end { color: var(--cinza-m); font-size: 11px; }
+  .bairro-detalhe-vazio { color: var(--cinza-m); font-style: italic; }
+  .mapa-metrica-seletor { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 4px; }
+  .mapa-metrica-btn { font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 20px; background: #fff; border: 1px solid var(--cinza-l); color: var(--cinza-m); cursor: pointer; font-family: 'Inter', sans-serif; transition: all .15s; }
+  .mapa-metrica-btn:hover { border-color: var(--cinza-q); color: var(--cinza-q); }
+  .mapa-metrica-btn.ativo { background: var(--cinza-q); border-color: var(--cinza-q); color: #fff; }
+  .mapa-legenda { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; font-size: 10px; color: var(--cinza-m); }
+  .mapa-legenda-item { display: inline-flex; align-items: center; gap: 4px; }
+  .mapa-legenda-cor { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex-shrink: 0; }
+  .bairros-info-vereador { font-size: 12px; background: var(--creme); border-radius: 10px; padding: 8px 10px; margin-bottom: 10px; display: none; }
+  .bairros-info-vereador.visivel { display: block; }
+  .bairros-info-vereador b { font-family: 'Syne', sans-serif; }
+  .bairros-info-vereador button { margin-top: 4px; font-size: 11px; font-weight: 700; color: var(--marrom); background: none; border: none; cursor: pointer; padding: 0; font-family: 'Inter', sans-serif; text-decoration: underline; }
+  .bairro-bar-row { flex-basis: 100%; width: 100%; display: block; text-align: left; background: #fff; border: 1px solid var(--cinza-l); border-radius: 10px; padding: 6px 10px; cursor: pointer; font-family: 'Inter', sans-serif; margin-bottom: 6px; position: relative; overflow: hidden; }
+  .bairro-bar-row.aberto { border-color: var(--marrom); }
+  .bairro-bar-fill { position: absolute; left: 0; top: 0; bottom: 0; background: rgba(139,94,60,0.14); z-index: 0; transition: width .3s ease; }
+  .bairro-bar-conteudo { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .bairro-bar-nome { font-size: 12px; font-weight: 600; color: var(--cinza-q); }
+  .bairro-bar-eleitores { font-size: 11px; color: var(--cinza-m); white-space: nowrap; }
+  .bairros-outros-titulo { font-size: 10px; color: var(--cinza-m); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; margin: 10px 0 6px; }
 
   /* AUTH (topbar) */
   .auth-chip { display: flex; align-items: center; gap: 8px; flex-shrink: 0; position: relative; }
@@ -881,7 +901,7 @@ document.addEventListener('click', (e) => {
         <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
       </div>
       <div style="font-size:9px;color:var(--cinza-m);white-space:nowrap;">
-        <span id="clima-update">17/09/26 00:02</span><span id="clima-hora-live" style="display:none;"></span>
+        <span id="clima-update">16/09/26 14:00</span><span id="clima-hora-live" style="display:none;"></span>
       </div>
     </div>
     <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
@@ -1021,7 +1041,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="feed">
 
       <!-- NOTÍCIAS -->
-                                                                                                                                                                                                        <div class="secao" id="noticias">
+                                                                                                                                                                                                      <div class="secao" id="noticias">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
       <span class="secao-count">8 hoje</span>
@@ -1227,7 +1247,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
-    <!-- AGENDA -->
   <div class="secao" id="agenda">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
@@ -1289,7 +1308,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </a>
   </div>
 
-    <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
@@ -4562,7 +4580,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- POLITICA -->
     <!-- POLITICA -->
     <!-- POLITICA -->
-    <!-- POLITICA -->
   <div class="secao" id="politica">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
@@ -4636,7 +4653,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <button class="mapa-pol-btn" onclick="abrirBairros();return false;">Ver mapa</button>
   </div>
 
-    <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
@@ -4823,7 +4839,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 
 <!-- SIDEBAR -->
   
-                                                                                                                                                          <div class="sb-card" id="fim-de-semana-card">
+                                                                                                                                                        <div class="sb-card" id="fim-de-semana-card">
     <div class="sb-header">🎉 Este fim de semana</div>
     <div class="sb-item">
       <div style="font-size:20px;">🧰</div>
@@ -5137,17 +5153,25 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
     <button class="bairros-fechar" onclick="fecharBairros()">✕</button>
     <div class="bairros-titulo">🗺️ Bairros e Zonas Eleitorais da Zona Norte</div>
     <div class="bairros-sub">Clique num distrito para ver os bairros e a zona eleitoral</div>
+    <div class="mapa-metrica-seletor" id="mapa-metrica-seletor">
+      <button type="button" class="mapa-metrica-btn ativo" data-metrica="subprefeitura" onclick="mudarMetricaMapa('subprefeitura')">Subprefeitura</button>
+      <button type="button" class="mapa-metrica-btn" data-metrica="eleitores" onclick="mudarMetricaMapa('eleitores')">Nº de eleitores</button>
+      <button type="button" class="mapa-metrica-btn" data-metrica="vereador" onclick="mudarMetricaMapa('vereador')">Vereador mais votado</button>
+    </div>
     <div class="bairros-corpo">
-      <div id="bairros-svg-wrap"></div>
+      <div>
+        <div id="bairros-svg-wrap"></div>
+        <div class="mapa-legenda" id="mapa-legenda"></div>
+      </div>
       <div class="bairros-info" id="bairros-info">
         <div class="bairros-info-titulo" id="bairros-info-titulo">Selecione um distrito</div>
         <div class="bairros-info-sub" id="bairros-info-sub">Clique no mapa ao lado</div>
+        <div class="bairros-info-vereador" id="bairros-info-vereador"></div>
         <input class="bairros-search" id="bairros-search" type="text" placeholder="Buscar bairro..." oninput="filtrarBairros()">
         <div class="bairros-pills" id="bairros-pills"></div>
         <div class="bairros-vazio" id="bairros-vazio">Nenhum bairro encontrado</div>
         <div class="bairros-zonas-titulo" id="bairros-zonas-titulo"></div>
         <div class="bairros-pills" id="bairros-zonas-pills"></div>
-        <div class="bairro-detalhe" id="bairro-detalhe"></div>
       </div>
     </div>
     <div class="bairros-tooltip" id="bairros-tooltip"></div>
@@ -5232,6 +5256,9 @@ let _geoDistritosZN = null;
 let _bairrosPorDistrito = null;
 let _zonasPorDistrito = null;
 let _detalheZE = null;
+let _mapaExtra = null;
+let _mapaExtraPromise = null;
+let _metricaMapa = 'subprefeitura';
 
 function abrirBairros(){
   document.getElementById('bairros-overlay').classList.add('aberto');
@@ -5241,6 +5268,9 @@ function abrirBairros(){
   document.getElementById('bairros-info').style.borderLeft = '';
   document.getElementById('bairros-zonas-titulo').textContent = '';
   document.getElementById('bairros-zonas-pills').innerHTML = '';
+  const vBox = document.getElementById('bairros-info-vereador');
+  vBox.classList.remove('visivel');
+  vBox.innerHTML = '';
   if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
 }
 function fecharBairros(){
@@ -5248,6 +5278,12 @@ function fecharBairros(){
 }
 
 async function garantirDadosMapaBairros(){
+  if (!_detalheZE) {
+    fetch('./data/zonas-eleitorais-detalhe.json').then(r => r.ok ? r.json() : null).then(d => { _detalheZE = d || {}; }).catch(() => { _detalheZE = {}; });
+  }
+  if (!_mapaExtra && !_mapaExtraPromise) {
+    _mapaExtraPromise = fetch('./data/mapa-distritos-extra.json').then(r => r.ok ? r.json() : null).then(d => { _mapaExtra = d || {}; }).catch(() => { _mapaExtra = {}; });
+  }
   if (_geoDistritosZN && _bairrosPorDistrito && _zonasPorDistrito) return;
   const geoEmbutido = document.getElementById('bairros-geo-embutido');
   const dadosEmbutido = document.getElementById('bairros-dados-embutido');
@@ -5262,12 +5298,6 @@ async function garantirDadosMapaBairros(){
   _geoDistritosZN = geo;
   _bairrosPorDistrito = bairros;
   _zonasPorDistrito = zonas;
-  try {
-    _detalheZE = await fetch('./data/zonas-eleitorais-detalhe.json').then(r => r.json());
-  } catch (e) {
-    _detalheZE = {};
-    console.error('Erro ao carregar detalhe de zonas eleitorais:', e);
-  }
 }
 
 async function carregarMapaBairros(){
@@ -5291,6 +5321,71 @@ const CORES_SUBPREF_ZN = {
   'PIRITUBA':'#7B2CBF', 'JARAGUÁ':'#7B2CBF', 'SÃO DOMINGOS':'#7B2CBF',
   'PERUS':'#023047', 'ANHANGUERA':'#023047'
 };
+
+const CORES_VEREADOR_ZN = ['#D62828','#F77F00','#FCBF49','#06A77D','#3D5A80','#7B2CBF','#023047','#8B5E3C','#C9184A','#4361EE','#2A9D8F','#E76F51','#588157','#9B5DE5','#00B4D8','#B5838D','#6A4C93','#E63946'];
+let _corVereadorCache = null;
+
+function corPorVereador(id){
+  if (!_corVereadorCache) {
+    const ids = [...new Set(Object.values(_mapaExtra.distritos).map(d => d.vereador_mais_votado && d.vereador_mais_votado.id).filter(Boolean))].sort();
+    _corVereadorCache = {};
+    ids.forEach((vid, i) => { _corVereadorCache[vid] = CORES_VEREADOR_ZN[i % CORES_VEREADOR_ZN.length]; });
+  }
+  return _corVereadorCache[id] || '#ccc';
+}
+
+function corDistrito(id){
+  if (_metricaMapa === 'eleitores' && _mapaExtra && _mapaExtra.distritos) {
+    const valores = Object.values(_mapaExtra.distritos).map(d => d.eleitores_confirmados);
+    const min = Math.min(...valores), max = Math.max(...valores);
+    const v = (_mapaExtra.distritos[id] || {}).eleitores_confirmados || 0;
+    const t = max > min ? (v - min) / (max - min) : 0;
+    const escala = d3.interpolateRgb('#fde8d8', '#9c2a1f');
+    return escala(t);
+  }
+  if (_metricaMapa === 'vereador' && _mapaExtra && _mapaExtra.distritos) {
+    const info = _mapaExtra.distritos[id];
+    const vid = info && info.vereador_mais_votado && info.vereador_mais_votado.id;
+    return vid ? corPorVereador(vid) : '#ccc';
+  }
+  return CORES_SUBPREF_ZN[id] || '#ccc';
+}
+
+function atualizarLegendaMapa(){
+  const el = document.getElementById('mapa-legenda');
+  if (!el) return;
+  if (_metricaMapa === 'subprefeitura') {
+    el.innerHTML = '';
+    return;
+  }
+  if (_metricaMapa === 'eleitores') {
+    if (!_mapaExtra || !_mapaExtra.distritos) { el.innerHTML = ''; return; }
+    const valores = Object.values(_mapaExtra.distritos).map(d => d.eleitores_confirmados);
+    const min = Math.min(...valores), max = Math.max(...valores);
+    const escala = d3.interpolateRgb('#fde8d8', '#9c2a1f');
+    el.innerHTML = `<span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${escala(0)}"></span>${min.toLocaleString('pt-BR')}</span>
+      <span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${escala(1)}"></span>${max.toLocaleString('pt-BR')} eleitores confirmados</span>`;
+    return;
+  }
+  if (_metricaMapa === 'vereador' && _mapaExtra && _mapaExtra.distritos) {
+    const vistos = new Map();
+    Object.values(_mapaExtra.distritos).forEach(d => {
+      const vv = d.vereador_mais_votado;
+      if (vv && !vistos.has(vv.id)) vistos.set(vv.id, vv.nome);
+    });
+    el.innerHTML = [...vistos.entries()].map(([id, nome]) =>
+      `<span class="mapa-legenda-item"><span class="mapa-legenda-cor" style="background:${corPorVereador(id)}"></span>${nome}</span>`
+    ).join('');
+  }
+}
+
+async function mudarMetricaMapa(metrica){
+  _metricaMapa = metrica;
+  document.querySelectorAll('.mapa-metrica-btn').forEach(b => b.classList.toggle('ativo', b.dataset.metrica === metrica));
+  if (!_mapaExtra && _mapaExtraPromise) await _mapaExtraPromise;
+  d3.selectAll('#bairros-svg-wrap path').attr('fill', d => corDistrito(d.properties.id));
+  atualizarLegendaMapa();
+}
 
 function desenharMapaBairros(geo, bairrosPorDistrito, zonasPorDistrito){
   const wrap = document.getElementById('bairros-svg-wrap');
@@ -5320,14 +5415,20 @@ function desenharMapaBairros(geo, bairrosPorDistrito, zonasPorDistrito){
     .data(geo.features)
     .join('path')
       .attr('d', geoPathGen)
-      .attr('fill', d => CORES_SUBPREF_ZN[d.properties.id] || '#ccc')
+      .attr('fill', d => corDistrito(d.properties.id))
       .attr('fill-opacity', 0.72)
       .attr('stroke', '#fff')
       .attr('stroke-width', 1.2)
       .style('cursor', 'pointer')
       .style('pointer-events', 'auto')
       .on('mousemove', function(event, d){
-        tooltip.textContent = d.properties.nome;
+        const extra = _mapaExtra && _mapaExtra.distritos && _mapaExtra.distritos[d.properties.id];
+        let txt = d.properties.nome;
+        if (extra) {
+          txt += ` · ${extra.eleitores_confirmados.toLocaleString('pt-BR')} eleitores confirmados`;
+          if (extra.vereador_mais_votado) txt += ` · mais votado: ${extra.vereador_mais_votado.nome}`;
+        }
+        tooltip.textContent = txt;
         tooltip.style.left = (event.clientX + 14) + 'px';
         tooltip.style.top  = (event.clientY + 10) + 'px';
         tooltip.style.opacity = 1;
@@ -5367,7 +5468,7 @@ function semAcento(s) {
 
 function filtrarBairros() {
   const q = semAcento(document.getElementById('bairros-search').value);
-  const pills = document.querySelectorAll('#bairros-pills .bairros-pill');
+  const pills = document.querySelectorAll('#bairros-pills .bairros-pill, #bairros-pills .bairro-bar-row');
   let visiveis = 0;
   pills.forEach(p => {
     const match = !q || semAcento(p.textContent).includes(q);
@@ -5385,25 +5486,52 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   const vazio  = document.getElementById('bairros-vazio');
   const zonasTitulo = document.getElementById('bairros-zonas-titulo');
   const zonasPills  = document.getElementById('bairros-zonas-pills');
+  const vereadorBox = document.getElementById('bairros-info-vereador');
 
-  const lista = (bairrosPorDistrito[props.id] || []).slice().sort((a, b) => a.localeCompare(b, 'pt-BR'));
-  titulo.textContent = props.nome;
-  sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
   const detalheBairros = (_detalheZE && _detalheZE.bairros) || {};
-  pills.innerHTML = lista.map(b => {
-    const info = detalheBairros[b];
-    const zEsc = (b || '').replace(/'/g, "\\'");
-    const badge = (info && info.zonas) ? Object.keys(info.zonas).map(z => `<span class="bairros-pill-ze-badge">${z}ª</span>`).join('') : '';
-    return `<a class="bairros-pill" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth" onclick="mostrarDetalheBairro('${zEsc}')">${badge}📍 ${b}</a>`;
+  const todosBairros = bairrosPorDistrito[props.id] || [];
+  const confirmados = todosBairros
+    .filter(b => detalheBairros[b])
+    .map(b => ({ nome: b, eleitores: Object.values(detalheBairros[b].zonas).reduce((a, x) => a + x, 0) }))
+    .sort((a, b) => b.eleitores - a.eleitores);
+  const outros = todosBairros.filter(b => !detalheBairros[b]).slice().sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+  titulo.textContent = props.nome;
+  sub.textContent = todosBairros.length + (todosBairros.length === 1 ? ' bairro' : ' bairros');
+
+  const extra = _mapaExtra && _mapaExtra.distritos && _mapaExtra.distritos[props.id];
+  const vv = extra && extra.vereador_mais_votado;
+  if (vv) {
+    vereadorBox.classList.add('visivel');
+    vereadorBox.innerHTML = `🏛️ Vereador mais votado aqui (entre os do Painel Política): <b>${vv.nome}</b> (${vv.partido}) — ${vv.votos.toLocaleString('pt-BR')} votos<br><button onclick="verVereadorNoMapa('${vv.id}')">Ver no Painel Política →</button>`;
+  } else {
+    vereadorBox.classList.remove('visivel');
+    vereadorBox.innerHTML = '';
+  }
+
+  const maxEleitores = confirmados.length ? confirmados[0].eleitores : 1;
+  const barrasHtml = confirmados.map(({ nome: b, eleitores }) => {
+    const badge = Object.keys(detalheBairros[b].zonas).map(z => `<span class="bairros-pill-ze-badge">${z}ª</span>`).join('');
+    const bEsc = b.replace(/"/g, '&quot;');
+    const largura = Math.max(6, Math.round(eleitores / maxEleitores * 100));
+    return `<button type="button" class="bairro-bar-row" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairro(this)">
+      <div class="bairro-bar-fill" style="width:${largura}%"></div>
+      <div class="bairro-bar-conteudo"><span class="bairro-bar-nome">${badge}📍 ${b}</span><span class="bairro-bar-eleitores">${eleitores.toLocaleString('pt-BR')} eleitores</span></div>
+    </button>`;
   }).join('');
+  const outrosHtml = outros.length
+    ? `<div class="bairros-outros-titulo">Sem zona eleitoral confirmada</div>` + outros.map(b => {
+        const bEsc = b.replace(/"/g, '&quot;');
+        return `<button type="button" class="bairros-pill" data-bairro="${bEsc}" title="Ver zona eleitoral de ${b}" onclick="mostrarDetalheBairro(this)">📍 ${b}</button>`;
+      }).join('')
+    : '';
+  pills.innerHTML = barrasHtml + outrosHtml;
   search.value = '';
   vazio.style.display = 'none';
-  document.getElementById('bairro-detalhe').classList.remove('aberto');
-  document.getElementById('bairro-detalhe').innerHTML = '';
 
   const zonas = (zonasPorDistrito && zonasPorDistrito[props.id]) || [];
   if (zonas.length) {
-    zonasTitulo.textContent = `Zona${zonas.length > 1 ? 's' : ''} eleitoral${zonas.length > 1 ? 'is' : ''} (TRE-SP)`;
+    zonasTitulo.textContent = `Zona${zonas.length > 1 ? 's' : ''} eleitoral${zonas.length > 1 ? 'is' : ''} do distrito (TRE-SP)`;
     zonasPills.innerHTML = zonas.map(z => `<span class="bairros-pill-zona">${z}ª ZE</span>`).join('');
   } else {
     zonasTitulo.textContent = '';
@@ -5411,29 +5539,39 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   }
 }
 
-function mostrarDetalheBairro(nomeBairro){
-  const el = document.getElementById('bairro-detalhe');
-  const detalheBairros = (_detalheZE && _detalheZE.bairros) || {};
-  const info = detalheBairros[nomeBairro];
-  if (!info || !info.zonas) {
-    el.innerHTML = `<div class="bairro-detalhe-vazio">Não há local de votação registrado dentro de ${nomeBairro} — a zona eleitoral exata desse bairro não pôde ser confirmada (fonte: TSE).</div>`;
-    el.classList.add('aberto');
-    return;
+function verVereadorNoMapa(id){
+  fecharBairros();
+  const row = document.getElementById('row-' + id);
+  if (!row) return;
+  if (!row.classList.contains('aberto')) toggleExpandVereador(id);
+  setTimeout(() => row.scrollIntoView({ behavior: 'smooth', block: 'center' }), 250);
+}
+
+function mostrarDetalheBairro(btn){
+  const nomeBairro = btn.getAttribute('data-bairro');
+  const pills = document.getElementById('bairros-pills');
+  const existente = pills.querySelector('.bairro-detalhe-inline');
+  const jaAberto = btn.classList.contains('aberto');
+  if (existente) existente.remove();
+  pills.querySelectorAll('.bairros-pill.aberto, .bairro-bar-row.aberto').forEach(p => p.classList.remove('aberto'));
+  if (jaAberto) return; // clicou de novo no mesmo bairro: só fecha
+
+  btn.classList.add('aberto');
+  const dados = _detalheZE && _detalheZE.bairros && _detalheZE.bairros[nomeBairro];
+  const det = document.createElement('div');
+  det.className = 'bairro-detalhe-inline';
+  if (!dados) {
+    det.innerHTML = `<div class="bairro-detalhe-vazio">Nenhum local de votação cadastrado dentro de ${nomeBairro} — use a zona eleitoral do distrito acima como referência.</div>`;
+  } else {
+    const totalEleitores = Object.values(dados.zonas).reduce((a, b) => a + b, 0);
+    const zonasHtml = Object.entries(dados.zonas).map(([z, e]) => `<span class="bairros-pill-zona">${z}ª ZE — ${e.toLocaleString('pt-BR')} eleitores</span>`).join(' ');
+    const locaisHtml = dados.locais.map(l => `<div class="bairro-detalhe-local"><b>${l.nome}</b> <span style="color:var(--cinza-m);">(${l.zona}ª ZE)</span><div class="end">${l.endereco} · ${l.eleitores.toLocaleString('pt-BR')} eleitores</div></div>`).join('');
+    det.innerHTML = `
+      <div class="bairro-detalhe-stat">${totalEleitores.toLocaleString('pt-BR')} eleitores em locais de votação confirmados dentro do bairro — ${zonasHtml}</div>
+      ${locaisHtml}
+    `;
   }
-  const totalEleitores = Object.values(info.zonas).reduce((a, b) => a + b, 0);
-  const zonasHtml = Object.entries(info.zonas).map(([z, eleitores]) =>
-    `<span class="bairros-pill-zona">${z}ª ZE — ${eleitores.toLocaleString('pt-BR')} eleitores</span>`
-  ).join('');
-  const locaisHtml = (info.locais || []).map(l =>
-    `<div class="bairro-detalhe-local"><strong>${l.nome}</strong> (${l.zona}ª ZE)<div class="end">${l.endereco || 'endereço não informado'} — ${l.eleitores.toLocaleString('pt-BR')} eleitores</div></div>`
-  ).join('');
-  el.innerHTML = `
-    <div class="bairro-detalhe-titulo">📍 ${nomeBairro}</div>
-    <div class="bairro-detalhe-stat">${totalEleitores.toLocaleString('pt-BR')} eleitores registrados neste bairro (TSE 2024)</div>
-    <div class="bairros-pills">${zonasHtml}</div>
-    ${locaisHtml}
-  `;
-  el.classList.add('aberto');
+  btn.insertAdjacentElement('afterend', det);
 }
 </script>
 
@@ -6904,7 +7042,7 @@ async function prepararContatoAnuncioVaga() {
 
   const infoEl = document.getElementById('anuncio-vaga-empresa-info');
   infoEl.innerHTML = `
-    <div><strong>Quinta-feira, 17 de setembro de 2026 · Gerado às 00:02</strong> ${escapeHtml(nomeEmpresa)}</div>
+    <div><strong>Quarta-feira, 16 de setembro de 2026 · Gerado às 14:00</strong> ${escapeHtml(nomeEmpresa)}</div>
     <div><strong>E-mail de contato:</strong> ${escapeHtml(email || 'não informado')}</div>
     <div><strong>Celular:</strong> ${escapeHtml(celular ? formatarTelefoneEmpresa(celular) : 'não informado')}</div>
     <div style="margin-top:4px;font-size:11px;">Para alterar esses dados, atualize no seu cadastro.</div>
