@@ -680,6 +680,15 @@
   .bairros-vazio { font-size: 12px; color: var(--cinza-m); display: none; }
   .bairros-zonas-titulo { font-size: 11px; color: var(--cinza-m); margin: 14px 0 8px; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
   .bairros-pill-zona { font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 20px; background: var(--marrom); color: #fff; }
+  .bairros-pill-ze-badge { font-size: 9.5px; font-weight: 800; background: var(--marrom); color: #fff; border-radius: 8px; padding: 1px 5px; margin-right: 2px; }
+  .bairro-detalhe { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--cinza-l); font-size: 12px; display: none; }
+  .bairro-detalhe.aberto { display: block; }
+  .bairro-detalhe-titulo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 13px; margin-bottom: 6px; }
+  .bairro-detalhe-stat { color: var(--cinza-m); margin-bottom: 8px; }
+  .bairro-detalhe-local { background: var(--creme); border-radius: 10px; padding: 8px 10px; margin-bottom: 6px; }
+  .bairro-detalhe-local b { font-family: 'Syne', sans-serif; font-size: 12px; }
+  .bairro-detalhe-local .end { color: var(--cinza-m); font-size: 11px; }
+  .bairro-detalhe-vazio { color: var(--cinza-m); font-style: italic; }
 
   /* AUTH (topbar) */
   .auth-chip { display: flex; align-items: center; gap: 8px; flex-shrink: 0; position: relative; }
@@ -873,7 +882,7 @@ document.addEventListener('click', (e) => {
         <div class="globo-tooltip" id="globo-tooltip">📍 Zona Norte · SP</div>
       </div>
       <div style="font-size:9px;color:var(--cinza-m);white-space:nowrap;">
-        <span id="clima-update">16/09/26 23:28</span><span id="clima-hora-live" style="display:none;"></span>
+        <span id="clima-update">16/09/26 14:00</span><span id="clima-hora-live" style="display:none;"></span>
       </div>
     </div>
     <div style="display:none;"><span id="clima-chuva">--%</span><span id="clima-vento">-- km/h</span></div>
@@ -1013,7 +1022,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 <div class="feed">
 
       <!-- NOTÍCIAS -->
-                                                                                                                                                                                                          <div class="secao" id="noticias">
+                                                                                                                                                                                                      <div class="secao" id="noticias">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-not"></span>Noticias</div>
       <span class="secao-count">8 hoje</span>
@@ -1219,8 +1228,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- AGENDA -->
     <!-- AGENDA -->
     <!-- AGENDA -->
-    <!-- AGENDA -->
-    <!-- AGENDA -->
   <div class="secao" id="agenda">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-age"></span>Agenda de Hoje</div>
@@ -1282,8 +1289,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     </a>
   </div>
 
-    <!-- VAGAS -->
-    <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
     <!-- VAGAS -->
@@ -4556,8 +4561,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <!-- POLITICA -->
     <!-- POLITICA -->
     <!-- POLITICA -->
-    <!-- POLITICA -->
-    <!-- POLITICA -->
   <div class="secao" id="politica">
     <div class="secao-header">
       <div class="secao-titulo"><span class="barra barra-pol"></span>Politica Regional</div>
@@ -4631,8 +4634,6 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
     <button class="mapa-pol-btn" onclick="abrirBairros();return false;">Ver mapa</button>
   </div>
 
-    <!-- ALERTAS -->
-    <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
     <!-- ALERTAS -->
@@ -4819,7 +4820,7 @@ setInterval(carregarClima, 900000); // Atualiza a cada 15 min
 
 <!-- SIDEBAR -->
   
-                                                                                                                                                            <div class="sb-card" id="fim-de-semana-card">
+                                                                                                                                                        <div class="sb-card" id="fim-de-semana-card">
     <div class="sb-header">🎉 Este fim de semana</div>
     <div class="sb-item">
       <div style="font-size:20px;">🧰</div>
@@ -5143,6 +5144,7 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
         <div class="bairros-vazio" id="bairros-vazio">Nenhum bairro encontrado</div>
         <div class="bairros-zonas-titulo" id="bairros-zonas-titulo"></div>
         <div class="bairros-pills" id="bairros-zonas-pills"></div>
+        <div class="bairro-detalhe" id="bairro-detalhe"></div>
       </div>
     </div>
     <div class="bairros-tooltip" id="bairros-tooltip"></div>
@@ -5226,6 +5228,7 @@ let _bairrosCarregado = false;
 let _geoDistritosZN = null;
 let _bairrosPorDistrito = null;
 let _zonasPorDistrito = null;
+let _detalheZE = null;
 
 function abrirBairros(){
   document.getElementById('bairros-overlay').classList.add('aberto');
@@ -5235,6 +5238,9 @@ function abrirBairros(){
   document.getElementById('bairros-info').style.borderLeft = '';
   document.getElementById('bairros-zonas-titulo').textContent = '';
   document.getElementById('bairros-zonas-pills').innerHTML = '';
+  const det = document.getElementById('bairro-detalhe');
+  det.classList.remove('aberto');
+  det.innerHTML = '';
   if (!_bairrosCarregado) { _bairrosCarregado = true; carregarMapaBairros(); }
 }
 function fecharBairros(){
@@ -5242,6 +5248,9 @@ function fecharBairros(){
 }
 
 async function garantirDadosMapaBairros(){
+  if (!_detalheZE) {
+    fetch('./data/zonas-eleitorais-detalhe.json').then(r => r.ok ? r.json() : null).then(d => { _detalheZE = d || {}; }).catch(() => { _detalheZE = {}; });
+  }
   if (_geoDistritosZN && _bairrosPorDistrito && _zonasPorDistrito) return;
   const geoEmbutido = document.getElementById('bairros-geo-embutido');
   const dadosEmbutido = document.getElementById('bairros-dados-embutido');
@@ -5377,18 +5386,45 @@ function mostrarInfoDistrito(props, bairrosPorDistrito, zonasPorDistrito){
   const lista = (bairrosPorDistrito[props.id] || []).slice().sort((a, b) => a.localeCompare(b, 'pt-BR'));
   titulo.textContent = props.nome;
   sub.textContent = lista.length + (lista.length === 1 ? ' bairro' : ' bairros');
-  pills.innerHTML = lista.map(b => `<a class="bairros-pill" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth">📍 ${b}</a>`).join('');
+  pills.innerHTML = lista.map(b => {
+    const confirmado = _detalheZE && _detalheZE.bairros && _detalheZE.bairros[b];
+    const badge = confirmado ? Object.keys(confirmado.zonas).map(z => `<span class="bairros-pill-ze-badge">${z}ª</span>`).join('') : '';
+    const bEsc = b.replace(/'/g, "\\'");
+    return `<a class="bairros-pill" href="${earthUrl(b, props.nome)}" target="_blank" rel="noopener" title="Ver ${b} no Google Earth" onclick="mostrarDetalheBairro('${bEsc}')">${badge}📍 ${b}</a>`;
+  }).join('');
   search.value = '';
   vazio.style.display = 'none';
+  const det = document.getElementById('bairro-detalhe');
+  det.classList.remove('aberto');
+  det.innerHTML = '';
 
   const zonas = (zonasPorDistrito && zonasPorDistrito[props.id]) || [];
   if (zonas.length) {
-    zonasTitulo.textContent = `Zona${zonas.length > 1 ? 's' : ''} eleitoral${zonas.length > 1 ? 'is' : ''} (TRE-SP)`;
+    zonasTitulo.textContent = `Zona${zonas.length > 1 ? 's' : ''} eleitoral${zonas.length > 1 ? 'is' : ''} do distrito (TRE-SP)`;
     zonasPills.innerHTML = zonas.map(z => `<span class="bairros-pill-zona">${z}ª ZE</span>`).join('');
   } else {
     zonasTitulo.textContent = '';
     zonasPills.innerHTML = '';
   }
+}
+
+function mostrarDetalheBairro(nomeBairro){
+  const det = document.getElementById('bairro-detalhe');
+  const dados = _detalheZE && _detalheZE.bairros && _detalheZE.bairros[nomeBairro];
+  if (!dados) {
+    det.classList.add('aberto');
+    det.innerHTML = `<div class="bairro-detalhe-titulo">${nomeBairro}</div><div class="bairro-detalhe-vazio">Nenhum local de votação cadastrado dentro deste bairro — use a zona eleitoral do distrito acima como referência.</div>`;
+    return;
+  }
+  const totalEleitores = Object.values(dados.zonas).reduce((a, b) => a + b, 0);
+  const zonasHtml = Object.entries(dados.zonas).map(([z, e]) => `<span class="bairros-pill-zona">${z}ª ZE — ${e.toLocaleString('pt-BR')} eleitores</span>`).join(' ');
+  const locaisHtml = dados.locais.map(l => `<div class="bairro-detalhe-local"><b>${l.nome}</b> <span style="color:var(--cinza-m);">(${l.zona}ª ZE)</span><div class="end">${l.endereco} · ${l.eleitores.toLocaleString('pt-BR')} eleitores</div></div>`).join('');
+  det.classList.add('aberto');
+  det.innerHTML = `
+    <div class="bairro-detalhe-titulo">${nomeBairro}</div>
+    <div class="bairro-detalhe-stat">${totalEleitores.toLocaleString('pt-BR')} eleitores em locais de votação confirmados dentro do bairro — ${zonasHtml}</div>
+    ${locaisHtml}
+  `;
 }
 </script>
 
@@ -6859,7 +6895,7 @@ async function prepararContatoAnuncioVaga() {
 
   const infoEl = document.getElementById('anuncio-vaga-empresa-info');
   infoEl.innerHTML = `
-    <div><strong>Quarta-feira, 16 de setembro de 2026 · Gerado às 23:28</strong> ${escapeHtml(nomeEmpresa)}</div>
+    <div><strong>Quarta-feira, 16 de setembro de 2026 · Gerado às 14:00</strong> ${escapeHtml(nomeEmpresa)}</div>
     <div><strong>E-mail de contato:</strong> ${escapeHtml(email || 'não informado')}</div>
     <div><strong>Celular:</strong> ${escapeHtml(celular ? formatarTelefoneEmpresa(celular) : 'não informado')}</div>
     <div style="margin-top:4px;font-size:11px;">Para alterar esses dados, atualize no seu cadastro.</div>
