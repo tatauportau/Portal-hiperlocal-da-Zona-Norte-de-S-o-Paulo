@@ -1,0 +1,3517 @@
+{
+ "atualizado_em": "2026-09-17T04:30:00.000Z",
+ "fonte": "TSE eleitorado_local_votacao_2024, filtrado às 12 zonas eleitorais da Zona Norte + reconciliado ao bairro/distrito canônico do Portau (mesma lógica de exclusão de homônimos entre regiões já usada em zonas-eleitorais-detalhe.json)",
+ "nota": "390 de 458 locais de votação encontrados nas 12 ZEs da Zona Norte puderam ser reconciliados com um bairro/distrito canônico da Zona Norte; os demais (nomes de bairro que não bateram com a lista canônica, incluindo alguns fora da Zona Norte cuja zona eleitoral cruza a fronteira) foram deixados de fora para não posicionar um ponto errado no mapa.",
+ "locais": [
+  {
+   "distrito": "SANTANA",
+   "bairro": "Jardim São Paulo",
+   "zona": "249",
+   "nome": "Colégio Jardim São Paulo",
+   "eleitores": 5494,
+   "lat": -23.4977131,
+   "lon": -46.6150003
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Parque São Domingos",
+   "zona": "325",
+   "nome": "Colégio Miranda",
+   "eleitores": 6587,
+   "lat": -23.49072121,
+   "lon": -46.75240257
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Tucuruvi",
+   "zona": "256",
+   "nome": "Colégio Passionista São Paulo Da Cruz",
+   "eleitores": 4344,
+   "lat": -23.4802811,
+   "lon": -46.6072445
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Guilherme",
+   "zona": "254",
+   "nome": "Ee. Afrânio Peixoto",
+   "eleitores": 5821,
+   "lat": -23.5083632,
+   "lon": -46.5968356
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Paulistano",
+   "zona": "403",
+   "nome": "Ee. Prof. Cynira Stocco Fausto",
+   "eleitores": 1007,
+   "lat": -23.46113513,
+   "lon": -46.71516737
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Elisa Maria",
+   "zona": "376",
+   "nome": "Emef. Castro Alves",
+   "eleitores": 5651,
+   "lat": -23.459215,
+   "lon": -46.6775733
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Parada Inglesa",
+   "zona": "349",
+   "nome": "Colégio Iapi",
+   "eleitores": 3795,
+   "lat": -23.4902909,
+   "lon": -46.6085954
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Teresinha",
+   "zona": "376",
+   "nome": "Emef. Professor André Rodrigues De Alckmin",
+   "eleitores": 7013,
+   "lat": -23.4590186,
+   "lon": -46.6939835
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Jardim Mariliza",
+   "zona": "327",
+   "nome": "Emei. Vinte E Cinco De Janeiro",
+   "eleitores": 2080,
+   "lat": -23.4836318,
+   "lon": -46.7040303
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Ee. Buenos Aires",
+   "eleitores": 4636,
+   "lat": -23.5001822,
+   "lon": -46.6162611
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Tucuruvi",
+   "zona": "256",
+   "nome": "Ee. Silva Jardim",
+   "eleitores": 5278,
+   "lat": -23.4812945,
+   "lon": -46.6051419
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Ataliba Leonel",
+   "zona": "256",
+   "nome": "Ee. Dr. Pedro De Moraes Victor",
+   "eleitores": 5547,
+   "lat": -23.4443882,
+   "lon": -46.588416
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Cidade Pirituba",
+   "zona": "325",
+   "nome": "Emei. Profa. Eunice Dos Santos",
+   "eleitores": 1557,
+   "lat": -23.4799844,
+   "lon": -46.7197447
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Cidade Pirituba",
+   "zona": "325",
+   "nome": "Colégio Canello Marques",
+   "eleitores": 5510,
+   "lat": -23.4834862,
+   "lon": -46.7284826
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Nova Cachoeirinha",
+   "zona": "255",
+   "nome": "Emef. Prof. Roberto Patrício",
+   "eleitores": 3105,
+   "lat": -23.4717458,
+   "lon": -46.6544853
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Jardim Pícolo",
+   "zona": "422",
+   "nome": "E.E. Alm. Visconde De Inhauma",
+   "eleitores": 5319,
+   "lat": -23.4770396,
+   "lon": -46.6337733
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Cidade Pirituba",
+   "zona": "325",
+   "nome": "Emef. Imperatriz Leopoldina",
+   "eleitores": 5075,
+   "lat": -23.4773521,
+   "lon": -46.7217696
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Jardim Adelfiore",
+   "zona": "389",
+   "nome": "Ee. Prof. Miguel Oliva Feitosa",
+   "eleitores": 4414,
+   "lat": -23.40843169,
+   "lon": -46.74158044
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Taipas",
+   "zona": "389",
+   "nome": "Ee. Prof. Carlos Borba",
+   "eleitores": 4532,
+   "lat": -23.4269323,
+   "lon": -46.7265544
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Vila Baruel",
+   "zona": "255",
+   "nome": "Etec Albert Einstein",
+   "eleitores": 4008,
+   "lat": -23.5052046,
+   "lon": -46.6600292
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Conjunto Residencial Elísio Teixeira Leite",
+   "zona": "403",
+   "nome": "Ee. Conjunto Habitacional Brigadeiro Eduardo Gomes",
+   "eleitores": 6502,
+   "lat": -23.44141343,
+   "lon": -46.71207807
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Ee. Frontino Guimarães",
+   "eleitores": 3512,
+   "lat": -23.4961596,
+   "lon": -46.6279232
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Penteado",
+   "zona": "376",
+   "nome": "Emef. Théo Dutra",
+   "eleitores": 4803,
+   "lat": -23.4672139,
+   "lon": -46.6811278
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Brasilândia",
+   "zona": "376",
+   "nome": "Emef. Embaixador Raul Fernandes",
+   "eleitores": 5264,
+   "lat": -23.469225,
+   "lon": -46.6903817
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Jardim Peri",
+   "zona": "422",
+   "nome": "E.E. Profª Rita Bicudo Pereira",
+   "eleitores": 7224,
+   "lat": -23.4622092,
+   "lon": -46.6511992
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Parque Novo Mundo",
+   "zona": "254",
+   "nome": "Emei. Ana Néri",
+   "eleitores": 1859,
+   "lat": -23.521515,
+   "lon": -46.5666433
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Jardim Japão",
+   "zona": "254",
+   "nome": "Cei. Jardim Japão",
+   "eleitores": 1874,
+   "lat": -23.5004782,
+   "lon": -46.5839125
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Paulistano",
+   "zona": "327",
+   "nome": "Emef Jardim Paulistano - Ceu Jd. Paulistano",
+   "eleitores": 6672,
+   "lat": -23.4624526,
+   "lon": -46.7123895
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Imirim",
+   "zona": "422",
+   "nome": "E.E. Profª Arlete Terezinha Pizão",
+   "eleitores": 2296,
+   "lat": -23.4831777,
+   "lon": -46.6510276
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Parque Edu Chaves",
+   "zona": "420",
+   "nome": "Escola Estadual Gabriela Mistral",
+   "eleitores": 4354,
+   "lat": -23.4783839,
+   "lon": -46.5624768
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Tucuruvi",
+   "zona": "256",
+   "nome": "Colégio Univip Escolas Associadas",
+   "eleitores": 3965,
+   "lat": -23.45480486,
+   "lon": -46.60211329
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Penteado",
+   "zona": "376",
+   "nome": "Ee. Professora Olinda Leite Sinisgali",
+   "eleitores": 4069,
+   "lat": -23.4737067,
+   "lon": -46.6775183
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Parque Taipas",
+   "zona": "389",
+   "nome": "Emef. Raul Pompeia",
+   "eleitores": 4405,
+   "lat": -23.43424744,
+   "lon": -46.7137645
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Água Fria",
+   "zona": "256",
+   "nome": "Ee. Expedicionário Brasileiro",
+   "eleitores": 5948,
+   "lat": -23.4826972,
+   "lon": -46.6200173
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Mazzei",
+   "zona": "256",
+   "nome": "Ee. Albino César",
+   "eleitores": 6329,
+   "lat": -23.4775492,
+   "lon": -46.6066039
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Irmãos Arnoni",
+   "zona": "256",
+   "nome": "E.M.E.F. Prof. Noé Azevedo",
+   "eleitores": 5928,
+   "lat": -23.4575673,
+   "lon": -46.6249361
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Imirim",
+   "zona": "249",
+   "nome": "Colégio Nossa Senhora Consolata",
+   "eleitores": 3845,
+   "lat": -23.4931442,
+   "lon": -46.6479204
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Pirituba",
+   "zona": "325",
+   "nome": "Faculdades Anhanguera",
+   "eleitores": 7530,
+   "lat": -23.4973071,
+   "lon": -46.7276933
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Mirante",
+   "zona": "327",
+   "nome": "Ee. Prof. Geraldo Homero De França Ottoni",
+   "eleitores": 3598,
+   "lat": -23.4677067,
+   "lon": -46.7196825
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Conjunto Habitacional Turística",
+   "zona": "403",
+   "nome": "Emei. Estrada Turística Do Jaraguá",
+   "eleitores": 3507,
+   "lat": -23.47292805,
+   "lon": -46.75492259
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Vila Aurora",
+   "zona": "403",
+   "nome": "Emef. Antonio Alves Veríssimo",
+   "eleitores": 5337,
+   "lat": -23.43417589,
+   "lon": -46.7518015
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Sítio do Piqueri",
+   "zona": "256",
+   "nome": "Ee. Profa. Eunice Terezinha De Oliveira Frágoas",
+   "eleitores": 5966,
+   "lat": -23.45437486,
+   "lon": -46.58946813
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Jaçanã",
+   "zona": "349",
+   "nome": "Faculdades Santa Rita De Cássia",
+   "eleitores": 5153,
+   "lat": -23.4661254,
+   "lon": -46.5867854
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Baixa",
+   "zona": "254",
+   "nome": "Ee. Profª. Florinda Cardoso",
+   "eleitores": 4145,
+   "lat": -23.5158391,
+   "lon": -46.5904648
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Escola Municipal De Ensino Fundamental Profa. Maria Helena Faria Lima",
+   "eleitores": 5779,
+   "lat": -23.4809774,
+   "lon": -46.5821602
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Chácara Inglesa",
+   "zona": "325",
+   "nome": "Emef. Prof. Gabriel Prestes",
+   "eleitores": 3409,
+   "lat": -23.4892113,
+   "lon": -46.7266161
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Jardim da Conquista",
+   "zona": "389",
+   "nome": "Emef Recanto Dos Humildes",
+   "eleitores": 3909,
+   "lat": -23.41752992,
+   "lon": -46.74799663
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Perus",
+   "zona": "389",
+   "nome": "Emef. Candido Portinari",
+   "eleitores": 5360,
+   "lat": -23.39933333,
+   "lon": -46.75172277
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Jardim Modelo",
+   "zona": "349",
+   "nome": "Ee. Profa. Maria Angelita Sayago De Laet",
+   "eleitores": 5974,
+   "lat": -23.4667902,
+   "lon": -46.5779648
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Sabrina",
+   "zona": "420",
+   "nome": "Escola Estadual Professor Victor Dos Santos Cunha",
+   "eleitores": 6332,
+   "lat": -23.4902562,
+   "lon": -46.5724688
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Damasceno",
+   "zona": "376",
+   "nome": "Ee. Doutor Genésio De Almeida Moura",
+   "eleitores": 7577,
+   "lat": -23.4471555,
+   "lon": -46.6967415
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Jardim Ibéria",
+   "zona": "255",
+   "nome": "Ee. Prof. Colombo De Almeida",
+   "eleitores": 6209,
+   "lat": -23.4937566,
+   "lon": -46.6606308
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Albertina",
+   "zona": "256",
+   "nome": "E.M.E.F. Maria Paula Marcondes Domingues",
+   "eleitores": 3238,
+   "lat": -23.4540135,
+   "lon": -46.6196121
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Jardim Peri",
+   "zona": "422",
+   "nome": "Colégio Suely Bertolazzi Folli",
+   "eleitores": 2652,
+   "lat": -23.4633554,
+   "lon": -46.6525323
+  },
+  {
+   "distrito": "LIMÃO",
+   "bairro": "Vila Barbosa",
+   "zona": "255",
+   "nome": "Emef. Prof. Aroldo De Azevedo",
+   "eleitores": 4290,
+   "lat": -23.4895732,
+   "lon": -46.6707932
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jaraguá",
+   "zona": "403",
+   "nome": "Colégio Vaccaro",
+   "eleitores": 3015,
+   "lat": -23.45562955,
+   "lon": -46.7422758
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Mazzei",
+   "zona": "256",
+   "nome": "Ee. Luzia Godoy",
+   "eleitores": 3148,
+   "lat": -23.4765533,
+   "lon": -46.6064539
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Paiva",
+   "zona": "254",
+   "nome": "Emef. Ruy Barbosa",
+   "eleitores": 4692,
+   "lat": -23.5003833,
+   "lon": -46.6005183
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Isolina Mazzei",
+   "zona": "254",
+   "nome": "Ee. Deputado Pedro Costa",
+   "eleitores": 2507,
+   "lat": -23.4934615,
+   "lon": -46.6029568
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Guilherme",
+   "zona": "254",
+   "nome": "Emef. Oliva Irene Bayerlein Silva",
+   "eleitores": 2863,
+   "lat": -23.5118997,
+   "lon": -46.6084573
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Nossa Senhora do Retiro",
+   "zona": "327",
+   "nome": "Ee. Nossa Senhora Do Retiro",
+   "eleitores": 3776,
+   "lat": -23.4729598,
+   "lon": -46.7194378
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Água Fria",
+   "zona": "249",
+   "nome": "Emef Prof. Adolpho Ótto De Laet",
+   "eleitores": 3529,
+   "lat": -23.4818763,
+   "lon": -46.6264584
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Itaberaba",
+   "zona": "327",
+   "nome": "Colégio Santa Lúcia Filippini",
+   "eleitores": 4335,
+   "lat": -23.48947,
+   "lon": -46.6904714
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Freguesia do Ó",
+   "zona": "327",
+   "nome": "Colégio B.A.L.",
+   "eleitores": 3225,
+   "lat": -23.5024362,
+   "lon": -46.6956699
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Sabrina",
+   "zona": "420",
+   "nome": "Escola Estadual Professor Lael De Moura Prado",
+   "eleitores": 3160,
+   "lat": -23.497583,
+   "lon": -46.5745229
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Jardim São Miguel",
+   "zona": "255",
+   "nome": "Emef. Comandante Garcia D'Ávila",
+   "eleitores": 4776,
+   "lat": -23.4912984,
+   "lon": -46.6544695
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Siqueira",
+   "zona": "255",
+   "nome": "Ee. Tarcísio Alvares Lobo",
+   "eleitores": 9953,
+   "lat": -23.5029374,
+   "lon": -46.6805293
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Nina",
+   "zona": "376",
+   "nome": "Emei. Professor Tito Lívio Ferreira",
+   "eleitores": 1399,
+   "lat": -23.4726121,
+   "lon": -46.6929923
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Guilherme",
+   "zona": "254",
+   "nome": "Colégio Amorim - Santa Teresa",
+   "eleitores": 3212,
+   "lat": -23.5042964,
+   "lon": -46.6050653
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Guarani",
+   "zona": "376",
+   "nome": "Ee. Doutor Ubaldo Costa Leite",
+   "eleitores": 6480,
+   "lat": -23.4600176,
+   "lon": -46.6874139
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Parque São Domingos",
+   "zona": "325",
+   "nome": "Escola Santa Tereza",
+   "eleitores": 1366,
+   "lat": -23.5093884,
+   "lon": -46.7292755
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Guarani",
+   "zona": "376",
+   "nome": "Ee. Professor Rubem Azevedo Alves",
+   "eleitores": 2116,
+   "lat": -23.4640583,
+   "lon": -46.6800467
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Alta",
+   "zona": "254",
+   "nome": "Emef. Almirante Tamandaré",
+   "eleitores": 5330,
+   "lat": -23.5018463,
+   "lon": -46.5910398
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Conjunto Residencial Elísio Teixeira Leite",
+   "zona": "403",
+   "nome": "Emei. Conjunto Residencial Elisio Teixeira Leite",
+   "eleitores": 2443,
+   "lat": -23.44611192,
+   "lon": -46.71625669
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Casa Verde Alta",
+   "zona": "255",
+   "nome": "Emei Vicente Paulo Da Silva",
+   "eleitores": 3065,
+   "lat": -23.4959355,
+   "lon": -46.6720038
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Clarice",
+   "zona": "325",
+   "nome": "Ee. Dr. Agenor Couto De Magalhães",
+   "eleitores": 5119,
+   "lat": -23.4710289,
+   "lon": -46.7465639
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Marina",
+   "zona": "327",
+   "nome": "Ee. Almirante Marquês De Tamandaré",
+   "eleitores": 6025,
+   "lat": -23.4841696,
+   "lon": -46.7022039
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Cachoeirinha",
+   "zona": "255",
+   "nome": "Emef. Tenente Aviador Frederico Gustavo Dos Santos",
+   "eleitores": 5514,
+   "lat": -23.4701189,
+   "lon": -46.6665011
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Parque Anhanguera",
+   "zona": "389",
+   "nome": "Emef Virginia Valeria Aparecida De Almeida Freitas",
+   "eleitores": 3343,
+   "lat": -23.43660138,
+   "lon": -46.77407467
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Sítio do Mandaqui",
+   "zona": "255",
+   "nome": "Colégio Piaget",
+   "eleitores": 6972,
+   "lat": -23.4838696,
+   "lon": -46.6549217
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Fontalis",
+   "zona": "256",
+   "nome": "E.M.E.F. Hipólito José Da Costa",
+   "eleitores": 4755,
+   "lat": -23.4379908,
+   "lon": -46.5774372
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Nossa Senhora do Ó",
+   "zona": "327",
+   "nome": "Ee. Prof. Augusto Ribeiro De Carvalho (Piqueri - Arc)",
+   "eleitores": 6506,
+   "lat": -23.4978726,
+   "lon": -46.7029582
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Parque São Luís",
+   "zona": "327",
+   "nome": "Ee. Cacilda Becker",
+   "eleitores": 4583,
+   "lat": -23.4801409,
+   "lon": -46.6919412
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Guarani",
+   "zona": "376",
+   "nome": "Ee. Padre Noé Rodrigues",
+   "eleitores": 2868,
+   "lat": -23.4604073,
+   "lon": -46.6865854
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Vila Perus",
+   "zona": "389",
+   "nome": "Ee. Brigadeiro Gavião Peixoto",
+   "eleitores": 12295,
+   "lat": -23.40495781,
+   "lon": -46.75997058
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Yara",
+   "zona": "256",
+   "nome": "E.M.E.F. Profa. Esmeralda Salles Pereira Ramos",
+   "eleitores": 4676,
+   "lat": -23.45797347,
+   "lon": -46.60477612
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Jaçanã",
+   "zona": "349",
+   "nome": "Ee. Prof. Eurico Figueiredo",
+   "eleitores": 4951,
+   "lat": -23.4703662,
+   "lon": -46.5871403
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim São José",
+   "zona": "327",
+   "nome": "Emef. General Liberato Bittencourt (Quinze)",
+   "eleitores": 5577,
+   "lat": -23.4856483,
+   "lon": -46.7127064
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jaraguá",
+   "zona": "403",
+   "nome": "E.E. Prof. Otto De Barros Vidal",
+   "eleitores": 4285,
+   "lat": -23.48147259,
+   "lon": -46.75829471
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Parque Mandi",
+   "zona": "327",
+   "nome": "Ee. Professor Plínio Damasco Penna",
+   "eleitores": 5132,
+   "lat": -23.4833489,
+   "lon": -46.683793
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Parque Monteiro Soares",
+   "zona": "327",
+   "nome": "Emef. Plínio Ayrosa",
+   "eleitores": 4866,
+   "lat": -23.4899647,
+   "lon": -46.6914342
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Nivi",
+   "zona": "349",
+   "nome": "Ee. Alfredo Inácio Trindade",
+   "eleitores": 5682,
+   "lat": -23.4778868,
+   "lon": -46.592233
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Freguesia do Ó",
+   "zona": "327",
+   "nome": "Ee. Prof. Jácomo Stavale",
+   "eleitores": 6195,
+   "lat": -23.4958799,
+   "lon": -46.6995283
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Sabrina",
+   "zona": "420",
+   "nome": "Emei. Professora Maria Isabel Pacheco De Almeida Ribeiro",
+   "eleitores": 1818,
+   "lat": -23.4928006,
+   "lon": -46.5729482
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Parque Nações Unidas",
+   "zona": "403",
+   "nome": "E.E. República Argentina",
+   "eleitores": 4951,
+   "lat": -23.44412492,
+   "lon": -46.73298653
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Guapira",
+   "zona": "349",
+   "nome": "Emef. Ceu. Jaçanã",
+   "eleitores": 6954,
+   "lat": -23.4566854,
+   "lon": -46.5835616
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Parque Nações Unidas",
+   "zona": "403",
+   "nome": "E.E. Friedrich Von Voith",
+   "eleitores": 4433,
+   "lat": -23.44662633,
+   "lon": -46.7370788
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Baixa",
+   "zona": "254",
+   "nome": "Ee. Ministro Horácio Lafer",
+   "eleitores": 4320,
+   "lat": -23.5136451,
+   "lon": -46.5845907
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Penteado",
+   "zona": "376",
+   "nome": "Ee. Professora Elizabeth Aparecida Simões Mesquita",
+   "eleitores": 4315,
+   "lat": -23.4703117,
+   "lon": -46.685765
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Nina",
+   "zona": "376",
+   "nome": "Ee. Professor Edgard Pimentel Rezende",
+   "eleitores": 7185,
+   "lat": -23.4763559,
+   "lon": -46.6929072
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Escola Estadual Professora Veridiana Camacho Carvalho Gomes",
+   "eleitores": 7108,
+   "lat": -23.47968,
+   "lon": -46.5735543
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Jardim Adelfiore",
+   "zona": "389",
+   "nome": "Ee. Professora Regiane Do Carmo Monteiro",
+   "eleitores": 3140,
+   "lat": -23.40900751,
+   "lon": -46.74027967
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Parque Peruche",
+   "zona": "255",
+   "nome": "Colégio Ouro Grosso",
+   "eleitores": 2674,
+   "lat": -23.5007491,
+   "lon": -46.6565401
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Paulistano",
+   "zona": "403",
+   "nome": "Emef. Mário Lago",
+   "eleitores": 2073,
+   "lat": -23.44905901,
+   "lon": -46.70843899
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Baixa",
+   "zona": "254",
+   "nome": "Ee. Sen. Paulo Egydio De O. Carvalho",
+   "eleitores": 8529,
+   "lat": -23.5148329,
+   "lon": -46.582096
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Vila Aurora",
+   "zona": "249",
+   "nome": "Ee. Prof. Carlos De Laet",
+   "eleitores": 4601,
+   "lat": -23.4770446,
+   "lon": -46.6239483
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jaraguá",
+   "zona": "403",
+   "nome": "E.E. Ministro Oscar Dias Correa",
+   "eleitores": 4196,
+   "lat": -23.43960028,
+   "lon": -46.75060967
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Parque Casa de Pedra",
+   "zona": "256",
+   "nome": "Ee. Bibliotecária Terezine Arantes Ferraz",
+   "eleitores": 6869,
+   "lat": -23.4391211,
+   "lon": -46.5856199
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Sabrina",
+   "zona": "420",
+   "nome": "Escola Municipal De Ensino Fundamental Eneas Carvalho De Aguiar",
+   "eleitores": 5176,
+   "lat": -23.4921963,
+   "lon": -46.5735354
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Alta",
+   "zona": "254",
+   "nome": "Ee. Júlio Maia",
+   "eleitores": 2816,
+   "lat": -23.5057174,
+   "lon": -46.5854666
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Chácara Inglesa",
+   "zona": "325",
+   "nome": "Colegio Sao Joao Gualberto",
+   "eleitores": 3960,
+   "lat": -23.4947475,
+   "lon": -46.7288465
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Jardim Santo Elias",
+   "zona": "325",
+   "nome": "Emei. Afonso Sardinha",
+   "eleitores": 2754,
+   "lat": -23.4855706,
+   "lon": -46.7400682
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Jardim Cabuçu",
+   "zona": "349",
+   "nome": "Emef. Frei Antonio Sant'Ana Galvão",
+   "eleitores": 3179,
+   "lat": -23.4645089,
+   "lon": -46.5701967
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Rica",
+   "zona": "376",
+   "nome": "Emef. Desembargador Sebastião Nogueira De Lima",
+   "eleitores": 4853,
+   "lat": -23.4707917,
+   "lon": -46.6736683
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Colégio Luíza De Marillác",
+   "eleitores": 3524,
+   "lat": -23.5058897,
+   "lon": -46.6263192
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Casa Verde Alta",
+   "zona": "255",
+   "nome": "Ee. Joaquim Nabuco",
+   "eleitores": 6942,
+   "lat": -23.4882771,
+   "lon": -46.6652686
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Gustavo",
+   "zona": "349",
+   "nome": "Ee. Cônego João Ligabue",
+   "eleitores": 5144,
+   "lat": -23.4818711,
+   "lon": -46.5961924
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Bortolândia",
+   "zona": "256",
+   "nome": "Ee. Profa. Judith Guimarães Dos Santos",
+   "eleitores": 4842,
+   "lat": -23.456386,
+   "lon": -46.5971765
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim do Tiro",
+   "zona": "376",
+   "nome": "Ee. Professor Jair Toledo Xavier",
+   "eleitores": 6492,
+   "lat": -23.4739156,
+   "lon": -46.6884956
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Guilherme",
+   "zona": "254",
+   "nome": "Unip - Campus Vila Guilherme",
+   "eleitores": 2523,
+   "lat": -23.5130312,
+   "lon": -46.6093868
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Amália",
+   "zona": "422",
+   "nome": "E.E. Guilherme De Almeida",
+   "eleitores": 7717,
+   "lat": -23.4692322,
+   "lon": -46.6487648
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Baixa",
+   "zona": "254",
+   "nome": "Uninove - Campus Vila Maria",
+   "eleitores": 6633,
+   "lat": -23.5197995,
+   "lon": -46.5924453
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Sydney",
+   "zona": "403",
+   "nome": "Ee. Prof. Francisco Faria Neto",
+   "eleitores": 4533,
+   "lat": -23.45133038,
+   "lon": -46.71632824
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Vila Constança",
+   "zona": "349",
+   "nome": "Emef. Lourenço Filho",
+   "eleitores": 4179,
+   "lat": -23.4753332,
+   "lon": -46.5820582
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Jardim Santo Elias",
+   "zona": "325",
+   "nome": "Emef. Rui Bloem",
+   "eleitores": 4922,
+   "lat": -23.496971,
+   "lon": -46.7497522
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Hebe",
+   "zona": "255",
+   "nome": "Emef. Prof. Gilberto Dupas",
+   "eleitores": 3210,
+   "lat": -23.4749959,
+   "lon": -46.6688532
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Nova Mazzei",
+   "zona": "256",
+   "nome": "E.M.E.I. Prof. Taufik Daud Kurban",
+   "eleitores": 1967,
+   "lat": -23.4656571,
+   "lon": -46.5974099
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Vila Paulicéia",
+   "zona": "249",
+   "nome": "Emef Prof. Máximo De Moura Santos",
+   "eleitores": 3428,
+   "lat": -23.4892568,
+   "lon": -46.6138179
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Líbano",
+   "zona": "325",
+   "nome": "Emef. Desembargador Sílvio Portugal",
+   "eleitores": 4221,
+   "lat": -23.4868254,
+   "lon": -46.7339476
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Jardim do Russo",
+   "zona": "389",
+   "nome": "Emef. Fernando Gracioso",
+   "eleitores": 5347,
+   "lat": -23.40914309,
+   "lon": -46.76060768
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Conjunto Habitacional Recanto dos Humildes",
+   "zona": "389",
+   "nome": "Emef. Prof. Jairo De Almeida",
+   "eleitores": 4583,
+   "lat": -23.41397642,
+   "lon": -46.750726
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Ee. Dr. Octávio Mendes",
+   "eleitores": 5275,
+   "lat": -23.4896273,
+   "lon": -46.6261632
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Tremembé",
+   "zona": "256",
+   "nome": "Colégio Passionista Santa Gema",
+   "eleitores": 3964,
+   "lat": -23.4623633,
+   "lon": -46.6219573
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Medeiros",
+   "zona": "420",
+   "nome": "Escola Estadual Professor Sebastião De Souza Bueno",
+   "eleitores": 5289,
+   "lat": -23.4924335,
+   "lon": -46.5860024
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Jardim Maristela",
+   "zona": "327",
+   "nome": "Ee. Professor Galdino Lopes Chagas",
+   "eleitores": 5779,
+   "lat": -23.4689137,
+   "lon": -46.6976953
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jaraguá",
+   "zona": "403",
+   "nome": "E.E. Profa. Isabel Vieira De Serpa E Paiva",
+   "eleitores": 3491,
+   "lat": -23.45535381,
+   "lon": -46.74600169
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Imirim",
+   "zona": "249",
+   "nome": "Colégio Pioneiro",
+   "eleitores": 2699,
+   "lat": -23.4869349,
+   "lon": -46.6404205
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Guarani",
+   "zona": "376",
+   "nome": "Ee. Professora Luiza Salette Juncá De Almeida",
+   "eleitores": 4927,
+   "lat": -23.4639733,
+   "lon": -46.680135
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Casa Verde",
+   "zona": "255",
+   "nome": "Ee. Ary Barroso",
+   "eleitores": 6586,
+   "lat": -23.4982504,
+   "lon": -46.6548907
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Parque Anhanguera",
+   "zona": "389",
+   "nome": "Emei. Maria José Dupré",
+   "eleitores": 1244,
+   "lat": -23.42870529,
+   "lon": -46.79577292
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Jardim Britânia",
+   "zona": "389",
+   "nome": "Emef. Edgard Carone",
+   "eleitores": 2074,
+   "lat": -23.4332064,
+   "lon": -46.79080531
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Pirituba",
+   "zona": "325",
+   "nome": "Ee Prof Julio Cesar De Oliveira",
+   "eleitores": 6882,
+   "lat": -23.4813252,
+   "lon": -46.7458971
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Martins Silva",
+   "zona": "256",
+   "nome": "Ee. Prof. Sérgio Da Costa",
+   "eleitores": 5117,
+   "lat": -23.4356709,
+   "lon": -46.5803972
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Isolina Mazzei",
+   "zona": "420",
+   "nome": "Escola Municipal De Ensino Fundamental Professora Shirley Guio",
+   "eleitores": 4606,
+   "lat": -23.4951271,
+   "lon": -46.5965963
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Parque Nações Unidas",
+   "zona": "403",
+   "nome": "E.E. Ítalo Betarello",
+   "eleitores": 5072,
+   "lat": -23.45034683,
+   "lon": -46.73594742
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Virginia Bianca",
+   "zona": "256",
+   "nome": "Cei. Profa. Célia Regina Kuhl",
+   "eleitores": 2316,
+   "lat": -23.4528783,
+   "lon": -46.6099823
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Parque São Domingos",
+   "zona": "325",
+   "nome": "Ee. Antonio Carlos Ferreira Nobre",
+   "eleitores": 2272,
+   "lat": -23.5032276,
+   "lon": -46.7388641
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Jardim Peri Novo",
+   "zona": "422",
+   "nome": "E.E. Assis José Ambrósio",
+   "eleitores": 7687,
+   "lat": -23.45776,
+   "lon": -46.6714931
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Nova Mazzei",
+   "zona": "256",
+   "nome": "Ee. Pedro Alexandrino",
+   "eleitores": 5887,
+   "lat": -23.4653748,
+   "lon": -46.5968529
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Bortolândia",
+   "zona": "256",
+   "nome": "Ee. Ângelo Bortolo",
+   "eleitores": 8077,
+   "lat": -23.45501429,
+   "lon": -46.59710705
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Jardim Maninos",
+   "zona": "422",
+   "nome": "Cei. Profº Wilson D'Angelo Braz",
+   "eleitores": 1561,
+   "lat": -23.4835649,
+   "lon": -46.6495104
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Parque Anhanguera",
+   "zona": "389",
+   "nome": "Ee. Prof. Sebastião De Oliveira Gusmão",
+   "eleitores": 3907,
+   "lat": -23.43799789,
+   "lon": -46.7921696
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Vila Perus",
+   "zona": "389",
+   "nome": "Emei. Oliveira Lima",
+   "eleitores": 2480,
+   "lat": -23.40789401,
+   "lon": -46.7535686
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Gustavo",
+   "zona": "349",
+   "nome": "Colégio Sir Isaac Newton",
+   "eleitores": 5564,
+   "lat": -23.4806212,
+   "lon": -46.5865842
+  },
+  {
+   "distrito": "LIMÃO",
+   "bairro": "Vila Santista",
+   "zona": "255",
+   "nome": "Ee. Matilde Macedo Soares",
+   "eleitores": 4695,
+   "lat": -23.4952747,
+   "lon": -46.6674944
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Núcleo do Engordador",
+   "zona": "256",
+   "nome": "Ee. Profa. Philomena Baylao",
+   "eleitores": 6019,
+   "lat": -23.417437,
+   "lon": -46.5847958
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Vila Mangalot",
+   "zona": "325",
+   "nome": "Ee. Octávio Monteiro De Castro",
+   "eleitores": 4136,
+   "lat": -23.504855,
+   "lon": -46.74453
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Imirim",
+   "zona": "249",
+   "nome": "Ee. Prof. Orlando Horácio Vita",
+   "eleitores": 5928,
+   "lat": -23.4911821,
+   "lon": -46.6448139
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Itaberaba",
+   "zona": "327",
+   "nome": "Ee. Prof. Joaquim Luiz De Brito",
+   "eleitores": 4545,
+   "lat": -23.4876919,
+   "lon": -46.6921773
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Senac Santana",
+   "eleitores": 2552,
+   "lat": -23.4922279,
+   "lon": -46.6260052
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Casa Verde Baixa",
+   "zona": "255",
+   "nome": "Ee. Prof. Benedito Tolosa",
+   "eleitores": 6619,
+   "lat": -23.5105319,
+   "lon": -46.6577436
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Pirituba",
+   "zona": "325",
+   "nome": "Emef. Monteiro Lobato",
+   "eleitores": 5405,
+   "lat": -23.4895892,
+   "lon": -46.717468
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Taipas",
+   "zona": "389",
+   "nome": "Emef. Profª Eliane Benute Lessa Ayres Gonçalves",
+   "eleitores": 5026,
+   "lat": -23.43525944,
+   "lon": -46.71995723
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Catupia",
+   "zona": "325",
+   "nome": "Emef. Mário Kosel Filho",
+   "eleitores": 4790,
+   "lat": -23.4941407,
+   "lon": -46.713196
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Jardim Jaraguá",
+   "zona": "403",
+   "nome": "Emef. General Henrique Geisel",
+   "eleitores": 3629,
+   "lat": -23.48980721,
+   "lon": -46.75680353
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Escola Estadual Eurípedes De Castro",
+   "eleitores": 5568,
+   "lat": -23.4804183,
+   "lon": -46.5753746
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Tucuruvi",
+   "zona": "349",
+   "nome": "Jardim Escola Paulista Ltda.",
+   "eleitores": 7641,
+   "lat": -23.4823615,
+   "lon": -46.6022791
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Zat",
+   "zona": "327",
+   "nome": "Ee. Jornalista Carlos Frederico Werneck Lacerda",
+   "eleitores": 4411,
+   "lat": -23.4735211,
+   "lon": -46.7155756
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Jaçanã",
+   "zona": "349",
+   "nome": "Emei. Profa. Ottília De Jesus Pires",
+   "eleitores": 1699,
+   "lat": -23.4644731,
+   "lon": -46.5842576
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Vila Perus",
+   "zona": "389",
+   "nome": "Ee. Manuel Bandeira",
+   "eleitores": 5927,
+   "lat": -23.41099391,
+   "lon": -46.75665027
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Paulistano",
+   "zona": "376",
+   "nome": "Ee. Professor Crispim De Oliveira",
+   "eleitores": 5781,
+   "lat": -23.4597736,
+   "lon": -46.7072841
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Arcádia",
+   "zona": "327",
+   "nome": "Emef. Presidente Nilo Peçanha",
+   "eleitores": 2549,
+   "lat": -23.5037514,
+   "lon": -46.7004097
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Cidade Pirituba",
+   "zona": "325",
+   "nome": "Ee. Prof. Alípio De Barros",
+   "eleitores": 4010,
+   "lat": -23.4795891,
+   "lon": -46.7188715
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Sítio Morro Grande",
+   "zona": "403",
+   "nome": "Ee. Elisio Teixeira Leite Iii",
+   "eleitores": 4150,
+   "lat": -23.44472555,
+   "lon": -46.71731206
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Vila Fanton",
+   "zona": "389",
+   "nome": "Emef. Julio De Oliveira",
+   "eleitores": 5432,
+   "lat": -23.40294422,
+   "lon": -46.73884807
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Parque Vila Maria",
+   "zona": "254",
+   "nome": "Ceu. Parque Novo Mundo",
+   "eleitores": 4286,
+   "lat": -23.5173599,
+   "lon": -46.5747768
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Vila Constança",
+   "zona": "349",
+   "nome": "Ee. Prof. Luiz Amaral Wagner",
+   "eleitores": 3363,
+   "lat": -23.4735841,
+   "lon": -46.5810374
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Guapira",
+   "zona": "349",
+   "nome": "Ceu.Emei. Jaçanã",
+   "eleitores": 3117,
+   "lat": -23.4572161,
+   "lon": -46.583645
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jaraguá",
+   "zona": "403",
+   "nome": "Etec Jaraguá",
+   "eleitores": 1938,
+   "lat": -23.44272877,
+   "lon": -46.72577446
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Brasília",
+   "zona": "389",
+   "nome": "Ee. Profª  Eulice Silvio Mendonça Da Silva",
+   "eleitores": 5035,
+   "lat": -23.44239626,
+   "lon": -46.70770724
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Cruz das Almas",
+   "zona": "327",
+   "nome": "Pei. Doutor Augusto De Macedo Costa",
+   "eleitores": 5327,
+   "lat": -23.4803178,
+   "lon": -46.6985649
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Dionísia",
+   "zona": "422",
+   "nome": "Emei. Rosa Carolina Agazzi",
+   "eleitores": 2701,
+   "lat": -23.4611021,
+   "lon": -46.6641185
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Casa Verde Alta",
+   "zona": "255",
+   "nome": "Emef. Humberto Dantas",
+   "eleitores": 5002,
+   "lat": -23.4856956,
+   "lon": -46.6710553
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Emei José Bonifácio De Andrade E Silva",
+   "eleitores": 1311,
+   "lat": -23.5027532,
+   "lon": -46.6317446
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Souza",
+   "zona": "389",
+   "nome": "Emef. General Vicente De Paulo Dale Coutinho",
+   "eleitores": 4037,
+   "lat": -23.43456453,
+   "lon": -46.71868244
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Medeiros",
+   "zona": "420",
+   "nome": "Escola Estadual Doutor Luiz Lázaro Zamenhof",
+   "eleitores": 4971,
+   "lat": -23.4887981,
+   "lon": -46.5810192
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Parque Edu Chaves",
+   "zona": "420",
+   "nome": "Escola Estadual  Johann Gutenberg",
+   "eleitores": 5003,
+   "lat": -23.4739688,
+   "lon": -46.5627998
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Parque Souza Aranha",
+   "zona": "255",
+   "nome": "Ee. Padre Manoel Da Nobrega",
+   "eleitores": 6925,
+   "lat": -23.5088723,
+   "lon": -46.6631096
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Jardim Japão",
+   "zona": "254",
+   "nome": "Emef. Dom Pedro I",
+   "eleitores": 4042,
+   "lat": -23.5001083,
+   "lon": -46.5821777
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Escola Municipal De Ensino Fundamental Alberto Santos Dumont",
+   "eleitores": 4540,
+   "lat": -23.4860494,
+   "lon": -46.5713921
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Anhanguera Educacional Ltda - (Uniban)",
+   "eleitores": 5157,
+   "lat": -23.5038147,
+   "lon": -46.6305742
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Parque Belém",
+   "zona": "376",
+   "nome": "Emei. Anita Garibaldi",
+   "eleitores": 1275,
+   "lat": -23.4659753,
+   "lon": -46.6818713
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Vivan",
+   "zona": "403",
+   "nome": "Emei. Fernando De Azevedo",
+   "eleitores": 1980,
+   "lat": -23.45123877,
+   "lon": -46.7291435
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Tremembé",
+   "zona": "256",
+   "nome": "Ee. Arnaldo Barreto",
+   "eleitores": 4404,
+   "lat": -23.4613606,
+   "lon": -46.6224007
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Guarani",
+   "zona": "376",
+   "nome": "Ee. Professor Walfredo Arantes Caldas",
+   "eleitores": 7765,
+   "lat": -23.4643676,
+   "lon": -46.6798497
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Colégio Aliado",
+   "eleitores": 3490,
+   "lat": -23.4851067,
+   "lon": -46.5787039
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Jardim Mangalot",
+   "zona": "325",
+   "nome": "Emef. Jairo Ramos",
+   "eleitores": 4893,
+   "lat": -23.4903335,
+   "lon": -46.7472429
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Chácara Inglesa",
+   "zona": "325",
+   "nome": "Ee. Ermano Marchetti",
+   "eleitores": 5967,
+   "lat": -23.4931357,
+   "lon": -46.7296795
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Jardim Japão",
+   "zona": "254",
+   "nome": "Ee. Imperatriz Leopoldina",
+   "eleitores": 6386,
+   "lat": -23.5055756,
+   "lon": -46.5779057
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Jardim São Bento",
+   "zona": "255",
+   "nome": "Ee. Capitão Pedro Monteiro Do Amaral",
+   "eleitores": 6834,
+   "lat": -23.5025385,
+   "lon": -46.6509819
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Ondina",
+   "zona": "376",
+   "nome": "Ee. Professor João Boemer Jardim",
+   "eleitores": 5134,
+   "lat": -23.4612931,
+   "lon": -46.6740102
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Parque Novo Mundo",
+   "zona": "254",
+   "nome": "Ee. Prof. Máximo Ribeiro Nunes",
+   "eleitores": 4296,
+   "lat": -23.5122049,
+   "lon": -46.5737413
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Dionísia",
+   "zona": "255",
+   "nome": "Emef. Prof. Oswaldo Quirino Simões",
+   "eleitores": 4792,
+   "lat": -23.4705046,
+   "lon": -46.6636468
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Carandiru",
+   "zona": "254",
+   "nome": "Etec Parque Da Juventude",
+   "eleitores": 1981,
+   "lat": -23.5083546,
+   "lon": -46.6238727
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Jardim Maristela",
+   "zona": "327",
+   "nome": "Ee. João Solimeo",
+   "eleitores": 8638,
+   "lat": -23.4697741,
+   "lon": -46.6982573
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Escola Estadual Professora Carmosina Monteiro Vianna",
+   "eleitores": 5593,
+   "lat": -23.4857133,
+   "lon": -46.5796885
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Parque Casa de Pedra",
+   "zona": "256",
+   "nome": "E.M.E.F. Marechal Rondon",
+   "eleitores": 4720,
+   "lat": -23.44806308,
+   "lon": -46.59568977
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Parque São Luís",
+   "zona": "327",
+   "nome": "Emef. Professora Joaninha Grassi Fagundes",
+   "eleitores": 5575,
+   "lat": -23.4826381,
+   "lon": -46.6879502
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Vila Nilo",
+   "zona": "349",
+   "nome": "Emei. Flávio Império",
+   "eleitores": 1834,
+   "lat": -23.4596874,
+   "lon": -46.5744378
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Brasilândia",
+   "zona": "376",
+   "nome": "Emef. Geraldo Sesso Júnior",
+   "eleitores": 6794,
+   "lat": -23.4684467,
+   "lon": -46.690731
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Gustavo",
+   "zona": "349",
+   "nome": "Emef. Prof. Franklin Augusto De Moura Campos",
+   "eleitores": 3065,
+   "lat": -23.4853754,
+   "lon": -46.5923507
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Cidade D'Abril",
+   "zona": "403",
+   "nome": "E.E. Ana Siqueira Da Silva",
+   "eleitores": 6133,
+   "lat": -23.45009492,
+   "lon": -46.7446543
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Marina",
+   "zona": "327",
+   "nome": "Ee. Prof. Paulo Trajano Da Silveira Santos",
+   "eleitores": 3771,
+   "lat": -23.4868544,
+   "lon": -46.7077817
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Vila Nova Galvão",
+   "zona": "349",
+   "nome": "Ee. Prof. José Do Amaral Mello",
+   "eleitores": 8626,
+   "lat": -23.4515965,
+   "lon": -46.5732195
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Parque Novo Mundo",
+   "zona": "254",
+   "nome": "Ee. Heróis Da Feb",
+   "eleitores": 7597,
+   "lat": -23.5118655,
+   "lon": -46.5687792
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Jardim das Laranjeiras",
+   "zona": "255",
+   "nome": "Colégio Nossa Senhora Das Dores",
+   "eleitores": 4579,
+   "lat": -23.5067063,
+   "lon": -46.6623332
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Vila Perus",
+   "zona": "389",
+   "nome": "Ee. Dona Suzana De Campos",
+   "eleitores": 5066,
+   "lat": -23.40700941,
+   "lon": -46.75511562
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Isabel",
+   "zona": "376",
+   "nome": "Emef. Senador Milton Campos",
+   "eleitores": 5784,
+   "lat": -23.4621001,
+   "lon": -46.6975343
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Teresinha",
+   "zona": "376",
+   "nome": "Ee. Deputado Luiz Sérgio Claudino Dos Santos",
+   "eleitores": 5209,
+   "lat": -23.4603249,
+   "lon": -46.6999618
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Jaçanã",
+   "zona": "349",
+   "nome": "Emef. Octávio Pereira Lopes",
+   "eleitores": 5944,
+   "lat": -23.461588,
+   "lon": -46.5846142
+  },
+  {
+   "distrito": "LIMÃO",
+   "bairro": "Vila Carbone",
+   "zona": "255",
+   "nome": "Ee. Antoine De Saint Exupery",
+   "eleitores": 5945,
+   "lat": -23.4913219,
+   "lon": -46.6810447
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Brasilândia",
+   "zona": "376",
+   "nome": "Ee. Martin Egídio Damy",
+   "eleitores": 3961,
+   "lat": -23.4697593,
+   "lon": -46.6864358
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Pirituba",
+   "zona": "325",
+   "nome": "Colegio Padre Giordano Comercial E Educacional Ltda",
+   "eleitores": 2998,
+   "lat": -23.4968294,
+   "lon": -46.7107043
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Freguesia do Ó",
+   "zona": "327",
+   "nome": "Colegio Beka Sc Ltda",
+   "eleitores": 2895,
+   "lat": -23.4953927,
+   "lon": -46.6976719
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Parque Casa de Pedra",
+   "zona": "256",
+   "nome": "E.M.E.I. Profa. Eudóxia De Barros",
+   "eleitores": 1187,
+   "lat": -23.45512586,
+   "lon": -46.60042742
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Medeiros",
+   "zona": "420",
+   "nome": "Escola Estadual Professor David Eugênio Dos Santos",
+   "eleitores": 6175,
+   "lat": -23.4838289,
+   "lon": -46.5897968
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Carandiru",
+   "zona": "254",
+   "nome": "Ee. Toledo Barbosa",
+   "eleitores": 5075,
+   "lat": -23.5023524,
+   "lon": -46.6111742
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Parque Edu Chaves",
+   "zona": "420",
+   "nome": "Escola Municipal De Ensino Fundamental General Júlio Marcondes Salgado",
+   "eleitores": 6477,
+   "lat": -23.478314,
+   "lon": -46.5681969
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Casa Verde Baixa",
+   "zona": "255",
+   "nome": "Emef. Paulo Nogueira Filho",
+   "eleitores": 2185,
+   "lat": -23.5122212,
+   "lon": -46.6507955
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Jardim Japão",
+   "zona": "254",
+   "nome": "Emei. Prof. Yukio Ozaki",
+   "eleitores": 1525,
+   "lat": -23.49947,
+   "lon": -46.5753183
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Paiva",
+   "zona": "254",
+   "nome": "Ee. Prof. Narbal Fontes",
+   "eleitores": 3265,
+   "lat": -23.5003931,
+   "lon": -46.6056218
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Baixa",
+   "zona": "254",
+   "nome": "Etec Horácio Augusto Da Silveira - Industrial",
+   "eleitores": 2742,
+   "lat": -23.5199119,
+   "lon": -46.5965903
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Cidade Pirituba",
+   "zona": "325",
+   "nome": "Ee. Prof. Cândido Gonçalves Gomide",
+   "eleitores": 4827,
+   "lat": -23.4831064,
+   "lon": -46.7259602
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Jardim Pícolo",
+   "zona": "422",
+   "nome": "Colégio Cermac",
+   "eleitores": 5939,
+   "lat": -23.4793829,
+   "lon": -46.6379382
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Parque São Domingos",
+   "zona": "325",
+   "nome": "Instituto De Ensino Rosati E Cruciani",
+   "eleitores": 1919,
+   "lat": -23.4985615,
+   "lon": -46.7374638
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Paiva",
+   "zona": "254",
+   "nome": "Ee. Casimiro De Abreu",
+   "eleitores": 5975,
+   "lat": -23.5076442,
+   "lon": -46.6017877
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Medeiros",
+   "zona": "420",
+   "nome": "Escola Estadual Doutor Justino Cardoso",
+   "eleitores": 4287,
+   "lat": -23.4877468,
+   "lon": -46.5858377
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Conjunto Promorar Estrada da Parada",
+   "zona": "376",
+   "nome": "Emef. Professora Cecília Moraes De Vasconcelos",
+   "eleitores": 5963,
+   "lat": -23.4555966,
+   "lon": -46.6846615
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Rincão",
+   "zona": "403",
+   "nome": "Emef. Padre Leonel Franca",
+   "eleitores": 3372,
+   "lat": -23.43831689,
+   "lon": -46.72796831
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Parque Vitória",
+   "zona": "349",
+   "nome": "Ee. Prof. Ademar Hiroshi Suda",
+   "eleitores": 4340,
+   "lat": -23.4705782,
+   "lon": -46.5950869
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Cei Profª Anita Castáldi Zampirollo",
+   "eleitores": 2387,
+   "lat": -23.5024131,
+   "lon": -46.6312764
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Penteado",
+   "zona": "376",
+   "nome": "Ee. Chiquinha Rodrigues",
+   "eleitores": 6382,
+   "lat": -23.4723991,
+   "lon": -46.683581
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Albertina",
+   "zona": "327",
+   "nome": "Ee. Prof. Antonio Emílio De Souza Penna",
+   "eleitores": 3614,
+   "lat": -23.503724,
+   "lon": -46.6926876
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Ataliba Leonel",
+   "zona": "256",
+   "nome": "E.E. Leovergilio Moreira",
+   "eleitores": 1945,
+   "lat": -23.4446436,
+   "lon": -46.5881815
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Bela Vista",
+   "zona": "255",
+   "nome": "Ee. Prof. Alfredo Gomes",
+   "eleitores": 3694,
+   "lat": -23.4676701,
+   "lon": -46.6575891
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Corisco",
+   "zona": "256",
+   "nome": "E.M.E.F. Coronel Hélio Franco Chaves",
+   "eleitores": 3945,
+   "lat": -23.428195,
+   "lon": -46.5829517
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Sydney",
+   "zona": "403",
+   "nome": "Emef. Renato Antonio Checchia",
+   "eleitores": 5160,
+   "lat": -23.45527477,
+   "lon": -46.716682
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Parque Novo Mundo",
+   "zona": "254",
+   "nome": "Emef. Cel. Romão Gomes",
+   "eleitores": 6038,
+   "lat": -23.5209702,
+   "lon": -46.5663902
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Vila Mangalot",
+   "zona": "325",
+   "nome": "Ee. Antonio Francisco Redondo",
+   "eleitores": 5058,
+   "lat": -23.4968704,
+   "lon": -46.7433095
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Cachoeira",
+   "zona": "256",
+   "nome": "E.M.E.F. Martin Francisco Ribeiro De Andrada",
+   "eleitores": 4597,
+   "lat": -23.4683975,
+   "lon": -46.6029325
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Lauzane Paulista",
+   "zona": "422",
+   "nome": "Emef. Marcos Mélega",
+   "eleitores": 5725,
+   "lat": -23.4763867,
+   "lon": -46.6469308
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Ee. Padre Antonio Vieira",
+   "eleitores": 2904,
+   "lat": -23.5015837,
+   "lon": -46.6248726
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Vila Pedra Branca",
+   "zona": "422",
+   "nome": "Emef. Raul De Leoni",
+   "eleitores": 4927,
+   "lat": -23.4575463,
+   "lon": -46.6438869
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Vila Nilo",
+   "zona": "349",
+   "nome": "Ee. Dona Cyrene De Oliveira Laet",
+   "eleitores": 3373,
+   "lat": -23.4589228,
+   "lon": -46.5792404
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Munhoz",
+   "zona": "420",
+   "nome": "Escola Estadual José Maria Reys",
+   "eleitores": 6052,
+   "lat": -23.4974515,
+   "lon": -46.5872795
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Jardim França",
+   "zona": "256",
+   "nome": "Acre Clube",
+   "eleitores": 3175,
+   "lat": -23.4783609,
+   "lon": -46.6156805
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Almanara",
+   "zona": "376",
+   "nome": "Emef. Professor Antonio Prudente",
+   "eleitores": 4366,
+   "lat": -23.4767233,
+   "lon": -46.6767717
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Rincão",
+   "zona": "403",
+   "nome": "Emef. José Kauffmann",
+   "eleitores": 6477,
+   "lat": -23.43968736,
+   "lon": -46.7329043
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Parque Nações Unidas",
+   "zona": "403",
+   "nome": "E.E.Profa. Thayane Luzimara Costa Valcacer",
+   "eleitores": 4835,
+   "lat": -23.43636639,
+   "lon": -46.73959857
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Siqueira",
+   "zona": "255",
+   "nome": "Ee. Profa. Angelina Madureira",
+   "eleitores": 5317,
+   "lat": -23.4980258,
+   "lon": -46.6802108
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Medeiros",
+   "zona": "420",
+   "nome": "Colégio Poeta Manoel Bandeira",
+   "eleitores": 971,
+   "lat": -23.4896035,
+   "lon": -46.584308
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Jardim Jaraguá",
+   "zona": "389",
+   "nome": "Ee. Professora Zoraide De Campos Helu",
+   "eleitores": 2456,
+   "lat": -23.44956061,
+   "lon": -46.78852561
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Vila Vitório Mazzei",
+   "zona": "249",
+   "nome": "Cei Madre Cristina",
+   "eleitores": 2042,
+   "lat": -23.4764886,
+   "lon": -46.6265506
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Siqueira",
+   "zona": "376",
+   "nome": "Emei. Porto Nacional",
+   "eleitores": 2259,
+   "lat": -23.4616651,
+   "lon": -46.7035404
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Francos",
+   "zona": "376",
+   "nome": "Pei. Ee. Professor Júlio De Faria E Souza",
+   "eleitores": 1736,
+   "lat": -23.4674151,
+   "lon": -46.6743904
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Ee. Barão Homem De Mello",
+   "eleitores": 4475,
+   "lat": -23.5022182,
+   "lon": -46.6405668
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Virginia Bianca",
+   "zona": "256",
+   "nome": "E.M.E.F. João Ramos Pernambuco-Abolicionista",
+   "eleitores": 4580,
+   "lat": -23.4549419,
+   "lon": -46.6108791
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Maracanã",
+   "zona": "376",
+   "nome": "Cieja. Professora Rose Mary Frasson",
+   "eleitores": 2166,
+   "lat": -23.4771475,
+   "lon": -46.6814014
+  },
+  {
+   "distrito": "LIMÃO",
+   "bairro": "Vila Carbone",
+   "zona": "255",
+   "nome": "Ee. Prof. Luiz Gonzaga Righini",
+   "eleitores": 5846,
+   "lat": -23.4979196,
+   "lon": -46.6758722
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Jardim Monjolo",
+   "zona": "327",
+   "nome": "Ee. Pasquale Peccicacco",
+   "eleitores": 4485,
+   "lat": -23.4920625,
+   "lon": -46.697678
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Nova Cachoeirinha",
+   "zona": "422",
+   "nome": "E.E. Profª Raquel Assis Barreiros",
+   "eleitores": 3951,
+   "lat": -23.464033,
+   "lon": -46.6681887
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Ede",
+   "zona": "420",
+   "nome": "Centro De Educação Infantil Vila Medeiros",
+   "eleitores": 1613,
+   "lat": -23.4923372,
+   "lon": -46.5930495
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Lauzane Paulista",
+   "zona": "422",
+   "nome": "Emef. Profª Nilce Cruz Figueiredo",
+   "eleitores": 5031,
+   "lat": -23.4727837,
+   "lon": -46.6445498
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Jardim Britânia",
+   "zona": "389",
+   "nome": "Emef Prof Milena Benedicto (Antigo Emef. Jardim Britânia)",
+   "eleitores": 4566,
+   "lat": -23.4387157,
+   "lon": -46.78925433
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Cidade Pirituba",
+   "zona": "325",
+   "nome": "Em. Guiomar Cabral",
+   "eleitores": 3156,
+   "lat": -23.4823711,
+   "lon": -46.7259774
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Medeiros",
+   "zona": "420",
+   "nome": "Escola Municipal De Ensino Infantil Professor Ítalo Bettarello",
+   "eleitores": 3135,
+   "lat": -23.4796578,
+   "lon": -46.5849781
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Conjunto Promorar Estrada da Parada",
+   "zona": "376",
+   "nome": "Emei. Bertha Lutz",
+   "eleitores": 273,
+   "lat": -23.4560019,
+   "lon": -46.6851079
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Jardim Japão",
+   "zona": "254",
+   "nome": "Ee. Francisco Da Costa Guedes",
+   "eleitores": 5168,
+   "lat": -23.5014224,
+   "lon": -46.5724699
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Escola Estadual Província De Nagasaki",
+   "eleitores": 4710,
+   "lat": -23.477633,
+   "lon": -46.5717203
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Julieta",
+   "zona": "420",
+   "nome": "Escola Estadual Professora Maria Antonietta De Castro",
+   "eleitores": 3299,
+   "lat": -23.4886711,
+   "lon": -46.5677
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Piqueri",
+   "zona": "325",
+   "nome": "Ee. Prof. Sílvio Xavier Antunes",
+   "eleitores": 4312,
+   "lat": -23.5019736,
+   "lon": -46.7132081
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Imirim",
+   "zona": "255",
+   "nome": "Ee. Prof. Augusto Meirelles Reis Filho",
+   "eleitores": 6808,
+   "lat": -23.491266,
+   "lon": -46.6516698
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Vila Ester",
+   "zona": "249",
+   "nome": "Ee. Prof. Daily Resende França",
+   "eleitores": 2182,
+   "lat": -23.5015768,
+   "lon": -46.6433779
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Vista Alegre",
+   "zona": "376",
+   "nome": "Emei. Ministro Bilac Pinto",
+   "eleitores": 2503,
+   "lat": -23.4504453,
+   "lon": -46.6880912
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Baixa",
+   "zona": "254",
+   "nome": "Ee. João Vieira De Almeida",
+   "eleitores": 6000,
+   "lat": -23.5182362,
+   "lon": -46.5893485
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Santo Alberto",
+   "zona": "256",
+   "nome": "E.M.E.I. Dina Kutner De Souza - Dina Sfat",
+   "eleitores": 1547,
+   "lat": -23.4494183,
+   "lon": -46.6094129
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Parque São Domingos",
+   "zona": "325",
+   "nome": "Emef. Amadeu Mendes",
+   "eleitores": 4365,
+   "lat": -23.4997808,
+   "lon": -46.7382424
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Vivan",
+   "zona": "403",
+   "nome": "Emef. Prof. Luiz David Sobrinho",
+   "eleitores": 4886,
+   "lat": -23.4520337,
+   "lon": -46.72985992
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Dom Pedro II",
+   "zona": "349",
+   "nome": "Emef. Rodrigues Alves",
+   "eleitores": 5642,
+   "lat": -23.4896523,
+   "lon": -46.6002397
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Parque São Luís",
+   "zona": "327",
+   "nome": "Emei Felipe Mestre Jou",
+   "eleitores": 2858,
+   "lat": -23.4817975,
+   "lon": -46.6873347
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Parque Novo Mundo",
+   "zona": "254",
+   "nome": "Cei. Mário Da Costa Barbosa",
+   "eleitores": 1172,
+   "lat": -23.5121832,
+   "lon": -46.5663712
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Pereira Barreto",
+   "zona": "325",
+   "nome": "Ee. Prof. Mariano De Oliveira",
+   "eleitores": 6537,
+   "lat": -23.4910321,
+   "lon": -46.715612
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Parque Rodrigues Alves",
+   "zona": "349",
+   "nome": "Emei. Profa. Laura Funfas Le Sueur",
+   "eleitores": 893,
+   "lat": -23.4905439,
+   "lon": -46.5959871
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Colégio Imperatriz Leopoldina",
+   "eleitores": 5488,
+   "lat": -23.4916304,
+   "lon": -46.6277218
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Jardim Vieira de Carvalho",
+   "zona": "422",
+   "nome": "E.E. Major José Marcelino Da Fonseca",
+   "eleitores": 3622,
+   "lat": -23.4706067,
+   "lon": -46.6290019
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Parque Anhanguera",
+   "zona": "389",
+   "nome": "Ee. Jardim Canaã",
+   "eleitores": 2697,
+   "lat": -23.43579476,
+   "lon": -46.79160222
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Vista Alegre",
+   "zona": "376",
+   "nome": "Emef. João Amós Comenius",
+   "eleitores": 6825,
+   "lat": -23.4502863,
+   "lon": -46.6882626
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Freguesia do Ó",
+   "zona": "327",
+   "nome": "Colégio Orlando Garcia Da Silveira S/C Ltda",
+   "eleitores": 2198,
+   "lat": -23.4959028,
+   "lon": -46.6987539
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Vila Souza",
+   "zona": "389",
+   "nome": "Ee. General Humberto De Souza Melo",
+   "eleitores": 7876,
+   "lat": -23.43524961,
+   "lon": -46.71796479
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Alta",
+   "zona": "254",
+   "nome": "Emef. João Domingues Sampaio",
+   "eleitores": 4392,
+   "lat": -23.5058564,
+   "lon": -46.5848414
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Nossa Senhora do Ó",
+   "zona": "327",
+   "nome": "Ee. Padre Manoel De Nóbrega",
+   "eleitores": 4118,
+   "lat": -23.4999403,
+   "lon": -46.6977526
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Parque Novo Mundo",
+   "zona": "254",
+   "nome": "Emef. Profª. Celia Regina Lekevicius Consolin",
+   "eleitores": 2063,
+   "lat": -23.5172159,
+   "lon": -46.55707414
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Paiva",
+   "zona": "254",
+   "nome": "Ee. Maria Montessori",
+   "eleitores": 5448,
+   "lat": -23.5001717,
+   "lon": -46.5928767
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Colégio Delta",
+   "eleitores": 2366,
+   "lat": -23.5020373,
+   "lon": -46.6337604
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Medeiros",
+   "zona": "420",
+   "nome": "Escola Estadual Doutor Miguel Vieira Ferreira",
+   "eleitores": 3725,
+   "lat": -23.4922238,
+   "lon": -46.5859124
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Jaçanã",
+   "zona": "349",
+   "nome": "Ee. Júlio Pestana",
+   "eleitores": 5885,
+   "lat": -23.4650339,
+   "lon": -46.5833959
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Nivi",
+   "zona": "349",
+   "nome": "Emei. Profa. Vera Arnoni Scalquette",
+   "eleitores": 703,
+   "lat": -23.4724776,
+   "lon": -46.5866538
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Marina",
+   "zona": "327",
+   "nome": "Emef. Érico Veríssimo",
+   "eleitores": 3760,
+   "lat": -23.4784576,
+   "lon": -46.7063555
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Água Fria",
+   "zona": "256",
+   "nome": "Colégio Objetivo Cantareira",
+   "eleitores": 4355,
+   "lat": -23.4724247,
+   "lon": -46.6182111
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Guarani",
+   "zona": "376",
+   "nome": "Emef. Professor José Alfredo Apolinário",
+   "eleitores": 2124,
+   "lat": -23.4623767,
+   "lon": -46.6901834
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Virginia Bianca",
+   "zona": "256",
+   "nome": "Ee. Prof. Izac Silvério",
+   "eleitores": 3492,
+   "lat": -23.4493398,
+   "lon": -46.611192
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Sítio Morro Grande",
+   "zona": "327",
+   "nome": "Ee. Clodomiro Carneiro",
+   "eleitores": 5898,
+   "lat": -23.4716584,
+   "lon": -46.703058
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Mandaqui",
+   "zona": "422",
+   "nome": "Centro Educacional Monteiro Lobato",
+   "eleitores": 3844,
+   "lat": -23.4754143,
+   "lon": -46.6342681
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Albertina",
+   "zona": "327",
+   "nome": "Núcleo Coração Materno",
+   "eleitores": 884,
+   "lat": -23.4979746,
+   "lon": -46.6917803
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Casa Verde Média",
+   "zona": "255",
+   "nome": "Liceu Carvalho Pinto",
+   "eleitores": 2811,
+   "lat": -23.4985931,
+   "lon": -46.6612821
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Guapira",
+   "zona": "349",
+   "nome": "Cei Ceu Jaçanã",
+   "eleitores": 3123,
+   "lat": -23.4573725,
+   "lon": -46.5837785
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Freguesia do Ó",
+   "zona": "327",
+   "nome": "Emei Jardim Monjolo I",
+   "eleitores": 1355,
+   "lat": -23.4888561,
+   "lon": -46.7014515
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Bancária Munhoz",
+   "zona": "327",
+   "nome": "Emef. Pedro Américo",
+   "eleitores": 3504,
+   "lat": -23.4821821,
+   "lon": -46.6783107
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Conjunto Habitacional Recanto dos Humildes",
+   "zona": "389",
+   "nome": "Emei. Recanto Dos Humildes I",
+   "eleitores": 2735,
+   "lat": -23.40909325,
+   "lon": -46.74992692
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Jardim São Paulo",
+   "zona": "249",
+   "nome": "Ee. Prof. Antonio Lisboa",
+   "eleitores": 4745,
+   "lat": -23.4934089,
+   "lon": -46.615348
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Guilherme",
+   "zona": "254",
+   "nome": "Ee. Profª. Anésia Sincorá",
+   "eleitores": 3496,
+   "lat": -23.515695,
+   "lon": -46.60458
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Vila Constança",
+   "zona": "349",
+   "nome": "Emef. Edson Rodrigues",
+   "eleitores": 4090,
+   "lat": -23.4733176,
+   "lon": -46.5872299
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Nivi",
+   "zona": "349",
+   "nome": "Colégio Sigmund Freud",
+   "eleitores": 2032,
+   "lat": -23.4800674,
+   "lon": -46.5900831
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Parque Edu Chaves",
+   "zona": "420",
+   "nome": "Escola Estadual Professora Dirce Pastore Donato",
+   "eleitores": 2051,
+   "lat": -23.4726649,
+   "lon": -46.5663213
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Sítio do Piqueri",
+   "zona": "256",
+   "nome": "Ee. Prof. João Baptista Alves Da Silva",
+   "eleitores": 5499,
+   "lat": -23.44975335,
+   "lon": -46.58495443
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jaraguá",
+   "zona": "403",
+   "nome": "Emef. Brigadeiro Henrique Raymundo Dyott Fontenelle",
+   "eleitores": 3987,
+   "lat": -23.45638587,
+   "lon": -46.74333815
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Zat",
+   "zona": "327",
+   "nome": "Ee. Doutor Joaquim Silvado",
+   "eleitores": 4799,
+   "lat": -23.479273,
+   "lon": -46.7098467
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Jardim Fontalis",
+   "zona": "256",
+   "nome": "E.M.E.I. Margareth De Fátima Marques De Azevedo",
+   "eleitores": 1966,
+   "lat": -23.438284,
+   "lon": -46.5771436
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Shangrilá",
+   "zona": "389",
+   "nome": "Emef. Prof. Antonio Rodrigues De Campos",
+   "eleitores": 3634,
+   "lat": -23.42838627,
+   "lon": -46.72863443
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Guilherme",
+   "zona": "254",
+   "nome": "Emei. Padre Anchieta",
+   "eleitores": 1466,
+   "lat": -23.5073543,
+   "lon": -46.5996303
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Colégio Elite Santana",
+   "eleitores": 3481,
+   "lat": -23.4968265,
+   "lon": -46.625967
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Vila Caiúba",
+   "zona": "389",
+   "nome": "Etec. Gildo Marçal Bezerra Brandão",
+   "eleitores": 2247,
+   "lat": -23.40081918,
+   "lon": -46.74892476
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Mandaqui",
+   "zona": "422",
+   "nome": "Colégio Dom Bosco - Sede Direitos Humanos",
+   "eleitores": 285,
+   "lat": -23.4717714,
+   "lon": -46.6346175
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Sítio Morro Grande",
+   "zona": "327",
+   "nome": "Emef. Professora Caira Alayde Alvarenga Medea",
+   "eleitores": 1249,
+   "lat": -23.4691434,
+   "lon": -46.7006328
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Jardim Itatinga",
+   "zona": "422",
+   "nome": "E.E. Francisco Voccio",
+   "eleitores": 3558,
+   "lat": -23.4560638,
+   "lon": -46.6464008
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila dos Andrades",
+   "zona": "255",
+   "nome": "Ee. Tito Prates Da Fonseca",
+   "eleitores": 7389,
+   "lat": -23.4768889,
+   "lon": -46.6637606
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Vila dos Palmares",
+   "zona": "389",
+   "nome": "Emef. Marili Dias",
+   "eleitores": 2455,
+   "lat": -23.44112092,
+   "lon": -46.80694109
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Piqueri",
+   "zona": "325",
+   "nome": "Ee. Pio Xii",
+   "eleitores": 2231,
+   "lat": -23.5058419,
+   "lon": -46.7094041
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Alta",
+   "zona": "254",
+   "nome": "Emei. Eduardo Carlos Pereira",
+   "eleitores": 985,
+   "lat": -23.4999538,
+   "lon": -46.5907141
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Santana",
+   "zona": "249",
+   "nome": "Escola Municipal Prof. Derville Allegretti",
+   "eleitores": 2607,
+   "lat": -23.5135701,
+   "lon": -46.626093
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Líbano",
+   "zona": "325",
+   "nome": "Em. Profa. Vera Lúcia Aparecida Ribeiro",
+   "eleitores": 1894,
+   "lat": -23.4861124,
+   "lon": -46.734285
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Cidade D'Abril",
+   "zona": "403",
+   "nome": "Emei. Júlio Alves Pereira",
+   "eleitores": 1570,
+   "lat": -23.45309235,
+   "lon": -46.7463953
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Vila Santo Antônio",
+   "zona": "422",
+   "nome": "Colégio Caetano Alvares",
+   "eleitores": 3560,
+   "lat": -23.4854506,
+   "lon": -46.6419322
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Ondina",
+   "zona": "376",
+   "nome": "Ee. Professor Hélios Heber Lino",
+   "eleitores": 5725,
+   "lat": -23.463024,
+   "lon": -46.6729736
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Dionísia",
+   "zona": "422",
+   "nome": "Cei. Jardim Peri",
+   "eleitores": 2287,
+   "lat": -23.4626613,
+   "lon": -46.6634667
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Nova Cachoeirinha",
+   "zona": "422",
+   "nome": "E.E. Marly Diva Bonfanti",
+   "eleitores": 3114,
+   "lat": -23.4734169,
+   "lon": -46.6503403
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Jardim Santa Mônica",
+   "zona": "325",
+   "nome": "Ee. Prof. João Nogueira Lotufo",
+   "eleitores": 4699,
+   "lat": -23.4782624,
+   "lon": -46.7497365
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Mandaqui",
+   "zona": "422",
+   "nome": "Colégio Dom Bosco - Sede Santa Inês 1",
+   "eleitores": 2852,
+   "lat": -23.4652105,
+   "lon": -46.6350666
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Vila Guedes",
+   "zona": "325",
+   "nome": "Emei. Padre Charbonneau",
+   "eleitores": 942,
+   "lat": -23.496464,
+   "lon": -46.7498383
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Parque São Domingos",
+   "zona": "325",
+   "nome": "Emef Des. Euclides Custódio Da Silveira",
+   "eleitores": 3451,
+   "lat": -23.5070757,
+   "lon": -46.7311331
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Vila Baruel",
+   "zona": "255",
+   "nome": "Emef. Prof. José Carlos Dias",
+   "eleitores": 3111,
+   "lat": -23.5041425,
+   "lon": -46.660247
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Jardim Brasil",
+   "zona": "420",
+   "nome": "Educandário Saint Martin",
+   "eleitores": 3089,
+   "lat": -23.4767421,
+   "lon": -46.5739973
+  },
+  {
+   "distrito": "JAÇANÃ",
+   "bairro": "Parque Edu Chaves",
+   "zona": "420",
+   "nome": "Escola Municial De Ensino Infantil Aviador Edu Chaves",
+   "eleitores": 977,
+   "lat": -23.4806004,
+   "lon": -46.5670539
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Miriam",
+   "zona": "327",
+   "nome": "Colegio Santa Barbara",
+   "eleitores": 1646,
+   "lat": -23.4817352,
+   "lon": -46.7106941
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Jardim Anhanguera",
+   "zona": "389",
+   "nome": "Ee. Professor Milton Santos",
+   "eleitores": 4359,
+   "lat": -23.43807791,
+   "lon": -46.79193595
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Nova Cachoeirinha",
+   "zona": "255",
+   "nome": "Ee. Prof. Antônio José Leite",
+   "eleitores": 6938,
+   "lat": -23.4704507,
+   "lon": -46.6554414
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Albertina",
+   "zona": "327",
+   "nome": "Emei. Manoel Preto",
+   "eleitores": 1833,
+   "lat": -23.4997629,
+   "lon": -46.6943705
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Parque Maria Domitila",
+   "zona": "325",
+   "nome": "Emef. Gabriel Sylvestre Teixeira De Carvalho",
+   "eleitores": 3038,
+   "lat": -23.4957086,
+   "lon": -46.7391043
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Rincão",
+   "zona": "403",
+   "nome": "E.E. Profa. Eliana Passuelo",
+   "eleitores": 2336,
+   "lat": -23.44455424,
+   "lon": -46.7356671
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Bandeirantes",
+   "zona": "403",
+   "nome": "Emef. Estação Jaraguá",
+   "eleitores": 2431,
+   "lat": -23.45571918,
+   "lon": -46.73741292
+  },
+  {
+   "distrito": "SANTANA",
+   "bairro": "Jardim São Paulo",
+   "zona": "249",
+   "nome": "Ee. República Da Bolívia",
+   "eleitores": 3036,
+   "lat": -23.4898819,
+   "lon": -46.6227555
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Vista Alegre",
+   "zona": "376",
+   "nome": "Ee. República Da Colômbia",
+   "eleitores": 980,
+   "lat": -23.4540166,
+   "lon": -46.68543
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Miriam",
+   "zona": "327",
+   "nome": "Emei. Eurípides Simões De Paula",
+   "eleitores": 1086,
+   "lat": -23.4735492,
+   "lon": -46.7099626
+  },
+  {
+   "distrito": "CASA VERDE",
+   "bairro": "Vila Baruel",
+   "zona": "255",
+   "nome": "Colégio Centenário",
+   "eleitores": 2366,
+   "lat": -23.5105794,
+   "lon": -46.6576204
+  },
+  {
+   "distrito": "TREMEMBÉ",
+   "bairro": "Vila Albertina",
+   "zona": "327",
+   "nome": "Ee. Regente Feijó",
+   "eleitores": 3360,
+   "lat": -23.4970829,
+   "lon": -46.6899796
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Parque Mandaqui",
+   "zona": "422",
+   "nome": "Emei. Marina Nogueira De Souza Martins",
+   "eleitores": 1543,
+   "lat": -23.4721027,
+   "lon": -46.6349517
+  },
+  {
+   "distrito": "JARAGUÁ",
+   "bairro": "Jardim Pirituba",
+   "zona": "403",
+   "nome": "Emef. Prof. Enzo Antonio Silvestrin",
+   "eleitores": 1150,
+   "lat": -23.44320571,
+   "lon": -46.72040204
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Isolina Mazzei",
+   "zona": "254",
+   "nome": "Ee. Gonçalves Dias",
+   "eleitores": 5477,
+   "lat": -23.4925933,
+   "lon": -46.6017033
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Lauzane Paulista",
+   "zona": "422",
+   "nome": "Emei. Profº Ênio Correa",
+   "eleitores": 2020,
+   "lat": -23.477304,
+   "lon": -46.6468158
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Parque Anhanguera",
+   "zona": "403",
+   "nome": "E.E. Profa. Marilena Piumbato Chaparro",
+   "eleitores": 3989,
+   "lat": -23.49126898,
+   "lon": -46.75997905
+  },
+  {
+   "distrito": "SÃO DOMINGOS",
+   "bairro": "Vila Mangalot",
+   "zona": "325",
+   "nome": "Emei. Paulo Vi",
+   "eleitores": 990,
+   "lat": -23.5031783,
+   "lon": -46.7439117
+  },
+  {
+   "distrito": "PIRITUBA",
+   "bairro": "Vila Mirante",
+   "zona": "327",
+   "nome": "Emei. Antonio Munhoz Bonilha",
+   "eleitores": 1311,
+   "lat": -23.4680835,
+   "lon": -46.7212193
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Jardim Maristela",
+   "zona": "327",
+   "nome": "Ee. Professor Osmar Bastos Conceição",
+   "eleitores": 2588,
+   "lat": -23.474722,
+   "lon": -46.7000841
+  },
+  {
+   "distrito": "VILA MEDEIROS",
+   "bairro": "Vila Sabrina",
+   "zona": "420",
+   "nome": "Escola Municipal De Ensino Infantil Luis Gama",
+   "eleitores": 776,
+   "lat": -23.4874882,
+   "lon": -46.571198
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Barro Branco",
+   "zona": "256",
+   "nome": "E.E Prof. Leônidas Paiva",
+   "eleitores": 3269,
+   "lat": -23.4656107,
+   "lon": -46.608219
+  },
+  {
+   "distrito": "TUCURUVI",
+   "bairro": "Vila Gustavo",
+   "zona": "349",
+   "nome": "Colégio Pietra",
+   "eleitores": 1783,
+   "lat": -23.4856835,
+   "lon": -46.5978434
+  },
+  {
+   "distrito": "PERUS",
+   "bairro": "Conjunto Habitacional Recanto dos Humildes",
+   "zona": "389",
+   "nome": "Emef. Jardim Da Conquista",
+   "eleitores": 2213,
+   "lat": -23.41390592,
+   "lon": -46.75098044
+  },
+  {
+   "distrito": "VILA GUILHERME",
+   "bairro": "Vila Leonor",
+   "zona": "254",
+   "nome": "Emef. Profª. Helena Lombardi Braga",
+   "eleitores": 1516,
+   "lat": -23.5027309,
+   "lon": -46.5982921
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Guarani",
+   "zona": "376",
+   "nome": "Emei. Vereador Alex Freua Netto",
+   "eleitores": 923,
+   "lat": -23.4623083,
+   "lon": -46.69033
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Vila Maria Alta",
+   "zona": "254",
+   "nome": "Emef. Maria Yolanda De Souza Pinto Hahne",
+   "eleitores": 847,
+   "lat": -23.5057513,
+   "lon": -46.5852447
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Jardim Monte Alegre",
+   "zona": "327",
+   "nome": "Emei Manuel Bandeira",
+   "eleitores": 1575,
+   "lat": -23.4759378,
+   "lon": -46.7027711
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Paulistano",
+   "zona": "327",
+   "nome": "Emef. Professora Lilian Maso",
+   "eleitores": 1221,
+   "lat": -23.462045,
+   "lon": -46.709823
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Lauzane Paulista",
+   "zona": "422",
+   "nome": "Emei. Sava Popovic",
+   "eleitores": 1516,
+   "lat": -23.4761965,
+   "lon": -46.6456646
+  },
+  {
+   "distrito": "VILA MARIA",
+   "bairro": "Jardim Japão",
+   "zona": "254",
+   "nome": "Emei. Carlos Gomes",
+   "eleitores": 1010,
+   "lat": -23.5001289,
+   "lon": -46.5828985
+  },
+  {
+   "distrito": "FREGUESIA DO Ó",
+   "bairro": "Vila Marina",
+   "zona": "327",
+   "nome": "Emef Maria Aparecida Rodrigues Cintra",
+   "eleitores": 310,
+   "lat": -23.4824607,
+   "lon": -46.7032319
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Vila Dionísia",
+   "zona": "422",
+   "nome": "Emef Prof Neir Augusto Lopes",
+   "eleitores": 117,
+   "lat": -23.4636463,
+   "lon": -46.6598231
+  },
+  {
+   "distrito": "BRASILÂNDIA",
+   "bairro": "Jardim Elisa Maria",
+   "zona": "376",
+   "nome": "Emef Coronel Pm José Hermínio Rodrigues",
+   "eleitores": 216,
+   "lat": -23.4610342,
+   "lon": -46.6815552
+  },
+  {
+   "distrito": "CACHOEIRINHA",
+   "bairro": "Jardim Peri",
+   "zona": "422",
+   "nome": "Cei Inácio De Lima Oliveira",
+   "eleitores": 234,
+   "lat": -23.4542718,
+   "lon": -46.6626441
+  },
+  {
+   "distrito": "ANHANGUERA",
+   "bairro": "Vila Sulina",
+   "zona": "389",
+   "nome": "Ee. José Oscar Abreu Sampaio",
+   "eleitores": 1156,
+   "lat": -23.44439999,
+   "lon": -46.78496107
+  },
+  {
+   "distrito": "MANDAQUI",
+   "bairro": "Vila Pedra Branca",
+   "zona": "422",
+   "nome": "Colégio Cantareira",
+   "eleitores": 112,
+   "lat": -23.4569519,
+   "lon": -46.6476041
+  }
+ ]
+}

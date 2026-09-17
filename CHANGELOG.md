@@ -18,6 +18,12 @@ Registro cronológico de mudanças relevantes feitas no projeto, tanto via Claud
 
 ---
 
+## 2026-09-17 — Cowork (3)
+
+- **Bolhas de locais de votação no mapa.** Novo `data/locais-votacao-mapa.json`: reprocessei o CSV completo do TSE (`eleitorado_local_votacao_2024`, ~245MB, o mesmo já usado antes) desta vez extraindo também `NR_LATITUDE`/`NR_LONGITUDE` de cada local de votação nas 12 zonas eleitorais da Zona Norte (458 locais no total). Reconciliei o bairro de cada local com a lista canônica do Portau usando a mesma lógica de exclusão de homônimos entre regiões já validada antes; 390 dos 458 locais bateram com um bairro/distrito da Zona Norte com confiança (os 68 restantes ficaram de fora — nomes de bairro que não casaram, incluindo alguns fora da Zona Norte cuja zona eleitoral cruza a fronteira administrativa — para não plotar um ponto no lugar errado).
+- `index.html`: novo checkbox "Locais de votação" no seletor do mapa. Quando ligado, desenha um círculo por local de votação confirmado, usando a mesma projeção geográfica dos distritos (então cada ponto cai na posição real), com raio proporcional ao nº de eleitores daquele local (escala de raiz quadrada, pra não distorcer a percepção de área) e tooltip com nome, bairro e eleitores ao passar o mouse. Desligado por padrão pra não poluir o mapa de cara.
+- Mesma ressalva de sempre: `node --check` passou nos 20 blocos de script, mas não há como testar visualmente sem o build rodar — vale conferir a posição das bolhas no site depois do próximo build automático.
+
 ## 2026-09-17 — Cowork (2)
 
 - **Mapa de bairros mais interativo — cruzamento com o Painel Política + novas visualizações.** Novo `data/mapa-distritos-extra.json`, calculado cruzando dados já existentes (sem nova coleta): para cada um dos 18 distritos, (a) total de eleitores em locais de votação confirmados (soma dos bairros de `zonas-eleitorais-detalhe.json` que pertencem ao distrito) e (b) qual dos 18 vereadores acompanhados no Painel Política teve mais votos no distrito em 2024 (cruzando `ranking-vereadores-zona-norte-2024.json`, que já tinha os votos por distrito, com `vereadores-zona-norte.json` por nome+partido — todos os 18 casaram sem ambiguidade).

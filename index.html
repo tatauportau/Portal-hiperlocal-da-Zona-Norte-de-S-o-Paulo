@@ -694,6 +694,8 @@
   .mapa-metrica-btn { font-size: 11px; font-weight: 700; padding: 6px 12px; border-radius: 20px; background: #fff; border: 1px solid var(--cinza-l); color: var(--cinza-m); cursor: pointer; font-family: 'Inter', sans-serif; transition: all .15s; }
   .mapa-metrica-btn:hover { border-color: var(--cinza-q); color: var(--cinza-q); }
   .mapa-metrica-btn.ativo { background: var(--cinza-q); border-color: var(--cinza-q); color: #fff; }
+  .mapa-bolhas-toggle { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; color: var(--cinza-m); cursor: pointer; padding: 6px 4px; }
+  .mapa-bolhas-toggle input { cursor: pointer; }
   .mapa-legenda { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; font-size: 10px; color: var(--cinza-m); }
   .mapa-legenda-item { display: inline-flex; align-items: center; gap: 4px; }
   .mapa-legenda-cor { width: 10px; height: 10px; border-radius: 3px; display: inline-block; flex-shrink: 0; }
@@ -5157,6 +5159,7 @@ wrap.addEventListener('mouseleave',()=>tip.classList.remove('visivel'));
       <button type="button" class="mapa-metrica-btn ativo" data-metrica="subprefeitura" onclick="mudarMetricaMapa('subprefeitura')">Subprefeitura</button>
       <button type="button" class="mapa-metrica-btn" data-metrica="eleitores" onclick="mudarMetricaMapa('eleitores')">Nº de eleitores</button>
       <button type="button" class="mapa-metrica-btn" data-metrica="vereador" onclick="mudarMetricaMapa('vereador')">Vereador mais votado</button>
+      <label class="mapa-bolhas-toggle"><input type="checkbox" onchange="toggleBolhasVotacao(this)"> Locais de votação</label>
     </div>
     <div class="bairros-corpo">
       <div>
@@ -5259,6 +5262,10 @@ let _detalheZE = null;
 let _mapaExtra = null;
 let _mapaExtraPromise = null;
 let _metricaMapa = 'subprefeitura';
+let _locaisVotacao = null;
+let _locaisVotacaoPromise = null;
+let _projecaoMapaBairros = null;
+let _mostrarBolhasVotacao = false;
 
 function abrirBairros(){
   document.getElementById('bairros-overlay').classList.add('aberto');
@@ -5283,6 +5290,9 @@ async function garantirDadosMapaBairros(){
   }
   if (!_mapaExtra && !_mapaExtraPromise) {
     _mapaExtraPromise = fetch('./data/mapa-distritos-extra.json').then(r => r.ok ? r.json() : null).then(d => { _mapaExtra = d || {}; }).catch(() => { _mapaExtra = {}; });
+  }
+  if (!_locaisVotacao && !_locaisVotacaoPromise) {
+    _locaisVotacaoPromise = fetch('./data/locais-votacao-mapa.json').then(r => r.ok ? r.json() : null).then(d => { _locaisVotacao = (d && d.locais) || []; }).catch(() => { _locaisVotacao = []; });
   }
   if (_geoDistritosZN && _bairrosPorDistrito && _zonasPorDistrito) return;
   const geoEmbutido = document.getElementById('bairros-geo-embutido');
@@ -5455,6 +5465,51 @@ function desenharMapaBairros(geo, bairrosPorDistrito, zonasPorDistrito){
       .attr('fill', '#fff')
       .style('pointer-events', 'none')
       .text(d => d.properties.nome);
+
+  svg.append('g').attr('id', 'bairros-bolhas-votacao');
+  _projecaoMapaBairros = projection;
+  if (_mostrarBolhasVotacao) atualizarBolhasVotacao();
+}
+
+async function toggleBolhasVotacao(checkbox){
+  _mostrarBolhasVotacao = checkbox.checked;
+  if (_mostrarBolhasVotacao && !_locaisVotacao && _locaisVotacaoPromise) await _locaisVotacaoPromise;
+  atualizarBolhasVotacao();
+}
+
+function atualizarBolhasVotacao(){
+  const g = d3.select('#bairros-bolhas-votacao');
+  if (g.empty() || !_projecaoMapaBairros) return;
+  g.selectAll('*').remove();
+  if (!_mostrarBolhasVotacao || !_locaisVotacao || !_locaisVotacao.length) return;
+
+  const tooltip = document.getElementById('bairros-tooltip');
+  const maxEleitores = Math.max(...( _locaisVotacao.map(l => l.eleitores)));
+  const raio = d3.scaleSqrt().domain([0, maxEleitores]).range([2, 11]);
+
+  g.selectAll('circle')
+    .data(_locaisVotacao)
+    .join('circle')
+      .attr('cx', d => _projecaoMapaBairros([d.lon, d.lat])[0])
+      .attr('cy', d => _projecaoMapaBairros([d.lon, d.lat])[1])
+      .attr('r', d => raio(d.eleitores))
+      .attr('fill', '#222')
+      .attr('fill-opacity', 0.45)
+      .attr('stroke', '#fff')
+      .attr('stroke-width', 0.6)
+      .style('pointer-events', 'auto')
+      .style('cursor', 'default')
+      .on('mousemove', function(event, d){
+        tooltip.textContent = `📍 ${d.nome} (${d.bairro}) — ${d.eleitores.toLocaleString('pt-BR')} eleitores`;
+        tooltip.style.left = (event.clientX + 14) + 'px';
+        tooltip.style.top  = (event.clientY + 10) + 'px';
+        tooltip.style.opacity = 1;
+        d3.select(this).attr('fill-opacity', 0.75);
+      })
+      .on('mouseleave', function(){
+        tooltip.style.opacity = 0;
+        d3.select(this).attr('fill-opacity', 0.45);
+      });
 }
 
 function earthUrl(bairro, distrito){
