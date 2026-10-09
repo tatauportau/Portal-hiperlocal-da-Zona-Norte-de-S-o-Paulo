@@ -3,74 +3,60 @@
   "noticias": [
     {
       "destaque": true,
-      "pill": "📜 Regularização Fundiária",
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Jardim Corisco",
-      "bairro": "Jardim Corisco",
-      "titulo": "2.846 imóveis do Jaçanã e Tremembé recebem regularização fundiária pelo programa Escritura na Mão",
-      "resumo": "A Prefeitura entregou nesta quinta (10/9) documentos de regularização de 2.846 imóveis em nove núcleos habitacionais do Jaçanã e Tremembé. O Jardim Flor de Maio concentrou o maior número (1.661), seguido por Jardim Estrela Dalva (433) e Jardim Corisco (251). O programa Escritura na Mão já soma 100.234 imóveis regularizados na capital desde 2021, e a Prefeitura assinou novo contrato de R$ 681,8 milhões para regularizar mais 363 mil famílias nos próximos 60 meses.",
-      "fonte": "DiárioZonaNorte / Prefeitura de São Paulo",
-      "hora": "Entrega em 10/09",
-      "url": "https://www.diariozonanorte.com.br/2-846-imoveis-da-zona-norte-recebem-regularizacao-fundiaria-pelo-programa-escritura-na-mao/",
-      "icone": "📜",
-      "icone_classe": "ic-eco"
+      "pill": "🚨 Operação BRAvO",
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Jardim Elisa Maria",
+      "bairro": "Jardim Elisa Maria",
+      "titulo": "BRAvO reforça policiamento contra gangues do 'quebra-vidro' no Jardim Elisa Maria, Jardim Peri, Casa Verde e Limão",
+      "resumo": "Uma nova etapa da operação do Batalhão de Resposta Avançada Operacional (BRAvO), da PM, mobilizou nesta quarta (7/10) 91 policiais, com apoio do Baep e do CPTran, na Zona Norte. Levantamento do 9º BPM/M apontou Jardim Peri, Jardim Elisa Maria, Casa Verde e Limão como pontos de atenção, com registros de roubos, furtos, ações de gangues do 'quebra-vidro' e tráfico. O policiamento usa duplas de PMs em motocicletas; outras oito operações do BRAvO estão previstas na capital até sábado (17/10).",
+      "fonte": "Agência SP / Governo do Estado de SP",
+      "hora": "Operação em 07/10",
+      "url": "https://www.agenciasp.sp.gov.br/nova-operacao-do-bravo-reforca-policiamento-em-areas-com-atuacao-de-gangues-do-quebra-vidro-na-zona-norte/",
+      "icone": "🚓",
+      "icone_classe": "ic-seg"
+    },
+    {
+      "destaque": false,
+      "tag_categoria": "tag-seg",
+      "tag_label": "Segurança",
+      "tag_bairro": "📍 Vila Gustavo",
+      "bairro": "Vila Gustavo",
+      "titulo": "BRAvO aborda 285 motos e 37 carros em Vila Maria, Vila Guilherme, Vila Gustavo e Tucuruvi",
+      "resumo": "Na terça (6/10), a operação do BRAvO percorreu Vila Maria, Vila Guilherme, Parque Novo Mundo, Vila Medeiros, Vila Gustavo e Tucuruvi. A ação resultou em uma prisão em flagrante por tráfico de drogas e na abordagem de 37 carros e 285 motos, segundo o Governo do Estado.",
+      "fonte": "Agência SP / Governo do Estado de SP",
+      "hora": "Operação em 06/10",
+      "url": "https://www.agenciasp.sp.gov.br/nova-operacao-do-bravo-reforca-policiamento-em-areas-com-atuacao-de-gangues-do-quebra-vidro-na-zona-norte/",
+      "icone": "🏍️",
+      "icone_classe": "ic-seg"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Saúde",
-      "tag_bairro": "📍 Jardim Joana D'Arc",
-      "bairro": "Jardim Joana D'Arc",
-      "titulo": "Nova UBS Jardim Joana D'Arc é inaugurada no Parque Casa de Pedra, com capacidade para 5.800 atendimentos por mês",
-      "resumo": "A UBS Jardim Joana D'Arc foi inaugurada nesta quinta (10/9) no Parque Casa de Pedra, com investimento de R$ 13,9 milhões e 1.196 m² de área construída. A unidade tem nove consultórios, consultório odontológico, farmácia e salas de vacinação e curativos, com oito equipes de Saúde da Família. É a 19ª UBS inaugurada na cidade desde 2021, levando o total para 484 unidades em São Paulo.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "Inaugurada em 10/09",
-      "url": "https://www.diariozonanorte.com.br/ubs-jardim-joana-darc-e-inaugurada-no-jacana-na-zona-norte-com-capacidade-para-5-800-atendimentos-por-mes/",
+      "tag_bairro": "📍 Jardim Rosinha",
+      "bairro": "Jardim Rosinha",
+      "titulo": "Prefeitura entrega UPA 24h e UBS no Jardim Rosinha, com previsão de 20,9 mil atendimentos por mês",
+      "resumo": "A UPA Anhanguera Residencial das Orquídeas e a UBS Jardim Rosinha Residencial das Orquídeas foram entregues na terça (6/10), na Estrada de Pirapora, região de Perus. O investimento municipal foi de mais de R$ 14,2 milhões e as unidades reúnem 326 profissionais. A UPA funciona 24 horas, com estimativa de 15 mil atendimentos mensais, nove leitos de observação, um de isolamento, três de emergência e um de choque. É a 35ª UPA e a 485ª UBS da cidade.",
+      "fonte": "Folha Noroeste / Prefeitura de São Paulo",
+      "hora": "Inauguradas em 06/10",
+      "url": "https://folhanoroeste.com.br/saude/prefeitura-inaugura-35a-upa-e-485a-ubs-da-cidade-com-entrega-de-novas-unidades-em-perus/",
       "icone": "🏥",
-      "icone_classe": "ic-eco"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-not",
-      "tag_label": "Economia",
-      "tag_bairro": "📍 Parque Edu Chaves",
-      "bairro": "Parque Edu Chaves",
-      "titulo": "Prefeitura finaliza obras de 180 moradias do Residencial Sonda B, no Parque Edu Chaves",
-      "resumo": "As 13 torres do Residencial Sonda B, no Parque Edu Chaves, estão na fase final de acabamento e infraestrutura. O empreendimento recebeu R$ 35,8 milhões via Programa Pode Entrar e fundos municipais, com apartamentos de 60 a 64 m², parte adaptados para pessoas com deficiência. A construção começou em julho de 2024 e a entrega está prevista para o primeiro semestre de 2027.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "Obras em fase final",
-      "url": "https://www.diariozonanorte.com.br/prefeitura-finaliza-obras-de-180-moradias-do-residencial-sonda-b-no-parque-edu-chaves/",
-      "icone": "🏗️",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-mob",
       "tag_label": "Mobilidade",
-      "tag_bairro": "📍 Vila Constança",
-      "bairro": "Vila Constança",
-      "titulo": "Córrego Paciência terá mais 1,4 km de canalização, com obras de R$ 45 milhões",
-      "resumo": "A Prefeitura anunciou nova etapa de drenagem no Córrego Paciência, com canalização de cerca de 1.400 metros entre a Rua Flávia e a Rodovia Fernão Dias, além de microdrenagem em ruas próximas às avenidas Mendes da Rocha, Edu Chaves e Julio Buono. O investimento estimado é de R$ 45 milhões e deve beneficiar cerca de 87 mil moradores; o edital de contratação deve ser publicado até o final de setembro.",
-      "fonte": "DiárioZonaNorte",
-      "hora": "Edital previsto para o fim de setembro",
-      "url": "https://www.diariozonanorte.com.br/corrego-paciencia-tera-mais-14-km-de-canalizacao-na-zona-norte/",
-      "icone": "🌊",
+      "tag_bairro": "📍 Pirituba",
+      "bairro": "Pirituba",
+      "titulo": "Rua Baltazar da Silveira, em Pirituba, tem interdição parcial por 80 dias para concretagem",
+      "resumo": "A CET monitora o trânsito na Rua Baltazar da Silveira, interditada parcialmente entre as ruas Padre Mariano Ronchi e Padre Justino Lombardi desde quinta (8/10). O bloqueio é para estacionamento de betoneiras e bombas de concreto e tem duração prevista de 80 dias.",
+      "fonte": "Folha Noroeste / CET",
+      "hora": "Desde 08/10, por 80 dias",
+      "url": "https://folhanoroeste.com.br/cotidiano/rua-baltazar-da-silveira-em-pirituba-sera-interditada-para-servicos-de-concretagem/",
+      "icone": "🚧",
       "icone_classe": "ic-mob"
-    },
-    {
-      "destaque": false,
-      "tag_categoria": "tag-edu",
-      "tag_label": "Educação",
-      "tag_bairro": "📍 Jardim Santo Elias",
-      "bairro": "Jardim Santo Elias",
-      "titulo": "IFSP Pirituba abre inscrições para pós-graduação gratuita em Humanidades",
-      "resumo": "O IFSP Campus São Paulo Pirituba (Avenida Mutinga, 951, Jardim Santo Elias) abriu inscrições para a Especialização em Humanidades – Educação, Política e Sociedade, com 40 vagas gratuitas para pessoas graduadas em qualquer área. O curso é presencial, no período noturno, com ingresso previsto para o 1º semestre de 2027. As inscrições vão até 18 de setembro de 2026.",
-      "fonte": "Folha Noroeste",
-      "hora": "Inscrições até 18/09",
-      "url": "https://folhanoroeste.com.br/regional/if-pirituba-abre-inscricoes-para-pos-graduacao-gratuita-em-humanidades/",
-      "icone": "🎓",
-      "icone_classe": "ic-edu"
     },
     {
       "destaque": false,
@@ -78,189 +64,224 @@
       "tag_label": "Mobilidade",
       "tag_bairro": "📍 Perus",
       "bairro": "Perus",
-      "titulo": "Linha 7-Rubi terá operação diferenciada neste domingo, 13, por obras de modernização",
-      "resumo": "Neste domingo (13/9), das 4h à meia-noite, a Linha 7-Rubi opera por via única entre Botujuru e Campo Limpo Paulista, sem viagens diretas entre Palmeiras-Barra Funda e Jundiaí — passageiros devem baldear em Francisco Morato. Os intervalos programados são de 12,5 minutos entre Palmeiras-Barra Funda e Francisco Morato e de 30 minutos entre Francisco Morato e Jundiaí, dentro do cronograma de modernização do TIC Eixo Norte.",
-      "fonte": "Folha Noroeste",
-      "hora": "Válido domingo, 13/09, das 4h à meia-noite",
-      "url": "https://folhanoroeste.com.br/cotidiano/linha-7-rubi-tera-operacao-diferenciada-neste-domingo-13-devido-as-obras-de-modernizacao/",
+      "titulo": "Feriadão: Linha 7-Rubi não terá viagens diretas até Jundiaí no domingo e na segunda",
+      "resumo": "No domingo (11/10) e na segunda (12/10, feriado de Nossa Senhora Aparecida), a Linha 7-Rubi terá alterações para obras de modernização entre Botujuru e Campo Limpo Paulista. Não haverá viagens diretas entre Palmeiras-Barra Funda e Jundiaí; é preciso baldear em Francisco Morato. No sábado (10) a oferta é a de fim de semana. Metrô e CPTM operam com oferta de domingo na segunda-feira.",
+      "fonte": "Agência SP / Governo do Estado de SP",
+      "hora": "Válido 11 e 12/10",
+      "url": "https://www.agenciasp.sp.gov.br/abre-e-fecha-servicos-de-12-de-outubro/",
       "icone": "🚆",
       "icone_classe": "ic-mob"
     },
     {
       "destaque": false,
+      "tag_categoria": "tag-mob",
+      "tag_label": "Mobilidade",
+      "tag_bairro": "📍 Santana",
+      "bairro": "Santana",
+      "titulo": "Prefeitura apresenta 250 novos ônibus elétricos em Santana; frota chega a 2.009 veículos",
+      "resumo": "Os 250 novos ônibus elétricos foram apresentados em 30/9 no entorno da Avenida Santos Dumont, entre a Praça Campo de Bagatelle e a Praça Heróis da FEB, em Santana. Com eles, a capital passa a ter 2.009 ônibus elétricos (eram 1.759 em 1º de setembro). Segundo a SPTrans, a frota elétrica evita o consumo de cerca de 70 milhões de litros de diesel por ano. A cidade tem 30 áreas de carregamento.",
+      "fonte": "DiárioZonaNorte / SPTrans",
+      "hora": "Apresentados em 30/09",
+      "url": "https://www.diariozonanorte.com.br/de-parar-o-transito-250-novos-onibus-eletricos-da-prefeitura-sao-apresentados-na-praca-herois-da-feb-em-santana/",
+      "icone": "🚌",
+      "icone_classe": "ic-mob"
+    },
+    {
+      "destaque": false,
       "tag_categoria": "tag-not",
-      "tag_label": "Saúde",
-      "tag_bairro": "📍 Vila Medeiros",
-      "bairro": "Vila Medeiros",
-      "titulo": "SP confirma mais dois casos de sarampo em crianças e chega a 30 registros em 2026",
-      "resumo": "O estado confirmou mais dois casos de sarampo em crianças menores de 2 anos moradoras da capital, chegando a 30 registros em 2026 (27 na capital); 22 ocorreram em pessoas sem vacinação completa. Levantamentos anteriores da Secretaria de Saúde mostraram que os casos na Zona Norte se concentraram em Vila Medeiros e Vila Maria. Crianças de 6 a 11 meses continuam podendo receber a dose zero da tríplice viral.",
-      "fonte": "Folha Noroeste / Secretaria de Estado da Saúde",
-      "hora": "Atualizado nesta semana",
-      "url": "https://folhanoroeste.com.br/cotidiano/sp-confirma-mais-dois-casos-de-sarampo-em-criancas-e-chega-a-30-registros-em-2026/",
-      "icone": "🩺",
+      "tag_label": "Serviços",
+      "tag_bairro": "📍 Mandaqui",
+      "bairro": "Mandaqui",
+      "titulo": "Feriado de 12/10: posto Pró-Sangue Mandaqui fecha; Bom Prato Limão abre normalmente",
+      "resumo": "Na segunda (12/10), o posto de doação da Pró-Sangue no Mandaqui estará fechado, assim como Poupatempo, AMEs e Farmácias de Medicamentos Especializados. O Bom Prato Limão está entre as unidades que abrem no feriado, e o Bom Prato Tucuruvi funciona no sábado (10). Hospitais estaduais mantêm prontos-socorros funcionando normalmente.",
+      "fonte": "Agência SP / Governo do Estado de SP",
+      "hora": "Feriado de 12/10",
+      "url": "https://www.agenciasp.sp.gov.br/abre-e-fecha-servicos-de-12-de-outubro/",
+      "icone": "📅",
       "icone_classe": "ic-eco"
     },
     {
       "destaque": false,
       "tag_categoria": "tag-not",
       "tag_label": "Geral",
-      "tag_bairro": "📍 Anhanguera",
-      "bairro": "Anhanguera",
-      "titulo": "Defesa Civil instala gabinete de crise para acompanhar risco de tempestades severas",
-      "resumo": "A Defesa Civil do Estado montou gabinete de crise para monitorar o risco de tempestades severas em São Paulo entre a tarde desta sexta (11/9) e a madrugada de sábado (12/9), com possibilidade de chuva forte, raios, rajadas de vento e granizo em toda a Grande São Paulo, incluindo a Zona Norte.",
-      "fonte": "Folha Noroeste / Defesa Civil do Estado de SP",
-      "hora": "Alerta válido até a manhã de sábado, 12/09",
-      "url": "https://folhanoroeste.com.br/cotidiano/defesa-civil-instala-gabinete-de-crise-para-acompanhar-risco-de-tempestades-severas/",
-      "icone": "⛈️",
-      "icone_classe": "ic-seg"
+      "tag_bairro": "📍 Limão",
+      "bairro": "Limão",
+      "titulo": "Bairro do Limão completa 105 anos; moradores cobram mais lazer, zeladoria e ações contra enchentes",
+      "resumo": "O loteamento oficial do Limão, em 1º de outubro de 1921, marca o aniversário do bairro, que tem cerca de 82.272 habitantes (Censo 2022) em 6,3 km². Moradores e comerciantes apontam a falta de equipamentos culturais e de lazer, como teatro, cinema ou CEU, e pedem mais presença da subprefeitura em limpeza, iluminação, segurança e obras contra enchentes.",
+      "fonte": "DiárioZonaNorte",
+      "hora": "Aniversário em 01/10",
+      "url": "https://www.diariozonanorte.com.br/bairro-do-limao-completa-105-anos-com-historia-de-pioneirismo-e-novos-desafios/",
+      "icone": "🎂",
+      "icone_classe": "ic-edu"
     }
   ],
   "agenda": [
     {
-      "dia": "12",
-      "mes": "Set",
-      "cor_fundo": "#27AE60",
-      "bairro": "Freguesia do Ó",
-      "titulo": "EMEI Bombeiro oferece serviços gratuitos para a comunidade",
-      "hora": "sáb. 12/09, das 9h às 13h30",
-      "local": "EMEI Bombeiro, Rua Monsenhor Paulo Fernandes de Barros, s/n, Freguesia do Ó",
-      "descricao": "Ação com serviços gratuitos da Enel, Cate, Umapaz, Sabesp, SP Urbano, Cohab e A.N.A: troca de lâmpadas LED, vagas de emprego, atendimento comercial, palestra, cadastro de demanda habitacional e projetos para Jovem Aprendiz.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://folhanoroeste.com.br/regional/emei-na-freguesia-disponibiliza-neste-sabado-12-servicos-gratuitos-para-a-comunidade/"
-    },
-    {
-      "dia": "12",
-      "mes": "Set",
+      "dia": "10",
+      "mes": "Out",
       "cor_fundo": "#E67E22",
-      "bairro": "Jardim São Paulo",
-      "titulo": "Circo Vox apresenta \"Se Chove, Não Molha!\" no Sesc Santana",
-      "hora": "sáb. 12/09, 12h",
-      "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo gratuito de circo, com palhaçaria e números tradicionais, dentro da programação de setembro do Sesc Santana.",
+      "bairro": "Limão",
+      "titulo": "Festival Nordestino do CTN: shows de Tierry e Zeza dos Teclados e homenagem à Bahia",
+      "hora": "sáb. 10/10, das 11h às 4h",
+      "local": "Centro de Tradições Nordestinas (CTN), Rua Jacofer, 615, Limão",
+      "descricao": "Terceira edição do festival, de 8 a 25/10, com shows, oficinas de tererê e pintura inspirada no Olodum, apresentação da Cia Ki-Axé e distribuição gratuita de pratos gigantes (acarajé, cartola e rubacão). Entrada gratuita, sem retirada de ingressos.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.diariozonanorte.com.br/sesc-santana-recebe-tres-espetaculos-do-circo-vox-em-setembro/"
+      "url": "https://www.diariozonanorte.com.br/festival-nordestino-no-ctn-tera-shows-gratuitos-pratos-gigantes-e-homenagens-aos-nove-estados/"
     },
     {
-      "dia": "13",
-      "mes": "Set",
-      "cor_fundo": "#E67E22",
-      "bairro": "Jardim São Paulo",
-      "titulo": "Peça infantojuvenil \"E se fosse uma bomba?\" no Sesc Santana",
-      "hora": "dom. 13/09, 12h",
-      "local": "Sesc Santana, Jardim São Paulo",
-      "descricao": "Espetáculo teatral gratuito sobre a história da primeira aviadora brasileira, parte da programação de setembro do Sesc Santana.",
-      "gratuito": true,
-      "preco": null,
-      "url": "https://www.diariozonanorte.com.br/idealizada-por-luiza-moreira-salles-peca-infantojuvenil-e-se-fosse-uma-bomba-conta-a-historia-da-primeira-aviadora-brasileira/"
-    },
-    {
-      "dia": "13",
-      "mes": "Set",
+      "dia": "10",
+      "mes": "Out",
       "cor_fundo": "#2E86C1",
-      "bairro": "Santana",
-      "titulo": "Últimos dias da 28ª Bienal Internacional do Livro de São Paulo",
-      "hora": "até 13/09, das 9h às 21h",
-      "local": "São Paulo Expo, região do Anhembi, Santana",
-      "descricao": "Programação literária com editoras, lançamentos, encontros com autores e atividades infantis, movimentando a região do Anhembi.",
-      "gratuito": false,
-      "preco": "Ingressos a partir de R$ 20 (meia-entrada e gratuidades para grupos específicos)",
-      "url": "https://www.diariozonanorte.com.br/sesc-e-senac-celebram-80-anos-com-estande-compartilhado-na-28a-bienal-internacional-do-livro-de-sao-paulo/"
+      "bairro": "Freguesia do Ó",
+      "titulo": "1º Encontro de Escritores na Biblioteca Afonso Schmidt",
+      "hora": "sáb. 10/10, das 10h às 14h",
+      "local": "Biblioteca Afonso Schmidt, Av. Elísio Teixeira Leite, 1470, Freguesia do Ó",
+      "descricao": "Encontro com os escritores Israel Neto, Louise Maggiorini, Aline Macedo, Vinicius Izaias e Claudiné Mendes, com música da Banda Brasilidades. Informações: (11) 3975-2305.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/regional/1o-encontro-de-escritores-ocorrera-neste-sabado-10-na-freguesia-do-o/"
     },
     {
-      "dia": "29",
+      "dia": "11",
       "mes": "Out",
       "cor_fundo": "#27AE60",
-      "bairro": "Perus",
-      "titulo": "Festa dos 89 anos de Perus",
-      "hora": "dom. 29/10, a partir das 12h",
-      "local": "Avenida Doutor Sylvio de Campos, Perus",
-      "descricao": "Celebração do aniversário do distrito de Perus, com música, gastronomia e participação de artistas e empreendedores locais.",
+      "bairro": "Jardim Líbano",
+      "titulo": "CDC Líbano faz a 4ª festa comunitária do Dia das Crianças",
+      "hora": "dom. 11/10, das 11h às 17h",
+      "local": "CDC Líbano, Rua Professor Araújo Coelho, s/nº, Jardim Líbano, Pirituba",
+      "descricao": "Festa com brinquedos infláveis, pipoca, algodão-doce, cachorro-quente, lanches, sorteios, brindes, corte de cabelo social, entrega de alimentos e de brinquedos.",
       "gratuito": true,
       "preco": null,
-      "url": "https://prefeitura.sp.gov.br/web/perus/noticias/"
+      "url": "https://folhanoroeste.com.br/regional/cdc-libano-realiza-a-4a-edicao-do-evento-comunitario-para-o-dia-das-criancas/"
+    },
+    {
+      "dia": "11",
+      "mes": "Out",
+      "cor_fundo": "#8E44AD",
+      "bairro": "Jaraguá",
+      "titulo": "Circuito SPCine exibe filmes infantis e Festival de Filmes de Ciência nos CEUs Taipas e Pinheirinho D'Água",
+      "hora": "dom. 11/10, sessões às 11h, 13h e 15h (também qua. 14/10)",
+      "local": "CEU Taipas (Rua João Amado Coutinho, 240) e CEU Pinheirinho D'Água Luis Gama (Rua Camillo Zanotti, s/n), Jaraguá",
+      "descricao": "Sessões de 'Era Uma Vez na Natureza' (livre), 'Colegas e o Herdeiro' e 'Homem-Aranha: Um Novo Dia' (+12). Retirar ingresso com 1 hora de antecedência; apresentar RG.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://folhanoroeste.com.br/entretenimento-esportes/circuito-sp-cine-exibe-filmes-para-as-criancas-em-ceus-do-jaragua/"
+    },
+    {
+      "dia": "12",
+      "mes": "Out",
+      "cor_fundo": "#E67E22",
+      "bairro": "Jardim São Paulo",
+      "titulo": "Dia das Crianças no Sesc Santana: Pandeirodê, com Cris Barulins",
+      "hora": "seg. 12/10 (feriado), das 17h às 18h",
+      "local": "Sesc Santana, área de convivência",
+      "descricao": "Show participativo com pandeiros de vários formatos e ritmos como coco, forró, samba e rock. No mesmo dia há contação 'Contos de Assombração' (12h), circuito de ginástica e brincadeiras de rua. Grátis; 100 lugares; livre.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/sesc-santana-reune-atividades-para-criancas-e-familias-no-mes-das-criancas/"
+    },
+    {
+      "dia": "17",
+      "mes": "Out",
+      "cor_fundo": "#E67E22",
+      "bairro": "Limão",
+      "titulo": "Festival Nordestino do CTN: shows de Thiago Viana e Caio Costta e especial Pernambuco",
+      "hora": "sáb. 17/10, das 11h às 4h",
+      "local": "CTN, Rua Jacofer, 615, Limão",
+      "descricao": "Programação com vivência de maracatu, roda de coco, aulas de forró e xaxado e o Grande Encontro Pernambucano. Entrada gratuita.",
+      "gratuito": true,
+      "preco": null,
+      "url": "https://www.diariozonanorte.com.br/festival-nordestino-no-ctn-tera-shows-gratuitos-pratos-gigantes-e-homenagens-aos-nove-estados/"
     },
     {
       "dia": "12",
       "mes": "Nov",
       "cor_fundo": "#27AE60",
       "bairro": "Vila Guilherme",
-      "titulo": "Revelando SP 2026 chega ao Parque do Trote, na Vila Guilherme",
+      "titulo": "Revelando SP no Parque do Trote terá Zé Ramalho, Roberta Miranda e Yasmin Santos",
       "hora": "12 a 15/11",
-      "local": "Parque do Trote, Av. Nadir Dias de Figueiredo, s/n, Vila Guilherme",
-      "descricao": "Festival gratuito com manifestações da cultura tradicional paulista, gastronomia, artesanato e apresentações artísticas, encerrando o circuito estadual de 2026.",
+      "local": "Parque do Trote, Vila Guilherme",
+      "descricao": "Line-up fechado: Maria Cecília & Rodolfo (12/11), Zé Ramalho (13/11), Yasmin Santos e Roberta Miranda (14/11), Demônios da Garoa, Gabriel Sater, Bavini e Edson & Hudson (15/11). Também tem gastronomia típica, artesanato e cultura tradicional paulista. Entrada gratuita, classificação livre.",
       "gratuito": true,
       "preco": null,
-      "url": "https://www.diariozonanorte.com.br/revelando-sp-confirma-data-na-vila-guilherme-e-abre-edital-com-vagas-para-artesanato-culinaria-e-cultura/"
+      "url": "https://www.diariozonanorte.com.br/revelando-sp-fecha-line-up-no-parque-do-trote-com-ze-ramalho-roberta-miranda-e-mais-shows-gratuitos/"
     }
   ],
   "vagas": [
     {
-      "icone": "🛍️",
-      "titulo": "Atendente de Lojas, Mercados e Lanchonetes – mais de 300 vagas",
-      "empresa": "Diversas empresas (via Cate)",
-      "bairro": "Santana",
-      "requisitos": "Ensino fundamental ou médio completo; várias vagas sem exigência de experiência prévia",
+      "icone": "🏢",
+      "titulo": "Porteiro – parte de mais de 150 vagas no Cate Móvel",
+      "empresa": "Empresas parceiras (via Cate Móvel)",
+      "bairro": "Zona Norte",
+      "requisitos": "Ensino médio completo, experiência na área e curso de portaria. Seleção em 14/10, das 9h às 16h, na Rua Luís Pereira Rebouças, altura do nº 565, Santa Fé (levar RG, CPF e carteira de trabalho)",
       "tipo": "CLT",
-      "fonte": "Folha Noroeste / Cate",
-      "dias_atras": "Salário de R$ 1.630 a R$ 2.413; inscrições pelo Portal Cate ou em uma das 46 unidades da capital"
+      "fonte": "Fato Paulista / Cate",
+      "dias_atras": "Salário de R$ 1.837 a R$ 2.031 + VA, VT, convênio médico e odontológico"
+    },
+    {
+      "icone": "🧹",
+      "titulo": "Auxiliar de Limpeza – parte de mais de 150 vagas no Cate Móvel",
+      "empresa": "Empresas parceiras (via Cate Móvel)",
+      "bairro": "Zona Norte",
+      "requisitos": "Ensino fundamental completo, sem exigência de experiência. Seleção em 14/10, das 9h às 16h, na Rua Luís Pereira Rebouças, altura do nº 565, Santa Fé",
+      "tipo": "CLT",
+      "fonte": "Fato Paulista / Cate",
+      "dias_atras": "Salário de R$ 1.837 a R$ 2.031 + benefícios e bônus por assiduidade"
     },
     {
       "icone": "📦",
-      "titulo": "Vagas de Logística – mais de 90 oportunidades",
+      "titulo": "Logística – 62 vagas em todas as regiões da cidade",
       "empresa": "Diversas empresas (via Cate)",
-      "bairro": "Jardim Taipas",
-      "requisitos": "Ensino fundamental ou médio completo; algumas vagas exigem ao menos 6 meses de experiência",
+      "bairro": "Santana",
+      "requisitos": "Escolaridade a partir do ensino fundamental completo; a maioria das empresas oferece treinamento. Atendimento no Portal Cate ou em unidades como a do Cate Santana",
       "tipo": "CLT",
-      "fonte": "Folha Noroeste / Cate",
-      "dias_atras": "Salário de R$ 2.100 a R$ 2.396"
+      "fonte": "Fato Paulista / Cate",
+      "dias_atras": "Salário de até R$ 2.182"
     },
     {
-      "icone": "🍳",
-      "titulo": "Vagas de Gastronomia – mais de 60 oportunidades, inclusive cozinheiro geral",
-      "empresa": "Diversas empresas (via Cate)",
-      "bairro": "Perus",
-      "requisitos": "Do ensino fundamental ao médio completo; oportunidades para quem está começando na carreira",
-      "tipo": "CLT",
-      "fonte": "Folha Noroeste / Cate",
-      "dias_atras": "Salário de até R$ 3.000 para cozinheiro geral"
-    },
-    {
-      "icone": "🔧",
-      "titulo": "Mecânico Montador e outras vagas técnicas – salários de até R$ 6.000",
+      "icone": "🛍️",
+      "titulo": "Atendimento em lojas, lanchonetes e mercados – mais de 300 vagas",
       "empresa": "Diversas empresas (via Cate)",
       "bairro": "Pirituba",
-      "requisitos": "Requisitos variam por vaga; consultar detalhes no Portal Cate",
+      "requisitos": "Ensino fundamental ao médio completo, com ou sem experiência. Levar RG, CPF e carteira de trabalho a uma unidade do Cate, como a de Pirituba",
       "tipo": "CLT",
-      "fonte": "Folha Noroeste / Cate",
-      "dias_atras": "Unidades do Cate seguem com mais de 2 mil vagas abertas na capital"
+      "fonte": "Fato Paulista / Cate",
+      "dias_atras": "Salário de R$ 1.621 a R$ 2.221"
     }
   ],
   "politica": [
     {
-      "orgao": "🏛️ SEHAB / COHAB-SP",
-      "bairro": "Jardim Corisco",
-      "titulo": "Programa Escritura na Mão assina novo contrato de R$ 681,8 milhões",
-      "impacto": "O contrato vai ampliar por 60 meses as ações de regularização fundiária na cidade, com previsão de atender mais de 363 mil famílias, dando continuidade à regularização de núcleos do Jaçanã e Tremembé, entre outras regiões.",
-      "status": "Contrato assinado; execução nos próximos 60 meses",
-      "fonte": "DiárioZonaNorte / Prefeitura de São Paulo"
+      "orgao": "🚔 Governo do Estado / Polícia Militar",
+      "bairro": "Casa Verde",
+      "titulo": "BRAvO retoma operações diárias após as eleições e prevê mais oito ações até 17/10",
+      "impacto": "A nova modalidade de policiamento com duplas de PMs em motos define áreas a partir de estatísticas semanais de crimes. Na Zona Norte, as ações desta semana passaram por Casa Verde, Limão, Jardim Peri, Jardim Elisa Maria, Vila Maria, Vila Guilherme e Tucuruvi.",
+      "status": "Em execução; oito operações previstas até 17/10",
+      "fonte": "Agência SP"
     },
     {
-      "orgao": "🏛️ Prefeitura de São Paulo",
-      "bairro": "Jaraguá",
-      "titulo": "R$ 490 milhões em investimentos seguem em execução para Pirituba, Jaraguá, São Domingos e Taipas",
-      "impacto": "Pacote inclui a retomada da ligação viária Pirituba-Lapa (R$ 209,5 milhões, prazo até dezembro de 2026), novas unidades educacionais (cerca de R$ 29 milhões) e revitalização do Parque Cidade Toronto.",
-      "status": "Investimentos em execução",
-      "fonte": "Prefeitura de São Paulo / Jornal SP Norte"
+      "orgao": "🛣️ Governo do Estado / SPParcerias",
+      "bairro": "Perus",
+      "titulo": "Obras do Rodoanel Norte passam de 73% de execução",
+      "impacto": "O trecho de 20 km entre a Rodovia Fernão Dias e a Avenida Raimundo Pereira de Magalhães deve tirar caminhões das marginais e vias urbanas da região. A primeira entrega está em operação desde dezembro de 2025; o último trecho deve funcionar no segundo semestre de 2026, completando 44 km.",
+      "status": "Em obras (73%); conclusão prevista para o 2º semestre de 2026",
+      "fonte": "Folha Noroeste / SPParcerias"
     },
     {
-      "orgao": "🏛️ Secretaria Municipal de Urbanismo e Licenciamento",
-      "bairro": "Tremembé",
-      "titulo": "Consulta pública dos Planos de Ação das Subprefeituras (PAS) 2026-2029 é prorrogada até 12 de setembro",
-      "impacto": "Moradores de Jaçanã/Tremembé e das demais subprefeituras podem enviar propostas pela plataforma Participe+ para orientar investimentos e prioridades territoriais até 2029.",
-      "status": "Consulta pública prorrogada até 12/09",
-      "fonte": "Subprefeitura Jaçanã/Tremembé"
+      "orgao": "🏥 Secretaria Municipal da Saúde",
+      "bairro": "Jardim Rosinha",
+      "titulo": "UPA e UBS Residencial das Orquídeas recebem R$ 14,2 milhões em recursos municipais",
+      "impacto": "Complexo de 1.421 m² na Estrada de Pirapora amplia urgência 24h, vacinação, pré-natal e consultas médicas e odontológicas para moradores de Perus e Anhanguera, com 326 profissionais.",
+      "status": "Inaugurado em 06/10",
+      "fonte": "Folha Noroeste / Prefeitura de São Paulo"
+    },
+    {
+      "orgao": "🚌 Prefeitura de São Paulo / SPTrans",
+      "bairro": "Santana",
+      "titulo": "Frota de ônibus elétricos chega a 2.009 veículos após entrega de 250 unidades em Santana",
+      "impacto": "Segundo a Prefeitura, a capital concentra mais de 80% dos ônibus elétricos do Brasil; a compra é viabilizada por subvenções às operadoras e a rede de recarga tem 30 áreas.",
+      "status": "Veículos entregues em 30/09",
+      "fonte": "DiárioZonaNorte / SPTrans"
     },
     {
       "tipo": "destaque_vereador",
@@ -300,52 +321,69 @@
     {
       "tipo": "info",
       "emoji": "⛈️",
-      "titulo": "Defesa Civil monta gabinete de crise para tempestades entre sexta e sábado",
-      "desc": "Risco de chuva forte, descargas elétricas, rajadas de vento e granizo em São Paulo entre a tarde de sexta (11/9) e a madrugada/manhã de sábado (12/9), segundo a Defesa Civil do Estado.",
-      "meta": "Defesa Civil do Estado de SP / Folha Noroeste"
+      "titulo": "Feriadão com calor e pancadas fortes à tarde; frente fria deixa segunda mais instável",
+      "desc": "Sábado (10) com sol pela manhã e pancadas moderadas a fortes entre a tarde e a noite, com risco de alagamentos, raios e rajadas (20°C a 29°C). Domingo (11) abafado, com pancadas rápidas à tarde (19°C a 24°C). Na segunda (12) a chegada de uma frente fria aumenta a chance de chuva à tarde e à noite. O CGE alerta para temporais localizados de curta duração.",
+      "meta": "DGABC / Climatempo / CGE – previsão de 09/10"
     },
     {
       "tipo": "info",
-      "emoji": "🩺",
-      "titulo": "SP confirma mais dois casos de sarampo e chega a 30 registros em 2026",
-      "desc": "Os dois novos casos são de crianças menores de 2 anos moradoras da capital. Do total de 30 casos no estado (27 na capital), 22 ocorreram em pessoas sem vacinação completa. Crianças de 6 a 11 meses continuam podendo receber a dose zero da tríplice viral.",
-      "meta": "Secretaria de Estado da Saúde / Folha Noroeste"
+      "emoji": "🚆",
+      "titulo": "Linha 7-Rubi exige baldeação em Francisco Morato no domingo e na segunda",
+      "desc": "Por obras de modernização entre Botujuru e Campo Limpo Paulista, não haverá viagens diretas entre Palmeiras-Barra Funda e Jundiaí em 11 e 12/10. Quem embarca nas estações de Perus, Vila Aurora, Jaraguá e Pirituba deve considerar mais tempo de viagem no sentido Jundiaí.",
+      "meta": "Agência SP / TIC Trens"
+    },
+    {
+      "tipo": "neutro",
+      "emoji": "📅",
+      "titulo": "O que fecha no feriado de 12/10",
+      "desc": "Poupatempo, AMEs, Farmácias de Medicamentos Especializados e o posto Pró-Sangue Mandaqui ficam fechados na segunda. Cerca de 3,5 mil serviços do Poupatempo seguem disponíveis nos canais digitais. Prontos-socorros estaduais funcionam normalmente.",
+      "meta": "Agência SP / Governo do Estado de SP"
     },
     {
       "tipo": "ok",
-      "emoji": "🧥",
-      "titulo": "Campanha do Agasalho 2026 entra na reta final e recebe doações até 22 de setembro",
-      "desc": "A campanha já arrecadou mais de R$ 1,54 milhão, além de 83.119 peças de roupas e 1.555 cobertores, que serão distribuídos a famílias em situação de vulnerabilidade na capital.",
-      "meta": "Folha Noroeste / Fundo Social de SP"
+      "emoji": "🚇",
+      "titulo": "Metrô 24h no fim de semana é prorrogado até janeiro de 2027",
+      "desc": "As linhas 1-Azul, 2-Verde, 3-Vermelha e 15-Prata seguem funcionando sem interrupção da madrugada de sábado para domingo, em caráter experimental, até 31/01/2027. No feriado, a oferta será equivalente à de domingo.",
+      "meta": "Agência SP / Metrô"
     },
     {
       "tipo": "info",
-      "emoji": "💻",
-      "titulo": "Prefeitura começa a oferecer teleconsultas 24 horas pelo e-saúdeSP",
-      "desc": "O novo serviço de Saúde Digital permite consultas médicas por teleatendimento a qualquer hora, ampliando o acesso da população às unidades de saúde da rede municipal, incluindo moradores da Zona Norte.",
-      "meta": "Prefeitura de São Paulo / DiárioZonaNorte"
+      "emoji": "🚧",
+      "titulo": "Interdição parcial da Rua Baltazar da Silveira, em Pirituba, por 80 dias",
+      "desc": "Trecho entre as ruas Padre Mariano Ronchi e Padre Justino Lombardi está parcialmente bloqueado desde 8/10 para concretagem. A CET monitora o trânsito na região.",
+      "meta": "Folha Noroeste / CET"
     }
   ],
   "fim_de_semana": [
     {
-      "emoji": "🧰",
-      "titulo": "EMEI Bombeiro oferece serviços gratuitos para a comunidade, na Freguesia do Ó",
-      "info": "12/09 · sábado, das 9h às 13h30 · Freguesia do Ó · Gratuito"
-    },
-    {
-      "emoji": "🎪",
-      "titulo": "Circo Vox: \"Se Chove, Não Molha!\" no Sesc Santana",
-      "info": "12/09 · sábado, 12h · Jardim São Paulo · Gratuito"
-    },
-    {
-      "emoji": "🎭",
-      "titulo": "Peça infantojuvenil \"E se fosse uma bomba?\" no Sesc Santana",
-      "info": "13/09 · domingo, 12h · Jardim São Paulo · Gratuito"
+      "emoji": "🪗",
+      "titulo": "Festival Nordestino do CTN com shows de Tierry e Zeza dos Teclados, no Limão",
+      "info": "10/10 · sábado, das 11h às 4h · CTN, Rua Jacofer, 615 · Gratuito"
     },
     {
       "emoji": "📚",
-      "titulo": "Últimos dias da Bienal Internacional do Livro no Anhembi",
-      "info": "até 13/09 · diariamente das 9h às 21h · Santana · a partir de R$ 20"
+      "titulo": "1º Encontro de Escritores na Biblioteca Afonso Schmidt, na Freguesia do Ó",
+      "info": "10/10 · sábado, das 10h às 14h · Av. Elísio Teixeira Leite, 1470 · Gratuito"
+    },
+    {
+      "emoji": "🎈",
+      "titulo": "Festa do Dia das Crianças do CDC Líbano, em Pirituba",
+      "info": "11/10 · domingo, das 11h às 17h · Jardim Líbano · Gratuito"
+    },
+    {
+      "emoji": "🎬",
+      "titulo": "Cinema infantil e Festival de Filmes de Ciência nos CEUs Taipas e Pinheirinho D'Água",
+      "info": "11/10 · domingo, às 11h, 13h e 15h · Jaraguá · Gratuito (retirar ingresso 1h antes)"
+    },
+    {
+      "emoji": "🎸",
+      "titulo": "Banda Fera Neném no Sesc Santana",
+      "info": "11/10 · domingo, das 12h às 13h · Sesc Santana · Gratuito"
+    },
+    {
+      "emoji": "🥁",
+      "titulo": "Pandeirodê, com Cris Barulins, no Sesc Santana (feriado)",
+      "info": "12/10 · segunda, das 17h às 18h · Sesc Santana · Gratuito"
     }
   ],
   "agenda_camara_semana": {
